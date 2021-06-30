@@ -1,5 +1,5 @@
 {
     "require": {
-        "redux-framework/redux-framework": "^3.6"
+        "redux-framework/redux-framework": "*"
     }
 }
