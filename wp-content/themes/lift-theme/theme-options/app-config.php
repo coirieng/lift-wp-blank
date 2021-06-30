@@ -1,4 +1,7 @@
 <?php
+
+// https://docsv3.redux.io/
+
 if ( ! class_exists( 'Redux' ) ) {
 	return;
 }
@@ -40,5 +43,6 @@ if ( is_dir( $lift_patterns_path ) ) {
 
 require_once 'options/options.php';
 require_once 'options/helps.php';
-require_once 'tabs/tab-home.php';
+// require_once 'tabs/tab-full.php';
+require_once 'tabs/tab-footer.php';
 require_once 'options/init.php';

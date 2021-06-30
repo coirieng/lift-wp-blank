@@ -16,7 +16,6 @@ if ( version_compare( $GLOBALS['wp_version'], '5.3', '<' ) ) {
 
 require plugin_dir_path( __FILE__ ) . 'lift_redux_frame.php';
 
-
 if ( ! function_exists( 'lift_setup' ) ) {
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -356,17 +355,22 @@ add_action( 'after_setup_theme', 'lift_setup' );
  */
 function lift_widgets_init() {
 
-	register_sidebar(
-		array(
-			'name'          => esc_html__( 'Footer', 'wp-lift-theme' ),
-			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'wp-lift-theme' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		)
-	);
+	global $lift_theme;
+
+	for ($i=1; $i <= $lift_theme['lift-theme-footer-layout'] ; $i++) { 
+		register_sidebar(
+			array(
+				'name'          => esc_html__( 'Footer '.$i, 'wp-lift-theme' ),
+				'id'            => 'sidebar-'.$i,
+				'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'wp-lift-theme' ),
+				'before_widget' => '<section id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</section>',
+				'before_title'  => '<h2 class="widget-title">',
+				'after_title'   => '</h2>',
+			)
+		);
+	}
+
 }
 add_action( 'widgets_init', 'lift_widgets_init' );
 

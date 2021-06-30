@@ -16,6 +16,7 @@
  *
  * @return array
  */
+
 function lift_body_classes( $classes ) {
 
 	// Helps detect if JS is enabled or not.
