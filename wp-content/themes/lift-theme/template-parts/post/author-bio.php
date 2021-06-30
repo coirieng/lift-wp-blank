@@ -2,9 +2,9 @@
 /**
  * The template for displaying author info below posts.
  *
- * @package WordPress
- * @subpackage Twenty_Twenty_One
- * @since Twenty Twenty-One 1.0
+ * @package LIFT Creations 
+ * @subpackage Theme by Nguyen Pham
+ * @since 2021
  */
 
 ?>

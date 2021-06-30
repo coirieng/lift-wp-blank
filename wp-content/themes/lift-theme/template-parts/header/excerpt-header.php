@@ -2,9 +2,9 @@
 /**
  * Displays the post header
  *
- * @package WordPress
- * @subpackage Twenty_Twenty_One
- * @since Twenty Twenty-One 1.0
+ * @package LIFT Creations 
+ * @subpackage Theme by Nguyen Pham
+ * @since 2021
  */
 
 // Don't show the title if the post-format is `aside` or `status`.
