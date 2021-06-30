@@ -34,9 +34,9 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 * If you're building a theme based on Twenty Twenty-One, use a find and replace
-		 * to change 'twentytwentyone' to the name of your theme in all the template files.
+		 * to change 'wp-lift-theme' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'twentytwentyone', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'wp-lift-theme', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -76,8 +76,8 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 
 		register_nav_menus(
 			array(
-				'primary' => esc_html__( 'Primary menu', 'twentytwentyone' ),
-				'footer'  => __( 'Secondary menu', 'twentytwentyone' ),
+				'primary' => esc_html__( 'Primary menu', 'wp-lift-theme' ),
+				'footer'  => __( 'Secondary menu', 'wp-lift-theme' ),
 			)
 		);
 
@@ -150,44 +150,44 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 			'editor-font-sizes',
 			array(
 				array(
-					'name'      => esc_html__( 'Extra small', 'twentytwentyone' ),
-					'shortName' => esc_html_x( 'XS', 'Font size', 'twentytwentyone' ),
+					'name'      => esc_html__( 'Extra small', 'wp-lift-theme' ),
+					'shortName' => esc_html_x( 'XS', 'Font size', 'wp-lift-theme' ),
 					'size'      => 16,
 					'slug'      => 'extra-small',
 				),
 				array(
-					'name'      => esc_html__( 'Small', 'twentytwentyone' ),
-					'shortName' => esc_html_x( 'S', 'Font size', 'twentytwentyone' ),
+					'name'      => esc_html__( 'Small', 'wp-lift-theme' ),
+					'shortName' => esc_html_x( 'S', 'Font size', 'wp-lift-theme' ),
 					'size'      => 18,
 					'slug'      => 'small',
 				),
 				array(
-					'name'      => esc_html__( 'Normal', 'twentytwentyone' ),
-					'shortName' => esc_html_x( 'M', 'Font size', 'twentytwentyone' ),
+					'name'      => esc_html__( 'Normal', 'wp-lift-theme' ),
+					'shortName' => esc_html_x( 'M', 'Font size', 'wp-lift-theme' ),
 					'size'      => 20,
 					'slug'      => 'normal',
 				),
 				array(
-					'name'      => esc_html__( 'Large', 'twentytwentyone' ),
-					'shortName' => esc_html_x( 'L', 'Font size', 'twentytwentyone' ),
+					'name'      => esc_html__( 'Large', 'wp-lift-theme' ),
+					'shortName' => esc_html_x( 'L', 'Font size', 'wp-lift-theme' ),
 					'size'      => 24,
 					'slug'      => 'large',
 				),
 				array(
-					'name'      => esc_html__( 'Extra large', 'twentytwentyone' ),
-					'shortName' => esc_html_x( 'XL', 'Font size', 'twentytwentyone' ),
+					'name'      => esc_html__( 'Extra large', 'wp-lift-theme' ),
+					'shortName' => esc_html_x( 'XL', 'Font size', 'wp-lift-theme' ),
 					'size'      => 40,
 					'slug'      => 'extra-large',
 				),
 				array(
-					'name'      => esc_html__( 'Huge', 'twentytwentyone' ),
-					'shortName' => esc_html_x( 'XXL', 'Font size', 'twentytwentyone' ),
+					'name'      => esc_html__( 'Huge', 'wp-lift-theme' ),
+					'shortName' => esc_html_x( 'XXL', 'Font size', 'wp-lift-theme' ),
 					'size'      => 96,
 					'slug'      => 'huge',
 				),
 				array(
-					'name'      => esc_html__( 'Gigantic', 'twentytwentyone' ),
-					'shortName' => esc_html_x( 'XXXL', 'Font size', 'twentytwentyone' ),
+					'name'      => esc_html__( 'Gigantic', 'wp-lift-theme' ),
+					'shortName' => esc_html_x( 'XXXL', 'Font size', 'wp-lift-theme' ),
 					'size'      => 144,
 					'slug'      => 'gigantic',
 				),
@@ -218,52 +218,52 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 			'editor-color-palette',
 			array(
 				array(
-					'name'  => esc_html__( 'Black', 'twentytwentyone' ),
+					'name'  => esc_html__( 'Black', 'wp-lift-theme' ),
 					'slug'  => 'black',
 					'color' => $black,
 				),
 				array(
-					'name'  => esc_html__( 'Dark gray', 'twentytwentyone' ),
+					'name'  => esc_html__( 'Dark gray', 'wp-lift-theme' ),
 					'slug'  => 'dark-gray',
 					'color' => $dark_gray,
 				),
 				array(
-					'name'  => esc_html__( 'Gray', 'twentytwentyone' ),
+					'name'  => esc_html__( 'Gray', 'wp-lift-theme' ),
 					'slug'  => 'gray',
 					'color' => $gray,
 				),
 				array(
-					'name'  => esc_html__( 'Green', 'twentytwentyone' ),
+					'name'  => esc_html__( 'Green', 'wp-lift-theme' ),
 					'slug'  => 'green',
 					'color' => $green,
 				),
 				array(
-					'name'  => esc_html__( 'Blue', 'twentytwentyone' ),
+					'name'  => esc_html__( 'Blue', 'wp-lift-theme' ),
 					'slug'  => 'blue',
 					'color' => $blue,
 				),
 				array(
-					'name'  => esc_html__( 'Purple', 'twentytwentyone' ),
+					'name'  => esc_html__( 'Purple', 'wp-lift-theme' ),
 					'slug'  => 'purple',
 					'color' => $purple,
 				),
 				array(
-					'name'  => esc_html__( 'Red', 'twentytwentyone' ),
+					'name'  => esc_html__( 'Red', 'wp-lift-theme' ),
 					'slug'  => 'red',
 					'color' => $red,
 				),
 				array(
-					'name'  => esc_html__( 'Orange', 'twentytwentyone' ),
+					'name'  => esc_html__( 'Orange', 'wp-lift-theme' ),
 					'slug'  => 'orange',
 					'color' => $orange,
 				),
 				array(
-					'name'  => esc_html__( 'Yellow', 'twentytwentyone' ),
+					'name'  => esc_html__( 'Yellow', 'wp-lift-theme' ),
 					'slug'  => 'yellow',
 					'color' => $yellow,
 				),
 				array(
-					'name'  => esc_html__( 'White', 'twentytwentyone' ),
+					'name'  => esc_html__( 'White', 'wp-lift-theme' ),
 					'slug'  => 'white',
 					'color' => $white,
 				),
@@ -274,42 +274,42 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 			'editor-gradient-presets',
 			array(
 				array(
-					'name'     => esc_html__( 'Purple to yellow', 'twentytwentyone' ),
+					'name'     => esc_html__( 'Purple to yellow', 'wp-lift-theme' ),
 					'gradient' => 'linear-gradient(160deg, ' . $purple . ' 0%, ' . $yellow . ' 100%)',
 					'slug'     => 'purple-to-yellow',
 				),
 				array(
-					'name'     => esc_html__( 'Yellow to purple', 'twentytwentyone' ),
+					'name'     => esc_html__( 'Yellow to purple', 'wp-lift-theme' ),
 					'gradient' => 'linear-gradient(160deg, ' . $yellow . ' 0%, ' . $purple . ' 100%)',
 					'slug'     => 'yellow-to-purple',
 				),
 				array(
-					'name'     => esc_html__( 'Green to yellow', 'twentytwentyone' ),
+					'name'     => esc_html__( 'Green to yellow', 'wp-lift-theme' ),
 					'gradient' => 'linear-gradient(160deg, ' . $green . ' 0%, ' . $yellow . ' 100%)',
 					'slug'     => 'green-to-yellow',
 				),
 				array(
-					'name'     => esc_html__( 'Yellow to green', 'twentytwentyone' ),
+					'name'     => esc_html__( 'Yellow to green', 'wp-lift-theme' ),
 					'gradient' => 'linear-gradient(160deg, ' . $yellow . ' 0%, ' . $green . ' 100%)',
 					'slug'     => 'yellow-to-green',
 				),
 				array(
-					'name'     => esc_html__( 'Red to yellow', 'twentytwentyone' ),
+					'name'     => esc_html__( 'Red to yellow', 'wp-lift-theme' ),
 					'gradient' => 'linear-gradient(160deg, ' . $red . ' 0%, ' . $yellow . ' 100%)',
 					'slug'     => 'red-to-yellow',
 				),
 				array(
-					'name'     => esc_html__( 'Yellow to red', 'twentytwentyone' ),
+					'name'     => esc_html__( 'Yellow to red', 'wp-lift-theme' ),
 					'gradient' => 'linear-gradient(160deg, ' . $yellow . ' 0%, ' . $red . ' 100%)',
 					'slug'     => 'yellow-to-red',
 				),
 				array(
-					'name'     => esc_html__( 'Purple to red', 'twentytwentyone' ),
+					'name'     => esc_html__( 'Purple to red', 'wp-lift-theme' ),
 					'gradient' => 'linear-gradient(160deg, ' . $purple . ' 0%, ' . $red . ' 100%)',
 					'slug'     => 'purple-to-red',
 				),
 				array(
-					'name'     => esc_html__( 'Red to purple', 'twentytwentyone' ),
+					'name'     => esc_html__( 'Red to purple', 'wp-lift-theme' ),
 					'gradient' => 'linear-gradient(160deg, ' . $red . ' 0%, ' . $purple . ' 100%)',
 					'slug'     => 'red-to-purple',
 				),
@@ -358,9 +358,9 @@ function twenty_twenty_one_widgets_init() {
 
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Footer', 'twentytwentyone' ),
+			'name'          => esc_html__( 'Footer', 'wp-lift-theme' ),
 			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'twentytwentyone' ),
+			'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'wp-lift-theme' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',

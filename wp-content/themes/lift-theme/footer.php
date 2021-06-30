@@ -17,7 +17,7 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 
 		<?php if ( has_nav_menu( 'footer' ) ) : ?>
-			<nav aria-label="<?php esc_attr_e( 'Secondary menu', 'twentytwentyone' ); ?>" class="footer-navigation">
+			<nav aria-label="<?php esc_attr_e( 'Secondary menu', 'wp-lift-theme' ); ?>" class="footer-navigation">
 				<ul class="footer-navigation-wrapper">
 					<?php
 					wp_nav_menu(
@@ -53,8 +53,8 @@
 				<?php
 				printf(
 					/* translators: %s: WordPress. */
-					esc_html__( 'Proudly powered by %s.', 'twentytwentyone' ),
-					'<a href="' . esc_url( __( 'https://wordpress.org/', 'twentytwentyone' ) ) . '">WordPress</a>'
+					esc_html__( 'Proudly powered by %s.', 'wp-lift-theme' ),
+					'<a href="' . esc_url( __( 'https://wordpress.org/', 'wp-lift-theme' ) ) . '">WordPress</a>'
 				);
 				?>
 			</div><!-- .powered-by -->
