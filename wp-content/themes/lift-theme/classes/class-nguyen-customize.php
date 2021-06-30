@@ -2,9 +2,9 @@
 /**
  * Customizer settings for this theme.
  *
- * @package WordPress
- * @subpackage Twenty_Twenty_One
- * @since Twenty Twenty-One 1.0
+ * @package LIFT Creations 
+ * @subpackage Theme by Nguyen Pham
+ * @since 2021
  */
 
 if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
@@ -118,7 +118,7 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 
 			// Background color.
 			// Include the custom control class.
-			include_once get_theme_file_path( 'classes/class-twenty-twenty-one-customize-color-control.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
+			include_once get_theme_file_path( 'classes/class-nguyen-customize-color-control.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 
 			// Register the custom control.
 			$wp_customize->register_control_type( 'Twenty_Twenty_One_Customize_Color_Control' );

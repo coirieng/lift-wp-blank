@@ -4,9 +4,9 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package WordPress
- * @subpackage Twenty_Twenty_One
- * @since Twenty Twenty-One 1.0
+ * @package LIFT Creations 
+ * @subpackage Theme by Nguyen Pham
+ * @since 2021
  */
 
 // This theme requires WordPress 5.3 or later.
@@ -17,7 +17,7 @@ if ( version_compare( $GLOBALS['wp_version'], '5.3', '<' ) ) {
 require plugin_dir_path( __FILE__ ) . 'lift_redux_frame.php';
 
 
-if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
+if ( ! function_exists( 'lift_setup' ) ) {
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -29,7 +29,7 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 	 *
 	 * @return void
 	 */
-	function twenty_twenty_one_setup() {
+	function lift_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
@@ -323,7 +323,7 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 		*/
 		if ( is_customize_preview() ) {
 			require get_template_directory() . '/inc/starter-content.php';
-			add_theme_support( 'starter-content', twenty_twenty_one_get_starter_content() );
+			add_theme_support( 'starter-content', lift_get_starter_content() );
 		}
 
 		// Add support for responsive embedded content.
@@ -343,7 +343,7 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 		add_theme_support( 'custom-units' );
 	}
 }
-add_action( 'after_setup_theme', 'twenty_twenty_one_setup' );
+add_action( 'after_setup_theme', 'lift_setup' );
 
 /**
  * Register widget area.
@@ -354,7 +354,7 @@ add_action( 'after_setup_theme', 'twenty_twenty_one_setup' );
  *
  * @return void
  */
-function twenty_twenty_one_widgets_init() {
+function lift_widgets_init() {
 
 	register_sidebar(
 		array(
@@ -368,7 +368,7 @@ function twenty_twenty_one_widgets_init() {
 		)
 	);
 }
-add_action( 'widgets_init', 'twenty_twenty_one_widgets_init' );
+add_action( 'widgets_init', 'lift_widgets_init' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -381,13 +381,13 @@ add_action( 'widgets_init', 'twenty_twenty_one_widgets_init' );
  *
  * @return void
  */
-function twenty_twenty_one_content_width() {
+function lift_content_width() {
 	// This variable is intended to be overruled from themes.
 	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
 	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-	$GLOBALS['content_width'] = apply_filters( 'twenty_twenty_one_content_width', 750 );
+	$GLOBALS['content_width'] = apply_filters( 'lift_content_width', 750 );
 }
-add_action( 'after_setup_theme', 'twenty_twenty_one_content_width', 0 );
+add_action( 'after_setup_theme', 'lift_content_width', 0 );
 
 /**
  * Enqueue scripts and styles.
@@ -396,7 +396,7 @@ add_action( 'after_setup_theme', 'twenty_twenty_one_content_width', 0 );
  *
  * @return void
  */
-function twenty_twenty_one_scripts() {
+function lift_scripts() {
 	// Note, the is_IE global variable is defined by WordPress and is used
 	// to detect if the current browser is internet explorer.
 	global $is_IE, $wp_scripts;
@@ -466,7 +466,7 @@ function twenty_twenty_one_scripts() {
 		true
 	);
 }
-add_action( 'wp_enqueue_scripts', 'twenty_twenty_one_scripts' );
+add_action( 'wp_enqueue_scripts', 'lift_scripts' );
 
 /**
  * Enqueue block editor script.
@@ -490,7 +490,7 @@ add_action( 'enqueue_block_editor_assets', 'twentytwentyone_block_editor_script'
  *
  * @link https://git.io/vWdr2
  */
-function twenty_twenty_one_skip_link_focus_fix() {
+function lift_skip_link_focus_fix() {
 
 	// If SCRIPT_DEBUG is defined and true, print the unminified file.
 	if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
@@ -506,7 +506,7 @@ function twenty_twenty_one_skip_link_focus_fix() {
 	</script>
 	<?php
 }
-add_action( 'wp_print_footer_scripts', 'twenty_twenty_one_skip_link_focus_fix' );
+add_action( 'wp_print_footer_scripts', 'lift_skip_link_focus_fix' );
 
 /** Enqueue non-latin language styles
  *
@@ -514,20 +514,20 @@ add_action( 'wp_print_footer_scripts', 'twenty_twenty_one_skip_link_focus_fix' )
  *
  * @return void
  */
-function twenty_twenty_one_non_latin_languages() {
-	$custom_css = twenty_twenty_one_get_non_latin_css( 'front-end' );
+function lift_non_latin_languages() {
+	$custom_css = lift_get_non_latin_css( 'front-end' );
 
 	if ( $custom_css ) {
 		wp_add_inline_style( 'twenty-twenty-one-style', $custom_css );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'twenty_twenty_one_non_latin_languages' );
+add_action( 'wp_enqueue_scripts', 'lift_non_latin_languages' );
 
 // SVG Icons class.
-require get_template_directory() . '/classes/class-twenty-twenty-one-svg-icons.php';
+require get_template_directory() . '/classes/class-nguyen-svg-icons.php';
 
 // Custom color classes.
-require get_template_directory() . '/classes/class-twenty-twenty-one-custom-colors.php';
+require get_template_directory() . '/classes/class-nguyen-custom-colors.php';
 new Twenty_Twenty_One_Custom_Colors();
 
 // Enhance the theme by hooking into WordPress.
@@ -540,7 +540,7 @@ require get_template_directory() . '/inc/menu-functions.php';
 require get_template_directory() . '/inc/template-tags.php';
 
 // Customizer additions.
-require get_template_directory() . '/classes/class-twenty-twenty-one-customize.php';
+require get_template_directory() . '/classes/class-nguyen-customize.php';
 new Twenty_Twenty_One_Customize();
 
 // Block Patterns.
@@ -550,7 +550,7 @@ require get_template_directory() . '/inc/block-patterns.php';
 require get_template_directory() . '/inc/block-styles.php';
 
 // Dark Mode.
-require_once get_template_directory() . '/classes/class-twenty-twenty-one-dark-mode.php';
+require_once get_template_directory() . '/classes/class-nguyen-dark-mode.php';
 new Twenty_Twenty_One_Dark_Mode();
 
 /**

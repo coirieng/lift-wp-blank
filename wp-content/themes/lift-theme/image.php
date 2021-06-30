@@ -1,8 +1,8 @@
 <?php
 /**
- * @package WordPress
- * @subpackage Twenty_Twenty_One
- * @since Twenty Twenty-One 1.0
+ * @package LIFT Creations 
+ * @subpackage Theme by Nguyen Pham
+ * @since 2021
  */
 
 get_header();
@@ -24,7 +24,7 @@ while ( have_posts() ) {
 				 *
 				 * @param string $image_size Image size. Default 'large'.
 				 */
-				$image_size = apply_filters( 'twenty_twenty_one_attachment_size', 'full' );
+				$image_size = apply_filters( 'lift_attachment_size', 'full' );
 				echo wp_get_attachment_image( get_the_ID(), $image_size );
 				?>
 

@@ -2,9 +2,9 @@
 /**
  * Customize API: WP_Customize_Color_Control class
  *
- * @package WordPress
- * @subpackage Twenty_Twenty_One
- * @since Twenty Twenty-One 1.0
+ * @package LIFT Creations 
+ * @subpackage Theme by Nguyen Pham
+ * @since 2021
  */
 
 /**
