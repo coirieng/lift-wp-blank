@@ -10,7 +10,7 @@
 /**
  * Customize Notice Control class.
  *
- * @since Twenty Twenty-One 1.0
+ * @since LIFT 2021
  *
  * @see WP_Customize_Control
  */
@@ -18,11 +18,11 @@ class Twenty_Twenty_One_Customize_Notice_Control extends WP_Customize_Control {
 	/**
 	 * The control type.
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since LIFT 2021
 	 *
 	 * @var string
 	 */
-	public $type = 'twenty-twenty-one-notice';
+	public $type = 'lift-assets-notice';
 
 	/**
 	 * Renders the control content.
@@ -31,7 +31,7 @@ class Twenty_Twenty_One_Customize_Notice_Control extends WP_Customize_Control {
 	 *
 	 * @access public
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since LIFT 2021
 	 *
 	 * @return void
 	 */
@@ -39,7 +39,7 @@ class Twenty_Twenty_One_Customize_Notice_Control extends WP_Customize_Control {
 		?>
 		<div class="notice notice-warning">
 			<p><?php esc_html_e( 'To access the Dark Mode settings, select a light background color.', 'wp-lift-theme' ); ?></p>
-			<p><a href="<?php echo esc_url( __( 'https://wordpress.org/support/article/twenty-twenty-one/#dark-mode-support', 'wp-lift-theme' ) ); ?>">
+			<p><a href="<?php echo esc_url( __( 'https://wordpress.org/support/article/lift-assets/#dark-mode-support', 'wp-lift-theme' ) ); ?>">
 				<?php esc_html_e( 'Learn more about Dark Mode.', 'wp-lift-theme' ); ?>
 			</a></p>
 		</div>

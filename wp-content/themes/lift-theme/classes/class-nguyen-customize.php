@@ -11,7 +11,7 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 	/**
 	 * Customizer Settings.
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since LIFT 2021
 	 */
 	class Twenty_Twenty_One_Customize {
 
@@ -20,7 +20,7 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 		 *
 		 * @access public
 		 *
-		 * @since Twenty Twenty-One 1.0
+		 * @since LIFT 2021
 		 */
 		public function __construct() {
 			add_action( 'customize_register', array( $this, 'register' ) );
@@ -31,7 +31,7 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 		 *
 		 * @access public
 		 *
-		 * @since Twenty Twenty-One 1.0
+		 * @since LIFT 2021
 		 *
 		 * @param WP_Customize_Manager $wp_customize Theme Customizer object.
 		 *
@@ -153,7 +153,7 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 		 *
 		 * @access public
 		 *
-		 * @since Twenty Twenty-One 1.0
+		 * @since LIFT 2021
 		 *
 		 * @param bool $checked Whether or not a box is checked.
 		 *
@@ -168,7 +168,7 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 		 *
 		 * @access public
 		 *
-		 * @since Twenty Twenty-One 1.0
+		 * @since LIFT 2021
 		 *
 		 * @return void
 		 */
@@ -181,7 +181,7 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 		 *
 		 * @access public
 		 *
-		 * @since Twenty Twenty-One 1.0
+		 * @since LIFT 2021
 		 *
 		 * @return void
 		 */

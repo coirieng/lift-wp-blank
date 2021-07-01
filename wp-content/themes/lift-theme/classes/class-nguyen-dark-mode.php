@@ -17,7 +17,7 @@ class Twenty_Twenty_One_Dark_Mode {
 	 *
 	 * @access public
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since LIFT 2021
 	 */
 	public function __construct() {
 
@@ -51,7 +51,7 @@ class Twenty_Twenty_One_Dark_Mode {
 	 *
 	 * @access public
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since LIFT 2021
 	 *
 	 * @return void
 	 */
@@ -64,7 +64,7 @@ class Twenty_Twenty_One_Dark_Mode {
 		if ( $should_respect_color_scheme && Twenty_Twenty_One_Custom_Colors::get_relative_luminance_from_hex( $background_color ) > 127 ) {
 			// Add Dark Mode variable overrides.
 			wp_add_inline_style(
-				'twenty-twenty-one-custom-color-overrides',
+				'lift-assets-custom-color-overrides',
 				'.is-dark-theme.is-dark-theme .editor-styles-wrapper { --global--color-background: var(--global--color-dark-gray); --global--color-primary: var(--global--color-light-gray); --global--color-secondary: var(--global--color-light-gray); --button--color-text: var(--global--color-background); --button--color-text-hover: var(--global--color-secondary); --button--color-text-active: var(--global--color-secondary); --button--color-background: var(--global--color-secondary); --button--color-background-active: var(--global--color-background); --global--color-border: #9ea1a7; --table--stripes-border-color: rgba(240, 240, 240, 0.15); --table--stripes-background-color: rgba(240, 240, 240, 0.15); }'
 			);
 		}
@@ -90,7 +90,7 @@ class Twenty_Twenty_One_Dark_Mode {
 	 *
 	 * @access public
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since LIFT 2021
 	 *
 	 * @return void
 	 */
@@ -102,7 +102,7 @@ class Twenty_Twenty_One_Dark_Mode {
 		if ( is_rtl() ) {
 			$url = get_template_directory_uri() . '/assets/css/style-dark-mode-rtl.css';
 		}
-		wp_enqueue_style( 'tt1-dark-mode', $url, array( 'twenty-twenty-one-style' ), wp_get_theme()->get( 'Version' ) ); // @phpstan-ignore-line. Version is always a string.
+		wp_enqueue_style( 'tt1-dark-mode', $url, array( 'lift-assets-style' ), wp_get_theme()->get( 'Version' ) ); // @phpstan-ignore-line. Version is always a string.
 	}
 
 	/**
@@ -110,7 +110,7 @@ class Twenty_Twenty_One_Dark_Mode {
 	 *
 	 * @access public
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since LIFT 2021
 	 *
 	 * @return void
 	 */
@@ -132,7 +132,7 @@ class Twenty_Twenty_One_Dark_Mode {
 	 *
 	 * @access public
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since LIFT 2021
 	 *
 	 * @param WP_Customize_Manager $wp_customize Theme Customizer object.
 	 *
@@ -186,7 +186,7 @@ class Twenty_Twenty_One_Dark_Mode {
 		$description .= sprintf(
 			/* translators: %s: Twenty Twenty-One support article URL. */
 			__( 'Dark Mode is a device setting. If a visitor to your site requests it, your site will be shown with a dark background and light text. <a href="%s">Learn more about Dark Mode.</a>', 'wp-lift-theme' ),
-			esc_url( __( 'https://wordpress.org/support/article/twenty-twenty-one/#dark-mode-support', 'wp-lift-theme' ) )
+			esc_url( __( 'https://wordpress.org/support/article/lift-assets/#dark-mode-support', 'wp-lift-theme' ) )
 		);
 		$description .= '</p>';
 		$description .= '<p>' . __( 'Dark Mode can also be turned on and off with a button that you can find in the bottom right corner of the page.', 'wp-lift-theme' ) . '</p>';
@@ -224,7 +224,7 @@ class Twenty_Twenty_One_Dark_Mode {
 	 *
 	 * @access public
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since LIFT 2021
 	 *
 	 * @param string $classes The classes for <html> element.
 	 *
@@ -249,7 +249,7 @@ class Twenty_Twenty_One_Dark_Mode {
 	 *
 	 * @access public
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since LIFT 2021
 	 *
 	 * @param string $classes The admin body-classes.
 	 *
@@ -282,7 +282,7 @@ class Twenty_Twenty_One_Dark_Mode {
 	 *
 	 * @access public
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since LIFT 2021
 	 *
 	 * @return bool
 	 */
@@ -300,7 +300,7 @@ class Twenty_Twenty_One_Dark_Mode {
 	 *
 	 * @access public
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since LIFT 2021
 	 *
 	 * @return void
 	 */
@@ -319,7 +319,7 @@ class Twenty_Twenty_One_Dark_Mode {
 	 *
 	 * @access public
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since LIFT 2021
 	 *
 	 * @param array $attrs The attributes to add to our <button> element.
 	 *
@@ -380,7 +380,7 @@ class Twenty_Twenty_One_Dark_Mode {
 	 *
 	 * @access public
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since LIFT 2021
 	 *
 	 * @return void
 	 */
@@ -395,7 +395,7 @@ class Twenty_Twenty_One_Dark_Mode {
 	 *
 	 * @access public
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since LIFT 2021
 	 *
 	 * @return void
 	 */

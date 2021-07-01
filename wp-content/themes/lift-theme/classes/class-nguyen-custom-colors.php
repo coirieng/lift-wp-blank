@@ -17,7 +17,7 @@ class Twenty_Twenty_One_Custom_Colors {
 	 *
 	 * @access public
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since LIFT 2021
 	 */
 	public function __construct() {
 
@@ -38,7 +38,7 @@ class Twenty_Twenty_One_Custom_Colors {
 	 *
 	 * @param string $background_color The background color.
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since LIFT 2021
 	 *
 	 * @return string (hex color)
 	 */
@@ -55,7 +55,7 @@ class Twenty_Twenty_One_Custom_Colors {
 	 *
 	 * @access public
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since LIFT 2021
 	 *
 	 * @param string|null $context Can be "editor" or null.
 	 *
@@ -89,13 +89,13 @@ class Twenty_Twenty_One_Custom_Colors {
 	 *
 	 * @access public
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since LIFT 2021
 	 *
 	 * @return void
 	 */
 	public function custom_color_variables() {
 		if ( 'd1e4dd' !== strtolower( get_theme_mod( 'background_color', 'D1E4DD' ) ) ) {
-			wp_add_inline_style( 'twenty-twenty-one-style', $this->generate_custom_color_variables() );
+			wp_add_inline_style( 'lift-assets-style', $this->generate_custom_color_variables() );
 		}
 	}
 
@@ -104,13 +104,13 @@ class Twenty_Twenty_One_Custom_Colors {
 	 *
 	 * @access public
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since LIFT 2021
 	 *
 	 * @return void
 	 */
 	public function editor_custom_color_variables() {
 		wp_enqueue_style(
-			'twenty-twenty-one-custom-color-overrides',
+			'lift-assets-custom-color-overrides',
 			get_theme_file_uri( 'assets/css/custom-color-overrides.css' ),
 			array(),
 			(string) filemtime( get_theme_file_path( 'assets/css/custom-color-overrides.css' ) )
@@ -118,7 +118,7 @@ class Twenty_Twenty_One_Custom_Colors {
 
 		$background_color = get_theme_mod( 'background_color', 'D1E4DD' );
 		if ( 'd1e4dd' !== strtolower( $background_color ) ) {
-			wp_add_inline_style( 'twenty-twenty-one-custom-color-overrides', $this->generate_custom_color_variables( 'editor' ) );
+			wp_add_inline_style( 'lift-assets-custom-color-overrides', $this->generate_custom_color_variables( 'editor' ) );
 		}
 	}
 
@@ -129,7 +129,7 @@ class Twenty_Twenty_One_Custom_Colors {
 	 *
 	 * @access public
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since LIFT 2021
 	 *
 	 * @param string $hex The HEX color.
 	 *
@@ -160,7 +160,7 @@ class Twenty_Twenty_One_Custom_Colors {
 	 *
 	 * @access public
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since LIFT 2021
 	 *
 	 * @param array $classes The existing body classes.
 	 *

@@ -10,7 +10,7 @@
 /**
  * Customize Color Control class.
  *
- * @since Twenty Twenty-One 1.0
+ * @since LIFT 2021
  *
  * @see WP_Customize_Control
  */
@@ -18,18 +18,18 @@ class Twenty_Twenty_One_Customize_Color_Control extends WP_Customize_Color_Contr
 	/**
 	 * The control type.
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since LIFT 2021
 	 *
 	 * @var string
 	 */
-	public $type = 'twenty-twenty-one-color';
+	public $type = 'lift-assets-color';
 
 	/**
 	 * Colorpicker palette
 	 *
 	 * @access public
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since LIFT 2021
 	 *
 	 * @var array
 	 */
@@ -40,7 +40,7 @@ class Twenty_Twenty_One_Customize_Color_Control extends WP_Customize_Color_Contr
 	 *
 	 * @access public
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since LIFT 2021
 	 *
 	 * @return void
 	 */

@@ -24,7 +24,7 @@ if ( ! function_exists( 'lift_setup' ) ) {
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since LIFT 2021
 	 *
 	 * @return void
 	 */
@@ -347,7 +347,7 @@ add_action( 'after_setup_theme', 'lift_setup' );
 /**
  * Register widget area.
  *
- * @since Twenty Twenty-One 1.0
+ * @since LIFT 2021
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  *
@@ -379,7 +379,7 @@ add_action( 'widgets_init', 'lift_widgets_init' );
  *
  * Priority 0 to make it available to lower priority callbacks.
  *
- * @since Twenty Twenty-One 1.0
+ * @since LIFT 2021
  *
  * @global int $content_width Content width.
  *
@@ -396,7 +396,7 @@ add_action( 'after_setup_theme', 'lift_content_width', 0 );
 /**
  * Enqueue scripts and styles.
  *
- * @since Twenty Twenty-One 1.0
+ * @since LIFT 2021
  *
  * @return void
  */
@@ -404,19 +404,19 @@ function lift_scripts() {
 	// Note, the is_IE global variable is defined by WordPress and is used
 	// to detect if the current browser is internet explorer.
 	global $is_IE, $wp_scripts;
-	if ( $is_IE ) {
-		// If IE 11 or below, use a flattened stylesheet with static values replacing CSS Variables.
-		wp_enqueue_style( 'twenty-twenty-one-style', get_template_directory_uri() . '/assets/css/ie.css', array(), wp_get_theme()->get( 'Version' ) );
-	} else {
-		// If not IE, use the standard stylesheet.
-		wp_enqueue_style( 'twenty-twenty-one-style', get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get( 'Version' ) );
-	}
+	// if ( $is_IE ) {
+	// 	// If IE 11 or below, use a flattened stylesheet with static values replacing CSS Variables.
+	// 	wp_enqueue_style( 'lift-assets-style', get_template_directory_uri() . '/assets/css/ie.css', array(), wp_get_theme()->get( 'Version' ) );
+	// } else {
+	// 	// If not IE, use the standard stylesheet.
+	// 	wp_enqueue_style( 'lift-assets-style', get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get( 'Version' ) );
+	// }
 
 	// RTL styles.
-	wp_style_add_data( 'twenty-twenty-one-style', 'rtl', 'replace' );
+	wp_style_add_data( 'lift-assets-style', 'rtl', 'replace' );
 
 	// Print styles.
-	wp_enqueue_style( 'twenty-twenty-one-print-style', get_template_directory_uri() . '/assets/css/print.css', array(), wp_get_theme()->get( 'Version' ), 'print' );
+	wp_enqueue_style( 'lift-assets-print-style', get_template_directory_uri() . '/assets/css/print.css', array(), wp_get_theme()->get( 'Version' ), 'print' );
 
 	// Threaded comment reply styles.
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -425,7 +425,7 @@ function lift_scripts() {
 
 	// Register the IE11 polyfill file.
 	wp_register_script(
-		'twenty-twenty-one-ie11-polyfills-asset',
+		'lift-assets-ie11-polyfills-asset',
 		get_template_directory_uri() . '/assets/js/polyfills.js',
 		array(),
 		wp_get_theme()->get( 'Version' ),
@@ -434,18 +434,18 @@ function lift_scripts() {
 
 	// Register the IE11 polyfill loader.
 	wp_register_script(
-		'twenty-twenty-one-ie11-polyfills',
+		'lift-assets-ie11-polyfills',
 		null,
 		array(),
 		wp_get_theme()->get( 'Version' ),
 		true
 	);
 	wp_add_inline_script(
-		'twenty-twenty-one-ie11-polyfills',
+		'lift-assets-ie11-polyfills',
 		wp_get_script_polyfill(
 			$wp_scripts,
 			array(
-				'Element.prototype.matches && Element.prototype.closest && window.NodeList && NodeList.prototype.forEach' => 'twenty-twenty-one-ie11-polyfills-asset',
+				'Element.prototype.matches && Element.prototype.closest && window.NodeList && NodeList.prototype.forEach' => 'lift-assets-ie11-polyfills-asset',
 			)
 		)
 	);
@@ -453,9 +453,9 @@ function lift_scripts() {
 	// Main navigation scripts.
 	if ( has_nav_menu( 'primary' ) ) {
 		wp_enqueue_script(
-			'twenty-twenty-one-primary-navigation-script',
+			'lift-assets-primary-navigation-script',
 			get_template_directory_uri() . '/assets/js/primary-navigation.js',
-			array( 'twenty-twenty-one-ie11-polyfills' ),
+			array( 'lift-assets-ie11-polyfills' ),
 			wp_get_theme()->get( 'Version' ),
 			true
 		);
@@ -463,9 +463,9 @@ function lift_scripts() {
 
 	// Responsive embeds script.
 	wp_enqueue_script(
-		'twenty-twenty-one-responsive-embeds-script',
+		'lift-assets-responsive-embeds-script',
 		get_template_directory_uri() . '/assets/js/responsive-embeds.js',
-		array( 'twenty-twenty-one-ie11-polyfills' ),
+		array( 'lift-assets-ie11-polyfills' ),
 		wp_get_theme()->get( 'Version' ),
 		true
 	);
@@ -475,7 +475,7 @@ add_action( 'wp_enqueue_scripts', 'lift_scripts' );
 /**
  * Enqueue block editor script.
  *
- * @since Twenty Twenty-One 1.0
+ * @since LIFT 2021
  *
  * @return void
  */
@@ -514,7 +514,7 @@ add_action( 'wp_print_footer_scripts', 'lift_skip_link_focus_fix' );
 
 /** Enqueue non-latin language styles
  *
- * @since Twenty Twenty-One 1.0
+ * @since LIFT 2021
  *
  * @return void
  */
@@ -522,7 +522,7 @@ function lift_non_latin_languages() {
 	$custom_css = lift_get_non_latin_css( 'front-end' );
 
 	if ( $custom_css ) {
-		wp_add_inline_style( 'twenty-twenty-one-style', $custom_css );
+		wp_add_inline_style( 'lift-assets-style', $custom_css );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'lift_non_latin_languages' );
@@ -560,7 +560,7 @@ new Twenty_Twenty_One_Dark_Mode();
 /**
  * Enqueue scripts for the customizer preview.
  *
- * @since Twenty Twenty-One 1.0
+ * @since LIFT 2021
  *
  * @return void
  */
@@ -586,7 +586,7 @@ add_action( 'customize_preview_init', 'twentytwentyone_customize_preview_init' )
 /**
  * Enqueue scripts for the customizer.
  *
- * @since Twenty Twenty-One 1.0
+ * @since LIFT 2021
  *
  * @return void
  */
@@ -605,7 +605,7 @@ add_action( 'customize_controls_enqueue_scripts', 'twentytwentyone_customize_con
 /**
  * Calculate classes for the main <html> element.
  *
- * @since Twenty Twenty-One 1.0
+ * @since LIFT 2021
  *
  * @return void
  */
@@ -620,7 +620,7 @@ function twentytwentyone_the_html_classes() {
 /**
  * Add "is-IE" class to body if the user is on Internet Explorer.
  *
- * @since Twenty Twenty-One 1.0
+ * @since LIFT 2021
  *
  * @return void
  */
