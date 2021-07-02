@@ -10,11 +10,14 @@
   background: linear-gradient(135deg, #ff00b2 0%, #0c6efd 100%);
   border-bottom: 0;
 }
-.admin-color-fresh .lift-theme-admin #redux-header #redux-intro-text {
-  background: #f3f3f3;
+.admin-color-fresh .lift-theme-admin #redux-intro-text {
+  background: #e7f1ff;
   border-bottom: 1px solid #d2d2d2;
   box-shadow: none;
   padding: 10px 10px;
+}
+.admin-color-fresh .lift-theme-admin #redux-intro-text p {
+  color: #384655;
 }
 .admin-color-fresh .lift-theme-admin .redux-sidebar {
   width: 300px;

@@ -3,6 +3,7 @@ $secondcolor: #0c6efd;
 $activecolor: #9632db;
 $graycolor : #dee2e6;
 $textcolor: #767d85;
+$textcolormain: #384655;
 $bgmenu: #efefef;
 $bgmenuactive: #e7f1ff;
 
@@ -17,11 +18,14 @@ $bgmenuactive: #e7f1ff;
 			background-color: $maincolor;
 			background: linear-gradient(135deg,$maincolor 0%,$secondcolor 100%);
 			border-bottom: 0;
-			#redux-intro-text {
-				background: #f3f3f3;
-				border-bottom: 1px solid #d2d2d2;
-				box-shadow: none;
-				padding: 10px 10px;
+		}
+		#redux-intro-text {
+			background: $bgmenuactive;
+			border-bottom: 1px solid #d2d2d2;
+			box-shadow: none;
+			padding: 10px 10px;
+			p {
+				color: $textcolormain
 			}
 		}
 		.redux-sidebar {
