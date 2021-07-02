@@ -1,0 +1,79 @@
+$maincolor: #ff00b2;
+$secondcolor: #0c6efd;
+$activecolor: #9632db;
+$graycolor : #dee2e6;
+$textcolor: #767d85;
+$bgmenu: #efefef;
+$bgmenuactive: #e7f1ff;
+
+.admin-color-fresh {
+	.lift-theme-admin  {
+		box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+		border-radius: 10px!important;
+		overflow: hidden;
+		margin-top: 1rem;
+		background: #fff !important;
+		#redux-header {
+			background-color: $maincolor;
+			background: linear-gradient(135deg,$maincolor 0%,$secondcolor 100%);
+			border-bottom: 0;
+			#redux-intro-text {
+				background: #f3f3f3;
+				border-bottom: 1px solid #d2d2d2;
+				box-shadow: none;
+				padding: 10px 10px;
+			}
+		}
+		.redux-sidebar {
+			width: 300px;
+			.redux-group-menu {
+				li {
+					ul {
+						&.subsection {
+							padding: 1rem 1rem 1rem 0;
+							li {
+								a {
+									border-radius: 0 5rem 5rem 0;
+									background-color: $bgmenu;
+								}
+							}
+						}
+					}
+					&.activeChild {
+						&.hasSubSections {
+							a {
+								background-color: $secondcolor;
+								text-shadow: none
+							}	
+							ul {
+								&.subsection {
+									li {
+										a {
+											background-color: $bgmenu;
+											color: $textcolor
+										}
+										&.active {
+											a {
+												background-color: $maincolor;
+												text-shadow: none;
+												color: #fff;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.redux-main {
+			margin-left: 300px;
+			.lift-theme-admin-column {
+				.lift-theme-admin-column-2 {
+		
+				}
+			}
+		}
+	}
+}

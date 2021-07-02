@@ -38,7 +38,7 @@
 				'min'           => 960,
 				'step'          => 20,
 				'default'       => 1140,
-				'max'           => 1320,
+				'max'           => 1820,
 				'display_value' => 'text'
 			),
 		),

@@ -26,7 +26,7 @@
                 'type'           => 'spacing',
                 'mode'           => 'padding',
                 'all'            => false,
-                'units'          => array( 'em', 'px', '%' ),      // You can specify a unit value. Possible: px, em, %
+                'units'          => array( 'em', 'rem', 'px', '%' ),      // You can specify a unit value. Possible: px, em, %
                 'units_extended' => 'true',    // Allow users to select any type of unit
                 //'display_units' => 'false',   // Set to false to hide the units if the units are specified
                 'title'          => __( 'Padding Option', 'lift-theme-options' ),
@@ -80,6 +80,30 @@
                     '6' => array(
                         'alt' => '6 Columns',
                         'img' => ReduxFramework::$_url . 'assets/img/3cr.png'
+					),
+					'7' => array(
+                        'alt' => '7 Column',
+                        'img' => ReduxFramework::$_url . 'assets/img/3cr.png'
+                    ),
+                    '8' => array(
+                        'alt' => '8 Columns',
+                        'img' => ReduxFramework::$_url . 'assets/img/3cr.png'
+                    ),
+                    '9' => array(
+                        'alt' => '9 Columns',
+                        'img' => ReduxFramework::$_url . 'assets/img/3cr.png'
+                    ),
+                    '10' => array(
+                        'alt' => '10 Columns',
+                        'img' => ReduxFramework::$_url . 'assets/img/3cr.png'
+                    ),
+                    '11' => array(
+                        'alt' => '11 Columns',
+                        'img' => ReduxFramework::$_url . 'assets/img/3cr.png'
+                    ),
+                    '12' => array(
+                        'alt' => '12 Columns',
+                        'img' => ReduxFramework::$_url . 'assets/img/3cr.png'
                     )
                 ),
                 'default'  => '4'
@@ -88,13 +112,41 @@
 			array(
 				'id'       => 'lift-theme-footer-columns-gutters',
                 'title'    => __( 'Footer columns gutters', 'lift-theme-options' ),
+				'desc'       => __( 'Set -1 for default gutters', 'lift-theme-options' ),
 				'type'          => 'slider',
-				'min'           => 0,
+				'min'           => -1,
 				'step'          => 1,
 				'default'       => 3,
 				'max'           => 5,
-				'display_value' => 'text'
+				'display_value' => 'text',
+				'default'  => '-1'
 			),
+
+			array(
+				'id'       => 'lift-theme-footer-columns-1',
+				'type'     => 'select',
+				'title'    => __( 'Column 1', 'lift-theme-options' ),
+				'subtitle' => __( 'Class name', 'lift-theme-options' ),
+				'desc'           => __( 'Mobile', 'lift-theme-options' ),
+				'options'  => array(
+					'1' => '1 column',
+					'2' => '2 columns',
+					'3' => '3 columns',
+					'4' => '4 columns',
+					'5' => '5 columns',
+					'6' => '6 columns',
+					'7' => '7 columns',
+					'8' => '8 columns',
+					'9' => '9 columns',
+					'10' => '10 columns',
+					'11' => '11 columns',
+					'12' => '12 columns',
+				),
+				'class' => 'lift-theme-admin-column lift-theme-admin-column-2',
+				'default'  => '12'
+			),
+
+			
 			
 
         )
