@@ -357,7 +357,9 @@ function lift_widgets_init() {
 
 	global $lift_theme;
 
-	for ($i=1; $i <= $lift_theme['lift-theme-footer-layout'] ; $i++) { 
+	$get_footer_columns = isset($lift_theme['lift-theme-footer-columns']) ? $lift_theme['lift-theme-footer-columns'] : 1;
+
+	for ($i=1; $i <= $get_footer_columns ; $i++) { 
 		register_sidebar(
 			array(
 				'name'          => esc_html__( 'Footer '.$i, 'wp-lift-theme' ),

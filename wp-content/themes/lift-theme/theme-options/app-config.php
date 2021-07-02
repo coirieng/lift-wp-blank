@@ -43,6 +43,7 @@ if ( is_dir( $lift_patterns_path ) ) {
 
 require_once 'options/options.php';
 require_once 'options/helps.php';
-// require_once 'tabs/tab-full.php';
+require_once 'tabs/tab-layout.php';
 require_once 'tabs/tab-footer.php';
+// require_once 'tabs/tab-full.php';
 require_once 'options/init.php';
