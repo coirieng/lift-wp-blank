@@ -6,7 +6,6 @@ add_action('redux/options/' . $opt_name . '/saved',  "lift_save_css"  );
 add_action('redux/options/' . $opt_name . '/saved',  "lift_save_js"  );
 // add_filter('redux/options/' . $opt_name . '/compiler', 'lift_compiler_css', 10, 3);
 
-
     if ( file_exists( dirname( __DIR__ ) . '/README.md' ) ) {
         $section = array(
             'icon'   => 'bi bi-book',
@@ -37,9 +36,40 @@ add_action('redux/options/' . $opt_name . '/saved',  "lift_save_js"  );
 			}
 		
 			if( $wp_filesystem ) {
+
+				$tmp = '/*!
+* ╦  ╦╔═╗╔╦╗  ╔═╗┬─┐┌─┐┌─┐┌┬┐┬┌─┐┌┐┌┌─┐
+* ║  ║╠╣  ║   ║  ├┬┘├┤ ├─┤ │ ││ ││││└─┐
+* ╩═╝╩╚   ╩   ╚═╝┴└─└─┘┴ ┴ ┴ ┴└─┘┘└┘└─┘
+* Coding by Nguyen Pham
+* https://baonguyenyam.github.io
+*/';
+
 				$scss = new Compiler();
-				$css = $scss->compileString($lift_theme['lift-theme-cssjs-scss-code'])->getCss();
+				$css = $scss->compileString($tmp.$lift_theme['lift-theme-cssjs-scss-code'])->getCss();
 		
+				$wp_filesystem->put_contents(
+					$filename,
+					$css,
+					FS_CHMOD_FILE // predefined mode settings for WP files
+				);
+			}
+		}
+	}
+
+	if ( ! function_exists( 'lift_compiler_css' ) ) {
+		function lift_compiler_css( $options, $css, $changed_values) {
+			global $wp_filesystem;
+			global $lift_theme;
+
+			$filename = dirname(__DIR__) .'/../dist/css/export.css';
+		
+			if( empty( $wp_filesystem ) ) {
+				require_once( ABSPATH .'/wp-admin/includes/file.php' );
+				WP_Filesystem();
+			}
+		
+			if( $wp_filesystem ) {
 				$wp_filesystem->put_contents(
 					$filename,
 					$css,
@@ -60,9 +90,17 @@ add_action('redux/options/' . $opt_name . '/saved',  "lift_save_js"  );
 				require_once( ABSPATH .'/wp-admin/includes/file.php' );
 				WP_Filesystem();
 			}
+
+			$tmp = '/*!
+* ╦  ╦╔═╗╔╦╗  ╔═╗┬─┐┌─┐┌─┐┌┬┐┬┌─┐┌┐┌┌─┐
+* ║  ║╠╣  ║   ║  ├┬┘├┤ ├─┤ │ ││ ││││└─┐
+* ╩═╝╩╚   ╩   ╚═╝┴└─└─┘┴ ┴ ┴ ┴└─┘┘└┘└─┘
+* Coding by Nguyen Pham
+* https://baonguyenyam.github.io
+*/';
 		
 			if( $wp_filesystem ) {
-				$css = $lift_theme['lift-theme-cssjs-css-code'];
+				$css = $tmp.$lift_theme['lift-theme-cssjs-css-code'];
 				$wp_filesystem->put_contents(
 					$filename,
 					$css,
@@ -83,9 +121,17 @@ add_action('redux/options/' . $opt_name . '/saved',  "lift_save_js"  );
 				require_once( ABSPATH .'/wp-admin/includes/file.php' );
 				WP_Filesystem();
 			}
+
+			$tmp = '/*!
+* ╦  ╦╔═╗╔╦╗  ╔═╗┬─┐┌─┐┌─┐┌┬┐┬┌─┐┌┐┌┌─┐
+* ║  ║╠╣  ║   ║  ├┬┘├┤ ├─┤ │ ││ ││││└─┐
+* ╩═╝╩╚   ╩   ╚═╝┴└─└─┘┴ ┴ ┴ ┴└─┘┘└┘└─┘
+* Coding by Nguyen Pham
+* https://baonguyenyam.github.io
+*/';
 		
 			if( $wp_filesystem ) {
-				$js = $lift_theme['lift-theme-cssjs-js-code'];
+				$js = $tmp.$lift_theme['lift-theme-cssjs-js-code'];
 				$wp_filesystem->put_contents(
 					$filename,
 					$js,

@@ -135,7 +135,7 @@ $args['share_icons'][] = array(
         } else {
             $v = str_replace( '-', '_', $args['opt_name'] );
         }
-        $args['intro_text'] = sprintf( __( '<p>Did you know that LIFT sets a global variable for you? To access any of your saved options from within your code you can use your global variable: <strong>$%1$s</strong></p>', 'lift-theme-options' ), $v );
+        $args['intro_text'] = sprintf( __( '<p>As of WP 4.3, the favicon setting is now available in the default WordPress customizer (Appearance > Customize).</p>', 'lift-theme-options' ), $v );
     } else {
         $args['intro_text'] = __( '<p>This text is displayed above the options panel. It isn\'t required, but more info is always better! The intro_text field accepts all HTML.</p>', 'lift-theme-options' );
     }

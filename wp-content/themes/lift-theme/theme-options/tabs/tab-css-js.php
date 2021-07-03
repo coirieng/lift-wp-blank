@@ -8,6 +8,27 @@
     ) );
 
 	Redux::setSection( $opt_name, array(
+		'title'      => __( 'SCSS/SASS', 'lift-theme-options' ),
+		'id'         => 'lift-theme-cssjs-scss',
+        'subsection' => true,
+		'fields'     => array(
+			array(
+				'id'       => 'lift-theme-cssjs-scss-code',
+                'type'     => 'ace_editor',
+				'title'    => __('CSS Compiler', 'lift-theme-options'),
+				'subtitle' => __('Sass is a stylesheet language that’s compiled to CSS. It allows you to use variables, nested rules, mixins, functions, and more, all with a fully CSS-compatible syntax. Sass helps keep large stylesheets well-organized and makes it easy to share design within and across projects.', 'lift-theme-options'),
+				'mode'     => 'scss',
+				'class' => 'lift-theme-admin-cssjs',
+				'theme'    => 'monokai',
+				'default'  => "",
+				'options' => array(
+					'minLines' => 40, 
+					'maxLines' => 100
+				)
+			),
+		),
+    ) );
+	Redux::setSection( $opt_name, array(
         'title'      => __( 'CSS', 'lift-theme-options' ),
         'id'         => 'lift-theme-cssjs-css',
         'subsection' => true,
@@ -28,27 +49,7 @@
 				),
 			),
 			) );
-	Redux::setSection( $opt_name, array(
-		'title'      => __( 'SCSS', 'lift-theme-options' ),
-		'id'         => 'lift-theme-cssjs-scss',
-        'subsection' => true,
-		'fields'     => array(
-			array(
-				'id'       => 'lift-theme-cssjs-scss-code',
-                'type'     => 'ace_editor',
-				'title'    => __('SCSS Code', 'lift-theme-options'),
-				'subtitle' => __('Paste your SCSS code here.', 'lift-theme-options'),
-				'mode'     => 'scss',
-				'class' => 'lift-theme-admin-cssjs',
-				'theme'    => 'monokai',
-				'default'  => "",
-				'options' => array(
-					'minLines' => 40, 
-					'maxLines' => 100
-				)
-			),
-		),
-    ) );
+	
 	Redux::setSection( $opt_name, array(
         'title'      => __( 'JavaScript/Babel', 'lift-theme-options' ),
         'id'         => 'lift-theme-cssjs-js',
