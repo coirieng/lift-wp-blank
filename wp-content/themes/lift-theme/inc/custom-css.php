@@ -10,7 +10,7 @@
 /**
  * Generate CSS.
  *
- * @since Twenty Twenty-One 1.0
+ * @since LIFT Theme 1.0
  *
  * @param string $selector The CSS selector.
  * @param string $style The CSS style.

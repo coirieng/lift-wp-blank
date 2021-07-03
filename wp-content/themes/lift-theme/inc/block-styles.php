@@ -13,7 +13,7 @@ if ( function_exists( 'register_block_style' ) ) {
 	/**
 	 * Register block styles.
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since LIFT Theme 1.0
 	 *
 	 * @return void
 	 */
@@ -22,7 +22,7 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/columns',
 			array(
-				'name'  => 'twentytwentyone-columns-overlap',
+				'name'  => 'lifttheme-columns-overlap',
 				'label' => esc_html__( 'Overlap', 'wp-lift-theme' ),
 			)
 		);
@@ -31,7 +31,7 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/cover',
 			array(
-				'name'  => 'twentytwentyone-border',
+				'name'  => 'lifttheme-border',
 				'label' => esc_html__( 'Borders', 'wp-lift-theme' ),
 			)
 		);
@@ -40,7 +40,7 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/group',
 			array(
-				'name'  => 'twentytwentyone-border',
+				'name'  => 'lifttheme-border',
 				'label' => esc_html__( 'Borders', 'wp-lift-theme' ),
 			)
 		);
@@ -49,7 +49,7 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/image',
 			array(
-				'name'  => 'twentytwentyone-border',
+				'name'  => 'lifttheme-border',
 				'label' => esc_html__( 'Borders', 'wp-lift-theme' ),
 			)
 		);
@@ -58,7 +58,7 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/image',
 			array(
-				'name'  => 'twentytwentyone-image-frame',
+				'name'  => 'lifttheme-image-frame',
 				'label' => esc_html__( 'Frame', 'wp-lift-theme' ),
 			)
 		);
@@ -67,7 +67,7 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/latest-posts',
 			array(
-				'name'  => 'twentytwentyone-latest-posts-dividers',
+				'name'  => 'lifttheme-latest-posts-dividers',
 				'label' => esc_html__( 'Dividers', 'wp-lift-theme' ),
 			)
 		);
@@ -76,7 +76,7 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/latest-posts',
 			array(
-				'name'  => 'twentytwentyone-latest-posts-borders',
+				'name'  => 'lifttheme-latest-posts-borders',
 				'label' => esc_html__( 'Borders', 'wp-lift-theme' ),
 			)
 		);
@@ -85,7 +85,7 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/media-text',
 			array(
-				'name'  => 'twentytwentyone-border',
+				'name'  => 'lifttheme-border',
 				'label' => esc_html__( 'Borders', 'wp-lift-theme' ),
 			)
 		);
@@ -94,7 +94,7 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/separator',
 			array(
-				'name'  => 'twentytwentyone-separator-thick',
+				'name'  => 'lifttheme-separator-thick',
 				'label' => esc_html__( 'Thick', 'wp-lift-theme' ),
 			)
 		);
@@ -103,7 +103,7 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/social-links',
 			array(
-				'name'  => 'twentytwentyone-social-icons-color',
+				'name'  => 'lifttheme-social-icons-color',
 				'label' => esc_html__( 'Dark gray', 'wp-lift-theme' ),
 			)
 		);

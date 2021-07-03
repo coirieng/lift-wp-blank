@@ -7,13 +7,13 @@
  * @since 2021
  */
 
-if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
+if ( ! class_exists( 'LIFT_Theme_Customize' ) ) {
 	/**
 	 * Customizer Settings.
 	 *
 	 * @since LIFT 2021
 	 */
-	class Twenty_Twenty_One_Customize {
+	class LIFT_Theme_Customize {
 
 		/**
 		 * Constructor. Instantiate the object.
@@ -24,6 +24,7 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 		 */
 		public function __construct() {
 			add_action( 'customize_register', array( $this, 'register' ) );
+			add_action( 'customize_register', array( $this, 'prefix_remove_css_section' ) );
 		}
 
 		/**
@@ -37,6 +38,10 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 		 *
 		 * @return void
 		 */
+		public function prefix_remove_css_section( $wp_customize ) {
+			$wp_customize->remove_section('custom_css');
+		}
+
 		public function register( $wp_customize ) {
 
 			// Change site-title & description to postMessage.
@@ -121,7 +126,7 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 			include_once get_theme_file_path( 'classes/class-nguyen-customize-color-control.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 
 			// Register the custom control.
-			$wp_customize->register_control_type( 'Twenty_Twenty_One_Customize_Color_Control' );
+			$wp_customize->register_control_type( 'LIFT_Theme_Customize_Color_Control' );
 
 			// Get the palette from theme-supports.
 			$palette = get_theme_support( 'editor-color-palette' );
@@ -136,7 +141,7 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 
 			// Add the control. Overrides the default background-color control.
 			$wp_customize->add_control(
-				new Twenty_Twenty_One_Customize_Color_Control(
+				new LIFT_Theme_Customize_Color_Control(
 					$wp_customize,
 					'background_color',
 					array(
