@@ -4,7 +4,7 @@
     Redux::setSection( $opt_name, array(
         'title' => __( 'CSS/JS', 'lift-theme-options' ),
         'id'    => 'lift-theme-cssjs',
-        'icon'  => 'el el-list-alt'
+        'icon'  => 'bi bi-braces'
     ) );
 
 	Redux::setSection( $opt_name, array(

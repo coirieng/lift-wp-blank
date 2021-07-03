@@ -1,7 +1,7 @@
 <?php
     if ( file_exists( dirname( __DIR__ ) . '/README.md' ) ) {
         $section = array(
-            'icon'   => 'el el-list-alt',
+            'icon'   => 'bi bi-book',
             'title'  => __( 'Documentation', 'lift-theme-options' ),
             'fields' => array(
                 array(

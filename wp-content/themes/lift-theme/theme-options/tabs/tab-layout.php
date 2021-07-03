@@ -3,7 +3,7 @@
     Redux::setSection( $opt_name, array(
         'title' => __( 'Web Layout', 'lift-theme-options' ),
         'id'    => 'layout',
-        'icon'  => 'el el-list-alt'
+        'icon'  => 'bi bi-columns-gap'
     ) );
 
     Redux::setSection( $opt_name, array(

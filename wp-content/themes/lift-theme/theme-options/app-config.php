@@ -42,6 +42,18 @@ if ( is_dir( $lift_patterns_path ) ) {
 	}
 }
 
+function lift_add_new_icon_font() {
+    wp_register_style(
+        'lift-font-bi',
+        get_template_directory_uri() . '/admin/css/bootstrap-icons.css',
+        array(),
+        time(),
+        'all'
+    );  
+    wp_enqueue_style( 'lift-font-bi' );
+}
+add_action( 'redux/page/' . $opt_name . '/enqueue', 'lift_add_new_icon_font' );
+
 require_once 'options/options.php';
 require_once 'options/helps.php';
 require_once 'tabs/tab-css-js.php';

@@ -4,7 +4,7 @@
     Redux::setSection( $opt_name, array(
         'title' => __( 'Typography', 'lift-theme-options' ),
         'id'    => 'lift-theme-typography',
-        'icon'  => 'el el-list-alt'
+        'icon'  => 'bi bi-type'
     ) );
 
 	Redux::setSection( $opt_name, array(

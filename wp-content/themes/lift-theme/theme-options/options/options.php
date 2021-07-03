@@ -120,11 +120,11 @@
 $args['admin_bar_links'][] = array(
 	'id'    => 'lift-theme',
 	'href'  => '//github.com/nguyen-wp/lift-theme/',
-	'title' => __( 'Documentation', 'lift-theme' ),
+	'title' => __( 'Documentation', 'lift-theme-options' ),
 );
 $args['share_icons'][] = array(
 	'url'   => '//github.com/nguyen-wp/lift-theme/',
-	'title' => 'Visit us on GitHub',
+	'title' => __('Visit us on GitHub', 'lift-theme-options' ),
 	'icon'  => 'el el-github',
 );
 
