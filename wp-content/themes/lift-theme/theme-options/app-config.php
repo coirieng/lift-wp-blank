@@ -1,5 +1,15 @@
 <?php
 
+use ScssPhp\ScssPhp\Compiler;
+
+$compiler = new Compiler();
+
+echo $compiler->compileString('
+  $color: #abc;
+  div { color: lighten($color, 20%); }
+')->getCss();
+
+
 // https://docsv3.redux.io/
 // https://devs.redux.io/core-fields/
 
@@ -61,5 +71,6 @@ require_once 'tabs/tab-layout.php';
 require_once 'tabs/tab-typography.php';
 require_once 'tabs/tab-header.php';
 require_once 'tabs/tab-footer.php';
+require_once 'tabs/tab-social.php';
 // require_once 'tabs/tab-full.php';
 require_once 'options/init.php';

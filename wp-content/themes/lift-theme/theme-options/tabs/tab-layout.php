@@ -2,15 +2,10 @@
     // -> START layout
     Redux::setSection( $opt_name, array(
         'title' => __( 'Web Layout', 'lift-theme-options' ),
-        'id'    => 'layout',
-        'icon'  => 'bi bi-columns-gap'
-    ) );
-
-    Redux::setSection( $opt_name, array(
-        'title'      => __( 'Layout', 'lift-theme-options' ),
+        'icon'  => 'bi bi-columns-gap',
         'id'         => 'lift-theme-layout',
         'desc'       => __( 'For full documentation on this field, visit: ', 'lift-theme-options' ) . '<a href="//getbootstrap.com/docs/5.0/layout/containers/" target="_blank">getbootstrap.com/docs/5.0/layout/containers/</a>',
-        'subsection' => true,
+        'subsection' => false,
 		'fields'     => array(
 			array(
 				'id'       => 'lift-theme-layout-style',

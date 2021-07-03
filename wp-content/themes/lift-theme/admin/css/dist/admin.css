@@ -156,8 +156,48 @@
   border-color: #cccccc !important;
   box-shadow: none !important;
 }
+.admin-color-fresh .lift-theme-admin .redux-main .form-table > tbody > tr > th {
+  width: 20%;
+}
 .admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-footer-style.lift-theme-admin-footer-style-bg #lift_theme-lift-theme-footer-style-bg-background-image {
   display: none;
+}
+.admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-cssjs th {
+  width: 100% !important;
+  display: block;
+  margin-top: 1rem;
+}
+.admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-cssjs th .redux_field_th {
+  padding: 0 0 0.5rem 0;
+}
+.admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-cssjs td {
+  display: block;
+  margin-bottom: 1rem;
+}
+.admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-cssjs td .redux_field_td,
+.admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-cssjs td .redux-field-container {
+  padding: 0;
+}
+.admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-social-media .form-table th {
+  width: 100% !important;
+  display: block;
+  margin-top: 1rem;
+}
+.admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-social-media .form-table th .redux_field_th {
+  padding: 0 0 0.5rem 0;
+}
+.admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-social-media .form-table td {
+  display: block;
+  margin-bottom: 1rem;
+}
+.admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-social-media .form-table td .redux_field_td,
+.admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-social-media .form-table td .redux-field-container {
+  padding: 0;
+}
+.admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-social-media .form-table td .redux_field_td .regular-text,
+.admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-social-media .form-table td .redux-field-container .regular-text {
+  width: 100%;
+  max-width: 600px;
 }
 .admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-footer-column.lift-theme-admin-footer-column-img .redux-image-select:nth-child(1) label {
   position: relative;

@@ -201,10 +201,55 @@ $boo: #cccccc;
 					}
 				}
 			}
+			.form-table>tbody>tr>th {
+				width: 20%;
+			}
 			.lift-theme-admin-footer-style {
 				&.lift-theme-admin-footer-style-bg {
 					#lift_theme-lift-theme-footer-style-bg-background-image {
 						display: none;
+					}
+				}
+			}
+			.lift-theme-admin-cssjs {
+				th {
+					width: 100% !important;
+					display: block;
+					margin-top: 1rem;
+					.redux_field_th {
+						padding:  0 0 .5rem 0;
+					}
+				}
+				td {
+					display: block;
+					margin-bottom: 1rem;
+					.redux_field_td, 
+					.redux-field-container {
+						padding: 0;
+					}
+				}
+			}
+			.lift-theme-admin-social-media {
+				.form-table {
+					th {
+						width: 100% !important;
+						display: block;
+						margin-top: 1rem;
+						.redux_field_th {
+							padding:  0 0 .5rem 0;
+						}
+					}
+					td {
+						display: block;
+						margin-bottom: 1rem;
+						.redux_field_td, 
+						.redux-field-container {
+							padding: 0;
+							.regular-text {
+								width: 100%;
+								max-width: 600px;
+							}
+						}
 					}
 				}
 			}

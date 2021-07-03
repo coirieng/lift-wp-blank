@@ -77,7 +77,7 @@
         // Global shut-off for dynamic CSS output by the framework. Will also disable google fonts output
         'output_tag'           => true,
         // Allows dynamic CSS to be generated for customizer and google fonts, but stops the dynamic CSS from going to the head
-        // 'footer_credit'             => 'by LIFT Theme',
+        'footer_credit'             => 'LIFT Creations - Create something great',
 
         // FUTURE -> Not in use yet, but reserved or partially implemented. Use at your own risk.
         'database'             => '',
