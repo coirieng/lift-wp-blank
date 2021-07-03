@@ -1,6 +1,7 @@
 <?php
 
 // https://docsv3.redux.io/
+// https://devs.redux.io/core-fields/
 
 if ( ! class_exists( 'Redux' ) ) {
 	return;
