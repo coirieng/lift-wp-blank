@@ -1,7 +1,7 @@
 <?php
     // -> START layout
     Redux::setSection( $opt_name, array(
-        'title' => __( 'Layout', 'lift-theme-options' ),
+        'title' => __( 'Web Layout', 'lift-theme-options' ),
         'id'    => 'layout',
         'icon'  => 'el el-list-alt'
     ) );
