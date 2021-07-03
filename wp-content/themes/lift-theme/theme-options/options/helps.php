@@ -20,3 +20,4 @@
     // Set the help sidebar
     $content = __( '<p>This is the sidebar content, HTML is allowed.</p>', 'lift-theme-options' );
     Redux::setHelpSidebar( $opt_name, $content );
+

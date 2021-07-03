@@ -1,1 +1,0 @@
-"use strict";module.exports=function(s,i,t){var e=require("gulp-strip-comments");s.task("js-min",function(){return s.src(["./dist/js/*.js","!./dist/js/lift.js"]).pipe(i.uglify()).pipe(e()).pipe(s.dest("./dist/js"))})};

@@ -1,15 +1,5 @@
 <?php
 
-use ScssPhp\ScssPhp\Compiler;
-
-$compiler = new Compiler();
-
-echo $compiler->compileString('
-  $color: #abc;
-  div { color: lighten($color, 20%); }
-')->getCss();
-
-
 // https://docsv3.redux.io/
 // https://devs.redux.io/core-fields/
 

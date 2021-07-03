@@ -1,4 +1,12 @@
 <?php
+use ScssPhp\ScssPhp\Compiler;
+
+add_action('redux/options/' . $opt_name . '/saved',  "lift_compiler_sass"  );
+add_action('redux/options/' . $opt_name . '/saved',  "lift_save_css"  );
+add_action('redux/options/' . $opt_name . '/saved',  "lift_save_js"  );
+// add_filter('redux/options/' . $opt_name . '/compiler', 'lift_compiler_css', 10, 3);
+
+
     if ( file_exists( dirname( __DIR__ ) . '/README.md' ) ) {
         $section = array(
             'icon'   => 'bi bi-book',
@@ -15,6 +23,79 @@
         );
         Redux::setSection( $opt_name, $section );
     }
+
+	if ( ! function_exists( 'lift_compiler_sass' ) ) {
+		function lift_compiler_sass($values) {
+			global $wp_filesystem;
+			global $lift_theme;
+		
+			$filename = dirname(__DIR__) .'/../dist/css/style.css';
+
+			if( empty( $wp_filesystem ) ) {
+				require_once( ABSPATH .'/wp-admin/includes/file.php' );
+				WP_Filesystem();
+			}
+		
+			if( $wp_filesystem ) {
+				$scss = new Compiler();
+				$css = $scss->compileString($lift_theme['lift-theme-cssjs-scss-code'])->getCss();
+		
+				$wp_filesystem->put_contents(
+					$filename,
+					$css,
+					FS_CHMOD_FILE // predefined mode settings for WP files
+				);
+			}
+		}
+	}
+
+	if ( ! function_exists( 'lift_save_css' ) ) {
+		function lift_save_css($values) {
+			global $wp_filesystem;
+			global $lift_theme;
+
+			$filename = dirname(__DIR__) .'/../dist/css/theme.css';
+		
+			if( empty( $wp_filesystem ) ) {
+				require_once( ABSPATH .'/wp-admin/includes/file.php' );
+				WP_Filesystem();
+			}
+		
+			if( $wp_filesystem ) {
+				$css = $lift_theme['lift-theme-cssjs-css-code'];
+				$wp_filesystem->put_contents(
+					$filename,
+					$css,
+					FS_CHMOD_FILE // predefined mode settings for WP files
+				);
+			}
+		}
+	}
+
+	if ( ! function_exists( 'lift_save_js' ) ) {
+		function lift_save_js($values) {
+			global $wp_filesystem;
+			global $lift_theme;
+
+			$filename = dirname(__DIR__) .'/../dist/js/theme.js';
+		
+			if( empty( $wp_filesystem ) ) {
+				require_once( ABSPATH .'/wp-admin/includes/file.php' );
+				WP_Filesystem();
+			}
+		
+			if( $wp_filesystem ) {
+				$js = $lift_theme['lift-theme-cssjs-js-code'];
+				$wp_filesystem->put_contents(
+					$filename,
+					$js,
+					FS_CHMOD_FILE // predefined mode settings for WP files
+				);
+			}
+		}
+	}
+
+
     /*
      *
      * YOU MUST PREFIX THE FUNCTIONS BELOW AND ACTION FUNCTION CALLS OR ANY OTHER CONFIG MAY OVERRIDE YOUR CODE.

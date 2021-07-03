@@ -1,1 +1,0 @@
-"use strict";module.exports=function(e,s,i){e.task("css-min",function(){var s=require("gulp-clean-css");return e.src(["./dist/css/*.css"]).pipe(s({compatibility:"ie8",level:{1:{specialComments:0}}})).pipe(e.dest("./dist/css"))})};
