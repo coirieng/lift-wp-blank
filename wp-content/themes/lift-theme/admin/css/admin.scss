@@ -19,6 +19,26 @@ $boo: #cccccc;
 	color: $colowhite;
 }
 
+#toplevel_page_lift_theme_options {
+	.toplevel_page_lift_theme_options {
+		.dashicons-admin-generic {
+			&:before {
+				display: inline-block;
+				font-family: bootstrap-icons !important;
+				font-style: normal;
+				font-weight: normal !important;
+				font-variant: normal;
+				text-transform: none;
+				line-height: 1;
+				vertical-align: -.125em;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				content: "\f154";
+			}
+		}
+	}
+}
+
 .admin-color-fresh {
 	.lift-theme-admin  {
 		box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;

@@ -457,6 +457,7 @@ add_action( 'wp_enqueue_scripts', 'lift_scripts' );
 function lift_admin_scripts() {
 
 	// Styles.
+	wp_enqueue_style( 'lift-assets-icon-style', get_template_directory_uri() . '/admin/css/bootstrap-icons.css', array(), wp_get_theme()->get( 'Version' ), 'all' );
 	wp_enqueue_style( 'lift-assets-main-style', get_template_directory_uri() . '/admin/css/dist/admin.min.css', array(), wp_get_theme()->get( 'Version' ), 'all' );
 
 	wp_enqueue_script(

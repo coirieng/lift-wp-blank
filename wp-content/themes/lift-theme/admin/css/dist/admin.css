@@ -1,9 +1,24 @@
+@charset "UTF-8";
 .admin-color-fresh .lift-theme-admin .redux-sidebar .redux-group-menu li.activeChild.hasSubSections a, .admin-color-fresh .lift-theme-admin .redux-sidebar .redux-group-menu li.active a, .admin-color-fresh .lift-theme-admin #redux-header {
   background: #ff00b2;
   background: -moz-linear-gradient(135deg, #ff00b2 0%, #0c6efd 100%);
   background: -webkit-linear-gradient(135deg, #ff00b2 0%, #0c6efd 100%);
   background: linear-gradient(135deg, #ff00b2 0%, #0c6efd 100%);
   color: #fff;
+}
+
+#toplevel_page_lift_theme_options .toplevel_page_lift_theme_options .dashicons-admin-generic:before {
+  display: inline-block;
+  font-family: bootstrap-icons !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -0.125em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
 }
 
 .admin-color-fresh .lift-theme-admin {
