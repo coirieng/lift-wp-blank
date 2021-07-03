@@ -6,23 +6,6 @@ add_action('redux/options/' . $opt_name . '/saved',  "lift_save_css"  );
 add_action('redux/options/' . $opt_name . '/saved',  "lift_save_js"  );
 // add_filter('redux/options/' . $opt_name . '/compiler', 'lift_compiler_css', 10, 3);
 
-    if ( file_exists( dirname( __DIR__ ) . '/README.md' ) ) {
-        $section = array(
-            'icon'   => 'bi bi-book',
-            'title'  => __( 'Documentation', 'lift-theme-options' ),
-            'fields' => array(
-                array(
-                    'id'       => '17',
-                    'type'     => 'raw',
-                    'markdown' => true,
-                    'content_path' => dirname( __DIR__ ) . '/README.md', // FULL PATH, not relative please
-                    //'content' => 'Raw content here',
-                ),
-            ),
-        );
-        Redux::setSection( $opt_name, $section );
-    }
-
 	if ( ! function_exists( 'lift_compiler_sass' ) ) {
 		function lift_compiler_sass($values) {
 			global $wp_filesystem;

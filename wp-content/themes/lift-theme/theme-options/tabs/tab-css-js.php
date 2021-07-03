@@ -2,7 +2,7 @@
 
     // -> START Footer
     Redux::setSection( $opt_name, array(
-        'title' => __( 'CSS/JS', 'lift-theme-options' ),
+        'title' => __( 'Custom Code', 'lift-theme-options' ),
         'id'    => 'lift-theme-cssjs',
         'icon'  => 'bi bi-braces'
     ) );
