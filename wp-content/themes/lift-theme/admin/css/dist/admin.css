@@ -13,6 +13,13 @@
   color: #fff;
 }
 
+.redux-notice-field.redux-success {
+  border: 0;
+  background-color: #e8ffd6;
+  border-radius: 10px;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.15), 0 0 0 1px #d1efba inset;
+}
+
 #toplevel_page_lift_theme_options .toplevel_page_lift_theme_options .dashicons-admin-generic:before {
   display: inline-block;
   font-family: bootstrap-icons !important;
@@ -186,7 +193,7 @@
 .admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-cssjs th {
   width: 100% !important;
   display: block;
-  margin-top: 1rem;
+  margin-top: 0;
 }
 .admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-cssjs th .redux_field_th {
   padding: 0 0 0.5rem 0;

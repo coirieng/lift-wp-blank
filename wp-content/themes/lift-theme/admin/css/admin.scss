@@ -26,6 +26,15 @@ $boo: #cccccc;
 	color: $colowhite;
 }
 
+.redux-notice-field {
+	&.redux-success {
+		border: 0;
+		background-color: #e8ffd6;
+		border-radius: 10px;
+		box-shadow: 0 2px 7px rgb(0 0 0 / 15%), 0 0 0 1px #d1efba inset;
+	}
+}
+
 #toplevel_page_lift_theme_options {
 	.toplevel_page_lift_theme_options {
 		.dashicons-admin-generic {
@@ -242,7 +251,7 @@ $boo: #cccccc;
 				th {
 					width: 100% !important;
 					display: block;
-					margin-top: 1rem;
+					margin-top: 0;
 					.redux_field_th {
 						padding:  0 0 .5rem 0;
 					}
