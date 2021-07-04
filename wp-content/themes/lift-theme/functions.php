@@ -15,12 +15,13 @@ if ( version_compare( $GLOBALS['wp_version'], '5.3', '<' ) ) {
 }
 
 require plugin_dir_path( __FILE__ ) . 'lift_redux_frame.php';
-require plugin_dir_path( __FILE__ ) . 'config/setup.php';
-require plugin_dir_path( __FILE__ ) . 'config/sidebar.php';
-require plugin_dir_path( __FILE__ ) . 'config/scripts.php';
-require plugin_dir_path( __FILE__ ) . 'config/styles.php';
-require plugin_dir_path( __FILE__ ) . 'config/non-latin-language.php';
-require plugin_dir_path( __FILE__ ) . 'config/content-width.php';
+require plugin_dir_path( __FILE__ ) . 'theme-config/setup.php';
+require plugin_dir_path( __FILE__ ) . 'theme-config/sidebar.php';
+require plugin_dir_path( __FILE__ ) . 'theme-config/scripts.php';
+require plugin_dir_path( __FILE__ ) . 'theme-config/styles.php';
+require plugin_dir_path( __FILE__ ) . 'theme-config/non-latin-language.php';
+require plugin_dir_path( __FILE__ ) . 'theme-config/content-width.php';
+require plugin_dir_path( __FILE__ ) . 'theme-config/customize-tab.php';
 
 
 // SVG Icons class.

@@ -157,17 +157,17 @@ $boo: #cccccc;
 		}
 		.redux-main {
 			margin-left: 300px;
-			.redux-action_bar {
-				.button {
-					background-color: $bgmenuactive;
-					color: $secondcolor;
-					border-color: $secondcolor;
-					&.button-primary {
-						background-color: $secondcolor;
-						color: $colowhite;
-						border: 0;
-					}
+			.button {
+				background-color: $bgmenuactive;
+				color: $secondcolor;
+				border-color: $secondcolor;
+				&.button-primary {
+					background-color: $secondcolor;
+					color: $colowhite;
+					border: 0;
 				}
+			}
+			.redux-action_bar {
 			}
 			.noUi-connect {
 				background-color: $secondcolor !important;

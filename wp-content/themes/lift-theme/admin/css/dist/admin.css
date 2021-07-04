@@ -118,12 +118,12 @@
 .admin-color-fresh .lift-theme-admin .redux-main {
   margin-left: 300px;
 }
-.admin-color-fresh .lift-theme-admin .redux-main .redux-action_bar .button {
+.admin-color-fresh .lift-theme-admin .redux-main .button {
   background-color: #e7f1ff;
   color: #0c6efd;
   border-color: #0c6efd;
 }
-.admin-color-fresh .lift-theme-admin .redux-main .redux-action_bar .button.button-primary {
+.admin-color-fresh .lift-theme-admin .redux-main .button.button-primary {
   background-color: #0c6efd;
   color: #fff;
   border: 0;
