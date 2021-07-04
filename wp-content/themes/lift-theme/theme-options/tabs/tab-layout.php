@@ -1,5 +1,12 @@
 <?php
-    // -> START layout
+    /**
+* @package LIFT Creations 
+* @subpackage Theme by Nguyen Pham
+* https://baonguyenyam.github.io/cv
+* @since 2021
+*/
+
+// -> START layout
     Redux::setSection( $opt_name, array(
         'title' => __( 'Web Layout', 'lift-theme-options' ),
         'icon'  => 'bi bi-columns-gap',

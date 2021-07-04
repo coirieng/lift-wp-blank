@@ -1,4 +1,10 @@
 <?php
+/**
+* @package LIFT Creations 
+* @subpackage Theme by Nguyen Pham
+* https://baonguyenyam.github.io/cv
+* @since 2021
+*/
 
 add_action( 'tgmpa_register', 'lift_theme_options_register_required_plugins' );
 

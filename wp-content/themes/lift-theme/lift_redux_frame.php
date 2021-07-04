@@ -1,8 +1,16 @@
-<?php 
+<?php
+/**
+* @package LIFT Creations 
+* @subpackage Theme by Nguyen Pham
+* https://baonguyenyam.github.io/cv
+* @since 2021
+*/
+
 // https://github.com/reduxframework/redux-framework/blob/master/sample/sample-config.php
 // https://devs.redux.io/guides/basics/getting-started.html
 // https://github.com/reduxframework/redux-framework/blob/master/sample/barebones-config.php
 
+// This line disable Edit theme/plugins in WP
 define( 'DISALLOW_FILE_EDIT', true );
 
 require_once 'vendor/scssphp/scssphp/scss.inc.php';

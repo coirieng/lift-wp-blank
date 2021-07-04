@@ -1,4 +1,10 @@
 <?php
+/**
+* @package LIFT Creations 
+* @subpackage Theme by Nguyen Pham
+* https://baonguyenyam.github.io/cv
+* @since 2021
+*/
 
 // https://docsv3.redux.io/
 // https://devs.redux.io/core-fields/
@@ -16,7 +22,7 @@ require_once 'tabs/tab-typography.php';
 require_once 'tabs/tab-header.php';
 require_once 'tabs/tab-footer.php';
 require_once 'tabs/tab-social.php';
-// require_once 'tabs/tab-full.php';
+// require_once 'tabs/tab-full.php'; // This one for demo 
 // CALL ACTION 
 require_once 'options/docs.php';
 require_once 'options/init.php';

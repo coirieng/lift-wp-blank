@@ -6,6 +6,7 @@
  *
  * @package LIFT Creations 
  * @subpackage Theme by Nguyen Pham
+ * https://baonguyenyam.github.io/cv
  * @since 2021
  */
 
@@ -22,7 +23,6 @@ require plugin_dir_path( __FILE__ ) . 'theme-config/styles.php';
 require plugin_dir_path( __FILE__ ) . 'theme-config/non-latin-language.php';
 require plugin_dir_path( __FILE__ ) . 'theme-config/content-width.php';
 require plugin_dir_path( __FILE__ ) . 'theme-config/customize-tab.php';
-
 
 // SVG Icons class.
 require get_template_directory() . '/classes/class-nguyen-svg-icons.php';
