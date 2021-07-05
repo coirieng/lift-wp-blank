@@ -37,5 +37,4 @@ function lift_theme_export_css() {
 }
 add_action( 'wp_head', 'lift_theme_export_css', 200 );
 
-add_filter('use_block_editor_for_post', '__return_false');
 
