@@ -142,7 +142,7 @@ if ( ! isset( $args['global_variable'] ) || $args['global_variable'] !== false )
 	} else {
 		$v = str_replace( '-', '_', $args['opt_name'] );
 	}
-	$args['intro_text'] = sprintf( __( '<p>The LIFT Creations Theme is the most natural and intuitive WordPress website building experience available. Built according to strict WordPress, PHP, and accessibility standards, LIFT Creations Theme is giving you the peace of mind to move your projects forward.</p>', 'lift-theme-options' ), $v );
+	$args['intro_text'] = sprintf( __( '<p>As of WP 4.3, the favicon setting is now available in the default WordPress customizer (Appearance > Customize).</p>', 'lift-theme-options' ), $v );
 } else {
 	$args['intro_text'] = __( '<p>This text is displayed above the options panel. It isn\'t required, but more info is always better! The intro_text field accepts all HTML.</p>', 'lift-theme-options' );
 }
