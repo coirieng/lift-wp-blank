@@ -1,3 +1,4 @@
+______________________________________________________
 # Global 
 
 Did you know that LIFT sets a global variable for you? To access any of your saved options from within your code you can use your global variable: **$lift_theme**
@@ -61,3 +62,22 @@ This theme auto compiler SASS, CSS, JS to:
 - `/dist/css/style.css` <= by SASS
 - `/dist/css/theme.css` <= by CSS
 - `/dist/js/theme.js` <= by JS
+
+<br>
+______________________________________________________
+# Plugins
+
+#### Bootstrap 5
+#### FontAwesome 5
+#### CSS Animation
+#### OWL Carousel
+#### Fancybox
+
+<br>
+______________________________________________________
+# Admin Plugins
+
+#### Bootstrap Icon
+#### Redux Framework
+#### SCSS-PHP
+#### TGM Plugin Activation
