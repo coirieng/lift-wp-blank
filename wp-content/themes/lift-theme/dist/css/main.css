@@ -48,4 +48,7 @@
 html, body {
   overflow-x: hidden; }
 
+.lift-theme .vc_message_box-icon .fa, .lift-theme .vc_message_box-icon .fas {
+  font-weight: 900; }
+
 /*# sourceMappingURL=main.css.map */
