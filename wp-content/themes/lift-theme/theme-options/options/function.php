@@ -57,13 +57,22 @@ function lift_theme_skin_body_class( $classes ) {
 
 	// LAYOUT 
 	$theme_value['theme_style'] = $lift_theme['lift-theme-global-style-theme'];
+	$theme_value['theme_dark_mode'] = $lift_theme['lift-theme-global-style-theme-dark'];
 
 	$classes[] = '';
 
 	if ( $theme_value['theme_style'] === 'modern' ) {
 		$classes[] = 'lift-theme-modern';
+	} else if ( $theme_value['theme_style'] === 'material' ) {
+		$classes[] = 'lift-theme-material';
+	} else if ( $theme_value['theme_style'] === 'monokai' ) {
+		$classes[] = 'lift-theme-monokai';
 	} else {
 		$classes[] = 'lift-theme-default';
+	}
+
+	if ( $theme_value['theme_dark_mode']) {
+		$classes[] = 'lift-theme-dark-mode';
 	}
 
 	return $classes;

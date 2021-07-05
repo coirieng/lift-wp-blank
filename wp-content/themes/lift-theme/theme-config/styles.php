@@ -38,6 +38,20 @@ function lift_styles() {
 			array(), 
 			wp_get_theme()->get( 'Version' ), 'all' 
 		);
+	} else if ( $theme_value['theme_style'] === 'material' ) {
+		wp_enqueue_style(
+			'lift-assets-theme-material-style', 
+			get_template_directory_uri() . '/dist/css/theme-material.css', 
+			array(), 
+			wp_get_theme()->get( 'Version' ), 'all' 
+		);
+	} else if ( $theme_value['theme_style'] === 'monokai' ) {
+		wp_enqueue_style(
+			'lift-assets-theme-monokai-style', 
+			get_template_directory_uri() . '/dist/css/theme-monokai.css', 
+			array(), 
+			wp_get_theme()->get( 'Version' ), 'all' 
+		);
 	}
 	wp_enqueue_style(
 		'lift-assets-theme-style', 
