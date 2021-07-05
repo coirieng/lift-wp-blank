@@ -37,4 +37,8 @@ function lift_theme_export_css() {
 }
 add_action( 'wp_head', 'lift_theme_export_css', 200 );
 
-
+// Remove Redux Menu 
+function remove_redux_fw_submenu() {
+    remove_submenu_page( 'tools.php', 'redux-about' );
+}
+add_action( 'admin_menu', 'remove_redux_fw_submenu', 999 );

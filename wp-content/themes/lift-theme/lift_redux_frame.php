@@ -16,8 +16,3 @@ require_once 'theme-options/app-config.php';
 require_once 'theme-options/required/class-tgm-plugin-activation.php';
 require_once 'theme-options/required/list.php';
 
-// Remove Redux Menu 
-function remove_redux_fw_submenu() {
-    remove_submenu_page( 'tools.php', 'redux-about' );
-}
-add_action( 'admin_menu', 'remove_redux_fw_submenu', 999 );

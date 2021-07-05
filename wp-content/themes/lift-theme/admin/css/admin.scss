@@ -173,7 +173,7 @@ $boo: #cccccc;
 		}
 		.redux-main {
 			margin-left: 300px;
-			.button {
+			.button, .button-secondary {
 				background-color: $bgmenuactive;
 				color: $secondcolor;
 				border-color: $secondcolor;
@@ -182,6 +182,11 @@ $boo: #cccccc;
 					color: $colowhite;
 					border: 0;
 				}
+			}
+			.button-primary {
+				background-color: $secondcolor;
+				color: $colowhite;
+				border: 0;
 			}
 			.redux-action_bar {
 			}
