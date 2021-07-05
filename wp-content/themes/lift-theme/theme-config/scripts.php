@@ -44,6 +44,12 @@ function lift_admin_scripts() {
 		wp_get_theme()->get( 'Version' ),
 		true
 	);
+	wp_enqueue_script(
+		'lift-admin-prism-script',
+		get_template_directory_uri() . '/admin/js/prism.js',
+		wp_get_theme()->get( 'Version' ),
+		true
+	);
 }
 
 add_action( 'admin_enqueue_scripts', 'lift_admin_scripts' );

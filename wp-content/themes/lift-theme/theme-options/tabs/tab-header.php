@@ -29,7 +29,7 @@
 	));
 
 	Redux::setSection( $opt_name, array(
-        'title' => __( 'Header Layout', 'lift-theme-options' ),
+        'title' => __( 'Header layout', 'lift-theme-options' ),
         'id'         => 'lift-theme-header-layout',
         'subsection' => true,
 		'fields'     => array(
@@ -142,7 +142,21 @@
 					'visited'  => '#8224e3',  // purple
 				)
             ),
+			array(
+				'id'       => 'lift-theme-header-shadow',
+                'type'     => 'select',
+                'title'    => __( 'Shadows', 'lift-theme-options' ),
+                'subtitle' => __( 'Add or remove shadows to elements with box-shadow utilities.', 'lift-theme-options' ),
+                'options'  => array(
+					'default'       => 'Default', 
+					'shadow-none'       => 'No shadow', 
+					'shadow-sm'       => 'Small shadow', 
+					'shadow'       => 'Regular shadow', 
+					'shadow-lg'       => 'Larger shadow', 
+				),
+				'default'         => 'default'
+            ),
+
+
 		)
 	));
-
-    

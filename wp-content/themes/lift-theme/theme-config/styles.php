@@ -69,6 +69,12 @@ function lift_admin_styles() {
 		array(), 
 		wp_get_theme()->get( 'Version' ), 'all' 
 	);
+	wp_enqueue_style(
+		'lift-assets-prism-style', 
+		get_template_directory_uri() . '/admin/css/prism.css', 
+		array(), 
+		wp_get_theme()->get( 'Version' ), 'all' 
+	);
 }
 
 add_action( 'admin_enqueue_scripts', 'lift_admin_styles' );

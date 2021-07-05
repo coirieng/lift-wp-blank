@@ -8,7 +8,7 @@
 
     // -> START Footer
     Redux::setSection( $opt_name, array(
-        'title' => __( 'Custom Code', 'lift-theme-options' ),
+        'title' => __( 'Custom code', 'lift-theme-options' ),
         'id'    => 'lift-theme-cssjs',
         'icon'  => 'bi bi-braces'
     ) );
@@ -25,7 +25,11 @@
 				'mode'     => 'scss',
 				'class' => 'lift-theme-admin-cssjs',
 				'theme'    => 'monokai',
-				'default'  => "",
+				'default'  => "\$mycolordefault: #3366ff;
+				
+.mycustomelement {
+	border-color: \$mycolordefault;
+}",
 				'options' => array(
 					'minLines' => 40, 
 					'maxLines' => 100
@@ -53,7 +57,13 @@
 				'mode'     => 'css',
 				'class' => 'lift-theme-admin-cssjs',
 				'theme'    => 'monokai',
-				'default'  => "",
+				'default'  => ":root {
+	--mycolor-default: #3366ff;
+}
+
+.myelement {
+	border-color: var(--mycolor-default);
+}",
 				'options' => array(
 					'minLines' => 40, 
 					'maxLines' => 100
