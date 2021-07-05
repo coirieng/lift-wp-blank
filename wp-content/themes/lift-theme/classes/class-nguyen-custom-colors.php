@@ -25,9 +25,6 @@ class LIFT_Theme_Custom_Colors {
 		// Enqueue color variables for customizer & frontend.
 		add_action( 'wp_enqueue_scripts', array( $this, 'custom_color_variables' ) );
 
-		// Enqueue color variables for editor.
-		add_action( 'enqueue_block_editor_assets', array( $this, 'editor_custom_color_variables' ) );
-
 		// Add body-class if needed.
 		add_filter( 'body_class', array( $this, 'body_class' ) );
 	}
@@ -97,29 +94,6 @@ class LIFT_Theme_Custom_Colors {
 	public function custom_color_variables() {
 		if ( 'd1e4dd' !== strtolower( get_theme_mod( 'background_color', 'D1E4DD' ) ) ) {
 			wp_add_inline_style( 'lift-assets-style', $this->generate_custom_color_variables() );
-		}
-	}
-
-	/**
-	 * Editor custom color variables.
-	 *
-	 * @access public
-	 *
-	 * @since LIFT 2021
-	 *
-	 * @return void
-	 */
-	public function editor_custom_color_variables() {
-		wp_enqueue_style(
-			'lift-assets-custom-color-overrides',
-			get_theme_file_uri( 'assets/css/custom-color-overrides.css' ),
-			array(),
-			(string) filemtime( get_theme_file_path( 'assets/css/custom-color-overrides.css' ) )
-		);
-
-		$background_color = get_theme_mod( 'background_color', 'D1E4DD' );
-		if ( 'd1e4dd' !== strtolower( $background_color ) ) {
-			wp_add_inline_style( 'lift-assets-custom-color-overrides', $this->generate_custom_color_variables( 'editor' ) );
 		}
 	}
 
