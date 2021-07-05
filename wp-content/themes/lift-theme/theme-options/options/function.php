@@ -50,6 +50,26 @@ function lift_theme_export_css() {
 }
 add_action( 'wp_head', 'lift_theme_export_css', 200 );
 
+// Theme Skin
+function lift_theme_skin_body_class( $classes ) {
+
+	global $lift_theme;
+
+	// LAYOUT 
+	$theme_value['theme_style'] = $lift_theme['lift-theme-global-style-theme'];
+
+	$classes[] = '';
+
+	if ( $theme_value['theme_style'] === 'modern' ) {
+		$classes[] = 'lift-theme-modern';
+	} else {
+		$classes[] = 'lift-theme-default';
+	}
+
+	return $classes;
+}
+add_filter( 'body_class', 'lift_theme_skin_body_class' );
+
 // Remove Redux Menu 
 function remove_redux_fw_submenu() {
     remove_submenu_page( 'tools.php', 'redux-about' );
