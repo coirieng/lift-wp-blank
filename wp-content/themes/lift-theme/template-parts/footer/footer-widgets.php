@@ -56,7 +56,7 @@ if(isset($lift_theme['lift-theme-footer-row-spacing'])) {
 				for ($i=1; $i <= $footer_value['footer_col'] ; $i++) { 
 			?>
 				<?php if(is_active_sidebar( 'sidebar-'.$i )) {?>
-					<div class="col <?=$footer_value['footer_column_'.$i]?>"><?php dynamic_sidebar( 'sidebar-'.$i ); ?></div>
+					<div class="col-12 <?=$footer_value['footer_column_'.$i]?>"><?php dynamic_sidebar( 'sidebar-'.$i ); ?></div>
 				<?php } ?>
 			<?php
 				}

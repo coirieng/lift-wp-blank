@@ -13,6 +13,20 @@
   color: #fff;
 }
 
+#vc_logo,
+.composer-switch .logo-icon,
+.wpb_switch-to-gutenberg {
+  display: none !important;
+}
+
+#poststuff .composer-switch {
+  overflow: hidden;
+}
+#poststuff .composer-switch a {
+  line-height: 20px;
+  height: 20px;
+}
+
 .redux-notice-field.redux-success {
   border: 0;
   background-color: #e8ffd6;

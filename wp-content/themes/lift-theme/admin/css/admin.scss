@@ -26,6 +26,24 @@ $boo: #cccccc;
 	color: $colowhite;
 }
 
+// VISUAL COMPOSER 
+#vc_logo,
+.composer-switch .logo-icon,
+.wpb_switch-to-gutenberg {
+	display: none!important;
+}
+#poststuff {
+	.composer-switch {
+		overflow: hidden;
+		a {
+			line-height: 20px;
+			height: 20px;
+		}
+	}
+}
+
+
+// REDUX FRAMEWORK
 .redux-notice-field {
 	&.redux-success {
 		border: 0;

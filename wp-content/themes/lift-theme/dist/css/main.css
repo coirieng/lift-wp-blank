@@ -45,4 +45,7 @@
 ::-webkit-scrollbar-thumb:hover {
   background: var(--lift-theme-main); }
 
+html, body {
+  overflow-x: hidden; }
+
 /*# sourceMappingURL=main.css.map */
