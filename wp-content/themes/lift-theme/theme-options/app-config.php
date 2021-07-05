@@ -14,6 +14,7 @@ if ( ! class_exists( 'Redux' ) ) {
 }
 
 require_once 'options/options.php';
+require_once 'options/function.php';
 require_once 'options/helps.php';
 // INI TABS
 require_once 'tabs/tab-css-js.php';

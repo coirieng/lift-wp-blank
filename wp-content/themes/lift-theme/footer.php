@@ -9,9 +9,9 @@
  */
 
 ?>
-			</main><!-- #main -->
+			</div><!-- #main -->
 		</div><!-- #primary -->
-	</div><!-- #content -->
+</main><!-- #content -->
 
 	<?php get_template_part( 'template-parts/footer/footer-widgets' ); ?>
 
