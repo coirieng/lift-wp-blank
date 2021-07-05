@@ -170,7 +170,7 @@
                 'id'       => 'lift-theme-footer-columns',
                 'type'     => 'image_select',
                 'title'    => __( 'Footer columns', 'lift-theme-options' ),
-                'subtitle' => __( 'How many columns du you need?', 'lift-theme-options' ),
+                'subtitle' => __( 'How many columns do you need?', 'lift-theme-options' ),
                 'desc'     => __( 'Number of columns', 'lift-theme-options' ),
                 //Must provide key => value(array:title|img) pairs for radio options
                 'options'  => array(
