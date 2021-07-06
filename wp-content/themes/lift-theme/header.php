@@ -25,11 +25,14 @@ $theme_value['layout_logo'] = $lift_theme['lift-theme-header-logo'];
 ?>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+<!-- LIFT WRAPPER -->
 <div id="page" class="site lift-wrapper">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wp-lift-theme' ); ?></a>
 
 	<?php get_template_part( 'template-parts/header/site-header' ); ?>
 
+	<!-- LIFT CONTENT -->
 	<main id="content" class="site-content lift-content">
 		<div id="primary" class="content-area container<?= isset($layout_value['layout_style']) && $layout_value['layout_style'] === '1' ? '-fluid': ''?>">
+			<!-- LIFT MAIN -->
 			<div id="main" class="site-main lift-main" role="main">

@@ -11,7 +11,7 @@ use ScssPhp\ScssPhp\Compiler;
 add_action('redux/options/' . $opt_name . '/saved',  "lift_compiler_sass"  );
 add_action('redux/options/' . $opt_name . '/saved',  "lift_save_css"  );
 add_action('redux/options/' . $opt_name . '/saved',  "lift_save_js"  );
-// add_filter('redux/options/' . $opt_name . '/compiler', 'lift_compiler_css', 10, 3);
+add_filter('redux/options/' . $opt_name . '/compiler', 'lift_compiler_css', 10, 3);
 
 	if ( ! function_exists( 'lift_compiler_sass' ) ) {
 		function lift_compiler_sass($values) {
@@ -58,11 +58,28 @@ add_action('redux/options/' . $opt_name . '/saved',  "lift_save_js"  );
 				require_once( ABSPATH .'/wp-admin/includes/file.php' );
 				WP_Filesystem();
 			}
+
+			// OUTPUT
+			$gen_css = '';
+
+			// BACKTOTOP
+			if(isset($changed_values['lift-theme-global-function-backtotop-spacing'])) {
+				$gen_css .= '#bactotop{right:'.$changed_values['lift-theme-global-function-backtotop-spacing']['right'].';bottom:'.$changed_values['lift-theme-global-function-backtotop-spacing']['bottom'].'}';
+			}
+			
+
+			$tmp = '/*!
+* ╦  ╦╔═╗╔╦╗  ╔═╗┬─┐┌─┐┌─┐┌┬┐┬┌─┐┌┐┌┌─┐
+* ║  ║╠╣  ║   ║  ├┬┘├┤ ├─┤ │ ││ ││││└─┐
+* ╩═╝╩╚   ╩   ╚═╝┴└─└─┘┴ ┴ ┴ ┴└─┘┘└┘└─┘
+* Coding by Nguyen Pham
+* https://baonguyenyam.github.io
+*/';
 		
 			if( $wp_filesystem ) {
 				$wp_filesystem->put_contents(
 					$filename,
-					$css,
+					$tmp.$gen_css,
 					FS_CHMOD_FILE // predefined mode settings for WP files
 				);
 			}

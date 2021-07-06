@@ -311,6 +311,25 @@ $boo: #cccccc;
 			.form-table > tbody > tr > th {
 				width: 20%;
 			}
+			@media screen and (max-width: 1400px) {
+				.form-table > tbody > tr > th {
+					width: 30%;
+				}
+			}
+			@media screen and (max-width: 1200px) {
+				.form-table > tbody > tr > th {
+					width: 100%;
+					display: block;
+					.redux_field_th {
+						padding-bottom: 0;
+						padding-right: 0;
+					}
+				}
+				.form-table > tbody > tr > td {
+					width: 100%;
+					display: block;
+				}
+			}
 			.lift-theme-admin-footer-style {
 				&.lift-theme-admin-footer-style-bg {
 					#lift_theme-lift-theme-footer-style-bg-background-image {

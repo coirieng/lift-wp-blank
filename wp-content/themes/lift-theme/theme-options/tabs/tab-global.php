@@ -44,26 +44,81 @@
 	Redux::setSection( $opt_name, array(
 		'title' => __( 'Functionality', 'lift-theme-options' ),
         'id'         => 'lift-theme-global-function',
+        'desc'       => __( 'For full documentation on this field, visit: ', 'lift-theme-options' ) . '<a href="//getbootstrap.com/docs/5.0/layout/breakpoints/" target="_blank">getbootstrap.com/docs/5.0/layout/breakpoints/</a>',
         'subsection' => true,
 		'fields'     => array(
 			array(
 				'id'       => 'lift-theme-global-function-backtotop',
                 'type'     => 'switch',
                 'title'    => __( 'Back to top', 'lift-theme-options' ),
-                'subtitle' => __( 'Toggle whether or not to enable a back to top button on your pages.', 'lift-theme-options' ),
+                'subtitle' => __( 'Toggle whether or not to enable a back to top button when viewing on a PC device. (≥1200px)', 'lift-theme-options' ),
+                'default'  => 0,
+                'on'       => 'On',
+                'off'      => 'Off',
+            ),
+			array(
+				'id'       => 'lift-theme-global-function-backtotop-smallpc',
+                'required' => array( 'lift-theme-global-function-backtotop', '=', '1' ),
+                'type'     => 'switch',
+                'title'    => __( 'Keep Back To Top Button On Small PC', 'lift-theme-options' ),
+                'subtitle' => __( 'Toggle whether or not to show or hide the back to top button when viewing on a small PC device. (≥992px)', 'lift-theme-options' ),
+                'default'  => 0,
+                'on'       => 'On',
+                'off'      => 'Off',
+            ),
+			array(
+				'id'       => 'lift-theme-global-function-backtotop-tablet',
+                'required' => array( 'lift-theme-global-function-backtotop-smallpc', '=', '1' ),
+                'type'     => 'switch',
+                'title'    => __( 'Keep Back To Top Button On Tablet', 'lift-theme-options' ),
+                'subtitle' => __( 'Toggle whether or not to show or hide the back to top button when viewing on a tablet device. (≥768px)', 'lift-theme-options' ),
+                'default'  => 0,
+                'on'       => 'On',
+                'off'      => 'Off',
+            ),
+			array(
+				'id'       => 'lift-theme-global-function-backtotop-phalet',
+                'required' => array( 'lift-theme-global-function-backtotop-tablet', '=', '1' ),
+                'type'     => 'switch',
+                'title'    => __( 'Keep Back To Top Button On Phalet', 'lift-theme-options' ),
+                'subtitle' => __( 'Toggle whether or not to show or hide the back to top button when viewing on a phalet device (≥576px).', 'lift-theme-options' ),
                 'default'  => 0,
                 'on'       => 'On',
                 'off'      => 'Off',
             ),
 			array(
 				'id'       => 'lift-theme-global-function-backtotop-mobile',
+                'required' => array( 'lift-theme-global-function-backtotop-phalet', '=', '1' ),
                 'type'     => 'switch',
                 'title'    => __( 'Keep Back To Top Button On Mobile', 'lift-theme-options' ),
-                'subtitle' => __( 'Toggle whether or not to show or hide the back to top button when viewing on a mobile device.', 'lift-theme-options' ),
+                'subtitle' => __( 'Toggle whether or not to show or hide the back to top button when viewing on a mobile device. (<576px)', 'lift-theme-options' ),
                 'default'  => 0,
                 'on'       => 'On',
                 'off'      => 'Off',
             ),
+			array(
+				'id'       => 'lift-theme-global-function-backtotop-spacing',
+				'required' => array( 'lift-theme-global-function-backtotop', '=', '1' ),
+                'type'           => 'spacing',
+                'mode'           => 'absolute',
+                'all'            => false,
+                'bottom'            => true,
+                'right'            => true,
+				'top'            => false,
+                'left'            => false,
+				'compiler' => true,
+                'units'          => array( 'em', 'rem', 'px', '%' ),      // You can specify a unit value. Possible: px, em, %
+                'units_extended' => 'true',    // Allow users to select any type of unit
+                'title'          => __( 'Position Option', 'lift-theme-options' ),
+                'subtitle'       => __( 'Allow your users to choose the position they want.', 'lift-theme-options' ),
+                'desc'           => __( 'You can enable or disable any piece of this field. Right, Bottom, or Units.', 'lift-theme-options' ),
+                'default'        => array(
+                    'bottom'    => '2rem',
+                    'right'  => '2rem',
+                )
+            ),
+			
+			
 			
 		),
     ) );

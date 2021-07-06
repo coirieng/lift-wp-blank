@@ -248,6 +248,25 @@
 .admin-color-fresh .lift-theme-admin .redux-main .form-table > tbody > tr > th {
   width: 20%;
 }
+@media screen and (max-width: 1400px) {
+  .admin-color-fresh .lift-theme-admin .redux-main .form-table > tbody > tr > th {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .admin-color-fresh .lift-theme-admin .redux-main .form-table > tbody > tr > th {
+    width: 100%;
+    display: block;
+  }
+  .admin-color-fresh .lift-theme-admin .redux-main .form-table > tbody > tr > th .redux_field_th {
+    padding-bottom: 0;
+    padding-right: 0;
+  }
+  .admin-color-fresh .lift-theme-admin .redux-main .form-table > tbody > tr > td {
+    width: 100%;
+    display: block;
+  }
+}
 .admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-footer-style.lift-theme-admin-footer-style-bg #lift_theme-lift-theme-footer-style-bg-background-image {
   display: none;
 }

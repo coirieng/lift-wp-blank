@@ -25,6 +25,11 @@ $footer_value['footer_column_9'] = trim($lift_theme['lift-theme-footer-columns-9
 $footer_value['footer_column_10'] = trim($lift_theme['lift-theme-footer-columns-10']);
 $footer_value['footer_column_11'] = trim($lift_theme['lift-theme-footer-columns-11']);
 $footer_value['footer_column_12'] = trim($lift_theme['lift-theme-footer-columns-12']);
+$global_value['backtotop'] = trim($lift_theme['lift-theme-global-function-backtotop']);
+$global_value['backtotop_mobile'] = trim($lift_theme['lift-theme-global-function-backtotop-mobile']);
+$global_value['backtotop_phalet'] = trim($lift_theme['lift-theme-global-function-backtotop-phalet']);
+$global_value['backtotop_tablet'] = trim($lift_theme['lift-theme-global-function-backtotop-tablet']);
+$global_value['backtotop_smallpc'] = trim($lift_theme['lift-theme-global-function-backtotop-smallpc']);
 
 $build_footer_spacing = '';
 if(isset($lift_theme['lift-theme-footer-row-spacing'])) {
@@ -48,6 +53,7 @@ if(isset($lift_theme['lift-theme-footer-row-spacing'])) {
 }
 ?>
 
+<!-- LIFT FOOTER  -->
 <?php if(is_active_sidebar('sidebar-1')) {?>
 <footer id="footer" class="footer lift-footer">
 	<div class="container<?= isset($footer_value['footer_style']) && $footer_value['footer_style'] === '1' ? '-fluid': ''?>">
@@ -66,3 +72,23 @@ if(isset($lift_theme['lift-theme-footer-row-spacing'])) {
 </footer>
 <?php } ?>
 
+<!-- LIFT BACK TO TOP -->
+<?php if($global_value['backtotop']) {?>
+	<?php
+		$displaybtt = 'position-fixed';
+		if($global_value['backtotop_smallpc']) {
+			$displaybtt .= ' d-lg-block';
+			if($global_value['backtotop_tablet']) {
+				$displaybtt .= ' d-md-block';
+				if($global_value['backtotop_phalet']) {
+					$displaybtt .= ' d-sm-block';
+					if($global_value['backtotop_mobile']) {
+						$displaybtt .= ' d-block';
+					}
+				}
+			}
+		}
+		$displaybtt .= ' d-xl-block';
+	?>
+	<a id="backtoptop" class="<?=$displaybtt;?>"><i class="fa fa-angle-up"></i></a>
+<?php } ?>
