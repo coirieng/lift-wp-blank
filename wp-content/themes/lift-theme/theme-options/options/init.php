@@ -13,6 +13,67 @@ add_action('redux/options/' . $opt_name . '/saved',  "lift_save_css"  );
 add_action('redux/options/' . $opt_name . '/saved',  "lift_save_js"  );
 add_filter('redux/options/' . $opt_name . '/compiler', 'lift_compiler_css', 10, 3);
 
+	if ( ! function_exists( 'lift_compiler_css' ) ) {
+		function lift_compiler_css( $options, $css, $changed_values) {
+			global $wp_filesystem;
+			global $lift_theme;
+
+			$filename = get_template_directory() . '/dist/css/export.css';
+		
+			if( empty( $wp_filesystem ) ) {
+				require_once( ABSPATH .'/wp-admin/includes/file.php' );
+				WP_Filesystem();
+			}
+
+			// OUTPUT
+			$gen_css = '';
+
+			// LAYOUT 
+			$options['layout_size'] = $lift_theme['lift-theme-layout-size'];
+			$options['layout_size_value'] = $lift_theme['lift-theme-layout-size-value'];
+			if($options['layout_size']) {
+				$gen_css .= "#content.lift-content{max-width: ".$options['layout_size_value']."px; margin: auto auto}";
+			}
+			// HEADER  
+			$options['header_size'] = $lift_theme['lift-theme-header-layout-size'];
+			$options['header_size_value'] = $lift_theme['lift-theme-header-layout-size-value'];
+			if($options['header_size']){
+				$gen_css .= "#content.lift-header{max-width: ".$options['header_size_value']."px; margin: auto auto}";
+			}
+			// FOOTER 
+			$options['footer_size'] = $lift_theme['lift-theme-footer-layout-size'];
+			$options['footer_size_value'] = $lift_theme['lift-theme-footer-layout-size-value'];
+			$options['footer_fixed'] = $lift_theme['lift-theme-footer-layout-fixed'];
+			if($options['footer_size']) {
+				$gen_css .= "#footer.lift-footer{max-width: ".$options['footer_size_value']."px; margin: auto auto}";
+			}
+			if($options['footer_fixed']) {
+				$gen_css .= "html,body {height: 100%;}.lift-wrapper{flex-direction: column;height: 100%;display:flex}#content.lift-content{flex-shrink: 0}#footer.lift-footer {margin-top: auto}";
+			}
+			// BACKTOTOP
+			if($options['lift-theme-global-function-backtotop-spacing']) {
+				$gen_css .= '#backtotop{right:'.$options['lift-theme-global-function-backtotop-spacing']['right'].';bottom:'.$options['lift-theme-global-function-backtotop-spacing']['bottom'].'}';
+			}
+			
+
+			$tmp = '/*!
+* ╦  ╦╔═╗╔╦╗  ╔═╗┬─┐┌─┐┌─┐┌┬┐┬┌─┐┌┐┌┌─┐
+* ║  ║╠╣  ║   ║  ├┬┘├┤ ├─┤ │ ││ ││││└─┐
+* ╩═╝╩╚   ╩   ╚═╝┴└─└─┘┴ ┴ ┴ ┴└─┘┘└┘└─┘
+* Coding by Nguyen Pham
+* https://baonguyenyam.github.io
+*/';
+		
+			if( $wp_filesystem ) {
+				$wp_filesystem->put_contents(
+					$filename,
+					$tmp.$gen_css,
+					FS_CHMOD_FILE // predefined mode settings for WP files
+				);
+			}
+		}
+	}
+
 	if ( ! function_exists( 'lift_compiler_sass' ) ) {
 		function lift_compiler_sass($values) {
 			global $wp_filesystem;
@@ -45,46 +106,7 @@ add_filter('redux/options/' . $opt_name . '/compiler', 'lift_compiler_css', 10, 
 				);
 			}
 		}
-	}
-
-	if ( ! function_exists( 'lift_compiler_css' ) ) {
-		function lift_compiler_css( $options, $css, $changed_values) {
-			global $wp_filesystem;
-			global $lift_theme;
-
-			$filename = get_template_directory() . '/dist/css/export.css';
-		
-			if( empty( $wp_filesystem ) ) {
-				require_once( ABSPATH .'/wp-admin/includes/file.php' );
-				WP_Filesystem();
-			}
-
-			// OUTPUT
-			$gen_css = '';
-
-			// BACKTOTOP
-			if(isset($changed_values['lift-theme-global-function-backtotop-spacing'])) {
-				$gen_css .= '#bactotop{right:'.$changed_values['lift-theme-global-function-backtotop-spacing']['right'].';bottom:'.$changed_values['lift-theme-global-function-backtotop-spacing']['bottom'].'}';
-			}
-			
-
-			$tmp = '/*!
-* ╦  ╦╔═╗╔╦╗  ╔═╗┬─┐┌─┐┌─┐┌┬┐┬┌─┐┌┐┌┌─┐
-* ║  ║╠╣  ║   ║  ├┬┘├┤ ├─┤ │ ││ ││││└─┐
-* ╩═╝╩╚   ╩   ╚═╝┴└─└─┘┴ ┴ ┴ ┴└─┘┘└┘└─┘
-* Coding by Nguyen Pham
-* https://baonguyenyam.github.io
-*/';
-		
-			if( $wp_filesystem ) {
-				$wp_filesystem->put_contents(
-					$filename,
-					$tmp.$gen_css,
-					FS_CHMOD_FILE // predefined mode settings for WP files
-				);
-			}
-		}
-	}
+	}	
 
 	if ( ! function_exists( 'lift_save_css' ) ) {
 		function lift_save_css($values) {

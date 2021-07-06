@@ -90,5 +90,5 @@ if(isset($lift_theme['lift-theme-footer-row-spacing'])) {
 		}
 		$displaybtt .= ' d-xl-block';
 	?>
-	<a id="backtoptop" class="<?=$displaybtt;?>"><i class="fa fa-angle-up"></i></a>
+	<a id="backtotop" class="<?=$displaybtt;?>"><i class="fa fa-angle-up"></i></a>
 <?php } ?>
