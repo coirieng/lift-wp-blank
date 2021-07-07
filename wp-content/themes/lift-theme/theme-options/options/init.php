@@ -28,32 +28,10 @@ add_filter('redux/options/' . $opt_name . '/compiler', 'lift_compiler_css', 10, 
 			// OUTPUT
 			$gen_css = '';
 
-			// LAYOUT 
-			$options['layout_size'] = $lift_theme['lift-theme-layout-size'];
-			$options['layout_size_value'] = $lift_theme['lift-theme-layout-size-value'];
-			if($options['layout_size']) {
-				$gen_css .= "#content.lift-content{max-width: ".$options['layout_size_value']."px; margin: auto auto}";
-			}
-			// HEADER  
-			$options['header_size'] = $lift_theme['lift-theme-header-layout-size'];
-			$options['header_size_value'] = $lift_theme['lift-theme-header-layout-size-value'];
-			if($options['header_size']){
-				$gen_css .= "#content.lift-header{max-width: ".$options['header_size_value']."px; margin: auto auto}";
-			}
-			// FOOTER 
-			$options['footer_size'] = $lift_theme['lift-theme-footer-layout-size'];
-			$options['footer_size_value'] = $lift_theme['lift-theme-footer-layout-size-value'];
-			$options['footer_fixed'] = $lift_theme['lift-theme-footer-layout-fixed'];
-			if($options['footer_size']) {
-				$gen_css .= "#footer.lift-footer{max-width: ".$options['footer_size_value']."px; margin: auto auto}";
-			}
-			if($options['footer_fixed']) {
-				$gen_css .= "html,body {height: 100%;}.lift-wrapper{flex-direction: column;height: 100%;display:flex}#content.lift-content{flex-shrink: 0}#footer.lift-footer {margin-top: auto}";
-			}
 			// BACKTOTOP
-			if($options['lift-theme-global-function-backtotop-spacing']) {
-				$gen_css .= '#backtotop{right:'.$options['lift-theme-global-function-backtotop-spacing']['right'].';bottom:'.$options['lift-theme-global-function-backtotop-spacing']['bottom'].'}';
-			}
+			// if($options['lift-theme-global-function-backtotop-spacing']) {
+			// 	$gen_css .= '#backtotop{right:'.$options['lift-theme-global-function-backtotop-spacing']['right'].';bottom:'.$options['lift-theme-global-function-backtotop-spacing']['bottom'].'}';
+			// }
 			
 
 			$tmp = '/*!

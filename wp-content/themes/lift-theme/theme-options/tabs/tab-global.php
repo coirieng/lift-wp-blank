@@ -106,9 +106,9 @@
                 'right'            => true,
 				'top'            => false,
                 'left'            => false,
-				'compiler' => true,
-                'units'          => array( 'em', 'rem', 'px', '%' ),      // You can specify a unit value. Possible: px, em, %
-                'units_extended' => 'true',    // Allow users to select any type of unit
+				// 'compiler' => true,
+                'units'          => array( 'em', 'rem', 'px', '%' ),      
+                'units_extended' => 'true',    
                 'title'          => __( 'Position Option', 'lift-theme-options' ),
                 'subtitle'       => __( 'Allow your users to choose the position they want.', 'lift-theme-options' ),
                 'desc'           => __( 'You can enable or disable any piece of this field. Right, Bottom, or Units.', 'lift-theme-options' ),

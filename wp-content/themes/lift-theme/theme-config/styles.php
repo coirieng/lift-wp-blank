@@ -53,12 +53,13 @@ function lift_styles() {
 			wp_get_theme()->get( 'Version' ), 'all' 
 		);
 	}
-	wp_enqueue_style(
-		'lift-assets-export-style', 
-		get_template_directory_uri() . '/dist/css/export.css', 
-		array(), 
-		wp_get_theme()->get( 'Version' ), 'all' 
-	);
+	// FOR COMPILER ONLY 
+	// wp_enqueue_style(
+	// 	'lift-assets-export-style', 
+	// 	get_template_directory_uri() . '/dist/css/export.css', 
+	// 	array(), 
+	// 	wp_get_theme()->get( 'Version' ), 'all' 
+	// );
 	wp_enqueue_style(
 		'lift-assets-theme-style', 
 		get_template_directory_uri() . '/dist/css/theme.css', 
