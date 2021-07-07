@@ -67,7 +67,14 @@ function lift_styles() {
 		wp_get_theme()->get( 'Version' ), 'all' 
 	);
 	// THEME SKIN
-	if ( $theme_value['theme_style'] === 'modern' ) {
+	if ( $theme_value['theme_style'] === '' || $theme_value['theme_style'] === 'default' ) {
+		wp_enqueue_style(
+			'lift-assets-theme-custom', 
+			get_template_directory_uri() . '/dist/css/theme-default.css', 
+			array(), 
+			wp_get_theme()->get( 'Version' ), 'all' 
+		);
+	} else if ( $theme_value['theme_style'] === 'modern' ) {
 		wp_enqueue_style(
 			'lift-assets-theme-custom', 
 			get_template_directory_uri() . '/dist/css/theme-modern.css', 
@@ -135,19 +142,19 @@ function lift_admin_styles() {
 	// Styles.
 	wp_enqueue_style(
 		'lift-assets-icon-style', 
-		get_template_directory_uri() . '/admin/css/bootstrap-icons.css', 
+		get_template_directory_uri() . '/admin/vendor/bootstrap-icons.css', 
 		array(), 
 		wp_get_theme()->get( 'Version' ), 'all' 
 	);
 	wp_enqueue_style(
 		'lift-assets-main-style', 
-		get_template_directory_uri() . '/admin/css/dist/admin.min.css', 
+		get_template_directory_uri() . '/admin/dist/css/admin.css', 
 		array(), 
 		wp_get_theme()->get( 'Version' ), 'all' 
 	);
 	wp_enqueue_style(
 		'lift-assets-prism-style', 
-		get_template_directory_uri() . '/admin/css/prism.css', 
+		get_template_directory_uri() . '/admin/vendor/prism.css', 
 		array(), 
 		wp_get_theme()->get( 'Version' ), 'all' 
 	);

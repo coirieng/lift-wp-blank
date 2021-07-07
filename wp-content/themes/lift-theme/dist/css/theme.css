@@ -1,13 +1,1 @@
-/*!
-* ╦  ╦╔═╗╔╦╗  ╔═╗┬─┐┌─┐┌─┐┌┬┐┬┌─┐┌┐┌┌─┐
-* ║  ║╠╣  ║   ║  ├┬┘├┤ ├─┤ │ ││ ││││└─┐
-* ╩═╝╩╚   ╩   ╚═╝┴└─└─┘┴ ┴ ┴ ┴└─┘┘└┘└─┘
-* Coding by Nguyen Pham
-* https://baonguyenyam.github.io
-*/:root {
-	--mycolor-default: #3366ff;
-}
-
-.myelement {
-	border-color: var(--mycolor-default);
-}
+:root{--mycolor-default:#3366ff}.myelement{border-color:var(--mycolor-default)}

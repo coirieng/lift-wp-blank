@@ -40,13 +40,13 @@ function lift_admin_scripts() {
 
 	wp_enqueue_script(
 		'lift-admin-main-script',
-		get_template_directory_uri() . '/admin/js/dist/admin.prod.js',
+		get_template_directory_uri() . '/admin/dist/js/admin.js',
 		wp_get_theme()->get( 'Version' ),
 		true
 	);
 	wp_enqueue_script(
 		'lift-admin-prism-script',
-		get_template_directory_uri() . '/admin/js/prism.js',
+		get_template_directory_uri() . '/admin/vendor/prism.js',
 		wp_get_theme()->get( 'Version' ),
 		true
 	);
