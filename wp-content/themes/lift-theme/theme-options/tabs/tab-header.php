@@ -66,6 +66,42 @@
     ) );
 
 	Redux::setSection( $opt_name, array(
+        'title'      => __( 'Header row', 'lift-theme-options' ),
+        'id'         => 'lift-theme-header-row',
+        'desc'       => __( 'For full documentation on this field, visit: ', 'lift-theme-options' ) . '<a href="//getbootstrap.com/docs/5.0/layout/gutters/" target="_blank">getbootstrap.com/docs/5.0/layout/gutters/</a>',
+        'subsection' => true,
+		'fields'     => array(
+			array(
+				'id'       => 'lift-theme-header-row-option',
+                'type'     => 'switch',
+                'title'    => __( 'Row padding', 'lift-theme-options' ),
+                'default'  => 0,
+                'on'       => 'On',
+                'off'      => 'Off',
+            ),
+			array(
+				'id'       => 'lift-theme-header-row-spacing',
+				'required' => array( 'lift-theme-header-row-option', '=', '1' ),
+                'type'           => 'spacing',
+                'mode'           => 'padding',
+                'all'            => false,
+                'units'          => array( 'em', 'rem', 'px', '%' ),      // You can specify a unit value. Possible: px, em, %
+                'units_extended' => 'true',    // Allow users to select any type of unit
+                //'display_units' => 'false',   // Set to false to hide the units if the units are specified
+                'title'          => __( 'Padding Option', 'lift-theme-options' ),
+                'subtitle'       => __( 'Allow your users to choose the spacing or margin they want.', 'lift-theme-options' ),
+                'desc'           => __( 'You can enable or disable any piece of this field. Top, Right, Bottom, Left, or Units.', 'lift-theme-options' ),
+                'default'        => array(
+                    'padding-top'    => '0',
+                    'padding-right'  => '0',
+                    'padding-bottom' => '0',
+                    'padding-left'   => '0'
+                )
+            ),
+		)
+	));
+
+	Redux::setSection( $opt_name, array(
 		'title'      => __( 'Header style', 'lift-theme-options' ),
 		'id'         => 'lift-theme-header-style',
 		'subsection' => true,
@@ -160,3 +196,5 @@
 
 		)
 	));
+
+	

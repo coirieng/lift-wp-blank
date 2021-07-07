@@ -6,6 +6,10 @@ module.exports = function (gulp, $, browserSync) {
 		gulp.watch('./src/templates/**/*.pug', gulp.series('tao-html'));
 		gulp.watch('./src/scripts/**/*.js', gulp.series('tao-js'));
 		gulp.watch("./dist/**/*.*").on('change', browserSync.reload);
+		gulp.watch('./admin/styles/**/*.scss', gulp.series('tao-sass-admin'));
+		gulp.watch('./admin/styles/**/*.sass', gulp.series('tao-sass-admin'));
+		gulp.watch('./admin/scripts/**/*.js', gulp.series('tao-js-admin'));
+		gulp.watch("./admin/**/*.*").on('change', browserSync.reload);
 		done();
 	});
 };

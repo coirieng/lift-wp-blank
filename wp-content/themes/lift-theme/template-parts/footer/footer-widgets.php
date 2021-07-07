@@ -56,17 +56,19 @@ if(isset($lift_theme['lift-theme-footer-row-spacing'])) {
 <!-- LIFT FOOTER  -->
 <?php if(is_active_sidebar('sidebar-1')) {?>
 <footer id="footer" class="footer lift-footer">
-	<div class="container<?= isset($footer_value['footer_style']) && $footer_value['footer_style'] === '1' ? '-fluid': ''?>">
-		<div class="row<?= isset($footer_value['footer_gutters']) && $footer_value['footer_gutters'] !== '-1' ? ' gx-'.$footer_value['footer_gutters'] : ''?>"<?= isset($footer_value['footer_row']) && $footer_value['footer_row'] === '1' ? $build_footer_spacing : ''?>>
-			<?php
-				for ($i=1; $i <= $footer_value['footer_col'] ; $i++) { 
-			?>
-				<?php if(is_active_sidebar( 'sidebar-'.$i )) {?>
-					<div class="col-12 <?=$footer_value['footer_column_'.$i]?>"><?php dynamic_sidebar( 'sidebar-'.$i ); ?></div>
-				<?php } ?>
-			<?php
-				}
-			?>
+	<div class="footer-wrapper"<?= isset($footer_value['footer_row']) && $footer_value['footer_row'] === '1' ? $build_footer_spacing : ''?>>
+		<div class="container<?= isset($footer_value['footer_style']) && $footer_value['footer_style'] === '1' ? '-fluid': ''?>">
+			<div class="row<?= isset($footer_value['footer_gutters']) && $footer_value['footer_gutters'] !== '-1' ? ' gx-'.$footer_value['footer_gutters'] : ''?>">
+				<?php
+					for ($i=1; $i <= $footer_value['footer_col'] ; $i++) { 
+				?>
+					<?php if(is_active_sidebar( 'sidebar-'.$i )) {?>
+						<div class="col-12 <?=$footer_value['footer_column_'.$i]?>"><?php dynamic_sidebar( 'sidebar-'.$i ); ?></div>
+					<?php } ?>
+				<?php
+					}
+				?>
+			</div>
 		</div>
 	</div>
 </footer>

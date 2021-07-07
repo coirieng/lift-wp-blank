@@ -17,23 +17,26 @@ function lift_styles() {
 	$global_css = '';
 
 	// LAYOUT 
+	$layout_value['layout_style'] = $lift_theme['lift-theme-layout-style'];
 	$layout_value['layout_size'] = $lift_theme['lift-theme-layout-size'];
 	$layout_value['layout_size_value'] = $lift_theme['lift-theme-layout-size-value'];
-	if($layout_value['layout_size']) {
-		$layout_css .= "#content.lift-content{max-width: ".$layout_value['layout_size_value']."px; margin: auto auto}";
+	if($layout_value['layout_style'] && $layout_value['layout_size']) {
+		$layout_css .= "#content.lift-content .content-wrapper{max-width: ".$layout_value['layout_size_value']."px; margin: 0 auto; width: 100%}";
 	}
 	// HEADER  
+	$header_value['header_style'] = $lift_theme['lift-theme-header-layout-style'];
 	$header_value['header_size'] = $lift_theme['lift-theme-header-layout-size'];
 	$header_value['header_size_value'] = $lift_theme['lift-theme-header-layout-size-value'];
-	if($header_value['header_size']){
-		$header_css .= "#content.lift-header{max-width: ".$header_value['header_size_value']."px; margin: auto auto}";
+	if($header_value['header_style'] && $header_value['header_size']){
+		$header_css .= "#content.lift-header .header-wrapper{max-width: ".$header_value['header_size_value']."px; margin: 0 auto; width: 100%}";
 	}
 	// FOOTER 
+	$footer_value['footer_style'] = $lift_theme['lift-theme-footer-layout-style'];
 	$footer_value['footer_size'] = $lift_theme['lift-theme-footer-layout-size'];
 	$footer_value['footer_size_value'] = $lift_theme['lift-theme-footer-layout-size-value'];
 	$footer_value['footer_fixed'] = $lift_theme['lift-theme-footer-layout-fixed'];
-	if($footer_value['footer_size']) {
-		$footer_css .= "#footer.lift-footer{max-width: ".$footer_value['footer_size_value']."px; margin: auto auto}";
+	if($footer_value['footer_style'] && $footer_value['footer_size']) {
+		$footer_css .= "#footer.lift-footer .footer-wrapper{max-width: ".$footer_value['footer_size_value']."px; margin: 0 auto; width: 100%}";
 	}
 	if($footer_value['footer_fixed']) {
 		$footer_css .= "html,body {height: 100%;}.lift-wrapper{flex-direction: column;height: 100%;display:flex}#content.lift-content{flex-shrink: 0}#footer.lift-footer {margin-top: auto}";

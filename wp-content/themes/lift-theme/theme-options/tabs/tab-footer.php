@@ -150,10 +150,10 @@
                 'subtitle'       => __( 'Allow your users to choose the spacing or margin they want.', 'lift-theme-options' ),
                 'desc'           => __( 'You can enable or disable any piece of this field. Top, Right, Bottom, Left, or Units.', 'lift-theme-options' ),
                 'default'        => array(
-                    'margin-top'    => '1px',
-                    'margin-right'  => '2px',
-                    'margin-bottom' => '3px',
-                    'margin-left'   => '4px'
+                    'padding-top'    => '0',
+                    'padding-right'  => '0',
+                    'padding-bottom' => '0',
+                    'padding-left'   => '0'
                 )
             ),
 		)
