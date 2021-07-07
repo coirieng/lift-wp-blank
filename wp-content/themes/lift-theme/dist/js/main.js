@@ -186,6 +186,19 @@
   };
 })("LIFTReady", window);
 
-LIFTReady(function () {});
+function lift_fixed_header() {
+  var getHeader = $('header#header').outerHeight(true);
+
+  if (getHeader) {
+    $('body').css({
+      'padding-top': getHeader + 'px'
+    });
+  }
+}
+
+lift_fixed_header();
+LIFTReady(function () {
+  lift_fixed_header();
+});
 liftDOMChange(function () {});
 //# sourceMappingURL=main.js.map

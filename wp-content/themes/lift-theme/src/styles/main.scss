@@ -1,6 +1,19 @@
 @import 'config/global';
 @import 'config/scrollbar';
 
+
+.navbar-expand-all {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+	.navbar-toggler {
+		display: none;
+	}
+	.navbar-collapse {
+		display: flex!important;
+		flex-basis: auto;
+	}
+}
+
 html, body {
 	overflow-x: hidden;
 }

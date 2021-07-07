@@ -15,6 +15,12 @@ $header_class = $show_title ? 'site-title' : 'screen-reader-text';
 
 ?>
 
+<a class="navbar-brand" href="#">Fixed navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+<!--//
 <?php if ( has_custom_logo() && $show_title ) : ?>
 	<div class="site-logo"><?php the_custom_logo(); ?></div>
 <?php endif; ?>
@@ -40,4 +46,6 @@ $header_class = $show_title ? 'site-title' : 'screen-reader-text';
 			<?php echo $description; // phpcs:ignore WordPress.Security.EscapeOutput ?>
 		</p>
 	<?php endif; ?>
-</div><!-- .site-branding -->
+</div>
+
+//-->

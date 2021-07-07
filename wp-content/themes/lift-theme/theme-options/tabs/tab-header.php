@@ -19,12 +19,36 @@
 		'subsection' => true,
 		'fields'     => array(
 			array(
+				'id'       => 'lift-theme-header-menu-toggle',
+                'type'     => 'select',
+                'title'    => __( 'Menu Toggle', 'lift-theme-options' ),
+                'options'  => array(
+					'all'       => 'Keep', 
+					'sm'       => 'Mobile', 
+					'md'       => 'Phalet', 
+					'lg'       => 'Tablet', 
+					'xl'       => 'Small PC', 
+					'xxl'       => 'Large PC', 
+					''       => 'All Devices', 
+				),
+				'default'         => 'md'
+            ),
+			array(
+				'id'       => 'lift-theme-header-fixed',
+                'type'     => 'switch',
+                'title'    => __( 'Header fixed', 'lift-theme-options' ),
+                'default'  => 0,
+                'on'       => 'On',
+                'off'      => 'Off',
+            ),
+			array(
                 'id'       => 'lift-theme-header-logo',
                 'type'     => 'media', 
 				'url'      => true,
 				'output'   => array( '#header .site-branding' ),
                 'title'    => __( 'Header Logo', 'lift-theme-options' ),
             ),
+			
 		)
 	));
 
@@ -33,6 +57,7 @@
         'id'         => 'lift-theme-header-layout',
         'subsection' => true,
 		'fields'     => array(
+			
 			array(
 				'id'       => 'lift-theme-header-layout-style',
                 'type'     => 'switch',

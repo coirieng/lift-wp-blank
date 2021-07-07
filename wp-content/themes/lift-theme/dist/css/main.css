@@ -45,6 +45,15 @@
 ::-webkit-scrollbar-thumb:hover {
   background: var(--lift-theme-main); }
 
+.navbar-expand-all {
+  flex-wrap: nowrap;
+  justify-content: flex-start; }
+  .navbar-expand-all .navbar-toggler {
+    display: none; }
+  .navbar-expand-all .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto; }
+
 html, body {
   overflow-x: hidden; }
 
