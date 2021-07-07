@@ -1,6 +1,26 @@
 @import 'config/global';
 @import 'config/scrollbar';
 
+.entry-footer {
+	display: block;
+	.edit-link {
+		margin: 2rem 0;
+		display: inline-flex;
+		background: var(--lift-theme-main);
+		border-radius: 5px;
+		overflow: hidden;
+		> a {
+			color:#fff !important;
+			text-decoration: none;
+			padding: .75rem 1rem;
+			&:hover, 
+			&:focus, 
+			&:active {
+				background: var(--lift-theme-azure)
+			}
+		}
+	}
+}
 
 .navbar-expand-all {
     flex-wrap: nowrap;

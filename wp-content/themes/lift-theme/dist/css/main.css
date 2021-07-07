@@ -45,6 +45,21 @@
 ::-webkit-scrollbar-thumb:hover {
   background: var(--lift-theme-main); }
 
+.entry-footer {
+  display: block; }
+  .entry-footer .edit-link {
+    margin: 2rem 0;
+    display: inline-flex;
+    background: var(--lift-theme-main);
+    border-radius: 5px;
+    overflow: hidden; }
+    .entry-footer .edit-link > a {
+      color: #fff !important;
+      text-decoration: none;
+      padding: .75rem 1rem; }
+      .entry-footer .edit-link > a:hover, .entry-footer .edit-link > a:focus, .entry-footer .edit-link > a:active {
+        background: var(--lift-theme-azure); }
+
 .navbar-expand-all {
   flex-wrap: nowrap;
   justify-content: flex-start; }
