@@ -8,7 +8,7 @@
 
 // -> START layout
     Redux::setSection( $opt_name, array(
-        'title' => __( 'Blog', 'lift-theme-options' ),
+        'title' => __( 'Posts/Blogs', 'lift-theme-options' ),
         'icon'  => 'bi bi-stickies',
         'id'         => 'lift-theme-blog',
 	));

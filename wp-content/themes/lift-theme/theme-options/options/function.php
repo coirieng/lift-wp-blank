@@ -6,59 +6,7 @@
 * @since 2021
 */
 
-function lift_theme_export_css() {
-	global $lift_theme;
-
-	$header_css = '';
-	$footer_css = '';
-	$layout_css = '';
-	$global_css = '';
-
-	// LAYOUT 
-	$layout_value['layout_size'] = $lift_theme['lift-theme-layout-size'];
-	$layout_value['layout_size_value'] = $lift_theme['lift-theme-layout-size-value'];
-	if($layout_value['layout_size']) {
-		$layout_css .= "#content.lift-content{max-width: ".$layout_value['layout_size_value']."px; margin: auto auto}";
-	}
-	// HEADER  
-	$header_value['header_size'] = $lift_theme['lift-theme-header-layout-size'];
-	$header_value['header_size_value'] = $lift_theme['lift-theme-header-layout-size-value'];
-	if($header_value['header_size']){
-		$header_css .= "#content.lift-header{max-width: ".$header_value['header_size_value']."px; margin: auto auto}";
-	}
-	// FOOTER 
-	$footer_value['footer_size'] = $lift_theme['lift-theme-footer-layout-size'];
-	$footer_value['footer_size_value'] = $lift_theme['lift-theme-footer-layout-size-value'];
-	$footer_value['footer_fixed'] = $lift_theme['lift-theme-footer-layout-fixed'];
-	if($footer_value['footer_size']) {
-		$footer_css .= "#footer.lift-footer{max-width: ".$footer_value['footer_size_value']."px; margin: auto auto}";
-	}
-	if($footer_value['footer_fixed']) {
-		$footer_css .= "html,body {height: 100%;}.lift-wrapper{flex-direction: column;height: 100%;display:flex}#content.lift-content{flex-shrink: 0}#footer.lift-footer {margin-top: auto}";
-	}
-	// BACKTOTOP
-	$global_value['global_backtotop'] = $lift_theme['lift-theme-global-function-backtotop-spacing'];
-	if($global_value['global_backtotop']) {
-		$global_css .= '#backtotop{right:'.$global_value['global_backtotop']['right'].';bottom:'.$global_value['global_backtotop']['bottom'].'}';
-	}
-
-	echo '<style type="text/css" id="lift-inline-css-options-output">/*!
-* ╦  ╦╔═╗╔╦╗  ╔═╗┬─┐┌─┐┌─┐┌┬┐┬┌─┐┌┐┌┌─┐
-* ║  ║╠╣  ║   ║  ├┬┘├┤ ├─┤ │ ││ ││││└─┐
-* ╩═╝╩╚   ╩   ╚═╝┴└─└─┘┴ ┴ ┴ ┴└─┘┘└┘└─┘
-* Coding by Nguyen Pham
-* https://baonguyenyam.github.io
-*/
-	'
-	. $global_css 
-	. $layout_css 
-	. $header_css 
-	. $footer_css . 
-	'</style>';
-}
-add_action( 'wp_head', 'lift_theme_export_css', 200 );
-
-// Theme Skin
+// Theme Skin Toggle Class Name
 function lift_theme_skin_body_class( $classes ) {
 
 	global $lift_theme;
@@ -109,10 +57,7 @@ function lift_custom_css_classes_for_vc_row_and_vc_column( $class_string, $tag )
 add_filter( 'vc_shortcodes_css_class', 'lift_custom_css_classes_for_vc_row_and_vc_column', 10, 2 );
 
 
-
-add_action( 'admin_notices', '_____LIFTcheckLicense' );
-
-// Theme Skin
+// Check License
 function _____LIFTcheckLicense() {
 
 	global $lift_theme;
@@ -142,3 +87,4 @@ function _____LIFTcheckLicense() {
 	}
 
 }
+add_action( 'admin_notices', '_____LIFTcheckLicense' );
