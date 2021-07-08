@@ -41,6 +41,13 @@ function remove_redux_fw_submenu() {
 }
 add_action( 'admin_menu', 'remove_redux_fw_submenu', 999 );
 
+// Add Menu URL Class
+function __add_header_menu_item_class($atts) {
+	$atts['class'] = "nav-link";
+	return $atts;
+}
+add_filter('nav_menu_link_attributes', '__add_header_menu_item_class');
+
 // Add Bootstrap 
 function lift_custom_css_classes_for_vc_row_and_vc_column( $class_string, $tag ) {
 	if ( $tag == 'vc_row' || $tag == 'vc_row_inner' ) {
@@ -88,3 +95,4 @@ function _____LIFTcheckLicense() {
 
 }
 add_action( 'admin_notices', '_____LIFTcheckLicense' );
+

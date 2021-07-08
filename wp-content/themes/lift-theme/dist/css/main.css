@@ -28,9 +28,7 @@
   --lift-theme-white: #fff; }
 
 ::-webkit-scrollbar {
-  -webkit-appearance: none; }
-
-::-webkit-scrollbar {
+  -webkit-appearance: none;
   height: 10px;
   width: 10px; }
 
@@ -43,6 +41,12 @@
   border-radius: 5px; }
 
 ::-webkit-scrollbar-thumb:hover {
+  background: var(--lift-theme-main); }
+
+::-webkit-scrollbar-thumb:focus {
+  background: var(--lift-theme-main); }
+
+::-webkit-scrollbar-thumb:active {
   background: var(--lift-theme-main); }
 
 .entry-footer {
@@ -69,7 +73,10 @@
     display: flex !important;
     flex-basis: auto; }
 
-html, body {
+html {
+  overflow: hidden; }
+
+body {
   overflow-x: hidden; }
 
 .lift-theme .vc_message_box-icon .fa, .lift-theme .vc_message_box-icon .fas {

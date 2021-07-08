@@ -1,7 +1,7 @@
 function lift_fixed_header () {
-	var getHeader = $('header#header').outerHeight(true)
+	var getHeader = $('header#header.fixed-top').outerHeight(true)
 	if(getHeader) {
-		$('body').css({
+		$('html').css({
 			'padding-top': getHeader+'px'
 		})
 	}

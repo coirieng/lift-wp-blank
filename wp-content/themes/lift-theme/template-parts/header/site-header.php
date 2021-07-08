@@ -40,11 +40,10 @@ if(isset($lift_theme['lift-theme-header-row-spacing'])) {
 		$build_header_spacing = ' style="'.$build_header_spacing_value.'"';
 	}
 }
-
 ?>
 
 <!-- LIFT HEADER -->
-<header id="header" class="<?php echo esc_attr( $wrapper_classes ); ?><?= isset($header_value['header_shadow']) && $header_value['header_shadow'] !== '' ? ' '.$header_value['header_shadow']: ' default'?><?=isset($header_value['header_fixed']) ? ' fixed-top': ''?>" role="banner">
+<header id="header" class="<?php echo esc_attr( $wrapper_classes ); ?><?= isset($header_value['header_shadow']) && $header_value['header_shadow'] !== '' ? ' '.$header_value['header_shadow']: ' default'?><?=isset($header_value['header_fixed']) &&$header_value['header_fixed'] === '1' ? ' fixed-top': ''?>" role="banner">
 
 	<div class="header-wrapper"<?= isset($header_value['header_row']) && $header_value['header_row'] === '1' ? $build_header_spacing : ''?>>
 		<nav class="navbar navbar-expand<?=isset($header_value['header_menu_toggle']) && $header_value['header_menu_toggle']  !== '' ? '-'.$header_value['header_menu_toggle']: '-md'?>">

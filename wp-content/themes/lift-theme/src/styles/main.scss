@@ -33,10 +33,13 @@
 		flex-basis: auto;
 	}
 }
-
-html, body {
+html {
+	overflow: hidden;
+}
+body {
 	overflow-x: hidden;
 }
+
 .lift-theme {
 	.vc_message_box-icon {
 		.fa, .fas {
