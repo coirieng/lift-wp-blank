@@ -133,6 +133,22 @@
       font-size: 0.875em;
       color: #d63384;
       word-wrap: break-word; }
+    .admin-color-fresh .lift-theme-admin .redux-main .ui-controlgroup {
+      border: 2px solid #ccc !important;
+      display: inline-flex;
+      border-radius: 3px;
+      overflow: hidden; }
+      .admin-color-fresh .lift-theme-admin .redux-main .ui-controlgroup label {
+        margin: 0 !important;
+        border-radius: 0;
+        border-width: 0;
+        background: none !important; }
+        .admin-color-fresh .lift-theme-admin .redux-main .ui-controlgroup label.ui-checkboxradio-checked {
+          background-color: #0c6efd !important;
+          background-image: none !important;
+          box-shadow: none !important; }
+        .admin-color-fresh .lift-theme-admin .redux-main .ui-controlgroup label .ui-checkboxradio-icon {
+          display: none; }
     .admin-color-fresh .lift-theme-admin .redux-main .button,
     .admin-color-fresh .lift-theme-admin .redux-main .button-secondary {
       background-color: #e7f1ff;

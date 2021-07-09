@@ -1,0 +1,273 @@
+// EXPAND ALL
+.navbar-expand-keep {
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	.navbar-toggler {
+		display: none;
+	}
+	.navbar-collapse {
+		display: flex !important;
+		flex-basis: auto;
+	}
+}
+
+// HEADER CUSTOM CSS
+.navbar-toggler {
+	&:focus,
+	&:active {
+		outline: 0;
+		box-shadow: none;
+	}
+	svg {
+		width: 30px;
+		height: 30px;
+	}
+	svg:nth-child(1) {
+		display: none;
+	}
+	svg:nth-child(2) {
+		display: block;
+	}
+	&.collapsed {
+		svg:nth-child(1) {
+			display: block;
+		}
+		svg:nth-child(2) {
+			display: none;
+		}
+	}
+}
+
+@mixin createmenu() {
+	#site-navigation.primary-menu-container {
+		.primary-navigation {
+			.menu-item {
+				display: flex;
+				flex: 0 0 100%;
+				justify-content: space-between;
+				align-items: center;
+				flex-wrap: wrap;
+				.menu-link {
+					.sub-menu-toggle {
+						padding: 0;
+					}
+				}
+				.sub-menu {
+					flex-direction: column;
+					display: none;
+					list-style-type: none;
+					padding: 0;
+					flex: 0 0 100%;
+					&.active {
+						display: flex;
+					}
+				}
+				.menu-toggle {
+					padding: 0;
+					justify-content: center;
+					align-items: center;
+					display: flex;
+					width: 3rem;
+					.icon-plus {
+						display: block;
+					}
+					.icon-minus {
+						display: none;
+					}
+					&.active {
+						.icon-plus {
+							display: none;
+						}
+						.icon-minus {
+							display: block;
+						}
+					}
+					&:focus,
+					&:active {
+						outline: 0;
+						box-shadow: none;
+					}
+				}
+			}
+		}
+	}
+}
+header .navbar.navbar-expand-all {
+	@include createmenu;
+}
+header .navbar.navbar-expand-keep {
+	@include createmenu;
+	#site-navigation.primary-menu-container {
+		.primary-navigation {
+			display: flex;
+			flex-direction: row;
+			.menu-item {
+				flex: 0 0 auto;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	header .navbar.navbar-expand-sm {
+		@include createmenu;
+	}
+}
+@include media-breakpoint-down(md) {
+	header .navbar.navbar-expand-md {
+		@include createmenu;
+	}
+}
+@include media-breakpoint-down(lg) {
+	header .navbar.navbar-expand-lg {
+		@include createmenu;
+	}
+}
+@include media-breakpoint-down(xl) {
+	header .navbar.navbar-expand-xl {
+		@include createmenu;
+	}
+}
+@include media-breakpoint-down(xxl) {
+	header .navbar.navbar-expand-xxl {
+		@include createmenu;
+	}
+}
+
+@mixin createmenutoggle() {
+	#site-navigation.primary-menu-container {
+		.primary-navigation {
+			display: flex;
+			flex-direction: row;
+			.sub-menu {
+				position: absolute;
+				z-index: $zindex-dropdown;
+				display: none; // none by default, but block on "open" of the menu
+				min-width: $dropdown-min-width;
+				padding: $dropdown-padding-y $dropdown-padding-x;
+				margin: 0; // Override default margin of ul
+				@include font-size($dropdown-font-size);
+				color: $dropdown-color;
+				text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
+				list-style: none;
+				background-color: $dropdown-bg;
+				background-clip: padding-box;
+				border: $dropdown-border-width solid $dropdown-border-color;
+				@include border-radius($dropdown-border-radius);
+				@include box-shadow($dropdown-box-shadow);
+
+				&[data-bs-popper] {
+					top: 100%;
+					left: 0;
+					margin-top: $dropdown-spacer;
+				}
+				&.show {
+					display: block;
+				}
+			}
+			.menu-item {
+				.menu-link {
+					.sub-menu-toggle {
+					}
+				}
+				.sub-menu {
+					&.active {
+					}
+				}
+				.menu-toggle {
+					display: none;
+					.icon-plus {
+					}
+					.icon-minus {
+					}
+					&.active {
+						.icon-plus {
+						}
+						.icon-minus {
+						}
+					}
+					&:focus,
+					&:active {
+					}
+				}
+			}
+		}
+	}
+}
+header .navbar.navbar-expand-keep {
+	@include createmenutoggle;
+}
+@include media-breakpoint-up(sm) {
+	header .navbar.navbar-expand-sm {
+		@include createmenutoggle;
+	}
+}
+@include media-breakpoint-up(md) {
+	header .navbar.navbar-expand-md {
+		@include createmenutoggle;
+	}
+}
+@include media-breakpoint-up(lg) {
+	header .navbar.navbar-expand-lg {
+		@include createmenutoggle;
+	}
+}
+@include media-breakpoint-up(xl) {
+	header .navbar.navbar-expand-xl {
+		@include createmenutoggle;
+	}
+}
+@include media-breakpoint-up(xxl) {
+	header .navbar.navbar-expand-xxl {
+		@include createmenutoggle;
+	}
+}
+
+@mixin menulayout () {
+	.navbar-brand {
+		display: block;
+		margin-right: 0;
+	}
+	.menu-init {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	#site-navigation {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+}
+
+#header.site-header{
+	&.menu-layout-3 {
+		.navbar  {
+			&.navbar-expand-sm {
+				@include media-breakpoint-up(sm) {
+					@include menulayout()
+				}
+			}
+			&.navbar-expand-md {
+				@include media-breakpoint-up(md) {
+					@include menulayout()
+				}
+			}
+			&.navbar-expand-lg {
+				@include media-breakpoint-up(lg) {
+					@include menulayout()
+				}
+			}
+			&.navbar-expand-xl {
+				@include media-breakpoint-up(xl) {
+					@include menulayout()
+				}
+			}
+			&.navbar-expand-xxl {
+				@include media-breakpoint-up(xxl) {
+					@include menulayout()
+				}
+			}
+		}
+	}
+}

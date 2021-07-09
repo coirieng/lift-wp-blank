@@ -68,7 +68,7 @@ if($detect->isMobile() && !$detect->isTablet()) {
 			</a>
 		<?php endif; ?>
 	<?php endif; ?>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#site-navigation" aria-controls="site-navigation" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#site-navigation" aria-controls="site-navigation" aria-expanded="false" aria-label="Toggle navigation">
 		<?php echo lift_get_icon_svg( 'ui', 'menu' ); ?>
 		<?php echo lift_get_icon_svg( 'ui', 'close' ); ?>
     </button>

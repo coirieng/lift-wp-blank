@@ -221,6 +221,29 @@ $boo: #cccccc;
 					word-wrap: break-word;
 				}
 			}
+			.redux-container-switch {
+			}
+			.ui-controlgroup {
+				border: 2px solid #ccc !important;
+				display: inline-flex;
+				border-radius: 3px;
+				overflow: hidden;
+				
+				label {
+					margin: 0 !important;
+					border-radius: 0;
+					border-width: 0;
+					background: none !important;
+					&.ui-checkboxradio-checked {
+						background-color: $secondcolor !important;
+						background-image: none !important;
+						box-shadow: none !important;
+					}
+					.ui-checkboxradio-icon {
+						display: none;
+					}
+				}
+			}
 			.button,
 			.button-secondary {
 				background-color: $bgmenuactive;

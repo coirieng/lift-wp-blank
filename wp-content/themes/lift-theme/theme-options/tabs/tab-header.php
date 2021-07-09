@@ -23,13 +23,13 @@
                 'type'     => 'select',
                 'title'    => __( 'Menu Toggle', 'lift-theme-options' ),
                 'options'  => array(
-					'all'       => 'Keep', 
+					'keep'       => 'Keep', 
 					'sm'       => 'Mobile', 
 					'md'       => 'Phalet', 
 					'lg'       => 'Tablet', 
 					'xl'       => 'Small PC', 
 					'xxl'       => 'Large PC', 
-					''       => 'All Devices', 
+					'all'       => 'All Devices', 
 				),
 				'default'         => 'md'
             ),
@@ -40,6 +40,26 @@
                 'default'  => 0,
                 'on'       => 'On',
                 'off'      => 'Off',
+            ),
+			array(
+				'id'       => 'lift-theme-header-search',
+                'type'     => 'switch',
+                'title'    => __( 'Header Search', 'lift-theme-options' ),
+                'default'  => 0,
+                'on'       => 'On',
+                'off'      => 'Off',
+            ),
+			array(
+				'id'       => 'lift-theme-header-search-align',
+                'type'     => 'button_set',
+				'required' => array( 'lift-theme-header-search', '!=', '0' ),
+				'title'    => __( 'Header Search Align', 'lift-theme-options' ),
+				'options' => array(
+					'left' => 'Left', 
+					'center' => 'Center',
+					'right' => 'Right', 
+					), 
+				'default' => 'right'
             ),
 			array(
                 'id'       => 'lift-theme-header-logo',
@@ -104,7 +124,26 @@
         'id'         => 'lift-theme-header-layout',
         'subsection' => true,
 		'fields'     => array(
-			
+			array(
+				'id'       => 'lift-theme-header-kind',
+                'type'     => 'image_select',
+                'title'    => __( 'Header Type', 'lift-theme-options' ),
+				'options'  => array(
+                    '1' => array(
+                        'img' => get_template_directory_uri() . '/admin/img/menu-left-aligned.png'
+                    ),
+                    '2' => array(
+                        'img' => get_template_directory_uri() . '/admin/img/centered-menu.png'
+                    ),
+                    '3' => array(
+                        'img' => get_template_directory_uri() . '/admin/img/centered-menu-under-logo.png'
+                    ),
+                    '4' => array(
+                        'img' => get_template_directory_uri() . '/admin/img/default-header.png'
+                    ),
+                ),
+				'default'  => '1'
+            ),
 			array(
 				'id'       => 'lift-theme-header-layout-style',
                 'type'     => 'switch',

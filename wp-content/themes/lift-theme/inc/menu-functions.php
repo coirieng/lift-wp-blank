@@ -34,10 +34,10 @@ function lift_add_menu_item_class( $classes, $item, $args, $depth ){
 add_filter ( 'nav_menu_css_class', 'lift_add_menu_item_class', 10, 4 );
 
 function lift_add_sub_menu_toggle( $output, $item, $depth, $args ) {
-	if ( 0 === $depth && in_array( 'menu-item-has-children', $item->classes, true ) ) {
+	if ( in_array( 'menu-item-has-children', $item->classes, true ) ) {
 
 		// Add toggle button.
-		$output .= '<button class="sub-menu-toggle" aria-expanded="false" onClick="twentytwentyoneExpandSubMenu(this)">';
+		$output .= '<button class="btn sub-menu-toggle menu-toggle" aria-expanded="false" onClick="___ExpandSubMenu(this)">';
 		$output .= '<span class="icon-plus">' . lift_get_icon_svg( 'ui', 'plus', 18 ) . '</span>';
 		$output .= '<span class="icon-minus">' . lift_get_icon_svg( 'ui', 'minus', 18 ) . '</span>';
 		$output .= '<span class="screen-reader-text">' . esc_html__( 'Open menu', 'wp-lift-theme' ) . '</span>';
