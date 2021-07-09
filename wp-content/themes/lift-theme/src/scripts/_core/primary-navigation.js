@@ -12,18 +12,18 @@
  * @since Twenty Twenty-One 1.0
  */
 function LIFT_____ToggleAriaExpanded( el, withListeners ) {
-	if ( 'true' !== el.getAttribute( 'aria-expanded' ) ) {
-		el.setAttribute( 'aria-expanded', 'true' );
-		LIFT_____SubmenuPosition( el.parentElement );
-		if ( withListeners ) {
-			document.addEventListener( 'click', LIFT_____CollapseMenuOnClickOutside );
-		}
-	} else {
-		el.setAttribute( 'aria-expanded', 'false' );
-		if ( withListeners ) {
-			document.removeEventListener( 'click', LIFT_____CollapseMenuOnClickOutside );
-		}
-	}
+	// if ( 'true' !== el.getAttribute( 'aria-expanded' ) ) {
+	// 	// el.setAttribute( 'aria-expanded', 'true' );
+	// 	LIFT_____SubmenuPosition( el.parentElement );
+	// 	if ( withListeners ) {
+	// 		document.addEventListener( 'click', LIFT_____CollapseMenuOnClickOutside );
+	// 	}
+	// } else {
+	// 	// el.setAttribute( 'aria-expanded', 'false' );
+	// 	if ( withListeners ) {
+	// 		document.removeEventListener( 'click', LIFT_____CollapseMenuOnClickOutside );
+	// 	}
+	// }
 }
 
 function LIFT_____CollapseMenuOnClickOutside( event ) {

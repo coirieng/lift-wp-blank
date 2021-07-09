@@ -1,3 +1,27 @@
+"use strict";
+
+/**
+ * File primary-navigation.js.
+ *
+ * Required to open and close the mobile navigation.
+ */
+
+/**
+ * Toggle an attribute's value
+ *
+ * @param {Element} el - The element.
+ * @param {boolean} withListeners - Whether we want to add/remove listeners or not.
+ * @since 2021
+ */
+$("body, html").scroll(function () {
+  var getTop = $(this).scrollTop();
+
+  if (getTop > 200) {
+    $('#backtotop').addClass('active');
+  } else {
+    $('#backtotop').removeClass('active');
+  }
+});
 /**
  * @license
  * Copyright LIFT Creations All Rights Reserved.
@@ -6,6 +30,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://baonguyenyam.github.io/cv
  */
+
 'use strict';
 
 (function (window) {
@@ -200,21 +225,18 @@
  */
 
 
-function LIFT_____ToggleAriaExpanded(el, withListeners) {
-  if ('true' !== el.getAttribute('aria-expanded')) {
-    el.setAttribute('aria-expanded', 'true');
-    LIFT_____SubmenuPosition(el.parentElement);
-
-    if (withListeners) {
-      document.addEventListener('click', LIFT_____CollapseMenuOnClickOutside);
-    }
-  } else {
-    el.setAttribute('aria-expanded', 'false');
-
-    if (withListeners) {
-      document.removeEventListener('click', LIFT_____CollapseMenuOnClickOutside);
-    }
-  }
+function LIFT_____ToggleAriaExpanded(el, withListeners) {// if ( 'true' !== el.getAttribute( 'aria-expanded' ) ) {
+  // 	// el.setAttribute( 'aria-expanded', 'true' );
+  // 	LIFT_____SubmenuPosition( el.parentElement );
+  // 	if ( withListeners ) {
+  // 		document.addEventListener( 'click', LIFT_____CollapseMenuOnClickOutside );
+  // 	}
+  // } else {
+  // 	// el.setAttribute( 'aria-expanded', 'false' );
+  // 	if ( withListeners ) {
+  // 		document.removeEventListener( 'click', LIFT_____CollapseMenuOnClickOutside );
+  // 	}
+  // }
 }
 
 function LIFT_____CollapseMenuOnClickOutside(event) {
@@ -388,7 +410,7 @@ function ___ExpandSubMenu(el) {
 /**
  * Add max-width & max-height to <iframe> elements, depending on their width & height props.
  *
- * @since Twenty Twenty-One 1.0
+ * @since 2021
  *
  * @return {void}
  */

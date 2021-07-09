@@ -79,18 +79,18 @@ if(isset($lift_theme['lift-theme-footer-row-spacing'])) {
 	<?php
 		$displaybtt = 'position-fixed';
 		if($global_value['backtotop_smallpc']) {
-			$displaybtt .= ' d-lg-block';
+			$displaybtt .= ' d-lg-flex';
 			if($global_value['backtotop_tablet']) {
-				$displaybtt .= ' d-md-block';
+				$displaybtt .= ' d-md-flex';
 				if($global_value['backtotop_phalet']) {
-					$displaybtt .= ' d-sm-block';
+					$displaybtt .= ' d-sm-flex';
 					if($global_value['backtotop_mobile']) {
-						$displaybtt .= ' d-block';
+						$displaybtt .= ' d-flex';
 					}
 				}
 			}
 		}
-		$displaybtt .= ' d-xl-block';
+		$displaybtt .= ' d-xl-flex';
 	?>
-	<a id="backtotop" class="<?=$displaybtt;?>"><i class="fa fa-angle-up"></i></a>
+	<a href="#back-to-top" id="backtotop" class="<?=$displaybtt;?>"><i class="fa fa-angle-up"></i></a>
 <?php } ?>

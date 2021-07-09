@@ -15,6 +15,7 @@ function lift_styles() {
 	$footer_css = '';
 	$layout_css = '';
 	$global_css = '';
+	$search_align = '';
 
 	// LAYOUT 
 	$layout_value['layout_style'] = $lift_theme['lift-theme-layout-style'];
@@ -30,6 +31,16 @@ function lift_styles() {
 	if($header_value['header_style'] && $header_value['header_size']){
 		$header_css .= "#content.lift-header .header-wrapper{max-width: ".$header_value['header_size_value']."px; margin: 0 auto; width: 100%}";
 	}
+	// SEARCH HEADER
+	$header_value['header_search_align'] = $lift_theme['lift-theme-header-search-align'];
+	if(isset($header_value['header_search_align']) && $header_value['header_search_align'] ==='right') {
+		$search_align .= '#header .menu-init .search-form {margin-left:auto}';
+	} else if(isset($header_value['header_search_align']) && $header_value['header_search_align'] ==='left') {
+		$search_align .= '#header .menu-init .search-form {margin-right:auto}';
+	} else if(isset($header_value['header_search_align']) && $header_value['header_search_align'] ==='center') {
+		$search_align .= '#header .menu-init .search-form {margin-left:auto;margin-right:auto}';
+	}
+
 	// FOOTER 
 	$footer_value['footer_style'] = $lift_theme['lift-theme-footer-layout-style'];
 	$footer_value['footer_size'] = $lift_theme['lift-theme-footer-layout-size'];
@@ -41,6 +52,9 @@ function lift_styles() {
 	if($footer_value['footer_fixed']) {
 		$footer_css .= "html,body {height: 100%;}.lift-wrapper{flex-direction: column;height: 100%;display:flex}#content.lift-content{flex-shrink: 0}#footer.lift-footer {margin-top: auto}";
 	}
+
+
+
 
 	// BACKTOTOP
 	$global_value['global_backtotop'] = $lift_theme['lift-theme-global-function-backtotop-spacing'];
@@ -110,6 +124,7 @@ function lift_styles() {
 		$global_css . 
 		$layout_css . 
 		$header_css . 
+		$search_align .
 		$footer_css 
 	);
 

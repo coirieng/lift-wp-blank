@@ -1,5 +1,7 @@
 .lift-theme {
-	&.lift-theme-modern  {
+	&.lift-theme-modern,
+	&.lift-theme-material,
+	&.lift-theme-monokai {
 		@import "inc/form";
 
 		#footer.lift-footer {

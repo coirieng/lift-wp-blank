@@ -22,6 +22,7 @@ require_once 'tabs/tab-layout.php';
 require_once 'tabs/tab-header.php';
 require_once 'tabs/tab-footer.php';
 require_once 'tabs/tab-blog.php';
+require_once 'tabs/tab-search.php';
 require_once 'tabs/tab-typography.php';
 require_once 'tabs/tab-social.php';
 require_once 'tabs/tab-license.php';

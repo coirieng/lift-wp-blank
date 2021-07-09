@@ -48,6 +48,7 @@ if(isset($lift_theme['lift-theme-layout-row-spacing'])) {
 <?php wp_body_open(); ?>
 <!-- LIFT WRAPPER -->
 <div id="page" class="site lift-wrapper">
+	<div id="back-to-top" class="invisible"></div>
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wp-lift-theme' ); ?></a>
 
 	<?php get_template_part( 'template-parts/header/site-header' ); ?>
