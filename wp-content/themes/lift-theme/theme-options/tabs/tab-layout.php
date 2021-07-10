@@ -62,7 +62,7 @@
 				'id'       => 'lift-theme-layout-row-option',
                 'type'     => 'switch',
                 'title'    => __( 'Row padding', 'lift-theme-options' ),
-                'default'  => 0,
+                'default'  => 1,
                 'on'       => 'On',
                 'off'      => 'Off',
             ),
@@ -79,9 +79,9 @@
                 'subtitle'       => __( 'Allow your users to choose the spacing or margin they want.', 'lift-theme-options' ),
                 'desc'           => __( 'You can enable or disable any piece of this field. Top, Right, Bottom, Left, or Units.', 'lift-theme-options' ),
                 'default'        => array(
-                    'padding-top'    => '0',
+                    'padding-top'    => '2rem',
                     'padding-right'  => '0',
-                    'padding-bottom' => '0',
+                    'padding-bottom' => '2rem',
                     'padding-left'   => '0'
                 )
             ),

@@ -208,6 +208,11 @@ $boo: #cccccc;
 		}
 		.redux-main {
 			margin-left: 300px;
+			.ace_content {
+				.ace_print-margin {
+					display: none;
+				}
+			}
 			.redux-group-tab {
 				.code,
 				code,

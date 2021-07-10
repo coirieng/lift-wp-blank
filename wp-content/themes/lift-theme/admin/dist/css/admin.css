@@ -124,6 +124,8 @@
             display: none; }
   .admin-color-fresh .lift-theme-admin .redux-main {
     margin-left: 300px; }
+    .admin-color-fresh .lift-theme-admin .redux-main .ace_content .ace_print-margin {
+      display: none; }
     .admin-color-fresh .lift-theme-admin .redux-main .redux-group-tab .code,
     .admin-color-fresh .lift-theme-admin .redux-main .redux-group-tab code,
     .admin-color-fresh .lift-theme-admin .redux-main .redux-group-tab kbd {

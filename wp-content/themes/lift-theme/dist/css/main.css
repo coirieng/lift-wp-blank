@@ -135,13 +135,21 @@ header .navbar.navbar-expand-all #site-navigation.primary-menu-container .primar
     display: flex;
     width: 3rem; }
     header .navbar.navbar-expand-all #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-plus {
-      display: block; }
+      display: flex; }
     header .navbar.navbar-expand-all #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-minus {
       display: none; }
+    header .navbar.navbar-expand-all #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-plus,
+    header .navbar.navbar-expand-all #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-minus {
+      justify-content: center;
+      align-items: center; }
+      header .navbar.navbar-expand-all #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-plus svg,
+      header .navbar.navbar-expand-all #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-minus svg {
+        width: 22px;
+        height: 22px; }
     header .navbar.navbar-expand-all #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle.active .icon-plus {
       display: none; }
     header .navbar.navbar-expand-all #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle.active .icon-minus {
-      display: block; }
+      display: flex; }
     header .navbar.navbar-expand-all #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle:focus, header .navbar.navbar-expand-all #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle:active {
       outline: 0;
       box-shadow: none; }
@@ -169,13 +177,21 @@ header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .prima
     display: flex;
     width: 3rem; }
     header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-plus {
-      display: block; }
+      display: flex; }
     header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-minus {
       display: none; }
+    header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-plus,
+    header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-minus {
+      justify-content: center;
+      align-items: center; }
+      header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-plus svg,
+      header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-minus svg {
+        width: 22px;
+        height: 22px; }
     header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle.active .icon-plus {
       display: none; }
     header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle.active .icon-minus {
-      display: block; }
+      display: flex; }
     header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle:focus, header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle:active {
       outline: 0;
       box-shadow: none; }
@@ -210,13 +226,21 @@ header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .prima
       display: flex;
       width: 3rem; }
       header .navbar.navbar-expand-sm #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-plus {
-        display: block; }
+        display: flex; }
       header .navbar.navbar-expand-sm #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-minus {
         display: none; }
+      header .navbar.navbar-expand-sm #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-plus,
+      header .navbar.navbar-expand-sm #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-minus {
+        justify-content: center;
+        align-items: center; }
+        header .navbar.navbar-expand-sm #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-plus svg,
+        header .navbar.navbar-expand-sm #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-minus svg {
+          width: 22px;
+          height: 22px; }
       header .navbar.navbar-expand-sm #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle.active .icon-plus {
         display: none; }
       header .navbar.navbar-expand-sm #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle.active .icon-minus {
-        display: block; }
+        display: flex; }
       header .navbar.navbar-expand-sm #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle:focus, header .navbar.navbar-expand-sm #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle:active {
         outline: 0;
         box-shadow: none; } }
@@ -245,13 +269,21 @@ header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .prima
       display: flex;
       width: 3rem; }
       header .navbar.navbar-expand-md #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-plus {
-        display: block; }
+        display: flex; }
       header .navbar.navbar-expand-md #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-minus {
         display: none; }
+      header .navbar.navbar-expand-md #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-plus,
+      header .navbar.navbar-expand-md #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-minus {
+        justify-content: center;
+        align-items: center; }
+        header .navbar.navbar-expand-md #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-plus svg,
+        header .navbar.navbar-expand-md #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-minus svg {
+          width: 22px;
+          height: 22px; }
       header .navbar.navbar-expand-md #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle.active .icon-plus {
         display: none; }
       header .navbar.navbar-expand-md #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle.active .icon-minus {
-        display: block; }
+        display: flex; }
       header .navbar.navbar-expand-md #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle:focus, header .navbar.navbar-expand-md #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle:active {
         outline: 0;
         box-shadow: none; } }
@@ -280,13 +312,21 @@ header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .prima
       display: flex;
       width: 3rem; }
       header .navbar.navbar-expand-lg #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-plus {
-        display: block; }
+        display: flex; }
       header .navbar.navbar-expand-lg #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-minus {
         display: none; }
+      header .navbar.navbar-expand-lg #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-plus,
+      header .navbar.navbar-expand-lg #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-minus {
+        justify-content: center;
+        align-items: center; }
+        header .navbar.navbar-expand-lg #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-plus svg,
+        header .navbar.navbar-expand-lg #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-minus svg {
+          width: 22px;
+          height: 22px; }
       header .navbar.navbar-expand-lg #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle.active .icon-plus {
         display: none; }
       header .navbar.navbar-expand-lg #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle.active .icon-minus {
-        display: block; }
+        display: flex; }
       header .navbar.navbar-expand-lg #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle:focus, header .navbar.navbar-expand-lg #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle:active {
         outline: 0;
         box-shadow: none; } }
@@ -315,13 +355,21 @@ header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .prima
       display: flex;
       width: 3rem; }
       header .navbar.navbar-expand-xl #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-plus {
-        display: block; }
+        display: flex; }
       header .navbar.navbar-expand-xl #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-minus {
         display: none; }
+      header .navbar.navbar-expand-xl #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-plus,
+      header .navbar.navbar-expand-xl #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-minus {
+        justify-content: center;
+        align-items: center; }
+        header .navbar.navbar-expand-xl #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-plus svg,
+        header .navbar.navbar-expand-xl #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-minus svg {
+          width: 22px;
+          height: 22px; }
       header .navbar.navbar-expand-xl #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle.active .icon-plus {
         display: none; }
       header .navbar.navbar-expand-xl #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle.active .icon-minus {
-        display: block; }
+        display: flex; }
       header .navbar.navbar-expand-xl #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle:focus, header .navbar.navbar-expand-xl #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle:active {
         outline: 0;
         box-shadow: none; } }
@@ -350,13 +398,21 @@ header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .prima
       display: flex;
       width: 3rem; }
       header .navbar.navbar-expand-xxl #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-plus {
-        display: block; }
+        display: flex; }
       header .navbar.navbar-expand-xxl #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-minus {
         display: none; }
+      header .navbar.navbar-expand-xxl #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-plus,
+      header .navbar.navbar-expand-xxl #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-minus {
+        justify-content: center;
+        align-items: center; }
+        header .navbar.navbar-expand-xxl #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-plus svg,
+        header .navbar.navbar-expand-xxl #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-minus svg {
+          width: 22px;
+          height: 22px; }
       header .navbar.navbar-expand-xxl #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle.active .icon-plus {
         display: none; }
       header .navbar.navbar-expand-xxl #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle.active .icon-minus {
-        display: block; }
+        display: flex; }
       header .navbar.navbar-expand-xxl #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle:focus, header .navbar.navbar-expand-xxl #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle:active {
         outline: 0;
         box-shadow: none; } }

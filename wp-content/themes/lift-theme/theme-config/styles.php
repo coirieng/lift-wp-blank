@@ -15,6 +15,7 @@ function lift_styles() {
 	$footer_css = '';
 	$layout_css = '';
 	$global_css = '';
+	$content_css = '';
 	$search_align = '';
 
 	// LAYOUT 
@@ -39,6 +40,12 @@ function lift_styles() {
 		$search_align .= '#header .menu-init .search-form {margin-right:auto}';
 	} else if(isset($header_value['header_search_align']) && $header_value['header_search_align'] ==='center') {
 		$search_align .= '#header .menu-init .search-form {margin-left:auto;margin-right:auto}';
+	}
+	// CONTENT 
+	$content_value['content_row'] = $lift_theme['lift-theme-layout-row-option'];
+	$content_value['content_row_value'] = $lift_theme['lift-theme-layout-row-spacing'];
+	if($content_value['content_row']) {
+		$content_css .= '#content.lift-content .content-wrapper{padding-top:'.$content_value['content_row_value']['padding-top'].';padding-bottom:'.$content_value['content_row_value']['padding-bottom'].';padding-left:'.$content_value['content_row_value']['padding-left'].';padding-right:'.$content_value['content_row_value']['padding-right'].';}';
 	}
 
 	// FOOTER 
@@ -125,6 +132,7 @@ function lift_styles() {
 		$layout_css . 
 		$header_css . 
 		$search_align .
+		$content_css .
 		$footer_css 
 	);
 
