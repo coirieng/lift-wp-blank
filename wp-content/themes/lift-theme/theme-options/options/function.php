@@ -6,14 +6,29 @@
 * @since 2021
 */
 
+function get_lift_theme_options() {
+
+	$legacy_options  = get_option( 'lift_theme' );
+	$current_options = get_option( 'lift_theme_redux' );
+
+	if ( ! empty( $current_options ) ) {
+		return $current_options;
+	} elseif ( ! empty( $legacy_options ) ) {
+		return $legacy_options;
+	} else {
+		return $current_options;
+	}
+}
+
+$lift_options = get_lift_theme_options();
+
 // Theme Skin Toggle Class Name
 function lift_theme_skin_body_class( $classes ) {
 
-	global $lift_theme;
-
+	$lift_options = get_lift_theme_options();
 	// LAYOUT 
-	$theme_value['theme_style'] = $lift_theme['lift-theme-global-style-theme'];
-	$theme_value['theme_dark_mode'] = $lift_theme['lift-theme-global-style-theme-dark'];
+	$theme_value['theme_style'] = $lift_options['lift-theme-global-style-theme'];
+	$theme_value['theme_dark_mode'] = $lift_options['lift-theme-global-style-theme-dark'];
 
 	$classes[] = '';
 
@@ -58,6 +73,7 @@ function lift_custom_css_classes_for_vc_row_and_vc_column( $class_string, $tag )
 		// $class_string = preg_replace( '/vc_col-sm-(\d{1,2})/', 'my_col-sm-$1', $class_string );
 		$class_string = preg_replace( '/vc_column_container/', '', $class_string );
 		$class_string = preg_replace( '/vc_col-(xs|sm|md|lg|xl|xxl)-(\d{1,2})/', 'col-$1-$2', $class_string );
+		$class_string = preg_replace( '/vc_col-(xs|sm|md|lg|xl|xxl)-offset-(\d{1,2})/', 'offset-$1-$2', $class_string );
 	}
 	return $class_string; 
 }
@@ -67,12 +83,13 @@ add_filter( 'vc_shortcodes_css_class', 'lift_custom_css_classes_for_vc_row_and_v
 // Check License
 function _____LIFTcheckLicense() {
 
-	global $lift_theme;
-	$lift_license['domain'] = $lift_theme['lift-theme-license-code-domain'];
-	$lift_license['email'] = $lift_theme['lift-theme-license-code-email'];
-	$lift_license['package'] = $lift_theme['lift-theme-license-code-package'];
-	$lift_license['key'] = $lift_theme['lift-theme-license-code-key'];
-	$lift_license['license'] = $lift_theme['lift-theme-license-code-license'];
+	$lift_options = get_lift_theme_options();
+
+	$lift_license['domain'] = $lift_options['lift-theme-license-code-domain'];
+	$lift_license['email'] = $lift_options['lift-theme-license-code-email'];
+	$lift_license['package'] = $lift_options['lift-theme-license-code-package'];
+	$lift_license['key'] = $lift_options['lift-theme-license-code-key'];
+	$lift_license['license'] = $lift_options['lift-theme-license-code-license'];
 	$password = trim($lift_license['key'].$lift_license['domain'].$lift_license['email'].$lift_license['package']);
 	$LicenseVerify = true;
 	if (!password_verify($password, $lift_license['license'])) {
