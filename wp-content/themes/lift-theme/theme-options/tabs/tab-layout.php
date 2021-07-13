@@ -24,7 +24,7 @@
                 'type'     => 'switch',
                 'title'    => __( 'Containers', 'lift-theme-options' ),
                 'subtitle' => __( 'Containers are a fundamental building block of Bootstrap that contain, pad, and align your content within a given device or viewport.', 'lift-theme-options' ),
-                'default'  => 0,
+                'default'  => 1,
                 'on'       => 'Fullwidth',
                 'off'      => 'Boxed',
             ),
@@ -62,7 +62,7 @@
 				'id'       => 'lift-theme-layout-row-option',
                 'type'     => 'switch',
                 'title'    => __( 'Row padding', 'lift-theme-options' ),
-                'default'  => 1,
+                'default'  => 0,
                 'on'       => 'On',
                 'off'      => 'Off',
             ),
@@ -78,12 +78,6 @@
                 'title'          => __( 'Padding Option', 'lift-theme-options' ),
                 'subtitle'       => __( 'Allow your users to choose the spacing or margin they want.', 'lift-theme-options' ),
                 'desc'           => __( 'You can enable or disable any piece of this field. Top, Right, Bottom, Left, or Units.', 'lift-theme-options' ),
-                'default'        => array(
-                    'padding-top'    => '2rem',
-                    'padding-right'  => '0',
-                    'padding-bottom' => '2rem',
-                    'padding-left'   => '0'
-                )
             ),
 		)
 	));

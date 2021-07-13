@@ -28,6 +28,7 @@
 
 	<!-- LIFT CONTENT -->
 	<main id="content" class="site-content lift-content">
-		<div id="primary" class="content-area">
-			<!-- LIFT MAIN -->
-			<div id="main" class="site-main lift-main" role="main">
+		<div class="content-wrapper">
+			<div id="primary" class="content-area">
+				<!-- LIFT MAIN -->
+				<div id="main" class="site-main lift-main" role="main">
