@@ -47,7 +47,6 @@ function lift_styles() {
 	if($content_value['content_row']) {
 		$content_css .= '#content.lift-content .content-wrapper{padding-top:'.$content_value['content_row_value']['padding-top'].';padding-bottom:'.$content_value['content_row_value']['padding-bottom'].';padding-left:'.$content_value['content_row_value']['padding-left'].';padding-right:'.$content_value['content_row_value']['padding-right'].';}';
 	}
-
 	// FOOTER 
 	$footer_value['footer_style'] = $lift_theme['lift-theme-footer-layout-style'];
 	$footer_value['footer_size'] = $lift_theme['lift-theme-footer-layout-size'];
@@ -59,10 +58,6 @@ function lift_styles() {
 	if($footer_value['footer_fixed']) {
 		$footer_css .= "html,body {height: 100%;}.lift-wrapper{flex-direction: column;height: 100%;display:flex}#content.lift-content{flex-shrink: 0}#footer.lift-footer {margin-top: auto}";
 	}
-
-
-
-
 	// BACKTOTOP
 	$global_value['global_backtotop'] = $lift_theme['lift-theme-global-function-backtotop-spacing'];
 	if($global_value['global_backtotop']) {

@@ -33,6 +33,10 @@ $boo: #cccccc;
 	display: none !important;
 }
 #poststuff {
+	.composer-inner-switch {
+		border-radius: 3px;
+		overflow: hidden;
+	}
 	.composer-switch {
 		overflow: hidden;
 		a {
@@ -107,6 +111,23 @@ $boo: #cccccc;
 					border-radius: 3px;
 					color: #666;
 					line-height: 1;
+				}
+				.redux-dev-mode-notice-container {
+					position: initial;
+					top: initial;
+					left: initial;
+					bottom: initial;
+					width: initial;
+					span {
+						display: inline-flex;
+						margin-left: auto;
+						background: #ffeb3b;
+						padding: 5px 5px;
+						border-radius: 3px;
+						color: #000 !important;
+						line-height: 1;
+						margin-right: 10px;
+					}
 				}
 			}
 		}

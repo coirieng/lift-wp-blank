@@ -11,7 +11,6 @@
  */
 
 ?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<?php if ( ! is_front_page() ) : ?>
@@ -28,16 +27,16 @@
 	<div class="entry-content">
 		<?php
 		the_content();
-
+		
 		wp_link_pages(
 			array(
 				'before'   => '<nav class="page-links" aria-label="' . esc_attr__( 'Page', 'wp-lift-theme' ) . '">',
 				'after'    => '</nav>',
 				/* translators: %: Page number. */
 				'pagelink' => esc_html__( 'Page %', 'wp-lift-theme' ),
-			)
-		);
-		?>
+				)
+			);
+			?>
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>

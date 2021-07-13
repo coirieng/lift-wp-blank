@@ -16,6 +16,10 @@
 .wpb_switch-to-gutenberg {
   display: none !important; }
 
+#poststuff .composer-inner-switch {
+  border-radius: 3px;
+  overflow: hidden; }
+
 #poststuff .composer-switch {
   overflow: hidden; }
   #poststuff .composer-switch a {
@@ -72,6 +76,21 @@
         border-radius: 3px;
         color: #666;
         line-height: 1; }
+      .admin-color-fresh .lift-theme-admin #redux-header .display_header .redux-dev-mode-notice-container {
+        position: initial;
+        top: initial;
+        left: initial;
+        bottom: initial;
+        width: initial; }
+        .admin-color-fresh .lift-theme-admin #redux-header .display_header .redux-dev-mode-notice-container span {
+          display: inline-flex;
+          margin-left: auto;
+          background: #ffeb3b;
+          padding: 5px 5px;
+          border-radius: 3px;
+          color: #000 !important;
+          line-height: 1;
+          margin-right: 10px; }
   .admin-color-fresh .lift-theme-admin #redux-intro-text {
     background: #e7f1ff;
     border-bottom: 1px solid #d2d2d2;

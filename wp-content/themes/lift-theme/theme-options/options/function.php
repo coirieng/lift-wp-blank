@@ -69,6 +69,10 @@ function lift_custom_css_classes_for_vc_row_and_vc_column( $class_string, $tag )
 		//   $class_string = str_replace( 'vc_row-fluid', 'my_row-fluid', $class_string ); 
 		$class_string = str_replace( 'vc_row', 'row', $class_string ); 
 	}
+	// var_dump($class_string);
+	// if ( $class_string == 'row wpb_row vc_inner row-fluid' ) {
+	// 	$class_string = str_replace( $class_string, 'row wpb_row vc_inner row-fluid container', $class_string ); 
+	// }
 	if ( $tag == 'vc_column' || $tag == 'vc_column_inner' ) {
 		// $class_string = preg_replace( '/vc_col-sm-(\d{1,2})/', 'my_col-sm-$1', $class_string );
 		$class_string = preg_replace( '/vc_column_container/', '', $class_string );

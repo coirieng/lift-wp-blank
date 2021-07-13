@@ -16,12 +16,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<?php wp_head(); ?>
 </head>
-<?php
 
-global $lift_theme;
-$layout_value['layout_style'] = $lift_theme['lift-theme-layout-style'];
-
-?>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <!-- LIFT WRAPPER -->
@@ -33,7 +28,6 @@ $layout_value['layout_style'] = $lift_theme['lift-theme-layout-style'];
 
 	<!-- LIFT CONTENT -->
 	<main id="content" class="site-content lift-content">
-		<div class="content-wrapper">
-			<div id="primary" class="content-area container<?= isset($layout_value['layout_style']) && $layout_value['layout_style'] === '1' ? '-fluid': ''?>">
-				<!-- LIFT MAIN -->
-				<div id="main" class="site-main lift-main" role="main">
+		<div id="primary" class="content-area">
+			<!-- LIFT MAIN -->
+			<div id="main" class="site-main lift-main" role="main">
