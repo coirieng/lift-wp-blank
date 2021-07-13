@@ -8,6 +8,9 @@
 
 get_header();
 
+global $lift_theme;
+$layout_value['layout_style'] = $lift_theme['lift_theme-lift-theme-layout-style'];
+
 // Start the loop.
 while ( have_posts() ) {
 	the_post();
@@ -49,6 +52,7 @@ while ( have_posts() ) {
 		</div><!-- .entry-content -->
 
 		<footer class="entry-footer default-max-width">
+		<div class="container<?= isset($layout_value['layout_style']) && $layout_value['layout_style'] === '1' ? '-fluid': ''?>">
 			<?php
 			// Check if there is a parent, then add the published in link.
 			if ( wp_get_post_parent_id( $post ) ) {
@@ -97,6 +101,7 @@ while ( have_posts() ) {
 				);
 			}
 			?>
+		</div>
 		</footer><!-- .entry-footer -->
 	</article><!-- #post-<?php the_ID(); ?> -->
 	<?php
