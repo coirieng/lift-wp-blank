@@ -73,3 +73,10 @@ body {
     word-wrap: normal !important;
 }
 
+#content {
+	&.lift-content {
+		.wpb_content_element {
+			margin-bottom: 0;
+		}
+	}
+}

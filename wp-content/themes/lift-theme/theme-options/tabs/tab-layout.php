@@ -58,6 +58,27 @@
         'desc'       => __( 'For full documentation on this field, visit: ', 'lift-theme-options' ) . '<a href="//getbootstrap.com/docs/5.0/layout/gutters/" target="_blank">getbootstrap.com/docs/5.0/layout/gutters/</a>',
         'subsection' => true,
 		'fields'     => array(
+            array(
+				'id'       => 'lift-theme-layout-content-option',
+                'type'     => 'switch',
+                'title'    => __( 'Content padding', 'lift-theme-options' ),
+                'default'  => 0,
+                'on'       => 'On',
+                'off'      => 'Off',
+            ),
+			array(
+				'id'       => 'lift-theme-layout-content-spacing',
+				'required' => array( 'lift-theme-layout-content-option', '=', '1' ),
+                'type'           => 'spacing',
+                'mode'           => 'padding',
+                'all'            => false,
+                'units'          => array( 'em', 'rem', 'px', '%' ),      // You can specify a unit value. Possible: px, em, %
+                'units_extended' => 'true',    // Allow users to select any type of unit
+                //'display_units' => 'false',   // Set to false to hide the units if the units are specified
+                // 'title'          => __( 'Padding Option', 'lift-theme-options' ),
+                // 'subtitle'       => __( 'Allow your users to choose the spacing or margin they want.', 'lift-theme-options' ),
+                // 'desc'           => __( 'You can enable or disable any piece of this field. Top, Right, Bottom, Left, or Units.', 'lift-theme-options' ),
+            ),
 			array(
 				'id'       => 'lift-theme-layout-row-option',
                 'type'     => 'switch',
@@ -65,6 +86,7 @@
                 'default'  => 0,
                 'on'       => 'On',
                 'off'      => 'Off',
+                'subtitle'       => __( 'This one apply for <section> tag only', 'lift-theme-options' ),
             ),
 			array(
 				'id'       => 'lift-theme-layout-row-spacing',
@@ -75,9 +97,9 @@
                 'units'          => array( 'em', 'rem', 'px', '%' ),      // You can specify a unit value. Possible: px, em, %
                 'units_extended' => 'true',    // Allow users to select any type of unit
                 //'display_units' => 'false',   // Set to false to hide the units if the units are specified
-                'title'          => __( 'Padding Option', 'lift-theme-options' ),
-                'subtitle'       => __( 'Allow your users to choose the spacing or margin they want.', 'lift-theme-options' ),
-                'desc'           => __( 'You can enable or disable any piece of this field. Top, Right, Bottom, Left, or Units.', 'lift-theme-options' ),
+                // 'title'          => __( 'Padding Option', 'lift-theme-options' ),
+                // 'subtitle'       => __( 'Allow your users to choose the spacing or margin they want.', 'lift-theme-options' ),
+                // 'desc'           => __( 'You can enable or disable any piece of this field. Top, Right, Bottom, Left, or Units.', 'lift-theme-options' ),
             ),
 		)
 	));

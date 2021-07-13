@@ -61,6 +61,9 @@ body {
   width: 1px;
   word-wrap: normal !important; }
 
+#content.lift-content .wpb_content_element {
+  margin-bottom: 0; }
+
 ::-webkit-scrollbar {
   -webkit-appearance: none;
   height: 10px;
