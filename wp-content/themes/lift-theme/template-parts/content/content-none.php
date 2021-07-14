@@ -10,58 +10,64 @@
  * @since 2021
  */
 
+global $lift_theme;
+$layout_value['layout_style'] = $lift_theme['lift_theme-lift-theme-layout-style'];
 ?>
 
 <section class="no-results not-found">
 	<header class="page-header alignwide">
-		<?php if ( is_search() ) : ?>
+		<div class="container<?= isset($layout_value['layout_style']) && $layout_value['layout_style'] === '1' ? '-fluid': ''?>">
+			<?php if ( is_search() ) : ?>
 
-			<h1 class="page-title">
-				<?php
-				printf(
-					/* translators: %s: Search term. */
-					esc_html__( 'Results for "%s"', 'wp-lift-theme' ),
-					'<span class="page-description search-term">' . esc_html( get_search_query() ) . '</span>'
-				);
-				?>
-			</h1>
+				<h1 class="page-title">
+					<?php
+					printf(
+						/* translators: %s: Search term. */
+						esc_html__( 'Results for "%s"', 'wp-lift-theme' ),
+						'<span class="page-description search-term">' . esc_html( get_search_query() ) . '</span>'
+					);
+					?>
+				</h1>
 
-		<?php else : ?>
+			<?php else : ?>
 
-			<h1 class="page-title"><?php esc_html_e( 'Nothing here', 'wp-lift-theme' ); ?></h1>
+				<h1 class="page-title"><?php esc_html_e( 'Nothing here', 'wp-lift-theme' ); ?></h1>
 
-		<?php endif; ?>
+			<?php endif; ?>
+		</div>
 	</header><!-- .page-header -->
 
 	<div class="page-content default-max-width">
+		<div class="container<?= isset($layout_value['layout_style']) && $layout_value['layout_style'] === '1' ? '-fluid': ''?>">
 
-		<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
+			<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
-			<?php
-			printf(
-				'<p>' . wp_kses(
-					/* translators: %s: Link to WP admin new post page. */
-					__( 'Ready to publish your first post? <a href="%s">Get started here</a>.', 'wp-lift-theme' ),
-					array(
-						'a' => array(
-							'href' => array(),
-						),
-					)
-				) . '</p>',
-				esc_url( admin_url( 'post-new.php' ) )
-			);
-			?>
+				<?php
+				printf(
+					'<p>' . wp_kses(
+						/* translators: %s: Link to WP admin new post page. */
+						__( 'Ready to publish your first post? <a href="%s">Get started here</a>.', 'wp-lift-theme' ),
+						array(
+							'a' => array(
+								'href' => array(),
+							),
+						)
+					) . '</p>',
+					esc_url( admin_url( 'post-new.php' ) )
+				);
+				?>
 
-		<?php elseif ( is_search() ) : ?>
+			<?php elseif ( is_search() ) : ?>
 
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'wp-lift-theme' ); ?></p>
-			<?php get_search_form(); ?>
+				<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'wp-lift-theme' ); ?></p>
+				<?php get_search_form(); ?>
 
-		<?php else : ?>
+			<?php else : ?>
 
-			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'wp-lift-theme' ); ?></p>
-			<?php get_search_form(); ?>
+				<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'wp-lift-theme' ); ?></p>
+				<?php get_search_form(); ?>
 
-		<?php endif; ?>
+			<?php endif; ?>
+		</div>
 	</div><!-- .page-content -->
 </section><!-- .no-results -->

@@ -17,6 +17,9 @@ while ( have_posts() ) :
 	get_template_part( 'template-parts/content/content-single' );
 
 	if ( is_attachment() ) {
+		?>
+		<div class="container<?= isset($layout_value['layout_style']) && $layout_value['layout_style'] === '1' ? '-fluid': ''?>">
+		<?php
 		// Parent post navigation.
 		the_post_navigation(
 			array(
@@ -24,6 +27,9 @@ while ( have_posts() ) :
 				'prev_text' => sprintf( __( '<span class="meta-nav">Published in</span><span class="post-title">%s</span>', 'wp-lift-theme' ), '%title' ),
 			)
 		);
+		?>
+		</div>
+		<?php
 	}
 
 	// If comments are open or there is at least one comment, load up the comment template.
@@ -38,12 +44,21 @@ while ( have_posts() ) :
 	$lift_theme_next_label     = esc_html__( 'Next post', 'wp-lift-theme' );
 	$lift_theme_previous_label = esc_html__( 'Previous post', 'wp-lift-theme' );
 
+	?>
+		<div class="container<?= isset($layout_value['layout_style']) && $layout_value['layout_style'] === '1' ? '-fluid': ''?>">
+		<?php
 	the_post_navigation(
 		array(
+			'class'				 => 'lift-pagination',
+			'type'				 => 'list',
 			'next_text' => '<p class="meta-nav">' . $lift_theme_next_label . $lift_theme_next . '</p><p class="post-title">%title</p>',
 			'prev_text' => '<p class="meta-nav">' . $lift_theme_prev . $lift_theme_previous_label . '</p><p class="post-title">%title</p>',
 		)
 	);
+	?>
+	</div>
+	<?php
+
 endwhile; // End of the loop.
 
 get_footer();

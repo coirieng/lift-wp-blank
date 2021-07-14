@@ -25,6 +25,7 @@ $layout_value['layout_style'] = $lift_theme['lift_theme-lift-theme-layout-style'
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
+		<div class="container<?= isset($layout_value['layout_style']) && $layout_value['layout_style'] === '1' ? '-fluid': ''?>">
 		<?php
 		the_content(
 			lift_continue_reading_text()
@@ -40,6 +41,7 @@ $layout_value['layout_style'] = $lift_theme['lift_theme-lift-theme-layout-style'
 		);
 
 		?>
+		</div>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer default-max-width">

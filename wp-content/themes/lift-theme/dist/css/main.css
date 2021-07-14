@@ -38,14 +38,16 @@ body {
   display: block; }
   .entry-footer .edit-link {
     margin: 2rem 0;
-    display: inline-flex;
-    background: var(--lift-theme-main);
-    border-radius: 5px;
-    overflow: hidden; }
+    display: block; }
     .entry-footer .edit-link > a {
       color: #fff !important;
       text-decoration: none;
-      padding: .75rem 1rem; }
+      padding: .35rem 1rem;
+      border-radius: 5px;
+      background: var(--lift-theme-main);
+      display: inline-flex; }
+      .entry-footer .edit-link > a + a {
+        margin-left: .25rem; }
       .entry-footer .edit-link > a:hover, .entry-footer .edit-link > a:focus, .entry-footer .edit-link > a:active {
         background: var(--lift-theme-azure); }
 
@@ -709,5 +711,68 @@ header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .prima
     display: none; }
   #footer.lift-footer .search-form:not(.no-header-text):not(.no-header-icon) .search-submit span {
     margin-right: 10px; }
+
+.lift-pagination {
+  margin: 1rem 0; }
+  .lift-pagination ul, .lift-pagination .page-numbers, .lift-pagination .nav-links {
+    display: flex;
+    padding-left: 0;
+    margin: .5rem 0;
+    list-style: none; }
+    .lift-pagination ul li, .lift-pagination .page-numbers li, .lift-pagination .nav-links li {
+      display: flex; }
+      .lift-pagination ul li a, .lift-pagination ul li .page-numbers, .lift-pagination .page-numbers li a, .lift-pagination .page-numbers li .page-numbers, .lift-pagination .nav-links li a, .lift-pagination .nav-links li .page-numbers {
+        position: relative;
+        display: block;
+        color: var(--lift-theme-main);
+        text-decoration: none;
+        background-color: var(--lift-theme-white);
+        border: 1px solid var(--lift-theme-texthover);
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        padding: .375rem .75rem;
+        margin: 0;
+        align-items: center; }
+        .lift-pagination ul li a.current, .lift-pagination ul li .page-numbers.current, .lift-pagination .page-numbers li a.current, .lift-pagination .page-numbers li .page-numbers.current, .lift-pagination .nav-links li a.current, .lift-pagination .nav-links li .page-numbers.current {
+          background-color: var(--lift-theme-main);
+          border-color: var(--lift-theme-main);
+          color: var(--lift-theme-white); }
+      .lift-pagination ul li:first-child a, .lift-pagination ul li:first-child .page-numbers, .lift-pagination .page-numbers li:first-child a, .lift-pagination .page-numbers li:first-child .page-numbers, .lift-pagination .nav-links li:first-child a, .lift-pagination .nav-links li:first-child .page-numbers {
+        border-top-left-radius: .25rem;
+        border-bottom-left-radius: .25rem; }
+      .lift-pagination ul li:last-child a, .lift-pagination ul li:last-child .page-numbers, .lift-pagination .page-numbers li:last-child a, .lift-pagination .page-numbers li:last-child .page-numbers, .lift-pagination .nav-links li:last-child a, .lift-pagination .nav-links li:last-child .page-numbers {
+        border-top-right-radius: .25rem;
+        border-bottom-right-radius: .25rem; }
+      .lift-pagination ul li:not(:first-child) a,
+      .lift-pagination ul li:not(:first-child) .page-numbers, .lift-pagination .page-numbers li:not(:first-child) a,
+      .lift-pagination .page-numbers li:not(:first-child) .page-numbers, .lift-pagination .nav-links li:not(:first-child) a,
+      .lift-pagination .nav-links li:not(:first-child) .page-numbers {
+        margin-left: -1px; }
+      .lift-pagination ul li:hover a:not(.current), .lift-pagination ul li:hover .page-numbers:not(.current), .lift-pagination ul li:focus a:not(.current), .lift-pagination ul li:focus .page-numbers:not(.current), .lift-pagination ul li:active a:not(.current), .lift-pagination ul li:active .page-numbers:not(.current), .lift-pagination .page-numbers li:hover a:not(.current), .lift-pagination .page-numbers li:hover .page-numbers:not(.current), .lift-pagination .page-numbers li:focus a:not(.current), .lift-pagination .page-numbers li:focus .page-numbers:not(.current), .lift-pagination .page-numbers li:active a:not(.current), .lift-pagination .page-numbers li:active .page-numbers:not(.current), .lift-pagination .nav-links li:hover a:not(.current), .lift-pagination .nav-links li:hover .page-numbers:not(.current), .lift-pagination .nav-links li:focus a:not(.current), .lift-pagination .nav-links li:focus .page-numbers:not(.current), .lift-pagination .nav-links li:active a:not(.current), .lift-pagination .nav-links li:active .page-numbers:not(.current) {
+        color: var(--lift-theme-main) !important;
+        background-color: var(--lift-theme-light);
+        border-color: var(--lift-theme-texthover); }
+  .lift-pagination .nav-links {
+    justify-content: space-between; }
+    .lift-pagination .nav-links a {
+      display: flex;
+      text-decoration: none; }
+      .lift-pagination .nav-links a .meta-nav {
+        position: relative;
+        display: block;
+        color: var(--lift-theme-main);
+        text-decoration: none;
+        background-color: var(--lift-theme-white);
+        border: 1px solid var(--lift-theme-texthover);
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        padding: .375rem .75rem;
+        margin: 0;
+        align-items: center;
+        border-radius: 5px; }
+      .lift-pagination .nav-links a .post-title {
+        display: none; }
+      .lift-pagination .nav-links a:hover .meta-nav, .lift-pagination .nav-links a:focus .meta-nav, .lift-pagination .nav-links a:active .meta-nav {
+        background-color: var(--lift-theme-main);
+        border-color: var(--lift-theme-main);
+        color: var(--lift-theme-white); }
 
 /*# sourceMappingURL=main.css.map */

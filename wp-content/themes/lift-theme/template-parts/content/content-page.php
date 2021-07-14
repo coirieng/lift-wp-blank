@@ -15,19 +15,25 @@ $layout_value['layout_style'] = $lift_theme['lift_theme-lift-theme-layout-style'
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php if ( ! is_front_page() ) : ?>
-		<header class="entry-header alignwide">
-			<?php get_template_part( 'template-parts/header/entry-header' ); ?>
-			<?php lift_post_thumbnail(); ?>
-		</header><!-- .entry-header -->
-	<?php elseif ( has_post_thumbnail() ) : ?>
-		<header class="entry-header alignwide">
-			<?php lift_post_thumbnail(); ?>
-		</header><!-- .entry-header -->
-	<?php endif; ?>
+    <?php if ( ! is_front_page() ) : ?>
+    <header class="entry-header alignwide">
+        <div class="container<?= isset($layout_value['layout_style']) && $layout_value['layout_style'] === '1' ? '-fluid': ''?>">
+            <?php get_template_part( 'template-parts/header/entry-header' ); ?>
+            <?php lift_post_thumbnail(); ?>
+        </div>
+    </header><!-- .entry-header -->
+    <?php elseif ( has_post_thumbnail() ) : ?>
+    <header class="entry-header alignwide">
 
-	<div class="entry-content">
-		<?php
+        <div class="container<?= isset($layout_value['layout_style']) && $layout_value['layout_style'] === '1' ? '-fluid': ''?>">
+            <?php lift_post_thumbnail(); ?>
+        </div>
+    </header><!-- .entry-header -->
+    <?php endif; ?>
+
+    <div class="entry-content">
+        <div class="container<?= isset($layout_value['layout_style']) && $layout_value['layout_style'] === '1' ? '-fluid': ''?>">
+            <?php
 		the_content();
 		
 		wp_link_pages(
@@ -39,12 +45,13 @@ $layout_value['layout_style'] = $lift_theme['lift_theme-lift-theme-layout-style'
 				)
 			);
 			?>
-	</div><!-- .entry-content -->
+        </div>
+    </div><!-- .entry-content -->
 
-	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer default-max-width">
-			<div class="container<?= isset($layout_value['layout_style']) && $layout_value['layout_style'] === '1' ? '-fluid': ''?>">
-				<?php
+    <?php if ( get_edit_post_link() ) : ?>
+    <footer class="entry-footer default-max-width">
+        <div class="container<?= isset($layout_value['layout_style']) && $layout_value['layout_style'] === '1' ? '-fluid': ''?>">
+            <?php
 				edit_post_link(
 					sprintf(
 						/* translators: %s: Name of current post. Only visible to screen readers. */
@@ -55,7 +62,7 @@ $layout_value['layout_style'] = $lift_theme['lift_theme-lift-theme-layout-style'
 					'</span>'
 				);
 				?>
-			</div>
-		</footer><!-- .entry-footer -->
-	<?php endif; ?>
+        </div>
+    </footer><!-- .entry-footer -->
+    <?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->

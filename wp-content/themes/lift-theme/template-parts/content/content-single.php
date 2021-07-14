@@ -16,23 +16,27 @@ $layout_value['layout_style'] = $lift_theme['lift_theme-lift-theme-layout-style'
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<header class="entry-header alignwide">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		<?php lift_post_thumbnail(); ?>
+		<div class="container<?= isset($layout_value['layout_style']) && $layout_value['layout_style'] === '1' ? '-fluid': ''?>">
+			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+			<?php lift_post_thumbnail(); ?>
+		</div>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php
-		the_content();
+		<div class="container<?= isset($layout_value['layout_style']) && $layout_value['layout_style'] === '1' ? '-fluid': ''?>">
+			<?php
+			the_content();
 
-		wp_link_pages(
-			array(
-				'before'   => '<nav class="page-links" aria-label="' . esc_attr__( 'Page', 'wp-lift-theme' ) . '">',
-				'after'    => '</nav>',
-				/* translators: %: Page number. */
-				'pagelink' => esc_html__( 'Page %', 'wp-lift-theme' ),
-			)
-		);
-		?>
+			wp_link_pages(
+				array(
+					'before'   => '<nav class="page-links" aria-label="' . esc_attr__( 'Page', 'wp-lift-theme' ) . '">',
+					'after'    => '</nav>',
+					/* translators: %: Page number. */
+					'pagelink' => esc_html__( 'Page %', 'wp-lift-theme' ),
+				)
+			);
+			?>
+		</div>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer default-max-width">
@@ -42,7 +46,9 @@ $layout_value['layout_style'] = $lift_theme['lift_theme-lift-theme-layout-style'
 	</footer><!-- .entry-footer -->
 
 	<?php if ( ! is_singular( 'attachment' ) ) : ?>
-		<?php get_template_part( 'template-parts/post/author-bio' ); ?>
+		<div class="container<?= isset($layout_value['layout_style']) && $layout_value['layout_style'] === '1' ? '-fluid': ''?>">
+			<?php get_template_part( 'template-parts/post/author-bio' ); ?>
+		</div>
 	<?php endif; ?>
 
 </article><!-- #post-<?php the_ID(); ?> -->

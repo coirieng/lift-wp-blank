@@ -226,13 +226,15 @@ if ( ! function_exists( 'lift_the_posts_navigation' ) ) {
 	function lift_the_posts_navigation() {
 		the_posts_pagination(
 			array(
-				'before_page_number' => esc_html__( 'Page', 'wp-lift-theme' ) . ' ',
+				// 'before_page_number' => esc_html__( 'Page', 'wp-lift-theme' ) . ' ',
 				'mid_size'           => 0,
+				'type'				 => 'list',
+				'class'				 => 'lift-pagination',
 				'prev_text'          => sprintf(
 					'%s <span class="nav-prev-text">%s</span>',
 					is_rtl() ? lift_get_icon_svg( 'ui', 'arrow_right' ) : lift_get_icon_svg( 'ui', 'arrow_left' ),
 					wp_kses(
-						__( 'Newer <span class="nav-short">posts</span>', 'wp-lift-theme' ),
+						__( '<span class="text">Previous</span><span class="nav-short"></span>', 'wp-lift-theme' ),
 						array(
 							'span' => array(
 								'class' => array(),
@@ -243,7 +245,7 @@ if ( ! function_exists( 'lift_the_posts_navigation' ) ) {
 				'next_text'          => sprintf(
 					'<span class="nav-next-text">%s</span> %s',
 					wp_kses(
-						__( 'Older <span class="nav-short">posts</span>', 'wp-lift-theme' ),
+						__( '<span class="text">Next</span><span class="nav-short"></span>', 'wp-lift-theme' ),
 						array(
 							'span' => array(
 								'class' => array(),

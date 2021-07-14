@@ -18,7 +18,9 @@ $layout_value['layout_style'] = $lift_theme['lift_theme-lift-theme-layout-style'
 	<?php get_template_part( 'template-parts/header/excerpt-header', get_post_format() ); ?>
 
 	<div class="entry-content">
-		<?php get_template_part( 'template-parts/excerpt/excerpt', get_post_format() ); ?>
+		<div class="container<?= isset($layout_value['layout_style']) && $layout_value['layout_style'] === '1' ? '-fluid': ''?>">
+			<?php get_template_part( 'template-parts/excerpt/excerpt', get_post_format() ); ?>
+		</div>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer default-max-width">

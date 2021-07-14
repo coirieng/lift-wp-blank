@@ -23,10 +23,12 @@ if ( post_password_required() ) {
 }
 
 $lift_comment_count = get_comments_number();
+global $lift_theme;
+$layout_value['layout_style'] = $lift_theme['lift_theme-lift-theme-layout-style'];
 ?>
 
 <div id="comments" class="comments-area default-max-width <?php echo get_option( 'show_avatars' ) ? 'show-avatars' : ''; ?>">
-
+	<div class="container<?= isset($layout_value['layout_style']) && $layout_value['layout_style'] === '1' ? '-fluid': ''?>">
 	<?php
 	if ( have_comments() ) :
 		;
@@ -91,5 +93,5 @@ $lift_comment_count = get_comments_number();
 		)
 	);
 	?>
-
+	</div>
 </div><!-- #comments -->
