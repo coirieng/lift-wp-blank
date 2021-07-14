@@ -10,10 +10,10 @@
     line-height: 1;
     width: 3em;
     height: 3em;
-    border: 1px solid var(--lift-theme-gray);
+    border: 1px solid var(--lift-theme-texthover);
     border-radius: 5px;
 	z-index: 1000;
-	color: var(--lift-theme-box);
+	color: var(--lift-theme-gray);
 	text-decoration: none;
 	transition: .25s all ease-in-out;
 	&.active {
