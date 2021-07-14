@@ -41,3 +41,47 @@
 		}
 	}
 }
+
+#footer.lift-footer {
+	.search-form {
+		align-items: center;
+		label {
+			margin-right: 5px;
+		}
+		&.no-header-label {
+			label {
+				display: none;
+			}
+		}
+		&.no-header-icon {
+			.search-submit {
+				i {
+					display: none;
+				}
+			}
+			&.no-header-text {
+				.search-submit {
+					span {
+						display: block;
+					}
+				}
+			}
+		}
+		&.no-header-text {
+			.search-submit {
+				span {
+					display: none;
+				}
+			}
+		}
+		&:not(.no-header-text) {
+			&:not(.no-header-icon) {
+				.search-submit {
+					span {
+						margin-right: 10px;
+					}
+				}
+			}
+		}
+	}
+}

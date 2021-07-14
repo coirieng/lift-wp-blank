@@ -24,6 +24,7 @@ function lift_styles() {
 	$layout_value['layout_size_value'] = $lift_theme['lift-theme-layout-size-value'];
 	if($layout_value['layout_style'] && $layout_value['layout_size']) {
 		$layout_css .= "#content.lift-content .wpb_wrapper{max-width: ".$layout_value['layout_size_value']."px; margin: 0 auto; width: 100%}";
+		// TODO: layout post detail and archive page 
 	}
 	// HEADER  
 	$header_value['header_style'] = $lift_theme['lift-theme-header-layout-style'];
