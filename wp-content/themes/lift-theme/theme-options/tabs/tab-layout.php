@@ -86,7 +86,7 @@
                 'default'  => 0,
                 'on'       => 'On',
                 'off'      => 'Off',
-                'subtitle'       => __( 'This one apply for <section> tag only', 'lift-theme-options' ),
+                'subtitle'       => __( 'This one apply for &lt;section&gt; tag only', 'lift-theme-options' ),
             ),
 			array(
 				'id'       => 'lift-theme-layout-row-spacing',

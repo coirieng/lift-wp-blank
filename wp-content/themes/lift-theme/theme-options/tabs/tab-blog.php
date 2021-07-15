@@ -20,7 +20,7 @@
 			array(
 				'id'       => 'lift-theme-blog-style-sidebar',
                 'type'     => 'switch',
-                'title'    => __( 'Hide Sidebar on Single Post', 'lift-theme-options' ),
+                'title'    => __( 'Hide Sidebar on Single Post <i style="color:red">(*)</i>', 'lift-theme-options' ),
                 'subtitle' => __( 'Using this will remove the sidebar from appearing on your single post page.', 'lift-theme-options' ),
                 'default'  => 0,
                 'on'       => 'On',

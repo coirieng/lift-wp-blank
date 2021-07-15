@@ -20,7 +20,7 @@
 			array(
 				'id'       => 'lift-theme-global-style-theme',
                 'type'     => 'select',
-                'title'    => __( 'Theme Skin', 'lift-theme-options' ),
+                'title'    => __( 'Theme Skin <i style="color:red">(*)</i>', 'lift-theme-options' ),
                 'subtitle' => __( 'This will alter the overall styling of various theme elements', 'lift-theme-options' ),
                 'options'  => array(
 					'default'       => 'Default', 
@@ -33,7 +33,7 @@
 			array(
 				'id'       => 'lift-theme-global-style-theme-dark',
                 'type'     => 'switch',
-                'title'    => __( 'Dark mode', 'lift-theme-options' ),
+                'title'    => __( 'Dark mode <i style="color:red">(*)</i>', 'lift-theme-options' ),
                 'default'  => 0,
                 'on'       => 'On',
                 'off'      => 'Off',

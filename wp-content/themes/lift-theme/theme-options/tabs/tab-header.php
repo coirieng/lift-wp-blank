@@ -67,7 +67,7 @@
 				// 'url'      => true,
 				// 'readonly' => false,
 				'output'   => array( '#header .site-branding' ),
-                'title'    => __( 'Header Logo', 'lift-theme-options' ),
+                'title'    => __( 'Header Logo <i style="color:red">(*)</i>', 'lift-theme-options' ),
             ),
 			array(
                 'id'       => 'lift-theme-header-logo-size',
@@ -85,7 +85,7 @@
 				// 'url'      => true,
 				// 'readonly' => false,
 				'output'   => array( '#header .site-branding' ),
-                'title'    => __( 'Phalet/Tablet Header Logo', 'lift-theme-options' ),
+                'title'    => __( 'Phalet/Tablet Header Logo <i style="color:red">(*)</i>', 'lift-theme-options' ),
             ),
 			array(
                 'id'       => 'lift-theme-header-logo-tablet-size',
@@ -103,7 +103,7 @@
 				// 'url'      => true,
 				// 'readonly' => false,
 				'output'   => array( '#header .site-branding' ),
-                'title'    => __( 'Mobile Header Logo', 'lift-theme-options' ),
+                'title'    => __( 'Mobile Header Logo <i style="color:red">(*)</i>', 'lift-theme-options' ),
             ),
 			array(
                 'id'       => 'lift-theme-header-logo-mobile-size',
@@ -127,7 +127,7 @@
 			array(
 				'id'       => 'lift-theme-header-kind',
                 'type'     => 'image_select',
-                'title'    => __( 'Header Type', 'lift-theme-options' ),
+                'title'    => __( 'Header Type <i style="color:red">(*)</i>', 'lift-theme-options' ),
 				'options'  => array(
                     '1' => array(
                         'img' => get_template_directory_uri() . '/admin/img/menu-left-aligned.png'
