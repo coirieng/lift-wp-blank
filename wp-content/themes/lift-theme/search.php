@@ -9,7 +9,7 @@
  */
 
 global $lift_theme;
-$layout_value['layout_style'] = $lift_theme['lift_theme-lift-theme-layout-style'];
+$layout_value['layout_style'] = $lift_theme['lift-theme-layout-style'];
 get_header();
 
 if ( have_posts() ) {

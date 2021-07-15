@@ -14,7 +14,7 @@ if ( 'aside' === $post_format || 'status' === $post_format ) {
 	return;
 }
 global $lift_theme;
-$layout_value['layout_style'] = $lift_theme['lift_theme-lift-theme-layout-style'];
+$layout_value['layout_style'] = $lift_theme['lift-theme-layout-style'];
 ?>
 
 <header class="entry-header">

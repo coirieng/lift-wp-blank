@@ -24,6 +24,7 @@ function lift_styles() {
 	$layout_value['layout_size_value'] = $lift_theme['lift-theme-layout-size-value'];
 	if($layout_value['layout_style'] && $layout_value['layout_size']) {
 		$layout_css .= "#content.lift-content .wpb_wrapper{max-width: ".$layout_value['layout_size_value']."px; margin: 0 auto; width: 100%}";
+		$layout_css .= "#content.lift-content .container-fluid{max-width: ".$layout_value['layout_size_value']."px; margin: 0 auto; width: 100%}";
 		// TODO: layout post detail and archive page 
 	}
 	// HEADER  
@@ -31,7 +32,7 @@ function lift_styles() {
 	$header_value['header_size'] = $lift_theme['lift-theme-header-layout-size'];
 	$header_value['header_size_value'] = $lift_theme['lift-theme-header-layout-size-value'];
 	if($header_value['header_style'] && $header_value['header_size']){
-		$header_css .= "#content.lift-header .header-wrapper{max-width: ".$header_value['header_size_value']."px; margin: 0 auto; width: 100%}";
+		$header_css .= "#header.lift-header .header-wrapper{max-width: ".$header_value['header_size_value']."px; margin: 0 auto; width: 100%}";
 	}
 	// SEARCH HEADER
 	$header_value['header_search_align'] = $lift_theme['lift-theme-header-search-align'];

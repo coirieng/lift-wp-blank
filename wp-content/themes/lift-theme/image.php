@@ -9,7 +9,7 @@
 get_header();
 
 global $lift_theme;
-$layout_value['layout_style'] = $lift_theme['lift_theme-lift-theme-layout-style'];
+$layout_value['layout_style'] = $lift_theme['lift-theme-layout-style'];
 
 // Start the loop.
 while ( have_posts() ) {

@@ -52,7 +52,7 @@
 				'title'         => __( 'Bootstrap comes with three different containers', 'lift-theme-options' ),
 				'min'           => 960,
 				'step'          => 20,
-				'default'       => 1140,
+				'default'       => 1320,
 				'max'           => 1820,
 				'display_value' => 'text'
 			),
