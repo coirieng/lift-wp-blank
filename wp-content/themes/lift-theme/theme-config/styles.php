@@ -19,19 +19,19 @@ function lift_styles() {
 	$search_align = '';
 
 	// LAYOUT 
-	$layout_value['layout_style'] = $lift_theme['lift-theme-layout-style'];
+	$layout_style = $lift_theme['lift-theme-layout-style'];
 	$layout_value['layout_size'] = $lift_theme['lift-theme-layout-size'];
 	$layout_value['layout_size_value'] = $lift_theme['lift-theme-layout-size-value'];
-	if($layout_value['layout_style'] && $layout_value['layout_size']) {
+	if($layout_style && $layout_value['layout_size']) {
 		$layout_css .= "#content.lift-content .wpb_wrapper{max-width: ".$layout_value['layout_size_value']."px; margin: 0 auto; width: 100%}";
 		$layout_css .= "#content.lift-content .container-fluid{max-width: ".$layout_value['layout_size_value']."px; margin: 0 auto; width: 100%}";
 		// TODO: layout post detail and archive page 
 	}
 	// HEADER  
-	$header_value['header_style'] = $lift_theme['lift-theme-header-layout-style'];
+	$header_style = $lift_theme['lift-theme-header-layout-style'];
 	$header_value['header_size'] = $lift_theme['lift-theme-header-layout-size'];
 	$header_value['header_size_value'] = $lift_theme['lift-theme-header-layout-size-value'];
-	if($header_value['header_style'] && $header_value['header_size']){
+	if($header_style && $header_value['header_size']){
 		$header_css .= "#header.lift-header .header-wrapper{max-width: ".$header_value['header_size_value']."px; margin: 0 auto; width: 100%}";
 	}
 	// SEARCH HEADER
@@ -55,11 +55,11 @@ function lift_styles() {
 		$content_css .= '#content.lift-content .content-wrapper{padding-top:'.$content_value['content_content_value']['padding-top'].';padding-bottom:'.$content_value['content_content_value']['padding-bottom'].';padding-left:'.$content_value['content_content_value']['padding-left'].';padding-right:'.$content_value['content_content_value']['padding-right'].';}';
 	}
 	// FOOTER 
-	$footer_value['footer_style'] = $lift_theme['lift-theme-footer-layout-style'];
+	$footer_style = $lift_theme['lift-theme-footer-layout-style'];
 	$footer_value['footer_size'] = $lift_theme['lift-theme-footer-layout-size'];
 	$footer_value['footer_size_value'] = $lift_theme['lift-theme-footer-layout-size-value'];
 	$footer_value['footer_fixed'] = $lift_theme['lift-theme-footer-layout-fixed'];
-	if($footer_value['footer_style'] && $footer_value['footer_size']) {
+	if($footer_style && $footer_value['footer_size']) {
 		$footer_css .= "#footer.lift-footer .footer-wrapper{max-width: ".$footer_value['footer_size_value']."px; margin: 0 auto; width: 100%}";
 	}
 	if($footer_value['footer_fixed']) {

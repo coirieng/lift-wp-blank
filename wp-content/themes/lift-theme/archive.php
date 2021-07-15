@@ -14,13 +14,13 @@ get_header();
 
 $description = get_the_archive_description();
 global $lift_theme;
-$layout_value['layout_style'] = $lift_theme['lift_theme-lift-theme-layout-style'];
+$layout_style = $lift_theme['lift_theme-lift-theme-layout-style'];
 ?>
 
 <?php if ( have_posts() ) : ?>
 
 	<header class="page-header alignwide">
-		<div class="container<?= isset($layout_value['layout_style']) && $layout_value['layout_style'] === '1' ? '-fluid': ''?>">
+		<div class="container<?= isset($layout_style) && $layout_style === '1' ? '-fluid': ''?>">
 			<?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
 			<?php if ( $description ) : ?>
 				<div class="archive-description"><?php echo wp_kses_post( wpautop( $description ) ); ?></div>
@@ -33,7 +33,7 @@ $layout_value['layout_style'] = $lift_theme['lift_theme-lift-theme-layout-style'
 		<?php get_template_part( 'template-parts/content/content', get_theme_mod( 'display_excerpt_or_full_post', 'excerpt' ) ); ?>
 	<?php endwhile; ?>
 
-	<div class="container<?= isset($layout_value['layout_style']) && $layout_value['layout_style'] === '1' ? '-fluid': ''?>">
+	<div class="container<?= isset($layout_style) && $layout_style === '1' ? '-fluid': ''?>">
 		<?php lift_the_posts_navigation(); ?>
 	</div>
 

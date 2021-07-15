@@ -9,7 +9,7 @@
 get_header();
 
 global $lift_theme;
-$layout_value['layout_style'] = $lift_theme['lift-theme-layout-style'];
+$layout_style = $lift_theme['lift-theme-layout-style'];
 
 // Start the loop.
 while ( have_posts() ) {
@@ -17,13 +17,13 @@ while ( have_posts() ) {
 	?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header class="entry-header alignwide">
-			<div class="container<?= isset($layout_value['layout_style']) && $layout_value['layout_style'] === '1' ? '-fluid': ''?>">
+			<div class="container<?= isset($layout_style) && $layout_style === '1' ? '-fluid': ''?>">
 				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 			</div>
 		</header><!-- .entry-header -->
 
 		<div class="entry-content">
-			<div class="container<?= isset($layout_value['layout_style']) && $layout_value['layout_style'] === '1' ? '-fluid': ''?>">
+			<div class="container<?= isset($layout_style) && $layout_style === '1' ? '-fluid': ''?>">
 				<figure class="wp-block-image">
 					<?php
 					/**
@@ -56,7 +56,7 @@ while ( have_posts() ) {
 		</div><!-- .entry-content -->
 
 		<footer class="entry-footer default-max-width">
-			<div class="container<?= isset($layout_value['layout_style']) && $layout_value['layout_style'] === '1' ? '-fluid': ''?>">
+			<div class="container<?= isset($layout_style) && $layout_style === '1' ? '-fluid': ''?>">
 				<?php
 				// Check if there is a parent, then add the published in link.
 				if ( wp_get_post_parent_id( $post ) ) {

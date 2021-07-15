@@ -11,13 +11,13 @@
  */
 
 global $lift_theme;
-$layout_value['layout_style'] = $lift_theme['lift-theme-layout-style'];
+$layout_style = $lift_theme['lift-theme-layout-style'];
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
     <?php if ( ! is_front_page() ) : ?>
     <header class="entry-header alignwide">
-        <div class="container<?= isset($layout_value['layout_style']) && $layout_value['layout_style'] === '1' ? '-fluid': ''?>">
+        <div class="container<?= isset($layout_style) && $layout_style === '1' ? '-fluid': ''?>">
             <?php get_template_part( 'template-parts/header/entry-header' ); ?>
             <?php lift_post_thumbnail(); ?>
         </div>
@@ -25,14 +25,14 @@ $layout_value['layout_style'] = $lift_theme['lift-theme-layout-style'];
     <?php elseif ( has_post_thumbnail() ) : ?>
     <header class="entry-header alignwide">
 
-        <div class="container<?= isset($layout_value['layout_style']) && $layout_value['layout_style'] === '1' ? '-fluid': ''?>">
+        <div class="container<?= isset($layout_style) && $layout_style === '1' ? '-fluid': ''?>">
             <?php lift_post_thumbnail(); ?>
         </div>
     </header><!-- .entry-header -->
     <?php endif; ?>
 
     <div class="entry-content">
-        <div class="container<?= isset($layout_value['layout_style']) && $layout_value['layout_style'] === '1' ? '-fluid': ''?>">
+        <div class="container<?= isset($layout_style) && $layout_style === '1' ? '-fluid': ''?>">
             <?php
 		the_content();
 		
@@ -50,7 +50,7 @@ $layout_value['layout_style'] = $lift_theme['lift-theme-layout-style'];
 
     <?php if ( get_edit_post_link() ) : ?>
     <footer class="entry-footer default-max-width">
-        <div class="container<?= isset($layout_value['layout_style']) && $layout_value['layout_style'] === '1' ? '-fluid': ''?>">
+        <div class="container<?= isset($layout_style) && $layout_style === '1' ? '-fluid': ''?>">
             <?php
 				edit_post_link(
 					sprintf(

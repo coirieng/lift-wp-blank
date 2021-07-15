@@ -15,44 +15,44 @@ $show_title   = ( true === get_theme_mod( 'display_title_and_tagline', true ) );
 // $header_class = $show_title ? 'site-title' : 'screen-reader-text';
 
 global $lift_theme;
-$header_value['header_logo'] = $lift_theme['lift-theme-header-logo'];
-$header_value['header_logo_size'] = $lift_theme['lift-theme-header-logo-size'];
-$header_value['header_logo_mobile'] = $lift_theme['lift-theme-header-logo-mobile'];
-$header_value['header_logo_mobile_size'] = $lift_theme['lift-theme-header-logo-mobile-size'];
-$header_value['header_logo_tablet'] = $lift_theme['lift-theme-header-logo-tablet'];
-$header_value['header_logo_tablet_size'] = $lift_theme['lift-theme-header-logo-tablet-size'];
+$header_logo = $lift_theme['lift-theme-header-logo'];
+$header_logo_size = $lift_theme['lift-theme-header-logo-size'];
+$header_logo_mobile = $lift_theme['lift-theme-header-logo-mobile'];
+$header_logo_mobile_size = $lift_theme['lift-theme-header-logo-mobile-size'];
+$header_logo_tablet = $lift_theme['lift-theme-header-logo-tablet'];
+$header_logo_tablet_size = $lift_theme['lift-theme-header-logo-tablet-size'];
 
 $logosrc = '';
 $logosize = '';
 
 if($detect->isMobile() && !$detect->isTablet()) {
-	$logosrc = $header_value['header_logo_mobile']['url'];
-	if (isset($header_value['header_logo_mobile_size']) && $header_value['header_logo_mobile_size']['height'] !== '' && $header_value['header_logo_mobile_size']['height'] !== 'px') {
-		$logosize .= ' height="'.$header_value['header_logo_mobile_size']['height'].'"';
+	$logosrc = $header_logo_mobile['url'];
+	if (isset($header_logo_mobile_size) && $header_logo_mobile_size['height'] !== '' && $header_logo_mobile_size['height'] !== 'px') {
+		$logosize .= ' height="'.$header_logo_mobile_size['height'].'"';
 	}
-	if (isset($header_value['header_logo_mobile_size']) && $header_value['header_logo_mobile_size']['width'] !== '' && $header_value['header_logo_mobile_size']['width'] !== 'px') {
-		$logosize .= ' width="'.$header_value['header_logo_mobile_size']['width'].'"';
+	if (isset($header_logo_mobile_size) && $header_logo_mobile_size['width'] !== '' && $header_logo_mobile_size['width'] !== 'px') {
+		$logosize .= ' width="'.$header_logo_mobile_size['width'].'"';
 	}
 } else if($detect->isTablet()) {
-	$logosrc = $header_value['header_logo_tablet']['url'];
-	if (isset($header_value['header_logo_tablet_size']) && $header_value['header_logo_tablet_size']['height'] !== '' && $header_value['header_logo_tablet_size']['height'] !== 'px') {
-		$logosize .= ' height="'.$header_value['header_logo_tablet_size']['height'].'"';
+	$logosrc = $header_logo_tablet['url'];
+	if (isset($header_logo_tablet_size) && $header_logo_tablet_size['height'] !== '' && $header_logo_tablet_size['height'] !== 'px') {
+		$logosize .= ' height="'.$header_logo_tablet_size['height'].'"';
 	}
-	if (isset($header_value['header_logo_tablet_size']) && $header_value['header_logo_tablet_size']['width'] !== '' && $header_value['header_logo_tablet_size']['width'] !== 'px') {
-		$logosize .= ' width="'.$header_value['header_logo_tablet_size']['width'].'"';
+	if (isset($header_logo_tablet_size) && $header_logo_tablet_size['width'] !== '' && $header_logo_tablet_size['width'] !== 'px') {
+		$logosize .= ' width="'.$header_logo_tablet_size['width'].'"';
 	}
 } else {
-	$logosrc = $header_value['header_logo']['url'];
-	if (isset($header_value['header_logo_size']) && $header_value['header_logo_size']['height'] !== '' && $header_value['header_logo_size']['height'] !== 'px') {
-		$logosize .= ' height="'.$header_value['header_logo_size']['height'].'"';
+	$logosrc = $header_logo['url'];
+	if (isset($header_logo_size) && $header_logo_size['height'] !== '' && $header_logo_size['height'] !== 'px') {
+		$logosize .= ' height="'.$header_logo_size['height'].'"';
 	}
-	if (isset($header_value['header_logo_size']) && $header_value['header_logo_size']['width'] !== '' && $header_value['header_logo_size']['width'] !== 'px') {
-		$logosize .= ' width="'.$header_value['header_logo_size']['width'].'"';
+	if (isset($header_logo_size) && $header_logo_size['width'] !== '' && $header_logo_size['width'] !== 'px') {
+		$logosize .= ' width="'.$header_logo_size['width'].'"';
 	}
 }
 
 ?>
-	<?php if (isset($header_value['header_logo']) && $logosrc !== '') : ?>
+	<?php if (isset($header_logo) && $logosrc !== '') : ?>
 		<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
 			<img src="<?=$logosrc;?>"<?=$logosize?> alt="<?php echo esc_html( $blog_info ); ?> - <?php echo esc_html( $description ); ?>">
 		</a>
@@ -73,6 +73,7 @@ if($detect->isMobile() && !$detect->isTablet()) {
 		<?php echo lift_get_icon_svg( 'ui', 'close' ); ?>
     </button>
 
+<!-- TODO: CHECK THIS LINE -->
 <?php if ( is_front_page() && ! is_paged() ) : ?>
 <?php elseif ( is_front_page() || is_home() ) : ?>
 <?php else : ?>

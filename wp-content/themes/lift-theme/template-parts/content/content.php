@@ -11,7 +11,7 @@
  */
 
 global $lift_theme;
-$layout_value['layout_style'] = $lift_theme['lift_theme-lift-theme-layout-style'];
+$layout_style = $lift_theme['lift_theme-lift-theme-layout-style'];
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
@@ -25,7 +25,7 @@ $layout_value['layout_style'] = $lift_theme['lift_theme-lift-theme-layout-style'
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<div class="container<?= isset($layout_value['layout_style']) && $layout_value['layout_style'] === '1' ? '-fluid': ''?>">
+		<div class="container<?= isset($layout_style) && $layout_style === '1' ? '-fluid': ''?>">
 		<?php
 		the_content(
 			lift_continue_reading_text()
@@ -45,7 +45,7 @@ $layout_value['layout_style'] = $lift_theme['lift_theme-lift-theme-layout-style'
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer default-max-width">
-		<div class="container<?= isset($layout_value['layout_style']) && $layout_value['layout_style'] === '1' ? '-fluid': ''?>">
+		<div class="container<?= isset($layout_style) && $layout_style === '1' ? '-fluid': ''?>">
 			<?php lift_entry_meta_footer(); ?>
 		</div>
 	</footer><!-- .entry-footer -->

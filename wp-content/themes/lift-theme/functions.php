@@ -18,6 +18,7 @@ if ( version_compare( $GLOBALS['wp_version'], '5.3', '<' ) ) {
 require get_template_directory() . '/lift_redux_frame.php';
 require get_template_directory() . '/theme-config/setup.php';
 require get_template_directory() . '/theme-config/sidebar.php';
+require get_template_directory() . '/theme-config/breadcrumb.php';
 require get_template_directory() . '/theme-config/scripts.php';
 require get_template_directory() . '/theme-config/styles.php';
 require get_template_directory() . '/theme-config/non-latin-language.php';

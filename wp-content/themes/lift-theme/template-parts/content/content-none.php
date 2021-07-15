@@ -11,12 +11,12 @@
  */
 
 global $lift_theme;
-$layout_value['layout_style'] = $lift_theme['lift-theme-layout-style'];
+$layout_style = $lift_theme['lift-theme-layout-style'];
 ?>
 
 <section class="no-results not-found">
 	<header class="page-header alignwide">
-		<div class="container<?= isset($layout_value['layout_style']) && $layout_value['layout_style'] === '1' ? '-fluid': ''?>">
+		<div class="container<?= isset($layout_style) && $layout_style === '1' ? '-fluid': ''?>">
 			<?php if ( is_search() ) : ?>
 
 				<h1 class="page-title">
@@ -38,7 +38,7 @@ $layout_value['layout_style'] = $lift_theme['lift-theme-layout-style'];
 	</header><!-- .page-header -->
 
 	<div class="page-content default-max-width">
-		<div class="container<?= isset($layout_value['layout_style']) && $layout_value['layout_style'] === '1' ? '-fluid': ''?>">
+		<div class="container<?= isset($layout_style) && $layout_style === '1' ? '-fluid': ''?>">
 
 			<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
