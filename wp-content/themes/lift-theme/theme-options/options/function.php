@@ -27,22 +27,22 @@ function lift_theme_skin_body_class( $classes ) {
 
 	$lift_options = get_lift_theme_options();
 	// LAYOUT 
-	$theme_value['theme_style'] = $lift_options['lift-theme-global-style-theme'];
-	$theme_value['theme_dark_mode'] = $lift_options['lift-theme-global-style-theme-dark'];
+	$theme_style = $lift_options['lift-theme-global-style-theme'];
+	$theme_dark_mode = $lift_options['lift-theme-global-style-theme-dark'];
 
 	$classes[] = '';
 
-	if ( $theme_value['theme_style'] === 'modern' ) {
+	if ( $theme_style === 'modern' ) {
 		$classes[] = 'lift-theme-modern';
-	} else if ( $theme_value['theme_style'] === 'material' ) {
+	} else if ( $theme_style === 'material' ) {
 		$classes[] = 'lift-theme-material';
-	} else if ( $theme_value['theme_style'] === 'monokai' ) {
+	} else if ( $theme_style === 'monokai' ) {
 		$classes[] = 'lift-theme-monokai';
 	} else {
 		$classes[] = 'lift-theme-default';
 	}
 
-	if ( $theme_value['theme_dark_mode']) {
+	if ( $theme_dark_mode) {
 		$classes[] = 'lift-theme-dark-mode';
 	}
 

@@ -17,7 +17,7 @@ $layout_style = $lift_theme['lift-theme-layout-style'];
 
     <?php if ( ! is_front_page() ) : ?>
     <header class="entry-header alignwide">
-        <div class="container<?= isset($layout_style) && $layout_style === '1' ? '-fluid': ''?>">
+        <div class="<?= isset($layout_style) && $layout_style === '1' ? '-fluid': ''?>">
             <?php get_template_part( 'template-parts/header/entry-header' ); ?>
             <?php lift_post_thumbnail(); ?>
         </div>

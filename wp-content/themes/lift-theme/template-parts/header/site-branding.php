@@ -26,7 +26,7 @@ $logosrc = '';
 $logosize = '';
 
 if($detect->isMobile() && !$detect->isTablet()) {
-	$logosrc = $header_logo_mobile['url'];
+	$logosrc = isset($header_logo_mobile['url']) && $header_logo_mobile['url'] !== '' ? $header_logo_mobile['url'] : $header_logo['url'];
 	if (isset($header_logo_mobile_size) && $header_logo_mobile_size['height'] !== '' && $header_logo_mobile_size['height'] !== 'px') {
 		$logosize .= ' height="'.$header_logo_mobile_size['height'].'"';
 	}
@@ -34,7 +34,7 @@ if($detect->isMobile() && !$detect->isTablet()) {
 		$logosize .= ' width="'.$header_logo_mobile_size['width'].'"';
 	}
 } else if($detect->isTablet()) {
-	$logosrc = $header_logo_tablet['url'];
+	$logosrc = isset($header_logo_tablet['url'])  && $header_logo_tablet['url'] !== ''  ? $header_logo_tablet['url'] : $header_logo['url'];
 	if (isset($header_logo_tablet_size) && $header_logo_tablet_size['height'] !== '' && $header_logo_tablet_size['height'] !== 'px') {
 		$logosize .= ' height="'.$header_logo_tablet_size['height'].'"';
 	}

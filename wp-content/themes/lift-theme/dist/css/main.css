@@ -288,28 +288,8 @@ input[type=submit] {
   --lift-theme-light: #f0f0f0;
   --lift-theme-white: #fff; }
 
-html {
-  overflow: hidden; }
-
 body {
   overflow-x: hidden; }
-
-.entry-footer {
-  display: block; }
-  .entry-footer .edit-link {
-    margin: 2rem 0;
-    display: block; }
-    .entry-footer .edit-link > a {
-      color: #fff !important;
-      text-decoration: none;
-      padding: .35rem 1rem;
-      border-radius: 5px;
-      background: var(--lift-theme-main);
-      display: inline-flex; }
-      .entry-footer .edit-link > a + a {
-        margin-left: .25rem; }
-      .entry-footer .edit-link > a:hover, .entry-footer .edit-link > a:focus, .entry-footer .edit-link > a:active {
-        background: var(--lift-theme-azure); }
 
 .screen-reader-text {
   border: 0;
@@ -325,9 +305,6 @@ body {
 
 #content.lift-content .wpb_content_element {
   margin-bottom: 0; }
-
-#footer .menu .btn.menu-toggle {
-  display: none; }
 
 ::-webkit-scrollbar {
   -webkit-appearance: none;
@@ -360,25 +337,24 @@ body {
     display: flex !important;
     flex-basis: auto; }
 
-.navbar-toggler:focus, .navbar-toggler:active {
-  outline: 0;
-  box-shadow: none; }
-
-.navbar-toggler svg {
-  width: 30px;
-  height: 30px; }
-
-.navbar-toggler svg:nth-child(1) {
-  display: none; }
-
-.navbar-toggler svg:nth-child(2) {
-  display: block; }
-
-.navbar-toggler.collapsed svg:nth-child(1) {
-  display: block; }
-
-.navbar-toggler.collapsed svg:nth-child(2) {
-  display: none; }
+header.site-header {
+  background-color: #fff; }
+  header.site-header .navbar-toggler {
+    background-color: var(--lift-theme-main); }
+    header.site-header .navbar-toggler:focus, header.site-header .navbar-toggler:active {
+      outline: 0;
+      box-shadow: none; }
+    header.site-header .navbar-toggler svg {
+      width: 30px;
+      height: 30px; }
+    header.site-header .navbar-toggler svg:nth-child(1) {
+      display: none; }
+    header.site-header .navbar-toggler svg:nth-child(2) {
+      display: block; }
+    header.site-header .navbar-toggler.collapsed svg:nth-child(1) {
+      display: block; }
+    header.site-header .navbar-toggler.collapsed svg:nth-child(2) {
+      display: none; }
 
 header .navbar.navbar-expand-all #site-navigation.primary-menu-container .primary-navigation .menu-item {
   display: flex;
@@ -917,6 +893,29 @@ header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .prima
     flex-direction: column;
     justify-content: center; } }
 
+.entry-footer {
+  display: block; }
+  .entry-footer .edit-link {
+    margin: 2rem 0;
+    display: block; }
+    .entry-footer .edit-link > a {
+      color: #fff !important;
+      text-decoration: none;
+      padding: .35rem 1rem;
+      border-radius: 5px;
+      background: var(--lift-theme-main);
+      display: inline-flex; }
+      .entry-footer .edit-link > a + a {
+        margin-left: .25rem; }
+      .entry-footer .edit-link > a:hover, .entry-footer .edit-link > a:focus, .entry-footer .edit-link > a:active {
+        background: var(--lift-theme-azure); }
+
+footer#footer {
+  background-color: var(--lift-theme-light);
+  padding: 2rem 0; }
+  footer#footer .menu .btn.menu-toggle {
+    display: none; }
+
 #backtotop {
   display: none;
   bottom: 2rem;
@@ -1059,5 +1058,43 @@ header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .prima
   #content #comments .children {
     list-style: none;
     padding-left: 2rem; }
+
+#secondary ul {
+  padding-left: 0;
+  list-style: none; }
+
+#content.lift-content article.post .entry-content .blog-content,
+#content.lift-content article.post .entry-content .sidebar-content {
+  padding-bottom: 2rem;
+  padding-top: 2rem; }
+
+.single header.entry-header {
+  padding: 1rem 0;
+  background-color: var(--lift-theme-light); }
+
+@media (min-width: 768px) {
+  .single header.entry-header {
+    padding: 2rem 0; } }
+
+@media (min-width: 992px) {
+  .single header.entry-header {
+    padding: 3rem 0; } }
+
+header.page-header {
+  padding: 1rem 0;
+  background-color: var(--lift-theme-light); }
+
+@media (min-width: 768px) {
+  header.page-header {
+    padding: 2rem 0; } }
+
+@media (min-width: 992px) {
+  header.page-header {
+    padding: 3rem 0; } }
+
+#content.lift-content article.post .archive-content .blog-content,
+#content.lift-content article.post .archive-content .sidebar-content {
+  padding-bottom: 2rem;
+  padding-top: 2rem; }
 
 /*# sourceMappingURL=main.css.map */

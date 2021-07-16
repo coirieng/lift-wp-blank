@@ -11,11 +11,12 @@ function lift_get_breadcrumb() {
 	
     
     $showOnHome = 0; // 1 - show breadcrumbs on the homepage, 0 - don't show
-    $delimiter = '&raquo;'; // delimiter between crumbs
+    $delimiter = ''; // delimiter between crumbs
+    // $delimiter = '&raquo;'; // delimiter between crumbs
     $home = 'Home'; // text for the 'Home' link
     $showCurrent = 1; // 1 - show current post/page title in breadcrumbs, 0 - don't show
-    $before = '<span class="current">'; // tag before the current crumb
-    $after = '</span>'; // tag after the current crumb
+    $before = '<li class="breadcrumb-item active" aria-current="page">'; // tag before the current crumb
+    $after = '</li>'; // tag after the current crumb
 
     global $post;
     $homeLink = get_bloginfo('url');
@@ -57,7 +58,7 @@ function lift_get_breadcrumb() {
                 if ($showCurrent == 0) {
                     $cats = preg_replace("#^(.+)\s$delimiter\s$#", "$1", $cats);
                 }
-                echo $cats;
+                echo $before . $cats . $after;
                 if ($showCurrent == 1) {
                     echo $before . get_the_title() . $after;
                 }

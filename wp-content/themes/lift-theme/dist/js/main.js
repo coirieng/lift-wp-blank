@@ -521,4 +521,13 @@ LIFTReady(function () {
   lift_fixed_header();
 });
 liftDOMChange(function () {});
+$(window).scroll(function (event) {
+  var st = $(this).scrollTop();
+
+  if (st > 0) {
+    $('header#header').addClass('active');
+  } else {
+    $('header#header').removeClass('active');
+  }
+});
 //# sourceMappingURL=main.js.map

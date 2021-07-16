@@ -14,4 +14,11 @@ LIFTReady(() => {
 liftDOMChange(() => {
 });
 
-
+$(window).scroll(function(event){
+   var st = $(this).scrollTop();
+   if (st > 0){
+	$('header#header').addClass('active')
+   } else {
+	$('header#header').removeClass('active')
+   }
+});

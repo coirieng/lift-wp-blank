@@ -18,10 +18,8 @@ $layout_style = $lift_theme['lift-theme-layout-style'];
 ?>
 
 <header class="entry-header">
-	<div class="container<?= isset($layout_style) && $layout_style === '1' ? '-fluid': ''?>">
-		<?php
+	<?php
 	the_title( sprintf( '<h2 class="entry-title default-max-width"><a href="%s">', esc_url( get_permalink() ) ), '</a></h2>' );
 	lift_post_thumbnail();
 	?>
-	</div>
 </header><!-- .entry-header -->

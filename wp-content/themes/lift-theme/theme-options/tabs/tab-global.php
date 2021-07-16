@@ -113,8 +113,9 @@
                 'subtitle'       => __( 'Allow your users to choose the position they want.', 'lift-theme-options' ),
                 'desc'           => __( 'You can enable or disable any piece of this field. Right, Bottom, or Units.', 'lift-theme-options' ),
                 'default'        => array(
-                    'bottom'    => '2rem',
-                    'right'  => '2rem',
+                    'bottom'    => '2em',
+                    'right'  => '2em',
+                    'units'     => 'em'
                 )
             ),
 			

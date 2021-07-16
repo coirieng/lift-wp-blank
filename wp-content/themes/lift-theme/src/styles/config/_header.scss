@@ -12,28 +12,32 @@
 }
 
 // HEADER CUSTOM CSS
-.navbar-toggler {
-	&:focus,
-	&:active {
-		outline: 0;
-		box-shadow: none;
-	}
-	svg {
-		width: 30px;
-		height: 30px;
-	}
-	svg:nth-child(1) {
-		display: none;
-	}
-	svg:nth-child(2) {
-		display: block;
-	}
-	&.collapsed {
+header.site-header {
+	background-color: #fff;
+	.navbar-toggler {
+		background-color: var(--lift-theme-main);
+		&:focus,
+		&:active {
+			outline: 0;
+			box-shadow: none;
+		}
+		svg {
+			width: 30px;
+			height: 30px;
+		}
 		svg:nth-child(1) {
-			display: block;
+			display: none;
 		}
 		svg:nth-child(2) {
-			display: none;
+			display: block;
+		}
+		&.collapsed {
+			svg:nth-child(1) {
+				display: block;
+			}
+			svg:nth-child(2) {
+				display: none;
+			}
 		}
 	}
 }

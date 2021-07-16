@@ -32,35 +32,10 @@
 
 
 html {
-	overflow: hidden;
+	// overflow: hidden;
 }
 body {
 	overflow-x: hidden;
-}
-
-// BUTTON EDIT POST 
-.entry-footer {
-	display: block;
-	.edit-link {
-		margin: 2rem 0;
-		display: block;
-		> a {
-			color:#fff !important;
-			text-decoration: none;
-			padding: .35rem 1rem;
-    		border-radius: 5px;
-			background: var(--lift-theme-main);
-			display: inline-flex;
-			+ a {
-				margin-left: .25rem;
-			}
-			&:hover, 
-			&:focus, 
-			&:active {
-				background: var(--lift-theme-azure)
-			}
-		}
-	}
 }
 
 .screen-reader-text {
@@ -80,14 +55,6 @@ body {
 	&.lift-content {
 		.wpb_content_element {
 			margin-bottom: 0;
-		}
-	}
-}
-
-#footer {
-	.menu {
-		.btn.menu-toggle {
-			display: none;
 		}
 	}
 }

@@ -11,7 +11,7 @@
  */
 
 global $lift_theme;
-$layout_style = $lift_theme['lift_theme-lift-theme-layout-style'];
+$layout_style = $lift_theme['lift-theme-layout-style'];
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">

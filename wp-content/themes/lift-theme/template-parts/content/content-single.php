@@ -12,12 +12,13 @@
 
 global $lift_theme;
 $layout_style = $lift_theme['lift-theme-layout-style'];
-$layout_sidebar = $lift_theme['lift-theme-blog-style-sidebar'];
-$layout_sidebar_position = $lift_theme['lift-theme-blog-style-sidebar-position'];
-$layout_sidebar_content_columns = isset($lift_theme['lift-theme-blog-style-content-columns']) ? $lift_theme['lift-theme-blog-style-content-columns'] : 'col-xl-8 col-xxl-9';
-$layout_sidebar_columns = isset($lift_theme['lift-theme-blog-style-sidebar-columns']) ? $lift_theme['lift-theme-blog-style-sidebar-columns'] : 'col-xl-4 col-xxl-3';
-$layout_post_thumbnail = $lift_theme['lift-theme-blog-style-content-thumbnail'];
-$layout_post_nextprev = $lift_theme['lift-theme-blog-style-content-nextprev'];
+$post_sidebar = $lift_theme['lift-theme-blog-style-sidebar'];
+$post_sidebar_position = $lift_theme['lift-theme-blog-style-sidebar-position'];
+$post_sidebar_content_columns = isset($lift_theme['lift-theme-blog-style-content-columns']) ? $lift_theme['lift-theme-blog-style-content-columns'] : 'col-xl-8 col-xxl-9';
+$post_sidebar_columns = isset($lift_theme['lift-theme-blog-style-sidebar-columns']) ? $lift_theme['lift-theme-blog-style-sidebar-columns'] : 'col-xl-4 col-xxl-3';
+$post_post_thumbnail = $lift_theme['lift-theme-blog-style-content-thumbnail'];
+$post_post_nextprev = $lift_theme['lift-theme-blog-style-content-nextprev'];
+$post_post_breadcrumb = $lift_theme['lift-theme-blog-style-breadcrumb'];
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
@@ -25,7 +26,10 @@ $layout_post_nextprev = $lift_theme['lift-theme-blog-style-content-nextprev'];
 		<div class="content-wrapper">
 			<div class="container<?= isset($layout_style) && $layout_style === '1' ? '-fluid': ''?>">
 				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-				<?php lift_get_breadcrumb(); ?>
+				<?php 
+				if(!isset($post_post_breadcrumb) || $post_post_breadcrumb === '0' || $post_post_breadcrumb == 0){
+					lift_get_breadcrumb(); 
+				}?>
 			</div>
 		</div>
 	</header><!-- .entry-header -->
@@ -34,9 +38,9 @@ $layout_post_nextprev = $lift_theme['lift-theme-blog-style-content-nextprev'];
 		<div class="content-wrapper">
 			<div class="container<?= isset($layout_style) && $layout_style === '1' ? '-fluid': ''?>">
 				<div class="row">
-					<div class="<?=isset($layout_sidebar) && $layout_sidebar ==='1' ? 'col-12' : $layout_sidebar_content_columns ?><?= isset($layout_sidebar_position) && $layout_sidebar_position === '1' ? ' order-xl-2': ' order-xl-1'?>">
+					<div class="blog-content <?=isset($post_sidebar) && $post_sidebar ==='1' ? 'col-12' : $post_sidebar_content_columns ?><?= isset($post_sidebar_position) && $post_sidebar_position === '1' ? ' order-xl-2': ' order-xl-1'?>">
 					
-					<?php if(!isset($layout_post_thumbnail) || $layout_post_thumbnail === '0'){?>
+					<?php if(!isset($post_post_thumbnail) || $post_post_thumbnail === '0' || $post_post_thumbnail == 0){?>
 					<?php lift_post_thumbnail(); ?>
 					<?php } ?>
 
@@ -78,7 +82,7 @@ $layout_post_nextprev = $lift_theme['lift-theme-blog-style-content-nextprev'];
 							comments_template();
 						}
 					
-						if(!isset($layout_post_nextprev) || $layout_post_nextprev === '0'){
+						if(!isset($post_post_nextprev) || $post_post_nextprev === '0' || $post_post_nextprev == 0){
 							// Previous/next post navigation.
 							$lift_theme_next = is_rtl() ? lift_get_icon_svg( 'ui', 'arrow_left' ) : lift_get_icon_svg( 'ui', 'arrow_right' );
 							$lift_theme_prev = is_rtl() ? lift_get_icon_svg( 'ui', 'arrow_right' ) : lift_get_icon_svg( 'ui', 'arrow_left' );
@@ -98,8 +102,8 @@ $layout_post_nextprev = $lift_theme['lift-theme-blog-style-content-nextprev'];
 						?>
 
 					</div>
-					<?php if(!isset($layout_sidebar) || $layout_sidebar === '0'){?>
-						<div class="<?=$layout_sidebar_columns?><?= isset($layout_sidebar_position) && $layout_sidebar_position === '1' ? ' order-xl-1': ' order-xl-2'?>">
+					<?php if(!isset($post_sidebar) || $post_sidebar === '0' || $post_sidebar == 0){?>
+						<div class="sidebar-content <?=$post_sidebar_columns?><?= isset($post_sidebar_position) && $post_sidebar_position === '1' ? ' order-xl-1': ' order-xl-2'?>">
 							<?php get_template_part( 'sidebar' );?>
 						</div>
 					<?php } ?>

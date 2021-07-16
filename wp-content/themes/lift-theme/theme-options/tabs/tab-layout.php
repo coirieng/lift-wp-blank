@@ -24,7 +24,7 @@
                 'type'     => 'switch',
                 'title'    => __( 'Containers', 'lift-theme-options' ),
                 'subtitle' => __( 'Containers are a fundamental building block of Bootstrap that contain, pad, and align your content within a given device or viewport.', 'lift-theme-options' ),
-                'default'  => 1,
+                'default'  => 0,
                 'on'       => 'Fullwidth',
                 'off'      => 'Boxed',
             ),
@@ -75,9 +75,9 @@
                 'units'          => array( 'em', 'rem', 'px', '%' ),      // You can specify a unit value. Possible: px, em, %
                 'units_extended' => 'true',    // Allow users to select any type of unit
                 //'display_units' => 'false',   // Set to false to hide the units if the units are specified
-                // 'title'          => __( 'Padding Option', 'lift-theme-options' ),
-                // 'subtitle'       => __( 'Allow your users to choose the spacing or margin they want.', 'lift-theme-options' ),
-                // 'desc'           => __( 'You can enable or disable any piece of this field. Top, Right, Bottom, Left, or Units.', 'lift-theme-options' ),
+                'default'        => array(
+                    'units'     => 'em'
+                )
             ),
 			array(
 				'id'       => 'lift-theme-layout-row-option',
@@ -96,10 +96,9 @@
                 'all'            => false,
                 'units'          => array( 'em', 'rem', 'px', '%' ),      // You can specify a unit value. Possible: px, em, %
                 'units_extended' => 'true',    // Allow users to select any type of unit
-                //'display_units' => 'false',   // Set to false to hide the units if the units are specified
-                // 'title'          => __( 'Padding Option', 'lift-theme-options' ),
-                // 'subtitle'       => __( 'Allow your users to choose the spacing or margin they want.', 'lift-theme-options' ),
-                // 'desc'           => __( 'You can enable or disable any piece of this field. Top, Right, Bottom, Left, or Units.', 'lift-theme-options' ),
+                'default'        => array(
+                    'units'     => 'em'
+                )
             ),
 		)
 	));
