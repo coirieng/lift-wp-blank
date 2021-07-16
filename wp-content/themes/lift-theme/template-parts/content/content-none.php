@@ -13,7 +13,7 @@
 global $lift_theme;
 $layout_style = $lift_theme['lift-theme-layout-style'];
 ?>
-
+<!-- TODO: need improve  -->
 <section class="no-results not-found">
     <header class="page-header alignwide">
         <div class="container<?= isset($layout_style) && $layout_style === '1' ? '-fluid': ''?>">
