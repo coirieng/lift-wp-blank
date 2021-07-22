@@ -1,5 +1,4 @@
 <?php
-add_action( 'admin_menu', 'lift_page_options' );
 
 function lift_page_options() {
 
@@ -43,8 +42,6 @@ function lift_metabox_callback( $post ) {
 	
 }
 
-add_action( 'save_post', 'lift_page_save_meta', 10, 2 );
-
 function lift_page_save_meta( $post_id, $post ) {
 
 	// nonce check
@@ -83,3 +80,7 @@ function lift_page_save_meta( $post_id, $post ) {
 	return $post_id;
 
 }
+
+
+// add_action( 'admin_menu', 'lift_page_options' );
+// add_action( 'save_post', 'lift_page_save_meta', 10, 2 );

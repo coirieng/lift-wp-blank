@@ -163,6 +163,48 @@
 		),
     ) );
 
+    Redux::setSection( $opt_name, array(
+        'title' => __( 'Excerpt Settings', 'lift-theme-options' ),
+        'id'         => 'lift-theme-blog-excerpt',
+        'subsection' => true,
+		'fields'     => array(
+			array(
+				'id'       => 'lift-theme-blog-excerpt-option',
+                'type'     => 'switch',
+                'title'    => __( 'Enable excerpt', 'lift-theme-options' ),
+                'default'  => 1,
+                'on'       => 'On',
+                'off'      => 'Off',
+            ),
+            
+			array(
+				'id'       => 'lift-theme-blog-excerpt-value',
+				'type'          => 'slider',
+                'required' => array( 'lift-theme-blog-excerpt-option', '=', '1' ),
+                'title'    => __( 'Excerpt length', 'lift-theme-options' ),
+				'min'           => 10,
+				'step'          => 10,
+				'default'       => 120,
+				'max'           => 500,
+				'display_value' => 'text'
+			),
+            array(
+				'id'       => 'lift-theme-blog-excerpt-readmore',
+                'type'     => 'text',
+				'title'    => __('Readmore text', 'lift-theme-options'),
+                'required' => array( 'lift-theme-blog-excerpt-option', '=', '1' ),
+				'default'  => "Readmore",
+			),
+            array(
+				'id'       => 'lift-theme-blog-excerpt-morestring',
+                'type'     => 'text',
+				'title'    => __('More string', 'lift-theme-options'),
+                'required' => array( 'lift-theme-blog-excerpt-option', '=', '1' ),
+				'default'  => "[...]",
+			),
+		),
+    ) );
+
 
     Redux::setSection( $opt_name, array(
 		'title'      => __( 'Archive and Sidebar', 'lift-theme-options' ),

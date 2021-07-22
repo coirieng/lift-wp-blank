@@ -124,15 +124,15 @@ function lift_can_show_post_thumbnail() {
 function lift_get_avatar_size() {
 	return 60;
 }
-
+// TODO: not yet finished 
 /**
  * Creates continue reading text
  */
 function lift_continue_reading_text() {
 	global $lift_theme;
-	if (intval($lift_theme['lift-theme-global-excerpt-option']) == 1) {
+	if (intval($lift_theme['lift-theme-blog-excerpt-option']) == 1) {
 		$continue_reading = sprintf(
-			esc_html__( $lift_theme['lift-theme-global-excerpt-readmore'].' %s', 'wp-lift-theme' ),
+			esc_html__( $lift_theme['lift-theme-blog-excerpt-readmore'].' %s', 'wp-lift-theme' ),
 			the_title( '<span class="screen-reader-text">', '</span>', false )
 		);
 		return $continue_reading;
@@ -145,8 +145,8 @@ function lift_continue_reading_text() {
 function lift_continue_reading_link_excerpt() {
 	global $lift_theme;
 	global $post;
-	if ( ! is_admin() && intval($lift_theme['lift-theme-global-excerpt-option']) == 1) {
-		return $lift_theme['lift-theme-global-excerpt-morestring'].' <a class="more-link" href="' . esc_url( get_permalink($post) ) . '">' . lift_continue_reading_text() . '</a>';
+	if ( ! is_admin() && intval($lift_theme['lift-theme-blog-excerpt-option']) == 1) {
+		return $lift_theme['lift-theme-blog-excerpt-morestring'].' <a class="more-link" href="' . esc_url( get_permalink($post) ) . '">' . lift_continue_reading_text() . '</a>';
 	} else {
 		return '';
 	}
@@ -159,7 +159,7 @@ add_filter( 'excerpt_more', 'lift_continue_reading_link_excerpt' );
  * Create the continue reading link.
  */
 function lift_continue_reading_link() {
-	if ( ! is_admin() && intval($lift_theme['lift-theme-global-excerpt-option']) == 1) {
+	if ( ! is_admin() && intval($lift_theme['lift-theme-blog-excerpt-option']) == 1) {
 		return '<div class="more-link-container"><a class="more-link" href="' . esc_url( get_permalink() ) . '#more-' . esc_attr( get_the_ID() ) . '">' . lift_continue_reading_text() . '</a></div>';
 	}
 }
@@ -169,8 +169,8 @@ add_filter( 'the_content_more_link', 'lift_continue_reading_link' );
 
 function lift_excerpt_length() {
 	global $lift_theme;
-	if ( ! is_admin() && intval($lift_theme['lift-theme-global-excerpt-option']) == 1) {
-		return $lift_theme['lift-theme-global-excerpt-value'];
+	if ( ! is_admin() && intval($lift_theme['lift-theme-blog-excerpt-option']) == 1) {
+		return $lift_theme['lift-theme-blog-excerpt-value'];
 	} else {
 		return 100000;
 	}

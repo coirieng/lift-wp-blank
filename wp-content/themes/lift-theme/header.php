@@ -32,3 +32,4 @@
 			<div id="primary" class="content-area">
 				<!-- LIFT MAIN -->
 				<div id="main" class="site-main lift-main" role="main">
+				<div id="fb-root"></div>
