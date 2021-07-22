@@ -13,6 +13,65 @@
         'icon'  => 'bi bi-menu-button-wide'
     ) );
 
+
+	Redux::setSection( $opt_name, array(
+        'title' => __( 'Header layout', 'lift-theme-options' ),
+        'id'         => 'lift-theme-header-layout',
+        'subsection' => true,
+		'fields'     => array(
+			array(
+				'id'       => 'lift-theme-header-kind',
+                'type'     => 'image_select',
+                'title'    => __( 'Header Type <i style="color:red">(*)</i>', 'lift-theme-options' ),
+				'options'  => array(
+                    '1' => array(
+                        'img' => get_template_directory_uri() . '/admin/img/menu-left-aligned.png'
+                    ),
+                    '2' => array(
+                        'img' => get_template_directory_uri() . '/admin/img/centered-menu.png'
+                    ),
+                    '3' => array(
+                        'img' => get_template_directory_uri() . '/admin/img/centered-menu-under-logo.png'
+                    ),
+                    '4' => array(
+                        'img' => get_template_directory_uri() . '/admin/img/default-header.png'
+                    ),
+                ),
+				'default'  => '1'
+            ),
+			array(
+				'id'       => 'lift-theme-header-layout-style',
+                'type'     => 'switch',
+                'title'    => __( 'Containers', 'lift-theme-options' ),
+                'subtitle' => __( 'Containers are a fundamental building block of Bootstrap that contain, pad, and align your content within a given device or viewport.', 'lift-theme-options' ),
+                'default'  => 0,
+                'on'       => 'Fullwidth',
+                'off'      => 'Boxed',
+            ),
+			array(
+				'id'       => 'lift-theme-header-layout-size',
+                'type'     => 'switch',
+                'required' => array( 'lift-theme-header-layout-style', '=', '1' ),
+                'title'    => __( 'Max width container', 'lift-theme-options' ),
+                'default'  => 0,
+                'on'       => 'On',
+                'off'      => 'Off',
+            ),
+			array(
+				'id'       => 'lift-theme-header-layout-size-value',
+				'type'          => 'slider',
+                'required' => array( 'lift-theme-header-layout-size', '=', '1' ),
+				'title'         => __( 'Bootstrap comes with three different containers', 'lift-theme-options' ),
+				'min'           => 960,
+				'step'          => 20,
+				'default'       => 1320,
+				'max'           => 1820,
+				'display_value' => 'text'
+			),
+		),
+    ) );
+
+
 	Redux::setSection( $opt_name, array(
 		'title'      => __( 'Header options', 'lift-theme-options' ),
 		'id'         => 'lift-theme-header-options',
@@ -33,6 +92,14 @@
 				),
 				'default'         => 'md'
             ),
+            array(
+				'id'       => 'lift-theme-header-offcanvas',
+                'type'     => 'switch',
+                'title'    => __( 'Header Offcanvas', 'lift-theme-options' ),
+                'default'  => 0,
+                'on'       => 'On',
+                'off'      => 'Off',
+            ),
 			array(
 				'id'       => 'lift-theme-header-fixed',
                 'type'     => 'switch',
@@ -49,10 +116,28 @@
                 'on'       => 'On',
                 'off'      => 'Off',
             ),
+            // TODO: set layout
+            array(
+				'id'       => 'lift-theme-header-search-type',
+                'type'     => 'select',
+                'title'    => __( 'Header Search Layout', 'lift-theme-options' ),
+                'required' => array(
+                    'lift-theme-header-search', '!=', '0',
+                 ),
+                 'options' => array(
+					'normal' => 'Normal', 
+					'toggle' => 'Toggle',
+					'float' => 'Float', 
+					'full' => 'Full Screen', 
+					), 
+				'default' => 'normal'
+            ),
 			array(
 				'id'       => 'lift-theme-header-search-align',
                 'type'     => 'button_set',
-				'required' => array( 'lift-theme-header-search', '!=', '0' ),
+				'required' => array(
+                    'lift-theme-header-search', '!=', '0',
+                 ),
 				'title'    => __( 'Header Search Align', 'lift-theme-options' ),
 				'options' => array(
 					'left' => 'Left', 
@@ -120,63 +205,6 @@
 	));
 
 	Redux::setSection( $opt_name, array(
-        'title' => __( 'Header layout', 'lift-theme-options' ),
-        'id'         => 'lift-theme-header-layout',
-        'subsection' => true,
-		'fields'     => array(
-			array(
-				'id'       => 'lift-theme-header-kind',
-                'type'     => 'image_select',
-                'title'    => __( 'Header Type <i style="color:red">(*)</i>', 'lift-theme-options' ),
-				'options'  => array(
-                    '1' => array(
-                        'img' => get_template_directory_uri() . '/admin/img/menu-left-aligned.png'
-                    ),
-                    '2' => array(
-                        'img' => get_template_directory_uri() . '/admin/img/centered-menu.png'
-                    ),
-                    '3' => array(
-                        'img' => get_template_directory_uri() . '/admin/img/centered-menu-under-logo.png'
-                    ),
-                    '4' => array(
-                        'img' => get_template_directory_uri() . '/admin/img/default-header.png'
-                    ),
-                ),
-				'default'  => '1'
-            ),
-			array(
-				'id'       => 'lift-theme-header-layout-style',
-                'type'     => 'switch',
-                'title'    => __( 'Containers', 'lift-theme-options' ),
-                'subtitle' => __( 'Containers are a fundamental building block of Bootstrap that contain, pad, and align your content within a given device or viewport.', 'lift-theme-options' ),
-                'default'  => 0,
-                'on'       => 'Fullwidth',
-                'off'      => 'Boxed',
-            ),
-			array(
-				'id'       => 'lift-theme-header-layout-size',
-                'type'     => 'switch',
-                'required' => array( 'lift-theme-header-layout-style', '=', '1' ),
-                'title'    => __( 'Max width container', 'lift-theme-options' ),
-                'default'  => 0,
-                'on'       => 'On',
-                'off'      => 'Off',
-            ),
-			array(
-				'id'       => 'lift-theme-header-layout-size-value',
-				'type'          => 'slider',
-                'required' => array( 'lift-theme-header-layout-size', '=', '1' ),
-				'title'         => __( 'Bootstrap comes with three different containers', 'lift-theme-options' ),
-				'min'           => 960,
-				'step'          => 20,
-				'default'       => 1320,
-				'max'           => 1820,
-				'display_value' => 'text'
-			),
-		),
-    ) );
-
-	Redux::setSection( $opt_name, array(
         'title'      => __( 'Header row', 'lift-theme-options' ),
         'id'         => 'lift-theme-header-row',
         'desc'       => __( 'For full documentation on this field, visit: ', 'lift-theme-options' ) . '<a href="//getbootstrap.com/docs/5.0/layout/gutters/" target="_blank">getbootstrap.com/docs/5.0/layout/gutters/</a>',
@@ -229,7 +257,7 @@
                 'id'       => 'lift-theme-header-style-bg-active',
                 'type'     => 'background',
 				'required' => array( 'lift-theme-header-fixed', '=', '1' ),
-				'output'   => array( '#header.active' ),
+				'output'   => array( '#header.active', '#header.toggle' , '#header .offcanvas' ),
                 'title'    => __( 'Header background active', 'lift-theme-options' ),
                 'subtitle' => __( 'Pick a header background active for the theme (default: #000).', 'lift-theme-options' ),
                 'default'  => '#000000',

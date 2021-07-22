@@ -21,6 +21,7 @@ $header_logo_mobile = $lift_theme['lift-theme-header-logo-mobile'];
 $header_logo_mobile_size = $lift_theme['lift-theme-header-logo-mobile-size'];
 $header_logo_tablet = $lift_theme['lift-theme-header-logo-tablet'];
 $header_logo_tablet_size = $lift_theme['lift-theme-header-logo-tablet-size'];
+$header_offcanvas = $lift_theme['lift-theme-header-offcanvas'];
 
 $logosrc = '';
 $logosize = '';
@@ -68,7 +69,11 @@ if($detect->isMobile() && !$detect->isTablet()) {
 			</a>
 		<?php endif; ?>
 	<?php endif; ?>
-    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#site-navigation" aria-controls="site-navigation" aria-expanded="false" aria-label="Toggle navigation">
+	<?php if ( isset($header_offcanvas) && ($header_offcanvas === '1' || $header_offcanvas == 1) ) : ?>
+		<button class="navbar-toggler collapsed navbar-offcanvas" type="button" data-bs-target="#site-navigation" aria-controls="site-navigation" aria-expanded="false" aria-label="Toggle navigation">
+	<?php else : ?>
+		<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#site-navigation" aria-controls="site-navigation" aria-expanded="false" aria-label="Toggle navigation">
+	<?php endif; ?>
 		<?php echo lift_get_icon_svg( 'ui', 'menu' ); ?>
 		<?php echo lift_get_icon_svg( 'ui', 'close' ); ?>
     </button>
