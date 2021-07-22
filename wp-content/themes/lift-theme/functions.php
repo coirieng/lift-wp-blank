@@ -52,4 +52,3 @@ require get_template_directory() . '/inc/block-patterns.php';
 
 // Block Styles.
 require get_template_directory() . '/inc/block-styles.php';
-

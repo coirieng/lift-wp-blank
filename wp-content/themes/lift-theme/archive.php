@@ -47,7 +47,7 @@ $archive_breadcrumb = $lift_theme['lift-theme-blog-style-archive-breadcrumb'];
 
 						<?php while ( have_posts() ) : ?>
 							<?php the_post(); ?>
-							<?php get_template_part( 'template-parts/content/content', get_theme_mod( 'display_excerpt_or_full_post', 'excerpt' ) ); ?>
+							<?php get_template_part( 'template-parts/content/content',  'excerpt' ); ?>
 						<?php endwhile; ?>
 
 						<?php lift_the_posts_navigation(); ?>

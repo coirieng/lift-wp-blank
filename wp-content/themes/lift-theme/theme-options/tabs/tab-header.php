@@ -225,6 +225,18 @@
 				'preview' => false,
 				'class' => 'lift-theme-admin-header-style lift-theme-admin-header-style-bg',
             ),
+            array(
+                'id'       => 'lift-theme-header-style-bg-active',
+                'type'     => 'background',
+				'required' => array( 'lift-theme-header-fixed', '=', '1' ),
+				'output'   => array( '#header.active' ),
+                'title'    => __( 'Header background active', 'lift-theme-options' ),
+                'subtitle' => __( 'Pick a header background active for the theme (default: #000).', 'lift-theme-options' ),
+                'default'  => '#000000',
+				'preview_media' => true,
+				'preview' => false,
+				'class' => 'lift-theme-admin-header-style lift-theme-admin-header-style-bg',
+            ),
 			array(
                 'id'       => 'lift-theme-header-style-border-top',
                 'type'     => 'border',

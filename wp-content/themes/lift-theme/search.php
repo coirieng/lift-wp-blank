@@ -56,10 +56,9 @@ if ( have_posts() ) {
 			<div class="container<?= isset($layout_style) && $layout_style === '1' ? '-fluid': ''?>">
 				<div class="row">
 					<div class="blog-content <?=isset($archive_sidebar) && $archive_sidebar ==='1' ? 'col-12' : $archive_sidebar_content_columns ?><?= isset($archive_sidebar_position) && $archive_sidebar_position === '1' ? ' order-xl-2': ' order-xl-1'?>">
-
 						<?php while ( have_posts() ) : ?>
 							<?php the_post(); ?>
-							<?php get_template_part( 'template-parts/content/content', get_theme_mod( 'display_excerpt_or_full_post', 'excerpt' ) ); ?>
+							<?php get_template_part( 'template-parts/content/content',  'excerpt' ); ?>
 						<?php endwhile; ?>
 
 						<?php lift_the_posts_navigation(); ?>	

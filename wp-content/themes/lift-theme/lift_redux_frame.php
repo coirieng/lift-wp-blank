@@ -12,7 +12,6 @@
 
 require_once 'vendor/scssphp/scssphp/scss.inc.php';
 require_once 'wp-content/plugins/redux-framework/ReduxCore/framework.php';
-require_once 'template-parts/template.php';
 require_once 'theme-options/app-config.php';
 require_once 'theme-options/required/class-tgm-plugin-activation.php';
 require_once 'theme-options/required/list.php';
