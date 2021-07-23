@@ -50,13 +50,13 @@ if(isset($lift_theme['lift-theme-header-row-spacing'])) {
 		<nav class="navbar navbar-expand<?=isset($header_menu_toggle) && $header_menu_toggle  !== '' ? '-'.$header_menu_toggle: '-md'?>">
 			<div class="menu-init container<?= isset($header_style) && $header_style === '1' ? '-fluid': ''?>">
 				
-				<?php if(isset($header_kind) && $header_kind === '1') :?>
+				<?php if(isset($header_kind) && ($header_kind === '1' || $header_kind == 1)) :?>
 					<?php get_template_part( 'template-parts/header/layout/layout-1' ); ?>
-				<?php elseif(isset($header_kind) && $header_kind === '2') :?>
+				<?php elseif(isset($header_kind) && ($header_kind === '2' || $header_kind == 2)) :?>
 					<?php get_template_part( 'template-parts/header/layout/layout-2' ); ?>
-				<?php elseif(isset($header_kind) && $header_kind === '3') :?>
+				<?php elseif(isset($header_kind) && ($header_kind === '3' || $header_kind == 3)) :?>
 					<?php get_template_part( 'template-parts/header/layout/layout-3' ); ?>
-				<?php elseif(isset($header_kind) && $header_kind === '4') :?>
+				<?php elseif(isset($header_kind) && ($header_kind === '4' || $header_kind == 4)) :?>
 					<?php get_template_part( 'template-parts/header/layout/layout-4' ); ?>
 				<?php endif ;?>
 

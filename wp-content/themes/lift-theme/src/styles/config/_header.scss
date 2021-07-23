@@ -102,6 +102,24 @@ header.site-header {
 				}
 			}
 		}
+		&.menu-offcanvas-all{
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			left: 100%;
+			width: 100%;
+			overflow-y: auto;
+			visibility: hidden;
+			transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+			// .menucanvas {
+			// 	display: flex;
+			// 	flex-direction: column;
+			// }
+			&.open {
+				visibility: visible;
+				transform: translateX(-100%);
+			}
+		}
 	}
 }
 header .navbar.navbar-expand-all {
@@ -203,6 +221,18 @@ header .navbar.navbar-expand-keep {
 					}
 				}
 			}
+		}
+		&.menu-offcanvas-keep {
+			display: flex!important;
+    		flex-basis: auto;
+			flex-grow: 1;
+			align-items: center;
+			// .menucanvas {
+			// 	flex-direction: row;
+			// 	display: flex;
+			// 	padding: 0;
+			// 	margin: 0;
+			// }
 		}
 	}
 }

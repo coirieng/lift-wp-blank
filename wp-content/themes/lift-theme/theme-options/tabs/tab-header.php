@@ -257,7 +257,7 @@
                 'id'       => 'lift-theme-header-style-bg-active',
                 'type'     => 'background',
 				'required' => array( 'lift-theme-header-fixed', '=', '1' ),
-				'output'   => array( '#header.active', '#header.toggle' , '#header .offcanvas' ),
+				'output'   => array( '#header.active', '#header.toggle' , '#header .primary-menu-container' ),
                 'title'    => __( 'Header background active', 'lift-theme-options' ),
                 'subtitle' => __( 'Pick a header background active for the theme (default: #000).', 'lift-theme-options' ),
                 'default'  => '#000000',
