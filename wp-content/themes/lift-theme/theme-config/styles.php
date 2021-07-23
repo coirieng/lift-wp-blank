@@ -33,8 +33,12 @@ function lift_styles() {
 	$header_style = $lift_theme['lift-theme-header-layout-style'];
 	$header_size = $lift_theme['lift-theme-header-layout-size'];
 	$header_size_value = $lift_theme['lift-theme-header-layout-size-value'];
+	$header_style_animation = $lift_theme['lift-theme-header-style-bg-animation'];
 	if($header_style && $header_size){
 		$header_css .= "#header.lift-header .header-wrapper{max-width: ".$header_size_value."px; margin: 0 auto; width: 100%}";
+	}
+	if($header_style_animation){
+		$header_css .= "#header.lift-header {transition: ease-in-out ".$header_style_animation."ms}";
 	}
 	// SEARCH HEADER
 	$header_search_align = $lift_theme['lift-theme-header-search-align'];

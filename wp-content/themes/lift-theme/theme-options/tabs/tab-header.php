@@ -116,7 +116,6 @@
                 'on'       => 'On',
                 'off'      => 'Off',
             ),
-            // TODO: set layout
             array(
 				'id'       => 'lift-theme-header-search-type',
                 'type'     => 'select',
@@ -257,7 +256,7 @@
                 'id'       => 'lift-theme-header-style-bg-active',
                 'type'     => 'background',
 				'required' => array( 'lift-theme-header-fixed', '=', '1' ),
-				'output'   => array( '#header.active', '#header.toggle' , '#header .primary-menu-container' ),
+				'output'   => array( '#header.active', '#header.toggle' , '#header .primary-menu-container.active' ),
                 'title'    => __( 'Header background active', 'lift-theme-options' ),
                 'subtitle' => __( 'Pick a header background active for the theme (default: #000).', 'lift-theme-options' ),
                 'default'  => '#000000',
@@ -265,6 +264,17 @@
 				'preview' => false,
 				'class' => 'lift-theme-admin-header-style lift-theme-admin-header-style-bg',
             ),
+            array(
+                'id'       => 'lift-theme-header-style-bg-animation',
+                'title'    => __( 'Header background animation', 'lift-theme-options' ),
+                'subtitle' => __( 'Pick a header background animation milliseconds (default: 400ms = 0.4s).', 'lift-theme-options' ),
+				'type'          => 'slider',
+				'min'           => 0,
+				'step'          => 100,
+				'default'       => 400,
+				'max'           => 3000,
+				'display_value' => 'text'
+			),
 			array(
                 'id'       => 'lift-theme-header-style-border-top',
                 'type'     => 'border',

@@ -20,6 +20,7 @@ $header_row = $lift_theme['lift-theme-header-row-option'];
 $header_menu_toggle = $lift_theme['lift-theme-header-menu-toggle'];
 $header_fixed = $lift_theme['lift-theme-header-fixed'];
 $header_kind = $lift_theme['lift-theme-header-kind'];
+$header_search_type = $lift_theme['lift-theme-header-search-type'];
 
 $build_header_spacing = '';
 if(isset($lift_theme['lift-theme-header-row-spacing'])) {
@@ -44,7 +45,7 @@ if(isset($lift_theme['lift-theme-header-row-spacing'])) {
 ?>
 
 <!-- LIFT HEADER -->
-<header id="header" class="lift-header <?php echo esc_attr( $wrapper_classes ); ?><?= isset($header_shadow) && $header_shadow !== '' ? ' '.$header_shadow: ' default'?><?=isset($header_fixed) &&$header_fixed === '1' ? ' fixed-top': ''?><?= isset($header_kind) ? ' menu-layout-'.$header_kind : ''?>" role="banner">
+<header id="header" class="lift-header <?php echo esc_attr( $wrapper_classes ); ?><?= isset($header_shadow) && $header_shadow !== '' ? ' '.$header_shadow: ' default'?><?=isset($header_fixed) &&$header_fixed === '1' ? ' fixed-top': ''?><?= isset($header_kind) ? ' menu-layout-'.$header_kind : ''?><?= isset($header_search_type) && $header_search_type !== '' ? ' search-'.$header_search_type: ' search-normal'?>" role="banner">
 
 	<div class="header-wrapper"<?= isset($header_row) && $header_row === '1' ? $build_header_spacing : ''?>>
 		<nav class="navbar navbar-expand<?=isset($header_menu_toggle) && $header_menu_toggle  !== '' ? '-'.$header_menu_toggle: '-md'?>">

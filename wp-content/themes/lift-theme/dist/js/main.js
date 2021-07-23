@@ -268,10 +268,26 @@ $("header.site-header .navbar-toggler:not(.navbar-offcanvas)").clickToggle(funct
     $(_this).parents('header').toggleClass('toggle', 0);
   }, 500);
 });
-$("header.site-header .navbar-toggler.navbar-offcanvas").on('click', function () {
-  $(this).toggleClass('collapsed');
-  $(this).parents('header').find('.primary-menu-container').toggleClass('open');
-});
+$("header.site-header .navbar-toggler.navbar-offcanvas").clickToggle(function () {
+  $(this).toggleClass('collapsed', 0);
+  $(this).parents('header').find('.primary-menu-container').toggleClass('open', 0);
+  $(this).parents('header').find('.primary-menu-container').addClass('active', 0);
+}, function () {
+  var _this2 = this;
+
+  $(this).toggleClass('collapsed', 0);
+  $(this).parents('header').find('.primary-menu-container').toggleClass('open', 0);
+
+  if (!$(this).parents('header').find('.primary-menu-container').hasClass('open')) {
+    setTimeout(function () {
+      $(_this2).parents('header').find('.primary-menu-container').removeClass('active', 0);
+    }, 500);
+  }
+}); // $("header.site-header .navbar-toggler.navbar-offcanvas").on('click', function () {
+// 	$(this).toggleClass('collapsed')
+// 	$(this).parents('header').find('.primary-menu-container').toggleClass('open')
+// });
+
 /**
  * File primary-navigation.js.
  *
