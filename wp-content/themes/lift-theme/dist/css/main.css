@@ -404,7 +404,8 @@ header .navbar.navbar-expand-all #site-navigation.primary-menu-container.menu-of
   width: 100%;
   overflow-y: auto;
   visibility: hidden;
-  transition: transform .3s ease-in-out, visibility .3s ease-in-out; }
+  transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+  z-index: 1000; }
   header .navbar.navbar-expand-all #site-navigation.primary-menu-container.menu-offcanvas-all.open {
     visibility: visible;
     transform: translateX(-100%); }
@@ -459,7 +460,8 @@ header .navbar.navbar-expand-keep #site-navigation.primary-menu-container.menu-o
   width: 100%;
   overflow-y: auto;
   visibility: hidden;
-  transition: transform .3s ease-in-out, visibility .3s ease-in-out; }
+  transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+  z-index: 1000; }
   header .navbar.navbar-expand-keep #site-navigation.primary-menu-container.menu-offcanvas-all.open {
     visibility: visible;
     transform: translateX(-100%); }
@@ -520,7 +522,8 @@ header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .prima
     width: 100%;
     overflow-y: auto;
     visibility: hidden;
-    transition: transform .3s ease-in-out, visibility .3s ease-in-out; }
+    transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+    z-index: 1000; }
     header .navbar.navbar-expand-sm #site-navigation.primary-menu-container.menu-offcanvas-all.open {
       visibility: visible;
       transform: translateX(-100%); }
@@ -532,7 +535,8 @@ header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .prima
     width: 100%;
     overflow-y: auto;
     visibility: hidden;
-    transition: transform .3s ease-in-out, visibility .3s ease-in-out; }
+    transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+    z-index: 1000; }
     header .navbar.navbar-expand-sm #site-navigation.primary-menu-container.menu-offcanvas-sm.open {
       visibility: visible;
       transform: translateX(-100%); } }
@@ -587,7 +591,8 @@ header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .prima
     width: 100%;
     overflow-y: auto;
     visibility: hidden;
-    transition: transform .3s ease-in-out, visibility .3s ease-in-out; }
+    transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+    z-index: 1000; }
     header .navbar.navbar-expand-md #site-navigation.primary-menu-container.menu-offcanvas-all.open {
       visibility: visible;
       transform: translateX(-100%); }
@@ -599,7 +604,8 @@ header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .prima
     width: 100%;
     overflow-y: auto;
     visibility: hidden;
-    transition: transform .3s ease-in-out, visibility .3s ease-in-out; }
+    transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+    z-index: 1000; }
     header .navbar.navbar-expand-md #site-navigation.primary-menu-container.menu-offcanvas-md.open {
       visibility: visible;
       transform: translateX(-100%); } }
@@ -654,7 +660,8 @@ header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .prima
     width: 100%;
     overflow-y: auto;
     visibility: hidden;
-    transition: transform .3s ease-in-out, visibility .3s ease-in-out; }
+    transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+    z-index: 1000; }
     header .navbar.navbar-expand-lg #site-navigation.primary-menu-container.menu-offcanvas-all.open {
       visibility: visible;
       transform: translateX(-100%); }
@@ -666,7 +673,8 @@ header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .prima
     width: 100%;
     overflow-y: auto;
     visibility: hidden;
-    transition: transform .3s ease-in-out, visibility .3s ease-in-out; }
+    transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+    z-index: 1000; }
     header .navbar.navbar-expand-lg #site-navigation.primary-menu-container.menu-offcanvas-lg.open {
       visibility: visible;
       transform: translateX(-100%); } }
@@ -721,7 +729,8 @@ header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .prima
     width: 100%;
     overflow-y: auto;
     visibility: hidden;
-    transition: transform .3s ease-in-out, visibility .3s ease-in-out; }
+    transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+    z-index: 1000; }
     header .navbar.navbar-expand-xl #site-navigation.primary-menu-container.menu-offcanvas-all.open {
       visibility: visible;
       transform: translateX(-100%); }
@@ -733,7 +742,8 @@ header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .prima
     width: 100%;
     overflow-y: auto;
     visibility: hidden;
-    transition: transform .3s ease-in-out, visibility .3s ease-in-out; }
+    transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+    z-index: 1000; }
     header .navbar.navbar-expand-xl #site-navigation.primary-menu-container.menu-offcanvas-xl.open {
       visibility: visible;
       transform: translateX(-100%); } }
@@ -788,7 +798,8 @@ header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .prima
     width: 100%;
     overflow-y: auto;
     visibility: hidden;
-    transition: transform .3s ease-in-out, visibility .3s ease-in-out; }
+    transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+    z-index: 1000; }
     header .navbar.navbar-expand-xxl #site-navigation.primary-menu-container.menu-offcanvas-all.open {
       visibility: visible;
       transform: translateX(-100%); }
@@ -800,7 +811,8 @@ header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .prima
     width: 100%;
     overflow-y: auto;
     visibility: hidden;
-    transition: transform .3s ease-in-out, visibility .3s ease-in-out; }
+    transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+    z-index: 1000; }
     header .navbar.navbar-expand-xxl #site-navigation.primary-menu-container.menu-offcanvas-xxl.open {
       visibility: visible;
       transform: translateX(-100%); } }

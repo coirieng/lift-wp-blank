@@ -266,28 +266,25 @@ $("header.site-header .navbar-toggler:not(.navbar-offcanvas)").clickToggle(funct
 
   setTimeout(function () {
     $(_this).parents('header').toggleClass('toggle', 0);
-  }, 500);
-});
-$("header.site-header .navbar-toggler.navbar-offcanvas").clickToggle(function () {
-  $(this).toggleClass('collapsed', 0);
-  $(this).parents('header').find('.primary-menu-container').toggleClass('open', 0);
-  $(this).parents('header').find('.primary-menu-container').addClass('active', 0);
-}, function () {
-  var _this2 = this;
-
-  $(this).toggleClass('collapsed', 0);
-  $(this).parents('header').find('.primary-menu-container').toggleClass('open', 0);
-
-  if (!$(this).parents('header').find('.primary-menu-container').hasClass('open')) {
-    setTimeout(function () {
-      $(_this2).parents('header').find('.primary-menu-container').removeClass('active', 0);
-    }, 500);
-  }
-}); // $("header.site-header .navbar-toggler.navbar-offcanvas").on('click', function () {
-// 	$(this).toggleClass('collapsed')
-// 	$(this).parents('header').find('.primary-menu-container').toggleClass('open')
+  }, 300);
+}); // $("header.site-header .navbar-toggler.navbar-offcanvas").clickToggle(function () {
+// 	$(this).toggleClass('collapsed', 0)
+// 	$(this).parents('header').find('.primary-menu-container').toggleClass('open', 0)
+// 	$(this).parents('header').find('.primary-menu-container').addClass('active', 0)
+// },function () {
+//     $(this).toggleClass('collapsed', 0)
+//     $(this).parents('header').find('.primary-menu-container').toggleClass('open', 0)
+//     if(!$(this).parents('header').find('.primary-menu-container').hasClass('open')){
+//         setTimeout(() => {
+//             $(this).parents('header').find('.primary-menu-container').removeClass('active', 0)
+//         }, 500);
+//     }
 // });
 
+$("header.site-header .navbar-toggler.navbar-offcanvas").on('click', function () {
+  $(this).toggleClass('collapsed');
+  $(this).parents('header').find('.primary-menu-container').toggleClass('open');
+});
 /**
  * File primary-navigation.js.
  *
@@ -583,9 +580,9 @@ var LIFT_APP = {
     var st = $(window).scrollTop();
 
     if (st > 0) {
-      $('header#header').addClass('active');
+      $('header#header.fixed-top').addClass('active');
     } else {
-      $('header#header').removeClass('active');
+      $('header#header.fixed-top').removeClass('active');
     }
   },
   lift_canvas_header: function lift_canvas_header() {

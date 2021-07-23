@@ -29,9 +29,9 @@ var LIFT_APP = {
 	lift_active_header: function lift_active_header() {
 		var st = $(window).scrollTop();
 		if (st > 0) {
-			$('header#header').addClass('active')
+			$('header#header.fixed-top').addClass('active')
 		} else {
-			$('header#header').removeClass('active')
+			$('header#header.fixed-top').removeClass('active')
 		}
 	},
 	lift_canvas_header: function lift_canvas_header() {

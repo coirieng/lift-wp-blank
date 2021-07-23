@@ -52,6 +52,7 @@ header.site-header {
 			overflow-y: auto;
 			visibility: hidden;
 			transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+			z-index: 1000;
 			// .menucanvas {
 			// 	display: flex;
 			// 	flex-direction: column;
