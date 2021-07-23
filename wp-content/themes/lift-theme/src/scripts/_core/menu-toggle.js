@@ -22,5 +22,5 @@ $("header.site-header .navbar-toggler:not(.navbar-offcanvas)").clickToggle(funct
 
 $("header.site-header .navbar-toggler.navbar-offcanvas").on('click', function () {
 	$(this).toggleClass('collapsed')
-	$(this).parents('header').find('.menu-offcanvas-all').toggleClass('open')
+	$(this).parents('header').find('.primary-menu-container').toggleClass('open')
 });

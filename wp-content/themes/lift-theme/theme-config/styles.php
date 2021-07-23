@@ -51,10 +51,32 @@ function lift_styles() {
 	$content_content = $lift_theme['lift-theme-layout-content-option'];
 	$content_content_value = $lift_theme['lift-theme-layout-content-spacing'];
 	if($content_row && $content_row_value) {
-		$content_css .= '#content.lift-content .lift_section{padding-top:'.$content_row_value['padding-top'].';padding-bottom:'.$content_row_value['padding-bottom'].';padding-left:'.$content_row_value['padding-left'].';padding-right:'.$content_row_value['padding-right'].';}';
+		if($content_row_value['padding-top']) {
+			$content_css .= '#content.lift-content .lift_section{padding-top: '.$content_row_value['padding-top'].';}';
+		}
+		if($content_row_value['padding-bottom']) {
+			$content_css .= '#content.lift-content .lift_section{padding-bottom: '.$content_row_value['padding-bottom'].';}';
+		}
+		if($content_row_value['padding-left']) {
+			$content_css .= '#content.lift-content .lift_section{padding-left: '.$content_row_value['padding-left'].';}';
+		}
+		if($content_row_value['padding-right']) {
+			$content_css .= '#content.lift-content .lift_section{padding-right: '.$content_row_value['padding-right'].';}';
+		}
 	}
 	if($content_content && $content_content_value) {
-		$content_css .= '#content.lift-content .content-wrapper{padding-top:'.$content_content_value['padding-top'].';padding-bottom:'.$content_content_value['padding-bottom'].';padding-left:'.$content_content_value['padding-left'].';padding-right:'.$content_content_value['padding-right'].';}';
+		if($content_content_value['padding-top']) {
+			$content_css .= '#content.lift-content .content-wrapper{padding-top: '.$content_content_value['padding-top'].';}';
+		}
+		if($content_content_value['padding-bottom']) {
+			$content_css .= '#content.lift-content .content-wrapper{padding-bottom: '.$content_content_value['padding-bottom'].';}';
+		}
+		if($content_content_value['padding-left']) {
+			$content_css .= '#content.lift-content .content-wrapper{padding-left: '.$content_content_value['padding-left'].';}';
+		}
+		if($content_content_value['padding-right']) {
+			$content_css .= '#content.lift-content .content-wrapper{padding-right: '.$content_content_value['padding-right'].';}';
+		}
 	}
 	// BLOG
 	$blog_columns_padding = $lift_theme['lift-theme-blog-style-content-columns-padding'];

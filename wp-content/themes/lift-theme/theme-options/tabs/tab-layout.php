@@ -97,7 +97,7 @@
                 'units'          => array( 'em', 'rem', 'px', '%' ),      // You can specify a unit value. Possible: px, em, %
                 'units_extended' => 'true',    // Allow users to select any type of unit
                 'default'        => array(
-                    'units'     => 'em'
+                    'units'     => 'em',
                 )
             ),
 		)
