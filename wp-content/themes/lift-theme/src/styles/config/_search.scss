@@ -1,8 +1,188 @@
+
+@mixin seachalign($key, $style:"normal") {
+	&.search-#{$style} {
+		&.search-right{
+			.navbar.navbar-expand-#{$key} {
+				.search-form {
+					@include media-breakpoint-up($key) {
+						margin-left: auto;
+					}
+				}
+			}
+		}
+	}
+	@if $style == "toggle" {
+		&.search-#{$style} {
+			.navbar.navbar-expand-#{$key} {
+				.search-form {
+					@include media-breakpoint-up($key) {
+						position: relative;
+						.input-group {
+							&:after {
+								display: none;
+								content: '';
+								height: 2px;
+								width: 0;
+								position: absolute;
+								bottom: 0;
+								left: 0;
+							}
+						}
+						.search-field,
+						.search-submit {
+							padding-left: 0;
+							display: none;
+							border: 0;
+							background: none;
+							&:focus {
+								outline: 0;
+								box-shadow: none;
+							}
+						}
+						.search-submit-toggle {
+							display: block;
+							border: none;
+							margin: 0;
+							padding: 0;
+							width: auto;
+							overflow: visible;
+							background: transparent;
+							color: inherit;
+							font: inherit;
+							line-height: normal;
+							-webkit-font-smoothing: inherit;
+							-moz-osx-font-smoothing: inherit;
+							-webkit-appearance: none;
+							&::-moz-focus-inner {
+								border: 0;
+								padding: 0;
+							}
+						}
+						&.active {
+							.input-group {
+								&:after {
+									display: block;
+									width: 100%;
+									background-color: #333;
+								}
+							}
+							.search-field {
+								display: block;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	@if $style == "float" {
+		&.search-#{$style} {
+			.navbar.navbar-expand-#{$key} {
+				.search-form {
+					@include media-breakpoint-up($key) {
+						.search-field,
+						.search-submit {
+							display: none;
+							border: 0;
+							&:focus {
+								outline: 0;
+								box-shadow: none;
+							}
+						}
+						.search-submit-toggle {
+							display: block;
+							border: none;
+							margin: 0;
+							padding: 0;
+							width: auto;
+							overflow: visible;
+							background: transparent;
+							color: inherit;
+							font: inherit;
+							line-height: normal;
+							-webkit-font-smoothing: inherit;
+							-moz-osx-font-smoothing: inherit;
+							-webkit-appearance: none;
+							&::-moz-focus-inner {
+								border: 0;
+								padding: 0;
+							}
+						}
+						&.active {
+							.search-field {
+								display: block;
+								position: absolute;
+								top: 100%;
+								right: 0;
+								min-width: 200px;
+								border-radius: 0;
+								border: 1px solid #ccc;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	@if $style == "full" {
+		&.search-#{$style} {
+			.navbar.navbar-expand-#{$key} {
+				.search-form {
+					@include media-breakpoint-up($key) {
+						.search-field,
+						.search-submit {
+							display: none;
+							border: 0;
+							&:focus {
+								outline: 0;
+								box-shadow: none;
+							}
+						}
+						.search-submit-toggle {
+							display: block;
+							border: none;
+							margin: 0;
+							padding: 0;
+							width: auto;
+							overflow: visible;
+							background: transparent;
+							color: inherit;
+							font: inherit;
+							line-height: normal;
+							-webkit-font-smoothing: inherit;
+							-moz-osx-font-smoothing: inherit;
+							-webkit-appearance: none;
+							&::-moz-focus-inner {
+								border: 0;
+								padding: 0;
+							}
+						}
+						&.active {
+							.search-field {
+								display: block;
+								position: absolute;
+								top: 100%;
+								right: 0;
+								min-width: 200px;
+								border-radius: 0;
+								border: 1px solid #ccc;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 #header.site-header {
 	.search-form {
 		align-items: center;
 		label {
 			margin-right: 5px;
+		}
+		.search-submit-toggle {
+			display: none;
 		}
 		&.no-header-label {
 			label {
@@ -40,6 +220,38 @@
 			}
 		}
 	}
+	&.search-full,
+	&.search-float,
+	&.search-normal,
+	&.search-toggle {
+		&.search-right{
+			.navbar.navbar-expand-keep {
+				.search-form {
+					margin-left: auto;
+				}
+			}
+		}
+	}
+	@include seachalign(sm,normal);
+	@include seachalign(md,normal);
+	@include seachalign(lg,normal);
+	@include seachalign(xl,normal);
+	@include seachalign(xxl,normal);
+	@include seachalign(sm,toggle);
+	@include seachalign(md,toggle);
+	@include seachalign(lg,toggle);
+	@include seachalign(xl,toggle);
+	@include seachalign(xxl,toggle);
+	@include seachalign(sm,float);
+	@include seachalign(md,float);
+	@include seachalign(lg,float);
+	@include seachalign(xl,float);
+	@include seachalign(xxl,float);
+	@include seachalign(sm,full);
+	@include seachalign(md,full);
+	@include seachalign(lg,full);
+	@include seachalign(xl,full);
+	@include seachalign(xxl,full);
 }
 
 #footer.lift-footer {

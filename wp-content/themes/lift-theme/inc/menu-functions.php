@@ -37,7 +37,7 @@ function lift_add_sub_menu_toggle( $output, $item, $depth, $args ) {
 	if ( in_array( 'menu-item-has-children', $item->classes, true ) ) {
 
 		// Add toggle button.
-		$output .= '<button class="btn sub-menu-toggle menu-toggle" aria-expanded="false" onClick="___ExpandSubMenu(this)">';
+		$output .= '<button class="sub-menu-toggle menu-toggle" aria-expanded="false" onClick="___ExpandSubMenu(this)">';
 		$output .= '<span class="icon-plus">' . lift_get_icon_svg( 'ui', 'plus', 18 ) . '</span>';
 		$output .= '<span class="icon-minus">' . lift_get_icon_svg( 'ui', 'minus', 18 ) . '</span>';
 		$output .= '<span class="screen-reader-text">' . esc_html__( 'Open menu', 'wp-lift-theme' ) . '</span>';

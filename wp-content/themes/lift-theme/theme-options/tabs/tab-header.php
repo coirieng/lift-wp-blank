@@ -94,6 +94,9 @@
             ),
             array(
 				'id'       => 'lift-theme-header-offcanvas',
+                'required' => array(
+                    'lift-theme-header-menu-toggle', '!=', 'keep',
+                ),
                 'type'     => 'switch',
                 'title'    => __( 'Header Offcanvas', 'lift-theme-options' ),
                 'default'  => 0,
@@ -268,7 +271,7 @@
                 'id'       => 'lift-theme-header-style-bg-canvas',
                 'type'     => 'background',
 				'required' => array( 'lift-theme-header-offcanvas', '=', '1' ),
-				'output'   => array( '#header .primary-menu-container' ),
+				'output'   => array( '#header.canvased .primary-menu-container' ),
                 'title'    => __( 'Header background canvas', 'lift-theme-options' ),
                 'subtitle' => __( 'Pick a header background canvas for the theme (default: #000).', 'lift-theme-options' ),
                 'default'  => '#000000',

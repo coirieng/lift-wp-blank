@@ -14,15 +14,22 @@
 // HEADER CUSTOM CSS
 header.site-header {
 	.navbar-toggler {
-		background-color: var(--lift-theme-main);
+		font-weight: 400;
+		line-height: 1.5;
+		text-align: center;
+		text-decoration: none;
+		vertical-align: middle;
+		cursor: pointer;
+		user-select: none;
+		font-size: 1rem;
 		&:focus,
 		&:active {
 			outline: 0;
 			box-shadow: none;
 		}
 		svg {
-			width: 30px;
-			height: 30px;
+			width: 28px;
+			height: 28px;
 		}
 		svg:nth-child(1) {
 			display: none;
@@ -53,13 +60,14 @@ header.site-header {
 			visibility: hidden;
 			transition: transform .3s ease-in-out, visibility .3s ease-in-out;
 			z-index: 1000;
-			// .menucanvas {
-			// 	display: flex;
-			// 	flex-direction: column;
-			// }
 			&.open {
 				visibility: visible;
 				transform: translateX(-100%);
+			}
+			.container-fluid,
+			.container {
+				display: flex;
+				flex-direction: column;
 			}
 		}
 	}
@@ -94,7 +102,22 @@ header.site-header {
 					justify-content: center;
 					align-items: center;
 					display: flex;
-					width: 3rem;
+					width: auto;
+					border: none;
+					margin: 0;
+					padding: 0;
+					overflow: visible;
+					background: transparent;
+					color: inherit;
+					font: inherit;
+					line-height: normal;
+					-webkit-font-smoothing: inherit;
+					-moz-osx-font-smoothing: inherit;
+					-webkit-appearance: none;
+					&::-moz-focus-inner {
+						border: 0;
+						padding: 0;
+					}
 					.icon-plus {
 						display: flex;
 					}
@@ -129,10 +152,10 @@ header.site-header {
 	}
 	@include menucanvas(all);
 }
-header .navbar.navbar-expand-all {
+header#header .navbar.navbar-expand-all {
 	@include createmenu;
 }
-header .navbar.navbar-expand-keep {
+header#header .navbar.navbar-expand-keep {
 	@include createmenu;
 	#site-navigation.primary-menu-container {
 		.primary-navigation {
@@ -146,31 +169,31 @@ header .navbar.navbar-expand-keep {
 }
 
 @include media-breakpoint-down(sm) {
-	header .navbar.navbar-expand-sm {
+	header#header .navbar.navbar-expand-sm {
 		@include createmenu;
 		@include menucanvas(sm);
 	}
 }
 @include media-breakpoint-down(md) {
-	header .navbar.navbar-expand-md {
+	header#header .navbar.navbar-expand-md {
 		@include createmenu;
 		@include menucanvas(md);
 	}
 }
 @include media-breakpoint-down(lg) {
-	header .navbar.navbar-expand-lg {
+	header#header .navbar.navbar-expand-lg {
 		@include createmenu;
 		@include menucanvas(lg);
 	}
 }
 @include media-breakpoint-down(xl) {
-	header .navbar.navbar-expand-xl {
+	header#header .navbar.navbar-expand-xl {
 		@include createmenu;
 		@include menucanvas(xl);
 	}
 }
 @include media-breakpoint-down(xxl) {
-	header .navbar.navbar-expand-xxl {
+	header#header .navbar.navbar-expand-xxl {
 		@include createmenu;
 		@include menucanvas(xxl);
 	}
@@ -234,94 +257,72 @@ header .navbar.navbar-expand-keep {
 				}
 			}
 		}
+		
+	}
+}
+
+@mixin menutogglecanvas($key) {
+	#site-navigation.primary-menu-container {
+		&.menu-offcanvas-#{$key}{
+			background-color: transparent;
+			width: 100%;
+			.container-fluid,
+			.container {
+				flex-direction: row;
+				display: flex;
+				padding: 0;
+				margin: 0;
+			}
+		}
 		&.menu-offcanvas-keep {
 			display: flex!important;
     		flex-basis: auto;
 			flex-grow: 1;
 			align-items: center;
-			// .menucanvas {
-			// 	flex-direction: row;
-			// 	display: flex;
-			// 	padding: 0;
-			// 	margin: 0;
-			// }
+			width: 100%;
+			.container-fluid,
+			.container {
+				flex-direction: row;
+				display: flex;
+				padding: 0;
+				margin: 0;
+			}
 		}
 	}
 }
-header .navbar.navbar-expand-keep {
+
+
+header#header .navbar.navbar-expand-keep {
 	@include createmenutoggle;
+	@include menutogglecanvas(keep);
 }
 @include media-breakpoint-up(sm) {
-	header .navbar.navbar-expand-sm {
+	header#header .navbar.navbar-expand-sm {
 		@include createmenutoggle;
+		@include menutogglecanvas(sm);
 	}
 }
 @include media-breakpoint-up(md) {
-	header .navbar.navbar-expand-md {
+	header#header .navbar.navbar-expand-md {
 		@include createmenutoggle;
+		@include menutogglecanvas(md);
 	}
 }
 @include media-breakpoint-up(lg) {
-	header .navbar.navbar-expand-lg {
+	header#header .navbar.navbar-expand-lg {
 		@include createmenutoggle;
+		@include menutogglecanvas(lg);
 	}
 }
 @include media-breakpoint-up(xl) {
-	header .navbar.navbar-expand-xl {
+	header#header .navbar.navbar-expand-xl {
 		@include createmenutoggle;
+		@include menutogglecanvas(xl);
 	}
 }
 @include media-breakpoint-up(xxl) {
-	header .navbar.navbar-expand-xxl {
+	header#header .navbar.navbar-expand-xxl {
 		@include createmenutoggle;
-	}
-}
-
-@mixin menulayout () {
-	.navbar-brand {
-		display: block;
-		margin-right: 0;
-	}
-	.menu-init {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	}
-	#site-navigation {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	}
-}
-
-#header.site-header{
-	&.menu-layout-3 {
-		.navbar  {
-			&.navbar-expand-sm {
-				@include media-breakpoint-up(sm) {
-					@include menulayout()
-				}
-			}
-			&.navbar-expand-md {
-				@include media-breakpoint-up(md) {
-					@include menulayout()
-				}
-			}
-			&.navbar-expand-lg {
-				@include media-breakpoint-up(lg) {
-					@include menulayout()
-				}
-			}
-			&.navbar-expand-xl {
-				@include media-breakpoint-up(xl) {
-					@include menulayout()
-				}
-			}
-			&.navbar-expand-xxl {
-				@include media-breakpoint-up(xxl) {
-					@include menulayout()
-				}
-			}
-		}
+		@include menutogglecanvas(xxl);
 	}
 }
