@@ -147,6 +147,14 @@ header.site-header {
 						box-shadow: none;
 					}
 				}
+				// TODO: read this one again 
+				// &.menu-hover {
+				// 	.menu-item.menu-item-has-children {
+				// 		.sub-menu {
+				// 			display: block;
+				// 		}
+				// 	}
+				// }
 			}
 		}
 	}
@@ -257,6 +265,14 @@ header#header .navbar.navbar-expand-keep {
 					}
 					&:focus,
 					&:active {
+					}
+				}
+				// TODO: read this one again 
+				&.menu-hover {
+					&.menu-item.menu-item-has-children {
+						.sub-menu {
+							display: block;
+						}
 					}
 				}
 			}
