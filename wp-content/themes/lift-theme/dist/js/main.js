@@ -1,5 +1,8 @@
 "use strict";
 
+/*
+This function apply for toggle click on the menu
+*/
 (function ($) {
   $.fn.clickToggle = function (func1, func2) {
     var funcs = [func1, func2];
@@ -14,17 +17,7 @@
   };
 })(jQuery);
 /**
- * File primary-navigation.js.
- *
- * Required to open and close the mobile navigation.
- */
-
-/**
- * Toggle an attribute's value
- *
- * @param {Element} el - The element.
- * @param {boolean} withListeners - Whether we want to add/remove listeners or not.
- * @since 2021
+ * Back to top button
  */
 
 
@@ -36,7 +29,10 @@ $("body, html").scroll(function () {
   } else {
     $('#backtotop').removeClass('active');
   }
-}); // Select all links with hashes
+});
+/**
+ * Animate the back to top button and anchor link
+ */
 
 $('a[href*="#"]') // Remove links that don't actually link to anything
 .not('[href="#"]').not('[href="#0"]').click(function (event) {
@@ -259,12 +255,20 @@ $('a[href*="#"]') // Remove links that don't actually link to anything
     }
   };
 })("LIFTReady", window);
+/*
+* Button Search active/deactive
+*/
+
 
 $("header.site-header .search-submit-toggle").clickToggle(function () {
   $(this).parents('.search-form').toggleClass('active');
 }, function () {
   $(this).parents('.search-form').toggleClass('active');
 });
+/*
+* Button Close active/deactive
+*/
+
 $("header.site-header .search-submit-close").clickToggle(function () {
   $(this).parents('.search-form').toggleClass('active');
   $(this).parents('#header').toggleClass('search-active');
@@ -272,11 +276,19 @@ $("header.site-header .search-submit-close").clickToggle(function () {
   $(this).parents('.search-form').toggleClass('active');
   $(this).parents('#header').toggleClass('search-active');
 });
+/*
+* Menu Toggle
+*/
+
 $("header.site-header .navbar-toggler:not(.navbar-offcanvas)").clickToggle(function () {
   $(this).parents('header').toggleClass('toggle', 0);
 }, function () {
   $(this).parents('header').toggleClass('toggle', 0);
 });
+/*
+* Menu Offcanvas
+*/
+
 $("header.site-header .navbar-toggler.navbar-offcanvas").clickToggle(function () {
   $(this).toggleClass('collapsed');
   $(this).parents('header').find('.primary-menu-container').toggleClass('open');
@@ -546,6 +558,7 @@ window.onresize = LIFT___ResponsiveEmbeds;
 })();
 
 var LIFT_APP = {
+  // Break points
   xs: 0,
   sm: 576,
   md: 768,
@@ -556,6 +569,7 @@ var LIFT_APP = {
     $('header.site-header .menu-offcanvas-' + e).removeAttr('style');
   },
   lift_gen_canvas_menu: function lift_gen_canvas_menu(e) {
+    // Off canvas menu toggle
     var getHeaderNormal = $('header#header').outerHeight(true);
 
     if ($('header#header .navbar').hasClass('navbar-expand-' + e)) {
@@ -567,6 +581,7 @@ var LIFT_APP = {
     }
   },
   lift_fixed_header: function lift_fixed_header() {
+    // Fixed header will be add padding to the html element
     var getHeader = $('header#header.fixed-top').outerHeight(true);
 
     if (getHeader) {
@@ -576,12 +591,14 @@ var LIFT_APP = {
     }
   },
   lift_toggle_ofcanvas: function lift_toggle_ofcanvas() {
+    // When toggle menu scrolled
     if ($('header#header:not(.fixed-top)')) {
       $('header#header .navbar-toggler.navbar-offcanvas').addClass('collapsed');
       $('header#header .primary-menu-container').removeClass('open');
     }
   },
   lift_active_header: function lift_active_header() {
+    // When window is scrolled
     var st = $(window).scrollTop();
 
     if (st > 0) {

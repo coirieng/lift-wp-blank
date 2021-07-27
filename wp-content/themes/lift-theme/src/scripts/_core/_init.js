@@ -1,3 +1,6 @@
+/*
+This function apply for toggle click on the menu
+*/
 (function($) {
     $.fn.clickToggle = function(func1, func2) {
         var funcs = [func1, func2];

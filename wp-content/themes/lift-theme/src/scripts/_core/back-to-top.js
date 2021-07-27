@@ -1,15 +1,5 @@
 /**
- * File primary-navigation.js.
- *
- * Required to open and close the mobile navigation.
- */
-
-/**
- * Toggle an attribute's value
- *
- * @param {Element} el - The element.
- * @param {boolean} withListeners - Whether we want to add/remove listeners or not.
- * @since 2021
+ * Back to top button
  */
 
 $("body, html").scroll(function () {
@@ -21,7 +11,9 @@ $("body, html").scroll(function () {
 	}
 });
 
-// Select all links with hashes
+/**
+ * Animate the back to top button and anchor link
+ */
 $('a[href*="#"]')
   // Remove links that don't actually link to anything
   .not('[href="#"]')

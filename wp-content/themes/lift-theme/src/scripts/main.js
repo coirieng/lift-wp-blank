@@ -1,4 +1,5 @@
 var LIFT_APP = {
+	// Break points
 	xs: 0,
 	sm: 576,
 	md: 768,
@@ -9,6 +10,7 @@ var LIFT_APP = {
 		$('header.site-header .menu-offcanvas-'+e).removeAttr('style')
 	},
 	lift_gen_canvas_menu: function lift_gen_canvas_menu(e) {
+		// Off canvas menu toggle
 		var getHeaderNormal = $('header#header').outerHeight(true)
 		if($('header#header .navbar').hasClass('navbar-expand-'+e)){
 			$('header.site-header .menu-offcanvas-'+e).css({
@@ -19,6 +21,7 @@ var LIFT_APP = {
 		}
 	},
 	lift_fixed_header: function lift_fixed_header() {
+		// Fixed header will be add padding to the html element
 		var getHeader = $('header#header.fixed-top').outerHeight(true)
 		if (getHeader) {
 			$('html').css({
@@ -27,12 +30,14 @@ var LIFT_APP = {
 		}
 	},
 	lift_toggle_ofcanvas: function lift_toggle_ofcanvas() {
+		// When toggle menu scrolled
 		if($('header#header:not(.fixed-top)')) {
 			$('header#header .navbar-toggler.navbar-offcanvas').addClass('collapsed')
 			$('header#header .primary-menu-container').removeClass('open')
 		}
 	},
 	lift_active_header: function lift_active_header() {
+		// When window is scrolled
 		var st = $(window).scrollTop();
 		if (st > 0) {
 			$('header#header.fixed-top').addClass('active')

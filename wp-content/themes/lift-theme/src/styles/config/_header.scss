@@ -199,6 +199,10 @@ header#header .navbar.navbar-expand-keep {
 	}
 }
 
+//////////////////////////////////////////// 
+// MENU CANVAS 
+//////////////////////////////////////////// 
+
 @mixin createmenutoggle() {
 	#site-navigation.primary-menu-container {
 		.primary-navigation {
@@ -290,7 +294,6 @@ header#header .navbar.navbar-expand-keep {
 		}
 	}
 }
-
 
 header#header .navbar.navbar-expand-keep {
 	@include createmenutoggle;
