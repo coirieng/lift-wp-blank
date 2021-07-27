@@ -575,11 +575,18 @@ var LIFT_APP = {
       });
     }
   },
+  lift_toggle_ofcanvas: function lift_toggle_ofcanvas() {
+    if ($('header#header:not(.fixed-top)')) {
+      $('header#header .navbar-toggler.navbar-offcanvas').addClass('collapsed');
+      $('header#header .primary-menu-container').removeClass('open');
+    }
+  },
   lift_active_header: function lift_active_header() {
     var st = $(window).scrollTop();
 
     if (st > 0) {
       $('header#header.fixed-top').addClass('active');
+      LIFT_APP.lift_toggle_ofcanvas();
     } else {
       $('header#header.fixed-top').removeClass('active');
     }
