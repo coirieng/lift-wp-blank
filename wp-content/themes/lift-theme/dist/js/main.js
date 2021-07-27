@@ -265,6 +265,13 @@ $("header.site-header .search-submit-toggle").clickToggle(function () {
 }, function () {
   $(this).parents('.search-form').toggleClass('active');
 });
+$("header.site-header .search-submit-close").clickToggle(function () {
+  $(this).parents('.search-form').toggleClass('active');
+  $(this).parents('#header').toggleClass('search-active');
+}, function () {
+  $(this).parents('.search-form').toggleClass('active');
+  $(this).parents('#header').toggleClass('search-active');
+});
 $("header.site-header .navbar-toggler:not(.navbar-offcanvas)").clickToggle(function () {
   $(this).parents('header').toggleClass('toggle', 0);
 }, function () {
