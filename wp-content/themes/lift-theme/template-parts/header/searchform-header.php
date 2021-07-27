@@ -17,12 +17,12 @@ $lift_theme_unique_id = wp_unique_id( 'search-form-' );
 $lift_theme_aria_label = ! empty( $args['aria_label'] ) ? 'aria-label="' . esc_attr( $args['aria_label'] ) . '"' : '';
 
 global $lift_theme;
-$header_value['search_label'] = $lift_theme['lift-theme-search-layout-label'];
-$header_value['search_icon'] = $lift_theme['lift-theme-search-layout-icon'];
-$header_value['search_text'] = $lift_theme['lift-theme-search-layout-text'];
-$header_value['search_placeholder'] = $lift_theme['lift-theme-search-layout-placeholder'];
-$header_value['search_placeholder_value'] = $lift_theme['lift-theme-search-layout-placeholder-value'];
-$header_value['search_text_value'] = $lift_theme['lift-theme-search-layout-text-value'];
+$header_value['search_label'] = $lift_theme['lift-theme-search-header-layout-label'];
+$header_value['search_icon'] = $lift_theme['lift-theme-search-header-layout-icon'];
+$header_value['search_text'] = $lift_theme['lift-theme-search-header-layout-text'];
+$header_value['search_placeholder'] = $lift_theme['lift-theme-search-header-layout-placeholder'];
+$header_value['search_placeholder_value'] = $lift_theme['lift-theme-search-header-layout-placeholder-value'];
+$header_value['search_text_value'] = $lift_theme['lift-theme-search-header-layout-text-value'];
 
 $search_value = '';
 $placeholder_value = '';
@@ -47,6 +47,7 @@ if(isset($header_value['search_placeholder']) && $header_value['search_placehold
 		<input type="hidden" name="post_type[]" value="magazine" />
 		<input type="hidden" name="post_type[]" value="ebook" />
 		<input type="hidden" name="post_type[]" value="pdf" /> -->
+		<button type="button" class="search-submit-toggle"><i class="fas fa-search"></i></button>
 		<button type="submit" class="btn btn-primary search-submit"><span><?php echo esc_attr_x( 'Search', 'submit button', 'wp-lift-theme' ); ?></span><i class="fas fa-search"></i></button>
 		
 		<!-- <input type="submit" class="btn btn-primary search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button', 'wp-lift-theme' ); ?>" /> -->

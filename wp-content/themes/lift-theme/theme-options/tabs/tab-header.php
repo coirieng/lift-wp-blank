@@ -112,54 +112,6 @@
                 'off'      => 'Off',
             ),
 			array(
-				'id'       => 'lift-theme-header-search',
-                'type'     => 'switch',
-                'title'    => __( 'Header Search', 'lift-theme-options' ),
-                'default'  => 0,
-                'on'       => 'On',
-                'off'      => 'Off',
-            ),
-            array(
-				'id'       => 'lift-theme-header-search-type',
-                'type'     => 'select',
-                'title'    => __( 'Header Search Layout', 'lift-theme-options' ),
-                'required' => array(
-                    'lift-theme-header-search', '!=', '0',
-                 ),
-                 'options' => array(
-					'normal' => 'Normal', 
-					'toggle' => 'Toggle',
-					'float' => 'Float', 
-					'full' => 'Full Screen', 
-					), 
-				'default' => 'normal'
-            ),
-			array(
-				'id'       => 'lift-theme-header-search-align',
-                'type'     => 'button_set',
-				'required' => array(
-                    'lift-theme-header-search', '!=', '0',
-                 ),
-				'title'    => __( 'Header Search Align', 'lift-theme-options' ),
-				'options' => array(
-					'left' => 'Left', 
-					'center' => 'Center',
-					'right' => 'Right', 
-					), 
-				'default' => 'right'
-            ),
-            array(
-				'id'       => 'lift-theme-header-search-sticky',
-                'type'     => 'switch',
-                'required' => array(
-                    'lift-theme-header-menu-toggle', '!=', 'keep',
-                 ),
-                'title'    => __( 'Header Search Sticky', 'lift-theme-options' ),
-                'default'  => 0,
-                'on'       => 'On',
-                'off'      => 'Off',
-            ),
-			array(
                 'id'       => 'lift-theme-header-logo',
                 'type'     => 'media', 
 				// 'url'      => true,

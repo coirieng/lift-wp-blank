@@ -175,6 +175,183 @@
 	}
 }
 
+
+@mixin seachalignSticky($key, $style:"normal") {
+	&.search-#{$style} {
+		&.search-right{
+			.navbar.navbar-expand-#{$key} .search-sticky {
+				.search-form {
+					@include media-breakpoint-down($key) {
+						margin-left: auto;
+					}
+				}
+			}
+		}
+	}
+	@if $style == "toggle" {
+		&.search-#{$style} {
+			.navbar.navbar-expand-#{$key} .search-sticky {
+				.search-form {
+					@include media-breakpoint-down($key) {
+						position: relative;
+						.input-group {
+							&:after {
+								display: none;
+								content: '';
+								height: 2px;
+								width: 0;
+								position: absolute;
+								bottom: 0;
+								left: 0;
+							}
+						}
+						.search-field,
+						.search-submit {
+							padding-left: 0;
+							display: none;
+							border: 0;
+							background: none;
+							&:focus {
+								outline: 0;
+								box-shadow: none;
+							}
+						}
+						.search-submit-toggle {
+							display: block;
+							border: none;
+							margin: 0;
+							padding: 0;
+							width: auto;
+							overflow: visible;
+							background: transparent;
+							color: inherit;
+							font: inherit;
+							line-height: normal;
+							-webkit-font-smoothing: inherit;
+							-moz-osx-font-smoothing: inherit;
+							-webkit-appearance: none;
+							&::-moz-focus-inner {
+								border: 0;
+								padding: 0;
+							}
+						}
+						&.active {
+							.input-group {
+								&:after {
+									display: block;
+									width: 100%;
+									background-color: #333;
+								}
+							}
+							.search-field {
+								display: block;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	@if $style == "float" {
+		&.search-#{$style} {
+			.navbar.navbar-expand-#{$key} {
+				.search-form {
+					@include media-breakpoint-down($key) {
+						.search-field,
+						.search-submit {
+							display: none;
+							border: 0;
+							&:focus {
+								outline: 0;
+								box-shadow: none;
+							}
+						}
+						.search-submit-toggle {
+							display: block;
+							border: none;
+							margin: 0;
+							padding: 0;
+							width: auto;
+							overflow: visible;
+							background: transparent;
+							color: inherit;
+							font: inherit;
+							line-height: normal;
+							-webkit-font-smoothing: inherit;
+							-moz-osx-font-smoothing: inherit;
+							-webkit-appearance: none;
+							&::-moz-focus-inner {
+								border: 0;
+								padding: 0;
+							}
+						}
+						&.active {
+							.search-field {
+								display: block;
+								position: absolute;
+								top: 100%;
+								right: 0;
+								min-width: 200px;
+								border-radius: 0;
+								border: 1px solid #ccc;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	@if $style == "full" {
+		&.search-#{$style} {
+			.navbar.navbar-expand-#{$key} {
+				.search-form {
+					@include media-breakpoint-down($key) {
+						.search-field,
+						.search-submit {
+							display: none;
+							border: 0;
+							&:focus {
+								outline: 0;
+								box-shadow: none;
+							}
+						}
+						.search-submit-toggle {
+							display: block;
+							border: none;
+							margin: 0;
+							padding: 0;
+							width: auto;
+							overflow: visible;
+							background: transparent;
+							color: inherit;
+							font: inherit;
+							line-height: normal;
+							-webkit-font-smoothing: inherit;
+							-moz-osx-font-smoothing: inherit;
+							-webkit-appearance: none;
+							&::-moz-focus-inner {
+								border: 0;
+								padding: 0;
+							}
+						}
+						&.active {
+							.search-field {
+								display: block;
+								position: absolute;
+								top: 100%;
+								right: 0;
+								min-width: 200px;
+								border-radius: 0;
+								border: 1px solid #ccc;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 #header.site-header {
 	$valid-loopbreakpoint: sm, md, lg, xl, xxl;
 
@@ -262,6 +439,10 @@
 		@include seachalign($v,toggle);
 		@include seachalign($v,float);
 		@include seachalign($v,full);
+		@include seachalignSticky($v,normal);
+		@include seachalignSticky($v,toggle);
+		@include seachalignSticky($v,float);
+		@include seachalignSticky($v,full);
 	}
 }
 

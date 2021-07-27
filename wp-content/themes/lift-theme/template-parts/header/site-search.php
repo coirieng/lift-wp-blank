@@ -18,5 +18,5 @@ $header_search = $lift_theme['lift-theme-header-search'];
 ?>
 
 <?php if(isset($header_search) && $header_search === '1') { ?>
-	<?=get_search_form()?>
+	<?php get_template_part( 'template-parts/header/searchform-header' ); ?>
 <?php  } ?>
