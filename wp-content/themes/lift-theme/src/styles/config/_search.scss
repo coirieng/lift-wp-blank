@@ -176,6 +176,8 @@
 }
 
 #header.site-header {
+	$valid-loopbreakpoint: sm, md, lg, xl, xxl;
+
 	.search-form {
 		align-items: center;
 		label {
@@ -231,27 +233,36 @@
 				}
 			}
 		}
+		@each $v in $valid-loopbreakpoint {
+			.navbar.navbar-expand-#{$v} .search-sticky{
+				@include media-breakpoint-up($v) {
+					display: none;
+				}
+			}
+			&.search-sticky .navbar.navbar-expand-#{$v} .primary-menu-container {
+				.search-form {
+					@include media-breakpoint-down($v) {
+						display: none !important;
+					}
+				}
+			}
+		}
+		// TODO: check this one again 
+		.navbar.navbar-expand-keep .search-sticky{
+			display: none;
+		}
+		&.search-sticky .navbar.navbar-expand-all .primary-menu-container {
+			.search-form {
+				display: none !important;
+			}
+		}
 	}
-	@include seachalign(sm,normal);
-	@include seachalign(md,normal);
-	@include seachalign(lg,normal);
-	@include seachalign(xl,normal);
-	@include seachalign(xxl,normal);
-	@include seachalign(sm,toggle);
-	@include seachalign(md,toggle);
-	@include seachalign(lg,toggle);
-	@include seachalign(xl,toggle);
-	@include seachalign(xxl,toggle);
-	@include seachalign(sm,float);
-	@include seachalign(md,float);
-	@include seachalign(lg,float);
-	@include seachalign(xl,float);
-	@include seachalign(xxl,float);
-	@include seachalign(sm,full);
-	@include seachalign(md,full);
-	@include seachalign(lg,full);
-	@include seachalign(xl,full);
-	@include seachalign(xxl,full);
+	@each $v in $valid-loopbreakpoint {
+		@include seachalign($v,normal);
+		@include seachalign($v,toggle);
+		@include seachalign($v,float);
+		@include seachalign($v,full);
+	}
 }
 
 #footer.lift-footer {

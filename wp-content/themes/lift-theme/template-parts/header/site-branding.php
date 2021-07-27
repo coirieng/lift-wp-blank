@@ -22,6 +22,7 @@ $header_logo_mobile_size = $lift_theme['lift-theme-header-logo-mobile-size'];
 $header_logo_tablet = $lift_theme['lift-theme-header-logo-tablet'];
 $header_logo_tablet_size = $lift_theme['lift-theme-header-logo-tablet-size'];
 $header_offcanvas = $lift_theme['lift-theme-header-offcanvas'];
+$header_search_sticky = $lift_theme['lift-theme-header-search-sticky'];
 
 $logosrc = '';
 $logosize = '';
@@ -69,6 +70,13 @@ if($detect->isMobile() && !$detect->isTablet()) {
 			</a>
 		<?php endif; ?>
 	<?php endif; ?>
+
+	<?php if ( isset($header_search_sticky) && ($header_search_sticky === '1' || $header_search_sticky == 1) ) : ?>
+		<div class="search-sticky ms-auto">
+			<?php get_template_part( 'template-parts/header/site-search' ); ?>
+		</div>
+	<?php endif; ?>
+
 	<?php if ( isset($header_offcanvas) && ($header_offcanvas === '1' || $header_offcanvas == 1) ) : ?>
 		<button class="navbar-toggler collapsed navbar-offcanvas" type="button" data-bs-target="#site-navigation" aria-controls="site-navigation" aria-expanded="false" aria-label="Toggle navigation">
 	<?php else : ?>

@@ -148,6 +148,17 @@
 					), 
 				'default' => 'right'
             ),
+            array(
+				'id'       => 'lift-theme-header-search-sticky',
+                'type'     => 'switch',
+                'required' => array(
+                    'lift-theme-header-menu-toggle', '!=', 'keep',
+                 ),
+                'title'    => __( 'Header Search Sticky', 'lift-theme-options' ),
+                'default'  => 0,
+                'on'       => 'On',
+                'off'      => 'Off',
+            ),
 			array(
                 'id'       => 'lift-theme-header-logo',
                 'type'     => 'media', 
