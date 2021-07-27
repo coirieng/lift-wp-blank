@@ -1247,7 +1247,7 @@ header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container
 footer#footer {
   background-color: var(--lift-theme-light);
   padding: 2rem 0; }
-  footer#footer .menu .btn.menu-toggle {
+  footer#footer .menu .menu-toggle {
     display: none; }
 
 #backtotop {
