@@ -99,7 +99,7 @@
                 ),
                 'type'     => 'switch',
                 'title'    => __( 'Header Offcanvas', 'lift-theme-options' ),
-                'default'  => 0,
+                'default'  => 1,
                 'on'       => 'On',
                 'off'      => 'Off',
             ),
@@ -107,7 +107,7 @@
 				'id'       => 'lift-theme-header-fixed',
                 'type'     => 'switch',
                 'title'    => __( 'Header Fixed', 'lift-theme-options' ),
-                'default'  => 0,
+                'default'  => 1,
                 'on'       => 'On',
                 'off'      => 'Off',
             ),
@@ -212,8 +212,10 @@
                 'type'     => 'background',
 				'output'   => array( '#header' ),
                 'title'    => __( 'Header background', 'lift-theme-options' ),
-                'subtitle' => __( 'Pick a header background for the theme (default: #000).', 'lift-theme-options' ),
-                'default'  => '#000000',
+                'subtitle' => __( 'Pick a header background for the theme (default: #ffffff).', 'lift-theme-options' ),
+                'default'  => array(
+                    'background-color'	=> '#ffffff',
+                ),
 				'preview_media' => true,
 				'preview' => false,
 				'class' => 'lift-theme-admin-header-style lift-theme-admin-header-style-bg',
@@ -224,8 +226,10 @@
 				'required' => array( 'lift-theme-header-fixed', '=', '1' ),
 				'output'   => array( '#header.active', '#header.toggle' ),
                 'title'    => __( 'Header background active', 'lift-theme-options' ),
-                'subtitle' => __( 'Pick a header background active for the theme (default: #000).', 'lift-theme-options' ),
-                'default'  => '#000000',
+                'subtitle' => __( 'Pick a header background active for the theme (default: #ffffff).', 'lift-theme-options' ),
+                'default'  => array(
+                    'background-color'	=> '#ffffff',
+                ),
 				'preview_media' => true,
 				'preview' => false,
 				'class' => 'lift-theme-admin-header-style lift-theme-admin-header-style-bg',
@@ -236,8 +240,10 @@
 				'required' => array( 'lift-theme-header-offcanvas', '=', '1' ),
 				'output'   => array( '#header.canvased .primary-menu-container' ),
                 'title'    => __( 'Header background canvas', 'lift-theme-options' ),
-                'subtitle' => __( 'Pick a header background canvas for the theme (default: #000).', 'lift-theme-options' ),
-                'default'  => '#000000',
+                'subtitle' => __( 'Pick a header background canvas for the theme (default: #e8e8e8).', 'lift-theme-options' ),
+                'default'  => array(
+                    'background-color'	=> '#e8e8e8',
+                ),
 				'preview_media' => true,
 				'preview' => false,
 				'class' => 'lift-theme-admin-header-style lift-theme-admin-header-style-bg',
@@ -308,10 +314,10 @@
 				'title'    => __('Header links', 'lift-theme-options'),
 				'subtitle' => __('Only color validation can be done on this field type', 'lift-theme-options'),
 				'default'  => array(
-					'regular'  => '#1e73be', // blue
-					'hover'    => '#dd3333', // red
-					'active'   => '#8224e3',  // purple
-					'visited'  => '#8224e3',  // purple
+					'regular'  => '#242526', // blue
+					'hover'    => '#007bff', // red
+					'active'   => '#242526',  // purple
+					'visited'  => '#242526',  // purple
 				)
             ),
 			array(
@@ -326,7 +332,7 @@
 					'shadow'       => 'Regular shadow', 
 					'shadow-lg'       => 'Larger shadow', 
 				),
-				'default'         => 'default'
+				'default'         => 'shadow'
             ),
 
 

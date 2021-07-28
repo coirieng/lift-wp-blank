@@ -114,7 +114,7 @@
 				'title'    => __('Footer links', 'lift-theme-options'),
 				'subtitle' => __('Only color validation can be done on this field type', 'lift-theme-options'),
 				'default'  => array(
-					'regular'  => '#1e73be', // blue
+					'regular'  => '#007bff', // blue
 					'hover'    => '#dd3333', // red
 					'active'   => '#8224e3',  // purple
 					'visited'  => '#8224e3',  // purple

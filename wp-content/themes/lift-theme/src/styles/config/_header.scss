@@ -221,6 +221,7 @@ header#header .navbar.navbar-expand-keep {
 				z-index: $zindex-dropdown;
 				display: none; // none by default, but block on "open" of the menu
 				min-width: $dropdown-min-width;
+				// padding: 0;
 				padding: $dropdown-padding-y $dropdown-padding-x;
 				margin: 0; // Override default margin of ul
 				@include font-size($dropdown-font-size);
@@ -251,6 +252,9 @@ header#header .navbar.navbar-expand-keep {
 							justify-content: space-between;
 							align-items: center;
 							padding: .25rem 1rem;
+							&:hover {
+								background-color: var(--lift-theme-light)
+							}
 						}
 					}
 					.sub-menu {
@@ -276,28 +280,38 @@ header#header .navbar.navbar-expand-keep {
 				}
 				&.menu-item-has-children {
 					> a {
+						display: flex;
+						align-items: center;
+						padding-right: 1.5em;
+						position: relative;
 						&:after {
-							display: inline-block;
-							margin-left: .255em;
-							vertical-align: .255em;
 							content: "";
-							border-top: .3em solid;
-							border-right: .3em solid transparent;
-							border-bottom: 0;
-							border-left: .3em solid transparent;
+							display: inline-block;
+							height: .5em;
+							width: .5em;
+							box-shadow: 2px -2px 0 0 $lift-theme-gray inset;
+							transform: rotate(-45deg) translateY(calc(-50% - .25em));
+							position: absolute;
+							right: .25em;
+							top: 50%;
 						}
 					}
 					.menu-item-has-children {
 						> a {
+							display: flex;
+							align-items: center;
+							padding-right: 1.5em;
+							position: relative;
 							&:after {
-								display: inline-block;
-								margin-left: .255em;
-								vertical-align: .255em;
 								content: "";
-								border-top: .3em solid transparent;
-								border-bottom: .3em solid transparent;
-								border-right: 0;
-								border-left: .3em solid;
+								display: inline-block;
+								height: .5em;
+								width: .5em;
+								box-shadow: 2px -2px 0 0 $lift-theme-gray inset;
+								transform: rotate(225deg) translateY(.35em);
+								position: absolute;
+								right: 1em;
+								top: 50%;
 							}
 						}
 					}

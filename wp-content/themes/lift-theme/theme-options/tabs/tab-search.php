@@ -86,21 +86,21 @@
                 'title'    => __( 'Header Search Layout', 'lift-theme-options' ),
                 'required' => array(
                     'lift-theme-header-search', '!=', '0',
-                 ),
-                 'options' => array(
+                ),
+                'options' => array(
 					'normal' => 'Normal', 
 					'toggle' => 'Toggle',
 					'float' => 'Float', 
 					'full' => 'Full Screen', 
 					), 
-				'default' => 'normal'
+				'default' => 'toggle'
             ),
 			array(
 				'id'       => 'lift-theme-header-search-align',
                 'type'     => 'button_set',
 				'required' => array(
                     'lift-theme-header-search', '!=', '0',
-                 ),
+                ),
 				'title'    => __( 'Header Search Align', 'lift-theme-options' ),
 				'options' => array(
 					'left' => 'Left', 
@@ -112,17 +112,23 @@
             array(
 				'id'       => 'lift-theme-header-search-sticky',
                 'type'     => 'switch',
+                // 'required' => array(
+                //     'lift-theme-header-menu-toggle', '!=', 'keep',
+                // ),
                 'required' => array(
-                    'lift-theme-header-menu-toggle', '!=', 'keep',
-                 ),
+                    'lift-theme-header-search', '!=', '0',
+                ),
                 'title'    => __( 'Header Search Sticky', 'lift-theme-options' ),
-                'default'  => 0,
+                'default'  => 1,
                 'on'       => 'On',
                 'off'      => 'Off',
             ),
 			array(
 				'id'       => 'lift-theme-search-header-layout-label',
                 'type'     => 'switch',
+                'required' => array(
+                    'lift-theme-header-search', '!=', '0',
+                ),
                 'title'    => __( 'Display Label', 'lift-theme-options' ),
                 'default'  => 0,
                 'on'       => 'On',
@@ -131,6 +137,9 @@
 			array(
 				'id'       => 'lift-theme-search-header-layout-icon',
                 'type'     => 'switch',
+                'required' => array(
+                    'lift-theme-header-search', '!=', '0',
+                ),
                 'title'    => __( 'Display Icon', 'lift-theme-options' ),
                 'default'  => 1,
                 'on'       => 'On',
@@ -139,6 +148,9 @@
 			array(
 				'id'       => 'lift-theme-search-header-layout-text',
                 'type'     => 'switch',
+                'required' => array(
+                    'lift-theme-header-search', '!=', '0',
+                ),
                 'title'    => __( 'Display Label', 'lift-theme-options' ),
                 'default'  => 0,
                 'on'       => 'On',
@@ -147,20 +159,29 @@
 			array(
 				'id'       => 'lift-theme-search-header-layout-placeholder',
                 'type'     => 'switch',
+                'required' => array(
+                    'lift-theme-header-search', '!=', '0',
+                ),
                 'title'    => __( 'Display Placeholder', 'lift-theme-options' ),
-                'default'  => 0,
+                'default'  => 1,
                 'on'       => 'On',
                 'off'      => 'Off',
             ),
 			array(
 				'id'       => 'lift-theme-search-header-layout-text-value',
                 'type'     => 'text',
+                'required' => array(
+                    'lift-theme-header-search', '!=', '0',
+                ),
                 'title'    => __( 'Label Text', 'lift-theme-options' ),
                 'default'  => 'Search:',
             ),
 			array(
 				'id'       => 'lift-theme-search-header-layout-placeholder-value',
                 'type'     => 'text',
+                'required' => array(
+                    'lift-theme-header-search', '!=', '0',
+                ),
                 'title'    => __( 'Placeholder Text', 'lift-theme-options' ),
                 'default'  => 'e.g: lift',
             ),
