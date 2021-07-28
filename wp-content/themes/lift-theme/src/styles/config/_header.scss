@@ -243,12 +243,19 @@ header#header .navbar.navbar-expand-keep {
 				}
 			}
 			.menu-item {
-				.menu-link {
-					.sub-menu-toggle {
-					}
-				}
+				position: relative;
 				.sub-menu {
-					&.active {
+					.nav-item {
+						.nav-link {
+							display: flex;
+							justify-content: space-between;
+							align-items: center;
+							padding: .25rem 1rem;
+						}
+					}
+					.sub-menu {
+						left: 100%;
+						top: 0;
 					}
 				}
 				.menu-toggle {
@@ -267,10 +274,38 @@ header#header .navbar.navbar-expand-keep {
 					&:active {
 					}
 				}
+				&.menu-item-has-children {
+					> a {
+						&:after {
+							display: inline-block;
+							margin-left: .255em;
+							vertical-align: .255em;
+							content: "";
+							border-top: .3em solid;
+							border-right: .3em solid transparent;
+							border-bottom: 0;
+							border-left: .3em solid transparent;
+						}
+					}
+					.menu-item-has-children {
+						> a {
+							&:after {
+								display: inline-block;
+								margin-left: .255em;
+								vertical-align: .255em;
+								content: "";
+								border-top: .3em solid transparent;
+								border-bottom: .3em solid transparent;
+								border-right: 0;
+								border-left: .3em solid;
+							}
+						}
+					}
+				}
 				// TODO: read this one again 
 				&.menu-hover {
 					&.menu-item.menu-item-has-children {
-						.sub-menu {
+						> .sub-menu {
 							display: block;
 						}
 					}

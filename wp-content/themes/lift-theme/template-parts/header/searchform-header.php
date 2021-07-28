@@ -48,7 +48,7 @@ if(isset($header_value['search_placeholder']) && $header_value['search_placehold
 		<input type="hidden" name="post_type[]" value="ebook" />
 		<input type="hidden" name="post_type[]" value="pdf" /> -->
 		<button type="button" class="search-submit-toggle"><i class="fas fa-search"></i></button>
-		<button type="button" class="search-submit-close"><i class="fas fa-times"></i></button>
+		<button type="button" class="search-submit-close"><i class="btn-close text-reset"></i></button>
 		<button type="submit" class="btn btn-primary search-submit"><span><?php echo esc_attr_x( 'Search', 'submit button', 'wp-lift-theme' ); ?></span><i class="fas fa-search"></i></button>
 		
 		<!-- <input type="submit" class="btn btn-primary search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button', 'wp-lift-theme' ); ?>" /> -->

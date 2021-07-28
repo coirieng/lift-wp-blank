@@ -226,11 +226,16 @@
 								display: none;
 							}
 							.search-submit-close {
-								display: block;
-								font-size: 1.3rem;
+								display: flex;
 								position: fixed;
 								top: 1rem;
 								right: 1rem;
+								.btn-close {
+									padding: .5rem .5rem;
+									margin-top: -.5rem;
+									margin-right: -.5rem;
+									margin-bottom: -.5rem;
+								}
 							}
 						}
 					}
@@ -448,11 +453,16 @@
 							display: none;
 						}
 						.search-submit-close {
-							display: block;
-							font-size: 1.3rem;
+							display: flex;
 							position: fixed;
 							top: 1rem;
 							right: 1rem;
+							.btn-close {
+								padding: .5rem .5rem;
+								margin-top: -.5rem;
+								margin-right: -.5rem;
+								margin-bottom: -.5rem;
+							}
 						}
 					}
 				}
