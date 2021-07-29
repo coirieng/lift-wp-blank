@@ -5,34 +5,3 @@
 		}
 	}
 }
-.admin-control {
-	#admin-space {
-		height: 3rem;
-		display: block;
-		z-index: 900;
-	}
-	.admintoolbar {
-		position: fixed;
-		bottom: 0;
-		left: 0;
-		margin: 0;
-		display: flex;
-		justify-content: flex-start;
-		width: 100%;
-		height: 3rem;
-		align-items: center;
-		padding: 0 2rem;
-		z-index: 950;
-		background-color: #272727;
-		> * {
-			white-space: nowrap;
-			text-overflow: ellipsis;
-		}
-		a {
-			background-color: #e91e63;
-			padding: .15rem .5rem;
-    		border-radius: 3px;
-			font-size: .9rem;
-		}
-	}
-}
