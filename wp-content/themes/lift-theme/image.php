@@ -75,8 +75,8 @@ while ( have_posts() ) {
 							esc_html__( 'Edit %s', 'wp-lift-theme' ),
 							'<span class="screen-reader-text">' . get_the_title() . '</span>'
 						),
-						'<span class="edit-link">',
-						'</span>'
+						'<div class="edit-link admintoolbar">',
+						'</div>'
 					);
 				}
 
@@ -100,8 +100,8 @@ while ( have_posts() ) {
 							esc_html__( 'Edit %s', 'wp-lift-theme' ),
 							'<span class="screen-reader-text">' . get_the_title() . '</span>'
 						),
-						'<span class="edit-link">',
-						'</span><br>'
+						'<div class="edit-link admintoolbar">',
+						'</div>'
 					);
 				}
 				?>

@@ -17,54 +17,56 @@ This function apply for toggle click on the menu
   };
 })(jQuery);
 /**
+ * Animate the back to top button and anchor link
+ */
+// $('a[href*="#"]')
+//   // Remove links that don't actually link to anything
+//   .not('[href="#"]')
+//   .not('[href="#0"]')
+//   .click(function(event) {
+//     // On-page links
+//     if (
+//       location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+//       && 
+//       location.hostname == this.hostname
+//     ) {
+//       // Figure out element to scroll to
+//       var target = $(this.hash);
+//       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+//       // Does a scroll target exist?
+//       if (target.length) {
+//         // Only prevent default if animation is actually gonna happen
+//         event.preventDefault();
+//         $('html, body').animate({
+//           scrollTop: target.offset().top
+//         }, 1000, function() {
+//           // Callback after animation
+//           // Must change focus!
+//           var $target = $(target);
+//           $target.focus();
+//           if ($target.is(":focus")) { // Checking if the target was focused
+//             return false;
+//           } else {
+//             $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+//             $target.focus(); // Set focus again
+//           };
+//         });
+//       }
+//     }
+//   });
+
+/**
  * Back to top button
  */
 
 
-$("body, html").scroll(function () {
-  var getTop = $(this).scrollTop();
+$(window).scroll(function () {
+  var getTop = $(window).scrollTop();
 
   if (getTop > 200) {
     $('#backtotop').addClass('active');
   } else {
     $('#backtotop').removeClass('active');
-  }
-});
-/**
- * Animate the back to top button and anchor link
- */
-
-$('a[href*="#"]') // Remove links that don't actually link to anything
-.not('[href="#"]').not('[href="#0"]').click(function (event) {
-  // On-page links
-  if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-    // Figure out element to scroll to
-    var target = $(this.hash);
-    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']'); // Does a scroll target exist?
-
-    if (target.length) {
-      // Only prevent default if animation is actually gonna happen
-      event.preventDefault();
-      $('html, body').animate({
-        scrollTop: target.offset().top
-      }, 1000, function () {
-        // Callback after animation
-        // Must change focus!
-        var $target = $(target);
-        $target.focus();
-
-        if ($target.is(":focus")) {
-          // Checking if the target was focused
-          return false;
-        } else {
-          $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
-
-          $target.focus(); // Set focus again
-        }
-
-        ;
-      });
-    }
   }
 });
 /**
@@ -570,6 +572,11 @@ var LIFT_APP = {
   lg: 992,
   xl: 1200,
   xxl: 1400,
+  lift_admin_toolbar: function lift_admin_toolbar() {
+    if ($('body.admin-control').length) {
+      $('#page').append('<div id="admin-space"></div>');
+    }
+  },
   lift_clear_canvas_menu: function lift_clear_canvas_menu(e) {
     $('header.site-header .menu-offcanvas-' + e).removeAttr('style');
   },
@@ -692,6 +699,7 @@ $(document).ready(function () {
   LIFT_APP.lift_fixed_header();
   LIFT_APP.lift_canvas_header();
   LIFT_APP.lift_get_header_hover();
+  LIFT_APP.lift_admin_toolbar();
 });
 $(window).scroll(function () {
   LIFT_APP.lift_active_header();

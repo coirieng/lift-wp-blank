@@ -1549,6 +1549,33 @@ footer#footer {
 .lift-theme .vc_message_box-icon .fa, .lift-theme .vc_message_box-icon .fas {
   font-weight: 900; }
 
+.admin-control #admin-space {
+  height: 3rem;
+  display: block;
+  z-index: 900; }
+
+.admin-control .admintoolbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  height: 3rem;
+  align-items: center;
+  padding: 0 2rem;
+  z-index: 950;
+  background-color: #272727; }
+  .admin-control .admintoolbar > * {
+    white-space: nowrap;
+    text-overflow: ellipsis; }
+  .admin-control .admintoolbar a {
+    background-color: #e91e63;
+    padding: .15rem .5rem;
+    border-radius: 3px;
+    font-size: .9rem; }
+
 #header.site-header .search-form {
   align-items: center;
   display: flex; }

@@ -67,8 +67,8 @@ $post_page_title = $lift_theme['lift-theme-page-style-content-title'];
 						esc_html__( 'Edit %s', 'wp-lift-theme' ),
 						'<span class="screen-reader-text">' . get_the_title() . '</span>'
 					),
-					'<span class="edit-link">',
-					'</span>'
+					'<div class="edit-link admintoolbar">',
+					'</div>'
 				);
 				?>
         </div>

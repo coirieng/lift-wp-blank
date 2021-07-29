@@ -24,6 +24,7 @@ gulp.task('default', gulp.series(
 		'tao-sass',
 		'tao-js',
 		'tao-js-admin',
+		'tao-js-tool',
 		'tao-sass-admin',
 		// 'tao-html',
 		'watch',
@@ -45,6 +46,7 @@ gulp.task('build', gulp.series(
 		'tao-sass',
 		'tao-js',
 		'tao-js-admin',
+		'tao-js-tool',
 		'tao-sass-admin',
 		// 'tao-html',
 		// Xử lý Production

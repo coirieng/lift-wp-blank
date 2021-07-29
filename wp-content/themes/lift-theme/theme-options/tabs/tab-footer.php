@@ -355,7 +355,7 @@
 					'p'       => 'p', 
 					'div'       => 'div', 
 				),
-				'default'         => 'h2'
+				'default'         => 'h4'
             ),
 		)
 	));

@@ -38,7 +38,6 @@
                 'on'       => 'On',
                 'off'      => 'Off',
             ),
-			
 		),
     ) );
 
@@ -53,7 +52,7 @@
                 'type'     => 'switch',
                 'title'    => __( 'Back to top', 'lift-theme-options' ),
                 'subtitle' => __( 'Toggle whether or not to enable a back to top button when viewing on a PC device. (≥1200px)', 'lift-theme-options' ),
-                'default'  => 0,
+                'default'  => 1,
                 'on'       => 'On',
                 'off'      => 'Off',
             ),
@@ -110,7 +109,7 @@
 				// 'compiler' => true,
                 'units'          => array( 'em', 'rem', 'px', '%' ),      
                 'units_extended' => 'true',    
-                'title'          => __( 'Position Option', 'lift-theme-options' ),
+                'title'          => __( 'Back To Top Button Position', 'lift-theme-options' ),
                 'subtitle'       => __( 'Allow your users to choose the position they want.', 'lift-theme-options' ),
                 'desc'           => __( 'You can enable or disable any piece of this field. Right, Bottom, or Units.', 'lift-theme-options' ),
                 'default'        => array(
@@ -122,5 +121,30 @@
 			
 			
 			
+		),
+    ) );
+
+
+    Redux::setSection( $opt_name, array(
+		'title' => __( 'Develop Tool', 'lift-theme-options' ),
+        'id'         => 'lift-theme-global-dev',
+        'subsection' => true,
+		'fields'     => array(
+			array(
+				'id'       => 'lift-theme-global-dev-toolbar',
+                'type'     => 'switch',
+                'title'    => __( 'FrontEnd Admin Toolbar', 'lift-theme-options' ),
+                'default'  => 1,
+                'on'       => 'On',
+                'off'      => 'Off',
+            ),
+            array(
+				'id'       => 'lift-theme-global-dev-toogle-tag',
+                'type'     => 'switch',
+                'title'    => __( 'FrontEnd Tag Viewer', 'lift-theme-options' ),
+                'default'  => 1,
+                'on'       => 'On',
+                'off'      => 'Off',
+            ),
 		),
     ) );

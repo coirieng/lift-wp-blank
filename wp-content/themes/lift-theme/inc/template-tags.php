@@ -135,7 +135,7 @@ if ( ! function_exists( 'lift_entry_meta_footer' ) ) {
 					esc_html__( 'Edit %s', 'wp-lift-theme' ),
 					'<div class="screen-reader-text">' . get_the_title() . '</div>'
 				),
-				'<div class="edit-link">',
+				'<div class="edit-link admintoolbar">',
 				'</div>'
 			);
 
@@ -191,7 +191,7 @@ if ( ! function_exists( 'lift_entry_meta_footer' ) ) {
 					esc_html__( 'Edit %s', 'wp-lift-theme' ),
 					'<div class="screen-reader-text">' . get_the_title() . '</div>'
 				),
-				'<div class="edit-link">',
+				'<div class="edit-link admintoolbar">',
 				'</div>'
 			);
 			echo '</div>';

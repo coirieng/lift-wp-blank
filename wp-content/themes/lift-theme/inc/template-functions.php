@@ -19,6 +19,7 @@
  */
 
 function lift_body_classes( $classes ) {
+	global $lift_theme;
 
 	// Helps detect if JS is enabled or not.
 	$classes[] = 'no-js';
@@ -34,6 +35,11 @@ function lift_body_classes( $classes ) {
 	// Add a body class if there are no footer widgets.
 	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 		$classes[] = 'no-widgets';
+	}
+	if (intval($lift_theme['lift-theme-global-dev-toolbar']) == 1) {
+		if(!is_admin() && current_user_can('administrator')){
+			$classes[] = 'admin-control';
+		}
 	}
 
 	return $classes;

@@ -200,6 +200,15 @@ function lift_styles() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	if (!is_admin() && current_user_can('administrator') && intval($lift_theme['lift-theme-global-dev-toogle-tag']) == 1) {
+		wp_enqueue_style(
+			'lift-assets-style-admin-tool', 
+			get_template_directory_uri() . '/dist/css/admin-tool.css', 
+			array(), 
+			wp_get_theme()->get( 'Version' ), 'all' 
+		);
+	}
 }
 add_action( 'wp_enqueue_scripts', 'lift_styles' , 999999 );
 
