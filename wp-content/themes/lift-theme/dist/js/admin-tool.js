@@ -49,9 +49,11 @@ $(document).ready(function () {
   $('.admintoolbar').append('<a href="javascript:void(0);" id="toggleadmintool">Admin Tool</a>').on('click', function () {
     $('#toggleadmintool').toggleClass('active');
     $('#resultadmin').toggleClass('active');
-    $("#resultadmin #resultadminheader").draggable();
+    $("#resultadmin").draggable({
+      handle: '#resultadminheader'
+    });
   });
-  $('#page').append('<ul id="resultadmin" class="list-group m-3"><li id="resultadminheader">Header</li></ul>');
+  $('#page').append('<ul id="resultadmin" class="list-group m-3"><li class="list-group-item-action list-group-item active" id="resultadminheader">Results</li></ul>');
 
   if ($('#resultadmin').length) {
     getACount('h1');

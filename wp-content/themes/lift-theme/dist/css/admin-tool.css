@@ -43,13 +43,11 @@
     background-color: #e91e63; }
 
 #resultadmin {
-  background: #fff;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 99999;
-  padding: 1rem;
-  box-shadow: 0 0 5px #333;
+  box-shadow: 0 0 10px 5px #3333331f;
   display: none;
   max-width: 600px; }
   #resultadmin.active {
