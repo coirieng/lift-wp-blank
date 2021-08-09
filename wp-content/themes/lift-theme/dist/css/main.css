@@ -1752,23 +1752,26 @@ footer#footer {
 
 #header.site-header #second-nav {
   display: flex; }
-  #header.site-header #second-nav .search-form label {
-    margin-right: 5px;
-    color: var(--lift-theme-box); }
-  #header.site-header #second-nav .search-form .search-submit-close {
-    display: none; }
-  #header.site-header #second-nav .search-form .search-submit-toggle {
-    display: none; }
-  #header.site-header #second-nav .search-form.no-header-label label {
-    display: none; }
-  #header.site-header #second-nav .search-form.no-header-icon .search-submit i {
-    display: none; }
-  #header.site-header #second-nav .search-form.no-header-icon.no-header-text .search-submit span {
-    display: block; }
-  #header.site-header #second-nav .search-form.no-header-text .search-submit span {
-    display: none; }
-  #header.site-header #second-nav .search-form:not(.no-header-text):not(.no-header-icon) .search-submit span {
-    margin-right: 10px; }
+  #header.site-header #second-nav .search-form {
+    align-items: center;
+    display: flex; }
+    #header.site-header #second-nav .search-form label {
+      margin-right: 5px;
+      color: var(--lift-theme-box); }
+    #header.site-header #second-nav .search-form .search-submit-close {
+      display: none; }
+    #header.site-header #second-nav .search-form .search-submit-toggle {
+      display: none; }
+    #header.site-header #second-nav .search-form.no-header-label label {
+      display: none; }
+    #header.site-header #second-nav .search-form.no-header-icon .search-submit i {
+      display: none; }
+    #header.site-header #second-nav .search-form.no-header-icon.no-header-text .search-submit span {
+      display: block; }
+    #header.site-header #second-nav .search-form.no-header-text .search-submit span {
+      display: none; }
+    #header.site-header #second-nav .search-form:not(.no-header-text):not(.no-header-icon) .search-submit span {
+      margin-right: 10px; }
 
 #header.site-header.search-full.search-right .navbar.navbar-expand-keep #second-nav, #header.site-header.search-float.search-right .navbar.navbar-expand-keep #second-nav, #header.site-header.search-normal.search-right .navbar.navbar-expand-keep #second-nav, #header.site-header.search-toggle.search-right .navbar.navbar-expand-keep #second-nav {
   margin-left: auto; }

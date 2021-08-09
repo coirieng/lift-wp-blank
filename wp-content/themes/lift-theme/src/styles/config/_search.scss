@@ -508,9 +508,10 @@
 #header.site-header {
 	$valid-loopbreakpoint: sm, md, lg, xl, xxl;
 	#second-nav {
-		// align-items: center;
 		display: flex;
 		.search-form {
+			align-items: center;
+			display: flex;
 			label {
 				margin-right: 5px;
 				color: var(--lift-theme-box);
