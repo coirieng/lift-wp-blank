@@ -18,7 +18,7 @@ $header_search_align = $lift_theme['lift-theme-header-search-align'];
 	<div class="header-wrapper"<?= isset($header_row) && $header_row === '1' ? $build_header_spacing : ''?>>
 		<div class="container<?= isset($header_style) && $header_style === '1' ? '-fluid': ''?>">
 			<?php get_template_part( 'template-parts/header/site-nav' ); ?>
-			<div id="second-nav" class="<?= isset($header_search_align) && $header_search_align !== '' ? ' search-align-'.$header_search_align: ' search-align-right'?>">
+			<div id="second-nav" class="secondary-navigation<?= isset($header_search_align) && $header_search_align !== '' ? ' search-align-'.$header_search_align: ' search-align-right'?>">
 				<?php get_template_part( 'template-parts/header/site-nav-secondary' ); ?>
 				<?php get_template_part( 'template-parts/header/site-search' ); ?>
 			</div>
@@ -26,7 +26,7 @@ $header_search_align = $lift_theme['lift-theme-header-search-align'];
 	</div>
 	<?php else : ?>
 		<?php get_template_part( 'template-parts/header/site-nav' ); ?>
-		<div id="second-nav" class="<?= isset($header_search_align) && $header_search_align !== '' ? ' search-align-'.$header_search_align: ' search-align-right'?>">
+		<div id="second-nav" class="secondary-navigation<?= isset($header_search_align) && $header_search_align !== '' ? ' search-align-'.$header_search_align: ' search-align-right'?>">
 			<?php get_template_part( 'template-parts/header/site-nav-secondary' ); ?>
 			<?php get_template_part( 'template-parts/header/site-search' ); ?>
 		</div>

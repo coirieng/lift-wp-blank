@@ -1715,6 +1715,56 @@ header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container
       padding: 0;
       margin: 0; } }
 
+@media (min-width: 576px) {
+  header#header.menu-layout-2 .navbar.navbar-expand-sm .menu-main-container {
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex; }
+  header#header.menu-layout-2 .navbar.navbar-expand-sm #second-nav {
+    white-space: nowrap; } }
+
+@media (min-width: 768px) {
+  header#header.menu-layout-2 .navbar.navbar-expand-md .menu-main-container {
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex; }
+  header#header.menu-layout-2 .navbar.navbar-expand-md #second-nav {
+    white-space: nowrap; } }
+
+@media (min-width: 992px) {
+  header#header.menu-layout-2 .navbar.navbar-expand-lg .menu-main-container {
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex; }
+  header#header.menu-layout-2 .navbar.navbar-expand-lg #second-nav {
+    white-space: nowrap; } }
+
+@media (min-width: 1200px) {
+  header#header.menu-layout-2 .navbar.navbar-expand-xl .menu-main-container {
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex; }
+  header#header.menu-layout-2 .navbar.navbar-expand-xl #second-nav {
+    white-space: nowrap; } }
+
+@media (min-width: 1400px) {
+  header#header.menu-layout-2 .navbar.navbar-expand-xxl .menu-main-container {
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex; }
+  header#header.menu-layout-2 .navbar.navbar-expand-xxl #second-nav {
+    white-space: nowrap; } }
+
 .entry-footer {
   display: block; }
   .entry-footer .edit-link {
