@@ -171,20 +171,21 @@ header#header .navbar.navbar-expand-all {
 	@include createmenu;
 	@include menucanvas(all);
 }
-header#header .navbar.navbar-expand-keep {
+
+// header#header .navbar.navbar-expand-keep {
 	// TODO: dang lam cho nay bug keep 	
-	@include createmenu;
-	#site-navigation.primary-menu-container {
-		.primary-navigation,
-		.secondary-navigation {
-			display: flex;
-			flex-direction: row;
-			.menu-item {
-				flex: 0 0 auto;
-			}
-		}
-	}
-}
+	// @include createmenu;
+	// #site-navigation.primary-menu-container {
+	// 	.primary-navigation,
+	// 	.secondary-navigation {
+	// 		display: flex;
+	// 		flex-direction: row;
+	// 		.menu-item {
+	// 			flex: 0 0 auto;
+	// 		}
+	// 	}
+	// }
+// }
 
 @include media-breakpoint-down(sm) {
 	header#header .navbar.navbar-expand-sm {
@@ -356,26 +357,35 @@ header#header .navbar.navbar-expand-keep {
 	}
 }
 
+// CHÌ LÀM TIẾP TỤC TRÊN NÀY 
 header#header .navbar.navbar-expand-keep {
 	@include createmenutoggle;
-	#site-navigation.primary-menu-container {
-		&.menu-offcanvas-keep {
-			display: flex!important;
-			flex-basis: auto;
-			flex-grow: 1;
-			align-items: center;
-			background-color: transparent;
-			width: 100%;
-			.container-fluid,
-			.container {
-				flex-direction: row;
-				display: flex;
-				padding: 0;
-				margin: 0;
-			}
+	.navbar-nav {
+		.nav-link {
+			padding-right: .5rem;
+			padding-left: .5rem;
 		}
 	}
+	#site-navigation.primary-menu-container {
+		// &.menu-offcanvas-keep {
+		// 	display: flex!important;
+		// 	flex-basis: auto;
+		// 	flex-grow: 1;
+		// 	align-items: center;
+		// 	background-color: transparent;
+		// 	width: 100%;
+		// 	.container-fluid,
+		// 	.container {
+		// 		flex-direction: row;
+		// 		display: flex;
+		// 		padding: 0;
+		// 		margin: 0;
+		// 	}
+		// }
+	}
 }
+
+
 @include media-breakpoint-up(sm) {
 	header#header .navbar.navbar-expand-sm {
 		@include createmenutoggle;

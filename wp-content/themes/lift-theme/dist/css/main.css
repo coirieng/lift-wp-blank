@@ -426,89 +426,6 @@ header#header .navbar.navbar-expand-all #site-navigation.primary-menu-container.
     display: flex;
     flex-direction: column; }
 
-header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .primary-navigation .menu-item,
-header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .secondary-navigation .menu-item {
-  display: flex;
-  flex: 0 0 100%;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap; }
-  header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-link .sub-menu-toggle,
-  header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .secondary-navigation .menu-item .menu-link .sub-menu-toggle {
-    padding: 0; }
-  header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .primary-navigation .menu-item .sub-menu,
-  header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .secondary-navigation .menu-item .sub-menu {
-    flex-direction: column;
-    display: none;
-    list-style-type: none;
-    padding: 0;
-    flex: 0 0 100%; }
-    header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .primary-navigation .menu-item .sub-menu.active,
-    header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .secondary-navigation .menu-item .sub-menu.active {
-      display: flex; }
-  header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle,
-  header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .secondary-navigation .menu-item .menu-toggle {
-    padding: 0;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    width: auto;
-    border: none;
-    margin: 0;
-    padding: 0;
-    overflow: visible;
-    background: transparent;
-    color: inherit;
-    font: inherit;
-    line-height: normal;
-    -webkit-font-smoothing: inherit;
-    -moz-osx-font-smoothing: inherit;
-    -webkit-appearance: none; }
-    header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle::-moz-focus-inner,
-    header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .secondary-navigation .menu-item .menu-toggle::-moz-focus-inner {
-      border: 0;
-      padding: 0; }
-    header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-plus,
-    header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .secondary-navigation .menu-item .menu-toggle .icon-plus {
-      display: flex; }
-    header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-minus,
-    header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .secondary-navigation .menu-item .menu-toggle .icon-minus {
-      display: none; }
-    header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-plus,
-    header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-minus,
-    header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .secondary-navigation .menu-item .menu-toggle .icon-plus,
-    header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .secondary-navigation .menu-item .menu-toggle .icon-minus {
-      justify-content: center;
-      align-items: center; }
-      header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-plus svg,
-      header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle .icon-minus svg,
-      header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .secondary-navigation .menu-item .menu-toggle .icon-plus svg,
-      header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .secondary-navigation .menu-item .menu-toggle .icon-minus svg {
-        width: 22px;
-        height: 22px; }
-    header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle.active .icon-plus,
-    header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .secondary-navigation .menu-item .menu-toggle.active .icon-plus {
-      display: none; }
-    header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle.active .icon-minus,
-    header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .secondary-navigation .menu-item .menu-toggle.active .icon-minus {
-      display: flex; }
-    header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle:focus, header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .primary-navigation .menu-item .menu-toggle:active,
-    header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .secondary-navigation .menu-item .menu-toggle:focus,
-    header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .secondary-navigation .menu-item .menu-toggle:active {
-      outline: 0;
-      box-shadow: none; }
-
-header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container #second-nav {
-  flex-direction: column; }
-
-header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .primary-navigation,
-header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .secondary-navigation {
-  display: flex;
-  flex-direction: row; }
-  header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .primary-navigation .menu-item,
-  header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .secondary-navigation .menu-item {
-    flex: 0 0 auto; }
-
 @media (max-width: 575.98px) {
   header#header .navbar.navbar-expand-sm #site-navigation.primary-menu-container .primary-navigation .menu-item,
   header#header .navbar.navbar-expand-sm #site-navigation.primary-menu-container .secondary-navigation .menu-item {
@@ -1054,19 +971,9 @@ header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container
     header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container .secondary-navigation .menu-item.menu-hover.menu-item.menu-item-has-children > .sub-menu {
       display: block; }
 
-header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container.menu-offcanvas-keep {
-  display: flex !important;
-  flex-basis: auto;
-  flex-grow: 1;
-  align-items: center;
-  background-color: transparent;
-  width: 100%; }
-  header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container.menu-offcanvas-keep .container-fluid,
-  header#header .navbar.navbar-expand-keep #site-navigation.primary-menu-container.menu-offcanvas-keep .container {
-    flex-direction: row;
-    display: flex;
-    padding: 0;
-    margin: 0; }
+header#header .navbar.navbar-expand-keep .navbar-nav .nav-link {
+  padding-right: .5rem;
+  padding-left: .5rem; }
 
 @media (min-width: 576px) {
   header#header .navbar.navbar-expand-sm #site-navigation.primary-menu-container .primary-navigation,
