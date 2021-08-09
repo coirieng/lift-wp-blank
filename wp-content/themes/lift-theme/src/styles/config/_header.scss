@@ -158,14 +158,14 @@ header.site-header {
 				// }
 			}
 		}
+		#second-nav {
+			flex-direction: column;
+		}
 	}
 	@include menucanvas(all);
 }
 header#header .navbar.navbar-expand-all {
 	@include createmenu;
-	#second-nav {
-		flex-direction: column;
-	}
 }
 header#header .navbar.navbar-expand-keep {
 	@include createmenu;
@@ -332,7 +332,6 @@ header#header .navbar.navbar-expand-keep {
 				}
 			}
 		}
-		
 	}
 }
 

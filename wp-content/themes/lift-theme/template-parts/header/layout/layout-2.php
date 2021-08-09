@@ -5,6 +5,7 @@ $header_offcanvas = $lift_theme['lift-theme-header-offcanvas'];
 $header_menu_toggle = $lift_theme['lift-theme-header-menu-toggle'];
 $header_row = $lift_theme['lift-theme-header-row-option'];
 $header_search_sticky = $lift_theme['lift-theme-header-search-sticky'];
+$header_search_align = $lift_theme['lift-theme-header-search-align'];
 ?>
 <?php get_template_part( 'template-parts/header/site-branding' ); ?>
 
@@ -17,7 +18,7 @@ $header_search_sticky = $lift_theme['lift-theme-header-search-sticky'];
 	<div class="header-wrapper"<?= isset($header_row) && $header_row === '1' ? $build_header_spacing : ''?>>
 		<div class="container<?= isset($header_style) && $header_style === '1' ? '-fluid': ''?>">
 			<?php get_template_part( 'template-parts/header/site-nav' ); ?>
-			<div id="second-nav">
+			<div id="second-nav" class="<?= isset($header_search_align) && $header_search_align !== '' ? ' search-align-'.$header_search_align: ' search-align-right'?>">
 				<?php get_template_part( 'template-parts/header/site-nav-secondary' ); ?>
 				<?php get_template_part( 'template-parts/header/site-search' ); ?>
 			</div>
@@ -25,7 +26,7 @@ $header_search_sticky = $lift_theme['lift-theme-header-search-sticky'];
 	</div>
 	<?php else : ?>
 		<?php get_template_part( 'template-parts/header/site-nav' ); ?>
-		<div id="second-nav">
+		<div id="second-nav" class="<?= isset($header_search_align) && $header_search_align !== '' ? ' search-align-'.$header_search_align: ' search-align-right'?>">
 			<?php get_template_part( 'template-parts/header/site-nav-secondary' ); ?>
 			<?php get_template_part( 'template-parts/header/site-search' ); ?>
 		</div>

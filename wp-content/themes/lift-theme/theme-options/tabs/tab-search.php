@@ -104,7 +104,6 @@
 				'title'    => __( 'Header Search Align', 'lift-theme-options' ),
 				'options' => array(
 					'left' => 'Left', 
-					'center' => 'Center',
 					'right' => 'Right', 
 					), 
 				'default' => 'right'

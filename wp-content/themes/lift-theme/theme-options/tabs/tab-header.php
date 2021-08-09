@@ -39,6 +39,27 @@
                 ),
 				'default'  => '1'
             ),
+            array(
+				'id'       => 'lift-theme-header-second',
+                'type'     => 'switch',
+                'title'    => __( 'Secondary Menu', 'lift-theme-options' ),
+                'default'  => 0,
+                'on'       => 'Enable',
+                'off'      => 'Disable',
+            ),
+            array(
+				'id'       => 'lift-theme-header-second-align',
+                'type'     => 'button_set',
+				'required' => array(
+                    'lift-theme-header-second', '!=', '0',
+                ),
+				'title'    => __( 'Secondary Menu Align', 'lift-theme-options' ),
+				'options' => array(
+					'left' => 'Left', 
+					'right' => 'Right', 
+					), 
+				'default' => 'right'
+            ),
 			array(
 				'id'       => 'lift-theme-header-layout-style',
                 'type'     => 'switch',

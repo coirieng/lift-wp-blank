@@ -13,9 +13,11 @@
 <?php 
 
 global $lift_theme;
+$header_second_menu = $lift_theme['lift-theme-header-second'];
+
 
 ?>
-
+<?php if(isset($header_second_menu) && $header_second_menu === '1') { ?>
 <?php if ( has_nav_menu( 'secondary' ) ) : ?>
 	  <?php
 		wp_nav_menu(
@@ -28,3 +30,4 @@ global $lift_theme;
 		);
 		?>
 <?php endif; ?>
+<?php  } ?>
