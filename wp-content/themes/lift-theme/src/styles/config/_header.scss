@@ -75,7 +75,8 @@ header.site-header {
 
 @mixin createmenu() {
 	#site-navigation.primary-menu-container {
-		.primary-navigation {
+		.primary-navigation,
+		.secondary-navigation {
 			.menu-item {
 				display: flex;
 				flex: 0 0 100%;
@@ -162,11 +163,15 @@ header.site-header {
 }
 header#header .navbar.navbar-expand-all {
 	@include createmenu;
+	#second-nav {
+		flex-direction: column;
+	}
 }
 header#header .navbar.navbar-expand-keep {
 	@include createmenu;
 	#site-navigation.primary-menu-container {
-		.primary-navigation {
+		.primary-navigation,
+		.secondary-navigation {
 			display: flex;
 			flex-direction: row;
 			.menu-item {
@@ -213,7 +218,8 @@ header#header .navbar.navbar-expand-keep {
 
 @mixin createmenutoggle() {
 	#site-navigation.primary-menu-container {
-		.primary-navigation {
+		.primary-navigation,
+		.secondary-navigation {
 			display: flex;
 			flex-direction: row;
 			.sub-menu {

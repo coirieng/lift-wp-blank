@@ -31,10 +31,10 @@
                         'img' => get_template_directory_uri() . '/admin/img/centered-menu.png'
                     ),
                     '3' => array(
-                        'img' => get_template_directory_uri() . '/admin/img/centered-menu-under-logo.png'
+                        'img' => get_template_directory_uri() . '/admin/img/default-header.png'
                     ),
                     '4' => array(
-                        'img' => get_template_directory_uri() . '/admin/img/default-header.png'
+                        'img' => get_template_directory_uri() . '/admin/img/centered-menu-under-logo.png'
                     ),
                 ),
 				'default'  => '1'
