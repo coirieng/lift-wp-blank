@@ -436,6 +436,18 @@ header#header {
 				}
 			}
 		}
+		.navbar.navbar-expand-keep {
+			.menu-main-container {
+				width: 100%;
+				max-width: 100%;
+				align-items: center;
+				justify-content: center;
+				display: inline-flex;
+			}
+			#second-nav {
+				white-space: nowrap;
+			}
+		}
 		// TODO: CHECK IT AGAIN 
 		// .navbar.navbar-expand-keep {
 		// 	.menu-main-container {
@@ -464,6 +476,11 @@ header#header {
 				}
 			}
 		}
+		.navbar.navbar-expand-keep {
+			#site-navigation.primary-menu-container {
+				width: auto;
+			}
+		}
 	}
 }
 
@@ -483,6 +500,17 @@ header#header {
 							width: auto;
 						}
 					}
+				}
+			}
+		}
+		.navbar.navbar-expand-keep {
+			.menu-init {
+				flex-direction: column;
+				.navbar-brand {
+					margin-right: 0;
+				}
+				#site-navigation.primary-menu-container {
+					width: auto;
 				}
 			}
 		}
