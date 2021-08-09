@@ -85,7 +85,7 @@
     padding-left: 0; }
 
 .form-control-sm {
-  min-height: calc(1.5em + (0.5rem + 2px));
+  min-height: calc(1.5em + 0.5rem + 2px);
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem; }
@@ -99,7 +99,7 @@
     margin-inline-end: 0.5rem; }
 
 .form-control-lg {
-  min-height: calc(1.5em + (1rem + 2px));
+  min-height: calc(1.5em + 1rem + 2px);
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   border-radius: 0.3rem; }
@@ -113,13 +113,13 @@
     margin-inline-end: 1rem; }
 
 textarea.form-control, #content #comments #respond .comment-form textarea {
-  min-height: calc(1.5em + (0.75rem + 2px)); }
+  min-height: calc(1.5em + 0.75rem + 2px); }
 
 textarea.form-control-sm {
-  min-height: calc(1.5em + (0.5rem + 2px)); }
+  min-height: calc(1.5em + 0.5rem + 2px); }
 
 textarea.form-control-lg {
-  min-height: calc(1.5em + (1rem + 2px)); }
+  min-height: calc(1.5em + 1rem + 2px); }
 
 .form-control-color {
   max-width: 3rem;
