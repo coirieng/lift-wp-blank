@@ -23,16 +23,12 @@
 		// 		}
 		// 	}
 		// }
-		&.has-secondary-menu {
-			.navbar.navbar-expand-#{$key} {
-				.secondary-navigation {
-					&#second-nav {
-						@include media-breakpoint-up($key) {
-							.search-form {
-								margin-right: .75rem;
-								margin-left: .75rem;
-							}
-						}
+		.navbar.navbar-expand-#{$key} {
+			#second-nav {
+				@include media-breakpoint-up($key) {
+					.search-form {
+						margin-right: .75rem;
+						margin-left: .75rem;
 					}
 				}
 			}
