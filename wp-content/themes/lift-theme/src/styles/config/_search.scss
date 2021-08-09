@@ -633,6 +633,20 @@
 		@include seachalignSticky($v,float);
 		@include seachalignSticky($v,full);
 	}
+	@include seachalign(keep,normal);
+	@include seachalign(keep,toggle);
+	@include seachalign(keep,float);
+	@include seachalign(keep,full);
+	@include seachalignSticky(keep,normal);
+	@include seachalignSticky(keep,toggle);
+	@include seachalignSticky(keep,float);
+	@include seachalignSticky(keep,full);
+
+	@include seachalignSticky(all,normal);
+	@include seachalignSticky(all,toggle);
+	@include seachalignSticky(all,float);
+	@include seachalignSticky(all,full);
+
 }
 
 //////////////////////////////////////////// 

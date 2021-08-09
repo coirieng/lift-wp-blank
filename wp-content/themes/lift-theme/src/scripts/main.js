@@ -90,7 +90,7 @@ var LIFT_APP = {
 	lift_get_header_hover: function lift_get_header_hover() {
 		// TODO: read this one again 
 		if($(window).width() > 0){
-			LIFT_APP.lift_hover_menu('all')
+			LIFT_APP.lift_hover_menu('keep')
 		}
 		if($(window).width() >= LIFT_APP.sm){
 			LIFT_APP.lift_hover_menu('sm')

@@ -81,11 +81,26 @@
                 'off'      => 'Off',
             ),
             array(
+				'id'       => 'lift-theme-header-search-sticky',
+                'type'     => 'switch',
+                // 'required' => array(
+                //     'lift-theme-header-menu-toggle', '!=', 'keep',
+                // ),
+                'required' => array(
+                    array('lift-theme-header-search', '!=', '0'),
+                    array('lift-theme-header-menu-toggle', '!=', 'keep'),
+                ),
+                'title'    => __( 'Header Search Sticky', 'lift-theme-options' ),
+                'default'  => 1,
+                'on'       => 'On',
+                'off'      => 'Off',
+            ),
+            array(
 				'id'       => 'lift-theme-header-search-type',
                 'type'     => 'select',
                 'title'    => __( 'Header Search Layout', 'lift-theme-options' ),
                 'required' => array(
-                    'lift-theme-header-search', '!=', '0',
+                    array('lift-theme-header-search', '!=', '0'),
                 ),
                 'options' => array(
 					'normal' => 'Normal', 
@@ -93,13 +108,14 @@
 					'float' => 'Float', 
 					'full' => 'Full Screen', 
 					), 
-				'default' => 'toggle'
+				'default' => 'float'
             ),
 			array(
 				'id'       => 'lift-theme-header-search-align',
                 'type'     => 'button_set',
 				'required' => array(
-                    'lift-theme-header-search', '!=', '0',
+                    array('lift-theme-header-search', '!=', '0'),
+                    array('lift-theme-header-menu-toggle', '!=', 'all'),
                 ),
 				'title'    => __( 'Header Search Align', 'lift-theme-options' ),
 				'options' => array(
@@ -108,20 +124,7 @@
 					), 
 				'default' => 'right'
             ),
-            array(
-				'id'       => 'lift-theme-header-search-sticky',
-                'type'     => 'switch',
-                // 'required' => array(
-                //     'lift-theme-header-menu-toggle', '!=', 'keep',
-                // ),
-                'required' => array(
-                    'lift-theme-header-search', '!=', '0',
-                ),
-                'title'    => __( 'Header Search Sticky', 'lift-theme-options' ),
-                'default'  => 1,
-                'on'       => 'On',
-                'off'      => 'Off',
-            ),
+            
 			array(
 				'id'       => 'lift-theme-search-header-layout-label',
                 'type'     => 'switch',

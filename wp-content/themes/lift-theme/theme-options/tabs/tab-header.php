@@ -52,7 +52,8 @@
                 'type'     => 'button_set',
 				'required' => array(
                     array('lift-theme-header-second', '!=', '0'),
-                    array('lift-theme-header-kind', '==', '1'),
+                    array('lift-theme-header-kind', '=', '1'),
+                    array('lift-theme-header-menu-toggle', '!=', 'all'),
                 ),
 				'title'    => __( 'Secondary Menu Align', 'lift-theme-options' ),
 				'options' => array(
