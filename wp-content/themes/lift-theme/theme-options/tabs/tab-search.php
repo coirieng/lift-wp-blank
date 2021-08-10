@@ -19,6 +19,18 @@
         'id'         => 'lift-theme-search-layout',
         'subsection' => true,
 		'fields'     => array(
+            array(
+				'id'       => 'lift-theme-search-type',
+                'type'     => 'select',
+                'title'    => __( 'Search Layout', 'lift-theme-options' ),
+                'options' => array(
+					'normal' => 'Normal', 
+					'liner' => 'Liner',
+					'block' => 'Block', 
+					'full' => 'Full width', 
+					), 
+				'default' => 'normal'
+            ),
 			array(
 				'id'       => 'lift-theme-search-layout-label',
                 'type'     => 'switch',

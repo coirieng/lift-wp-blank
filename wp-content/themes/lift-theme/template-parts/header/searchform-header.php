@@ -39,8 +39,8 @@ if(isset($header_value['search_placeholder']) && $header_value['search_placehold
 	$placeholder_value = ' placeholder="'.$header_value['search_placeholder_value'].'"';
 }
 ?>
-<form role="search" <?php echo $lift_theme_aria_label; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Escaped above. ?> method="get" class="search-form<?=$search_value?>" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-	<label for="<?php echo esc_attr( $lift_theme_unique_id ); ?>"><?= $header_value['search_text_value'] !== '' ? $header_value['search_text_value'] : 'Search' ; // phpcs:ignore: WordPress.Security.EscapeOutput.UnsafePrintingFunction -- core trusts translations ?></label>
+<form role="search" <?php echo $lift_theme_aria_label;?> method="get" class="search-form<?=$search_value?>" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+	<label for="<?php echo esc_attr( $lift_theme_unique_id ); ?>"><?= $header_value['search_text_value'] !== '' ? $header_value['search_text_value'] : 'Search'; ?></label>
 	<div class="input-group">
 		<input type="search"<?=$placeholder_value?> id="<?php echo esc_attr( $lift_theme_unique_id ); ?>" class="form-control search-field" value="<?php echo get_search_query(); ?>" name="s" />
 		<!-- <input type="hidden" name="post_type[]" value="book" />

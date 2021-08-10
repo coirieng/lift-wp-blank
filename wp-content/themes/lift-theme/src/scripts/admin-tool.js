@@ -41,7 +41,8 @@ function calljqueruUI() {
 
 $(document).ready(function () {
     calljqueruUI()
-    $('.admintoolbar').append('<a href="javascript:void(0);" id="toggleadmintool">Admin Tool</a>').on('click', function () {
+    $('.admintoolbar').append('<a href="javascript:void(0);" id="toggleadmintool">Admin Tool</a>')
+    $('#toggleadmintool').on('click', function () {
         $('#toggleadmintool').toggleClass('active')
         $('#resultadmin').toggleClass('active')
         $( "#resultadmin" ).draggable({ handle:'#resultadminheader'});
