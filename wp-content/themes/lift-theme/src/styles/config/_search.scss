@@ -13,12 +13,22 @@
 				}
 			}
 		}
-
+		// .navbar.navbar-expand-#{$key} {
+		// 	#second-nav {
+		// 		@include media-breakpoint-up($key) {
+		// 			.search-form.active {
+		// 				margin: 0;
+		// 			}
+		// 		}
+		// 	}
+		// }
 		// &.secondalign-left{
 		// 	.navbar.navbar-expand-#{$key} {
 		// 		#second-nav {
 		// 			@include media-breakpoint-up($key) {
-		// 				// margin-left: .75rem;
+		// 				.search-form.active {
+		// 					margin-left: .75rem;
+		// 				}
 		// 			}
 		// 		}
 		// 	}
@@ -134,18 +144,15 @@
 				// #second-nav {
 				.search-form {
 					@include media-breakpoint-up($key) {
-
 						.search-field,
 						.search-submit {
 							display: none;
 							border: 0;
-
 							&:focus {
 								outline: 0;
 								box-shadow: none;
 							}
 						}
-
 						.search-submit-toggle {
 							display: block;
 							border: none;
@@ -160,41 +167,35 @@
 							-webkit-font-smoothing: inherit;
 							-moz-osx-font-smoothing: inherit;
 							-webkit-appearance: none;
-
 							&::-moz-focus-inner {
 								border: 0;
 								padding: 0;
 							}
 						}
-
 						&.active {
 							position: relative;
-
 							.input-group {
 								position: initial;
 							}
-
 							.search-field {
 								display: block;
 								position: absolute;
 								top: 100%;
 								left: 0;
 								min-width: 200px;
-								border-radius: 0;
+								border-radius: .25rem;
 								border: 1px solid var(--lift-theme-box);
 								z-index: 99999;
 							}
 						}
 					}
 				}
-
 				// }
 			}
 		}
 
 		&.search-#{$style}.secondalign-right {
 			.navbar.navbar-expand-#{$key} {
-
 				// #second-nav {
 				.search-form {
 					@include media-breakpoint-up($key) {
@@ -206,7 +207,6 @@
 						}
 					}
 				}
-
 				// }
 			}
 		}
@@ -323,17 +323,13 @@
 				// }
 			}
 
-			&.secondalign-left {
-				.navbar.navbar-expand-#{$key} {
-
-					// #second-nav {
+			.navbar.navbar-expand-#{$key} {
+				#second-nav {
 					.search-form.active {
 						@include media-breakpoint-up($key) {
 							margin-left: 0;
 						}
 					}
-
-					// }
 				}
 			}
 		}

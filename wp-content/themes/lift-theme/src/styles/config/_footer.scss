@@ -28,6 +28,15 @@
 footer#footer {
 	background-color: var(--lift-theme-light);
 	padding: 2rem 0;
+	nav {
+		.menu,
+		ul,
+		ol,
+		.sub-menu {
+			list-style-type: none;
+			padding: 0;
+		}
+	}
 	.menu {
 		.menu-toggle {
 			display: none;
