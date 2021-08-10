@@ -13,26 +13,6 @@
 				}
 			}
 		}
-		// .navbar.navbar-expand-#{$key} {
-		// 	#second-nav {
-		// 		@include media-breakpoint-up($key) {
-		// 			.search-form.active {
-		// 				margin: 0;
-		// 			}
-		// 		}
-		// 	}
-		// }
-		// &.secondalign-left{
-		// 	.navbar.navbar-expand-#{$key} {
-		// 		#second-nav {
-		// 			@include media-breakpoint-up($key) {
-		// 				.search-form.active {
-		// 					margin-left: .75rem;
-		// 				}
-		// 			}
-		// 		}
-		// 	}
-		// }
 		.navbar.navbar-expand-#{$key} {
 			#second-nav {
 				@include media-breakpoint-up($key) {
@@ -743,6 +723,7 @@
 // SEARCH FOOTER
 //////////////////////////////////////////// 
 
+#content-search,
 #footer.lift-footer {
 	.search-form {
 		display: flex;

@@ -43,14 +43,8 @@ if(isset($header_value['search_placeholder']) && $header_value['search_placehold
 	<label for="<?php echo esc_attr( $lift_theme_unique_id ); ?>"><?= $header_value['search_text_value'] !== '' ? $header_value['search_text_value'] : 'Search'; ?></label>
 	<div class="input-group">
 		<input type="search"<?=$placeholder_value?> id="<?php echo esc_attr( $lift_theme_unique_id ); ?>" class="form-control search-field" value="<?php echo get_search_query(); ?>" name="s" />
-		<!-- <input type="hidden" name="post_type[]" value="book" />
-		<input type="hidden" name="post_type[]" value="magazine" />
-		<input type="hidden" name="post_type[]" value="ebook" />
-		<input type="hidden" name="post_type[]" value="pdf" /> -->
 		<button type="button" class="search-submit-toggle"><i class="fas fa-search"></i></button>
 		<button type="button" class="search-submit-close"><i class="btn-close text-reset"></i></button>
 		<button type="submit" class="btn btn-primary search-submit"><span><?php echo esc_attr_x( 'Search', 'submit button', 'wp-lift-theme' ); ?></span><i class="fas fa-search"></i></button>
-		
-		<!-- <input type="submit" class="btn btn-primary search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button', 'wp-lift-theme' ); ?>" /> -->
 	</div>
 </form>

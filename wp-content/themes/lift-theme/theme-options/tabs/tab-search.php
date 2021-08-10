@@ -78,6 +78,69 @@
 		),
     ) );
 
+    Redux::setSection( $opt_name, array(
+		'title' => __( 'Search Form Widget', 'lift-theme-options' ),
+        'id'         => 'lift-theme-search-widget-widget-layout',
+        'subsection' => true,
+		'fields'     => array(
+            array(
+				'id'       => 'lift-theme-search-widget-type',
+                'type'     => 'select',
+                'title'    => __( 'Search Layout', 'lift-theme-options' ),
+                'options' => array(
+					'normal' => 'Normal', 
+					'liner' => 'Liner',
+					'block' => 'Block', 
+					'full' => 'Full width', 
+					), 
+				'default' => 'normal'
+            ),
+			array(
+				'id'       => 'lift-theme-search-widget-layout-label',
+                'type'     => 'switch',
+                'title'    => __( 'Display Label', 'lift-theme-options' ),
+                'default'  => 0,
+                'on'       => 'On',
+                'off'      => 'Off',
+            ),
+			array(
+				'id'       => 'lift-theme-search-widget-layout-icon',
+                'type'     => 'switch',
+                'title'    => __( 'Display Icon', 'lift-theme-options' ),
+                'default'  => 1,
+                'on'       => 'On',
+                'off'      => 'Off',
+            ),
+			array(
+				'id'       => 'lift-theme-search-widget-layout-text',
+                'type'     => 'switch',
+                'title'    => __( 'Display Label', 'lift-theme-options' ),
+                'default'  => 0,
+                'on'       => 'On',
+                'off'      => 'Off',
+            ),
+			array(
+				'id'       => 'lift-theme-search-widget-layout-placeholder',
+                'type'     => 'switch',
+                'title'    => __( 'Display Placeholder', 'lift-theme-options' ),
+                'default'  => 0,
+                'on'       => 'On',
+                'off'      => 'Off',
+            ),
+			array(
+				'id'       => 'lift-theme-search-widget-layout-text-value',
+                'type'     => 'text',
+                'title'    => __( 'Label Text', 'lift-theme-options' ),
+                'default'  => 'Search:',
+            ),
+			array(
+				'id'       => 'lift-theme-search-widget-layout-placeholder-value',
+                'type'     => 'text',
+                'title'    => __( 'Placeholder Text', 'lift-theme-options' ),
+                'default'  => 'e.g: lift',
+            ),
+		),
+    ) );
 
     Redux::setSection( $opt_name, array(
 		'title' => __( 'Search Form Header', 'lift-theme-options' ),

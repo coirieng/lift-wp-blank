@@ -23,10 +23,16 @@ function lift_styles() {
 	$layout_style = $lift_theme['lift-theme-layout-style'];
 	$layout_size = $lift_theme['lift-theme-layout-size'];
 	$layout_size_value = $lift_theme['lift-theme-layout-size-value'];
-	if($layout_style && $layout_size) {
+	$layout_scrollbar = $lift_theme['lift-theme-global-style-theme-scrollbar'];
+
+	if(isset($layout_style) && ($layout_style === '1' || $layout_style == 1) && $layout_size) {
 		$layout_css .= "#content.lift-content .wpb_wrapper{max-width: ".$layout_size_value."px; margin: 0 auto; width: 100%}";
 		$layout_css .= "#content.lift-content .container-fluid{max-width: ".$layout_size_value."px; margin: 0 auto; width: 100%}";
 		// TODO: layout post detail and archive page 
+	}
+	if(isset($layout_scrollbar) && ($layout_scrollbar === '1' || $layout_scrollbar == 1)) {
+		$layout_css .= "::-webkit-scrollbar{-webkit-appearance:none;height:10px;width:10px}::-webkit-scrollbar-track{background:var(--lift-theme-texthover)}::-webkit-scrollbar-thumb{background:var(--lift-theme-gray);height:100px;border-radius:5px}::-webkit-scrollbar-thumb:hover{background:var(--lift-theme-main)}::-webkit-scrollbar-thumb:focus{background:var(--lift-theme-main)}::-webkit-scrollbar-thumb:active{background:var(--lift-theme-main)}";
+		// TODO: Add more option scrollbar here
 	}
 	// HEADER  
 	$header_style = $lift_theme['lift-theme-header-layout-style'];
@@ -95,10 +101,10 @@ function lift_styles() {
 	$footer_size = $lift_theme['lift-theme-footer-layout-size'];
 	$footer_size_value = $lift_theme['lift-theme-footer-layout-size-value'];
 	$footer_fixed = $lift_theme['lift-theme-footer-layout-fixed'];
-	if($footer_style && $footer_size) {
+	if((isset($footer_style) && ($footer_style === '1' || $footer_style == 1)) && $footer_size) {
 		$footer_css .= "#footer.lift-footer .footer-wrapper{max-width: ".$footer_size_value."px; margin: 0 auto; width: 100%}";
 	}
-	if($footer_fixed) {
+	if(isset($footer_fixed) && ($footer_fixed === '1' || $footer_fixed == 1)) {
 		$footer_css .= "html,body {height: 100%;}.lift-wrapper{flex-direction: column;height: 100%;display:flex}#content.lift-content{flex-shrink: 0}#footer.lift-footer {margin-top: auto}";
 	}
 	// BACKTOTOP

@@ -38,6 +38,15 @@
                 'on'       => 'On',
                 'off'      => 'Off',
             ),
+            array(
+				'id'       => 'lift-theme-global-style-theme-scrollbar',
+                'type'     => 'switch',
+                'title'    => __( 'Scrollbar Style', 'lift-theme-options' ),
+                'default'  => 0,
+                'on'       => 'On',
+                'off'      => 'Off',
+            ),
+            // TODO: Add more option scrollbar here
 		),
     ) );
 
