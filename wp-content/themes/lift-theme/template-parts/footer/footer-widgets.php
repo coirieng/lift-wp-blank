@@ -18,6 +18,10 @@ $global_backtotop_mobile = trim($lift_theme['lift-theme-global-function-backtoto
 $global_backtotop_phalet = trim($lift_theme['lift-theme-global-function-backtotop-phalet']);
 $global_backtotop_tablet = trim($lift_theme['lift-theme-global-function-backtotop-tablet']);
 $global_backtotop_smallpc = trim($lift_theme['lift-theme-global-function-backtotop-smallpc']);
+$copyright_col = $lift_theme['lift-theme-copyright-columns'];
+$copyright_style = $lift_theme['lift-theme-copyright-layout-style'];
+$copyright_row = $lift_theme['lift-theme-copyright-row-option'];
+$copyright_gutters = $lift_theme['lift-theme-copyright-columns-gutters'];
 
 $build_footer_spacing = '';
 if(isset($lift_theme['lift-theme-footer-row-spacing'])) {
@@ -39,6 +43,26 @@ if(isset($lift_theme['lift-theme-footer-row-spacing'])) {
 		$build_footer_spacing = ' style="'.$build_footer_spacing_value.'"';
 	}
 }
+$build_copyright_spacing = '';
+if(isset($lift_theme['lift-theme-copyright-row-spacing'])) {
+	$build_copyright_spacing_value = '';
+	$copyright_value['copyright_row_unit'] = $lift_theme['lift-theme-copyright-row-spacing']['unit'];
+	if(isset($lift_theme['lift-theme-copyright-row-spacing']['padding-top']) && $lift_theme['lift-theme-copyright-row-spacing']['padding-top'] != '') {
+		$build_copyright_spacing_value .= 'padding-top:'.$lift_theme['lift-theme-copyright-row-spacing']['padding-top'].';';
+	}
+	if(isset($lift_theme['lift-theme-copyright-row-spacing']['padding-bottom']) && $lift_theme['lift-theme-copyright-row-spacing']['padding-bottom'] != '') {
+		$build_copyright_spacing_value .= 'padding-bottom:'.$lift_theme['lift-theme-copyright-row-spacing']['padding-bottom'].';';
+	}
+	if(isset($lift_theme['lift-theme-copyright-row-spacing']['padding-left']) && $lift_theme['lift-theme-copyright-row-spacing']['padding-left'] != '') {
+		$build_copyright_spacing_value .= 'padding-left:'.$lift_theme['lift-theme-copyright-row-spacing']['padding-left'].';';
+	}
+	if(isset($lift_theme['lift-theme-copyright-row-spacing']['padding-right']) && $lift_theme['lift-theme-copyright-row-spacing']['padding-right'] != '') {
+		$build_copyright_spacing_value .= 'padding-right:'.$lift_theme['lift-theme-copyright-row-spacing']['padding-right'].';';
+	}
+	if(isset($lift_theme['lift-theme-copyright-row-spacing']['padding-top']) && $lift_theme['lift-theme-copyright-row-spacing']['padding-top'] != '' || isset($lift_theme['lift-theme-copyright-row-spacing']['padding-bottom']) && $lift_theme['lift-theme-copyright-row-spacing']['padding-bottom'] != '' || isset($lift_theme['lift-theme-copyright-row-spacing']['padding-left']) && $lift_theme['lift-theme-copyright-row-spacing']['padding-left'] != '' || isset($lift_theme['lift-theme-copyright-row-spacing']['padding-right']) && $lift_theme['lift-theme-copyright-row-spacing']['padding-right'] != '') {
+		$build_copyright_spacing = ' style="'.$build_copyright_spacing_value.'"';
+	}
+}
 ?>
 
 <!-- LIFT FOOTER  -->
@@ -56,6 +80,15 @@ if(isset($lift_theme['lift-theme-footer-row-spacing'])) {
 				<?php
 					}
 				?>
+			</div>
+		</div>
+	</div>
+	<div id="copyright" class="copyright lift-copyright">
+		<div class="copyright-wrapper"<?= isset($copyright_row) && $copyright_row === '1' ? $build_copyright_spacing : ''?>>
+			<div class="container<?= isset($copyright_style) && $copyright_style === '1' ? '-fluid': ''?>">
+				<div class="row<?= isset($copyright_gutters) && $copyright_gutters !== '-1' ? ' gx-'.$copyright_gutters : ''?>">
+					<div class="col-12 <?=$lift_theme['lift-theme-copyright-columns-'.$i]?>">Lorem ipsum <a href="">dolor sit amet consectetur</a> adipisicing elit. Sapiente obcaecati qui ducimus aut omnis maxime ex quaerat animi amet, sunt, iusto explicabo rem possimus culpa libero nemo accusamus optio molestias.</div>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -476,7 +476,9 @@
                 'output'   => array( 'body' ),
                 'title'    => __( 'Body Background', 'lift-theme-options' ),
                 'subtitle' => __( 'Body background with image, color, etc.', 'lift-theme-options' ),
-                //'default'   => '#FFFFFF',
+                'default'  => array(
+					'background-color' => '#000',
+				),
             ),
 
         ),

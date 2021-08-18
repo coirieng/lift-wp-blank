@@ -1636,8 +1636,7 @@ header#header.menu-layout-4 .navbar.navbar-expand-keep .menu-init {
         background: var(--lift-theme-azure); }
 
 footer#footer {
-  background-color: var(--lift-theme-light);
-  padding: 2rem 0; }
+  background-color: var(--lift-theme-light); }
   footer#footer nav .menu,
   footer#footer nav ul,
   footer#footer nav ol,

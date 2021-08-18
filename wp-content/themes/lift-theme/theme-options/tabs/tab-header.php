@@ -326,7 +326,9 @@
 				),
                 'title'    => __( 'Header color', 'lift-theme-options' ),
                 'subtitle' => __( 'Pick a header color for the theme (default: #000).', 'lift-theme-options' ),
-                'default'  => '#000000',
+                'default'  => array(
+					'color' => '#000',
+				)
             ),
 			array(
                 'id'       => 'lift-theme-header-style-link',

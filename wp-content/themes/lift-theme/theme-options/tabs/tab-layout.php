@@ -114,8 +114,10 @@
                 'type'     => 'background',
 				'output'   => array( '#content' ),
                 'title'    => __( 'Layout background', 'lift-theme-options' ),
-                'subtitle' => __( 'Pick a layout background for the theme (default: #000).', 'lift-theme-options' ),
-                'default'  => '#000000',
+                'subtitle' => __( 'Pick a layout background for the theme (default: #ffffff).', 'lift-theme-options' ),
+                'default'  => array(
+					'background-color' => '#ffffff',
+				),
 				'preview_media' => true,
 				'preview' => false,
 				'class' => 'lift-theme-admin-layout-style lift-theme-admin-layout-style-bg',
@@ -148,7 +150,9 @@
 				// ),
                 'title'    => __( 'Layout color', 'lift-theme-options' ),
                 'subtitle' => __( 'Pick a layout color for the theme (default: #000).', 'lift-theme-options' ),
-                'default'  => '#000000',
+                'default'  => array(
+					'color' => '#000',
+				)
             ),
 			array(
                 'id'       => 'lift-theme-layout-style-link',
