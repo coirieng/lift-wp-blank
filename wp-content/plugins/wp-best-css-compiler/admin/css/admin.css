@@ -2,6 +2,15 @@
  * All of the CSS for your admin-specific functionality should be
  * included in this file.
  */
+.csscompiler hr{
+    margin: 1rem 0
+}
+.csscompiler .button{
+    vertical-align: unset;
+    min-height: initial;
+    line-height: 1.5;
+    padding: 1px 5px;
+}
  .compiler-table {
     border: solid 1px #dadada;
     border-collapse: collapse;

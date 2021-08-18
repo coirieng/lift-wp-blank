@@ -12,10 +12,10 @@
  * @subpackage Best_Css_Compiler/admin/partials
  */
 ?>
-<div class="wrap">
+<div class="wrap csscompiler">
     <div id="wp-content-editor-tools" class="wp-heading">
         <div class="alignleft">
-            <h1><?php echo esc_html__('SCSS/CSS Code', BEST_CSS_COMPILER_DOMAIN )?></h1>
+            <h1 style="padding: 0"><?php echo esc_html__('SCSS/CSS Code', BEST_CSS_COMPILER_DOMAIN )?></h1>
         </div>
         <div class="alignright">
             <a href="admin.php?page=best-css-compiler&action=add" class="button button-primary"><?php echo esc_html__('Add New', BEST_CSS_COMPILER_DOMAIN );?></a>
