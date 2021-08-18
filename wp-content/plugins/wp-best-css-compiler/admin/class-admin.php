@@ -198,19 +198,19 @@ class Best_Css_Compiler_Admin {
 		add_menu_page(  $this->cssCompiler['nicename'],  esc_html__( 'Suggestions', BEST_CSS_COMPILER_DOMAIN ) , 'administrator', $this->cssCompiler['domain'], array( $this, '___displayPluginAdminDashboard' ), 'dashicons-admin-comments', 30 );
 		
 		//add_submenu_page( '$parent_slug, $page_title, $menu_title, $capability, $menu_slug, $function );
-		add_submenu_page( null, esc_html__('Add New Screen', BEST_CSS_COMPILER_DOMAIN ), esc_html__('Add New Screen', BEST_CSS_COMPILER_DOMAIN ), 'administrator', $this->cssCompiler['domain'].'-screen', array( $this, '___displayPluginAdminAddNewScreen' ));
-		add_submenu_page( null, esc_html__('Add New Suggest', BEST_CSS_COMPILER_DOMAIN ), esc_html__('Add New Suggest', BEST_CSS_COMPILER_DOMAIN ), 'administrator', $this->cssCompiler['domain'].'-suggest', array( $this, '___displayPluginAdminAddNewSuggest' ));
+		// add_submenu_page( null, esc_html__('Add New Screen', BEST_CSS_COMPILER_DOMAIN ), esc_html__('Add New Screen', BEST_CSS_COMPILER_DOMAIN ), 'administrator', $this->cssCompiler['domain'].'-screen', array( $this, '___displayPluginAdminAddNewScreen' ));
+		// add_submenu_page( null, esc_html__('Add New Suggest', BEST_CSS_COMPILER_DOMAIN ), esc_html__('Add New Suggest', BEST_CSS_COMPILER_DOMAIN ), 'administrator', $this->cssCompiler['domain'].'-suggest', array( $this, '___displayPluginAdminAddNewSuggest' ));
 
 	}
 	public function ___displayPluginAdminDashboard() {
 		require_once plugin_dir_path( __FILE__ ) . 'partials/admin-display.php';
 	}
-	public function ___displayPluginAdminAddNewScreen() {
-		require_once plugin_dir_path( __FILE__ ) . 'partials/screen.php';
-	}
-	public function ___displayPluginAdminAddNewSuggest() {
-		require_once plugin_dir_path( __FILE__ ) . 'partials/suggest.php';
-	}
+	// public function ___displayPluginAdminAddNewScreen() {
+	// 	require_once plugin_dir_path( __FILE__ ) . 'partials/screen.php';
+	// }
+	// public function ___displayPluginAdminAddNewSuggest() {
+	// 	require_once plugin_dir_path( __FILE__ ) . 'partials/suggest.php';
+	// }
 
 	public function ___app_option_attach_theme_options() {
 		$basic_options_container =  Container::make( 'theme_options', esc_html__( 'Settings', BEST_CSS_COMPILER_DOMAIN ) )

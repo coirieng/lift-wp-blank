@@ -18,8 +18,8 @@
             <h2><?php echo esc_html__('Screens and Suggestions', BEST_CSS_COMPILER_DOMAIN )?></h2>
         </div>
         <div class="alignright">
-            <a href="admin.php?page=best-css-compiler-screen" class="button button-primary"><?php echo esc_html__('Add New Screen', BEST_CSS_COMPILER_DOMAIN );?></a>
-            <a href="admin.php?page=best-css-compiler-suggest" class="button button-primary"><?php echo esc_html__('Add New Suggest', BEST_CSS_COMPILER_DOMAIN );?></a>
+            <!-- <a href="admin.php?page=best-css-compiler-screen" class="button button-primary"><?php echo esc_html__('Add New Screen', BEST_CSS_COMPILER_DOMAIN );?></a>
+            <a href="admin.php?page=best-css-compiler-suggest" class="button button-primary"><?php echo esc_html__('Add New Suggest', BEST_CSS_COMPILER_DOMAIN );?></a> -->
         </div>
         <div class="clear"></div>
     </div>
