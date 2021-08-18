@@ -117,15 +117,19 @@ class Best_Css_Compiler_Admin {
 		$id = isset($_POST['id']) ? (int)$_POST['id'] : '';
 		$type = sanitize_text_field(isset($_POST['type']) ? $_POST['type'] : '');
 		$posttype = sanitize_text_field(isset($_POST['posttype']) ? $_POST['posttype'] : '');
-		$inputValue = sanitize_text_field(isset($_POST['groupName']) ? $_POST['groupName'] : '');
+		$groupName = sanitize_text_field(isset($_POST['groupName']) ? $_POST['groupName'] : '');
+		$groupType = sanitize_text_field(isset($_POST['groupType']) ? $_POST['groupType'] : 1);
+		$groupOrder = sanitize_text_field(isset($_POST['groupOrder']) ? $_POST['groupOrder'] : 1);
 
-		if($posttype === 'screen') {
+		if($posttype === 'csscompiler') {
 			if(isset($type) && $type != '' && $type != null) {
 				if($type === 'edit') {
 					$wpdb->update(
 						$tblGroup,
 						array(
-							'compiler_content'=> $inputValue
+							'compiler_title' => $groupName,
+							'compiler_order' => $groupOrder,
+							'compiler_type' => $groupType
 						),
 						array('compiler_id'=>$id),
 					);
@@ -143,7 +147,9 @@ class Best_Css_Compiler_Admin {
 				$wpdb->insert(
 					$tblGroup,
 					array( 
-						'compiler_content' => $inputValue
+						'compiler_title' => $groupName,
+						'compiler_order' => $groupOrder,
+						'compiler_type' => $groupType
 					),
 					array( '%s' ),
 				);
@@ -164,7 +170,7 @@ class Best_Css_Compiler_Admin {
 	public function ___app_option_attach_theme_options() {
 		$basic_options_container =  Container::make( 'theme_options', esc_html__( 'Compiler Settings', BEST_CSS_COMPILER_DOMAIN ) )
 		->set_page_parent(  $this->cssCompiler['domain'] )
-			->add_tab( esc_html__( 'Output Settings', BEST_CSS_COMPILER_DOMAIN ), self::__chatApp() )
+			->add_tab( esc_html__( 'Output Settings', BEST_CSS_COMPILER_DOMAIN ), self::__compilerApp() )
 			->add_tab( esc_html__( 'Copyright', BEST_CSS_COMPILER_DOMAIN ), self::__copyright() )
 			;
 	}
@@ -174,7 +180,7 @@ class Best_Css_Compiler_Admin {
 		\Carbon_Fields\Carbon_Fields::boot();
 	}
 
-	public function __chatApp() {
+	public function __compilerApp() {
 		$data = array();
 		$data = array(
 			Field::make(

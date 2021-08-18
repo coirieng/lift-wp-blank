@@ -26,7 +26,8 @@ if(isset($_GET['action']) && ($_GET['action'] === 'edit' || $_GET['action'] === 
 		<form action="<?php echo esc_attr( admin_url('admin-post.php') ); ?>" id="frm" method="post">
 			<input type="hidden" name="action" value="submit_data" />
 			<input type="hidden" name="type" value="<?php echo esc_attr(isset($_GET['action'])?$_GET['action']:'')?>" />
-			<input type="hidden" name="posttype" value="screen" />
+			<input type="hidden" name="id" value="<?php echo esc_attr(isset($actionItem->compiler_id)?$actionItem->compiler_id:'')?>" />
+			<input type="hidden" name="posttype" value="csscompiler" />
 
 			<?php if(isset($_GET['action']) && $_GET['action'] === 'delete') { ?>
 				<div class="form-required term-name-wrap">
