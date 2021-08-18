@@ -38,6 +38,9 @@ class Best_Css_Compiler_Activator {
 
 			$sql = "CREATE TABLE $tblGroup (
 				compiler_id int(11) NOT NULL AUTO_INCREMENT,
+				compiler_title text NOT NULL,
+				compiler_type int(11) NOT NULL,
+				compiler_order int(11) NOT NULL,
 				compiler_content text NOT NULL,
 				PRIMARY KEY (compiler_id)
 			) $charset_collate;";
@@ -56,6 +59,19 @@ class Best_Css_Compiler_Activator {
 			$tblGroup, 
 			array( 
 				'compiler_id' => 1, 
+				'compiler_title' => 'style', 
+				'compiler_type' => 1, 
+				'compiler_order' => 10, 
+				'compiler_content' => '', 
+			) 
+		);
+		$wpdb->insert( 
+			$tblGroup, 
+			array( 
+				'compiler_id' => 2, 
+				'compiler_title' => 'style', 
+				'compiler_type' => 2, 
+				'compiler_order' => 10, 
 				'compiler_content' => '', 
 			) 
 		);

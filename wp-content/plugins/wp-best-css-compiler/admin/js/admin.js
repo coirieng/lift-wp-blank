@@ -1,4 +1,4 @@
-(function( $ ) {
+(function ($) {
 	'use strict';
 
 	/**
@@ -29,4 +29,20 @@
 	 * practising this, we should strive to set a better example in our own work.
 	 */
 
-})( jQuery );
+})(jQuery);
+function liftCompilerkeyDown(e) {
+	var deny = "!@#$%^&*()+=[]\\\';,./{}|\":<>?";
+	var e = window.event || e;
+	var key = e.keyCode;
+	if (key == 32) { 
+		e.preventDefault();
+	}
+    if(e.key.match(/[A-Z]/)){
+		e.preventDefault();
+	};
+	for (var i = 0; i < deny.length; i++) {
+		if(deny.charAt(i) === e.key){
+			e.preventDefault();
+		}
+	}
+}

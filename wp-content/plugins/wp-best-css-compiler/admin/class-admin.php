@@ -50,14 +50,14 @@ class Best_Css_Compiler_Admin {
 
 		add_action('admin_menu', array( $this, '___addPluginAdminMenu' ));   
 		add_action( 'admin_post_submit_data', array( $this, '__submitData') );
-		add_filter( 'plugin_action_links',  array( $this, '__suggestion_boxesadd_setting_link_chat') , 10, 2 );
+		add_filter( 'plugin_action_links',  array( $this, '__compiler_boxesadd_setting_link') , 10, 2 );
 	}
 
 	// ADD SETTING LINK 
 
-	public function __suggestion_boxesadd_setting_link_chat( $links, $file ) {
+	public function __compiler_boxesadd_setting_link( $links, $file ) {
 		if( $file === 'wp-best-css-compiler/nguyen-app.php' ){
-			$link = '<a href="'.admin_url('admin.php?page=crb_carbon_fields_container_settings.php').'">'.esc_html__('Settings', BEST_CSS_COMPILER_DOMAIN ).'</a>';
+			$link = '<a href="'.admin_url('admin.php?page=crb_carbon_fields_container_compiler_settings.php').'">'.esc_html__('Settings', BEST_CSS_COMPILER_DOMAIN ).'</a>';
 			array_unshift( $links, $link ); 
 		}
 		return $links;
@@ -113,7 +113,6 @@ class Best_Css_Compiler_Admin {
 	public function __submitData() {
 		global $table_prefix, $wpdb;
 		$tblGroup = $table_prefix . BEST_CSS_COMPILER_PREFIX . '_data';
-		// $tblSuggest = $table_prefix . BEST_CSS_COMPILER_PREFIX . '_suggest';
 
 		$id = isset($_POST['id']) ? (int)$_POST['id'] : '';
 		$type = sanitize_text_field(isset($_POST['type']) ? $_POST['type'] : '');
@@ -157,14 +156,13 @@ class Best_Css_Compiler_Admin {
 
 	public function ___addPluginAdminMenu() {
 		add_menu_page(  $this->cssCompiler['nicename'],  esc_html__( 'CSS Compiler', BEST_CSS_COMPILER_DOMAIN ) , 'administrator', $this->cssCompiler['domain'], array( $this, '___displayPluginAdminDashboard' ), 'dashicons-editor-code', 30 );
-		
 	}
 	public function ___displayPluginAdminDashboard() {
 		require_once plugin_dir_path( __FILE__ ) . 'partials/admin-display.php';
 	}
 
 	public function ___app_option_attach_theme_options() {
-		$basic_options_container =  Container::make( 'theme_options', esc_html__( 'Settings', BEST_CSS_COMPILER_DOMAIN ) )
+		$basic_options_container =  Container::make( 'theme_options', esc_html__( 'Compiler Settings', BEST_CSS_COMPILER_DOMAIN ) )
 		->set_page_parent(  $this->cssCompiler['domain'] )
 			->add_tab( esc_html__( 'Output Settings', BEST_CSS_COMPILER_DOMAIN ), self::__chatApp() )
 			->add_tab( esc_html__( 'Copyright', BEST_CSS_COMPILER_DOMAIN ), self::__copyright() )

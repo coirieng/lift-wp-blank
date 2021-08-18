@@ -11,24 +11,15 @@
  * @package    Best_Css_Compiler
  * @subpackage Best_Css_Compiler/admin/partials
  */
+
+global $table_prefix, $wpdb;
+$tblGroup = $table_prefix . BEST_CSS_COMPILER_PREFIX . '_data';
+$resultsGroup = $wpdb->get_results($wpdb->prepare("SELECT * FROM {$tblGroup}"));
+
+if(isset($_GET['action']) && ($_GET['action'] === 'edit' || $_GET['action'] === 'add' || $_GET['action'] === 'delete')) {
+    include 'compiler.php';
+} else {
+    include 'home.php';
+}
+
 ?>
-<div class="wrap">
-    <div id="wp-content-editor-tools" class="wp-heading">
-        <div class="alignleft">
-            <h1><?php echo esc_html__('SCSS/CSS Code', BEST_CSS_COMPILER_DOMAIN )?></h1>
-        </div>
-        <div class="alignright">
-        </div>
-        <div class="clear"></div>
-        <hr>
-    </div>
-
-    <div class="form-wrap">
-
-    <div class="form-field">
-        
-        <div class="clear"></div>
-    </div>
-
-    </div>
-</div>
