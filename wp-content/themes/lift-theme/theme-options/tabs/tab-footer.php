@@ -19,9 +19,18 @@
         'subsection' => true,
 		'fields'     => array(
 			array(
+				'id'       => 'lift-theme-footer-enable',
+                'type'     => 'switch',
+                'title'    => __( 'Enable', 'lift-theme-options' ),
+                'default'  => 1,
+                'on'       => 'On',
+                'off'      => 'Off',
+            ),
+			array(
 				'id'       => 'lift-theme-footer-layout-fixed',
                 'type'     => 'switch',
-                'title'    => __( 'Sticky footer', 'lift-theme-options' ),
+				'required' => array( 'lift-theme-footer-enable', '=', '1' ),
+				'title'    => __( 'Sticky footer', 'lift-theme-options' ),
                 'subtitle' => __( 'Attach a footer to the bottom of the viewport when page content is short.', 'lift-theme-options' ),
                 'default'  => 0,
                 'on'       => 'Fixed',

@@ -6,6 +6,13 @@
 * @since 2021
 */
 
+// Register Widgets
+add_action( 'widgets_init', 'lift_register_widget_theme' );
+ 
+function lift_register_widget_theme() {
+    register_widget( 'lift_Social_Widget' );
+}
+
 function get_lift_theme_options() {
 
 	$legacy_options  = get_option( 'lift_theme' );

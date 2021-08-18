@@ -27,6 +27,9 @@ require get_template_directory() . '/theme-config/customize-tab.php';
 
 require get_template_directory() . '/classes/Mobile_Detect.php';
 
+// Add new widget in widgets area 
+require get_template_directory() . '/classes/class-nguyen-widget.php';
+
 // SVG Icons class.
 require get_template_directory() . '/classes/class-nguyen-svg-icons.php';
 

@@ -22,6 +22,8 @@ $copyright_col = $lift_theme['lift-theme-copyright-columns'];
 $copyright_style = $lift_theme['lift-theme-copyright-layout-style'];
 $copyright_row = $lift_theme['lift-theme-copyright-row-option'];
 $copyright_gutters = $lift_theme['lift-theme-copyright-columns-gutters'];
+$copyright_enable = $lift_theme['lift-theme-copyright-enable'];
+$footer_enable = $lift_theme['lift-theme-footer-enable'];
 
 $build_footer_spacing = '';
 if(isset($lift_theme['lift-theme-footer-row-spacing'])) {
@@ -66,34 +68,44 @@ if(isset($lift_theme['lift-theme-copyright-row-spacing'])) {
 ?>
 
 <!-- LIFT FOOTER  -->
-<?php if(is_active_sidebar('footer-sidebar-1')) {?>
 <footer id="footer" class="footer lift-footer">
-	<div class="footer-wrapper"<?= isset($footer_row) && $footer_row === '1' ? $build_footer_spacing : ''?>>
-		<div class="container<?= isset($footer_style) && $footer_style === '1' ? '-fluid': ''?>">
-			<div class="row<?= isset($footer_gutters) && $footer_gutters !== '-1' ? ' gx-'.$footer_gutters : ''?>">
-				<?php
-					for ($i=1; $i <= $footer_col ; $i++) { 
-				?>
-					<?php if(is_active_sidebar( 'footer-sidebar-'.$i )) {?>
-						<div class="col-12 <?=$lift_theme['lift-theme-footer-columns-'.$i]?>"><?php dynamic_sidebar( 'footer-sidebar-'.$i ); ?></div>
-					<?php } ?>
-				<?php
-					}
-				?>
-			</div>
-		</div>
-	</div>
-	<div id="copyright" class="copyright lift-copyright">
-		<div class="copyright-wrapper"<?= isset($copyright_row) && $copyright_row === '1' ? $build_copyright_spacing : ''?>>
-			<div class="container<?= isset($copyright_style) && $copyright_style === '1' ? '-fluid': ''?>">
-				<div class="row<?= isset($copyright_gutters) && $copyright_gutters !== '-1' ? ' gx-'.$copyright_gutters : ''?>">
-					<div class="col-12 <?=$lift_theme['lift-theme-copyright-columns-'.$i]?>">Lorem ipsum <a href="">dolor sit amet consectetur</a> adipisicing elit. Sapiente obcaecati qui ducimus aut omnis maxime ex quaerat animi amet, sunt, iusto explicabo rem possimus culpa libero nemo accusamus optio molestias.</div>
+	<?php if(is_active_sidebar('footer-sidebar-1') && (isset($footer_enable) && $footer_enable === '1')) {?>
+		<div class="footer-wrapper"<?= isset($footer_row) && $footer_row === '1' ? $build_footer_spacing : ''?>>
+			<div class="container<?= isset($footer_style) && $footer_style === '1' ? '-fluid': ''?>">
+				<div class="row<?= isset($footer_gutters) && $footer_gutters !== '-1' ? ' gx-'.$footer_gutters : ''?>">
+					<?php
+						for ($i=1; $i <= $footer_col ; $i++) { 
+					?>
+						<?php if(is_active_sidebar( 'footer-sidebar-'.$i )) {?>
+							<div class="col-12 <?=$lift_theme['lift-theme-footer-columns-'.$i]?>"><?php dynamic_sidebar( 'footer-sidebar-'.$i ); ?></div>
+						<?php } ?>
+					<?php
+						}
+					?>
 				</div>
 			</div>
 		</div>
-	</div>
+	<?php } ?>
+	<?php if(is_active_sidebar('copyright-sidebar-1') && (isset($copyright_enable) && $copyright_enable === '1')) {?>
+		<div id="copyright" class="copyright lift-copyright">
+			<div class="copyright-wrapper"<?= isset($copyright_row) && $copyright_row === '1' ? $build_copyright_spacing : ''?>>
+				<div class="container<?= isset($copyright_style) && $copyright_style === '1' ? '-fluid': ''?>">
+					<div class="row<?= isset($copyright_gutters) && $copyright_gutters !== '-1' ? ' gx-'.$copyright_gutters : ''?>">
+						<?php
+							for ($i=1; $i <= $footer_col ; $i++) { 
+						?>
+							<?php if(is_active_sidebar( 'copyright-sidebar-'.$i )) {?>
+								<div class="col-12 <?=$lift_theme['lift-theme-copyright-columns-'.$i]?>"><?php dynamic_sidebar( 'copyright-sidebar-'.$i ); ?></div>
+							<?php } ?>
+						<?php
+							}
+						?>
+					</div>
+				</div>
+			</div>
+		</div>
+	<?php } ?>
 </footer>
-<?php } ?>
 
 <!-- LIFT BACK TO TOP -->
 <?php if($global_backtotop) {?>

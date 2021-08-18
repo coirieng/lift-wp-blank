@@ -19,6 +19,14 @@
         'subsection' => true,
 		'fields'     => array(
 			array(
+				'id'       => 'lift-theme-copyright-enable',
+                'type'     => 'switch',
+                'title'    => __( 'Enable', 'lift-theme-options' ),
+                'default'  => 1,
+                'on'       => 'On',
+                'off'      => 'Off',
+            ),
+			array(
 				'id'       => 'lift-theme-copyright-layout-style',
                 'type'     => 'switch',
                 'title'    => __( 'Containers', 'lift-theme-options' ),
@@ -218,7 +226,7 @@
                     )
                 ),
 				'class' => 'lift-theme-admin-copyright-column lift-theme-admin-copyright-column-img',
-				'default'  => '1'
+				'default'  => '2'
             ),
 			array(
 				'id'       => 'lift-theme-copyright-columns-gutters',
@@ -238,7 +246,7 @@
 				'title'    => __( 'Column 1', 'lift-theme-options' ),
 				'subtitle' => __( 'Class name', 'lift-theme-options' ),
 				'class' => 'lift-theme-admin-copyright-column lift-theme-admin-copyright-column-1',
-				'default'  => 'col-sm-12 col-md-12 col-lg-12'
+				'default'  => 'col-sm-12 col-md-6 col-lg-6'
 			),
 			array(
 				'id'       => 'lift-theme-copyright-columns-2',
@@ -246,7 +254,7 @@
 				'required' => array( 'lift-theme-copyright-columns', '>=', '2' ),
 				'title'    => __( 'Column 2', 'lift-theme-options' ),
 				'class' => 'lift-theme-admin-copyright-column lift-theme-admin-copyright-column-2',
-				'default'  => 'col-sm-12 col-md-12 col-lg-12'
+				'default'  => 'col-sm-12 col-md-6 col-lg-6 text-md-end'
 			),
 			array(
 				'id'       => 'lift-theme-copyright-columns-3',
@@ -254,7 +262,7 @@
 				'required' => array( 'lift-theme-copyright-columns', '>=', '3' ),
 				'title'    => __( 'Column 3', 'lift-theme-options' ),
 				'class' => 'lift-theme-admin-copyright-column lift-theme-admin-copyright-column-3',
-				'default'  => 'col-sm-12 col-md-12 col-lg-12'
+				'default'  => 'col-sm-12 col-md-6 col-lg-6'
 			),
 			array(
 				'id'       => 'lift-theme-copyright-columns-4',
@@ -262,7 +270,7 @@
 				'required' => array( 'lift-theme-copyright-columns', '>=', '4' ),
 				'title'    => __( 'Column 4', 'lift-theme-options' ),
 				'class' => 'lift-theme-admin-copyright-column lift-theme-admin-copyright-column-4',
-				'default'  => 'col-sm-12 col-md-12 col-lg-12'
+				'default'  => 'col-sm-12 col-md-6 col-lg-6'
 			),
 			array(
 				'id'       => 'lift-theme-copyright-columns-5',
@@ -270,7 +278,7 @@
 				'required' => array( 'lift-theme-copyright-columns', '>=', '5' ),
 				'title'    => __( 'Column 5', 'lift-theme-options' ),
 				'class' => 'lift-theme-admin-copyright-column lift-theme-admin-copyright-column-5',
-				'default'  => 'col-sm-12 col-md-12 col-lg-12'
+				'default'  => 'col-sm-12 col-md-6 col-lg-6'
 			),
 			array(
 				'id'       => 'lift-theme-copyright-columns-6',
@@ -278,7 +286,7 @@
 				'required' => array( 'lift-theme-copyright-columns', '>=', '6' ),
 				'title'    => __( 'Column 6', 'lift-theme-options' ),
 				'class' => 'lift-theme-admin-copyright-column lift-theme-admin-copyright-column-6',
-				'default'  => 'col-sm-12 col-md-12 col-lg-12'
+				'default'  => 'col-sm-12 col-md-6 col-lg-6'
 			),
 			array(
 				'id'       => 'lift-theme-copyright-columns-7',
@@ -286,7 +294,7 @@
 				'required' => array( 'lift-theme-copyright-columns', '>=', '7' ),
 				'title'    => __( 'Column 7', 'lift-theme-options' ),
 				'class' => 'lift-theme-admin-copyright-column lift-theme-admin-copyright-column-7',
-				'default'  => 'col-sm-12 col-md-12 col-lg-12'
+				'default'  => 'col-sm-12 col-md-6 col-lg-6'
 			),
 			array(
 				'id'       => 'lift-theme-copyright-columns-8',
@@ -294,7 +302,7 @@
 				'required' => array( 'lift-theme-copyright-columns', '>=', '8' ),
 				'title'    => __( 'Column 8', 'lift-theme-options' ),
 				'class' => 'lift-theme-admin-copyright-column lift-theme-admin-copyright-column-8',
-				'default'  => 'col-sm-12 col-md-12 col-lg-12'
+				'default'  => 'col-sm-12 col-md-6 col-lg-6'
 			),
 			array(
 				'id'       => 'lift-theme-copyright-columns-9',
@@ -302,7 +310,7 @@
 				'required' => array( 'lift-theme-copyright-columns', '>=', '9' ),
 				'title'    => __( 'Column 9', 'lift-theme-options' ),
 				'class' => 'lift-theme-admin-copyright-column lift-theme-admin-copyright-column-9',
-				'default'  => 'col-sm-12 col-md-12 col-lg-12'
+				'default'  => 'col-sm-12 col-md-6 col-lg-6'
 			),
 			array(
 				'id'       => 'lift-theme-copyright-columns-10',
@@ -310,7 +318,7 @@
 				'required' => array( 'lift-theme-copyright-columns', '>=', '10' ),
 				'title'    => __( 'Column 10', 'lift-theme-options' ),
 				'class' => 'lift-theme-admin-copyright-column lift-theme-admin-copyright-column-10',
-				'default'  => 'col-sm-12 col-md-12 col-lg-12'
+				'default'  => 'col-sm-12 col-md-6 col-lg-6'
 			),
 			array(
 				'id'       => 'lift-theme-copyright-columns-11',
@@ -318,7 +326,7 @@
 				'required' => array( 'lift-theme-copyright-columns', '>=', '11' ),
 				'title'    => __( 'Column 11', 'lift-theme-options' ),
 				'class' => 'lift-theme-admin-copyright-column lift-theme-admin-copyright-column-11',
-				'default'  => 'col-sm-12 col-md-12 col-lg-12'
+				'default'  => 'col-sm-12 col-md-6 col-lg-6'
 			),
 			array(
 				'id'       => 'lift-theme-copyright-columns-12',
@@ -326,7 +334,7 @@
 				'required' => array( 'lift-theme-copyright-columns', '>=', '12' ),
 				'title'    => __( 'Column 12', 'lift-theme-options' ),
 				'class' => 'lift-theme-admin-copyright-column lift-theme-admin-copyright-column-12',
-				'default'  => 'col-sm-12 col-md-12 col-lg-12'
+				'default'  => 'col-sm-12 col-md-6 col-lg-6'
 			),
 
         ),
@@ -334,3 +342,25 @@
 		
 	));
 	
+	Redux::setSection( $opt_name, array(
+        'title'      => __( 'Copyright Tags', 'lift-theme-options' ),
+        'id'         => 'lift-theme-copyright-function',
+        'subsection' => true,
+		'fields'     => array(
+			array(
+				'id'       => 'lift-theme-copyright-function-tags',
+                'type'     => 'select',
+                'title'    => __( 'Title Tags', 'lift-theme-options' ),
+                'options'  => array(
+					'h2'       => 'H2', 
+					'h3'       => 'H3', 
+					'h4'       => 'H4', 
+					'h5'       => 'H5', 
+					'h6'       => 'H6', 
+					'p'       => 'p', 
+					'div'       => 'div', 
+				),
+				'default'         => 'h4'
+            ),
+		)
+	));
