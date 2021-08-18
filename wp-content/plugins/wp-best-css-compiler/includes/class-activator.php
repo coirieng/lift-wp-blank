@@ -31,16 +31,15 @@ class Best_Css_Compiler_Activator {
 		// WP Globals
 		global $table_prefix, $wpdb;
 		$charset_collate = $wpdb->get_charset_collate();
-		$tblGroup = $table_prefix . BEST_CSS_COMPILER_PREFIX . '_suggest_group';
-		$tblSuggest = $table_prefix . BEST_CSS_COMPILER_PREFIX . '_suggest';
+		$tblGroup = $table_prefix . BEST_CSS_COMPILER_PREFIX . '_data';
 		if( $wpdb->get_var( "show tables like '$tblGroup'" ) != $tblGroup ) {
 
 			// Query - Create Table
 
 			$sql = "CREATE TABLE $tblGroup (
-				group_id int(11) NOT NULL AUTO_INCREMENT,
-				group_content text NOT NULL,
-				PRIMARY KEY (group_id)
+				compiler_id int(11) NOT NULL AUTO_INCREMENT,
+				compiler_content text NOT NULL,
+				PRIMARY KEY (compiler_id)
 			) $charset_collate;";
 
 			require_once( ABSPATH . '/wp-admin/includes/upgrade.php' );
@@ -49,26 +48,6 @@ class Best_Css_Compiler_Activator {
 			self::iniDB_InsertGroup($tblGroup);
 
 		}	
-		if( $wpdb->get_var( "show tables like '$tblSuggest'" ) != $tblSuggest ) {
-
-			// Query - Create Table
-
-			$sql = "CREATE TABLE $tblSuggest (
-				suggest_id int(11) NOT NULL AUTO_INCREMENT,
-				suggest_time datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,
-				suggest_content text NOT NULL,
-				group_id int(11) NOT NULL,
-				target_id int(11) NOT NULL,
-				PRIMARY KEY (suggest_id)
-			) $charset_collate;";
-
-			require_once( ABSPATH . '/wp-admin/includes/upgrade.php' );
-			dbDelta( $sql );
-
-			self::iniDB_InsertSuggest($tblSuggest);
-
-		}	
-
 	}
 
 	private function iniDB_InsertGroup($tblGroup) {
@@ -76,59 +55,9 @@ class Best_Css_Compiler_Activator {
 		$wpdb->insert( 
 			$tblGroup, 
 			array( 
-				'group_id' => 1, 
-				'group_content' => 'Screen 1', 
+				'compiler_id' => 1, 
+				'compiler_content' => '', 
 			) 
-		);
-		$wpdb->insert( 
-			$tblGroup, 
-			array( 
-				'group_id' => 2, 
-				'group_content' => 'Screen 2', 
-			) 
-		);
-	}
-	private function iniDB_InsertSuggest($tblSuggest) {
-		global $wpdb;
-		$wpdb->insert( 
-			$tblSuggest, 
-			array( 
-				'suggest_id' => 1, 
-				'suggest_time' => current_time( 'mysql' ), 
-				'suggest_content' => 'Hello', 
-				'group_id' => 1,
-				'target_id' => 2
-			),
-		);
-		$wpdb->insert( 
-			$tblSuggest, 
-			array( 
-				'suggest_id' => 2, 
-				'suggest_time' => current_time( 'mysql' ), 
-				'suggest_content' => 'Hello 2', 
-				'group_id' => 1,
-				'target_id' => 2
-			),
-		);
-		$wpdb->insert( 
-			$tblSuggest, 
-			array( 
-				'suggest_id' => 3, 
-				'suggest_time' => current_time( 'mysql' ), 
-				'suggest_content' => 'Hello 3', 
-				'group_id' => 2,
-				'target_id' => 0
-			),
-		);
-		$wpdb->insert( 
-			$tblSuggest, 
-			array( 
-				'suggest_id' => 4, 
-				'suggest_time' => current_time( 'mysql' ), 
-				'suggest_content' => 'Hello 4', 
-				'group_id' => 2,
-				'target_id' => 0
-			),
 		);
 	}
 

@@ -116,7 +116,7 @@ msgid "Author"
 msgstr ""
 
 #: admin/partials/admin-display.php:18
-msgid "Screens and Suggestions"
+msgid "SCSS/CSS Code"
 msgstr ""
 
 #: admin/partials/admin-display.php:44 admin/partials/admin-display.php:63
@@ -131,7 +131,7 @@ msgid "Delete"
 msgstr ""
 
 #: admin/partials/admin-display.php:61
-msgid "Suggestions"
+msgid "SCSS/CSS Code"
 msgstr ""
 
 #: admin/partials/admin-display.php:62

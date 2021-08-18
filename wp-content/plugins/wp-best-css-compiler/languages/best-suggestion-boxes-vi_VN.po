@@ -121,7 +121,7 @@ msgid "Author"
 msgstr "Tác giả"
 
 #: admin/partials/admin-display.php:18
-msgid "Screens and Suggestions"
+msgid "SCSS/CSS Code"
 msgstr "Màn hình và gợi ý"
 
 #: admin/partials/admin-display.php:44 admin/partials/admin-display.php:63
@@ -136,7 +136,7 @@ msgid "Delete"
 msgstr "Xóa"
 
 #: admin/partials/admin-display.php:61
-msgid "Suggestions"
+msgid "SCSS/CSS Code"
 msgstr "Các gợi ý"
 
 #: admin/partials/admin-display.php:62

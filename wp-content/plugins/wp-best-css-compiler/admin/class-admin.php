@@ -112,50 +112,13 @@ class Best_Css_Compiler_Admin {
 
 	public function __submitData() {
 		global $table_prefix, $wpdb;
-		$tblGroup = $table_prefix . BEST_CSS_COMPILER_PREFIX . '_suggest_group';
-		$tblSuggest = $table_prefix . BEST_CSS_COMPILER_PREFIX . '_suggest';
+		$tblGroup = $table_prefix . BEST_CSS_COMPILER_PREFIX . '_data';
+		// $tblSuggest = $table_prefix . BEST_CSS_COMPILER_PREFIX . '_suggest';
 
 		$id = isset($_POST['id']) ? (int)$_POST['id'] : '';
 		$type = sanitize_text_field(isset($_POST['type']) ? $_POST['type'] : '');
 		$posttype = sanitize_text_field(isset($_POST['posttype']) ? $_POST['posttype'] : '');
 		$inputValue = sanitize_text_field(isset($_POST['groupName']) ? $_POST['groupName'] : '');
-		$groupTarget = isset($_POST['groupTarget']) ? (int)$_POST['groupTarget'] : '';
-		$idTarget = isset($_POST['idTarget']) ? (int)$_POST['idTarget'] : '';
-
-		if($posttype === 'suggest') {
-			if(isset($type) && $type != '' && $type != null) {
-				if($type === 'edit') {
-					$wpdb->update(
-						$tblSuggest,
-						array(
-							'suggest_content'=> $inputValue,
-							'group_id' => $groupTarget,
-							'target_id' => $idTarget,
-						),
-						array('suggest_id'=>$id),
-					);
-				}
-				if($type === 'delete') {
-					$wpdb->delete(
-						$tblSuggest,
-						array(
-							'suggest_id'=> $id
-						),
-						array('%d'),
-					);
-				}
-			} else {
-				$wpdb->insert(
-					$tblSuggest,
-					array( 
-						'suggest_content' => $inputValue,
-						'group_id' => $groupTarget,
-						'target_id' => $idTarget,
-					),
-					array( '%s' ),
-				);
-			}
-		}
 
 		if($posttype === 'screen') {
 			if(isset($type) && $type != '' && $type != null) {
@@ -163,16 +126,16 @@ class Best_Css_Compiler_Admin {
 					$wpdb->update(
 						$tblGroup,
 						array(
-							'group_content'=> $inputValue
+							'compiler_content'=> $inputValue
 						),
-						array('group_id'=>$id),
+						array('compiler_id'=>$id),
 					);
 				}
 				if($type === 'delete') {
 					$wpdb->delete(
 						$tblGroup,
 						array(
-							'group_id'=> $id
+							'compiler_id'=> $id
 						),
 						array('%d'),
 					);
@@ -181,7 +144,7 @@ class Best_Css_Compiler_Admin {
 				$wpdb->insert(
 					$tblGroup,
 					array( 
-						'group_content' => $inputValue
+						'compiler_content' => $inputValue
 					),
 					array( '%s' ),
 				);
@@ -189,36 +152,21 @@ class Best_Css_Compiler_Admin {
 		}
 	
 		wp_redirect('admin.php?page=best-css-compiler');
-		// wp_redirect($_SERVER["HTTP_REFERER"]);
 	}
 
 
 	public function ___addPluginAdminMenu() {
-		//add_menu_page( $page_title, $menu_title, $capability, $menu_slug, $function, $icon_url, $position );
-		add_menu_page(  $this->cssCompiler['nicename'],  esc_html__( 'Suggestions', BEST_CSS_COMPILER_DOMAIN ) , 'administrator', $this->cssCompiler['domain'], array( $this, '___displayPluginAdminDashboard' ), 'dashicons-admin-comments', 30 );
+		add_menu_page(  $this->cssCompiler['nicename'],  esc_html__( 'CSS Compiler', BEST_CSS_COMPILER_DOMAIN ) , 'administrator', $this->cssCompiler['domain'], array( $this, '___displayPluginAdminDashboard' ), 'dashicons-editor-code', 30 );
 		
-		//add_submenu_page( '$parent_slug, $page_title, $menu_title, $capability, $menu_slug, $function );
-		// add_submenu_page( null, esc_html__('Add New Screen', BEST_CSS_COMPILER_DOMAIN ), esc_html__('Add New Screen', BEST_CSS_COMPILER_DOMAIN ), 'administrator', $this->cssCompiler['domain'].'-screen', array( $this, '___displayPluginAdminAddNewScreen' ));
-		// add_submenu_page( null, esc_html__('Add New Suggest', BEST_CSS_COMPILER_DOMAIN ), esc_html__('Add New Suggest', BEST_CSS_COMPILER_DOMAIN ), 'administrator', $this->cssCompiler['domain'].'-suggest', array( $this, '___displayPluginAdminAddNewSuggest' ));
-
 	}
 	public function ___displayPluginAdminDashboard() {
 		require_once plugin_dir_path( __FILE__ ) . 'partials/admin-display.php';
 	}
-	// public function ___displayPluginAdminAddNewScreen() {
-	// 	require_once plugin_dir_path( __FILE__ ) . 'partials/screen.php';
-	// }
-	// public function ___displayPluginAdminAddNewSuggest() {
-	// 	require_once plugin_dir_path( __FILE__ ) . 'partials/suggest.php';
-	// }
 
 	public function ___app_option_attach_theme_options() {
 		$basic_options_container =  Container::make( 'theme_options', esc_html__( 'Settings', BEST_CSS_COMPILER_DOMAIN ) )
 		->set_page_parent(  $this->cssCompiler['domain'] )
-			// ->set_page_menu_title( 'App Settings' )
-			// ->set_page_menu_position(2)
-			// ->set_icon( 'dashicons-admin-generic' )
-			->add_tab( esc_html__( 'Settings', BEST_CSS_COMPILER_DOMAIN ), self::__chatApp() )
+			->add_tab( esc_html__( 'Output Settings', BEST_CSS_COMPILER_DOMAIN ), self::__chatApp() )
 			->add_tab( esc_html__( 'Copyright', BEST_CSS_COMPILER_DOMAIN ), self::__copyright() )
 			;
 	}
@@ -234,43 +182,14 @@ class Best_Css_Compiler_Admin {
 			Field::make(
 			'checkbox', 
 			'___best_css_compiler_enable',
-			esc_html__('Enable', BEST_CSS_COMPILER_DOMAIN)
+			esc_html__('Insert CSS into head tag', BEST_CSS_COMPILER_DOMAIN)
 			)->set_option_value( 'yes' ),
-			Field::make( 'text', '__best_css_compiler_title', esc_html__( 'Title', BEST_CSS_COMPILER_DOMAIN ) )
-			->set_default_value(esc_html__('Chat with us!', BEST_CSS_COMPILER_DOMAIN ))
-			->set_classes( 'lift-cabon-width-class' )
-			->set_width(100),
-			Field::make( 'image', '__best_css_compiler_logo', esc_html__( 'Logo', BEST_CSS_COMPILER_DOMAIN ) )
-			->set_value_type( 'url' )
-            ->set_visible_in_rest_api( $visible = true )
-			->set_width(100),
-			Field::make( 'color', '__best_css_compiler_style', esc_html__( 'Style color', BEST_CSS_COMPILER_DOMAIN ) )
-			->set_alpha_enabled( true )
-			->set_width(100),	
-			Field::make( 'text', '__best_css_compiler_size', esc_html__( 'Icon Size', BEST_CSS_COMPILER_DOMAIN ) )
-			->set_default_value('16px')
-			->set_width(12.5),
-			Field::make( 'text', '__best_css_compiler_title_size', esc_html__( 'Title Size', BEST_CSS_COMPILER_DOMAIN ) )
-			->set_default_value('24px')
-			->set_width(12.5),
-			Field::make( 'text', '__best_css_compiler_content_size', esc_html__( 'Font Size', BEST_CSS_COMPILER_DOMAIN ) )
-			->set_default_value('16px')
-			->set_width(12.5),
-			Field::make( 'select', '__best_css_compiler_position', esc_html__( 'Position', BEST_CSS_COMPILER_DOMAIN ) )
-			->add_options( array(
-				'bottomright' => esc_html__( 'Bottom Right', BEST_CSS_COMPILER_DOMAIN ),
-				'bottomleft' => esc_html__( 'Bottom Left', BEST_CSS_COMPILER_DOMAIN ),
-				'topright' => esc_html__( 'Top Right', BEST_CSS_COMPILER_DOMAIN ),
-				'topleft' => esc_html__( 'Top Left', BEST_CSS_COMPILER_DOMAIN ),
-			) )
-			->set_default_value('bottomright')
-			->set_width(12.5),
-			Field::make( 'text', '__best_css_compiler_padding_x', esc_html__( 'Padding X', BEST_CSS_COMPILER_DOMAIN ) )
-			->set_default_value('2em')
-			->set_width(12.5),
-			Field::make( 'text', '__best_css_compiler_padding_y', esc_html__( 'Padding Y', BEST_CSS_COMPILER_DOMAIN ) )
-			->set_default_value('2em')
-			->set_width(12.5),
+			Field::make( 'text', '__best_css_compiler_name', esc_html__( 'CSS File name', BEST_CSS_COMPILER_DOMAIN ) )
+			->set_default_value('public')
+			->set_width(50),
+			Field::make( 'text', '__best_css_compiler_position', esc_html__( 'Position', BEST_CSS_COMPILER_DOMAIN ) )
+			->set_default_value('30')
+			->set_width(50),
 		);
 		return $data;
 	}
