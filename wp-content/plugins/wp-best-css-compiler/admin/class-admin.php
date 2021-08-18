@@ -48,7 +48,7 @@ class Best_Css_Compiler_Admin {
 		add_action( 'carbon_fields_register_fields', array( $this, '___app_option_attach_theme_options' ));
 		add_action( 'after_setup_theme', array( $this, '__settingUP' ));
 
-		add_action('admin_menu', array( $this, '___addPluginAdminMenu' ));   
+		add_action( 'admin_menu', array( $this, '___addPluginAdminMenu' ));   
 		add_action( 'admin_post_submit_data', array( $this, '__submitData') );
 		add_filter( 'plugin_action_links',  array( $this, '__compiler_boxesadd_setting_link') , 10, 2 );
 	}
@@ -143,20 +143,31 @@ class Best_Css_Compiler_Admin {
 						array('%d'),
 					);
 				}
+				if($type === 'add') {
+					$wpdb->insert(
+						$tblGroup,
+						array( 
+							'compiler_title' => $groupName,
+							'compiler_order' => $groupOrder,
+							'compiler_type' => $groupType
+						),
+						array( '%s' ),
+					);
+				}
 			} else {
-				$wpdb->insert(
-					$tblGroup,
-					array( 
-						'compiler_title' => $groupName,
-						'compiler_order' => $groupOrder,
-						'compiler_type' => $groupType
-					),
-					array( '%s' ),
-				);
+				// $wpdb->insert(
+				// 	$tblGroup,
+				// 	array( 
+				// 		'compiler_title' => $groupName,
+				// 		'compiler_order' => $groupOrder,
+				// 		'compiler_type' => $groupType
+				// 	),
+				// 	array( '%s' ),
+				// );
 			}
+			wp_redirect('admin.php?page=best-css-compiler');
 		}
 	
-		wp_redirect('admin.php?page=best-css-compiler');
 	}
 
 

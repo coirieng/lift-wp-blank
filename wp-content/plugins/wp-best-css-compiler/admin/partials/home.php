@@ -27,7 +27,7 @@
     <div class="form-wrap">
         <?php
         if(isset($resultsGroup) && is_array($resultsGroup) && count($resultsGroup) > 0) {
-            echo '<table class="nguyenapp-table">';
+            echo '<table class="compiler-table">';
             echo '<thead>
             <tr>
             <td>'.esc_html__('Name', BEST_CSS_COMPILER_DOMAIN ).'</td>
