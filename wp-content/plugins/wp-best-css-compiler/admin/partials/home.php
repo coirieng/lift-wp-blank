@@ -40,12 +40,12 @@
         ?>
             <tr>
                 <td>
-                    <a href="#" class="button"><strong><?php echo esc_attr($item->compiler_title); ?><?php echo (esc_attr($item->compiler_type) == 1) ? '.scss' : '.css'; ?></strong></a>
+                    <a href="admin.php?page=best-css-compiler&id=<?php echo esc_attr($item->compiler_id)?>&action=editor" class="button"><strong><?php echo esc_attr($item->compiler_title); ?><?php echo (esc_attr($item->compiler_type) == 1) ? '.scss' : '.css'; ?></strong></a>
                 </td>
                 <td class="<?php echo (esc_attr($item->compiler_type) == 1) ? 'admin-lift-compiler-text-danger' : ''; ?>"><?php echo (esc_attr($item->compiler_type) == 1) ? 'SCSS' : 'CSS'; ?></td>
-                <td><a href="admin.php?page=best-css-compiler&id=<?php echo esc_attr($item->compiler_id)?>&action=edit"><?php echo esc_html__('Edit', BEST_CSS_COMPILER_DOMAIN )?></a>
+                <td class="text-center"><a href="admin.php?page=best-css-compiler&id=<?php echo esc_attr($item->compiler_id)?>&action=edit"><?php echo esc_html__('Edit', BEST_CSS_COMPILER_DOMAIN )?></a>
                 </td>
-                <td><a href="admin.php?page=best-css-compiler&id=<?php echo esc_attr($item->compiler_id)?>&action=delete" onclick="return confirm('<?php echo esc_html__('Are you sure?', BEST_CSS_COMPILER_DOMAIN )?>')"><?php echo esc_html__('Delete', BEST_CSS_COMPILER_DOMAIN )?></a>
+                <td class="text-center"><a href="admin.php?page=best-css-compiler&id=<?php echo esc_attr($item->compiler_id)?>&action=delete" onclick="return confirm('<?php echo esc_html__('Are you sure?', BEST_CSS_COMPILER_DOMAIN )?>')"><?php echo esc_html__('Delete', BEST_CSS_COMPILER_DOMAIN )?></a>
                 </td>
             </tr>
             <div class="clear"></div>

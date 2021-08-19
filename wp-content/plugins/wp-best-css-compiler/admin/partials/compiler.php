@@ -13,7 +13,7 @@
  */
 
 
-if(isset($_GET['action']) && ($_GET['action'] === 'edit' || $_GET['action'] === 'delete')) {
+if(isset($_GET['action']) && ($_GET['action'] === 'edit' || $_GET['action'] === 'delete') || $_GET['action'] === 'editor') {
 	(!isset($_GET['id']) || $_GET['id'] == '' || $_GET['id'] == null) ? wp_redirect('./') : null;
 	$actionItem = $wpdb->get_results($wpdb->prepare("SELECT * FROM {$tblGroup} WHERE compiler_id = {$_GET['id']} LIMIT 1"))[0];
 }
@@ -33,7 +33,14 @@ if(isset($_GET['action']) && ($_GET['action'] === 'edit' || $_GET['action'] === 
 				<div class="form-required term-name-wrap">
 					<label for="groupName"><strong><?php echo esc_attr(isset($actionItem->compiler_title)?$actionItem->compiler_title:'')?><?php echo (esc_attr($actionItem->compiler_type) == 1) ? '.scss' : '.css'; ?></strong></label>
 				</div>
-			<?php } else { ?>
+			<?php } else if(isset($_GET['action']) && $_GET['action'] === 'editor') { ?>
+				<div class="form-required term-name-wrap">
+					<label for="groupName"><strong><?php echo esc_attr(isset($actionItem->compiler_title)?$actionItem->compiler_title:'')?><?php echo (esc_attr($actionItem->compiler_type) == 1) ? '.scss' : '.css'; ?></strong></label>
+				</div>
+				<div class="form-required term-name-wrap">
+					<textarea id="code_editor_page_head" rows="20" name="groupContent" class="widefat textarea"><?php echo wp_unslash( $actionItem->compiler_content ); ?></textarea>   
+				</div>
+			<?php } else if(isset($_GET['action']) && ($_GET['action'] === 'add' || $_GET['action'] === 'edit')) { ?>
 				<p class="form-required term-name-wrap">
 					<label for="groupName"><?php echo esc_html__('Name', BEST_CSS_COMPILER_DOMAIN )?></label>
 					<input name="groupName" id="groupName" type="text" value="<?php echo esc_attr(isset($actionItem->compiler_title)?$actionItem->compiler_title:'')?>" size="40" placeholder="e.g: style" aria-required="true" onKeyDown="liftCompilerkeyDown(event)">

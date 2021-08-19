@@ -83,6 +83,8 @@ class Best_Css_Compiler_Admin {
 		 * class.
 		 */
 
+		wp_enqueue_style( $this->cssCompiler['domain'] .'-codemirror', plugin_dir_url( __DIR__ ) . 'assets/codemirror/lib/codemirror.css', array(), $this->cssCompiler['version'], 'all' );
+		wp_enqueue_style( $this->cssCompiler['domain'] .'-codemirrortheme', plugin_dir_url( __DIR__ ) . 'assets/codemirror/theme/monokai.css', array(), $this->cssCompiler['version'], 'all' );
 		wp_enqueue_style( $this->cssCompiler['domain'], plugin_dir_url( __FILE__ ) . 'css/admin.css', array(), $this->cssCompiler['version'], 'all' );
 
 	}
@@ -106,6 +108,9 @@ class Best_Css_Compiler_Admin {
 		 * class.
 		 */
 
+		wp_enqueue_script( $this->cssCompiler['domain'] .'-codemirror', plugin_dir_url( __DIR__ ) . 'assets/codemirror/lib/codemirror.js', array( 'jquery' ), $this->cssCompiler['version'], false );
+		wp_enqueue_script( $this->cssCompiler['domain'] .'-codemirrorbracke', plugin_dir_url( __DIR__ ) . 'assets/codemirror/addon/edit/matchbrackets.js', array( 'jquery' ), $this->cssCompiler['version'], false );
+		wp_enqueue_script( $this->cssCompiler['domain'] .'-codemirrormode', plugin_dir_url( __DIR__ ) . 'assets/codemirror/mode/css/css.js', array( 'jquery' ), $this->cssCompiler['version'], false );
 		wp_enqueue_script( $this->cssCompiler['domain'], plugin_dir_url( __FILE__ ) . 'js/admin.js', array( 'jquery' ), $this->cssCompiler['version'], false );
 
 	}

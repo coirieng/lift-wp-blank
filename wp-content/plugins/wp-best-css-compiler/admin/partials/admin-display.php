@@ -16,7 +16,7 @@ global $table_prefix, $wpdb;
 $tblGroup = $table_prefix . BEST_CSS_COMPILER_PREFIX . '_data';
 $resultsGroup = $wpdb->get_results($wpdb->prepare("SELECT * FROM {$tblGroup}"));
 
-if(isset($_GET['action']) && ($_GET['action'] === 'edit' || $_GET['action'] === 'add' || $_GET['action'] === 'delete')) {
+if(isset($_GET['action']) && ($_GET['action'] === 'edit' || $_GET['action'] === 'add' || $_GET['action'] === 'delete' || $_GET['action'] === 'editor')) {
     include 'compiler.php';
 } else {
     include 'home.php';
