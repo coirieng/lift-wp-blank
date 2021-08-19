@@ -123,9 +123,9 @@ class Best_Css_Compiler_Admin {
 	public function __submitData() {
 		global $table_prefix, $wpdb;
 		global $wp_filesystem;
+		WP_Filesystem();
 		$compiler = new Compiler();
 		$tblGroup = $table_prefix . BEST_CSS_COMPILER_PREFIX . '_data';
-		$filename = plugin_dir_url( __DIR__ ) . 'public/css/public.css';
 
 		$id = isset($_POST['id']) ? (int)$_POST['id'] : '';
 		$type = sanitize_text_field(isset($_POST['type']) ? $_POST['type'] : '');
@@ -178,8 +178,7 @@ class Best_Css_Compiler_Admin {
 						WP_Filesystem();
 					}
 					if( $wp_filesystem ) {
-
-						$tmp = '';
+						$filename = plugin_dir_url( __DIR__ ) . 'public/css/'.$groupName.'.css';
 						$css = $compiler->compileString($groupContent)->getCss();
 						$wp_filesystem->put_contents(
 							$filename,
@@ -225,12 +224,17 @@ class Best_Css_Compiler_Admin {
 	public function __compilerApp() {
 		$data = array();
 		$data = array(
+			// Field::make(
+			// 'checkbox', 
+			// '___best_css_compiler_inline',
+			// esc_html__('Insert CSS into head tag', BEST_CSS_COMPILER_DOMAIN)
+			// )->set_option_value( 'yes' ),
 			Field::make(
-			'checkbox', 
-			'___best_css_compiler_enable',
-			esc_html__('Insert CSS into head tag', BEST_CSS_COMPILER_DOMAIN)
-			)->set_option_value( 'yes' ),
-			Field::make( 'text', '__best_css_compiler_name', esc_html__( 'CSS File name', BEST_CSS_COMPILER_DOMAIN ) )
+				'checkbox', 
+				'___best_css_compiler_concat',
+				esc_html__('Concat CSS files', BEST_CSS_COMPILER_DOMAIN)
+				)->set_option_value( 'yes' ),
+			Field::make( 'text', '__best_css_compiler_name', esc_html__( 'Concat CSS File name', BEST_CSS_COMPILER_DOMAIN ) )
 			->set_default_value('public')
 			->set_width(50),
 			Field::make( 'text', '__best_css_compiler_position', esc_html__( 'Position', BEST_CSS_COMPILER_DOMAIN ) )

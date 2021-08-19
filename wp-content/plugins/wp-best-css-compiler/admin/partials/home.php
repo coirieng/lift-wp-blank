@@ -31,7 +31,8 @@
             echo '<thead>
             <tr>
             <td>'.esc_html__('Name', BEST_CSS_COMPILER_DOMAIN ).'</td>
-            <td width="200">'.esc_html__('Type', BEST_CSS_COMPILER_DOMAIN ).'</td>
+            <td width="50">'.esc_html__('Position', BEST_CSS_COMPILER_DOMAIN ).'</td>
+            <td width="100">'.esc_html__('Type', BEST_CSS_COMPILER_DOMAIN ).'</td>
             <td width="20">'.esc_html__('Edit', BEST_CSS_COMPILER_DOMAIN ).'</td>
             <td width="20">'.esc_html__('Delete', BEST_CSS_COMPILER_DOMAIN ).'</td>
             </tr>
@@ -41,6 +42,9 @@
             <tr>
                 <td>
                     <a href="admin.php?page=best-css-compiler&id=<?php echo esc_attr($item->compiler_id)?>&action=editor" class="button"><strong><?php echo esc_attr($item->compiler_title); ?><?php echo (esc_attr($item->compiler_type) == 1) ? '.scss' : '.css'; ?></strong></a>
+                </td>
+                <td>
+                    <strong><?php echo esc_attr($item->compiler_order); ?></strong>
                 </td>
                 <td class="<?php echo (esc_attr($item->compiler_type) == 1) ? 'admin-lift-compiler-text-danger' : ''; ?>"><?php echo (esc_attr($item->compiler_type) == 1) ? 'SCSS' : 'CSS'; ?></td>
                 <td class="text-center"><a href="admin.php?page=best-css-compiler&id=<?php echo esc_attr($item->compiler_id)?>&action=edit"><?php echo esc_html__('Edit', BEST_CSS_COMPILER_DOMAIN )?></a>
