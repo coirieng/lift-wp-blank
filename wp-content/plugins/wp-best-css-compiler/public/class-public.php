@@ -54,25 +54,24 @@ class Best_Css_Compiler_Public {
 	public function enqueue_styles() {
 
 		global $wp_filesystem;
-
+		global $table_prefix, $wpdb;
+		$tblGroup = $table_prefix . BEST_CSS_COMPILER_PREFIX . '_data';
+		$resultsGroup = $wpdb->get_results($wpdb->prepare("SELECT * FROM {$tblGroup}"));
+		
 		if( empty( $wp_filesystem ) ) {
 			require_once( ABSPATH .'/wp-admin/includes/file.php' );
 			WP_Filesystem();
 		}
 
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Best_Css_Compiler_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Best_Css_Compiler_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
+		if(isset($resultsGroup) && is_array($resultsGroup) && count($resultsGroup) > 0) {
+			foreach($resultsGroup as $result) {
+				$file = $wp_filesystem->wp_content_dir() . 'complier/'.$result->compiler_title.'-'.$id.'.css';
+				var_dump($file);
+				var_dump($wp_filesystem->get_contents($file));
+			}
+		}
 
-		wp_enqueue_style( $this->cssCompiler['domain'], $wp_filesystem->wp_content_dir() . 'complier/main-concat.css', array(), $this->cssCompiler['version'], 'all' );
+		wp_enqueue_style( $this->cssCompiler['domain'], $wp_filesystem->wp_content_dir() . 'complier/public-concat.css', array(), $this->cssCompiler['version'], 'all' );
 
 	}
 
