@@ -2,6 +2,7 @@
 
 use Carbon_Fields\Container;
 use Carbon_Fields\Field;
+use ScssPhp\ScssPhp\Compiler;
 
 /**
  * The admin-specific functionality of the plugin.
@@ -85,6 +86,7 @@ class Best_Css_Compiler_Admin {
 
 		wp_enqueue_style( $this->cssCompiler['domain'] .'-codemirror', plugin_dir_url( __DIR__ ) . 'assets/codemirror/lib/codemirror.css', array(), $this->cssCompiler['version'], 'all' );
 		wp_enqueue_style( $this->cssCompiler['domain'] .'-codemirrortheme', plugin_dir_url( __DIR__ ) . 'assets/codemirror/theme/monokai.css', array(), $this->cssCompiler['version'], 'all' );
+		wp_enqueue_style( $this->cssCompiler['domain'] .'-codemirrorhint', plugin_dir_url( __DIR__ ) . 'assets/codemirror/addon/hint/show-hint.css', array(), $this->cssCompiler['version'], 'all' );
 		wp_enqueue_style( $this->cssCompiler['domain'], plugin_dir_url( __FILE__ ) . 'css/admin.css', array(), $this->cssCompiler['version'], 'all' );
 
 	}
@@ -111,13 +113,19 @@ class Best_Css_Compiler_Admin {
 		wp_enqueue_script( $this->cssCompiler['domain'] .'-codemirror', plugin_dir_url( __DIR__ ) . 'assets/codemirror/lib/codemirror.js', array( 'jquery' ), $this->cssCompiler['version'], false );
 		wp_enqueue_script( $this->cssCompiler['domain'] .'-codemirrorbracke', plugin_dir_url( __DIR__ ) . 'assets/codemirror/addon/edit/matchbrackets.js', array( 'jquery' ), $this->cssCompiler['version'], false );
 		wp_enqueue_script( $this->cssCompiler['domain'] .'-codemirrormode', plugin_dir_url( __DIR__ ) . 'assets/codemirror/mode/css/css.js', array( 'jquery' ), $this->cssCompiler['version'], false );
+		wp_enqueue_script( $this->cssCompiler['domain'] .'-codemirrorhint', plugin_dir_url( __DIR__ ) . 'assets/codemirror/addon/hint/show-hint.js', array( 'jquery' ), $this->cssCompiler['version'], false );
+		wp_enqueue_script( $this->cssCompiler['domain'] .'-codemirrorcss', plugin_dir_url( __DIR__ ) . 'assets/codemirror/addon/hint/css-hint.js', array( 'jquery' ), $this->cssCompiler['version'], false );
+		wp_enqueue_script( $this->cssCompiler['domain'] .'-codemirrorcssline', plugin_dir_url( __DIR__ ) . 'assets/codemirror/addon/selection/active-line.js', array( 'jquery' ), $this->cssCompiler['version'], false );
 		wp_enqueue_script( $this->cssCompiler['domain'], plugin_dir_url( __FILE__ ) . 'js/admin.js', array( 'jquery' ), $this->cssCompiler['version'], false );
 
 	}
 
 	public function __submitData() {
 		global $table_prefix, $wpdb;
+		global $wp_filesystem;
+		$compiler = new Compiler();
 		$tblGroup = $table_prefix . BEST_CSS_COMPILER_PREFIX . '_data';
+		$filename = plugin_dir_url( __DIR__ ) . 'public/css/public.css';
 
 		$id = isset($_POST['id']) ? (int)$_POST['id'] : '';
 		$type = sanitize_text_field(isset($_POST['type']) ? $_POST['type'] : '');
@@ -125,6 +133,7 @@ class Best_Css_Compiler_Admin {
 		$groupName = sanitize_text_field(isset($_POST['groupName']) ? $_POST['groupName'] : '');
 		$groupType = sanitize_text_field(isset($_POST['groupType']) ? $_POST['groupType'] : 1);
 		$groupOrder = sanitize_text_field(isset($_POST['groupOrder']) ? $_POST['groupOrder'] : 1);
+		$groupContent = sanitize_textarea_field(isset($_POST['groupContent']) ? $_POST['groupContent'] : '');
 
 		if($posttype === 'csscompiler') {
 			if(isset($type) && $type != '' && $type != null) {
@@ -138,6 +147,7 @@ class Best_Css_Compiler_Admin {
 						),
 						array('compiler_id'=>$id),
 					);
+					wp_redirect('admin.php?page=best-css-compiler');
 				}
 				if($type === 'delete') {
 					$wpdb->delete(
@@ -147,6 +157,7 @@ class Best_Css_Compiler_Admin {
 						),
 						array('%d'),
 					);
+					wp_redirect('admin.php?page=best-css-compiler');
 				}
 				if($type === 'add') {
 					$wpdb->insert(
@@ -158,19 +169,34 @@ class Best_Css_Compiler_Admin {
 						),
 						array( '%s' ),
 					);
+					wp_redirect('admin.php?page=best-css-compiler');
 				}
-			} else {
-				// $wpdb->insert(
-				// 	$tblGroup,
-				// 	array( 
-				// 		'compiler_title' => $groupName,
-				// 		'compiler_order' => $groupOrder,
-				// 		'compiler_type' => $groupType
-				// 	),
-				// 	array( '%s' ),
-				// );
+				if($type === 'editor') {
+					// Compiler to CSS 
+					if( empty( $wp_filesystem ) ) {
+						require_once( ABSPATH .'/wp-admin/includes/file.php' );
+						WP_Filesystem();
+					}
+					if( $wp_filesystem ) {
+
+						$tmp = '';
+						$css = $compiler->compileString($groupContent)->getCss();
+						$wp_filesystem->put_contents(
+							$filename,
+							$css,
+							FS_CHMOD_FILE // predefined mode settings for WP files
+						);
+					}
+					$wpdb->update(
+						$tblGroup,
+						array(
+							'compiler_content' => $groupContent,
+						),
+						array('compiler_id'=>$id),
+					);
+					wp_redirect('admin.php?page=best-css-compiler&id='.$id.'&action=editor');
+				}
 			}
-			wp_redirect('admin.php?page=best-css-compiler');
 		}
 	
 	}

@@ -34,9 +34,9 @@ if(isset($_GET['action']) && ($_GET['action'] === 'edit' || $_GET['action'] === 
 					<label for="groupName"><strong><?php echo esc_attr(isset($actionItem->compiler_title)?$actionItem->compiler_title:'')?><?php echo (esc_attr($actionItem->compiler_type) == 1) ? '.scss' : '.css'; ?></strong></label>
 				</div>
 			<?php } else if(isset($_GET['action']) && $_GET['action'] === 'editor') { ?>
-				<div class="form-required term-name-wrap">
+				<p class="form-required term-name-wrap">
 					<label for="groupName"><strong><?php echo esc_attr(isset($actionItem->compiler_title)?$actionItem->compiler_title:'')?><?php echo (esc_attr($actionItem->compiler_type) == 1) ? '.scss' : '.css'; ?></strong></label>
-				</div>
+				</p>
 				<div class="form-required term-name-wrap">
 					<textarea id="code_editor_page_head" rows="20" name="groupContent" class="widefat textarea"><?php echo wp_unslash( $actionItem->compiler_content ); ?></textarea>   
 				</div>
