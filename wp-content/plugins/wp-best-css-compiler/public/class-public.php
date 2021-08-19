@@ -53,6 +53,13 @@ class Best_Css_Compiler_Public {
 	 */
 	public function enqueue_styles() {
 
+		global $wp_filesystem;
+
+		if( empty( $wp_filesystem ) ) {
+			require_once( ABSPATH .'/wp-admin/includes/file.php' );
+			WP_Filesystem();
+		}
+
 		/**
 		 * This function is provided for demonstration purposes only.
 		 *
@@ -65,7 +72,7 @@ class Best_Css_Compiler_Public {
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->cssCompiler['domain'], plugin_dir_url( __FILE__ ) . 'css/main-concat.css', array(), $this->cssCompiler['version'], 'all' );
+		wp_enqueue_style( $this->cssCompiler['domain'], $wp_filesystem->wp_content_dir() . 'complier/main-concat.css', array(), $this->cssCompiler['version'], 'all' );
 
 	}
 
