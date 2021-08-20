@@ -1,8 +1,10 @@
 #abc {
   background: red;
   lineheight: 1;
+  position: relative;
   color: white;
 }
 #wefwe {
   background: red;
+  font: initial;
 }

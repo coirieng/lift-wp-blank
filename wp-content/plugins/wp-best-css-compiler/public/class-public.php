@@ -71,7 +71,7 @@ class Best_Css_Compiler_Public {
 			foreach($resultsGroup as $result) {
 				$file = $wp_filesystem->wp_content_dir() . 'complier/'.$result->compiler_title.'-'.$result->compiler_id.'.css';
 				if($wp_filesystem->get_contents($file)) {
-					wp_enqueue_style( $this->cssCompiler['domain'],  content_url() . '/complier/'.$result->compiler_title.'-'.$result->compiler_id.'.css'  , array(), $this->cssCompiler['version'], 'all' );
+					wp_enqueue_style( $this->cssCompiler['domain']. '-' . md5($result->compiler_id),  content_url() . '/complier/'.$result->compiler_title.'-'.$result->compiler_id.'.css'  , array(), $this->cssCompiler['version'], 'all' );
 				}
 			}
 		}
@@ -108,9 +108,9 @@ class Best_Css_Compiler_Public {
 				$wp_filesystem->put_contents( $filename, $file_content, FS_CHMOD_FILE);
 			}
 			if(carbon_get_theme_option('__best_css_compiler_name')) {
-				wp_enqueue_style( $this->cssCompiler['domain'],  content_url() . '/complier/'.carbon_get_theme_option('__best_css_compiler_name').'-'.md5($countID).'.css'  , array(), $this->cssCompiler['version'], 'all' );
+				wp_enqueue_style( $this->cssCompiler['domain']. '-' . md5($result->compiler_id),  content_url() . '/complier/'.carbon_get_theme_option('__best_css_compiler_name').'-'.md5($countID).'.css'  , array(), $this->cssCompiler['version'], 'all' );
 			} else {
-				wp_enqueue_style( $this->cssCompiler['domain'],  content_url() . '/complier/compiler-concat-'.md5($countID).'.css'  , array(), $this->cssCompiler['version'], 'all' );
+				wp_enqueue_style( $this->cssCompiler['domain']. '-' . md5($result->compiler_id),  content_url() . '/complier/compiler-concat-'.md5($countID).'.css'  , array(), $this->cssCompiler['version'], 'all' );
 			}
 		}
 
