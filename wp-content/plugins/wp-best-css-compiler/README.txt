@@ -1,6 +1,6 @@
 === Plugin Name ===
 Contributors: baonguyenyam
-Tags: css, scss, sass, less, stylus
+Tags: css, scss, sass, less, stylus, compiler, stylesheet, variables, admin, developer, mixins, functions,
 Requires at least: 4.7
 Tested up to: 5.8
 Stable tag: 1.0.0
@@ -22,4 +22,5 @@ The screenshot is stored in the /assets directory.
 
 = 1.0.0 =
 * Support multi-language
+= 0.5.0 =
 * First version.
