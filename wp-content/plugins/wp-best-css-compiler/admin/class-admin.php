@@ -222,11 +222,11 @@ class Best_Css_Compiler_Admin {
 	public function __compilerApp() {
 		$data = array();
 		$data = array(
-			// Field::make(
-			// 'checkbox', 
-			// '___best_css_compiler_inline',
-			// esc_html__('Insert CSS into head tag', BEST_CSS_COMPILER_DOMAIN)
-			// )->set_option_value( 'yes' ),
+			Field::make(
+			'checkbox', 
+			'___best_css_compiler_inline',
+			esc_html__('Insert CSS into head tag', BEST_CSS_COMPILER_DOMAIN)
+			)->set_option_value( 'yes' ),
 			Field::make(
 				'checkbox', 
 				'___best_css_compiler_concat',

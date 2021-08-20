@@ -47,7 +47,7 @@ class Best_Css_Compiler_Public {
 		$this->cssCompiler = $cssCompiler;
 
 		add_action( 'carbon_fields_fields_registered', array( $this, '__best_css_compiler_init' ) );
-		
+
 	}
 
 	/**
@@ -79,6 +79,94 @@ class Best_Css_Compiler_Public {
 
 	}
 
+	public function enqueue_styles_concat() {
+
+		global $wp_filesystem;
+		global $table_prefix, $wpdb;
+		$tblGroup = $table_prefix . BEST_CSS_COMPILER_PREFIX . '_data';
+		$resultsGroup = $wpdb->get_results($wpdb->prepare("SELECT * FROM {$tblGroup}"));
+		
+		if( empty( $wp_filesystem ) ) {
+			require_once( ABSPATH .'/wp-admin/includes/file.php' );
+			WP_Filesystem();
+		}
+
+		if(isset($resultsGroup) && is_array($resultsGroup) && count($resultsGroup) > 0) {
+			$countID = 0;
+			$file_content = '';
+			foreach($resultsGroup as $result) {
+				$file = $wp_filesystem->wp_content_dir() . 'complier/'.$result->compiler_title.'-'.$result->compiler_id.'.css';
+				if($wp_filesystem->get_contents($file)) {
+					$countID = $countID + (int)$result->compiler_id;
+					$file_content .= $wp_filesystem->get_contents($file);
+				}
+			}
+			if( $wp_filesystem ) {
+				$filename = $wp_filesystem->wp_content_dir() . 'complier/compiler-concat-'.md5($countID).'.css';
+				$contentdir = trailingslashit( $wp_filesystem->wp_content_dir() ); 
+				$wp_filesystem->mkdir( $contentdir. 'complier' );
+				$wp_filesystem->put_contents( $filename, $file_content, FS_CHMOD_FILE);
+			}
+			if(carbon_get_theme_option('__best_css_compiler_name')) {
+				wp_enqueue_style( $this->cssCompiler['domain'],  content_url() . '/complier/'.carbon_get_theme_option('__best_css_compiler_name').'-'.md5($countID).'.css'  , array(), $this->cssCompiler['version'], 'all' );
+			} else {
+				wp_enqueue_style( $this->cssCompiler['domain'],  content_url() . '/complier/compiler-concat-'.md5($countID).'.css'  , array(), $this->cssCompiler['version'], 'all' );
+			}
+		}
+
+
+	}
+
+	public function enqueue_styles_inline() {
+
+		global $wp_filesystem;
+		global $table_prefix, $wpdb;
+		$tblGroup = $table_prefix . BEST_CSS_COMPILER_PREFIX . '_data';
+		$resultsGroup = $wpdb->get_results($wpdb->prepare("SELECT * FROM {$tblGroup}"));
+		
+		if( empty( $wp_filesystem ) ) {
+			require_once( ABSPATH .'/wp-admin/includes/file.php' );
+			WP_Filesystem();
+		}
+
+		if(isset($resultsGroup) && is_array($resultsGroup) && count($resultsGroup) > 0) {
+			foreach($resultsGroup as $result) {
+				$file = $wp_filesystem->wp_content_dir() . 'complier/'.$result->compiler_title.'-'.$result->compiler_id.'.css';
+				if($wp_filesystem->get_contents($file)) {
+					$data = $wp_filesystem->get_contents($file);
+					echo "<style>".$wp_filesystem->get_contents($file)."</style>";
+					// add_action('wp_head', array( $this, '__bestCssCompilerChangeLogo'), 99999);
+				}
+			}
+		}
+	}
+
+	public function enqueue_styles_inline_concat() {
+
+		global $wp_filesystem;
+		global $table_prefix, $wpdb;
+		$tblGroup = $table_prefix . BEST_CSS_COMPILER_PREFIX . '_data';
+		$resultsGroup = $wpdb->get_results($wpdb->prepare("SELECT * FROM {$tblGroup}"));
+		
+		if( empty( $wp_filesystem ) ) {
+			require_once( ABSPATH .'/wp-admin/includes/file.php' );
+			WP_Filesystem();
+		}
+
+		if(isset($resultsGroup) && is_array($resultsGroup) && count($resultsGroup) > 0) {
+			$file_content = '';
+			foreach($resultsGroup as $result) {
+				$file = $wp_filesystem->wp_content_dir() . 'complier/'.$result->compiler_title.'-'.$result->compiler_id.'.css';
+				if($wp_filesystem->get_contents($file)) {
+					$file_content .= $wp_filesystem->get_contents($file);
+				}
+			}
+			echo "<style>".$file_content."</style>";
+		}
+
+
+	}
+
 	/**
 	 * Register the JavaScript for the public-facing side of the site.
 	 *
@@ -102,21 +190,40 @@ class Best_Css_Compiler_Public {
 	}
 
 	public function __best_css_compiler_init() {
-		if(carbon_get_theme_option('___best_css_compiler_concat')) {
-			
-			if(carbon_get_theme_option('__best_css_compiler_name')) {
-				add_action('wp_head', array( $this, '__bestCssCompilerChangeLogo' ), 99999);
+		if(carbon_get_theme_option('___best_css_compiler_inline')) {
+			if(carbon_get_theme_option('___best_css_compiler_concat')) {
+				if(carbon_get_theme_option('__best_css_compiler_position')) {
+					add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles_inline_concat'), carbon_get_theme_option('__best_css_compiler_position') );
+				} else {
+					add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles_inline_concat'), 9999999 );
+				}
+			} else {
+				if(carbon_get_theme_option('__best_css_compiler_position')) {
+					add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles_inline'), carbon_get_theme_option('__best_css_compiler_position') );
+				} else {
+					add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles_inline'), 9999999 );
+				}
 			}
-			if(carbon_get_theme_option('__best_css_compiler_position')) {
-				add_action('wp_head', array( $this, '__bestCssCompilerChangeLogo' ), 99999);
+		} else {
+			if(carbon_get_theme_option('___best_css_compiler_concat')) {
+				if(carbon_get_theme_option('__best_css_compiler_position')) {
+					add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles_concat'), carbon_get_theme_option('__best_css_compiler_position') );
+				} else {
+					add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles_concat'), 9999999 );
+				}
+			} else {
+				if(carbon_get_theme_option('__best_css_compiler_position')) {
+					add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles'), carbon_get_theme_option('__best_css_compiler_position') );
+				} else {
+					add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles'), 9999999 );
+				}
 			}
-			
 		}
 	}
 
-	public function __bestCssCompilerChangeLogo() {
-		echo "<style>html #best-css-compiler.suggestion-js-boxes .suggestion-js-boxes__body__header-cta-icon-avatar {background-image: url(".carbon_get_theme_option('__best_css_compiler_logo').") !important;}</style>";
-	}
+	// public function __bestCssCompilerChangeLogo() {
+	// 	echo "<style>".$this->data."</style>";
+	// }
 
 }
 
