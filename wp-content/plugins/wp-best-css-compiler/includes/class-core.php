@@ -159,8 +159,12 @@ class Best_Css_Compiler {
 
 		$plugin_public = new Best_Css_Compiler_Public( $this->get_bestCssCompiler(), $this->get_version() );
 
+		// if(carbon_get_theme_option('__best_css_compiler_position')) {
+		// 	$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles', carbon_get_theme_option('__best_css_compiler_position') );
+		// } else {
+		// 	$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles', 9999999 );
+		// }
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
-		// $this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 
 	}
 

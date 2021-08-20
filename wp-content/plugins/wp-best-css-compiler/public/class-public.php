@@ -1,4 +1,8 @@
 <?php
+
+use Carbon_Fields\Container;
+use Carbon_Fields\Field;
+
 /**
  * The public-facing functionality of the plugin.
  *
@@ -65,13 +69,13 @@ class Best_Css_Compiler_Public {
 
 		if(isset($resultsGroup) && is_array($resultsGroup) && count($resultsGroup) > 0) {
 			foreach($resultsGroup as $result) {
-				$file = $wp_filesystem->wp_content_dir() . 'complier/'.$result->compiler_title.'-'.$id.'.css';
-				var_dump($file);
-				var_dump($wp_filesystem->get_contents($file));
+				$file = $wp_filesystem->wp_content_dir() . 'complier/'.$result->compiler_title.'-'.$result->compiler_id.'.css';
+				if($wp_filesystem->get_contents($file)) {
+					wp_enqueue_style( $this->cssCompiler['domain'],  content_url() . '/complier/'.$result->compiler_title.'-'.$result->compiler_id.'.css'  , array(), $this->cssCompiler['version'], 'all' );
+				}
 			}
 		}
 
-		wp_enqueue_style( $this->cssCompiler['domain'], $wp_filesystem->wp_content_dir() . 'complier/public-concat.css', array(), $this->cssCompiler['version'], 'all' );
 
 	}
 
