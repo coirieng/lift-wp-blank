@@ -11,7 +11,7 @@
  * Description:       Best CSS Compiler is a CSS preprocessor, a superset of CSS that puts in features that aren’t functional in regular CSS. Best CSS Compiler puts in features to CSS and gets collected into legal CSS
  * Version:           1.0.0
  * Author:            Nguyen Pham
- * Author URI:        https://github.com/wp-best-css-compiler
+ * Author URI:        https://github.com/baonguyenyam/wp-best-css-compiler
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       best-css-compiler

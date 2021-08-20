@@ -5,7 +5,7 @@
  *
  * This file is used to markup the admin-facing aspects of the plugin.
  *
- * @link       https://github.com/wp-best-css-compiler
+ * @link       https://github.com/baonguyenyam/wp-best-css-compiler
  * @since      1.0.0
  *
  * @package    Best_Css_Compiler
@@ -31,6 +31,7 @@
             echo '<thead>
             <tr>
             <td>'.esc_html__('Name', BEST_CSS_COMPILER_DOMAIN ).'</td>
+            <td>'.esc_html__('Hash', BEST_CSS_COMPILER_DOMAIN ).'</td>
             <td width="50">'.esc_html__('Position', BEST_CSS_COMPILER_DOMAIN ).'</td>
             <td width="100">'.esc_html__('Type', BEST_CSS_COMPILER_DOMAIN ).'</td>
             <td width="20">'.esc_html__('Edit', BEST_CSS_COMPILER_DOMAIN ).'</td>
@@ -42,6 +43,9 @@
             <tr>
                 <td>
                     <a href="admin.php?page=best-css-compiler&id=<?php echo esc_attr($item->compiler_id)?>&action=editor" class="button"><strong><?php echo esc_attr($item->compiler_title); ?><?php echo (esc_attr($item->compiler_type) == 1) ? '.scss' : '.css'; ?></strong></a>
+                </td>
+                <td>
+                    <?php echo esc_attr(hash('sha256',$item->compiler_content)); ?>
                 </td>
                 <td>
                     <strong><?php echo esc_attr($item->compiler_order); ?></strong>

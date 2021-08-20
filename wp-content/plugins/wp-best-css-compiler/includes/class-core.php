@@ -6,7 +6,7 @@
  * A class definition that includes attributes and functions used across both the
  * public-facing side of the site and the admin area.
  *
- * @link       https://github.com/wp-best-css-compiler
+ * @link       https://github.com/baonguyenyam/wp-best-css-compiler
  * @since      1.0.0
  *
  * @package    Best_Css_Compiler

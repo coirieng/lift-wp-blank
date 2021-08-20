@@ -6,7 +6,7 @@ use Carbon_Fields\Field;
 /**
  * The public-facing functionality of the plugin.
  *
- * @link       https://github.com/wp-best-css-compiler
+ * @link       https://github.com/baonguyenyam/wp-best-css-compiler
  * @since      1.0.0
  *
  * @package    Best_Css_Compiler
@@ -97,7 +97,7 @@ class Best_Css_Compiler_Public {
 			foreach($resultsGroup as $result) {
 				$file = $wp_filesystem->wp_content_dir() . 'complier/'.$result->compiler_title.'-'.$result->compiler_id.'.css';
 				if($wp_filesystem->get_contents($file)) {
-					$countID .= md5($result->file_content);
+					$countID .= md5($wp_filesystem->get_contents($file));
 					$file_content .= $wp_filesystem->get_contents($file);
 				}
 			}

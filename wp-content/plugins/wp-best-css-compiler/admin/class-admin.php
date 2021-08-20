@@ -7,7 +7,7 @@ use ScssPhp\ScssPhp\Compiler;
 /**
  * The admin-specific functionality of the plugin.
  *
- * @link       https://github.com/wp-best-css-compiler
+ * @link       https://github.com/baonguyenyam/wp-best-css-compiler
  * @since      1.0.0
  *
  * @package    Best_Css_Compiler
@@ -179,19 +179,32 @@ class Best_Css_Compiler_Admin {
 					}
 					if( $wp_filesystem ) {
 						$filename = $wp_filesystem->wp_content_dir() . 'complier/'.$groupName.'-'.$id.'.css';
-						$css = $compiler->compileString($groupContent)->getCss();
-						$contentdir = trailingslashit( $wp_filesystem->wp_content_dir() ); 
-						$wp_filesystem->mkdir( $contentdir. 'complier' );
-						$wp_filesystem->put_contents( $filename, $css, FS_CHMOD_FILE);
+						try {						
+							$css = $compiler->compileString($groupContent)->getCss();
+							$contentdir = trailingslashit( $wp_filesystem->wp_content_dir() ); 
+							$wp_filesystem->mkdir( $contentdir. 'complier' );
+							$wp_filesystem->put_contents( $filename, $css, FS_CHMOD_FILE);
+							$wpdb->update(
+								$tblGroup,
+								array(
+									'compiler_content' => $groupContent,
+								),
+								array('compiler_id'=>$id),
+							);
+							wp_redirect('admin.php?page=best-css-compiler&id='.$id.'&action=editor');
+							die();
+						} catch (\Exception $e) {
+							$wpdb->update(
+								$tblGroup,
+								array(
+									'compiler_content' => $groupContent,
+								),
+								array('compiler_id'=>$id),
+							);
+							wp_redirect('admin.php?page=best-css-compiler&id='.$id.'&action=editor&showerror='.LOG_ERR);
+							die();
+						}
 					}
-					$wpdb->update(
-						$tblGroup,
-						array(
-							'compiler_content' => $groupContent,
-						),
-						array('compiler_id'=>$id),
-					);
-					wp_redirect('admin.php?page=best-css-compiler&id='.$id.'&action=editor');
 				}
 			}
 		}
@@ -230,7 +243,7 @@ class Best_Css_Compiler_Admin {
 			Field::make(
 				'checkbox', 
 				'___best_css_compiler_concat',
-				esc_html__('Concat CSS files', BEST_CSS_COMPILER_DOMAIN)
+				esc_html__('Concat CSS', BEST_CSS_COMPILER_DOMAIN)
 				)->set_option_value( 'yes' ),
 			Field::make( 'text', '__best_css_compiler_name', esc_html__( 'Concat CSS File name', BEST_CSS_COMPILER_DOMAIN ) )
 			->set_default_value('public')

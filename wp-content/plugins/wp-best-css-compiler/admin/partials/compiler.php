@@ -5,7 +5,7 @@
  *
  * This file is used to markup the admin-facing aspects of the plugin.
  *
- * @link       https://github.com/wp-best-css-compiler
+ * @link       https://github.com/baonguyenyam/wp-best-css-compiler
  * @since      1.0.0
  *
  * @package    Best_Css_Compiler
@@ -39,6 +39,11 @@ if(isset($_GET['action']) && ($_GET['action'] === 'edit' || $_GET['action'] === 
 					<input name="groupName" id="groupName" type="hidden" value="<?php echo esc_attr(isset($actionItem->compiler_title)?$actionItem->compiler_title:'')?>" size="40" placeholder="e.g: style" aria-required="true" onKeyDown="liftCompilerkeyDown(event)">
 				</p>
 				<p>Press Ctrl + E or Cmd + E to display autocomplete</p>
+				<?php if(isset($_GET['showerror']) && $_GET['showerror'] !== '') {?>
+					<div class="error">
+						<pre><span>Something wrong at line: </span><font color="#cc0000">'<?php echo esc_attr(1 + (int)$_GET['showerror'])?>'</font> <i>(error=true)</i></pre>
+					</div>
+				<?php } ?>
 				<div class="form-required term-name-wrap">
 					<textarea id="code_editor_page_head" rows="20" name="groupContent" class="widefat textarea"><?php echo wp_unslash( $actionItem->compiler_content ); ?></textarea>   
 				</div>
