@@ -38,10 +38,10 @@ if(isset($_GET['action']) && ($_GET['action'] === 'edit' || $_GET['action'] === 
 					<label for="groupName" class="button"><strong><?php echo esc_attr(isset($actionItem->compiler_title)?$actionItem->compiler_title:'')?><?php echo (esc_attr($actionItem->compiler_type) == 1) ? '.scss' : '.css'; ?></strong></label>
 					<input name="groupName" id="groupName" type="hidden" value="<?php echo esc_attr(isset($actionItem->compiler_title)?$actionItem->compiler_title:'')?>" size="40" placeholder="e.g: style" aria-required="true" onKeyDown="liftCompilerkeyDown(event)">
 				</p>
-				<p>Press Ctrl + E or Cmd + E to display autocomplete</p>
+				<p><?php echo esc_html__('Press Ctrl + E or Cmd + E to display autocomplete', BEST_CSS_COMPILER_DOMAIN )?></p>
 				<?php if(isset($_GET['showerror']) && $_GET['showerror'] !== '') {?>
 					<div class="error">
-						<pre><span>Something wrong at line: </span><font color="#cc0000">'<?php echo esc_attr(1 + (int)$_GET['showerror'])?>'</font> <i>(error=true)</i></pre>
+						<pre><span><?php echo esc_html__('Something wrong at line', BEST_CSS_COMPILER_DOMAIN )?>: </span><font color="#cc0000">'<?php echo esc_attr(1 + (int)$_GET['showerror'])?>'</font> <i>(error=true)</i></pre>
 					</div>
 				<?php } ?>
 				<div class="form-required term-name-wrap">

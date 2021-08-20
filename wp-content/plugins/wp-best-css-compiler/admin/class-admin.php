@@ -263,7 +263,7 @@ class Best_Css_Compiler_Admin {
 					->set_html('
 					
 					<h1>'.esc_html__('Best CSS Compiler', BEST_CSS_COMPILER_DOMAIN ).'</h1>
-					<p>'.esc_html__('A Better Way to Connect With Customers. You don\'t have time to talk with some online customers? This plugin will help you connect with them.', BEST_CSS_COMPILER_DOMAIN ).'</p>
+					<p>'.esc_html__('Best CSS Compiler is a CSS preprocessor, a superset of CSS that puts in features that aren’t functional in regular CSS. Best CSS Compiler puts in features to CSS and gets collected into legal CSS', BEST_CSS_COMPILER_DOMAIN ).'</p>
 					
 					'),
 					Field::make( 'separator', 'crb_separator_1', esc_html__( 'Copyright', BEST_CSS_COMPILER_DOMAIN ) ),

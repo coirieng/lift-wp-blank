@@ -14,12 +14,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Best CSS Compiler
-#: admin/class-admin.php:285
+#: admin/class-admin.php:265
 msgid "Best CSS Compiler"
 msgstr ""
 
 #. Best CSS Compiler is a CSS preprocessor, a superset of CSS that puts in features that aren’t functional in regular CSS. Best CSS Compiler puts in features to CSS and gets collected into legal CSS
-#: admin/class-admin.php:286
+#: admin/class-admin.php:266
 msgid "Best CSS Compiler is a CSS preprocessor, a superset of CSS that puts in features that aren’t functional in regular CSS. Best CSS Compiler puts in features to CSS and gets collected into legal CSS"
 msgstr ""
 
@@ -27,141 +27,110 @@ msgstr ""
 msgid "Nguyen Pham"
 msgstr ""
 
-#: admin/class-admin.php:60 admin/class-admin.php:216 admin/class-admin.php:221
+#: admin/class-admin.php:61 
 msgid "Settings"
 msgstr ""
 
-#: admin/class-admin.php:198
-msgid "Suggestion"
+#: admin/class-admin.php:223 
+msgid "Compiler Settings"
 msgstr ""
 
-#: admin/class-admin.php:201 admin/partials/admin-display.php:21
-msgid "Add New Screen"
+#: admin/class-admin.php:225 
+msgid "Output Settings"
 msgstr ""
 
-#: admin/class-admin.php:202 admin/partials/admin-display.php:22
-msgid "Add New Suggest"
+#: admin/class-admin.php:216 
+msgid "CSS Compiler"
 msgstr ""
 
-#: admin/class-admin.php:222 admin/class-admin.php:289
+#: admin/class-admin.php:226 
+#: admin/class-admin.php:269
 msgid "Copyright"
 msgstr ""
 
-#: admin/class-admin.php:237
-msgid "Enable"
+#: admin/class-admin.php:241 
+msgid "Insert CSS into head tag"
 msgstr ""
 
-#: admin/class-admin.php:239
-msgid "Title"
+#: admin/class-admin.php:246 
+msgid "Concat CSS"
 msgstr ""
 
-#: admin/class-admin.php:240
-msgid "Chat with us!"
+#: admin/class-admin.php:248 
+msgid "Concat CSS File name"
 msgstr ""
 
-#: admin/class-admin.php:243
-msgid "Logo"
-msgstr ""
-
-#: admin/class-admin.php:247
-msgid "Style color"
-msgstr ""
-
-#: admin/class-admin.php:250
-msgid "Icon Size"
-msgstr ""
-
-#: admin/class-admin.php:253
-msgid "Title Size"
-msgstr ""
-
-#: admin/class-admin.php:256
-msgid "Font Size"
-msgstr ""
-
-#: admin/class-admin.php:259
+#: admin/class-admin.php:251 
+#: admin/partials/home.php:35 
 msgid "Position"
 msgstr ""
 
-#: admin/class-admin.php:261
-msgid "Bottom Right"
-msgstr ""
-
-#: admin/class-admin.php:262
-msgid "Bottom Left"
-msgstr ""
-
-#: admin/class-admin.php:263
-msgid "Top Right"
-msgstr ""
-
-#: admin/class-admin.php:264
-msgid "Top Left"
-msgstr ""
-
-#: admin/class-admin.php:268
-msgid "Padding X"
-msgstr ""
-
-#: admin/class-admin.php:271
-msgid "Padding Y"
-msgstr ""
-
-#: admin/class-admin.php:282 admin/class-admin.php:291
+#: admin/class-admin.php:262 
+#: admin/class-admin.php:271 
 msgid "Section Description"
 msgstr ""
 
-#: admin/class-admin.php:294
+#: admin/class-admin.php:274 
 msgid "Author"
 msgstr ""
 
-#: admin/partials/admin-display.php:18
-msgid "SCSS/CSS Code"
+#: admin/partials/compiler.php:23 
+msgid "File's name"
 msgstr ""
 
-#: admin/partials/admin-display.php:44 admin/partials/admin-display.php:63
-#: admin/partials/admin-display.php:70
-msgid "Edit"
+#: admin/partials/compiler.php:41 
+msgid "Press Ctrl + E or Cmd + E to display autocomplete"
 msgstr ""
 
-#: admin/partials/admin-display.php:45 admin/partials/admin-display.php:64
-#: admin/partials/admin-display.php:70 admin/partials/screen.php:47
-#: admin/partials/suggest.php:71
-msgid "Delete"
+#: admin/partials/compiler.php:44 
+msgid "Something wrong at line"
 msgstr ""
 
-#: admin/partials/admin-display.php:61
-msgid "SCSS/CSS Code"
-msgstr ""
-
-#: admin/partials/admin-display.php:62
-msgid "Go to"
-msgstr ""
-
-#: admin/partials/screen.php:27
-msgid "Screen's name"
-msgstr ""
-
-#: admin/partials/screen.php:42
+#: admin/partials/compiler.php:52 
+#: admin/partials/home.php:33 
 msgid "Name"
 msgstr ""
 
-#: admin/partials/screen.php:47 admin/partials/suggest.php:71
+#: admin/partials/compiler.php:56 
+#: admin/partials/home.php:36 
+msgid "Type"
+msgstr ""
+
+#: admin/partials/compiler.php:63 
+msgid "Order"
+msgstr ""
+
+#: admin/partials/compiler.php:68 
+#: admin/partials/home.php:38 
+#: admin/partials/home.php:56 
+msgid "Delete"
+msgstr ""
+
+#: admin/partials/compiler.php:68 
 msgid "Submit"
 msgstr ""
 
-#: admin/partials/suggest.php:28 admin/partials/suggest.php:62
-msgid "Message"
+#: admin/partials/home.php:18 
+msgid "SCSS/CSS Code"
 msgstr ""
 
-#: admin/partials/suggest.php:43
-msgid "Screen"
+#: admin/partials/home.php:21 
+msgid "Add New"
 msgstr ""
 
-#: admin/partials/suggest.php:52
-msgid "Click go to screen"
+#: admin/partials/home.php:34 
+msgid "Hash"
 msgstr ""
 
-#: admin/partials/suggest.php:54
-msgid "None"
+#: admin/partials/home.php:37 
+#: admin/partials/home.php:54 
+msgid "Edit"
+msgstr ""
+
+#: admin/partials/home.php:56 
+msgid "Are you sure?"
+msgstr ""
+
+#: admin/partials/home.php:65 
+msgid "No data found."
 msgstr ""
