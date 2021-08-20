@@ -18,7 +18,7 @@
             <h1 style="padding: 0"><?php echo esc_html__('SCSS/CSS Code', BEST_CSS_COMPILER_DOMAIN )?></h1>
         </div>
         <div class="alignright">
-            <a href="admin.php?page=best-css-compiler&action=add" class="button button-primary"><?php echo esc_html__('Add New', BEST_CSS_COMPILER_DOMAIN );?></a>
+            <a href="admin.php?page=best-css-compiler&action=add" class="button button-primary"><span><?php echo esc_html__('Add New', BEST_CSS_COMPILER_DOMAIN );?></span> <span class="dashicons dashicons-plus"></span></a>
         </div>
         <div class="clear"></div>
         <hr>
@@ -31,9 +31,10 @@
             echo '<thead>
             <tr>
             <td>'.esc_html__('Name', BEST_CSS_COMPILER_DOMAIN ).'</td>
-            <td>'.esc_html__('Hash', BEST_CSS_COMPILER_DOMAIN ).'</td>
+            <td width="150">'.esc_html__('Hash', BEST_CSS_COMPILER_DOMAIN ).'</td>
+            <td width="50">'.esc_html__('Output', BEST_CSS_COMPILER_DOMAIN ).'</td>
             <td width="50">'.esc_html__('Position', BEST_CSS_COMPILER_DOMAIN ).'</td>
-            <td width="100">'.esc_html__('Type', BEST_CSS_COMPILER_DOMAIN ).'</td>
+            <td width="50">'.esc_html__('Type', BEST_CSS_COMPILER_DOMAIN ).'</td>
             <td width="20">'.esc_html__('Edit', BEST_CSS_COMPILER_DOMAIN ).'</td>
             <td width="20">'.esc_html__('Delete', BEST_CSS_COMPILER_DOMAIN ).'</td>
             </tr>
@@ -42,14 +43,13 @@
         ?>
             <tr>
                 <td>
-                    <a href="admin.php?page=best-css-compiler&id=<?php echo esc_attr($item->compiler_id)?>&action=editor" class="button"><strong><?php echo esc_attr($item->compiler_title); ?><?php echo (esc_attr($item->compiler_type) == 1) ? '.scss' : '.css'; ?></strong></a>
+                    <a href="admin.php?page=best-css-compiler&id=<?php echo esc_attr($item->compiler_id)?>&action=editor" class="button"><span class="dashicons dashicons-edit"></span> <strong><?php echo esc_attr($item->compiler_title); ?><?php echo (esc_attr($item->compiler_type) == 1) ? '.scss' : '.css'; ?></strong></a>
                 </td>
                 <td>
                     <?php echo esc_attr(hash('sha256',$item->compiler_content)); ?>
                 </td>
-                <td>
-                    <strong><?php echo esc_attr($item->compiler_order); ?></strong>
-                </td>
+                <td><a href="<?php echo content_url();?>/compiler/<?php echo esc_attr($item->compiler_title); ?>-<?php echo esc_attr($item->compiler_id)?>.css" target="_blank"><strong><?php echo esc_attr($item->compiler_title); ?>.css</strong></a></td>
+                <td><strong><?php echo esc_attr($item->compiler_order); ?></strong></td>
                 <td class="<?php echo (esc_attr($item->compiler_type) == 1) ? 'admin-lift-compiler-text-danger' : ''; ?>"><?php echo (esc_attr($item->compiler_type) == 1) ? 'SCSS' : 'CSS'; ?></td>
                 <td class="text-center"><a href="admin.php?page=best-css-compiler&id=<?php echo esc_attr($item->compiler_id)?>&action=edit"><?php echo esc_html__('Edit', BEST_CSS_COMPILER_DOMAIN )?></a>
                 </td>

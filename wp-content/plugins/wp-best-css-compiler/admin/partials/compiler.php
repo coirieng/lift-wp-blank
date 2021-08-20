@@ -35,7 +35,7 @@ if(isset($_GET['action']) && ($_GET['action'] === 'edit' || $_GET['action'] === 
 				</div>
 			<?php } else if(isset($_GET['action']) && $_GET['action'] === 'editor') { ?>
 				<p class="form-required term-name-wrap">
-					<label for="groupName" class="button"><strong><?php echo esc_attr(isset($actionItem->compiler_title)?$actionItem->compiler_title:'')?><?php echo (esc_attr($actionItem->compiler_type) == 1) ? '.scss' : '.css'; ?></strong></label>
+					<label for="groupName" class="filenamecompiler"><strong><?php echo esc_attr(isset($actionItem->compiler_title)?$actionItem->compiler_title:'')?><?php echo (esc_attr($actionItem->compiler_type) == 1) ? '.scss' : '.css'; ?></strong></label>
 					<input name="groupName" id="groupName" type="hidden" value="<?php echo esc_attr(isset($actionItem->compiler_title)?$actionItem->compiler_title:'')?>" size="40" placeholder="e.g: style" aria-required="true" onKeyDown="liftCompilerkeyDown(event)">
 				</p>
 				<p><?php echo esc_html__('Press Ctrl + E or Cmd + E to display autocomplete', BEST_CSS_COMPILER_DOMAIN )?></p>

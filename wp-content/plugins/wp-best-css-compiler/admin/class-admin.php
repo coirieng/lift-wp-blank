@@ -178,11 +178,11 @@ class Best_Css_Compiler_Admin {
 						WP_Filesystem();
 					}
 					if( $wp_filesystem ) {
-						$filename = $wp_filesystem->wp_content_dir() . 'complier/'.$groupName.'-'.$id.'.css';
+						$filename = $wp_filesystem->wp_content_dir() . 'compiler/'.$groupName.'-'.$id.'.css';
 						try {						
 							$css = $compiler->compileString($groupContent)->getCss();
 							$contentdir = trailingslashit( $wp_filesystem->wp_content_dir() ); 
-							$wp_filesystem->mkdir( $contentdir. 'complier' );
+							$wp_filesystem->mkdir( $contentdir. 'compiler' );
 							$wp_filesystem->put_contents( $filename, $css, FS_CHMOD_FILE);
 							$wpdb->update(
 								$tblGroup,

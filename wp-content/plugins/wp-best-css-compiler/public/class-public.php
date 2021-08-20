@@ -69,9 +69,9 @@ class Best_Css_Compiler_Public {
 
 		if(isset($resultsGroup) && is_array($resultsGroup) && count($resultsGroup) > 0) {
 			foreach($resultsGroup as $result) {
-				$file = $wp_filesystem->wp_content_dir() . 'complier/'.$result->compiler_title.'-'.$result->compiler_id.'.css';
+				$file = $wp_filesystem->wp_content_dir() . 'compiler/'.$result->compiler_title.'-'.$result->compiler_id.'.css';
 				if($wp_filesystem->get_contents($file)) {
-					wp_enqueue_style( $this->cssCompiler['domain']. '-' . md5($result->compiler_id),  content_url() . '/complier/'.$result->compiler_title.'-'.$result->compiler_id.'.css'  , array(), $this->cssCompiler['version'], 'all' );
+					wp_enqueue_style( $this->cssCompiler['domain']. '-' . md5($result->compiler_id),  content_url() . '/compiler/'.$result->compiler_title.'-'.$result->compiler_id.'.css'  , array(), $this->cssCompiler['version'], 'all' );
 				}
 			}
 		}
@@ -95,24 +95,24 @@ class Best_Css_Compiler_Public {
 			$countID = '';
 			$file_content = '';
 			foreach($resultsGroup as $result) {
-				$file = $wp_filesystem->wp_content_dir() . 'complier/'.$result->compiler_title.'-'.$result->compiler_id.'.css';
+				$file = $wp_filesystem->wp_content_dir() . 'compiler/'.$result->compiler_title.'-'.$result->compiler_id.'.css';
 				if($wp_filesystem->get_contents($file)) {
 					$countID .= md5($wp_filesystem->get_contents($file));
 					$file_content .= $wp_filesystem->get_contents($file);
 				}
 			}
 			if( $wp_filesystem ) {
-				$filename = $wp_filesystem->wp_content_dir() . 'complier/'.(carbon_get_theme_option('__best_css_compiler_name')?carbon_get_theme_option('__best_css_compiler_name'):'compiler-concat').'-'.md5($countID).'.css';
+				$filename = $wp_filesystem->wp_content_dir() . 'compiler/'.(carbon_get_theme_option('__best_css_compiler_name')?carbon_get_theme_option('__best_css_compiler_name'):'compiler-concat').'-'.md5($countID).'.css';
 				if(!$wp_filesystem->get_contents($filename)) {
 					$contentdir = trailingslashit( $wp_filesystem->wp_content_dir() ); 
-					$wp_filesystem->mkdir( $contentdir. 'complier' );
+					$wp_filesystem->mkdir( $contentdir. 'compiler' );
 					$wp_filesystem->put_contents( $filename, $file_content, FS_CHMOD_FILE);
 				}
 			}
 			if(carbon_get_theme_option('__best_css_compiler_name')) {
-				wp_enqueue_style( $this->cssCompiler['domain']. '-' . md5($result->compiler_id),  content_url() . '/complier/'.carbon_get_theme_option('__best_css_compiler_name').'-'.md5($countID).'.css'  , array(), $this->cssCompiler['version'], 'all' );
+				wp_enqueue_style( $this->cssCompiler['domain']. '-' . md5($result->compiler_id),  content_url() . '/compiler/'.carbon_get_theme_option('__best_css_compiler_name').'-'.md5($countID).'.css'  , array(), $this->cssCompiler['version'], 'all' );
 			} else {
-				wp_enqueue_style( $this->cssCompiler['domain']. '-' . md5($result->compiler_id),  content_url() . '/complier/compiler-concat-'.md5($countID).'.css'  , array(), $this->cssCompiler['version'], 'all' );
+				wp_enqueue_style( $this->cssCompiler['domain']. '-' . md5($result->compiler_id),  content_url() . '/compiler/compiler-concat-'.md5($countID).'.css'  , array(), $this->cssCompiler['version'], 'all' );
 			}
 		}
 
@@ -133,7 +133,7 @@ class Best_Css_Compiler_Public {
 
 		if(isset($resultsGroup) && is_array($resultsGroup) && count($resultsGroup) > 0) {
 			foreach($resultsGroup as $result) {
-				$file = $wp_filesystem->wp_content_dir() . 'complier/'.$result->compiler_title.'-'.$result->compiler_id.'.css';
+				$file = $wp_filesystem->wp_content_dir() . 'compiler/'.$result->compiler_title.'-'.$result->compiler_id.'.css';
 				if($wp_filesystem->get_contents($file)) {
 					$data = $wp_filesystem->get_contents($file);
 					echo "<style>".$wp_filesystem->get_contents($file)."</style>";
@@ -158,7 +158,7 @@ class Best_Css_Compiler_Public {
 		if(isset($resultsGroup) && is_array($resultsGroup) && count($resultsGroup) > 0) {
 			$file_content = '';
 			foreach($resultsGroup as $result) {
-				$file = $wp_filesystem->wp_content_dir() . 'complier/'.$result->compiler_title.'-'.$result->compiler_id.'.css';
+				$file = $wp_filesystem->wp_content_dir() . 'compiler/'.$result->compiler_title.'-'.$result->compiler_id.'.css';
 				if($wp_filesystem->get_contents($file)) {
 					$file_content .= $wp_filesystem->get_contents($file);
 				}
