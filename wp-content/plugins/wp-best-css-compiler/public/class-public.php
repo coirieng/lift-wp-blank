@@ -92,20 +92,22 @@ class Best_Css_Compiler_Public {
 		}
 
 		if(isset($resultsGroup) && is_array($resultsGroup) && count($resultsGroup) > 0) {
-			$countID = 0;
+			$countID = '';
 			$file_content = '';
 			foreach($resultsGroup as $result) {
 				$file = $wp_filesystem->wp_content_dir() . 'complier/'.$result->compiler_title.'-'.$result->compiler_id.'.css';
 				if($wp_filesystem->get_contents($file)) {
-					$countID = $countID + (int)$result->compiler_id;
+					$countID .= md5($result->file_content);
 					$file_content .= $wp_filesystem->get_contents($file);
 				}
 			}
 			if( $wp_filesystem ) {
-				$filename = $wp_filesystem->wp_content_dir() . 'complier/compiler-concat-'.md5($countID).'.css';
-				$contentdir = trailingslashit( $wp_filesystem->wp_content_dir() ); 
-				$wp_filesystem->mkdir( $contentdir. 'complier' );
-				$wp_filesystem->put_contents( $filename, $file_content, FS_CHMOD_FILE);
+				$filename = $wp_filesystem->wp_content_dir() . 'complier/'.(carbon_get_theme_option('__best_css_compiler_name')?carbon_get_theme_option('__best_css_compiler_name'):'compiler-concat').'-'.md5($countID).'.css';
+				if(!$wp_filesystem->get_contents($filename)) {
+					$contentdir = trailingslashit( $wp_filesystem->wp_content_dir() ); 
+					$wp_filesystem->mkdir( $contentdir. 'complier' );
+					$wp_filesystem->put_contents( $filename, $file_content, FS_CHMOD_FILE);
+				}
 			}
 			if(carbon_get_theme_option('__best_css_compiler_name')) {
 				wp_enqueue_style( $this->cssCompiler['domain']. '-' . md5($result->compiler_id),  content_url() . '/complier/'.carbon_get_theme_option('__best_css_compiler_name').'-'.md5($countID).'.css'  , array(), $this->cssCompiler['version'], 'all' );

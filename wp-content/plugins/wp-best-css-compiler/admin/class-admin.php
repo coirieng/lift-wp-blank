@@ -226,7 +226,7 @@ class Best_Css_Compiler_Admin {
 			'checkbox', 
 			'___best_css_compiler_inline',
 			esc_html__('Insert CSS into head tag', BEST_CSS_COMPILER_DOMAIN)
-			)->set_option_value( 'yes' ),
+			)->set_option_value( 'no' ),
 			Field::make(
 				'checkbox', 
 				'___best_css_compiler_concat',
@@ -236,7 +236,7 @@ class Best_Css_Compiler_Admin {
 			->set_default_value('public')
 			->set_width(50),
 			Field::make( 'text', '__best_css_compiler_position', esc_html__( 'Position', BEST_CSS_COMPILER_DOMAIN ) )
-			->set_default_value('30')
+			->set_default_value('99999999')
 			->set_width(50),
 		);
 		return $data;
@@ -257,7 +257,7 @@ class Best_Css_Compiler_Admin {
 
 			Field::make( 'html', 'crb_html_1', esc_html__( 'Section Description', BEST_CSS_COMPILER_DOMAIN ) )
 					->set_html('
-					
+					<p>'.esc_html__( 'Version ', BEST_CSS_COMPILER_DOMAIN ) . BEST_CSS_COMPILER_VERSION.'</p>
 					<p style="margin-top:0;margin-bottom:0"><strong>'.esc_html__( 'Author', BEST_CSS_COMPILER_DOMAIN ).':</strong> <a href="https://baonguyenyam.github.io/" target="_blank">Nguyen Pham</a></p>
 					
 					'),
