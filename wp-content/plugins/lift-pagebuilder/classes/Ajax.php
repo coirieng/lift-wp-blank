@@ -7,7 +7,9 @@ if ( ! class_exists('WPPB_Ajax')){
 
 	class WPPB_Ajax{
 
-		protected $api_base_url = 'https://builder.themeum.com/wp-json/restapi/v2/';
+		// protected $api_base_url = '/';
+		protected $api_base_url = 'http://demo.local:8888/wp-content/plugins/lift-pagebuilder/jsondata/layout.json';
+		// protected $api_base_url = 'https://builder.themeum.com/wp-json/restapi/v2/';
 		protected $wppb_api_request_body;
 		protected $wppb_api_request_body_default;
 
@@ -337,33 +339,63 @@ if ( ! class_exists('WPPB_Ajax')){
 		 * Get Template
 		 */
 		public function wppb_load_page_template(){
-			$cachedTemplateFile = "wppb-templates.json";
-			$cache_time = (60*60*24*7); //cached for 7 days
+			// $cachedTemplateFile = "wppb-templates.json";
+			// $cache_time = (60*60*24*7); //cached for 7 days
 
-			$templateData = array();
+			// $templateData = array();
 
-			$upload_dir = wp_upload_dir();
-			$dir = trailingslashit($upload_dir['basedir']) . 'lift-pagebuilder/cache/templates/';
-			$file_path_name = $dir . $cachedTemplateFile;
+			// $upload_dir = wp_upload_dir();
+			// $dir = trailingslashit($upload_dir['basedir']) . 'lift-pagebuilder/cache/templates/';
+			// $file_path_name = $dir . $cachedTemplateFile;
 
-			if (file_exists($file_path_name) && (filemtime($file_path_name) + $cache_time) > time()){
-				$getTemplatesFromCached = file_get_contents($file_path_name);
-				$templateData = json_decode($getTemplatesFromCached, true);
-				$cached_at = 'Last cached: '.human_time_diff( filemtime($file_path_name), current_time('timestamp')). ' ago';
-				$thirparty_template = $this->wppb_get_thirdparty_template();
+			// if (file_exists($file_path_name) && (filemtime($file_path_name) + $cache_time) > time()){
+			// 	$getTemplatesFromCached = file_get_contents($file_path_name);
+			// 	$templateData = json_decode($getTemplatesFromCached, true);
+			// 	$cached_at = 'Last cached: '.human_time_diff( filemtime($file_path_name), current_time('timestamp')). ' ago';
+			// 	$thirparty_template = $this->wppb_get_thirdparty_template();
 
-				if( !empty( $thirparty_template ) ){
-					$templateData = array_merge( $templateData, $thirparty_template );
-				}
+			// 	if( !empty( $thirparty_template ) ){
+			// 		$templateData = array_merge( $templateData, $thirparty_template );
+			// 	}
 
-				wp_send_json(array('success' => true, 'cached_at' => $cached_at,  'data' => $templateData));
-			}else{
-				$templateData = $this->load_templates_from_remote();
-				$thirparty_template = $this->wppb_get_thirdparty_template();
-				if( !empty( $thirparty_template ) ){
-					$templateData = array_merge( $templateData, $thirparty_template );
-				}
-			}
+			// 	wp_send_json(array('success' => true, 'cached_at' => $cached_at,  'data' => $templateData));
+			// }else{
+			// 	$templateData = $this->load_templates_from_remote();
+			// 	$thirparty_template = $this->wppb_get_thirdparty_template();
+			// 	if( !empty( $thirparty_template ) ){
+			// 		$templateData = array_merge( $templateData, $thirparty_template );
+			// 	}
+			// }
+
+			$templateData[0] = [
+				"name" => "Spa &#8211; Home",
+				"ID" => 412,
+				"parentID" => 217,
+				"preview" => "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Spa-Home.jpg",
+				"preview_m" => "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Spa-Home-267x200.jpg",
+				"pro" => false,
+				"liveurl" => "https://builder.themeum.com/spa-home/",
+				"category" => [
+					["name" => "Business", "slug" => "business"],
+					["name" => "Creative", "slug" => "creative"],
+					["name" => "Service", "slug" => "service"],
+				]
+			];
+			$templateData[1] = [
+					"name" => "Spa &#8211; Home",
+					"ID" => 217,
+					"parentID" => 0,
+					"preview" => "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Spa-Home.jpg",
+					"preview_m" => "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Spa-Home-267x200.jpg",
+					"pro" => false,
+					"liveurl" => "",
+					"category" => [
+						["name" => "Business", "slug" => "business"],
+						["name" => "Creative", "slug" => "creative"],
+						["name" => "Service", "slug" => "service"],
+					]
+				];
+			wp_send_json(array('success' => true, 'data' => $templateData));
 
 			wp_send_json_success($templateData);
 		}
@@ -421,6 +453,7 @@ if ( ! class_exists('WPPB_Ajax')){
 		 * Load Template from Server
 		 */
 		public function load_templates_from_remote(){
+			
 			$apiUrl = $this->api_base_url.'templates';
 			$post_args = array( 'timeout' => 120);
 			$body_param = array_merge($this->wppb_api_request_body_default, array( 'request_for' => 'get_all_template'));
@@ -438,6 +471,7 @@ if ( ! class_exists('WPPB_Ajax')){
 				mkdir( $dir, 0777, true );
 			}
 			file_put_contents($file_path_name,  json_encode( $templateData )); // Put template content to cached directory
+			
 			return $templateData;
 		}
 

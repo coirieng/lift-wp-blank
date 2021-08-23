@@ -1,0 +1,62 @@
+{
+  "success": true,
+  "cached_at": "Last cached: 54 seconds ago",
+  "data": [
+    {
+      "name": "Spa &#8211; Home",
+      "ID": 412,
+      "parentID": 217,
+      "preview": "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Spa-Home.jpg",
+      "preview_m": "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Spa-Home-267x200.jpg",
+      "pro": false,
+      "liveurl": "https://builder.themeum.com/spa-home/",
+      "category": [
+        { "name": "Business", "slug": "business" },
+        { "name": "Creative", "slug": "creative" },
+        { "name": "Service", "slug": "service" }
+      ]
+    },
+    {
+      "name": "Spa",
+      "ID": 217,
+      "parentID": 0,
+      "preview": "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Spa-Home.jpg",
+      "preview_m": "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Spa-Home-267x200.jpg",
+      "pro": false,
+      "liveurl": "",
+      "category": [
+        { "name": "Business", "slug": "business" },
+        { "name": "Creative", "slug": "creative" },
+        { "name": "Service", "slug": "service" }
+      ]
+    },
+    {
+      "name": "Saloon",
+      "ID": 216,
+      "parentID": 0,
+      "preview": "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Saloon-Home.jpg",
+      "preview_m": "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Saloon-Home-267x200.jpg",
+      "pro": false,
+      "liveurl": "",
+      "category": [
+        { "name": "Agency", "slug": "agency" },
+        { "name": "Creative", "slug": "creative" },
+        { "name": "Service", "slug": "service" }
+      ]
+    },
+    {
+      "name": "Plumber",
+      "ID": 212,
+      "parentID": 0,
+      "preview": "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Plumber-Home.jpg",
+      "preview_m": "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Plumber-Home-267x200.jpg",
+      "pro": false,
+      "liveurl": "",
+      "category": [
+        { "name": "Business", "slug": "business" },
+        { "name": "Creative", "slug": "creative" },
+        { "name": "Service", "slug": "service" }
+      ]
+    }
+  ]
+}
