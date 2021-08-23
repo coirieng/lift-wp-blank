@@ -8,7 +8,7 @@ if ( ! class_exists('WPPB_Ajax')){
 	class WPPB_Ajax{
 
 		// protected $api_base_url = '/';
-		protected $api_base_url = 'http://demo.local:8888/wp-content/plugins/lift-pagebuilder/jsondata/layout.json';
+		protected $api_base_url = 'http://demo.local:8888/';
 		// protected $api_base_url = 'https://builder.themeum.com/wp-json/restapi/v2/';
 		protected $wppb_api_request_body;
 		protected $wppb_api_request_body_default;
@@ -338,6 +338,7 @@ if ( ! class_exists('WPPB_Ajax')){
 		 * @since 1.0.0-BETA
 		 * Get Template
 		 */
+		// LOAD ALL TEMPLATE 
 		public function wppb_load_page_template(){
 			// $cachedTemplateFile = "wppb-templates.json";
 			// $cache_time = (60*60*24*7); //cached for 7 days
@@ -366,36 +367,11 @@ if ( ! class_exists('WPPB_Ajax')){
 			// 		$templateData = array_merge( $templateData, $thirparty_template );
 			// 	}
 			// }
-
-			$templateData[0] = [
-				"name" => "Spa &#8211; Home",
-				"ID" => 412,
-				"parentID" => 217,
-				"preview" => "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Spa-Home.jpg",
-				"preview_m" => "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Spa-Home-267x200.jpg",
-				"pro" => false,
-				"liveurl" => "https://builder.themeum.com/spa-home/",
-				"category" => [
-					["name" => "Business", "slug" => "business"],
-					["name" => "Creative", "slug" => "creative"],
-					["name" => "Service", "slug" => "service"],
-				]
-			];
-			$templateData[1] = [
-					"name" => "Spa &#8211; Home",
-					"ID" => 217,
-					"parentID" => 0,
-					"preview" => "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Spa-Home.jpg",
-					"preview_m" => "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Spa-Home-267x200.jpg",
-					"pro" => false,
-					"liveurl" => "",
-					"category" => [
-						["name" => "Business", "slug" => "business"],
-						["name" => "Creative", "slug" => "creative"],
-						["name" => "Service", "slug" => "service"],
-					]
-				];
-			wp_send_json(array('success' => true, 'data' => $templateData));
+			// ==============
+			$file_path = plugin_dir_path( __DIR__ ) . 'jsondata/layout.json';
+			$templateData = json_decode(file_get_contents( $file_path));
+			wp_send_json($templateData);
+			// ==============
 
 			wp_send_json_success($templateData);
 		}
@@ -446,14 +422,12 @@ if ( ! class_exists('WPPB_Ajax')){
 			return $templateData;
 		}
 
-
-
 		/**
 		 * @since 1.0.0-BETA
 		 * Load Template from Server
 		 */
 		public function load_templates_from_remote(){
-			
+
 			$apiUrl = $this->api_base_url.'templates';
 			$post_args = array( 'timeout' => 120);
 			$body_param = array_merge($this->wppb_api_request_body_default, array( 'request_for' => 'get_all_template'));
@@ -463,6 +437,7 @@ if ( ! class_exists('WPPB_Ajax')){
 				wp_send_json_error(array('messages' => $tempalteRequest->get_error_messages()));
 			}
 			$templateData = json_decode($tempalteRequest['body'], true);
+
 			$cachedTemplateFile = "wppb-templates.json";
 			$upload_dir = wp_upload_dir();
 			$dir = trailingslashit($upload_dir['basedir']) . 'lift-pagebuilder/cache/templates/';
@@ -556,6 +531,7 @@ if ( ! class_exists('WPPB_Ajax')){
 		 * @since 1.0.0
 		 * Get all blocks from cache or request
 		 */
+		// GET ALL BLOCKS
 		public function wppb_get_blocks(){
 			$cache_time = (60*60*24*7); //cached for 7 days
 
@@ -608,7 +584,11 @@ if ( ! class_exists('WPPB_Ajax')){
 				wp_send_json_error(array('messages' => $tempalteRequest->get_error_messages()));
 			}
 
-			$blocksRemoteData = json_decode(trim($tempalteRequest['body']), true);
+			// ==============
+			$file_path = plugin_dir_path( __DIR__ ) . 'jsondata/layout.json';
+			$blocksRemoteData = json_decode(file_get_contents( $file_path));
+			// ==============
+			// $blocksRemoteData = json_decode(trim($tempalteRequest['body']), true);
 
 			$newBlockdagta = array();
 			foreach ($blocksRemoteData as $block){

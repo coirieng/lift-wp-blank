@@ -26,6 +26,7 @@ if ( ! class_exists('WPPB_Options')){
 				array( $this, 'create_admin_page' ),
 				plugins_url( 'lift-pagebuilder/assets/img/tinny-logo.png' )
 			);
+
 		}
 
 		/**
