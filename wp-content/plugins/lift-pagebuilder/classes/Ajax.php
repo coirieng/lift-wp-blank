@@ -7,9 +7,9 @@ if ( ! class_exists('WPPB_Ajax')){
 
 	class WPPB_Ajax{
 
-		// protected $api_base_url = '/';
-		protected $api_base_url = 'http://demo.local:8888/';
-		// protected $api_base_url = 'https://builder.themeum.com/wp-json/restapi/v2/';
+		protected $switchAPI;
+		protected $api_base_url_switch = '/';
+		protected $api_base_url = 'https://builder.themeum.com/wp-json/restapi/v2/';
 		protected $wppb_api_request_body;
 		protected $wppb_api_request_body_default;
 
@@ -17,6 +17,7 @@ if ( ! class_exists('WPPB_Ajax')){
 		 * WPPB_Ajax constructor.
 		 */
 		public function __construct() {
+			$this->switchAPI = false;
 			$this->wppb_api_request_body_default = array(
 				'request_from'  => 'wppb',
 				'request_wppb_version'  => WPPB_VERSION,
@@ -340,38 +341,41 @@ if ( ! class_exists('WPPB_Ajax')){
 		 */
 		// LOAD ALL TEMPLATE 
 		public function wppb_load_page_template(){
-			// $cachedTemplateFile = "wppb-templates.json";
-			// $cache_time = (60*60*24*7); //cached for 7 days
-
-			// $templateData = array();
-
-			// $upload_dir = wp_upload_dir();
-			// $dir = trailingslashit($upload_dir['basedir']) . 'lift-pagebuilder/cache/templates/';
-			// $file_path_name = $dir . $cachedTemplateFile;
-
-			// if (file_exists($file_path_name) && (filemtime($file_path_name) + $cache_time) > time()){
-			// 	$getTemplatesFromCached = file_get_contents($file_path_name);
-			// 	$templateData = json_decode($getTemplatesFromCached, true);
-			// 	$cached_at = 'Last cached: '.human_time_diff( filemtime($file_path_name), current_time('timestamp')). ' ago';
-			// 	$thirparty_template = $this->wppb_get_thirdparty_template();
-
-			// 	if( !empty( $thirparty_template ) ){
-			// 		$templateData = array_merge( $templateData, $thirparty_template );
-			// 	}
-
-			// 	wp_send_json(array('success' => true, 'cached_at' => $cached_at,  'data' => $templateData));
-			// }else{
-			// 	$templateData = $this->load_templates_from_remote();
-			// 	$thirparty_template = $this->wppb_get_thirdparty_template();
-			// 	if( !empty( $thirparty_template ) ){
-			// 		$templateData = array_merge( $templateData, $thirparty_template );
-			// 	}
-			// }
-			// ==============
-			$file_path = plugin_dir_path( __DIR__ ) . 'jsondata/layout.json';
-			$templateData = json_decode(file_get_contents( $file_path));
-			wp_send_json($templateData);
-			// ==============
+			if($this->switchAPI){
+				$cachedTemplateFile = "wppb-templates.json";
+				$cache_time = (60*60*24*7); //cached for 7 days
+	
+				$templateData = array();
+	
+				$upload_dir = wp_upload_dir();
+				$dir = trailingslashit($upload_dir['basedir']) . 'lift-pagebuilder/cache/templates/';
+				$file_path_name = $dir . $cachedTemplateFile;
+	
+				if (file_exists($file_path_name) && (filemtime($file_path_name) + $cache_time) > time()){
+					$getTemplatesFromCached = file_get_contents($file_path_name);
+					$templateData = json_decode($getTemplatesFromCached, true);
+					$cached_at = 'Last cached: '.human_time_diff( filemtime($file_path_name), current_time('timestamp')). ' ago';
+					$thirparty_template = $this->wppb_get_thirdparty_template();
+	
+					if( !empty( $thirparty_template ) ){
+						$templateData = array_merge( $templateData, $thirparty_template );
+					}
+	
+					wp_send_json(array('success' => true, 'cached_at' => $cached_at,  'data' => $templateData));
+				}else{
+					$templateData = $this->load_templates_from_remote();
+					$thirparty_template = $this->wppb_get_thirdparty_template();
+					if( !empty( $thirparty_template ) ){
+						$templateData = array_merge( $templateData, $thirparty_template );
+					}
+				}
+			} else {
+				// ==============
+				$file_path = plugin_dir_path( __DIR__ ) . 'jsondata/layout.json';
+				$templateData = json_decode(file_get_contents( $file_path), true);
+				wp_send_json($templateData);
+				// ==============
+			}
 
 			wp_send_json_success($templateData);
 		}
@@ -455,36 +459,39 @@ if ( ! class_exists('WPPB_Ajax')){
 		 * Import single template
 		 */
 		public function wppb_import_single_page_template(){
-			// $template_id = (int) sanitize_text_field($_POST['template_id']);
-			// $fileUrl = $_POST['fileUrl'];
+			if($this->switchAPI){
+				$template_id = (int) sanitize_text_field($_POST['template_id']);
+				$fileUrl = $_POST['fileUrl'];
 
-			// if( !$fileUrl ){
-			// 	$cache_time = (60*60*24*7); //cached for 7 days
-			// 	$cachedTemplateFile = "wppb-single-template-{$template_id}.json";
-			// 	$upload_dir = wp_upload_dir();
-			// 	$dir = trailingslashit($upload_dir['basedir']) . 'lift-pagebuilder/cache/templates/';
-			// 	$file_path_name = $dir . $cachedTemplateFile;
-			// 	// Checking if exists file and cache validity true
-			// 	if (file_exists($file_path_name) && (filemtime($file_path_name) + $cache_time) > time()){
-			// 		$getTemplatesFromCached = file_get_contents($file_path_name);
-			// 		$templateData = json_decode($getTemplatesFromCached, true);
-			// 	}else{
-			// 		$templateData = $this->load_and_cache_single_template($template_id);
-			// 	}
-			// }else{
-			// 	if (file_exists($fileUrl)){
-			// 		$getContent = file_get_contents($fileUrl);
-			// 		$templateData = json_decode($getContent, true);
-			// 	}else{
-			// 		$templateData = $this->load_and_cache_single_template($template_id);
-			// 	}
-			// }
+				if( !$fileUrl ){
+					$cache_time = (60*60*24*7); //cached for 7 days
+					$cachedTemplateFile = "wppb-single-template-{$template_id}.json";
+					$upload_dir = wp_upload_dir();
+					$dir = trailingslashit($upload_dir['basedir']) . 'lift-pagebuilder/cache/templates/';
+					$file_path_name = $dir . $cachedTemplateFile;
+					// Checking if exists file and cache validity true
+					if (file_exists($file_path_name) && (filemtime($file_path_name) + $cache_time) > time()){
+						$getTemplatesFromCached = file_get_contents($file_path_name);
+						$templateData = json_decode($getTemplatesFromCached, true);
+					}else{
+						$templateData = $this->load_and_cache_single_template($template_id);
+					}
+				}else{
+					if (file_exists($fileUrl)){
+						$getContent = file_get_contents($fileUrl);
+						$templateData = json_decode($getContent, true);
+					}else{
+						$templateData = $this->load_and_cache_single_template($template_id);
+					}
+				}
+			} else {
+				// ==============
+				$file_path = plugin_dir_path( __DIR__ ) . 'jsondata/layout/layout-1.json';
+				$templateData = json_decode(file_get_contents( $file_path), true);
+				wp_send_json($templateData);
+				// ==============
+			}
 
-			// ==============
-			$file_path = plugin_dir_path( __DIR__ ) . 'jsondata/layout-1.json';
-			$templateData = json_decode(file_get_contents( $file_path));
-			wp_send_json($templateData);
-			// ==============
 
 			wp_send_json_success($templateData);
 		}
@@ -547,6 +554,10 @@ if ( ! class_exists('WPPB_Ajax')){
 			$dir = trailingslashit($upload_dir['basedir']) . 'lift-pagebuilder/cache/blocks/';
 			$file_path_name = $dir . $cachedTemplateFile;
 
+			// if($this->switchAPI) {
+			// 	// wp_send_json($blocksData);
+			// }
+
 			//Checking if exists file and cache validity true
 			if (file_exists($file_path_name) && (filemtime($file_path_name) + $cache_time) > time()){
 				$getTemplatesFromCached = file_get_contents($file_path_name);
@@ -579,30 +590,38 @@ if ( ! class_exists('WPPB_Ajax')){
 			$cachedTemplateFile = "wppb-blocks.json";
 			$upload_dir         = wp_upload_dir();
 			$dir                = trailingslashit($upload_dir['basedir']).'lift-pagebuilder/cache/blocks/';
-
 			$apiUrl = $this->api_base_url.'sections';
-
 			$post_args = array( 'timeout' => 120);
 			$body_param = array_merge($this->wppb_api_request_body_default, array( 'request_for' => 'wppb_get_blocks'));
 			$post_args['body'] = array_merge($body_param, $this->wppb_api_request_body);
-			$tempalteRequest = wp_remote_post($apiUrl, $post_args);
 
-			if (is_wp_error($tempalteRequest)){
-				wp_send_json_error(array('messages' => $tempalteRequest->get_error_messages()));
+			if($this->switchAPI) {
+				$tempalteRequest = wp_remote_post($apiUrl, $post_args);
+	
+				if (is_wp_error($tempalteRequest)){
+					wp_send_json_error(array('messages' => $tempalteRequest->get_error_messages()));
+				}
+				$blocksRemoteData = json_decode(trim($tempalteRequest['body']), true);
+				$newBlockdagta = array();
+				foreach ($blocksRemoteData as $block){
+					$rowData = $block['rawData'];
+					$block['rawData'] = json_decode($rowData, true);
+					$newBlockdagta[] = $block;
+				}
+			} else {
+				// TODO: CHECK THIS ONE 
+				// ==============
+				$file_path = plugin_dir_path( __DIR__ ) . 'jsondata/block.json';
+				$blocksRemoteData = json_decode(trim(file_get_contents( $file_path)), true);
+				$newBlockdagta = array();
+				foreach ($blocksRemoteData['data'] as $block){
+					$rowData = $block['rawData'];
+					$block['rawData'] = json_decode($rowData, true);
+					$newBlockdagta[] = $block;
+				}
+				// ==============
 			}
 
-			// ==============
-			$file_path = plugin_dir_path( __DIR__ ) . 'jsondata/layout.json';
-			$blocksRemoteData = json_decode(file_get_contents( $file_path));
-			// ==============
-			// $blocksRemoteData = json_decode(trim($tempalteRequest['body']), true);
-
-			$newBlockdagta = array();
-			foreach ($blocksRemoteData as $block){
-				$rowData = $block['rawData'];
-				$block['rawData'] = json_decode($rowData, true);
-				$newBlockdagta[] = $block;
-			}
 
 			$file_path_name = $dir.$cachedTemplateFile;
 			if ( ! file_exists($dir)) {

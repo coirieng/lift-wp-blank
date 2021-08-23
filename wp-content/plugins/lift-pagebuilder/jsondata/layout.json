@@ -1,6 +1,6 @@
 {
   "success": true,
-  "cached_at": "Last cached: 54 seconds ago",
+  "cached_at": "Cached",
   "data": [
     {
       "name": "Spa &#8211; Home",
@@ -52,6 +52,235 @@
       "preview_m": "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Plumber-Home-267x200.jpg",
       "pro": false,
       "liveurl": "",
+      "category": [
+        { "name": "Business", "slug": "business" },
+        { "name": "Creative", "slug": "creative" },
+        { "name": "Service", "slug": "service" }
+      ]
+    },
+    {
+      "name": "Insurance",
+      "ID": 215,
+      "parentID": 0,
+      "preview": "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Insurance-Home.jpg",
+      "preview_m": "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Insurance-Home-267x200.jpg",
+      "pro": false,
+      "liveurl": "",
+      "category": [
+        { "name": "Agency", "slug": "agency" },
+        { "name": "Business", "slug": "business" },
+        { "name": "Service", "slug": "service" }
+      ]
+    },
+    {
+      "name": "Architecture",
+      "ID": 213,
+      "parentID": 0,
+      "preview": "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Architecture-Home.jpg",
+      "preview_m": "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Architecture-Home-267x200.jpg",
+      "pro": false,
+      "liveurl": "",
+      "category": [
+        { "name": "Service", "slug": "service" },
+        { "name": "Technology", "slug": "technology" }
+      ]
+    },
+    
+    {
+      "name": "Architecture &#8211; Home",
+      "ID": 350,
+      "parentID": 213,
+      "preview": "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Architecture-Home.jpg",
+      "preview_m": "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Architecture-Home-267x200.jpg",
+      "pro": false,
+      "liveurl": "https://builder.themeum.com/architecture-home/",
+      "category": [
+        { "name": "Service", "slug": "service" },
+        { "name": "Technology", "slug": "technology" }
+      ]
+    },
+
+    {
+      "name": "Insurance &#8211; Home",
+      "ID": 324,
+      "parentID": 215,
+      "preview": "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Insurance-Home.jpg",
+      "preview_m": "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Insurance-Home-267x200.jpg",
+      "pro": false,
+      "liveurl": "https://builder.themeum.com/insurance-home-2/",
+      "category": [
+        { "name": "Agency", "slug": "agency" },
+        { "name": "Business", "slug": "business" },
+        { "name": "Service", "slug": "service" }
+      ]
+    },
+
+    {
+      "name": "Plumber &#8211; Home",
+      "ID": 310,
+      "parentID": 212,
+      "preview": "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Plumber-Home.jpg",
+      "preview_m": "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Plumber-Home-267x200.jpg",
+      "pro": false,
+      "liveurl": "https://builder.themeum.com/plumber-home/",
+      "category": [
+        { "name": "Business", "slug": "business" },
+        { "name": "Creative", "slug": "creative" },
+        { "name": "Service", "slug": "service" }
+      ]
+    },
+
+    {
+      "name": "Architecture &#8211; About",
+      "ID": 402,
+      "parentID": 213,
+      "preview": "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Architecture-About.jpg",
+      "preview_m": "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Architecture-About-267x200.jpg",
+      "pro": false,
+      "liveurl": "https://builder.themeum.com/architecture-about-2/",
+      "category": [
+        { "name": "Service", "slug": "service" },
+        { "name": "Technology", "slug": "technology" }
+      ]
+    },
+    {
+      "name": "Insurance &#8211; About",
+      "ID": 335,
+      "parentID": 215,
+      "preview": "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Insurance-About.jpg",
+      "preview_m": "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Insurance-About-267x200.jpg",
+      "pro": false,
+      "liveurl": "https://builder.themeum.com/insurance-about-2/",
+      "category": [
+        { "name": "Agency", "slug": "agency" },
+        { "name": "Business", "slug": "business" },
+        { "name": "Service", "slug": "service" }
+      ]
+    },
+
+    {
+      "name": "Plumber &#8211; About",
+      "ID": 333,
+      "parentID": 212,
+      "preview": "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Plumber-About.jpg",
+      "preview_m": "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Plumber-About-267x200.jpg",
+      "pro": false,
+      "liveurl": "https://builder.themeum.com/plumber-about-3/",
+      "category": [
+        { "name": "Business", "slug": "business" },
+        { "name": "Creative", "slug": "creative" },
+        { "name": "Service", "slug": "service" }
+      ]
+    },
+    {
+      "name": "Saloon &#8211; Home",
+      "ID": 363,
+      "parentID": 216,
+      "preview": "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Saloon-Home.jpg",
+      "preview_m": "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Saloon-Home-267x200.jpg",
+      "pro": false,
+      "liveurl": "https://builder.themeum.com/saloon-home-2/",
+      "category": [
+        { "name": "Agency", "slug": "agency" },
+        { "name": "Creative", "slug": "creative" },
+        { "name": "Service", "slug": "service" }
+      ]
+    },
+
+    {
+      "name": "Architecture &#8211; Services",
+      "ID": 414,
+      "parentID": 213,
+      "preview": "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Architecture-Services.jpg",
+      "preview_m": "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Architecture-Services-267x200.jpg",
+      "pro": false,
+      "liveurl": "https://builder.themeum.com/architecture-services/",
+      "category": [
+        { "name": "Service", "slug": "service" },
+        { "name": "Technology", "slug": "technology" }
+      ]
+    },
+
+    {
+      "name": "Insurance &#8211; Service",
+      "ID": 346,
+      "parentID": 215,
+      "preview": "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Insurance-Service.jpg",
+      "preview_m": "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Insurance-Service-267x200.jpg",
+      "pro": false,
+      "liveurl": "https://builder.themeum.com/insurance-service-2/",
+      "category": [
+        { "name": "Agency", "slug": "agency" },
+        { "name": "Business", "slug": "business" },
+        { "name": "Service", "slug": "service" }
+      ]
+    },
+    {
+      "name": "Plumber &#8211; Service",
+      "ID": 344,
+      "parentID": 212,
+      "preview": "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Plumber-Service.jpg",
+      "preview_m": "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Plumber-Service-267x200.jpg",
+      "pro": false,
+      "liveurl": "https://builder.themeum.com/plumber-service-2/",
+      "category": [
+        { "name": "Business", "slug": "business" },
+        { "name": "Creative", "slug": "creative" },
+        { "name": "Service", "slug": "service" }
+      ]
+    },
+    {
+      "name": "Saloon &#8211; about",
+      "ID": 400,
+      "parentID": 216,
+      "preview": "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Saloon-About.jpg",
+      "preview_m": "https://builder.themeum.com/wp-content/uploads/2018/08/Template-Saloon-About-267x200.jpg",
+      "pro": false,
+      "liveurl": "https://builder.themeum.com/saloon-about-3/",
+      "category": [
+        { "name": "Agency", "slug": "agency" },
+        { "name": "Creative", "slug": "creative" },
+        { "name": "Service", "slug": "service" }
+      ]
+    },
+
+    {
+      "name": "Spa &#8211; Offer",
+      "ID": 856,
+      "parentID": 217,
+      "preview": "https://builder.themeum.com/wp-content/uploads/2018/08/template-spa-offer.jpg",
+      "preview_m": "https://builder.themeum.com/wp-content/uploads/2018/08/template-spa-offer-267x200.jpg",
+      "pro": false,
+      "liveurl": "https://builder.themeum.com/spa-offer/",
+      "category": [
+        { "name": "Business", "slug": "business" },
+        { "name": "Creative", "slug": "creative" },
+        { "name": "Service", "slug": "service" }
+      ]
+    },
+    {
+      "name": "Spa &#8211; Package",
+      "ID": 859,
+      "parentID": 217,
+      "preview": "https://builder.themeum.com/wp-content/uploads/2018/08/template-spa-package.jpg",
+      "preview_m": "https://builder.themeum.com/wp-content/uploads/2018/08/template-spa-package-267x200.jpg",
+      "pro": false,
+      "liveurl": "https://builder.themeum.com/spa-package/",
+      "category": [
+        { "name": "Business", "slug": "business" },
+        { "name": "Creative", "slug": "creative" },
+        { "name": "Service", "slug": "service" }
+      ]
+    },
+
+    {
+      "name": "Saloon &#8211; Style Showcase",
+      "ID": 990,
+      "parentID": 216,
+      "preview": "https://builder.themeum.com/wp-content/uploads/2018/08/template-saloon-style-showcase.jpg",
+      "preview_m": "https://builder.themeum.com/wp-content/uploads/2018/08/template-saloon-style-showcase-267x200.jpg",
+      "pro": false,
+      "liveurl": "https://builder.themeum.com/saloon-style-showcase/",
       "category": [
         { "name": "Business", "slug": "business" },
         { "name": "Creative", "slug": "creative" },
