@@ -37,15 +37,13 @@ global $wp_version;
         do_action( 'admin_print_footer_scripts' );
     ?>
     <script>
-    jQuery('.sectionWarpper').bind('DOMSubtreeModified', function () {
-        jQuery('.blocks-draggable-img > img').each(function () {
+    jQuery('body').bind('DOMSubtreeModified', function () {
+        jQuery('.sectionWarpper .blocks-draggable-img > img').each(function () {
             var getsrc = jQuery(this).attr('src');
             if(getsrc.substring(0, 4) !== 'http'){
                 jQuery(this).attr('src', '<?php echo plugin_dir_url(__DIR__) ?>/' + getsrc);
             }
         })
-    });
-    jQuery('body').bind('DOMSubtreeModified', function () {
         jQuery('.wppb-builder-modal .wppb-default-template-image > img').each(function () {
             var getsrc = jQuery(this).attr('src');
             if(getsrc.substring(0, 4) !== 'http'){
