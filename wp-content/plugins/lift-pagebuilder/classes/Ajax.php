@@ -554,10 +554,6 @@ if ( ! class_exists('WPPB_Ajax')){
 			$dir = trailingslashit($upload_dir['basedir']) . 'lift-pagebuilder/cache/blocks/';
 			$file_path_name = $dir . $cachedTemplateFile;
 
-			// if($this->switchAPI) {
-			// 	// wp_send_json($blocksData);
-			// }
-
 			//Checking if exists file and cache validity true
 			if (file_exists($file_path_name) && (filemtime($file_path_name) + $cache_time) > time()){
 				$getTemplatesFromCached = file_get_contents($file_path_name);
@@ -613,12 +609,7 @@ if ( ! class_exists('WPPB_Ajax')){
 				// ==============
 				$file_path = plugin_dir_path( __DIR__ ) . 'jsondata/block.json';
 				$blocksRemoteData = json_decode(trim(file_get_contents( $file_path)), true);
-				$newBlockdagta = array();
-				foreach ($blocksRemoteData['data'] as $block){
-					$rowData = $block['rawData'];
-					$block['rawData'] = json_decode($rowData, true);
-					$newBlockdagta[] = $block;
-				}
+				$newBlockdagta = $blocksRemoteData['data'];
 				// ==============
 			}
 
