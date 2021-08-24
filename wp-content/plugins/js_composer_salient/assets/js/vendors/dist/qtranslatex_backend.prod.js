@@ -1,0 +1,1 @@
+"use strict";!function(e){function t(t){var r=e(".wpb_switch-to-front-composer");r.data("raw-url")||r.data("raw-url",r.attr("href"));var a=r.data("raw-url")+"&lang="+t;r.attr("href",a),vc.shortcodes.fetch({reset:!0})}e(function(){qTranslateConfig.js.get_qtx().addLanguageSwitchListener(t)})}(window.jQuery);

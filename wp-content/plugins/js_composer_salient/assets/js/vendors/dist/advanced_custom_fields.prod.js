@@ -1,0 +1,1 @@
+"use strict";!function(t){t(document).on("acf/setup_fields",function(){setTimeout(function(){"tinymce"===getUserSetting("editor")?t("#content-tmce").trigger("click"):t("#content-html").trigger("click")},10)})}(window.jQuery);
