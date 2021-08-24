@@ -264,7 +264,7 @@ if ( ! class_exists('WPPB_Editor_Management')){
 		public function template_data_footer_add(){
 			// Add Common CSS
 			if ( class_exists('WPPB_Ajax')){
-				echo '<script id="wppb-tmpl-common-css" type="x-tmpl-lodash">';
+				echo '<script id="wow-tmp-common-css" type="x-tmpl-lodash">';
 					echo WPPB_Ajax::get_content_common_css();
 				echo '</script>';
 			}
@@ -282,12 +282,12 @@ if ( ! class_exists('WPPB_Editor_Management')){
 
 					$settings = $data->get_settings();
 					if (method_exists($data, 'getTemplate')) {
-						echo '<script id="wppb-tmpl-addon-' . $data->get_name() . '" type="x-tmpl-lodash">';
+						echo '<script id="wow-tmp-addon-' . $data->get_name() . '" type="x-tmpl-lodash">';
 						echo $data->getTemplate();
 						echo '</script>';
 					}
 					if (method_exists($data, 'get_settings')) {
-						echo '<script id="wppb-tmpl-addon-style-'.$data->get_name().'" type="x-tmpl-lodash">';
+						echo '<script id="wow-tmp-addon-style-'.$data->get_name().'" type="x-tmpl-lodash">';
 						$settings = $data->get_settings();
 						if( is_array( $settings ) ){
 							if( !empty( $settings ) ){
@@ -301,17 +301,17 @@ if ( ! class_exists('WPPB_Editor_Management')){
 
 			$data = new WPPB_Base_Data();
 
-			echo '<script id="wppb-tmpl-row-style" type="x-tmpl-lodash">';
+			echo '<script id="wow-tmp-row-style" type="x-tmpl-lodash">';
 			$row = $data->row_settings();
 			$this->lodash_style_generator( array_merge( $row['attr']['general'],$row['attr']['style'],$row['attr']['advanced'] ) );
 			echo '</script>';
 
-			echo '<script id="wppb-tmpl-col-style" type="x-tmpl-lodash">';
+			echo '<script id="wow-tmp-col-style" type="x-tmpl-lodash">';
 			$col = $data->column_settings();
 			$this->lodash_style_generator( array_merge( $col['attr']['general'],$col['attr']['style'],$col['attr']['advanced'] ) );
 			echo '</script>';
 
-			echo '<script id="wppb-tmpl-addon-widget" type="x-tmpl-lodash">';
+			echo '<script id="wow-tmp-addon-widget" type="x-tmpl-lodash">';
 			$col = $data->column_settings();
 			$this->lodash_style_generator( $global['advanced'] );
 			echo '</script>';

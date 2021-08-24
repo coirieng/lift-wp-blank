@@ -50,7 +50,7 @@
     border-radius: 3px;
 }
 .wppb-edit-button-default-wrap {
-    margin-top: 25px;
+    /* margin-top: 25px; */
     /* margin-bottom: 20px; */
 }
 .active-wppb-editor .wppagebuilder-edit-button {
@@ -59,7 +59,11 @@
 .wppb-back-editor,
 .wppb-editor-warper {
     display: inline-block;
-    margin: 0 4px;
+}
+.wppb-back-editor + .wppb-back-editor,
+.wppb-back-editor + .wppb-editor-warper,
+.wppb-editor-warper + .wppb-editor-warper{
+    margin-left: 8px;
 }
 /* intial looks */
 .wppb-edit-button-wrap{

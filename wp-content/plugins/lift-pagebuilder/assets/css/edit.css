@@ -6632,14 +6632,14 @@ ul.wppb-builder-page-templates li .wppb-default-template-image {
   height: 80px;
   width: 80px;
 }
-ul.wppb-builder-page-templates > li .wppb-tmpl-info .wppb-builder-btn {
+ul.wppb-builder-page-templates > li .wow-tmp-info .wppb-builder-btn {
   color: #25C266;
   background: transparent;
   border: 1px solid #25C266;
   box-shadow: none;
   border-radius: 2px;
 }
-ul.wppb-builder-page-templates > li .wppb-tmpl-info .wppb-builder-btn i {
+ul.wppb-builder-page-templates > li .wow-tmp-info .wppb-builder-btn i {
   color: #25C266;
   font-weight: bold;
   margin-right: 2px;
@@ -6679,13 +6679,13 @@ ul.wppb-builder-page-templates > li .wppb-btn-success:hover {
 ul.wppb-builder-page-templates > li .wppb-btn-success:hover i {
   color: #fff;
 }
-ul.wppb-builder-page-templates > li .wppb-tmpl-info {
+ul.wppb-builder-page-templates > li .wow-tmp-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-ul.wppb-builder-page-templates > li .wppb-tmpl-info .wppb-tmpl-title {
+ul.wppb-builder-page-templates > li .wow-tmp-info .wow-tmp-title {
   text-transform: capitalize;
   color: #53595F;
   font-weight: 500;
