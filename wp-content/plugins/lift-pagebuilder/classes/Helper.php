@@ -265,7 +265,7 @@ if ( ! class_exists('WPPB_Helper')) {
 		public function plugin_action_links_callback( $links ){
 			$actionsLinks =  array();
 			if (!defined('WPPB_PRO_VERSION')) {
-				// $actionsLinks['wppb_go_premium'] = '<a href="https://www.themeum.com/product/lift-pagebuilder/?utm_source=wp_pagebuilder&amp;utm_medium=plugin_action_link&amp;utm_campaign=go_premium" target="_blank"><span style="color: #39a700eb; font-weight: bold;">'.__('Get Premium', 'lift-pagebuilder').'</span></a>';
+				$actionsLinks['wppb_go_premium'] = '<a href="https://wow-wp.com" target="_blank"><span style="color: #39a700eb; font-weight: bold;">'.__('Get Premium', 'lift-pagebuilder').'</span></a>';
 			}
 			$actionsLinks['wppb_settings'] = '<a href="' . admin_url( 'admin.php?page=lift-wppb-settings' ) . '">'.__('Settings', 'lift-pagebuilder').'</a>';
 			return array_merge( $actionsLinks, $links );
@@ -274,9 +274,7 @@ if ( ! class_exists('WPPB_Helper')) {
 		public function plugin_row_meta_callback( $links , $plugin ){
 			if( WPPB_BASENAME === $plugin ){
 			$actionsLinks =  array(
-				// 'wppb_docs' =>  '<a href="https://docs.themeum.com/lift-pagebuilder/" target="_blank">'.__('Docs', 'lift-pagebuilder').'</a>',
-				// 'wppb_dev_docs' =>  '<a href="https://github.com/themeum/WP-Page-Builder" target="_blank">'.__('Dev Docs', 'lift-pagebuilder').'</a>',
-				// 'wppb_support' =>  '<a href="https://www.themeum.com/support/" target="_blank">'.__('Free Support', 'lift-pagebuilder').'</a>',
+				'wppb_docs' =>  '<a href="https://wow-wp.com/wp-wow-website-builder/" target="_blank">'.__('Docs', 'lift-pagebuilder').'</a>',
 			);
 				$links = array_merge( $links, $actionsLinks );
 			}

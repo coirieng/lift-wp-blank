@@ -22,7 +22,7 @@ class WPPB_Addon_Raw_Html{
 			'rawhtml' => array(
 				'type' => 'textarea',
 				'title' => __('Content','lift-pagebuilder'),
-				'std' => '<p>Insert raw html here.<br/>Here is an example of hyperlink <a href="http://www.themeum.com">Themeum</a></p>'
+				'std' => '<p>Insert raw html here.</p>'
 			),
 
 			'align' => array(

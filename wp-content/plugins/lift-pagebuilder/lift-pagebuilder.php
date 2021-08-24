@@ -1,11 +1,11 @@
 <?php
 /*
  * Plugin Name:       LIFT WP Page Builder
- * Plugin URI:        https://www.themeum.com/product/lift-pagebuilder/
+ * Plugin URI:        https://wow-wp.com
  * Description:       LIFT WP Page Builder is a FREE drag & drop website building tool for WordPress. This plugin lets you develop a wonderful site in minutes without any coding.
  * Version:           1.2.6
  * Author:            Nguyen Pham
- * Author URI:        https://themeum.com
+ * Author URI:        https://wow-wp.com/wp-wow-website-builder/
  * Text Domain:       lift-pagebuilder
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt

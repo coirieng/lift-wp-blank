@@ -2760,7 +2760,7 @@ msgid "WP PageBuilder"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
-msgid "https://www.themeum.com/product/lift-pagebuilder/"
+msgid "https://wow-wp.com/wp-wow-website-builder/"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -2774,5 +2774,5 @@ msgid "Themeum.com"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "https://themeum.com"
+msgid "https://wow-wp.com"
 msgstr ""

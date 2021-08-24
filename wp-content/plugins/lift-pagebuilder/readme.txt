@@ -1,6 +1,6 @@
 === LIFT WP Page Builder ===
 Contributors: themeum
-Donate link: https://www.themeum.com
+Donate link: https://wow-wp.com
 Tags: page builder, website builder, live editor, wp page builder, drag and drop editor, responsive, site editor, editor, drag-and-drop, visual editor, landing page, frontend editor, wordpress page builder, free page builder, layout builder
 Requires at least: 5.0
 Tested up to: 5.7
@@ -15,15 +15,9 @@ LIFT WP Page Builder is a FREE drag & drop website building tool for WordPress. 
 
 LIFT WP Page Builder is a free drag and drop WordPress page builder to create websites easily. Whether you’re an experienced developer or just a beginner, you can build stunning websites independently with this tool. Create beautiful web pages effortlessly using the intuitive live page composer without coding in minutes. No design experience needed.
 
-> [Blocks & Layouts Demo](https://builder.themeum.com/)
-> [Try Live Demo](https://try.themeum.com/plugins/lift-pagebuilder/)
-> [Get Pro Version](https://www.themeum.com/product/lift-pagebuilder/)
-> [Get a premium quality free theme built with LIFT WP Page Builder](https://themehunt.com/item/1527563-corlate-free-business-agency-wordpress-theme-with-page-builder)
+> [Blocks & Layouts Demo](https://wow-wp.com)
 
 LIFT WP Page Builder is a free and completely front-end based tool with plenty of design options. Let’s explore the LIFT WP Page Builder features below.
-
-
-[youtube https://www.youtube.com/watch?v=EKDZ7pvNSLs]
 
 
 = Some Highlighted features =
@@ -172,15 +166,6 @@ LIFT WP Page Builder comes with the following addons that let you add different 
 - **Video:** Add YouTube or Vimeo videos to your webpage.
 - **Video Popup:** Placing a video on a popup is also possible with our Video Popup addon in LIFT WP Page Builder.
 
-= Premium Features =
-Alongside all the amazing benefits of the free version, you will get **15+ premium layout bundles that include 83+ readymade page layouts** in [LIFT WP Page Builder Pro](https://www.themeum.com/product/lift-pagebuilder/).
-
-Anytime you need a web page builder tool on WordPress, Try LIFT WP Page Builder for the smoothest, fastest, and easiest site development experience. If you have any question, please [drop us a query](https://www.themeum.com/support-forums/). We’ll reach you as soon as possible.
-
-> You may find the documentation here
-> [Documentation](https://docs.themeum.com/lift-pagebuilder/)
-> [Developer Documentation](https://github.com/themeum/WP-Page-Builder)
-
 == Installation ==
 
 = Minimum Requirements =
@@ -199,32 +184,6 @@ This will open up a page showing all the available plugins in WordPress. In the 
 To install LIFT WP Page Builder manually, you need to download the plugin and upload it to your webserver via any FTP application.
 
 The WordPress codex contains [instructions on how to do this here](https://codex.wordpress.org/Managing_Plugins#Manual_Plugin_Installation).
-
-== Frequently Asked Questions ==
-
-= Can I use LIFT WP Page Builder with my existing WordPress theme? =
-
-Sure, you can use your existing WordPress theme with LIFT WP Page Builder.
-
-= Is LIFT WP Page Builder free? =
-
-Yes, it is free and always will be. Also, there is a [Pro version](https://www.themeum.com/product/lift-pagebuilder/) with advanced features.
-
-= Is there a premium version? =
-
-The premium version comes with a bulk number of predesigned layouts and a wide range of ready blocks with priority support. [Click here](https://www.themeum.com/product/lift-pagebuilder/) to check details.
-
-= Is LIFT WP Page Builder compatible with Custom Post Types? =
-
-Yes, it is compatible with Custom Post Types. You have to checkmark the post types on LIFT WP Page Builder settings.
-
-= Where can I get support? =
-
-You can post your queries on the support section of this plugin on WordPress plugin directory, or on the Themeum [support forums](https://www.themeum.com/support/).
-
-= Where can I report a bug? =
-
-If any bug is found, Please let us know by posting on the support section of this plugin on WordPress plugin directory or directly on our support forums: [https://www.themeum.com/support/](https://www.themeum.com/support/) :)
 
 == Screenshots ==
 
@@ -246,155 +205,3 @@ Fix: Form Addon's form submission issue of default forms when added inside Inner
 = 1.2.5 - March 22, 2021 =
 Fix: CSS breaking issue fixed
 
-= 1.2.4 - March 17, 2021 =
-Update: Changed the User Role select box with proper privileges and defaults
-Fix: Filtering of Pagebuilder addon data for Raw HTML before saving to DB
-Fix: Sanitization and Escaping of user inputs
-
-= 1.2.3 - April 9, 2020 =
-Fix: Undefined function get_current_screen issue
-Fix: Support and documentation broken link issue
-
-= 1.2.2 - October 22, 2019 =
-New: Addon copy paste features 
-Fix: Form addon full-width submit button option
-Fix: Form addon input field box-shadow missing
-Fix: Form addon select padding issue	
-Fix: Accordion addon active border title
-Fix: Image Hover addon hover color issue
-
-= 1.2.1 - September 19, 2019 =
-Fix: fontawesome 5 upgrade
-
-= 1.2.0 - April 19, 2019 =
-Fix: W3 Validation issue
-Fix: Style Javascript issue
-Fix: Spelling mistake issue
-Fix: Form, Video, Pricing Table, Tab, Social Button, Feature Box, Progress Bar, Person Carousel, Image Hover, Flip Box addon issue
-
-= 1.1.0 - March 21, 2019 =
-
-Fixed: global form event.prevent issue in form addons
-Improved: performance
-
-= 1.0.9 - Feb 18, 2019 =
-
-Fix: ClassList access from undefined variable
-
-
-= 1.0.8 - 2018-12-06 =
-
-New: Gutenberg support
-Fix: Carousel button 2 issue
-Fix: Opacity default Value issue
-Fix: Animated heading issue
-Fix: Title issue in core
-Fix: Animated number prefix and suffix
-Fix: Blend mode issue
-Fix: Duplicate row issue
-
-= 1.0.7 - 2018-11-14 =
-
-New: Multiple shape, top bottom position and new shape added
-New: CSS blend mode
-New: Underlining added on typography field type
-Fix: Background2 field removed totally
-Fix: Slider navigation issue
-Fix: Letter spacing negative added
-Fix: Table addons hover CSS issue
-Fix: GeneratePress theme support
-
-= 1.0.6 - 2018-11-05 =
-
-Fixed: Inner column settings issue
-
-
-= 1.0.5 - 2018-11-01 =
-
-Fixed: Container stretch row without gutter
-
-
-= 1.0.4 - 2018-10-31 =
-
-New: Repeatable inner repeatable support add
-New: Fieldtype datetime added
-New: CSS filter reset button added
-Fix: Boxshadow inner column CSS issue
-Fix: Background2 fieldtype remove
-
-= 1.0.3 - 2018-10-11 =
-
-New: CSS filter field type added
-New: 100% translation ready
-Fix : Border radius changed to dimension
-Fix: Carousel shortcode issue
-Fix: Empty tab issue
-Fix: Box shadow issue
-
-= 1.0.2 - 2018-10-02 =
-
-* New: PHP 5.4 support
-* Fix: Language issue
-* Fix: Frontend editor Google Fonts issue
-* Fix: Default addons text overlay issue
-* Fix: Editor full screen view issue
-* Fix: WP Mega Menu, Give & other popular plugin conflict issues
-* Fix: Inner row left, right padding issue
-* Fix: Inner row drug and drop issue
-* Fix: Form addon issue
-* Fix: A few UX and UI issues
-
-= 1.0.1 - 2018-09-13 =
-
-* New: Direct links added to dashboard 
-* New: Keyboard shortcut "Control + Z" to undo an action
-* New: Preview button added to page layout thumbs
-* Fix: Delete option removed from single column
-* Fix: Testimonial image size issue
-* Fix: Em changed by fraction issue
-* Fix: Feature box icon/img image position issue
-* Fix: Drag & Drop not working on inner row issue
-* Fix: Library section save issue
-
-= 1.0.0 - 2018-09-01 =
-
-* New: Form addon
-* New: Carousel addon
-* New: Third-party block support 
-* New: Third-party page layout support 
-* New: Repeated field-type parameter 
-* Fix: Multiple media-type selection issue
-* Fix: Pricing Table addon configuration issue
-* Fix: Color2 field-type conflict issue
-* Fix: Dimension field-type unit issue
-* Fix: Image addon configuration issue
-* Fix: Border field-type stability issue
-
-= 1.0.0-beta2 - 2018-08-09 =
-
-* New: 5 predesigned page layouts
-* New: Image size for Post addon, [wppb-medium, w-600,h-450]
-* New: Responsive units (rem, percentage)
-* New: Discard alert for unsaved changes while closing the window
-* New: 'Loading' icon on the right side of the editor
-* Fix: Column gutter issue
-* Fix: Flipbox addon slide/fade issue
-* Fix: Inner row spacing issue
-* Fix: Image field-type position issue
-* Fix: Alignment field-type responsive issue
-* Fix: Background field-type issue
-* Fix: Inner row drag and drop, empty space issue
-* Fix: 'Loading' icon issue while importing a template
-
-= 1.0.0-beta1 - 2018-08-02 =
-
-* Fixed addon autoload, initialize class
-
-
-= 1.0.0-beta - 2018-08-01 =
-
-* Initial Release :)
-
-== Upgrade Notice ==
-
-Nothing here

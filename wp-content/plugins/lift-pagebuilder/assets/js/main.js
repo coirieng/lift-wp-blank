@@ -6,16 +6,6 @@ jQuery(document).ready(function ($) {
         jQuery("body").toggleClass("wppb-pagetoops-editor-hide");
     });
 
-    // Toggle Close & Open Toolbox
-    // jQuery('.sectionWarpper').bind('DOMSubtreeModified', function () {
-    //     jQuery('.blocks-draggable-img > img').each(function () {
-    //         var getsrc = jQuery(this).attr('src');
-    //         if(getsrc.substring(0, 4) !== 'http'){
-    //             jQuery(this).attr('src', 'http://demo.local:8888/wp-content/plugins/lift-pagebuilder/' + getsrc);
-    //         }
-    //     })
-    // });
-
     //Animated Number
     $.fn.wppbanimateNumbers = function (stop, commas, duration, ease) {
         return this.each(function () {

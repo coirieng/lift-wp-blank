@@ -154,7 +154,7 @@ if ( ! class_exists('WPPB_General')){
 			}
 			
 			if ( 'wppb-go-premium' === $_GET['page'] ) {
-				wp_redirect( 'https://www.themeum.com/product/lift-pagebuilder/?utm_source=wp_pagebuilder&utm_medium=wordpress_sidebar&utm_campaign=go_premium' );
+				wp_redirect( 'https://wow-wp.com' );
 				die();
 			}
         }

@@ -4,7 +4,7 @@
  *
  * @package lift-pagebuilder
  * @since v.1.0.0
- * @copyright: https://themeum.com
+ * @copyright: https://wow-wp.com
  *
  */
 
