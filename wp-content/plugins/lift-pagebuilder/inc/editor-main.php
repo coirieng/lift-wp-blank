@@ -36,5 +36,23 @@ global $wp_version;
         wp_footer();
         do_action( 'admin_print_footer_scripts' );
     ?>
+    <script>
+    jQuery('.sectionWarpper').bind('DOMSubtreeModified', function () {
+        jQuery('.blocks-draggable-img > img').each(function () {
+            var getsrc = jQuery(this).attr('src');
+            if(getsrc.substring(0, 4) !== 'http'){
+                jQuery(this).attr('src', '<?php echo plugin_dir_url(__DIR__) ?>/' + getsrc);
+            }
+        })
+    });
+    jQuery('body').bind('DOMSubtreeModified', function () {
+        jQuery('.wppb-default-template-image > img').each(function () {
+            var getsrc = jQuery(this).attr('src');
+            if(getsrc.substring(0, 4) !== 'http'){
+                jQuery(this).attr('src', '<?php echo plugin_dir_url(__DIR__) ?>/' + getsrc);
+            }
+        })
+    });
+    </script>
 </body>
 </html>

@@ -29,6 +29,7 @@ if ( ! class_exists('WPPB_Assets')) {
 			add_action('admin_enqueue_scripts', array($this, 'wppb_backend_script_loader'));
 			add_action('wp_ajax_wppb_switch_editor', array($this, 'wppb_switch_editor_callback'));
 			add_action('wp_ajax_wppb_switch_default', array($this, 'wppb_switch_default_callback'));
+
 		}
 
 		/**

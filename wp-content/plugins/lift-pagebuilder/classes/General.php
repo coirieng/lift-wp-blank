@@ -26,6 +26,7 @@ if ( ! class_exists('WPPB_General')){
 
 			add_action( 'admin_init', array( $this, 'wppb_go_premium_page' ) );
 			add_action( 'admin_menu', array( $this, 'wppb_add_admin_menu' ), 502 );
+
 		}
 		
 		/**
