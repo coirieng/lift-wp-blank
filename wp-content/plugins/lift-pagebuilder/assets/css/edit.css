@@ -234,7 +234,7 @@ input[type="search"] {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 select.input-sm {
   height: 30px;
@@ -297,7 +297,7 @@ select[multiple].input-sm {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 .wppb-builder-form-group-sm select.wppb-form-control {
   height: 30px;
@@ -694,13 +694,13 @@ fieldset[disabled] .wppb-builder-btn-link:focus {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 .wppb-builder-btn-xs {
   padding: 1px 5px;
   font-size: 12px;
   line-height: 1.5;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 .wppb-builder-btn-block {
   display: block;
@@ -997,7 +997,7 @@ select[multiple].wppb-builder-input-group-lg > .wppb-builder-input-group-btn > .
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 select.wppb-builder-input-group-sm > .wppb-form-control,
 select.wppb-builder-input-group-sm > .wppb-builder-input-group-addon,
@@ -1049,7 +1049,7 @@ select[multiple].wppb-builder-input-group-sm > .wppb-builder-input-group-btn > .
 .wppb-builder-input-group-addon.wppb-builder-input-sm {
   padding: 5px 10px;
   font-size: 12px;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 .wppb-builder-input-group-addon.wppb-builder-input-lg {
   padding: 11px 16px;
@@ -1209,7 +1209,7 @@ select[multiple].wppb-builder-input-group-sm > .wppb-builder-input-group-btn > .
   background: rgba(0, 0, 0, 0.8);
   z-index: 9991;
   color: #fff;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 .wppb-builder-container .wppb-column.wppb-builder-column-movable .close-column-movable:hover,
 .wppb-builder-container .wppb-column.wppb-builder-column-movable .close-column-movable:focus,
@@ -1549,7 +1549,7 @@ body.wppb-builder-modal-open {
   width: 20px;
   background-color: #fff;
   border: 1px solid #e5e5e5;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 .wppb-template-list-modal .wppb-template-cats li.wppb-cat-active .checkmark {
   color: #fff;
@@ -1862,7 +1862,7 @@ body.wppb-builder-modal-open {
   background-color: #0180fe;
   text-transform: uppercase;
   font-size: 10px;
-  border-radius: 2px;
+  border-radius: 3px;
   padding: 6px 8px;
   line-height: 1;
   font-weight: 400;
@@ -1912,7 +1912,7 @@ ul.wppb-builder-page-templates .inactive > div:after {
   right: 10px;
   top: 10px;
   font-size: 11px;
-  border-radius: 2px;
+  border-radius: 3px;
   padding: 5px 8px;
   line-height: 1;
   font-weight: 500;
@@ -1934,7 +1934,7 @@ ul.wppb-builder-page-templates .inactive > div:after {
   background-color: #0180fe;
   text-transform: uppercase;
   font-size: 10px;
-  border-radius: 2px;
+  border-radius: 3px;
   padding: 10px 15px;
   line-height: 1;
   font-weight: 400;
@@ -1981,7 +1981,7 @@ ul.wppb-builder-page-templates > li > a.wppb-layout-view{
     right: -15px;
     top: 45px;
     font-size: 11px;
-    border-radius: 2px;
+    border-radius: 3px;
     padding: 5px 8px;
     line-height: 1;
     font-weight: 500;
@@ -3142,7 +3142,7 @@ body.wppb-frontend-active.wppb-pagetoops-editor-hide {
   padding: 5px 0px;
   font-size: 12px;
   background: #3F51B5;
-  border-radius: 2px;
+  border-radius: 3px;
   width: 66px;
 }
 .wppb-builder-page-tools .wppb-builder-page-tabs > li span.btn-save-page {
@@ -3912,7 +3912,7 @@ input[type=range]:focus::-ms-fill-upper {
   margin-top: 1px;
   margin-bottom: 1px;
   line-height: 0;;
-  border-radius: 2px;
+  border-radius: 3px;
   background-color: #fff;
 }
 .wppb-element-form-radio-image span img {
@@ -4228,12 +4228,12 @@ input[type=range]:focus::-ms-fill-upper {
   color: #ffffff;
   transition: 400ms;
   -webkit-transition: 400ms;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 .wppb-builder-form-group .wp-editor-tabs {
   float: right;
   border: 1px solid #cecece;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 .wppb-builder-form-group .wp-media-buttons .insert-media:hover {
   background: #0180fe;
@@ -4254,7 +4254,7 @@ input[type=range]:focus::-ms-fill-upper {
   line-height: normal;
   background: #fff;
   margin-right: 4px;
-  border-radius: 2px;
+  border-radius: 3px;
   border: 1px solid #cecece;
 }
 .wp-core-ui .button-group.button-small .button,
@@ -4298,7 +4298,7 @@ input[type=range]:focus::-ms-fill-upper {
   line-height: normal;
   background: #fff;
   margin-right: 4px;
-  border-radius: 2px;
+  border-radius: 3px;
   border: 1px solid #cecece;
 }
 .wppb-builder-form-group .mce-toolbar .mce-btn-group .mce-btn.mce-listbox {
@@ -4307,7 +4307,7 @@ input[type=range]:focus::-ms-fill-upper {
   background: none;
   border: none;
   box-shadow: none;
-  border-radius: 2px;
+  border-radius: 3px;
   margin-right: 10px;
 }
 .wppb-builder-form-group .mce-toolbar .mce-btn-group .mce-btn.mce-listbox:hover {
@@ -4547,7 +4547,7 @@ input[type=range]:focus::-ms-fill-upper {
   position: relative;
   padding: 0;
   margin: 3px 0 0;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 .wppb-repeatable-field .wppb-element-form-background .wppb-background-type {
   width: 49%;
@@ -5742,7 +5742,7 @@ Iframe view loading icon
   text-align: center;
   color: #fff;
   background: #333;
-  border-radius: 2px;
+  border-radius: 3px;
   cursor: move;
   -webkit-transition: background-color .3s,color .3s;
   transition: background-color .3s,color .3s;
@@ -5760,7 +5760,7 @@ Iframe view loading icon
   background: rgb(255, 0, 0);
   z-index: 9991;
   color: #fff;
-  border-radius: 2px;
+  border-radius: 3px;
   font-size: 12px;
 }
 
@@ -5984,7 +5984,7 @@ Iframe view loading icon
   width: 27px;
   background: #ffffff;
   line-height: 25px;
-  border-radius: 2px;
+  border-radius: 3px;
   color: #353535;
   font-size: 12px;
 }
@@ -6599,6 +6599,8 @@ ul.wppb-builder-page-templates > li > div {
   font-size: 14px;
   text-decoration: none;
   transition: all .4s;
+  border-radius: 5px;
+  overflow: hidden;
 }
 ul.wppb-builder-page-templates > li > div:hover {
   box-shadow: 0 3px 5px rgba(0,0,0,.1);
@@ -6637,7 +6639,7 @@ ul.wppb-builder-page-templates > li .wow-tmp-info .wppb-builder-btn {
   background: transparent;
   border: 1px solid #25C266;
   box-shadow: none;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 ul.wppb-builder-page-templates > li .wow-tmp-info .wppb-builder-btn i {
   color: #25C266;
@@ -6648,7 +6650,7 @@ ul.wppb-builder-page-templates > li .wppb-btn-success {
   color: #fff;
   background: #25C266;
   box-shadow: 0 0 5px 0 rgba(3,225,109,.6);
-  border-radius: 2px;
+  border-radius: 3px;
   display: inline-block;
   margin-bottom: 0;
   font-weight: 400;
