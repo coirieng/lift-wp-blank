@@ -507,7 +507,7 @@ if ( ! class_exists('WPPB_Ajax')){
 			}
 			$apiUrl = $this->api_base_url.'single-template';
 
-			$post_args = array( 'timeout' => 120 );
+			$post_args = array( 'timeout' => 120);
 
 			$body_param = array_merge($this->wppb_api_request_body_default,
 				array( 'request_for' => 'get_single_template', 'template_id' => $template_id)
