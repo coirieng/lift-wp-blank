@@ -2424,7 +2424,7 @@ body.wppb-frontend-active.wppb-pagetoops-editor-hide {
   left: 0;
   bottom: 0;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   display: flex;
 }
 .wppb-builder-main-tab{
@@ -5511,7 +5511,9 @@ Iframe view loading icon
   cursor: pointer;
 }
 .wppb-row-parent:hover > .wppb-builder-row-tools {
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   animation: fadeIn .3s;
   -webkit-animation: fadeIn .3s;
 }
@@ -5538,6 +5540,9 @@ Iframe view loading icon
   list-style: none;
   padding: 0;
   margin: 0;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
 }
 
 .wppb-row-parent .wppb-builder-row-tools  ul > li {
@@ -6224,7 +6229,7 @@ Iframe view loading icon
   left: 0;
   top: 50%;
   margin-top: 0;
-  z-index: 3;
+  z-index: 12;
   display: none;
   height: 20px;
   margin-top: -20px;
@@ -6273,7 +6278,7 @@ Iframe view loading icon
   display: flex!important;
   font-size: 13px;
   color: #fff;
-  z-index: 3;
+  z-index: 12;
   position: relative;
   top: 50%;
   margin: 0 auto;
