@@ -46,7 +46,7 @@ global $wp_version;
         })
     });
     jQuery('body').bind('DOMSubtreeModified', function () {
-        jQuery('.wppb-default-template-image > img').each(function () {
+        jQuery('.wppb-builder-modal .wppb-default-template-image > img').each(function () {
             var getsrc = jQuery(this).attr('src');
             if(getsrc.substring(0, 4) !== 'http'){
                 jQuery(this).attr('src', '<?php echo plugin_dir_url(__DIR__) ?>/' + getsrc);
