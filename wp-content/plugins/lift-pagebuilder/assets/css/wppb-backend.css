@@ -5,14 +5,14 @@
 .wppb-backend-btn {
     display: inline-block;
     padding: 17px 30px;
-    border-radius: 3px;
+    border-radius: 5px;
     text-decoration: none;
     box-shadow: none;
     text-shadow: none;
     background: #d4cfcf;
     color: #333;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 500;
 }
 .wppb-backend-btn:hover,
 .wppb-backend-btn:focus {
@@ -28,21 +28,21 @@
     color: #333; 
 }
 .wppb-info-btn {
-    background: #08b1ae;
+    background: #2c58ca;
     color:#fff;
 }
 .wppb-info-btn:hover,
 .wppb-info-btn:focus {
-    background: #0b8783;
+    background: #2d368e;
     color:#fff;
 }
 .wppb-primary-btn {
-    background: #297EE1;
+    background: #ff00b2;
     color: #fff;
 }
 .wppb-primary-btn:hover,
 .wppb-primary-btn:focus {
-    background: rgb(34, 111, 199);
+    background: #de009b;
     color: #fff; 
 }
 .wppb-edit-button-wrap {
@@ -51,7 +51,7 @@
 }
 .wppb-edit-button-default-wrap {
     margin-top: 25px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 .active-wppb-editor .wppagebuilder-edit-button {
     margin-bottom: 15px;
@@ -59,13 +59,16 @@
 .wppb-back-editor,
 .wppb-editor-warper {
     display: inline-block;
-    margin-right: 8px;
+    margin: 0 4px;
 }
 /* intial looks */
 .wppb-edit-button-wrap{
     padding: 40px;
     background: #fff;
     border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    justify-content: center;
+    display: flex;
 }
 .wppagebuilder-edit-hide-editor + #postdivrich {
     display: none;
