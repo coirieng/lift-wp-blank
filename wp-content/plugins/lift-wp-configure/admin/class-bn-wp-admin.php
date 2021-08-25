@@ -97,7 +97,7 @@ class LIFT_WP_CONFIGURE_Admin {
 		 * class.
 		 */
 
-		wp_register_script('wp_lightweight_admin_main_js', plugin_dir_url( __FILE__ ) . 'assets/js/dist/main.prod.js', array('jquery'));
+		wp_register_script('wp_lightweight_admin_main_js', plugin_dir_url( __FILE__ ) . 'assets/js/main.js', array('jquery'));
         wp_enqueue_script('wp_lightweight_admin_main_js');
 
 	}
