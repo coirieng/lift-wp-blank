@@ -20,6 +20,15 @@ global $wp_version;
             if( typeof  document.getElementById('wppbMainIframeLoadingWrap') != 'undefined' ){
                 document.getElementById('wppbMainIframeLoadingWrap').style.display='none';
             }
+            if( typeof document.getElementById('wppb-builder-view') != 'undefined' ){
+                var wppb_iframe = document.getElementById('wppb-builder-view');
+                var innerDoc = wppb_iframe.contentDocument || wppb_iframe.contentWindow.document;
+                var head = innerDoc.getElementsByTagName('body')[0];
+                var script = innerDoc.createElement('script');
+                script.innerText = "jQuery('body').bind('DOMSubtreeModified', function () {jQuery('.wppb-builder-addon .wppb-image-addon img').each(function () { var getsrc = jQuery(this).attr('src'); if(getsrc.substring(0, 4) !== 'http'){ jQuery(this).attr('src', '<?php echo plugin_dir_url(__DIR__) ?>' + getsrc); } }) })";
+                script.type = 'text/javascript';
+                head.appendChild(script);
+            }
         }
     </script>
 </head>
@@ -60,12 +69,6 @@ global $wp_version;
     jQuery('body').bind('DOMSubtreeModified', function () {
         WOW_watching()
     });
-    // jQuery(document).ready(function () {
-    //     WOW_watching()
-    //     setTimeout(() => {
-    //         WOW_watching()
-    //     }, 5000);
-    // })
     </script>
 </body>
 </html>
