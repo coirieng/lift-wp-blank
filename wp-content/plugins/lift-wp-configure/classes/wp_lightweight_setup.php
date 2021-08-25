@@ -191,7 +191,7 @@ if (!class_exists('WP_Lightweight_Core_Setup')) {
 						->set_html('
 						
 						<p>Copyright by LIFT Creations</p>
-						<p><strong>Author:</strong> <a href="https://baonguyenyam.github.io" target="_blank">Nguyen Pham</a></p>
+						<p><strong>Author:</strong> <a href="https://liftcreations.com" target="_blank">hello@liftcreations.com</a></p>
 						
 						'),
 		
