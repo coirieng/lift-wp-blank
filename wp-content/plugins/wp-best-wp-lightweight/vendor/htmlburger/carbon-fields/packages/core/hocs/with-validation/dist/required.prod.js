@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=required;var _i18n=require("@wordpress/i18n"),_lodash=require("lodash");function required(e){var r=(0,_lodash.isObject)(e);return r&&!(0,_lodash.isEmpty)(e)||!r&&e?null:(0,_i18n.__)("This field is required.","carbon-fields-ui")}

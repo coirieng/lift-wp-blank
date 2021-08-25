@@ -1,1 +1,0 @@
-"use strict";var _data=require("@wordpress/data"),_hooks=require("@wordpress/hooks");(0,_hooks.addFilter)("carbon-fields.sidebar.metabox","carbon-fields/metaboxes",(0,_data.withDispatch)(function(e){return{onAdded:e("carbon-fields/metaboxes").receiveSidebar}}));

@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=isGutenberg;var _lodash=require("lodash");function isGutenberg(){return!(0,_lodash.isUndefined)(window._wpLoadBlockEditor)}

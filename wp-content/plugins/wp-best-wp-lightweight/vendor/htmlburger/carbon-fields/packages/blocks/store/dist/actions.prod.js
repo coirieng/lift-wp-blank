@@ -1,1 +1,0 @@
-"use strict";function setupContainerDefinitions(e){return{type:"SETUP_CONTAINER_DEFINITIONS",payload:{definitions:e}}}function setupFieldDefinitions(e){return{type:"SETUP_FIELD_DEFINITIONS",payload:{definitions:e}}}Object.defineProperty(exports,"__esModule",{value:!0}),exports.setupContainerDefinitions=setupContainerDefinitions,exports.setupFieldDefinitions=setupFieldDefinitions;

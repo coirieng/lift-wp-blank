@@ -1,1 +1,0 @@
-"use strict";function stripCompactInputPrefix(e){var t=window.cf.config,p=t.compactInput,c=t.compactInputKey;return p&&0===e.indexOf(c)?e.replace(new RegExp("^".concat(c,"\\[(.+?)\\]")),"$1"):e}Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=stripCompactInputPrefix;
