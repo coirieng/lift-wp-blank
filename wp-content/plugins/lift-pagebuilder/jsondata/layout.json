@@ -9,7 +9,7 @@
       "preview": "lib/layouts/Template-Spa-Home.jpg",
       "preview_m": "lib/layouts/Template-Spa-Home-267x200.jpg",
       "pro": false,
-      "liveurl": "https://builder.themeum.com/spa-home/",
+      "liveurl": "#",
       "category": [
         { "name": "Business", "slug": "business" },
         { "name": "Creative", "slug": "creative" },
@@ -23,7 +23,7 @@
       "preview": "lib/layouts/Template-Spa-Home.jpg",
       "preview_m": "lib/layouts/Template-Spa-Home-267x200.jpg",
       "pro": false,
-      "liveurl": "",
+      "liveurl": "#",
       "category": [
         { "name": "Business", "slug": "business" },
         { "name": "Creative", "slug": "creative" },
@@ -37,7 +37,7 @@
       "preview": "lib/layouts/Template-Saloon-Home.jpg",
       "preview_m": "lib/layouts/Template-Saloon-Home-267x200.jpg",
       "pro": false,
-      "liveurl": "",
+      "liveurl": "#",
       "category": [
         { "name": "Agency", "slug": "agency" },
         { "name": "Creative", "slug": "creative" },
@@ -51,7 +51,7 @@
       "preview": "lib/layouts/Template-Plumber-Home.jpg",
       "preview_m": "lib/layouts/Template-Plumber-Home-267x200.jpg",
       "pro": false,
-      "liveurl": "",
+      "liveurl": "#",
       "category": [
         { "name": "Business", "slug": "business" },
         { "name": "Creative", "slug": "creative" },
@@ -65,7 +65,7 @@
       "preview": "lib/layouts/Template-Insurance-Home.jpg",
       "preview_m": "lib/layouts/Template-Insurance-Home-267x200.jpg",
       "pro": false,
-      "liveurl": "",
+      "liveurl": "#",
       "category": [
         { "name": "Agency", "slug": "agency" },
         { "name": "Business", "slug": "business" },
@@ -79,7 +79,7 @@
       "preview": "lib/layouts/Template-Architecture-Home.jpg",
       "preview_m": "lib/layouts/Template-Architecture-Home-267x200.jpg",
       "pro": false,
-      "liveurl": "",
+      "liveurl": "#",
       "category": [
         { "name": "Service", "slug": "service" },
         { "name": "Technology", "slug": "technology" }
@@ -93,7 +93,7 @@
       "preview": "lib/layouts/Template-Architecture-Home.jpg",
       "preview_m": "lib/layouts/Template-Architecture-Home-267x200.jpg",
       "pro": false,
-      "liveurl": "https://builder.themeum.com/architecture-home/",
+      "liveurl": "#",
       "category": [
         { "name": "Service", "slug": "service" },
         { "name": "Technology", "slug": "technology" }
@@ -107,7 +107,7 @@
       "preview": "lib/layouts/Template-Insurance-Home.jpg",
       "preview_m": "lib/layouts/Template-Insurance-Home-267x200.jpg",
       "pro": false,
-      "liveurl": "https://builder.themeum.com/insurance-home-2/",
+      "liveurl": "#",
       "category": [
         { "name": "Agency", "slug": "agency" },
         { "name": "Business", "slug": "business" },
@@ -122,7 +122,7 @@
       "preview": "lib/layouts/Template-Plumber-Home.jpg",
       "preview_m": "lib/layouts/Template-Plumber-Home-267x200.jpg",
       "pro": false,
-      "liveurl": "https://builder.themeum.com/plumber-home/",
+      "liveurl": "#",
       "category": [
         { "name": "Business", "slug": "business" },
         { "name": "Creative", "slug": "creative" },
@@ -137,7 +137,7 @@
       "preview": "lib/layouts/Template-Architecture-About.jpg",
       "preview_m": "lib/layouts/Template-Architecture-About-267x200.jpg",
       "pro": false,
-      "liveurl": "https://builder.themeum.com/architecture-about-2/",
+      "liveurl": "#",
       "category": [
         { "name": "Service", "slug": "service" },
         { "name": "Technology", "slug": "technology" }
@@ -150,7 +150,7 @@
       "preview": "lib/layouts/Template-Insurance-About.jpg",
       "preview_m": "lib/layouts/Template-Insurance-About-267x200.jpg",
       "pro": false,
-      "liveurl": "https://builder.themeum.com/insurance-about-2/",
+      "liveurl": "#",
       "category": [
         { "name": "Agency", "slug": "agency" },
         { "name": "Business", "slug": "business" },
@@ -165,7 +165,7 @@
       "preview": "lib/layouts/Template-Plumber-About.jpg",
       "preview_m": "lib/layouts/Template-Plumber-About-267x200.jpg",
       "pro": false,
-      "liveurl": "https://builder.themeum.com/plumber-about-3/",
+      "liveurl": "#",
       "category": [
         { "name": "Business", "slug": "business" },
         { "name": "Creative", "slug": "creative" },
@@ -179,7 +179,7 @@
       "preview": "lib/layouts/Template-Saloon-Home.jpg",
       "preview_m": "lib/layouts/Template-Saloon-Home-267x200.jpg",
       "pro": false,
-      "liveurl": "https://builder.themeum.com/saloon-home-2/",
+      "liveurl": "#",
       "category": [
         { "name": "Agency", "slug": "agency" },
         { "name": "Creative", "slug": "creative" },
@@ -194,7 +194,7 @@
       "preview": "lib/layouts/Template-Architecture-Services.jpg",
       "preview_m": "lib/layouts/Template-Architecture-Services-267x200.jpg",
       "pro": false,
-      "liveurl": "https://builder.themeum.com/architecture-services/",
+      "liveurl": "#",
       "category": [
         { "name": "Service", "slug": "service" },
         { "name": "Technology", "slug": "technology" }
@@ -208,7 +208,7 @@
       "preview": "lib/layouts/Template-Insurance-Service.jpg",
       "preview_m": "lib/layouts/Template-Insurance-Service-267x200.jpg",
       "pro": false,
-      "liveurl": "https://builder.themeum.com/insurance-service-2/",
+      "liveurl": "#",
       "category": [
         { "name": "Agency", "slug": "agency" },
         { "name": "Business", "slug": "business" },
@@ -222,7 +222,7 @@
       "preview": "lib/layouts/Template-Plumber-Service.jpg",
       "preview_m": "lib/layouts/Template-Plumber-Service-267x200.jpg",
       "pro": false,
-      "liveurl": "https://builder.themeum.com/plumber-service-2/",
+      "liveurl": "#",
       "category": [
         { "name": "Business", "slug": "business" },
         { "name": "Creative", "slug": "creative" },
@@ -236,7 +236,7 @@
       "preview": "lib/layouts/Template-Saloon-About.jpg",
       "preview_m": "lib/layouts/Template-Saloon-About-267x200.jpg",
       "pro": false,
-      "liveurl": "https://builder.themeum.com/saloon-about-3/",
+      "liveurl": "#",
       "category": [
         { "name": "Agency", "slug": "agency" },
         { "name": "Creative", "slug": "creative" },
@@ -251,7 +251,7 @@
       "preview": "lib/layouts/template-spa-offer.jpg",
       "preview_m": "lib/layouts/template-spa-offer-267x200.jpg",
       "pro": false,
-      "liveurl": "https://builder.themeum.com/spa-offer/",
+      "liveurl": "#",
       "category": [
         { "name": "Business", "slug": "business" },
         { "name": "Creative", "slug": "creative" },
@@ -265,7 +265,7 @@
       "preview": "lib/layouts/template-spa-package.jpg",
       "preview_m": "lib/layouts/template-spa-package-267x200.jpg",
       "pro": false,
-      "liveurl": "https://builder.themeum.com/spa-package/",
+      "liveurl": "#",
       "category": [
         { "name": "Business", "slug": "business" },
         { "name": "Creative", "slug": "creative" },
@@ -280,7 +280,7 @@
       "preview": "lib/layouts/template-saloon-style-showcase.jpg",
       "preview_m": "lib/layouts/template-saloon-style-showcase-267x200.jpg",
       "pro": false,
-      "liveurl": "https://builder.themeum.com/saloon-style-showcase/",
+      "liveurl": "#",
       "category": [
         { "name": "Business", "slug": "business" },
         { "name": "Creative", "slug": "creative" },
