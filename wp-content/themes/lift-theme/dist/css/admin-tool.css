@@ -60,4 +60,7 @@
     #resultadmin .countag span {
       margin-right: 2px; }
 
+body.admin-control#wppb-page-builder #content.lift-content .lift-main footer.entry-footer {
+  display: block; }
+
 /*# sourceMappingURL=admin-tool.css.map */

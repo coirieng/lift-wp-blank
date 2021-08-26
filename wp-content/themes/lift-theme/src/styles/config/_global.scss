@@ -125,14 +125,13 @@ body {
 		}
 	}
 }
-// Admin Builder 
+// Admin Builder
 #wppb-page-builder {
-	#content.lift-content {
-		.lift-main {
-			footer.entry-footer {
-				display: none;
-			}
-		}
-	}
+    #content.lift-content {
+        .lift-main {
+            footer.entry-footer {
+                display: none;
+            }
+        }
+    }
 }
-
