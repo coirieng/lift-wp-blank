@@ -1299,11 +1299,11 @@ select[multiple].wppb-builder-input-group-sm > .wppb-builder-input-group-btn > .
 }
 
 .wppb-builder-blank-page-tools .wppb-row-add-dropdown {
-  height: 0;
+  /* height: 0; */
   transition: 400ms;
 }
 .wppb-builder-blank-page-tools .wppb-row-add-dropdown.wppb-layout-open{
-  height: 158px;
+  /* height: 158px; */
 }
 
 .wppb-row-parent .wppb-row-add-dropdown {
@@ -5448,13 +5448,16 @@ Iframe view loading icon
 }
 
 .wppb-builder-blank-page-tools {
-  padding: 120px 5px 160px;
   text-align: center;
-  margin: 25px auto 25px;
+  padding: 50px 0;
+  margin: 30px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 0 0 3px #e0e0e0 inset, 0 0 0 5px #ffffff inset, 0 0 0 7px #e4e4e4 inset;
 }
-.wppb-row-placeholder + .wppb-builder-blank-page-tools {
+/* .wppb-row-placeholder + .wppb-builder-blank-page-tools {
   padding: 65px 0; 
-}
+} */
 .wppb-builder-modal-content {
   overflow-y: auto;
 }

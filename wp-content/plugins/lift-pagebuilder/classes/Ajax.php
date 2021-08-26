@@ -460,16 +460,15 @@ if ( ! class_exists('WPPB_Ajax')){
 		 */
 		public function wppb_import_single_page_template(){
 			$template_id = (int) sanitize_text_field($_POST['template_id']);
+			$fileUrl = $_POST['fileUrl'];
+			$cache_time = (60*60*24*7); //cached for 7 days
+			$cachedTemplateFile = "wppb-single-template-{$template_id}.json";
+			$upload_dir = wp_upload_dir();
+			$dir = trailingslashit($upload_dir['basedir']) . 'lift-pagebuilder/cache/templates/';
+			$file_path_name = $dir . $cachedTemplateFile;
 
 			if($this->switchAPI){
-				$fileUrl = $_POST['fileUrl'];
-
 				if( !$fileUrl ){
-					$cache_time = (60*60*24*7); //cached for 7 days
-					$cachedTemplateFile = "wppb-single-template-{$template_id}.json";
-					$upload_dir = wp_upload_dir();
-					$dir = trailingslashit($upload_dir['basedir']) . 'lift-pagebuilder/cache/templates/';
-					$file_path_name = $dir . $cachedTemplateFile;
 					// Checking if exists file and cache validity true
 					if (file_exists($file_path_name) && (filemtime($file_path_name) + $cache_time) > time()){
 						$getTemplatesFromCached = file_get_contents($file_path_name);
@@ -477,7 +476,7 @@ if ( ! class_exists('WPPB_Ajax')){
 					}else{
 						$templateData = $this->load_and_cache_single_template($template_id);
 					}
-				}else{
+				} else {
 					if (file_exists($fileUrl)){
 						$getContent = file_get_contents($fileUrl);
 						$templateData = json_decode($getContent, true);
@@ -488,7 +487,11 @@ if ( ! class_exists('WPPB_Ajax')){
 			} else {
 				// ==============
 				$file_path = plugin_dir_path( __DIR__ ) . 'jsondata/pages/page-'.$template_id.'.json';
-				$templateData = json_decode(file_get_contents( $file_path), true);
+				if (file_exists($file_path_name)){
+					$templateData = $this->load_and_cache_single_template($template_id);
+				}else{
+					$templateData = json_decode(file_get_contents( $file_path), true);
+				}
 				wp_send_json($templateData);
 				// ==============
 			}
