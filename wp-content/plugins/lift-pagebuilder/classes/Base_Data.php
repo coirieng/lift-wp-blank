@@ -293,8 +293,8 @@ if ( ! class_exists( 'WPPB_Base_Data' ) ) {
 						'type' => 'textarea',
 						'title' => __('Custom CSS','lift-pagebuilder'),
 						'section' => 'Custom CSS',
-						'placeholder' => __('Use {{SELECTOR}} before the selector to wrap element. Otherwise it works globally.','lift-pagebuilder'),
-						'desc' => __('Use {{SELECTOR}} before the selector to wrap element. Otherwise it works globally.','lift-pagebuilder')
+						'placeholder' => __('Use {{SELECTOR}} before the selector to wrap element. Otherwise it works globally. e.g: {{SELECTOR}}{ display: none; }','lift-pagebuilder'),
+						'desc' => __('Use {{SELECTOR}} before the selector to wrap element. Otherwise it works globally. e.g: {{SELECTOR}}{ display: none; }','lift-pagebuilder')
 					),
 				),
 			);
@@ -571,8 +571,8 @@ if ( ! class_exists( 'WPPB_Base_Data' ) ) {
 							'type' => 'textarea',
 							'title' => __('Custom CSS','lift-pagebuilder'),
 							'section' => 'Custom CSS',
-							'placeholder' => __('Use {{SELECTOR}} before the selector to wrap element. Otherwise it works globally.','lift-pagebuilder'),
-							'desc' => __('Use {{SELECTOR}} before the selector to wrap element. Otherwise it works globally.','lift-pagebuilder'),
+							'placeholder' => __('Use {{SELECTOR}} before the selector to wrap element. Otherwise it works globally. e.g: {{SELECTOR}}{ display: none; }','lift-pagebuilder'),
+							'desc' => __('Use {{SELECTOR}} before the selector to wrap element. Otherwise it works globally. e.g: {{SELECTOR}}{ display: none; }','lift-pagebuilder'),
 						),
 					)
 				)
@@ -880,8 +880,8 @@ if ( ! class_exists( 'WPPB_Base_Data' ) ) {
 							'type' => 'textarea',
 							'title' => __('Custom CSS','lift-pagebuilder'),
 							'section' => 'Custom CSS',
-							'placeholder' =>  __('Use {{SELECTOR}} before the selector to wrap element. Otherwise it works globally.','lift-pagebuilder'),
-							'desc' =>  __('Use {{SELECTOR}} before the selector to wrap element. Otherwise it works globally.','lift-pagebuilder'),
+							'placeholder' =>  __('Use {{SELECTOR}} before the selector to wrap element. Otherwise it works globally. e.g: {{SELECTOR}}{ display: none; }','lift-pagebuilder'),
+							'desc' =>  __('Use {{SELECTOR}} before the selector to wrap element. Otherwise it works globally. e.g: {{SELECTOR}}{ display: none; }','lift-pagebuilder'),
 						),
 					),
 				),
