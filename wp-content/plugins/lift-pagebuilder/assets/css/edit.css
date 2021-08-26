@@ -4905,29 +4905,30 @@ input[type=range]:focus::-ms-fill-upper {
 }
 .form-section .section-title {
   font-size: 14px;
-  color: #80868D;
+  color: #2d368e;
   position: relative;
   margin: 0;
   padding: 12px 0;
   font-weight: 400;
   padding-left: 15px;
-  background: #E8E8E8;
+  background: #ffffff;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }
+.form-section:hover .section-title,
 .form-section .section-title.active{
   color: #fff;
   margin-bottom: 0;
-  border-bottom: 1px solid #80868D;
+  border-bottom: 1px solid #de197e;
   padding-left: 15px;
   padding-right: 15px;
-  background: #80868D;
+  background: #ec2e8f;
 }
 .wppb-tab-fields .form-section {
-  border-bottom: 2px solid #dedede;
+  border-bottom: 2px solid #f3f3f3;
   margin: 0 -10px;
   padding: 0;
 }
@@ -4967,9 +4968,26 @@ input[type=range]:focus::-ms-fill-upper {
   padding: 10px;
   box-shadow: 0 2px 3px rgba(0, 0, 0, .05);
   transition: box-shadow 300ms;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+.section-content > .blocks-draggable:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  z-index: 1;
+  display: none;
 }
 .section-content > .blocks-draggable:hover {
   box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+}
+.section-content > .blocks-draggable:hover:after {
+  background: rgb(45 54 142 / 82%);
+  display: block;
 }
 .section-content > .blocks-draggable .blocks-draggable-img {
   margin: -10px;
@@ -5299,7 +5317,7 @@ Iframe view loading icon
   transition: all 400ms;
   -webkit-transition: all 400ms;
   background:rgb(255, 255, 255);
-  border-radius: 3px;
+  border-radius: 5px;
   border: 1px solid #E8E8E8;
 }
 .wppb-builder-addons-list-sidebar ul li > span > span:hover {

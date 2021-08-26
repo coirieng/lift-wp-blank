@@ -302,6 +302,9 @@ body {
   #content.lift-content .content-wrapper .lift-main #wppb-builder-container .wppb-row-parent .wppb-container.wppb-container-full {
     max-width: 100%; }
 
+#wppb-page-builder #content.lift-content .lift-main footer.entry-footer {
+  display: none; }
+
 .navbar-expand-keep {
   flex-wrap: nowrap;
   justify-content: flex-start; }
