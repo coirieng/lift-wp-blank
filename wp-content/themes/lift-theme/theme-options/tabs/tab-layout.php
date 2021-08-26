@@ -112,7 +112,7 @@
 			array(
                 'id'       => 'lift-theme-layout-style-bg',
                 'type'     => 'background',
-				'output'   => array( '#content' ),
+				'output'   => array( '.lift-content' ),
                 'title'    => __( 'Layout background', 'lift-theme-options' ),
                 'subtitle' => __( 'Pick a layout background for the theme (default: #ffffff).', 'lift-theme-options' ),
                 'default'  => array(
@@ -128,7 +128,7 @@
                 'title'    => __( 'Layout Border Option', 'lift-theme-options' ),
                 'subtitle' => __( 'Only color validation can be done on this field type', 'lift-theme-options' ),
 				'output'    => array(
-					'border-top'  => '#content'
+					'border-top'  => '.lift-content'
 				),
                 'right'         => false,     // Disable the right
                 'bottom'        => false,     // Disable the bottom
@@ -143,10 +143,10 @@
                 'id'       => 'lift-theme-layout-style-color',
                 'type'     => 'color_rgba',
 				'output'    => array(
-					'color'  => '#content'
+					'color'  => '.lift-content'
 				),
 				// 'compiler' => array(
-				// 	'color'  => '#content'
+				// 	'color'  => '.lift-content'
 				// ),
                 'title'    => __( 'Layout color', 'lift-theme-options' ),
                 'subtitle' => __( 'Pick a layout color for the theme (default: #000).', 'lift-theme-options' ),
@@ -158,7 +158,7 @@
                 'id'       => 'lift-theme-layout-style-link',
                 'type'     => 'link_color',
 				'output'    => array(
-					'color'  => '#content a'
+					'color'  => '.lift-content a'
 				),
 				'title'    => __('Layout links', 'lift-theme-options'),
 				'subtitle' => __('Only color validation can be done on this field type', 'lift-theme-options'),

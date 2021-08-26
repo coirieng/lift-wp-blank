@@ -4,7 +4,7 @@
   "data": [
     {
       "name": "Spa",
-      "ID": 1,
+      "ID": 100,
       "parentID": 0,
       "preview": "lib/layouts/Template-Spa-Home.jpg",
       "preview_m": "lib/layouts/Template-Spa-Home-267x200.jpg",
@@ -19,7 +19,7 @@
     {
       "name": "Spa &#8211; Home",
       "ID": 1,
-      "parentID": 1,
+      "parentID": 100,
       "preview": "lib/layouts/Template-Spa-Home.jpg",
       "preview_m": "lib/layouts/Template-Spa-Home-267x200.jpg",
       "pro": false,
@@ -33,7 +33,7 @@
     {
       "name": "Spa &#8211; Offer",
       "ID": 2,
-      "parentID": 1,
+      "parentID": 100,
       "preview": "lib/layouts/template-spa-offer.jpg",
       "preview_m": "lib/layouts/template-spa-offer-267x200.jpg",
       "pro": false,
@@ -47,7 +47,7 @@
     {
       "name": "Spa &#8211; Package",
       "ID": 3,
-      "parentID": 1,
+      "parentID": 100,
       "preview": "lib/layouts/template-spa-package.jpg",
       "preview_m": "lib/layouts/template-spa-package-267x200.jpg",
       "pro": false,
@@ -58,6 +58,67 @@
         { "name": "Service", "slug": "service" }
       ]
     },
+    {
+      "name": "Plumber",
+      "ID": 200,
+      "parentID": 0,
+      "preview": "lib/layouts/Template-Plumber-Home.jpg",
+      "preview_m": "lib/layouts/Template-Plumber-Home-267x200.jpg",
+      "pro": false,
+      "liveurl": "#",
+      "category": [
+        { "name": "Business", "slug": "business" },
+        { "name": "Creative", "slug": "creative" },
+        { "name": "Service", "slug": "service" }
+      ]
+    },
+    {
+      "name": "Plumber &#8211; Home",
+      "ID": 4,
+      "parentID": 200,
+      "preview": "lib/layouts/Template-Plumber-Home.jpg",
+      "preview_m": "lib/layouts/Template-Plumber-Home-267x200.jpg",
+      "pro": false,
+      "liveurl": "#",
+      "category": [
+        { "name": "Business", "slug": "business" },
+        { "name": "Creative", "slug": "creative" },
+        { "name": "Service", "slug": "service" }
+      ]
+    },
+    {
+      "name": "Plumber &#8211; About",
+      "ID": 5,
+      "parentID": 200,
+      "preview": "lib/layouts/Template-Plumber-About.jpg",
+      "preview_m": "lib/layouts/Template-Plumber-About-267x200.jpg",
+      "pro": false,
+      "liveurl": "#",
+      "category": [
+        { "name": "Business", "slug": "business" },
+        { "name": "Creative", "slug": "creative" },
+        { "name": "Service", "slug": "service" }
+      ]
+    },
+    {
+      "name": "Plumber &#8211; Service",
+      "ID": 6,
+      "parentID": 200,
+      "preview": "lib/layouts/Template-Plumber-Service.jpg",
+      "preview_m": "lib/layouts/Template-Plumber-Service-267x200.jpg",
+      "pro": false,
+      "liveurl": "#",
+      "category": [
+        { "name": "Business", "slug": "business" },
+        { "name": "Creative", "slug": "creative" },
+        { "name": "Service", "slug": "service" }
+      ]
+    },
+
+
+
+
+
 
     {
       "name": "Saloon",
@@ -73,20 +134,7 @@
         { "name": "Service", "slug": "service" }
       ]
     },
-    {
-      "name": "Plumber",
-      "ID": 212,
-      "parentID": 0,
-      "preview": "lib/layouts/Template-Plumber-Home.jpg",
-      "preview_m": "lib/layouts/Template-Plumber-Home-267x200.jpg",
-      "pro": false,
-      "liveurl": "#",
-      "category": [
-        { "name": "Business", "slug": "business" },
-        { "name": "Creative", "slug": "creative" },
-        { "name": "Service", "slug": "service" }
-      ]
-    },
+    
     {
       "name": "Insurance",
       "ID": 215,
@@ -144,22 +192,7 @@
       ]
     },
 
-    {
-      "name": "Plumber &#8211; Home",
-      "ID": 310,
-      "parentID": 212,
-      "preview": "lib/layouts/Template-Plumber-Home.jpg",
-      "preview_m": "lib/layouts/Template-Plumber-Home-267x200.jpg",
-      "pro": false,
-      "liveurl": "#",
-      "category": [
-        { "name": "Business", "slug": "business" },
-        { "name": "Creative", "slug": "creative" },
-        { "name": "Service", "slug": "service" }
-      ]
-    },
-
-    {
+        {
       "name": "Architecture &#8211; About",
       "ID": 402,
       "parentID": 213,
@@ -187,20 +220,8 @@
       ]
     },
 
-    {
-      "name": "Plumber &#8211; About",
-      "ID": 333,
-      "parentID": 212,
-      "preview": "lib/layouts/Template-Plumber-About.jpg",
-      "preview_m": "lib/layouts/Template-Plumber-About-267x200.jpg",
-      "pro": false,
-      "liveurl": "#",
-      "category": [
-        { "name": "Business", "slug": "business" },
-        { "name": "Creative", "slug": "creative" },
-        { "name": "Service", "slug": "service" }
-      ]
-    },
+
+
     {
       "name": "Saloon &#8211; Home",
       "ID": 363,
@@ -244,20 +265,7 @@
         { "name": "Service", "slug": "service" }
       ]
     },
-    {
-      "name": "Plumber &#8211; Service",
-      "ID": 344,
-      "parentID": 212,
-      "preview": "lib/layouts/Template-Plumber-Service.jpg",
-      "preview_m": "lib/layouts/Template-Plumber-Service-267x200.jpg",
-      "pro": false,
-      "liveurl": "#",
-      "category": [
-        { "name": "Business", "slug": "business" },
-        { "name": "Creative", "slug": "creative" },
-        { "name": "Service", "slug": "service" }
-      ]
-    },
+    
     {
       "name": "Saloon &#8211; about",
       "ID": 400,
