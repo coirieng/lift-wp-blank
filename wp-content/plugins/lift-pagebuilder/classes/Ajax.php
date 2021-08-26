@@ -459,8 +459,9 @@ if ( ! class_exists('WPPB_Ajax')){
 		 * Import single template
 		 */
 		public function wppb_import_single_page_template(){
+			$template_id = (int) sanitize_text_field($_POST['template_id']);
+
 			if($this->switchAPI){
-				$template_id = (int) sanitize_text_field($_POST['template_id']);
 				$fileUrl = $_POST['fileUrl'];
 
 				if( !$fileUrl ){
@@ -486,7 +487,7 @@ if ( ! class_exists('WPPB_Ajax')){
 				}
 			} else {
 				// ==============
-				$file_path = plugin_dir_path( __DIR__ ) . 'jsondata/layout/layout-1.json';
+				$file_path = plugin_dir_path( __DIR__ ) . 'jsondata/pages/page-'.$template_id.'.json';
 				$templateData = json_decode(file_get_contents( $file_path), true);
 				wp_send_json($templateData);
 				// ==============

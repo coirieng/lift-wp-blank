@@ -3,22 +3,8 @@
   "cached_at": "Cached",
   "data": [
     {
-      "name": "Spa &#8211; Home",
-      "ID": 412,
-      "parentID": 217,
-      "preview": "lib/layouts/Template-Spa-Home.jpg",
-      "preview_m": "lib/layouts/Template-Spa-Home-267x200.jpg",
-      "pro": false,
-      "liveurl": "#",
-      "category": [
-        { "name": "Business", "slug": "business" },
-        { "name": "Creative", "slug": "creative" },
-        { "name": "Service", "slug": "service" }
-      ]
-    },
-    {
       "name": "Spa",
-      "ID": 217,
+      "ID": 1,
       "parentID": 0,
       "preview": "lib/layouts/Template-Spa-Home.jpg",
       "preview_m": "lib/layouts/Template-Spa-Home-267x200.jpg",
@@ -30,6 +16,49 @@
         { "name": "Service", "slug": "service" }
       ]
     },
+    {
+      "name": "Spa &#8211; Home",
+      "ID": 1,
+      "parentID": 1,
+      "preview": "lib/layouts/Template-Spa-Home.jpg",
+      "preview_m": "lib/layouts/Template-Spa-Home-267x200.jpg",
+      "pro": false,
+      "liveurl": "#",
+      "category": [
+        { "name": "Business", "slug": "business" },
+        { "name": "Creative", "slug": "creative" },
+        { "name": "Service", "slug": "service" }
+      ]
+    },
+    {
+      "name": "Spa &#8211; Offer",
+      "ID": 2,
+      "parentID": 1,
+      "preview": "lib/layouts/template-spa-offer.jpg",
+      "preview_m": "lib/layouts/template-spa-offer-267x200.jpg",
+      "pro": false,
+      "liveurl": "#",
+      "category": [
+        { "name": "Business", "slug": "business" },
+        { "name": "Creative", "slug": "creative" },
+        { "name": "Service", "slug": "service" }
+      ]
+    },
+    {
+      "name": "Spa &#8211; Package",
+      "ID": 3,
+      "parentID": 1,
+      "preview": "lib/layouts/template-spa-package.jpg",
+      "preview_m": "lib/layouts/template-spa-package-267x200.jpg",
+      "pro": false,
+      "liveurl": "#",
+      "category": [
+        { "name": "Business", "slug": "business" },
+        { "name": "Creative", "slug": "creative" },
+        { "name": "Service", "slug": "service" }
+      ]
+    },
+
     {
       "name": "Saloon",
       "ID": 216,
@@ -85,7 +114,7 @@
         { "name": "Technology", "slug": "technology" }
       ]
     },
-    
+
     {
       "name": "Architecture &#8211; Home",
       "ID": 350,
@@ -239,35 +268,6 @@
       "liveurl": "#",
       "category": [
         { "name": "Agency", "slug": "agency" },
-        { "name": "Creative", "slug": "creative" },
-        { "name": "Service", "slug": "service" }
-      ]
-    },
-
-    {
-      "name": "Spa &#8211; Offer",
-      "ID": 856,
-      "parentID": 217,
-      "preview": "lib/layouts/template-spa-offer.jpg",
-      "preview_m": "lib/layouts/template-spa-offer-267x200.jpg",
-      "pro": false,
-      "liveurl": "#",
-      "category": [
-        { "name": "Business", "slug": "business" },
-        { "name": "Creative", "slug": "creative" },
-        { "name": "Service", "slug": "service" }
-      ]
-    },
-    {
-      "name": "Spa &#8211; Package",
-      "ID": 859,
-      "parentID": 217,
-      "preview": "lib/layouts/template-spa-package.jpg",
-      "preview_m": "lib/layouts/template-spa-package-267x200.jpg",
-      "pro": false,
-      "liveurl": "#",
-      "category": [
-        { "name": "Business", "slug": "business" },
         { "name": "Creative", "slug": "creative" },
         { "name": "Service", "slug": "service" }
       ]
