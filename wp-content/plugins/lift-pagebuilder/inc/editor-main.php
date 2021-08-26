@@ -26,7 +26,7 @@ global $wp_version;
                 var head = innerDoc.getElementsByTagName('body')[0];
                 var script = innerDoc.createElement('script');
                 script.innerText = "jQuery('body').bind('DOMSubtreeModified', function () {jQuery('.wppb-builder-addon img').each(function () { var getsrc = jQuery(this).attr('src'); if(getsrc.substring(0, 4) !== 'http'){ jQuery(this).attr('src', '<?php echo plugin_dir_url(__DIR__) ?>' + getsrc); } }) });";
-                script.innerText += "jQuery('body').bind('DOMSubtreeModified', function () {jQuery('style[id^=\"wppb-\"]').each(function () { var getsrc = jQuery(this).html(); var image_url = /url\\(lib\\/pages\\/(.*?).(jpg|jpeg|png|gif)/i; var message = getsrc.replace(image_url,'url(<?php echo plugin_dir_url(__DIR__) ?>lib/pages/$1.$2'); jQuery(this).text(message); }); });";
+                script.innerText += "jQuery('body').bind('DOMNodeInserted DOMNodeInsertedIntoDocument', function () {setTimeout(() => { jQuery('style[id^=\"wppb-\"]').each(function () { var getsrc = jQuery(this).html(); var image_url = /url\\(lib\\/pages\\/(.*?).(jpg|jpeg|png|gif)/i; var message = getsrc.replace(image_url,'url(<?php echo plugin_dir_url(__DIR__) ?>lib/pages/$1.$2'); jQuery(this).text(message); }); }, 3000); });";
                 script.type = 'text/javascript';
                 head.appendChild(script);
             }
