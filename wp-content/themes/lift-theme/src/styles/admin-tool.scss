@@ -16,6 +16,7 @@
 .admin-control {
 	#admin-space {
 		height: 3rem;
+		min-height: 3rem;
 		display: block;
 		z-index: 900;
 	}
@@ -73,7 +74,7 @@
     }
 }
 body.admin-control {
-	&#wppb-page-builder {
+	&#wow-page-builder {
 		#content.lift-content {
 			.lift-main {
 				footer.entry-footer {

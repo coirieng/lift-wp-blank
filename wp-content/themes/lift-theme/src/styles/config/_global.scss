@@ -107,16 +107,16 @@ body {
 #content.lift-content {
 	.content-wrapper {
 		.lift-main {
-			#wppb-builder-container {
-				.wppb-row-parent {
-					.wppb-container {
+			#wow-builder-container {
+				.wow-row-parent {
+					.wow-container {
 						@include make-container();
 						@each $breakpoint, $container-max-width in $container-max-widths {
 							@include media-breakpoint-up($breakpoint, $grid-breakpoints) {
 								max-width: $container-max-width;
 							}
 						}
-						&.wppb-container-full {
+						&.wow-container-full {
 							max-width: 100%;
 						}
 					}
@@ -126,7 +126,7 @@ body {
 	}
 }
 // Admin Builder
-#wppb-page-builder {
+#wow-page-builder {
     #content.lift-content {
         .lift-main {
             footer.entry-footer {

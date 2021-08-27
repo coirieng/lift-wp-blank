@@ -265,7 +265,7 @@ if ( ! class_exists('WOW_Helper')) {
 		public function plugin_action_links_callback( $links ){
 			$actionsLinks =  array();
 			if (!defined('WOW_PRO_VERSION')) {
-				$actionsLinks['wow_go_premium'] = '<a href="https://wow-wp.com" target="_blank"><span style="color: #39a700eb; font-weight: bold;">'.__('Get Premium', 'wow-pagebuilder').'</span></a>';
+				// $actionsLinks['wow_go_premium'] = '<a href="https://wow-wp.com" target="_blank"><span style="color: #39a700eb; font-weight: bold;">'.__('Get Premium', 'wow-pagebuilder').'</span></a>';
 			}
 			$actionsLinks['wow_settings'] = '<a href="' . admin_url( 'admin.php?page=wow-settings' ) . '">'.__('Settings', 'wow-pagebuilder').'</a>';
 			return array_merge( $actionsLinks, $links );
@@ -274,7 +274,7 @@ if ( ! class_exists('WOW_Helper')) {
 		public function plugin_row_meta_callback( $links , $plugin ){
 			if( WOW_BASENAME === $plugin ){
 			$actionsLinks =  array(
-				'wow_docs' =>  '<a href="https://wow-wp.com/" target="_blank">'.__('Docs', 'wow-pagebuilder').'</a>',
+				// 'wow_docs' =>  '<a href="https://wow-wp.com/" target="_blank">'.__('Docs', 'wow-pagebuilder').'</a>',
 			);
 				$links = array_merge( $links, $actionsLinks );
 			}

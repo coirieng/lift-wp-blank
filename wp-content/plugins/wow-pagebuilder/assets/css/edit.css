@@ -1416,7 +1416,8 @@ select[multiple].wow-builder-input-group-sm > .wow-builder-input-group-btn > .wo
 }
 .wow-builder-blank-page-tools.wow-block-placeholder-show {
   border: 2px dashed #d4d4d4;
-  max-width: 1140px;
+  /* max-width: 1140px; */
+  background: #fff9db;
 }
 .top-placeholder > .addon-placeholder-top,
 .bottom-placeholder > .addon-placeholder-bottom {
@@ -5219,14 +5220,21 @@ input[type=range]:focus::-ms-fill-upper {
 .wow-my-saved-section-item {
   display: flex;
   background: #ffffff;
-  padding: 0 5px;
+  padding: 5px;
   margin-bottom: 5px;
   border: 1px solid #E8E8E8;
-  border-radius: 3px;
+  border-radius: 5px;
   justify-content: space-between;
+  align-items: center;
+}
+.wow-my-saved-section-item:hover{
+  background: #ec2e8f;
+}
+.wow-my-saved-section-item:hover span{
+  color: #fff
 }
 .wow-my-saved-section-item span {
-  padding: 8px 5px 12px;
+  padding: 8px;
   cursor: move;
   color: #53595F;
   transition: all 0.2s linear 0s;
@@ -5234,15 +5242,12 @@ input[type=range]:focus::-ms-fill-upper {
 
 .wow-my-saved-section-item span:first-child{
   flex: 1;
+  align-items: center;
+  display: flex;
 }
 .wow-my-saved-section-item span:first-child i {
   padding-right: 8px;
-}
-.wow-my-saved-section-item span:first-child:hover{
-  color: #2d368e;
-}
-.wow-my-saved-section-item span:last-child:hover {
-  color: rgb(255, 60, 60);
+  font-size: 1.5rem;
 }
 
 .wow-section-loading {
@@ -5648,7 +5653,7 @@ Iframe view loading icon
 .wow-builder-show-placeholder.wow-builder-no-addons,
 .wow-builder-show-placeholder.wow-builder-addons > .wow-builder-no-addons {
   position: relative;
-  background: #e5e5e5;
+  background: #fff9db;
 }
 
 .addon-placeholder-top,
@@ -5658,7 +5663,7 @@ Iframe view loading icon
   line-height: 14px !important;
   font-weight: bold;
   text-align: center;
-  background: #e5e5e5;
+  background: #fff9db;
   margin: 0;
   transition: all 0.3s;
 }
