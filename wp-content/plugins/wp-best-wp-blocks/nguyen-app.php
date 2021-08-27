@@ -37,6 +37,9 @@ define( 'BEST_WP_BLOCKS_VERSION', '1.0.0' );
 
 require plugin_dir_path( __FILE__ ) . 'classes/wp_blocks_init.php';
 
+// Addons init
+require plugin_dir_path( __FILE__ ) . 'classes/wp-wow-wp-vc-addon.php';
+
 /**
  * The code that runs during plugin activation.
  * This action is documented in includes/class-bn-wp-activator.php
