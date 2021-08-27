@@ -81,9 +81,27 @@ if ( ! class_exists('WOW_Options')){
 					?>
 
 					<div class="wow-box-wrapper">
+
+						
 	
 						<table class="form-table wpex-custom-admin-login-table wow-table clearfix">
 
+						<tr>
+								<th scope="row"><?php esc_html_e( 'Cache', 'wow-pagebuilder' ); ?></th>
+								<td>
+									<label>
+										<button type="button" id="wow_clear_cache_btn" class="button"><?php _e('Clean Cache and Sync','wow-pagebuilder'); ?></button>
+										<p class="response-text"></p>
+										<p class="description"> <?php _e('Clean LIFT PageBuilder cache & synchronize built-in layouts & blocks with server.', 'wow-pagebuilder'); ?></p>
+									</label>
+								</td>
+							</tr>
+
+							<tr>
+								<td colspan="2">
+									<hr>
+								</td>
+							</tr>
 
 							<tr>
 								<th scope="row"><?php esc_html_e( 'Disable the Gutenberg Editor', 'wow-pagebuilder' ); ?></th>
@@ -195,20 +213,25 @@ if ( ! class_exists('WOW_Options')){
 								</td>
 							</tr>
 	
-							<tr>
-								<th scope="row"><?php esc_html_e( 'Cache', 'wow-pagebuilder' ); ?></th>
-								<td>
-									<label>
-										<button type="button" id="wow_clear_cache_btn" class="button"><?php _e('Clean Cache and Sync','wow-pagebuilder'); ?></button>
-										<p class="response-text"></p>
-										<p class="description"> <?php _e('Clean LIFT PageBuilder cache & synchronize built-in layouts & blocks with server.', 'wow-pagebuilder'); ?></p>
-									</label>
-								</td>
-							</tr>
+							
 	
 	
 						</table>
 						<div class="clearfix"><?php submit_button(); ?></div>
+
+						<hr>
+
+						<p style="margin-top:30px"><img src="<?php echo plugin_dir_url( __DIR__ )?>/assets/img/logo.png"></p>
+						<h1>Website Design and Web Development</h1>
+						<h3 style="margin-top:0;">LIFT the Marketing Agency | Create Something Great.</h3>
+						<p>Sharing your brand-vision through beautiful web page design and website development for higher rankings and conversions.</p>
+						<p>The highest level of creative and professional engagement is what our crew brings to the brands we love. Branding, Website Design, Website Development, Social Media, Search Engine Optimization (SEO), Paid Search (PPC) and Video.
+						</p>
+						<p>LIFT Creations is a marketing agency that creates beautiful websites that are optimized for SEO and structured for higher conversions. Creative content and quality execution for digital design, web development, social media, search engine optimization, paid search, print, and video.</p>
+						<hr>
+						<p style="margin-top:0;margin-bottom:0"><strong>Email:</strong> <a href="mailto:hello@liftcreations.com" target="_blank">hello@liftcreations.com</a></p>
+						<p style="margin-top:0;margin-bottom:0"><strong>Website:</strong> <a href="https://liftcreations.com/" target="_blank">liftcreations.com</a></p>
+						<p style="margin-top:0;margin-bottom:0"><strong>Call Us:</strong> <a href="tel:866-244-1150" target="_blank">866-244-1150</a></p>
 
 					</div>
                 </form>
