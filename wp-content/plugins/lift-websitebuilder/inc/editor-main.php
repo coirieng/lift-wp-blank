@@ -36,6 +36,8 @@ global $wp_version;
 <body class=" wp-version-<?php echo str_replace( '.', '-', $wp_version ); ?> wow-frontend-active">
     <div class="wow-iframe-loading-wrap" id="wppbMainIframeLoadingWrap" >
         <img src="<?php echo WOW_DIR_URL.'assets/img/loading-md.svg'; ?>" alt="loading"/>
+        <h3>System Loading...</h3>
+        <div>Copyright by <a href="https://liftcreations.com" target="_blank">LIFT Creations</a></div>
     </div>
     <div id="wow-page-builder">
         <?php $load_iframe_url = add_query_arg( array('load_for' => 'wow_editor_iframe') , get_the_permalink(get_the_ID())); ?>

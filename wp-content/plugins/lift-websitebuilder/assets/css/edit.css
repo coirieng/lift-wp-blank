@@ -1302,8 +1302,15 @@ select[multiple].wow-builder-input-group-sm > .wow-builder-input-group-btn > .wo
   /* height: 0; */
   transition: 400ms;
 }
-.wow-builder-blank-page-tools .wow-row-add-dropdown.wow-layout-open{
-  /* height: 158px; */
+.wow-builder-blank-page-tools .wow-row-add-dropdown .wow-builder-btn-classic,
+.wow-builder-blank-page-tools .wow-row-add-dropdown .wow-builder-btn-import{
+  display: inline-flex;
+    align-items: center;
+}
+.wow-builder-blank-page-tools .wow-row-add-dropdown .wow-builder-btn-classic i,
+.wow-builder-blank-page-tools .wow-row-add-dropdown .wow-builder-btn-import i{
+  font-size: 1.3rem;
+    margin-right: .5rem;
 }
 
 .wow-row-parent .wow-row-add-dropdown {
@@ -5282,10 +5289,40 @@ Iframe view loading icon
   align-items: center;
   justify-content: center;
   left: 360px;
+  flex-direction: column;
 }
 
+.wow-iframe-loading-wrap h3 {
+  font-family: 'Roboto', system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  font-weight: 200;
+  color: #7986e8;
+  animation: lift-color-change 1s infinite;
+}
+.wow-iframe-loading-wrap div {
+  font-family: 'Roboto', system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: .85rem;
+  color: #a0a0a0;
+}
+.wow-iframe-loading-wrap div a{
+  color: #a0a0a0;
+}
 .wow-iframe-loading-wrap img {
   width: 100px;
+}
+
+@keyframes lift-color-change {
+  0% { color: #7986e8; }
+  33% { color: #fedb41; }
+  66% { color: #ff0b69; }
+  100% { color: #7986e8; }
+}
+@-webkit-keyframes lift-color-change {
+  0% { color: #7986e8; }
+  33% { color: #fedb41; }
+  66% { color: #ff0b69; }
+  100% { color: #7986e8; }
 }
 
 /* addons display  */
