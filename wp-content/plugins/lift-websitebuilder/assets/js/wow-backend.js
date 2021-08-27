@@ -49,7 +49,7 @@ jQuery(document).ready(function($){
                 $that.addClass('updating-message');
             },
             success : function( response ) {
-                $that.closest('label').find('.response-text').html('<span style="color: #228b22;">LIFT Page Builder cache has been cleared.</span>');
+                $that.closest('label').find('.response-text').html('<span style="color: #228b22;">LIFT PageBuilder cache has been cleared.</span>');
             },
             complete: function(){
                 $that.removeClass('updating-message');

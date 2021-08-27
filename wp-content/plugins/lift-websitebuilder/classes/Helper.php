@@ -77,7 +77,7 @@ if ( ! class_exists('WOW_Helper')) {
 		/**
 		 * @return bool|false|int
 		 *
-		 * determine if current single page is LIFT Page Builder Page
+		 * determine if current single page is LIFT PageBuilder Page
 		 */
 		public function is_wow_single(){
 			$post_id = get_the_ID();
@@ -127,7 +127,7 @@ if ( ! class_exists('WOW_Helper')) {
 		/**
 		 * @return mixed
 		 *
-		 * get LIFT Page Builder Support Post Type
+		 * get LIFT PageBuilder Support Post Type
 		 * @since v.1.0.0
 		 */
 		public function wow_supports_post_types(){

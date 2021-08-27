@@ -262,7 +262,7 @@ if ( ! class_exists('WOW_Frontend')){
 		 *
 		 * @return array
 		 *
-		 * Add Post Class in single page for LIFT Page Builder
+		 * Add Post Class in single page for LIFT PageBuilder
 		 */
 		function wow_container_post_class( $classes ) {
 			global $post;
@@ -283,7 +283,7 @@ if ( ! class_exists('WOW_Frontend')){
 		 *
 		 * @return array
 		 *
-		 * Add Body Class in single page for LIFT Page Builder
+		 * Add Body Class in single page for LIFT PageBuilder
 		 */
 		public function wow_container_body_class( $classes ){
 			global $post;
@@ -316,10 +316,10 @@ if ( ! class_exists('WOW_Frontend')){
 					$admin_bar->add_menu(
 						array(
 							'id'    => 'edit-with-wppb',
-							'title' => __( 'Edit with LIFT Page Builder', 'wow-pagebuilder' ),
+							'title' => __( 'Edit with LIFT PageBuilder', 'wow-pagebuilder' ),
 							'href'  => $link,
 							'meta'  => array(
-								'title' => __( 'Edit with LIFT Page Builder', 'wow-pagebuilder' ),
+								'title' => __( 'Edit with LIFT PageBuilder', 'wow-pagebuilder' ),
 							),
 						)
 					);

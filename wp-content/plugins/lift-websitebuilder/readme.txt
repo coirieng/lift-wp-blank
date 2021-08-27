@@ -1,4 +1,4 @@
-=== LIFT Page Builder ===
+=== LIFT PageBuilder ===
 Contributors: themeum
 Donate link: https://liftcreations.com
 Tags: page builder, website builder, live editor, wp page builder, drag and drop editor, responsive, site editor, editor, drag-and-drop, visual editor, landing page, frontend editor, wordpress page builder, free page builder, layout builder
@@ -9,15 +9,15 @@ Stable tag: 1.2.6
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-LIFT Page Builder is a FREE drag & drop website building tool for WordPress. This plugin lets you develop a wonderful site in minutes without any coding.
+LIFT PageBuilder is a FREE drag & drop website building tool for WordPress. This plugin lets you develop a wonderful site in minutes without any coding.
 
 == Description ==
 
-LIFT Page Builder is a free drag and drop WordPress page builder to create websites easily. Whether you’re an experienced developer or just a beginner, you can build stunning websites independently with this tool. Create beautiful web pages effortlessly using the intuitive live page composer without coding in minutes. No design experience needed.
+LIFT PageBuilder is a free drag and drop WordPress page builder to create websites easily. Whether you’re an experienced developer or just a beginner, you can build stunning websites independently with this tool. Create beautiful web pages effortlessly using the intuitive live page composer without coding in minutes. No design experience needed.
 
 > [Blocks & Layouts Demo](https://liftcreations.com)
 
-LIFT Page Builder is a free and completely front-end based tool with plenty of design options. Let’s explore the LIFT Page Builder features below.
+LIFT PageBuilder is a free and completely front-end based tool with plenty of design options. Let’s explore the LIFT PageBuilder features below.
 
 
 = Some Highlighted features =
@@ -55,31 +55,31 @@ LIFT Page Builder is a free and completely front-end based tool with plenty of d
 
 = Create Beautiful, Classy and Pro Websites =
 
-When you have the perfect tool in hand, you can go beyond your imagination. LIFT Page Builder is such a web page composer plugin that empowers you to create a great website easily. Seeing the result, you’ll just say “WOW!”. There are lots of design elements such as built-in page layouts, shape dividers, design blocks and many more inside LIFT Page Builder. You can build a classy professional website with this tool that can attract the maximum number of visitors.
+When you have the perfect tool in hand, you can go beyond your imagination. LIFT PageBuilder is such a web page composer plugin that empowers you to create a great website easily. Seeing the result, you’ll just say “WOW!”. There are lots of design elements such as built-in page layouts, shape dividers, design blocks and many more inside LIFT PageBuilder. You can build a classy professional website with this tool that can attract the maximum number of visitors.
 
 = Super Fast Site development =
 
-LIFT Page Builder is so lightweight, thus takes remarkably less time than all other counterpart tools to create a stunning and functional site. The plugin is well-coded in order to ensure as less run-time as possible. Therefore, it takes almost no time for a command to be executed while building web pages with it.
+LIFT PageBuilder is so lightweight, thus takes remarkably less time than all other counterpart tools to create a stunning and functional site. The plugin is well-coded in order to ensure as less run-time as possible. Therefore, it takes almost no time for a command to be executed while building web pages with it.
 
 = Design Your Website Independently =
 
-You don’t need to hire any designer or developer to build professional websites. You can do it all by yourself. It saves you lot of money and time at the same time. Just use all available elements of LIFT Page Builder and capitalize the functionalities.
+You don’t need to hire any designer or developer to build professional websites. You can do it all by yourself. It saves you lot of money and time at the same time. Just use all available elements of LIFT PageBuilder and capitalize the functionalities.
 
 = Drag & Drop Real-time Editing =
 
-LIFT Page Builder enables you to edit your website on the frontend and see the output in real-time. You can use the ready-to-use elements, create simple to complex layouts, and bring different styles to a website in minutes. It’s superbly easy to create and design pages or edit existing ones with this WordPress page builder’s drag and drop system.
+LIFT PageBuilder enables you to edit your website on the frontend and see the output in real-time. You can use the ready-to-use elements, create simple to complex layouts, and bring different styles to a website in minutes. It’s superbly easy to create and design pages or edit existing ones with this WordPress page builder’s drag and drop system.
 
 = Absolutely No Coding Required =
 
-When you have LIFT Page Builder, there is no need to write a single line of code. Any functionality or design you imagine, can be brought to your site with this rich website builder. The drag-and-drop site building system of this WordPress page builder relieves you from writing codes because the required instruments are provided built-in. Just explore and build!
+When you have LIFT PageBuilder, there is no need to write a single line of code. Any functionality or design you imagine, can be brought to your site with this rich website builder. The drag-and-drop site building system of this WordPress page builder relieves you from writing codes because the required instruments are provided built-in. Just explore and build!
 
 = Perfect for any Level of Users =
 
-Anyone having a little familiarity with WordPress can build a full-fledged website easily with LIFT Page Builder. Weather you are just starting out with WordPress or an experienced professional developer, LIFT Page Builder comes in handy for everyone’s case with all necessary functionalities.
+Anyone having a little familiarity with WordPress can build a full-fledged website easily with LIFT PageBuilder. Weather you are just starting out with WordPress or an experienced professional developer, LIFT PageBuilder comes in handy for everyone’s case with all necessary functionalities.
 
 = Responsive and Mobile-optimized Pages =
 
-Layouts built with this web page builder plugin will fit into all sizes of devices. No matter how many rows and columns you take on a single page, it will have no issues with responsiveness. LIFT Page Builder ensures 100% responsive layouts and eye-catching look at the same time. Using the device-specific responsiveness controls, you can render the pages as on different devices (computers, tablets, mobile phones) while editing, and make necessary changes for the perfect responsiveness.
+Layouts built with this web page builder plugin will fit into all sizes of devices. No matter how many rows and columns you take on a single page, it will have no issues with responsiveness. LIFT PageBuilder ensures 100% responsive layouts and eye-catching look at the same time. Using the device-specific responsiveness controls, you can render the pages as on different devices (computers, tablets, mobile phones) while editing, and make necessary changes for the perfect responsiveness.
 
 = Unlimited Undo/Redo Options =
 
@@ -87,11 +87,11 @@ The drag and drop page builder has the undo and redo options for any action you 
 
 = Customize Font Styles and Colors =
 
-Style your website’s typography and modify the colors easily with LIFT Page Builder. Plenty of IcoFont and Font Awesome font icons are available to use with this WordPress page composer plugin. You can utilize any of the 340+ IcoFont line icons and 670+ Font Awesome icons on your site.
+Style your website’s typography and modify the colors easily with LIFT PageBuilder. Plenty of IcoFont and Font Awesome font icons are available to use with this WordPress page composer plugin. You can utilize any of the 340+ IcoFont line icons and 670+ Font Awesome icons on your site.
 
 = Resizable Columns Flexible Padding =
 
-LIFT Page Builder makes it easier to work with columns and rows. You can resize a column by simply dragging the edge and give it your desired size. On rows, you can drag and set the padding easily without writing any figure in the row configuration fields. It’s surprisingly easy.
+LIFT PageBuilder makes it easier to work with columns and rows. You can resize a column by simply dragging the edge and give it your desired size. On rows, you can drag and set the padding easily without writing any figure in the row configuration fields. It’s surprisingly easy.
 
 = Beautiful Pre-designed Templates =
 
@@ -99,39 +99,39 @@ This visual page builder for WordPress sites includes tons of stunningly designe
 
 = Built-in Blocks =
 
-LIFT Page Builder not only helps you build and edit web pages easily, but also lets you use many predefined section elements. There’s a wide variety of readymade section elements in this web page builder to accelerate your site building process. Save time in designing sections just by dragging and dropping the readymade section elements of your choice!
+LIFT PageBuilder not only helps you build and edit web pages easily, but also lets you use many predefined section elements. There’s a wide variety of readymade section elements in this web page builder to accelerate your site building process. Save time in designing sections just by dragging and dropping the readymade section elements of your choice!
 
 = A bulk number of addons =
 
-To design your site with different elements like texts, titles, contact areas, feature boxes, pricing tables, images, icons, buttons, and many more, we have a rich collection of addons in LIFT Page Builder. All of the addons are described at the bottom of this page. You can simply drag & drop the addons on web pages then modify their look and feel.
+To design your site with different elements like texts, titles, contact areas, feature boxes, pricing tables, images, icons, buttons, and many more, we have a rich collection of addons in LIFT PageBuilder. All of the addons are described at the bottom of this page. You can simply drag & drop the addons on web pages then modify their look and feel.
 
 = It’s FREE, get it at no cost =
 
-LIFT Page Builder comes at FREE of cost. Use this WordPress page builder on your website for free. Advanced features like predesigned templates, ready blocks, library system, device-wise responsive control, and a bulk number of addons don’t usually come at free. Utilize all of these cutting-edge features with many other functionalities.
+LIFT PageBuilder comes at FREE of cost. Use this WordPress page builder on your website for free. Advanced features like predesigned templates, ready blocks, library system, device-wise responsive control, and a bulk number of addons don’t usually come at free. Utilize all of these cutting-edge features with many other functionalities.
 
 
 = WordPress Widget Support =
 
-Alongside using all of the exclusive elements of LIFT Page Builder, you can also place the WordPress widgets on the site with this page building tool. LIFT Page Builder keeps the door open for every possible opportunity for a successful web presence.
+Alongside using all of the exclusive elements of LIFT PageBuilder, you can also place the WordPress widgets on the site with this page building tool. LIFT PageBuilder keeps the door open for every possible opportunity for a successful web presence.
 
 = Library to Save Custom Blocks and Addons =
 
-You can create custom sections, save them to the library, and re-use these sections anywhere on the site. The library feature lets you create sections and save them in the “Section Library” of the LIFT Page Builder plugin in order to use in future. Each such single section can be used as many times as you want.
+You can create custom sections, save them to the library, and re-use these sections anywhere on the site. The library feature lets you create sections and save them in the “Section Library” of the LIFT PageBuilder plugin in order to use in future. Each such single section can be used as many times as you want.
 
 = Multilingual Ready =
 
-Having websites in any language is no more an issue as LIFT Page Builder has multilingual support. Reach global audience natively.
+Having websites in any language is no more an issue as LIFT PageBuilder has multilingual support. Reach global audience natively.
 
 = Beautifully Designed Shape Dividers =
 
-Bringing a different look to your website is easier with our Shape Divider. There are plenty of built-in shapes in LIFT Page Builder to design different sections of your web pages.
+Bringing a different look to your website is easier with our Shape Divider. There are plenty of built-in shapes in LIFT PageBuilder to design different sections of your web pages.
 
 = Developer options =
 
-LIFT Page Builder has a whopping 28+ addons to empower you to build sites with versatile page/design elements. If you are a developer and want to use your own addons for any extra functionality/design, you can certainly do that with this web page builder plugin.
+LIFT PageBuilder has a whopping 28+ addons to empower you to build sites with versatile page/design elements. If you are a developer and want to use your own addons for any extra functionality/design, you can certainly do that with this web page builder plugin.
 
 
-LIFT Page Builder comes with the following addons that let you add different page elements. Experience the infinite possibilities with them while building a site. Let’s take a look at the list.
+LIFT PageBuilder comes with the following addons that let you add different page elements. Experience the infinite possibilities with them while building a site. Let’s take a look at the list.
 
 = Addon-list with their uses: =
 
@@ -154,7 +154,7 @@ LIFT Page Builder comes with the following addons that let you add different pag
 - **Person:** Have a profile of a person on the website with their name, image, and social media links.
 - **Person Carousel:** You can have multiple person-profiles on a single place with Person Carousel.
 - **Pie Progress:** Place a pie progress bar on the site with the Pie Progress addon and customize the look.
-- **Progress Bar:** Need to show a progress on a bar? LIFT Page Builder has an addon for that.
+- **Progress Bar:** Need to show a progress on a bar? LIFT PageBuilder has an addon for that.
 - **Pricing Table:** Create and display the pricing table of your products with our Pricing Table addon easily.
 - **Raw HTML:** Insert HTML codes into the page.
 - **Social Button:** Show social media profiles in different buttons on the site.
@@ -164,7 +164,7 @@ LIFT Page Builder comes with the following addons that let you add different pag
 - **Testimonial Carousel:** Show multiple testimonials on a single place with it.
 - **Text Block:** Insert text you need on the site and style it your way.
 - **Video:** Add YouTube or Vimeo videos to your webpage.
-- **Video Popup:** Placing a video on a popup is also possible with our Video Popup addon in LIFT Page Builder.
+- **Video Popup:** Placing a video on a popup is also possible with our Video Popup addon in LIFT PageBuilder.
 
 == Installation ==
 
@@ -175,13 +175,13 @@ LIFT Page Builder comes with the following addons that let you add different pag
 
 = Automatic installation =
 
-The automatic installation is the easiest way to install any plugin in WordPress. You can perform an automatic installation of LIFT Page Builder by logging in to your WordPress dashboard, navigating to the “Plugins” menu and click on the “Add New” button.
+The automatic installation is the easiest way to install any plugin in WordPress. You can perform an automatic installation of LIFT PageBuilder by logging in to your WordPress dashboard, navigating to the “Plugins” menu and click on the “Add New” button.
 
-This will open up a page showing all the available plugins in WordPress. In the search field, type LIFT Page Builder. The search result will show you our LIFT Page Builder plugin, you can then see the detailed info by clicking on “More Details” and to install just click on the “Install Now” button.
+This will open up a page showing all the available plugins in WordPress. In the search field, type LIFT PageBuilder. The search result will show you our LIFT PageBuilder plugin, you can then see the detailed info by clicking on “More Details” and to install just click on the “Install Now” button.
 
 = Manual installation =
 
-To install LIFT Page Builder manually, you need to download the plugin and upload it to your webserver via any FTP application.
+To install LIFT PageBuilder manually, you need to download the plugin and upload it to your webserver via any FTP application.
 
 The WordPress codex contains [instructions on how to do this here](https://codex.wordpress.org/Managing_Plugins#Manual_Plugin_Installation).
 

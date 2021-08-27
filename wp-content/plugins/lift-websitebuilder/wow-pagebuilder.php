@@ -1,8 +1,8 @@
 <?php
 /*
- * Plugin Name:       LIFT Page Builder
+ * Plugin Name:       @LIFT Creations - LIFT PageBuilder
  * Plugin URI:        https://liftcreations.com
- * Description:       LIFT Page Builder is a FREE drag & drop website building tool for WordPress. This plugin lets you develop a wonderful site in minutes without any coding.
+ * Description:       LIFT PageBuilder is a FREE drag & drop website building tool for WordPress. This plugin lets you develop a wonderful site in minutes without any coding.
  * Version:           1.2.6
  * Author:            Nguyen Pham
  * Author URI:        https://baonguyenyam.github.io

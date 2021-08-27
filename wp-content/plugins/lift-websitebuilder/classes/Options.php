@@ -19,8 +19,8 @@ if ( ! class_exists('WOW_Options')){
 		 */
 		public function add_admin_menu() {
 			add_menu_page(
-				esc_html__( 'LIFT Page Builder', 'wow-pagebuilder' ),
-				esc_html__( 'LIFT Page Builder', 'wow-pagebuilder' ),
+				esc_html__( 'LIFT PageBuilder', 'wow-pagebuilder' ),
+				esc_html__( 'LIFT PageBuilder', 'wow-pagebuilder' ),
 				'manage_options',
 				'lift-pagebuilder-settings',
 				array( $this, 'create_admin_page' ),
@@ -68,7 +68,7 @@ if ( ! class_exists('WOW_Options')){
 		 */
 		public static function create_admin_page() { ?>
             <div class="wrap">
-                <h1 class="wow-title"><img src="<?php echo plugins_url( 'lift-websitebuilder/assets/img/tinny-logo.png' )?>" alt="" srcset=""><?php esc_html_e( 'LIFT Page Builder Options', 'wow-pagebuilder' ); ?></h1>
+                <h1 class="wow-title"><img src="<?php echo plugins_url( 'lift-websitebuilder/assets/img/tinny-logo.png' )?>" alt="" srcset=""><?php esc_html_e( 'LIFT PageBuilder Options', 'wow-pagebuilder' ); ?></h1>
 
                 <form method="post" action="options.php">
 					<?php
@@ -137,7 +137,7 @@ if ( ! class_exists('WOW_Options')){
 									}
 									?>
 	
-									<p class="description"> <?php _e('Select post types that can be edited with LIFT Page Builder.', 'wow-pagebuilder'); ?></p>
+									<p class="description"> <?php _e('Select post types that can be edited with LIFT PageBuilder.', 'wow-pagebuilder'); ?></p>
 								</td>
 							</tr>
 	
@@ -154,7 +154,7 @@ if ( ! class_exists('WOW_Options')){
 									}
 									?>
 	
-									<p class="description"> <?php _e('Include the user roles that you want to allow editing this site with LIFT Page Builder.', 'wow-pagebuilder'); ?></p>
+									<p class="description"> <?php _e('Include the user roles that you want to allow editing this site with LIFT PageBuilder.', 'wow-pagebuilder'); ?></p>
 	
 								</td>
 							</tr>
@@ -201,7 +201,7 @@ if ( ! class_exists('WOW_Options')){
 									<label>
 										<button type="button" id="wow_clear_cache_btn" class="button"><?php _e('Clean Cache and Sync','wow-pagebuilder'); ?></button>
 										<p class="response-text"></p>
-										<p class="description"> <?php _e('Clean LIFT Page Builder cache & synchronize built-in layouts & blocks with server.', 'wow-pagebuilder'); ?></p>
+										<p class="description"> <?php _e('Clean LIFT PageBuilder cache & synchronize built-in layouts & blocks with server.', 'wow-pagebuilder'); ?></p>
 									</label>
 								</td>
 							</tr>

@@ -346,7 +346,7 @@ if ( ! class_exists('WOW_Editor_Management')){
 			?>
 			<script id="wow-edit-with-btn-in-gutenberg-toolbar" type="text/html">
 				<div class="wow-editor-warper">
-					<a href="<?php echo wow_helper()->get_editor_url($post->ID); ?>" class="components-button  is-button is-primary is-large edit-with-wow-builder" style="display: <?php echo $currentEditor !== 'wow_builder_activated'? 'flex':'none'; ?>;"><?php _e('Edit With LIFT Page Builder','wow-pagebuilder');?></a>
+					<a href="<?php echo wow_helper()->get_editor_url($post->ID); ?>" class="components-button  is-button is-primary is-large edit-with-wow-builder" style="display: <?php echo $currentEditor !== 'wow_builder_activated'? 'flex':'none'; ?>;"><?php _e('Edit With LIFT PageBuilder','wow-pagebuilder');?></a>
 
 					<a href="<?php echo wow_helper()->get_editor_url($post->ID); ?>" class="components-button  is-button is-default is-large wow-back-to-gutenberg" style="display: <?php echo $currentEditor === 'wow_builder_activated'? 'flex':'none'; ?>;"><i class="
 dashicons dashicons-arrow-left-alt2"></i><?php _e('Back to Guttenberg',
