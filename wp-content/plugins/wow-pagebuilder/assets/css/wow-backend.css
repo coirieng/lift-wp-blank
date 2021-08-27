@@ -168,3 +168,75 @@ body.currently-activated-editor-wow_builder_activated div#wow-pagebuilder-switch
         transform: rotate(359deg)
     }
 }
+
+.wow-title {
+    display: flex;
+    align-items: center;
+}
+.wow-title img {
+    max-width: 40px;
+    margin-right: .5rem;
+}
+.wow-box-wrapper {
+    background: #fff;
+    padding: 2rem 3rem 1.8rem 3rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%)
+}
+
+.wow-table label {
+    margin-bottom: .5rem;
+    display: block;
+    line-height: 22px;
+    line-height: initial;
+    font-size: .85rem;
+}
+
+.wow-table input[type="checkbox"] {
+    font-size: .85rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 2.5rem;
+    height: 22px;
+    background: #ddd;
+    border-radius: 2.5rem;
+    cursor: pointer;
+    outline: none;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    border: 0 !important;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .wow-table input[type="checkbox"]:checked {
+    background: #ff00b2;
+  }
+  .wow-table input[type="checkbox"]:focus {
+    box-shadow: none;
+  }
+  .wow-table input[type="checkbox"]:before {
+    display: none !important;
+  }
+  .wow-table input[type="checkbox"]:after {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #fff;
+    -webkit-box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.3);
+    left: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  .wow-table input[type="checkbox"]:checked:after {
+    left: calc(100% - 19px);
+  }
+  
