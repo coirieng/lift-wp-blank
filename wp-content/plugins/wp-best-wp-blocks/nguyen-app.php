@@ -35,10 +35,7 @@ define( 'BEST_WP_BLOCKS_NICENAME', 'Best WP Blocks' );
 define( 'BEST_WP_BLOCKS_PREFIX', 'best_wp_blocks' );
 define( 'BEST_WP_BLOCKS_VERSION', '1.0.0' );
 
-require plugin_dir_path( __FILE__ ) . 'classes/wp_blocks_setup.php';
-require plugin_dir_path( __FILE__ ) . 'classes/wp_blocks_disable_password_reset.php';
 require plugin_dir_path( __FILE__ ) . 'classes/wp_blocks_init.php';
-require plugin_dir_path( __FILE__ ) . 'classes/wp_blocks_cleanup.php';
 
 /**
  * The code that runs during plugin activation.
