@@ -59,7 +59,6 @@ class BEST_WP_LIGHTWEIGHT {
 	 */
 	public function __construct() {
 
-		$this->WP_LightWeight['domain'] = best-wp-lightweight;
 		$this->WP_LightWeight['nicename'] = BEST_WP_LIGHTWEIGHT_NICENAME;
 		$this->WP_LightWeight['prefix'] = BEST_WP_LIGHTWEIGHT_PREFIX;
 		$this->WP_LightWeight['version'] = BEST_WP_LIGHTWEIGHT_VERSION;
