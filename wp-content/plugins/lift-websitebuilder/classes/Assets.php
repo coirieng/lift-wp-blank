@@ -14,7 +14,7 @@ if ( ! class_exists('WOW_Assets')) {
 			}
 
 			if (wow_helper()->is_editor_screen() || wow_helper()->is_load_editor_iframe()){
-				//Load only for WOW Page Builder
+				//Load only for LIFT Page Builder
 				add_action('wow_enqueue_scripts', array($this, 'wow_enqueue_scripts'));
 				add_action('wow_enqueue_scripts', array($this, 'wow_enqueue_gblobal_scripts'));
 				add_action('wow_enqueue_styles', array($this, 'wow_enqueue_styles'));

@@ -53,7 +53,7 @@ class WOW_Theme_Manager {
 	 * @return mixed
 	 */
 	public function add_wow_pagebuilder_template($post_templates){
-		$post_templates['wow_theme_template'] = __('WOW Page Builder Template', 'wow-pagebuilder');
+		$post_templates['wow_theme_template'] = __('LIFT Page Builder Template', 'wow-pagebuilder');
 		return $post_templates;
 	}
 

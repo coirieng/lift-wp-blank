@@ -61,14 +61,14 @@ if (! class_exists('WOW_Initial_Setup')) {
 
         // PHP Error Notice
         public static function php_error_notice(){
-            $message = sprintf( esc_html__( 'WOW Page Builder requires PHP version %s or more.', 'wow-pagebuilder' ), '5.4' );
+            $message = sprintf( esc_html__( 'LIFT Page Builder requires PHP version %s or more.', 'wow-pagebuilder' ), '5.4' );
             $html_message = sprintf( '<div class="notice notice-error is-dismissible">%s</div>', wpautop( $message ) );
             echo wp_kses_post( $html_message );
         }
 
         // Wordpress Error Notice
         public static function worpress_error_notice(){
-            $message = sprintf( esc_html__( 'WOW Page Builder requires WordPress version %s or more.', 'wow-pagebuilder'
+            $message = sprintf( esc_html__( 'LIFT Page Builder requires WordPress version %s or more.', 'wow-pagebuilder'
             ), '4.7' );
             $html_message = sprintf( '<div class="notice notice-error is-dismissible">%s</div>', wpautop( $message ) );
             echo wp_kses_post( $html_message );

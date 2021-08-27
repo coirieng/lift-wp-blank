@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"Project-Id-Version: WOW Page Builder\n"
+"Project-Id-Version: LIFT Page Builder\n"
 "POT-Creation-Date: 2018-10-11 11:58+0600\n"
 "PO-Revision-Date: 2018-10-11 11:58+0600\n"
 "Last-Translator: \n"
@@ -2293,7 +2293,7 @@ msgid "After color"
 msgstr ""
 
 #: classes/Ajax.php:152
-msgid "WOW Page Builder content has been updated."
+msgid "LIFT Page Builder content has been updated."
 msgstr ""
 
 #: classes/Ajax.php:167
@@ -2631,11 +2631,11 @@ msgstr ""
 
 #: classes/Editor_Management.php:329 classes/General.php:115
 #: classes/General.php:121
-msgid "Edit With WOW Page Builder"
+msgid "Edit With LIFT Page Builder"
 msgstr ""
 
 #: classes/Frontend.php:313 classes/Frontend.php:316 classes/General.php:41
-msgid "Edit with WOW Page Builder"
+msgid "Edit with LIFT Page Builder"
 msgstr ""
 
 #: classes/General.php:112
@@ -2674,15 +2674,15 @@ msgstr ""
 
 #. Plugin Name of the plugin/theme
 #: classes/Options.php:22 classes/Options.php:23
-msgid "WOW Page Builder"
+msgid "LIFT Page Builder"
 msgstr ""
 
 #: classes/Options.php:64
-msgid "WOW Page Builder Options"
+msgid "LIFT Page Builder Options"
 msgstr ""
 
 #: classes/Options.php:93
-msgid "Select post types that can be edited with WOW Page Builder."
+msgid "Select post types that can be edited with LIFT Page Builder."
 msgstr ""
 
 #: classes/Options.php:98
@@ -2692,7 +2692,7 @@ msgstr ""
 #: classes/Options.php:109
 msgid ""
 "Exclude the user roles that you want to prevent from editing this site with "
-"WOW Page Builder."
+"LIFT Page Builder."
 msgstr ""
 
 #: classes/Options.php:115
@@ -2737,22 +2737,22 @@ msgstr ""
 
 #: classes/Options.php:156
 msgid ""
-"Clean WOW Page Builder cache & synchronize built-in layouts & blocks with "
+"Clean LIFT Page Builder cache & synchronize built-in layouts & blocks with "
 "server."
 msgstr ""
 
 #: classes/Theme_Manager.php:46
-msgid "WOW Page Builder Template"
+msgid "LIFT Page Builder Template"
 msgstr ""
 
 #: core/initial-setup.php:43
 #, php-format
-msgid "WOW Page Builder requires PHP version %s or more."
+msgid "LIFT Page Builder requires PHP version %s or more."
 msgstr ""
 
 #: core/initial-setup.php:50
 #, php-format
-msgid "WOW Page Builder requires WordPress version %s or more."
+msgid "LIFT Page Builder requires WordPress version %s or more."
 msgstr ""
 
 #: inc/editor-main.php:13
@@ -2760,12 +2760,12 @@ msgid "WP PageBuilder"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
-msgid "https://wow-wp.com/wp-wow-website-builder/"
+msgid "https://liftcreations.com/lift-websitebuilder/"
 msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"WOW Page Builder is a FREE drag & drop website building tool for WordPress. "
+"LIFT Page Builder is a FREE drag & drop website building tool for WordPress. "
 "This plugin lets you develop a wonderful site in minutes without any coding."
 msgstr ""
 
@@ -2774,5 +2774,5 @@ msgid "Themeum.com"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "https://wow-wp.com"
+msgid "https://liftcreations.com"
 msgstr ""

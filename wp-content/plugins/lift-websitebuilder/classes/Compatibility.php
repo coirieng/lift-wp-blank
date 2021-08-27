@@ -184,7 +184,7 @@ class Compatibility {
         <script id="wow-pagebuilder-to-gutenberg-switch-mode" type="text/html">
             <div id="wow-pagebuilder-switch-to-gutenberg">
                 <a href="<?php echo admin_url('post.php?post='.get_the_ID().'&action=wow_editor') ?>" id="wow-pagebuilder-switch-to-gutenberg-btn" class="wow-backend-btn wow-primary-btn edit-with-wow-builder">
-	                <?php echo __( 'Edit with WOW Page Builder', 'wow-pagebuilder' ); ?>
+	                <?php echo __( 'Edit with LIFT Page Builder', 'wow-pagebuilder' ); ?>
                 </a>
             </div>
         </script>

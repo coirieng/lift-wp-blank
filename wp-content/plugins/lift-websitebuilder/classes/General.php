@@ -39,7 +39,7 @@ if ( ! class_exists('WOW_General')){
 			$wow_supports_post_types = wow_helper()->wow_supports_post_types();
 			if ( in_array( $post->post_type, $wow_supports_post_types ) ) {
 				$editor_url = wow_helper()->get_editor_url($post->ID);
-				$actions['wow_editor'] = '<a href="'.$editor_url.'">'.__('Edit with WOW Page Builder', 'wow-pagebuilder' ).'</a>';
+				$actions['wow_editor'] = '<a href="'.$editor_url.'">'.__('Edit with LIFT Page Builder', 'wow-pagebuilder' ).'</a>';
 			}
 			return $actions;
 		}
@@ -61,7 +61,7 @@ if ( ! class_exists('WOW_General')){
 					if ( in_array($post->post_type, $wow_supports_post_types)) {
 						$is_wow_editor_page = get_post_meta( $post->ID, '_is_wow_editor', true );
 						if ( $is_wow_editor_page ) {
-							$post_states[] = ' WOW Page Builder ';
+							$post_states[] = ' LIFT Page Builder ';
 						}
 					}
 				}
@@ -121,13 +121,13 @@ if ( ! class_exists('WOW_General')){
 						<a href="#" class="wow-backend-btn wow-info-btn use-default-editor"><?php _e('Use Default Editor','wow-pagebuilder' );?></a>
 					</div><!--/.wow-back-editor-->
 					<div class="wow-editor-warper">
-						<a href="<?php echo wow_helper()->get_editor_url($post->ID); ?>" class="wow-backend-btn wow-primary-btn edit-with-wow-builder"><?php _e('Edit With WOW Page Builder','wow-pagebuilder');?></a>
+						<a href="<?php echo wow_helper()->get_editor_url($post->ID); ?>" class="wow-backend-btn wow-primary-btn edit-with-wow-builder"><?php _e('Edit With LIFT Page Builder','wow-pagebuilder');?></a>
 					</div>
 				</div><!--/.wow-edit-button-wrap-->
 			<?php } else { ?>
 				<div class="wow-edit-button-default-wrap">
 					<div class="wow-editor-warper">
-						<a href="<?php echo wow_helper()->get_editor_url($post->ID); ?>" class="wow-backend-btn wow-primary-btn edit-with-wow-builder"><?php _e('Edit With WOW Page Builder','wow-pagebuilder');?></a>
+						<a href="<?php echo wow_helper()->get_editor_url($post->ID); ?>" class="wow-backend-btn wow-primary-btn edit-with-wow-builder"><?php _e('Edit With LIFT Page Builder','wow-pagebuilder');?></a>
 					</div>
 				</div><!--/.wow-edit-button-default-wrap-->
 			<?php } ?>
@@ -141,7 +141,7 @@ if ( ! class_exists('WOW_General')){
 		public function wow_add_admin_menu(){
             $is_pro_activated = is_plugin_active('wow-pagebuilder-pro/wow-pagebuilder-pro.php');
             if ( ! $is_pro_activated ){
-	            // add_submenu_page( 'wow-settings', __( 'Go Premium', 'wow-pagebuilder' ), __( '<span class="dashicons dashicons-awards wow-go-premium-star"></span> Go Premium', 'wow-pagebuilder' ), 'manage_options', 'wow-go-premium', array($this, 'wow_go_premium_page') );
+	            // add_submenu_page( 'lift-pagebuilder-settings', __( 'Go Premium', 'wow-pagebuilder' ), __( '<span class="dashicons dashicons-awards wow-go-premium-star"></span> Go Premium', 'wow-pagebuilder' ), 'manage_options', 'wow-go-premium', array($this, 'wow_go_premium_page') );
             }
 		}
 
@@ -154,7 +154,7 @@ if ( ! class_exists('WOW_General')){
 			}
 			
 			if ( 'wow-go-premium' === $_GET['page'] ) {
-				wp_redirect( 'https://wow-wp.com' );
+				wp_redirect( 'https://liftcreations.com' );
 				die();
 			}
         }

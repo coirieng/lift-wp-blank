@@ -19,12 +19,12 @@ if ( ! class_exists('WOW_Options')){
 		 */
 		public function add_admin_menu() {
 			add_menu_page(
-				esc_html__( 'WOW Page Builder', 'wow-pagebuilder' ),
-				esc_html__( 'WOW Page Builder', 'wow-pagebuilder' ),
+				esc_html__( 'LIFT Page Builder', 'wow-pagebuilder' ),
+				esc_html__( 'LIFT Page Builder', 'wow-pagebuilder' ),
 				'manage_options',
-				'wow-settings',
+				'lift-pagebuilder-settings',
 				array( $this, 'create_admin_page' ),
-				plugins_url( 'wp-wow-website-builder/assets/img/tinny-logo.png' )
+				plugins_url( 'lift-websitebuilder/assets/img/tinny-logo.png' )
 			);
 
 		}
@@ -68,7 +68,7 @@ if ( ! class_exists('WOW_Options')){
 		 */
 		public static function create_admin_page() { ?>
             <div class="wrap">
-                <h1 class="wow-title"><img src="<?php echo plugins_url( 'wp-wow-website-builder/assets/img/tinny-logo.png' )?>" alt="" srcset=""><?php esc_html_e( 'WOW Page Builder Options', 'wow-pagebuilder' ); ?></h1>
+                <h1 class="wow-title"><img src="<?php echo plugins_url( 'lift-websitebuilder/assets/img/tinny-logo.png' )?>" alt="" srcset=""><?php esc_html_e( 'LIFT Page Builder Options', 'wow-pagebuilder' ); ?></h1>
 
                 <form method="post" action="options.php">
 					<?php
@@ -137,7 +137,7 @@ if ( ! class_exists('WOW_Options')){
 									}
 									?>
 	
-									<p class="description"> <?php _e('Select post types that can be edited with WOW Page Builder.', 'wow-pagebuilder'); ?></p>
+									<p class="description"> <?php _e('Select post types that can be edited with LIFT Page Builder.', 'wow-pagebuilder'); ?></p>
 								</td>
 							</tr>
 	
@@ -154,7 +154,7 @@ if ( ! class_exists('WOW_Options')){
 									}
 									?>
 	
-									<p class="description"> <?php _e('Include the user roles that you want to allow editing this site with WOW Page Builder.', 'wow-pagebuilder'); ?></p>
+									<p class="description"> <?php _e('Include the user roles that you want to allow editing this site with LIFT Page Builder.', 'wow-pagebuilder'); ?></p>
 	
 								</td>
 							</tr>
@@ -201,7 +201,7 @@ if ( ! class_exists('WOW_Options')){
 									<label>
 										<button type="button" id="wow_clear_cache_btn" class="button"><?php _e('Clean Cache and Sync','wow-pagebuilder'); ?></button>
 										<p class="response-text"></p>
-										<p class="description"> <?php _e('Clean WOW Page Builder cache & synchronize built-in layouts & blocks with server.', 'wow-pagebuilder'); ?></p>
+										<p class="description"> <?php _e('Clean LIFT Page Builder cache & synchronize built-in layouts & blocks with server.', 'wow-pagebuilder'); ?></p>
 									</label>
 								</td>
 							</tr>

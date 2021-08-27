@@ -4,7 +4,7 @@
  *
  * @package wow-pagebuilder
  * @since v.1.0.0
- * @copyright: https://wow-wp.com
+ * @copyright: https://liftcreations.com
  *
  */
 

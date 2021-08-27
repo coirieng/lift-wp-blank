@@ -88,10 +88,10 @@ if ( ! class_exists('WOW_Frontend')){
 					if ( $css_save_as === 'filesystem' ) {
 						$upload_dir     = wp_get_upload_dir();
 						$upload_css_dir = trailingslashit( $upload_dir['basedir'] );
-						$css_path       = $upload_css_dir . "wp-wow-website-builder/wow-page-css-{$post_id}.css";
+						$css_path       = $upload_css_dir . "lift-websitebuilder/wow-page-css-{$post_id}.css";
 						if ( file_exists( $css_path ) ) {
 							$css_dir_url = trailingslashit( $upload_dir['baseurl'] );
-							$css_url     = $css_dir_url . "wp-wow-website-builder/wow-page-css-{$post_id}.css";
+							$css_url     = $css_dir_url . "lift-websitebuilder/wow-page-css-{$post_id}.css";
 							if ( ! wow_helper()->is_editor_screen() ) {
 								wp_enqueue_style( "wow-page-{$post_id}", $css_url, array(), time(), 'all' );
 							}
@@ -262,7 +262,7 @@ if ( ! class_exists('WOW_Frontend')){
 		 *
 		 * @return array
 		 *
-		 * Add Post Class in single page for WOW Page Builder
+		 * Add Post Class in single page for LIFT Page Builder
 		 */
 		function wow_container_post_class( $classes ) {
 			global $post;
@@ -283,7 +283,7 @@ if ( ! class_exists('WOW_Frontend')){
 		 *
 		 * @return array
 		 *
-		 * Add Body Class in single page for WOW Page Builder
+		 * Add Body Class in single page for LIFT Page Builder
 		 */
 		public function wow_container_body_class( $classes ){
 			global $post;
@@ -316,10 +316,10 @@ if ( ! class_exists('WOW_Frontend')){
 					$admin_bar->add_menu(
 						array(
 							'id'    => 'edit-with-wppb',
-							'title' => __( 'Edit with WOW Page Builder', 'wow-pagebuilder' ),
+							'title' => __( 'Edit with LIFT Page Builder', 'wow-pagebuilder' ),
 							'href'  => $link,
 							'meta'  => array(
-								'title' => __( 'Edit with WOW Page Builder', 'wow-pagebuilder' ),
+								'title' => __( 'Edit with LIFT Page Builder', 'wow-pagebuilder' ),
 							),
 						)
 					);
