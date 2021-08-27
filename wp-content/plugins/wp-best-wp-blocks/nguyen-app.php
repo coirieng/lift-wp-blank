@@ -15,7 +15,7 @@
  * @wordpress-plugin
  * Plugin Name:       Best WP Blocks
  * Plugin URI:        https://wow-wp.com
- * Description:       Best WP Blocks help you configure your websites without any coding knowledge required. Lightweight and using best practices for fastest load time.
+ * Description:       Best WP Blocks help you create content blocks which can be used in posts, pages and widgets.
  * Version:           1.0.0
  * Author:            WOW WordPress
  * Author URI:        https://github.com/baonguyenyam/wp-best-wp-blocks
