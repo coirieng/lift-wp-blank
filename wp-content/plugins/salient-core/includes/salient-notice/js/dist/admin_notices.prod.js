@@ -1,1 +1,0 @@
-"use strict";jQuery,jQuery(document).ready(function(){jQuery(document).on("click",".nectar-dismiss-notice-salient-core .notice-dismiss",function(){jQuery.post(notice_params.ajaxurl,{action:"salient_core_dismiss_plugin_notice"},function(){})})});

@@ -1,1 +1,0 @@
-"use strict";window.InlineShortcodeView_vc_images_carousel=window.InlineShortcodeView.extend({render:function(){var e=this.model.get("id");return window.InlineShortcodeView_vc_images_carousel.__super__.render.call(this),vc.frame_window.vc_iframe.addActivity(function(){this.vc_iframe.vc_imageCarousel(e)}),this}});
