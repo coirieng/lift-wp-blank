@@ -1,6 +1,6 @@
 === Plugin Name ===
 Contributors: baonguyenyam
-Tags: system, admin, configure, setup, lightweight
+Tags: block, builder. content, insert, admin
 Requires at least: 4.7
 Tested up to: 5.8
 Stable tag: 1.0.0
@@ -8,11 +8,11 @@ Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Best WP Blocks help you configure your websites without any coding knowledge required. Lightweight and using best practices for fastest load time.
+Best WP Blocks help you create content blocks which can be used in posts, pages and widgets.
 
 == Description ==
 
-Best WP Blocks help you configure your websites without any coding knowledge required. Lightweight and using best practices for fastest load time.
+Best WP Blocks help you create content blocks which can be used in posts, pages and widgets.
 
 == Installation ==
 

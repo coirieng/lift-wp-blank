@@ -55,11 +55,11 @@ if (!class_exists('WP_Blocks_Core_Init')) {
         public function ___wp_blocks_columns( $column, $post_id ) {
             global $post;
             $post_data = get_post($post_id, ARRAY_A);
-            $slug = $post_data['post_name'];
+            $slug = isset($post_data['post_name'] ) ? $post_data['post_name'] : '';
         
             switch( $column ) {
                 case 'shortcode' :
-                    echo '<span style="background:#eee;font-weight:bold;"> [wow_blocks id="'.$slug.'"] </span>';
+                    echo esc_html__('[wow_blocks id="'.$slug.'"]');
                 break;
             }
         }
@@ -86,9 +86,9 @@ if (!class_exists('WP_Blocks_Core_Init')) {
         
             if($post_id){
                 $html =	get_post_field('post_content', $post_id);
-                $html = "".do_shortcode( $html ) ."";
+                $html = "".do_shortcode( $html)."";
             } else{
-                $html = '<p><mark>WOW Block <b>"'.$id.'"</b> not found! Wrong ID?</mark></p>';	
+                $html = 'WOW Block [wow_blocks id="'.$id.'"] not found! Wrong ID?';	
             }
         
             return $html;
