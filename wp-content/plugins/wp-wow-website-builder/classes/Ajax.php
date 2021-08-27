@@ -183,7 +183,7 @@ if ( ! class_exists('WOW_Ajax')){
 			$filename = "wow-page-css-{$page_id}.css";
 
 			$upload_dir = wp_upload_dir();
-			$dir = trailingslashit($upload_dir['basedir']) . 'wow-pagebuilder/';
+			$dir = trailingslashit($upload_dir['basedir']) . 'wp-wow-website-builder/';
 
 			WP_Filesystem( false, $upload_dir['basedir'], true );
 
@@ -329,7 +329,7 @@ if ( ! class_exists('WOW_Ajax')){
 			$filename = "wow-page-css-{$postid}.css";
 
 			$upload_dir = wp_upload_dir();
-			$dir = trailingslashit($upload_dir['basedir']) . 'wow-pagebuilder/';
+			$dir = trailingslashit($upload_dir['basedir']) . 'wp-wow-website-builder/';
 			if (file_exists($dir.$filename)){
 				unlink($dir.$filename);
 			}
@@ -348,7 +348,7 @@ if ( ! class_exists('WOW_Ajax')){
 				$templateData = array();
 	
 				$upload_dir = wp_upload_dir();
-				$dir = trailingslashit($upload_dir['basedir']) . 'wow-pagebuilder/cache/templates/';
+				$dir = trailingslashit($upload_dir['basedir']) . 'wp-wow-website-builder/cache/templates/';
 				$file_path_name = $dir . $cachedTemplateFile;
 	
 				if (file_exists($file_path_name) && (filemtime($file_path_name) + $cache_time) > time()){
@@ -444,7 +444,7 @@ if ( ! class_exists('WOW_Ajax')){
 
 			$cachedTemplateFile = "wow-templates.json";
 			$upload_dir = wp_upload_dir();
-			$dir = trailingslashit($upload_dir['basedir']) . 'wow-pagebuilder/cache/templates/';
+			$dir = trailingslashit($upload_dir['basedir']) . 'wp-wow-website-builder/cache/templates/';
 			$file_path_name = $dir . $cachedTemplateFile;
 			if ( ! file_exists($dir)) {
 				mkdir( $dir, 0777, true );
@@ -464,7 +464,7 @@ if ( ! class_exists('WOW_Ajax')){
 			$cache_time = (60*60*24*7); //cached for 7 days
 			$cachedTemplateFile = "wow-single-template-{$template_id}.json";
 			$upload_dir = wp_upload_dir();
-			$dir = trailingslashit($upload_dir['basedir']) . 'wow-pagebuilder/cache/templates/';
+			$dir = trailingslashit($upload_dir['basedir']) . 'wp-wow-website-builder/cache/templates/';
 			$file_path_name = $dir . $cachedTemplateFile;
 
 			if($this->switchAPI){
@@ -531,7 +531,7 @@ if ( ! class_exists('WOW_Ajax')){
 				if (! empty($templateData)){
 					$cachedTemplateFile = "wow-single-template-{$template_id}.json";
 					$upload_dir         = wp_upload_dir();
-					$dir                = trailingslashit($upload_dir['basedir']).'wow-pagebuilder/cache/templates/';
+					$dir                = trailingslashit($upload_dir['basedir']).'wp-wow-website-builder/cache/templates/';
 
 					$file_path_name = $dir.$cachedTemplateFile;
 
@@ -555,7 +555,7 @@ if ( ! class_exists('WOW_Ajax')){
 
 			$cachedTemplateFile = "wow-blocks.json";
 			$upload_dir = wp_upload_dir();
-			$dir = trailingslashit($upload_dir['basedir']) . 'wow-pagebuilder/cache/blocks/';
+			$dir = trailingslashit($upload_dir['basedir']) . 'wp-wow-website-builder/cache/blocks/';
 			$file_path_name = $dir . $cachedTemplateFile;
 
 			//Checking if exists file and cache validity true
@@ -589,7 +589,7 @@ if ( ! class_exists('WOW_Ajax')){
 		public function cacheBlocks(){
 			$cachedTemplateFile = "wow-blocks.json";
 			$upload_dir         = wp_upload_dir();
-			$dir                = trailingslashit($upload_dir['basedir']).'wow-pagebuilder/cache/blocks/';
+			$dir                = trailingslashit($upload_dir['basedir']).'wp-wow-website-builder/cache/blocks/';
 			$apiUrl = $this->api_base_url.'sections';
 			$post_args = array( 'timeout' => 120);
 			$body_param = array_merge($this->wow_api_request_body_default, array( 'request_for' => 'wow_get_blocks'));
@@ -636,7 +636,7 @@ if ( ! class_exists('WOW_Ajax')){
 			check_ajax_referer( 'wow-nonce-string', 'wow_nonce');
 
 			$upload_dir     = wp_upload_dir();
-			$dirPattern     = trailingslashit($upload_dir['basedir']).'wow-pagebuilder/cache/';
+			$dirPattern     = trailingslashit($upload_dir['basedir']).'wp-wow-website-builder/cache/';
 
 			$isDone = $this->deleteRecursiveDirFile($dirPattern);
 			if ($isDone){

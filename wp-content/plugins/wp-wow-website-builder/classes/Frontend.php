@@ -88,10 +88,10 @@ if ( ! class_exists('WOW_Frontend')){
 					if ( $css_save_as === 'filesystem' ) {
 						$upload_dir     = wp_get_upload_dir();
 						$upload_css_dir = trailingslashit( $upload_dir['basedir'] );
-						$css_path       = $upload_css_dir . "wow-pagebuilder/wow-page-css-{$post_id}.css";
+						$css_path       = $upload_css_dir . "wp-wow-website-builder/wow-page-css-{$post_id}.css";
 						if ( file_exists( $css_path ) ) {
 							$css_dir_url = trailingslashit( $upload_dir['baseurl'] );
-							$css_url     = $css_dir_url . "wow-pagebuilder/wow-page-css-{$post_id}.css";
+							$css_url     = $css_dir_url . "wp-wow-website-builder/wow-page-css-{$post_id}.css";
 							if ( ! wow_helper()->is_editor_screen() ) {
 								wp_enqueue_style( "wow-page-{$post_id}", $css_url, array(), time(), 'all' );
 							}

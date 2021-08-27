@@ -24,7 +24,7 @@ if ( ! class_exists('WOW_Options')){
 				'manage_options',
 				'wow-settings',
 				array( $this, 'create_admin_page' ),
-				plugins_url( 'wow-pagebuilder/assets/img/tinny-logo.png' )
+				plugins_url( 'wp-wow-website-builder/assets/img/tinny-logo.png' )
 			);
 
 		}
@@ -48,6 +48,12 @@ if ( ! class_exists('WOW_Options')){
 				if ( ! empty( $options['css_save_as'] ) ) {
 					$options['css_save_as'] = sanitize_text_field( $options['css_save_as'] );
 				}
+				if ( ! empty( $options['gutenberg_editor'] ) ) {
+					$options['gutenberg_editor'] = sanitize_text_field( $options['gutenberg_editor'] );
+				}
+				if ( ! empty( $options['widget_block_editor'] ) ) {
+					$options['widget_block_editor'] = sanitize_text_field( $options['widget_block_editor'] );
+				}
 				if ( ! empty( $options['supported_post_type'] ) ) {
 					$options['supported_post_type'] = $options['supported_post_type'];
 				}
@@ -62,7 +68,7 @@ if ( ! class_exists('WOW_Options')){
 		 */
 		public static function create_admin_page() { ?>
             <div class="wrap">
-                <h1 class="wow-title"><img src="<?php echo plugins_url( 'wow-pagebuilder/assets/img/tinny-logo.png' )?>" alt="" srcset=""><?php esc_html_e( 'WOW Page Builder Options', 'wow-pagebuilder' ); ?></h1>
+                <h1 class="wow-title"><img src="<?php echo plugins_url( 'wp-wow-website-builder/assets/img/tinny-logo.png' )?>" alt="" srcset=""><?php esc_html_e( 'WOW Page Builder Options', 'wow-pagebuilder' ); ?></h1>
 
                 <form method="post" action="options.php">
 					<?php
@@ -77,6 +83,44 @@ if ( ! class_exists('WOW_Options')){
 					<div class="wow-box-wrapper">
 	
 						<table class="form-table wpex-custom-admin-login-table wow-table clearfix">
+
+
+							<tr>
+								<th scope="row"><?php esc_html_e( 'Disable the Gutenberg Editor', 'wow-pagebuilder' ); ?></th>
+								<td>
+									<?php $value = $option_data['gutenberg_editor']; ?>
+									<select name="wow_options[gutenberg_editor]">
+										<?php
+										$options = array(
+											'disable' => __( 'Off','wow-pagebuilder' ),
+											'enable'   => __( 'On','wow-pagebuilder' ),
+										);
+										foreach ( $options as $id => $label ) { ?>
+											<option value="<?php echo esc_attr( $id ); ?>" <?php selected( $value, $id, true ); ?>>
+												<?php echo strip_tags( $label ); ?>
+											</option>
+										<?php } ?>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row"><?php esc_html_e( 'Disable Widget Block Editor', 'wow-pagebuilder' ); ?></th>
+								<td>
+									<?php $value = $option_data['widget_block_editor']; ?>
+									<select name="wow_options[widget_block_editor]">
+										<?php
+										$options = array(
+											'disable' => __( 'Off','wow-pagebuilder' ),
+											'enable'   => __( 'On','wow-pagebuilder' ),
+										);
+										foreach ( $options as $id => $label ) { ?>
+											<option value="<?php echo esc_attr( $id ); ?>" <?php selected( $value, $id, true ); ?>>
+												<?php echo strip_tags( $label ); ?>
+											</option>
+										<?php } ?>
+									</select>
+								</td>
+							</tr>
 	
 							<tr>
 								<th scope="row"><?php esc_html_e( 'Post Type', 'wow-pagebuilder' ); ?></th>
