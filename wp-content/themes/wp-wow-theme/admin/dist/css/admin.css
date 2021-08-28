@@ -1,5 +1,5 @@
 /**
-* @package LIFT Creations 
+* @package WOW WordPress 
 * @subpackage Theme by Nguyen Pham
 * https://baonguyenyam.github.io/cv
 * @since 2021
@@ -32,7 +32,7 @@
   border-radius: 10px;
   box-shadow: 0 2px 7px rgba(0, 0, 0, 0.15), 0 0 0 1px #d1efba inset; }
 
-#toplevel_page_lift_theme_options .toplevel_page_lift_theme_options .dashicons-admin-generic:before {
+#toplevel_page_wow_theme_options .toplevel_page_wow_theme_options .dashicons-admin-generic:before {
   display: inline-block;
   font-family: bootstrap-icons !important;
   font-style: normal;

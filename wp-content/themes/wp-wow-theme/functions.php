@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package LIFT Creations 
+ * @package WOW WordPress 
  * @subpackage Theme by Nguyen Pham
  * https://baonguyenyam.github.io/cv
  * @since 2021

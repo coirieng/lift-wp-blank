@@ -1,6 +1,6 @@
 <?php
 /**
-* @package LIFT Creations 
+* @package WOW WordPress 
 * @subpackage Theme by Nguyen Pham
 * https://baonguyenyam.github.io/cv
 * @since 2021
@@ -11,7 +11,7 @@
 	Redux::setSection( $opt_name, array(
 		'title' => __( 'Product license', 'wow-theme-options' ),
 		'id'         => 'lift-theme-license',
-		'desc'       => __( 'In order to receive all benefits of WOW Theme, you need to activate your copy of the plugin. By activating WOW Theme license you will unlock premium options - direct plugin updates, access to template library and official support. Don\'t have direct license yet? ', 'wow-theme-options' ) . '<a href="//liftcreations.com" target="_blank">Purchase WOW Theme license.</a>',
+		'desc'       => __( 'In order to receive all benefits of WOW Theme, you need to activate your copy of the plugin. By activating WOW Theme license you will unlock premium options - direct plugin updates, access to template library and official support. Don\'t have direct license yet? ', 'wow-theme-options' ) . '<a href="//wow-wp.com" target="_blank">Purchase WOW Theme license.</a>',
 		'icon'  => 'bi bi-key',
 		'class' => 'lift-theme-admin-license-code',
 		'subsection' => false,
@@ -51,7 +51,7 @@
 				'id'    => 'info_contact',
 				'type'  => 'info',
 				'style' => 'success',
-				'desc'       => __( '<p style="margin-top:0;margin-bottom:0"><strong>Email:</strong> <a href="mailto:hello@liftcreations.com" target="_blank">hello@liftcreations.com</a></p><p style="margin-top:0;margin-bottom:0"><strong>Website:</strong> <a href="https://liftcreations.com/" target="_blank">liftcreations.com</a></p><p style="margin-top:0;margin-bottom:0"><strong>Call Us:</strong> <a href="tel:866-244-1150" target="_blank">866-244-1150</a></p>', 'wow-theme-options' ),
+				'desc'       => __( '<p style="margin-top:0;margin-bottom:0"><strong>Email:</strong> <a href="mailto:hello@wow-wp.com" target="_blank">hello@wow-wp.com</a></p><p style="margin-top:0;margin-bottom:0"><strong>Website:</strong> <a href="https://wow-wp.com/" target="_blank">wow-wp.com</a></p><p style="margin-top:0;margin-bottom:0"><strong>Call Us:</strong> <a href="tel:866-244-1150" target="_blank">866-244-1150</a></p>', 'wow-theme-options' ),
 			),
 			
 		),

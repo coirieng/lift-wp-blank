@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/reference/functions/register_block_style/
  *
- * @package LIFT Creations 
+ * @package WOW WordPress 
  * @subpackage Theme by Nguyen Pham
  * https://baonguyenyam.github.io/cv
  * @since 2021

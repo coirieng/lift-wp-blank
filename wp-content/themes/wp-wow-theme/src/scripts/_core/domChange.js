@@ -1,7 +1,7 @@
 
 /**
  * @license
- * Copyright LIFT Creations All Rights Reserved.
+ * Copyright WOW WordPress All Rights Reserved.
  * Coding by Nguyen Pham
  *
  * Use of this source code is governed by an MIT-style license that can be

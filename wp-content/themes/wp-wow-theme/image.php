@@ -1,6 +1,6 @@
 <?php
 /**
-* @package LIFT Creations 
+* @package WOW WordPress 
 * @subpackage Theme by Nguyen Pham
 * https://baonguyenyam.github.io/cv
 * @since 2021
@@ -8,8 +8,8 @@
 
 get_header();
 
-global $lift_theme;
-$layout_style = $lift_theme['lift-theme-layout-style'];
+global $wow_theme;
+$layout_style = $wow_theme['lift-theme-layout-style'];
 
 // Start the loop.
 while ( have_posts() ) {

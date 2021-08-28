@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package LIFT Creations 
+ * @package WOW WordPress 
  * @subpackage Theme by Nguyen Pham
  * https://baonguyenyam.github.io/cv
  * @since 2021
@@ -13,13 +13,13 @@
 get_header();
 
 $description = get_the_archive_description();
-global $lift_theme;
-$layout_style = $lift_theme['lift-theme-layout-style'];
-$archive_sidebar = $lift_theme['lift-theme-blog-style-archive-sidebar'];
-$archive_sidebar_position = $lift_theme['lift-theme-blog-style-archive-sidebar-position'];
-$archive_sidebar_content_columns = isset($lift_theme['lift-theme-blog-style-archive-content-columns']) ? $lift_theme['lift-theme-blog-style-archive-content-columns'] : 'col-xl-8 col-xxl-9';
-$archive_sidebar_columns = isset($lift_theme['lift-theme-blog-style-archive-sidebar-columns']) ? $lift_theme['lift-theme-blog-style-archive-sidebar-columns'] : 'col-xl-4 col-xxl-3';
-$archive_breadcrumb = $lift_theme['lift-theme-blog-style-archive-breadcrumb'];
+global $wow_theme;
+$layout_style = $wow_theme['lift-theme-layout-style'];
+$archive_sidebar = $wow_theme['lift-theme-blog-style-archive-sidebar'];
+$archive_sidebar_position = $wow_theme['lift-theme-blog-style-archive-sidebar-position'];
+$archive_sidebar_content_columns = isset($wow_theme['lift-theme-blog-style-archive-content-columns']) ? $wow_theme['lift-theme-blog-style-archive-content-columns'] : 'col-xl-8 col-xxl-9';
+$archive_sidebar_columns = isset($wow_theme['lift-theme-blog-style-archive-sidebar-columns']) ? $wow_theme['lift-theme-blog-style-archive-sidebar-columns'] : 'col-xl-4 col-xxl-3';
+$archive_breadcrumb = $wow_theme['lift-theme-blog-style-archive-breadcrumb'];
 ?>
 
 <?php if ( have_posts() ) : ?>

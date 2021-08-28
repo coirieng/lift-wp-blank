@@ -1,6 +1,6 @@
 <?php
 /**
-* @package LIFT Creations 
+* @package WOW WordPress 
 * @subpackage Theme by Nguyen Pham
 * https://baonguyenyam.github.io/cv
 * @since 2021
@@ -67,7 +67,7 @@
         // Force your panel to always open to a specific tab (by id)
         'page_icon'            => 'icon-themes',
         // Icon displayed in the admin panel next to your menu_title
-        'page_slug'            => 'lift_theme_options',
+        'page_slug'            => 'wow_theme_options',
         // Page slug used to denote the panel, will be based off page title then menu title then opt_name if not provided
         'save_defaults'        => true,
         // On load save the defaults to DB before user clicks save or not
@@ -84,7 +84,7 @@
         // Global shut-off for dynamic CSS output by the framework. Will also disable google fonts output
         'output_tag'           => true,
         // Allows dynamic CSS to be generated for customizer and google fonts, but stops the dynamic CSS from going to the head
-        'footer_credit'             => 'LIFT Creations - Create something great',
+        'footer_credit'             => 'WOW WordPress - Create something great',
 
         // FUTURE -> Not in use yet, but reserved or partially implemented. Use at your own risk.
         'database'             => '',
@@ -152,7 +152,7 @@ if ( ! isset( $args['global_variable'] ) || $args['global_variable'] !== false )
 }
 
 // Add content after the form.
-$args['footer_text'] = __( '<p>by LIFT Creations - Author <a href="https://baonguyenyam.github.io/cv/" target="_blank">Nguyen Pham</a></p>', 'wow-theme-options' );
+$args['footer_text'] = __( '<p>by WOW WordPress - Author <a href="https://baonguyenyam.github.io/cv/" target="_blank">Nguyen Pham</a></p>', 'wow-theme-options' );
 
 ////////////////////////////////////////////////////////////////////////
 // INIT APP

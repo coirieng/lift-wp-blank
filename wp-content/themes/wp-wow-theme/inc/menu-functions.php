@@ -7,7 +7,7 @@
  *
  * @link https://make.wordpress.org/themes/2020/07/06/printing-navigation-block-html-from-a-legacy-menu-in-themes/
  *
- * @package LIFT Creations 
+ * @package WOW WordPress 
  * @subpackage Theme by Nguyen Pham
  * https://baonguyenyam.github.io/cv
  * @since 2021

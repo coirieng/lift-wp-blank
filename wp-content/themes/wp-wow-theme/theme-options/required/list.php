@@ -1,14 +1,14 @@
 <?php
 /**
-* @package LIFT Creations 
+* @package WOW WordPress 
 * @subpackage Theme by Nguyen Pham
 * https://baonguyenyam.github.io/cv
 * @since 2021
 */
 
-add_action( 'tgmpa_register', 'lift_theme_options_register_required_plugins' );
+add_action( 'tgmpa_register', 'wow_theme_options_register_required_plugins' );
 
-function lift_theme_options_register_required_plugins() {
+function wow_theme_options_register_required_plugins() {
 	/*
 	 * Array of plugin arrays. Required keys are name and slug.
 	 * If the source is NOT from the .org repo, then source is also required.

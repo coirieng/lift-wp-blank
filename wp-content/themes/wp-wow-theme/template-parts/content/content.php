@@ -4,14 +4,14 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package LIFT Creations 
+ * @package WOW WordPress 
  * @subpackage Theme by Nguyen Pham
  * https://baonguyenyam.github.io/cv
  * @since 2021
  */
 
-global $lift_theme;
-$layout_style = $lift_theme['lift-theme-layout-style'];
+global $wow_theme;
+$layout_style = $wow_theme['lift-theme-layout-style'];
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">

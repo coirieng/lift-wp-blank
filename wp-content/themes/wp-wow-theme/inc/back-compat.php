@@ -6,7 +6,7 @@
  * since this theme is not meant to be backward compatible beyond that and
  * relies on many newer functions and markup changes introduced in 5.3.
  *
- * @package LIFT Creations 
+ * @package WOW WordPress 
  * @subpackage Theme by Nguyen Pham
  * https://baonguyenyam.github.io/cv
  * @since 2021

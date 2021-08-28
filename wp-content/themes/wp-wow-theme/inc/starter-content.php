@@ -4,7 +4,7 @@
  *
  * @link https://make.wordpress.org/core/2016/11/30/starter-content-for-themes-in-4-7/
  *
- * @package LIFT Creations 
+ * @package WOW WordPress 
  * @subpackage Theme by Nguyen Pham
  * https://baonguyenyam.github.io/cv
  * @since 2021

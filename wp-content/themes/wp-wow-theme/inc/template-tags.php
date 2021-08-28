@@ -2,7 +2,7 @@
 /**
  * Custom template tags for this theme
  *
- * @package LIFT Creations 
+ * @package WOW WordPress 
  * @subpackage Theme by Nguyen Pham
  * https://baonguyenyam.github.io/cv
  * @since 2021
@@ -66,16 +66,16 @@ if ( ! function_exists( 'lift_entry_meta_footer' ) ) {
 	 */
 	function lift_entry_meta_footer() {
 
-		global $lift_theme;
-		$content_tag = $lift_theme['lift-theme-blog-style-content-tag'];
-		$content_category = $lift_theme['lift-theme-blog-style-content-category'];
-		$content_date = $lift_theme['lift-theme-blog-style-content-date'];
-		$content_author = $lift_theme['lift-theme-blog-style-content-author'];
+		global $wow_theme;
+		$content_tag = $wow_theme['lift-theme-blog-style-content-tag'];
+		$content_category = $wow_theme['lift-theme-blog-style-content-category'];
+		$content_date = $wow_theme['lift-theme-blog-style-content-date'];
+		$content_author = $wow_theme['lift-theme-blog-style-content-author'];
 
-		$archive_tag = $lift_theme['lift-theme-blog-style-archive-tag'];
-		$archive_category = $lift_theme['lift-theme-blog-style-archive-category'];
-		$archive_date = $lift_theme['lift-theme-blog-style-archive-date'];
-		$archive_author = $lift_theme['lift-theme-blog-style-archive-author'];
+		$archive_tag = $wow_theme['lift-theme-blog-style-archive-tag'];
+		$archive_category = $wow_theme['lift-theme-blog-style-archive-category'];
+		$archive_date = $wow_theme['lift-theme-blog-style-archive-date'];
+		$archive_author = $wow_theme['lift-theme-blog-style-archive-author'];
 		// Early exit if not a post.
 		if ( 'post' !== get_post_type() ) {
 			return;

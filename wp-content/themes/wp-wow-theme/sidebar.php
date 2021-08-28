@@ -3,7 +3,7 @@
  * @link https://developer.wordpress.org/reference/functions/wp_unique_id/
  * @link https://developer.wordpress.org/reference/functions/get_search_form/
  *
- * @package LIFT Creations 
+ * @package WOW WordPress 
  * @subpackage Theme by Nguyen Pham
  * https://baonguyenyam.github.io/cv
  * @since 2021
