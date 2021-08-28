@@ -1,5 +1,5 @@
 <?php
-class lift_Social_Widget extends WP_Widget {
+class wow_Social_Widget extends WP_Widget {
 	// TODO: We working on this one now
     function __construct() {
  
@@ -9,7 +9,7 @@ class lift_Social_Widget extends WP_Widget {
         );
  
         add_action( 'widgets_init', function() {
-            register_widget( 'lift_Social_Widget' );
+            register_widget( 'wow_Social_Widget' );
         });
  
     }

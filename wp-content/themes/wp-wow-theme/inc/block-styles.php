@@ -18,7 +18,7 @@ if ( function_exists( 'register_block_style' ) ) {
 	 *
 	 * @return void
 	 */
-	function lift_register_block_styles() {
+	function wow_register_block_styles() {
 		// Columns: Overlap.
 		register_block_style(
 			'core/columns',
@@ -109,5 +109,5 @@ if ( function_exists( 'register_block_style' ) ) {
 			)
 		);
 	}
-	add_action( 'init', 'lift_register_block_styles' );
+	add_action( 'init', 'wow_register_block_styles' );
 }

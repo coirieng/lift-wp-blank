@@ -10,7 +10,7 @@
 
 ?>
 <!doctype html>
-<html <?php language_attributes(); ?> <?php lift_the_html_classes(); ?> id="back-to-top">
+<html <?php language_attributes(); ?> <?php wow_the_html_classes(); ?> id="back-to-top">
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />

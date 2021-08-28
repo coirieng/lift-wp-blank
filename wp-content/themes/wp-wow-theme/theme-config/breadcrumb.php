@@ -7,7 +7,7 @@
  *
  * @return void
  */
-function lift_get_breadcrumb() {
+function wow_get_breadcrumb() {
 	
     
     $showOnHome = 0; // 1 - show breadcrumbs on the homepage, 0 - don't show

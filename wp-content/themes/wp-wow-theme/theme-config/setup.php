@@ -1,6 +1,6 @@
 <?php
 
-if ( ! function_exists( 'lift_setup' ) ) {
+if ( ! function_exists( 'wow_setup' ) ) {
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -12,7 +12,7 @@ if ( ! function_exists( 'lift_setup' ) ) {
 	 *
 	 * @return void
 	 */
-	function lift_setup() {
+	function wow_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
@@ -309,7 +309,7 @@ if ( ! function_exists( 'lift_setup' ) ) {
 		*/
 		if ( is_customize_preview() ) {
 			require get_template_directory() . '/inc/starter-content.php';
-			add_theme_support( 'starter-content', lift_get_starter_content() );
+			add_theme_support( 'starter-content', wow_get_starter_content() );
 		}
 
 		// Add support for responsive embedded content.
@@ -329,7 +329,7 @@ if ( ! function_exists( 'lift_setup' ) ) {
 		add_theme_support( 'custom-units' );
 	}
 }
-add_action( 'after_setup_theme', 'lift_setup' );
+add_action( 'after_setup_theme', 'wow_setup' );
 
 /**
  * Calculate classes for the main <html> element.
@@ -338,8 +338,8 @@ add_action( 'after_setup_theme', 'lift_setup' );
  *
  * @return void
  */
-function lift_the_html_classes() {
-	$classes = apply_filters( 'lift_html_classes', '' );
+function wow_the_html_classes() {
+	$classes = apply_filters( 'wow_html_classes', '' );
 	if ( ! $classes ) {
 		return;
 	}

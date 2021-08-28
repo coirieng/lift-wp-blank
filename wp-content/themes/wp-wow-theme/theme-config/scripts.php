@@ -6,7 +6,7 @@
  *
  * @return void
  */
-function lift_scripts() {
+function wow_scripts() {
 	// Note, the is_IE global variable is defined by WordPress and is used
 	// to detect if the current browser is internet explorer.
 	global $is_IE, $wp_scripts, $wow_theme;;
@@ -14,7 +14,7 @@ function lift_scripts() {
 	// Responsive embeds script.
 	wp_enqueue_script(
 		'wow-assets-core-script',
-		get_template_directory_uri() . '/dist/js/lift.js',
+		get_template_directory_uri() . '/dist/js/wow.js',
 		wp_get_theme()->get( 'Version' ),
 		true
 	);
@@ -44,10 +44,10 @@ function lift_scripts() {
 	}
 
 }
-add_action( 'wp_enqueue_scripts', 'lift_scripts' );
+add_action( 'wp_enqueue_scripts', 'wow_scripts' );
 
 
-function lift_admin_scripts() {
+function wow_admin_scripts() {
 
 	wp_enqueue_script(
 		'wow-admin-main-script',
@@ -63,4 +63,4 @@ function lift_admin_scripts() {
 	);
 }
 
-add_action( 'admin_enqueue_scripts', 'lift_admin_scripts' );
+add_action( 'admin_enqueue_scripts', 'wow_admin_scripts' );

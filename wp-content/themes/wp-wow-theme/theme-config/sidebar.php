@@ -9,7 +9,7 @@
  *
  * @return void
  */
-function lift_widgets_init() {
+function wow_widgets_init() {
 
 	global $wow_theme;
 
@@ -61,4 +61,4 @@ function lift_widgets_init() {
 
 
 }
-add_action( 'widgets_init', 'lift_widgets_init' );
+add_action( 'widgets_init', 'wow_widgets_init' );

@@ -6,7 +6,7 @@
  *
  * @return void
  */
-function lift_styles() {
+function wow_styles() {
 	// Note, the is_IE global variable is defined by WordPress and is used
 	// to detect if the current browser is internet explorer.
 	global $is_IE, $wp_scripts, $wow_theme;
@@ -52,16 +52,16 @@ function lift_styles() {
 	$content_content_value = $wow_theme['wow-theme-layout-content-spacing'];
 	if($content_row && $content_row_value) {
 		if($content_row_value['padding-top']) {
-			$content_css .= '#content.wow-content .lift_section{padding-top: '.$content_row_value['padding-top'].';}';
+			$content_css .= '#content.wow-content .wow_section{padding-top: '.$content_row_value['padding-top'].';}';
 		}
 		if($content_row_value['padding-bottom']) {
-			$content_css .= '#content.wow-content .lift_section{padding-bottom: '.$content_row_value['padding-bottom'].';}';
+			$content_css .= '#content.wow-content .wow_section{padding-bottom: '.$content_row_value['padding-bottom'].';}';
 		}
 		if($content_row_value['padding-left']) {
-			$content_css .= '#content.wow-content .lift_section{padding-left: '.$content_row_value['padding-left'].';}';
+			$content_css .= '#content.wow-content .wow_section{padding-left: '.$content_row_value['padding-left'].';}';
 		}
 		if($content_row_value['padding-right']) {
-			$content_css .= '#content.wow-content .lift_section{padding-right: '.$content_row_value['padding-right'].';}';
+			$content_css .= '#content.wow-content .wow_section{padding-right: '.$content_row_value['padding-right'].';}';
 		}
 	}
 	if($content_content && $content_content_value) {
@@ -124,7 +124,7 @@ function lift_styles() {
 	// Styles.
 	wp_enqueue_style(
 		'wow-assets-core-style', 
-		get_template_directory_uri() . '/dist/css/lift.css', 
+		get_template_directory_uri() . '/dist/css/wow.css', 
 		array(), 
 		wp_get_theme()->get( 'Version' ), 'all' 
 	);
@@ -216,9 +216,9 @@ function lift_styles() {
 		);
 	}
 }
-add_action( 'wp_enqueue_scripts', 'lift_styles' , 999999 );
+add_action( 'wp_enqueue_scripts', 'wow_styles' , 999999 );
 
-function lift_admin_styles() {
+function wow_admin_styles() {
 	// Styles.
 	wp_enqueue_style(
 		'wow-assets-icon-style', 
@@ -240,4 +240,4 @@ function lift_admin_styles() {
 	);
 }
 
-add_action( 'admin_enqueue_scripts', 'lift_admin_styles' );
+add_action( 'admin_enqueue_scripts', 'wow_admin_styles' );

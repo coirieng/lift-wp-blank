@@ -15,7 +15,7 @@ if ( version_compare( $GLOBALS['wp_version'], '5.3', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
 }
 
-require get_template_directory() . '/lift_redux_frame.php';
+require get_template_directory() . '/wow_redux_frame.php';
 require get_template_directory() . '/theme-config/setup.php';
 require get_template_directory() . '/theme-config/sidebar.php';
 require get_template_directory() . '/theme-config/breadcrumb.php';
