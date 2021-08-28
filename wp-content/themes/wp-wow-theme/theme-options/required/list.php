@@ -17,7 +17,7 @@ function lift_theme_options_register_required_plugins() {
 
 		// This is an example of how to include a plugin bundled with a theme.
 		array(
-			'name'               => 'Best WP Lightweight', // The plugin name.
+			'name'               => 'WOW Best WP Lightweight', // The plugin name.
 			'slug'               => 'wp-best-wp-lightweight', // The plugin slug (typically the folder name).
 			'source'             => get_template_directory() . '/plugins/wp-best-wp-lightweight.zip', // The plugin source.
 			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
@@ -28,7 +28,7 @@ function lift_theme_options_register_required_plugins() {
 			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
 		),
 		array(
-			'name'               => 'Best WP Blocks', // The plugin name.
+			'name'               => 'WOW Best WP Blocks', // The plugin name.
 			'slug'               => 'wp-best-wp-blocks', // The plugin slug (typically the folder name).
 			'source'             => get_template_directory() . '/plugins/wp-best-wp-blocks.zip', // The plugin source.
 			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
@@ -61,7 +61,7 @@ function lift_theme_options_register_required_plugins() {
 			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
 		),
 		array(
-			'name'               => 'Best CSS Compiler', // The plugin name.
+			'name'               => 'WOW Best CSS Compiler', // The plugin name.
 			'slug'               => 'wp-best-css-compiler', // The plugin slug (typically the folder name).
 			'source'             => get_template_directory() . '/plugins/wp-best-css-compiler.zip', // The plugin source.
 			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
@@ -72,7 +72,7 @@ function lift_theme_options_register_required_plugins() {
 			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
 		),
 		array(
-			'name'               => 'Best Suggestion Boxes', // The plugin name.
+			'name'               => 'WOW Best Suggestion Boxes', // The plugin name.
 			'slug'               => 'wp-best-suggestion-boxes', // The plugin slug (typically the folder name).
 			'source'             => get_template_directory() . '/plugins/wp-best-suggestion-boxes.zip', // The plugin source.
 			'required'           => true, // If false, the plugin is only 'recommended' instead of required.

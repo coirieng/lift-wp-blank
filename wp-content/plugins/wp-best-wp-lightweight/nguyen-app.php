@@ -13,7 +13,7 @@
  * @package           BEST_WP_LIGHTWEIGHT
  *
  * @wordpress-plugin
- * Plugin Name:       Best WP Lightweight
+ * Plugin Name:       WOW Best WP Lightweight
  * Plugin URI:        https://wow-wp.com
  * Description:       Best WP Lightweight help you configure your websites without any coding knowledge required. Lightweight and using best practices for fastest load time.
  * Version:           1.0.0

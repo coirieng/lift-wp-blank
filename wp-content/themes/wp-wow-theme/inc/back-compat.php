@@ -15,7 +15,7 @@
 /**
  * Display upgrade notice on theme switch.
  *
- * @since LIFT Theme 1.0
+ * @since WOW Theme 1.0
  *
  * @return void
  */
@@ -30,7 +30,7 @@ add_action( 'after_switch_theme', 'lift_switch_theme' );
  * Prints an update nag after an unsuccessful attempt to switch to
  * the theme on WordPress versions prior to 5.3.
  *
- * @since LIFT Theme 1.0
+ * @since WOW Theme 1.0
  *
  * @global string $wp_version WordPress version.
  *
@@ -49,7 +49,7 @@ function lift_upgrade_notice() {
 /**
  * Prevents the Customizer from being loaded on WordPress versions prior to 5.3.
  *
- * @since LIFT Theme 1.0
+ * @since WOW Theme 1.0
  *
  * @global string $wp_version WordPress version.
  *
@@ -73,7 +73,7 @@ add_action( 'load-customize.php', 'lift_customize' );
 /**
  * Prevents the Theme Preview from being loaded on WordPress versions prior to 5.3.
  *
- * @since LIFT Theme 1.0
+ * @since WOW Theme 1.0
  *
  * @global string $wp_version WordPress version.
  *

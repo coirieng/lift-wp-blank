@@ -16,7 +16,7 @@ if ( ! function_exists( 'lift_setup' ) ) {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on LIFT Theme, use a find and replace
+		 * If you're building a theme based on WOW Theme, use a find and replace
 		 * to change 'wp-lift-theme' to the name of your theme in all the template files.
 		 */
 		load_theme_textdomain( 'wp-lift-theme', get_template_directory() . '/languages' );
@@ -334,7 +334,7 @@ add_action( 'after_setup_theme', 'lift_setup' );
 /**
  * Calculate classes for the main <html> element.
  *
- * @since LIFT Theme 1.0
+ * @since WOW Theme 1.0
  *
  * @return void
  */

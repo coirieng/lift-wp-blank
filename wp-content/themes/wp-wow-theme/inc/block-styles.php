@@ -14,7 +14,7 @@ if ( function_exists( 'register_block_style' ) ) {
 	/**
 	 * Register block styles.
 	 *
-	 * @since LIFT Theme 1.0
+	 * @since WOW Theme 1.0
 	 *
 	 * @return void
 	 */

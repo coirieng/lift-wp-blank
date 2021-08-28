@@ -27,8 +27,8 @@
         //Specify if the admin menu should appear or not. Options: menu or submenu (Under appearance only)
         'allow_sub_menu'       => true,
         // Show the sections below the admin menu item or not
-		'menu_title'           => esc_html__( 'LIFT Theme', 'wow-theme-options' ),
-		'page_title'           => esc_html__( 'LIFT Theme', 'wow-theme-options' ),
+		'menu_title'           => esc_html__( 'WOW Theme', 'wow-theme-options' ),
+		'page_title'           => esc_html__( 'WOW Theme', 'wow-theme-options' ),
         // You will need to generate a Google API key to use this feature.
         // Please visit: https://developers.google.com/fonts/docs/developer_api#Auth
         'google_api_key'       => '',

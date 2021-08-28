@@ -17,7 +17,7 @@
  * Add a button to top-level menu items that has sub-menus.
  * An icon is added using CSS depending on the value of aria-expanded.
  *
- * @since LIFT Theme 1.0
+ * @since WOW Theme 1.0
  *
  * @param string $output Nav menu item start element.
  * @param object $item   Nav menu item.
@@ -50,7 +50,7 @@ add_filter( 'walker_nav_menu_start_el', 'lift_add_sub_menu_toggle', 10, 4 );
 /**
  * Detects the social network from a URL and returns the SVG code for its icon.
  *
- * @since LIFT Theme 1.0
+ * @since WOW Theme 1.0
  *
  * @param string $uri Social link.
  * @param int    $size The icon size in pixels.
@@ -87,7 +87,7 @@ add_filter( 'walker_nav_menu_start_el', 'lift_nav_menu_social_icons', 10, 4 );
 /**
  * Filters the arguments for a single nav menu item.
  *
- * @since LIFT Theme 1.0
+ * @since WOW Theme 1.0
  *
  * @param stdClass $args  An object of wp_nav_menu() arguments.
  * @param WP_Post  $item  Menu item data object.

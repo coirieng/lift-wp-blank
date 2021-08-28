@@ -118,7 +118,7 @@ function _____LIFTcheckLicense() {
 		}
 	}
 	if(!$LicenseVerify){
-		echo '<div class="wrap"><div style="margin: 1rem 0; display: block; background: #ffcfcf; border: 1px solid #d28585; padding: 1rem; border-radius: 5px;">Your license is expired. Please renew the license to get the latest update of LIFT Theme. In order to receive all benefits of LIFT Theme, you need to activate your copy of the plugin. By activating LIFT Theme license you will unlock premium options - direct plugin updates, access to template library and official support. Don\'t have direct license yet? <a href="//liftcreations.com" target="_blank">Purchase LIFT Theme license.</a></div></div>';
+		echo '<div class="wrap"><div style="margin: 1rem 0; display: block; background: #ffcfcf; border: 1px solid #d28585; padding: 1rem; border-radius: 5px;">Your license is expired. Please renew the license to get the latest update of WOW Theme. In order to receive all benefits of WOW Theme, you need to activate your copy of the plugin. By activating WOW Theme license you will unlock premium options - direct plugin updates, access to template library and official support. Don\'t have direct license yet? <a href="//liftcreations.com" target="_blank">Purchase WOW Theme license.</a></div></div>';
 	}
 
 }

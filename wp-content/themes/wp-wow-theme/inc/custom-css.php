@@ -11,7 +11,7 @@
 /**
  * Generate CSS.
  *
- * @since LIFT Theme 1.0
+ * @since WOW Theme 1.0
  *
  * @param string $selector The CSS selector.
  * @param string $style The CSS style.

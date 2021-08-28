@@ -18,7 +18,7 @@ if ( function_exists( 'register_block_pattern_category' ) ) {
 
 	register_block_pattern_category(
 		'wp-lift-theme',
-		array( 'label' => esc_html__( 'LIFT Theme', 'wp-lift-theme' ) )
+		array( 'label' => esc_html__( 'WOW Theme', 'wp-lift-theme' ) )
 	);
 }
 

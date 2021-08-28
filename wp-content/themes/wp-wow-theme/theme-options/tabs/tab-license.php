@@ -11,7 +11,7 @@
 	Redux::setSection( $opt_name, array(
 		'title' => __( 'Product license', 'wow-theme-options' ),
 		'id'         => 'lift-theme-license',
-		'desc'       => __( 'In order to receive all benefits of LIFT Theme, you need to activate your copy of the plugin. By activating LIFT Theme license you will unlock premium options - direct plugin updates, access to template library and official support. Don\'t have direct license yet? ', 'wow-theme-options' ) . '<a href="//liftcreations.com" target="_blank">Purchase LIFT Theme license.</a>',
+		'desc'       => __( 'In order to receive all benefits of WOW Theme, you need to activate your copy of the plugin. By activating WOW Theme license you will unlock premium options - direct plugin updates, access to template library and official support. Don\'t have direct license yet? ', 'wow-theme-options' ) . '<a href="//liftcreations.com" target="_blank">Purchase WOW Theme license.</a>',
 		'icon'  => 'bi bi-key',
 		'class' => 'lift-theme-admin-license-code',
 		'subsection' => false,

@@ -13,7 +13,7 @@
  * @package           BEST_WP_BLOCKS
  *
  * @wordpress-plugin
- * Plugin Name:       Best WP Blocks
+ * Plugin Name:       WOW Best WP Blocks
  * Plugin URI:        https://wow-wp.com
  * Description:       Best WP Blocks help you create content blocks which can be used in posts, pages and widgets.
  * Version:           1.0.0

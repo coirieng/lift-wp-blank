@@ -1,6 +1,6 @@
 <?php
 /**
- * LIFT Theme Starter Content
+ * WOW Theme Starter Content
  *
  * @link https://make.wordpress.org/core/2016/11/30/starter-content-for-themes-in-4-7/
  *
@@ -15,7 +15,7 @@
  *
  * Passes it through the `lift_starter_content` filter before returning.
  *
- * @since LIFT Theme 1.0
+ * @since WOW Theme 1.0
  *
  * @return array A filtered array of args for the starter_content.
  */
@@ -85,7 +85,7 @@ function lift_get_starter_content() {
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph -->
-					<p>' . esc_html_x( 'LIFT Theme includes stylish borders for your content. With an Image block selected, open the "Styles" panel within the Editor sidebar. Select the "Frame" block style to activate it.', 'Theme starter content', 'wp-lift-theme' ) . '</p>
+					<p>' . esc_html_x( 'WOW Theme includes stylish borders for your content. With an Image block selected, open the "Styles" panel within the Editor sidebar. Select the "Frame" block style to activate it.', 'Theme starter content', 'wp-lift-theme' ) . '</p>
 					<!-- /wp:paragraph --></div>
 					<!-- /wp:column -->
 
@@ -95,7 +95,7 @@ function lift_get_starter_content() {
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph -->
-					<p>' . esc_html_x( 'LIFT Theme also includes an overlap style for column blocks. With a Columns block selected, open the "Styles" panel within the Editor sidebar. Choose the "Overlap" block style to try it out.', 'Theme starter content', 'wp-lift-theme' ) . '</p>
+					<p>' . esc_html_x( 'WOW Theme also includes an overlap style for column blocks. With a Columns block selected, open the "Styles" panel within the Editor sidebar. Choose the "Overlap" block style to try it out.', 'Theme starter content', 'wp-lift-theme' ) . '</p>
 					<!-- /wp:paragraph --></div>
 					<!-- /wp:column --></div>
 					<!-- /wp:columns -->
@@ -199,7 +199,7 @@ function lift_get_starter_content() {
 	/**
 	 * Filters the array of starter content.
 	 *
-	 * @since LIFT Theme 1.0
+	 * @since WOW Theme 1.0
 	 *
 	 * @param array $starter_content Array of starter content.
 	 */

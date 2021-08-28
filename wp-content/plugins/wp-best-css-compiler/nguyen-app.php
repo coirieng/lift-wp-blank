@@ -6,7 +6,7 @@
  * @package           BEST_CSS_COMPILER
  *
  * @wordpress-plugin
- * Plugin Name:       Best CSS Compiler
+ * Plugin Name:       WOW Best CSS Compiler
  * Plugin URI:        https://wow-wp.com
  * Description:       Best CSS Compiler is a CSS preprocessor, a superset of CSS that puts in features that aren’t functional in regular CSS. Best CSS Compiler puts in features to CSS and gets collected into legal CSS
  * Version:           1.0.0

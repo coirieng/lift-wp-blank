@@ -63,7 +63,7 @@ class LIFT_Theme_Customize_Color_Control extends WP_Customize_Color_Control {
 	 *
 	 * @access public
 	 *
-	 * @since LIFT Theme 1.0
+	 * @since WOW Theme 1.0
 	 *
 	 * @uses WP_Customize_Control::to_json()
 	 *
