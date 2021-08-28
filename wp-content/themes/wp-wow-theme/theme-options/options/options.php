@@ -27,8 +27,8 @@
         //Specify if the admin menu should appear or not. Options: menu or submenu (Under appearance only)
         'allow_sub_menu'       => true,
         // Show the sections below the admin menu item or not
-		'menu_title'           => esc_html__( 'LIFT Theme', 'lift-theme-options' ),
-		'page_title'           => esc_html__( 'LIFT Theme', 'lift-theme-options' ),
+		'menu_title'           => esc_html__( 'LIFT Theme', 'wow-theme-options' ),
+		'page_title'           => esc_html__( 'LIFT Theme', 'wow-theme-options' ),
         // You will need to generate a Google API key to use this feature.
         // Please visit: https://developers.google.com/fonts/docs/developer_api#Auth
         'google_api_key'       => '',
@@ -131,11 +131,11 @@
 $args['admin_bar_links'][] = array(
 	'id'    => 'lift-theme',
 	'href'  => '//github.com/nguyen-wp/lift-theme/',
-	'title' => __( 'Documentation', 'lift-theme-options' ),
+	'title' => __( 'Documentation', 'wow-theme-options' ),
 );
 $args['share_icons'][] = array(
 	'url'   => '//github.com/nguyen-wp/lift-theme/',
-	'title' => __('Visit us on GitHub', 'lift-theme-options' ),
+	'title' => __('Visit us on GitHub', 'wow-theme-options' ),
 	'icon'  => 'el el-github',
 );
 
@@ -146,13 +146,13 @@ if ( ! isset( $args['global_variable'] ) || $args['global_variable'] !== false )
 	} else {
 		$v = str_replace( '-', '_', $args['opt_name'] );
 	}
-	$args['intro_text'] = sprintf( __( '<p>As of WP 4.3, the favicon setting is now available in the default WordPress customizer (Appearance > Customize).</p>', 'lift-theme-options' ), $v );
+	$args['intro_text'] = sprintf( __( '<p>As of WP 4.3, the favicon setting is now available in the default WordPress customizer (Appearance > Customize).</p>', 'wow-theme-options' ), $v );
 } else {
-	$args['intro_text'] = __( '<p>This text is displayed above the options panel. It isn\'t required, but more info is always better! The intro_text field accepts all HTML.</p>', 'lift-theme-options' );
+	$args['intro_text'] = __( '<p>This text is displayed above the options panel. It isn\'t required, but more info is always better! The intro_text field accepts all HTML.</p>', 'wow-theme-options' );
 }
 
 // Add content after the form.
-$args['footer_text'] = __( '<p>by LIFT Creations - Author <a href="https://baonguyenyam.github.io/cv/" target="_blank">Nguyen Pham</a></p>', 'lift-theme-options' );
+$args['footer_text'] = __( '<p>by LIFT Creations - Author <a href="https://baonguyenyam.github.io/cv/" target="_blank">Nguyen Pham</a></p>', 'wow-theme-options' );
 
 ////////////////////////////////////////////////////////////////////////
 // INIT APP
