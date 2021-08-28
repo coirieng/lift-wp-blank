@@ -13,7 +13,7 @@
 <?php 
 
 global $wow_theme;
-$header_search = $wow_theme['lift-theme-header-search'];
+$header_search = $wow_theme['wow-theme-header-search'];
 
 ?>
 

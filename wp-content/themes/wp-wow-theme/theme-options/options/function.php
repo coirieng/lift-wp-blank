@@ -34,23 +34,23 @@ function lift_theme_skin_body_class( $classes ) {
 
 	$lift_options = get_wow_theme_options();
 	// LAYOUT 
-	$theme_style = $lift_options['lift-theme-global-style-theme'];
-	$theme_dark_mode = $lift_options['lift-theme-global-style-theme-dark'];
+	$theme_style = $lift_options['wow-theme-global-style-theme'];
+	$theme_dark_mode = $lift_options['wow-theme-global-style-theme-dark'];
 
 	$classes[] = '';
 
 	if ( $theme_style === 'modern' ) {
-		$classes[] = 'lift-theme-modern';
+		$classes[] = 'wow-theme-modern';
 	} else if ( $theme_style === 'material' ) {
-		$classes[] = 'lift-theme-material';
+		$classes[] = 'wow-theme-material';
 	} else if ( $theme_style === 'monokai' ) {
-		$classes[] = 'lift-theme-monokai';
+		$classes[] = 'wow-theme-monokai';
 	} else {
-		$classes[] = 'lift-theme-default';
+		$classes[] = 'wow-theme-default';
 	}
 
 	if ( $theme_dark_mode) {
-		$classes[] = 'lift-theme-dark-mode';
+		$classes[] = 'wow-theme-dark-mode';
 	}
 
 	return $classes;
@@ -96,11 +96,11 @@ function _____LIFTcheckLicense() {
 
 	$lift_options = get_wow_theme_options();
 
-	$lift_license['domain'] = $lift_options['lift-theme-license-code-domain'];
-	$lift_license['email'] = $lift_options['lift-theme-license-code-email'];
-	$lift_license['package'] = $lift_options['lift-theme-license-code-package'];
-	$lift_license['key'] = $lift_options['lift-theme-license-code-key'];
-	$lift_license['license'] = $lift_options['lift-theme-license-code-license'];
+	$lift_license['domain'] = $lift_options['wow-theme-license-code-domain'];
+	$lift_license['email'] = $lift_options['wow-theme-license-code-email'];
+	$lift_license['package'] = $lift_options['wow-theme-license-code-package'];
+	$lift_license['key'] = $lift_options['wow-theme-license-code-key'];
+	$lift_license['license'] = $lift_options['wow-theme-license-code-license'];
 	$password = trim($lift_license['key'].$lift_license['domain'].$lift_license['email'].$lift_license['package']);
 	$LicenseVerify = true;
 	if (!password_verify($password, $lift_license['license'])) {

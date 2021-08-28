@@ -9,18 +9,18 @@
 	// -> START layout
 	Redux::setSection( $opt_name, array(
 		'title' => __( 'Layout', 'wow-theme-options' ),
-		'id'    => 'lift-theme-layout',
+		'id'    => 'wow-theme-layout',
 		'desc'       => __( 'For full documentation on this field, visit: ', 'wow-theme-options' ) . '<a href="//getbootstrap.com/docs/5.0/layout/containers/" target="_blank">getbootstrap.com/docs/5.0/layout/containers/</a>',
 		'icon'  => 'bi bi-columns'
 	) );
 
     Redux::setSection( $opt_name, array(
         'title' => __( 'Layout content', 'wow-theme-options' ),
-        'id'         => 'lift-theme-layout-init',
+        'id'         => 'wow-theme-layout-init',
         'subsection' => true,
 		'fields'     => array(
 			array(
-				'id'       => 'lift-theme-layout-style',
+				'id'       => 'wow-theme-layout-style',
                 'type'     => 'switch',
                 'title'    => __( 'Containers', 'wow-theme-options' ),
                 'subtitle' => __( 'Containers are a fundamental building block of Bootstrap that contain, pad, and align your content within a given device or viewport.', 'wow-theme-options' ),
@@ -29,18 +29,18 @@
                 'off'      => 'Boxed',
             ),
 			array(
-				'id'       => 'lift-theme-layout-size',
+				'id'       => 'wow-theme-layout-size',
                 'type'     => 'switch',
-                'required' => array( 'lift-theme-layout-style', '=', '1' ),
+                'required' => array( 'wow-theme-layout-style', '=', '1' ),
                 'title'    => __( 'Max width container', 'wow-theme-options' ),
                 'default'  => 0,
                 'on'       => 'On',
                 'off'      => 'Off',
             ),
 			array(
-				'id'       => 'lift-theme-layout-size-value',
+				'id'       => 'wow-theme-layout-size-value',
 				'type'          => 'slider',
-                'required' => array( 'lift-theme-layout-size', '=', '1' ),
+                'required' => array( 'wow-theme-layout-size', '=', '1' ),
 				'title'         => __( 'Bootstrap comes with three different containers', 'wow-theme-options' ),
 				'min'           => 960,
 				'step'          => 20,
@@ -54,12 +54,12 @@
 
 	Redux::setSection( $opt_name, array(
         'title'      => __( 'Content padding', 'wow-theme-options' ),
-        'id'         => 'lift-theme-layout-row',
+        'id'         => 'wow-theme-layout-row',
         'desc'       => __( 'For full documentation on this field, visit: ', 'wow-theme-options' ) . '<a href="//getbootstrap.com/docs/5.0/layout/gutters/" target="_blank">getbootstrap.com/docs/5.0/layout/gutters/</a>',
         'subsection' => true,
 		'fields'     => array(
             array(
-				'id'       => 'lift-theme-layout-content-option',
+				'id'       => 'wow-theme-layout-content-option',
                 'type'     => 'switch',
                 'title'    => __( 'Content padding', 'wow-theme-options' ),
                 'default'  => 0,
@@ -67,8 +67,8 @@
                 'off'      => 'Off',
             ),
 			array(
-				'id'       => 'lift-theme-layout-content-spacing',
-				'required' => array( 'lift-theme-layout-content-option', '=', '1' ),
+				'id'       => 'wow-theme-layout-content-spacing',
+				'required' => array( 'wow-theme-layout-content-option', '=', '1' ),
                 'type'           => 'spacing',
                 'mode'           => 'padding',
                 'all'            => false,
@@ -80,7 +80,7 @@
                 )
             ),
 			array(
-				'id'       => 'lift-theme-layout-row-option',
+				'id'       => 'wow-theme-layout-row-option',
                 'type'     => 'switch',
                 'title'    => __( 'Row padding', 'wow-theme-options' ),
                 'default'  => 0,
@@ -89,8 +89,8 @@
                 'subtitle'       => __( 'This one apply for &lt;section&gt; tag only', 'wow-theme-options' ),
             ),
 			array(
-				'id'       => 'lift-theme-layout-row-spacing',
-				'required' => array( 'lift-theme-layout-row-option', '=', '1' ),
+				'id'       => 'wow-theme-layout-row-spacing',
+				'required' => array( 'wow-theme-layout-row-option', '=', '1' ),
                 'type'           => 'spacing',
                 'mode'           => 'padding',
                 'all'            => false,
@@ -106,11 +106,11 @@
 
 	Redux::setSection( $opt_name, array(
 		'title'      => __( 'Layout style', 'wow-theme-options' ),
-		'id'         => 'lift-theme-layout-style',
+		'id'         => 'wow-theme-layout-style',
 		'subsection' => true,
 		'fields'     => array(
 			array(
-                'id'       => 'lift-theme-layout-style-bg',
+                'id'       => 'wow-theme-layout-style-bg',
                 'type'     => 'background',
 				'output'   => array( '#content' ),
                 'title'    => __( 'Layout background', 'wow-theme-options' ),
@@ -120,10 +120,10 @@
 				),
 				'preview_media' => true,
 				'preview' => false,
-				'class' => 'lift-theme-admin-layout-style lift-theme-admin-layout-style-bg',
+				'class' => 'wow-theme-admin-layout-style wow-theme-admin-layout-style-bg',
             ),
 			array(
-                'id'       => 'lift-theme-layout-style-border',
+                'id'       => 'wow-theme-layout-style-border',
                 'type'     => 'border',
                 'title'    => __( 'Layout Border Option', 'wow-theme-options' ),
                 'subtitle' => __( 'Only color validation can be done on this field type', 'wow-theme-options' ),
@@ -140,7 +140,7 @@
                 ),
             ),
 			array(
-                'id'       => 'lift-theme-layout-style-color',
+                'id'       => 'wow-theme-layout-style-color',
                 'type'     => 'color_rgba',
 				'output'    => array(
 					'color'  => '#content'
@@ -155,7 +155,7 @@
 				)
             ),
 			array(
-                'id'       => 'lift-theme-layout-style-link',
+                'id'       => 'wow-theme-layout-style-link',
                 'type'     => 'link_color',
 				'output'    => array(
 					'color'  => '#content a'

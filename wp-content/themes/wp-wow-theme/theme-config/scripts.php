@@ -33,7 +33,7 @@ function lift_scripts() {
 		true
 	);
 
-	if (!is_admin() && current_user_can('administrator') && intval($wow_theme['lift-theme-global-dev-toogle-tag']) == 1) {
+	if (!is_admin() && current_user_can('administrator') && intval($wow_theme['wow-theme-global-dev-toogle-tag']) == 1) {
 		wp_enqueue_script(
 			'lift-assets-admin-tool',
 			get_template_directory_uri() . '/dist/js/admin-tool.js',

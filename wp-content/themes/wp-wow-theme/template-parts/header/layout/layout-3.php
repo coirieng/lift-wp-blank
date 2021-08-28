@@ -1,11 +1,11 @@
 <?php
 global $wow_theme;
-$header_style = $wow_theme['lift-theme-header-layout-style'];
-$header_offcanvas = $wow_theme['lift-theme-header-offcanvas'];
-$header_menu_toggle = $wow_theme['lift-theme-header-menu-toggle'];
-$header_row = $wow_theme['lift-theme-header-row-option'];
-$header_search_sticky = $wow_theme['lift-theme-header-search-sticky'];
-$header_search_align = $wow_theme['lift-theme-header-search-align'];
+$header_style = $wow_theme['wow-theme-header-layout-style'];
+$header_offcanvas = $wow_theme['wow-theme-header-offcanvas'];
+$header_menu_toggle = $wow_theme['wow-theme-header-menu-toggle'];
+$header_row = $wow_theme['wow-theme-header-row-option'];
+$header_search_sticky = $wow_theme['wow-theme-header-search-sticky'];
+$header_search_align = $wow_theme['wow-theme-header-search-align'];
 ?>
 <?php get_template_part( 'template-parts/header/site-branding' ); ?>
 

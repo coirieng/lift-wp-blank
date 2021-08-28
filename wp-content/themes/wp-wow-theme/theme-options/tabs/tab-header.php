@@ -9,18 +9,18 @@
     // -> START Header
     Redux::setSection( $opt_name, array(
         'title' => __( 'Header', 'wow-theme-options' ),
-        'id'    => 'lift-theme-header',
+        'id'    => 'wow-theme-header',
         'icon'  => 'bi bi-menu-button-wide'
     ) );
 
 
 	Redux::setSection( $opt_name, array(
         'title' => __( 'Header layout', 'wow-theme-options' ),
-        'id'         => 'lift-theme-header-layout',
+        'id'         => 'wow-theme-header-layout',
         'subsection' => true,
 		'fields'     => array(
 			array(
-				'id'       => 'lift-theme-header-kind',
+				'id'       => 'wow-theme-header-kind',
                 'type'     => 'image_select',
                 'title'    => __( 'Header Type <i style="color:red">(*)</i>', 'wow-theme-options' ),
 				'options'  => array(
@@ -40,7 +40,7 @@
 				'default'  => '1'
             ),
             array(
-				'id'       => 'lift-theme-header-second',
+				'id'       => 'wow-theme-header-second',
                 'type'     => 'switch',
                 'title'    => __( 'Secondary Menu', 'wow-theme-options' ),
                 'default'  => 0,
@@ -48,12 +48,12 @@
                 'off'      => 'Disable',
             ),
             array(
-				'id'       => 'lift-theme-header-second-align',
+				'id'       => 'wow-theme-header-second-align',
                 'type'     => 'button_set',
 				'required' => array(
-                    array('lift-theme-header-second', '!=', '0'),
-                    array('lift-theme-header-kind', '=', '1'),
-                    array('lift-theme-header-menu-toggle', '!=', 'all'),
+                    array('wow-theme-header-second', '!=', '0'),
+                    array('wow-theme-header-kind', '=', '1'),
+                    array('wow-theme-header-menu-toggle', '!=', 'all'),
                 ),
 				'title'    => __( 'Secondary Menu Align', 'wow-theme-options' ),
 				'options' => array(
@@ -63,7 +63,7 @@
 				'default' => 'right'
             ),
 			array(
-				'id'       => 'lift-theme-header-layout-style',
+				'id'       => 'wow-theme-header-layout-style',
                 'type'     => 'switch',
                 'title'    => __( 'Containers', 'wow-theme-options' ),
                 'subtitle' => __( 'Containers are a fundamental building block of Bootstrap that contain, pad, and align your content within a given device or viewport.', 'wow-theme-options' ),
@@ -72,18 +72,18 @@
                 'off'      => 'Boxed',
             ),
 			array(
-				'id'       => 'lift-theme-header-layout-size',
+				'id'       => 'wow-theme-header-layout-size',
                 'type'     => 'switch',
-                'required' => array( 'lift-theme-header-layout-style', '=', '1' ),
+                'required' => array( 'wow-theme-header-layout-style', '=', '1' ),
                 'title'    => __( 'Max width container', 'wow-theme-options' ),
                 'default'  => 0,
                 'on'       => 'On',
                 'off'      => 'Off',
             ),
 			array(
-				'id'       => 'lift-theme-header-layout-size-value',
+				'id'       => 'wow-theme-header-layout-size-value',
 				'type'          => 'slider',
-                'required' => array( 'lift-theme-header-layout-size', '=', '1' ),
+                'required' => array( 'wow-theme-header-layout-size', '=', '1' ),
 				'title'         => __( 'Bootstrap comes with three different containers', 'wow-theme-options' ),
 				'min'           => 960,
 				'step'          => 20,
@@ -97,11 +97,11 @@
 
 	Redux::setSection( $opt_name, array(
 		'title'      => __( 'Header options', 'wow-theme-options' ),
-		'id'         => 'lift-theme-header-options',
+		'id'         => 'wow-theme-header-options',
 		'subsection' => true,
 		'fields'     => array(
 			array(
-				'id'       => 'lift-theme-header-menu-toggle',
+				'id'       => 'wow-theme-header-menu-toggle',
                 'type'     => 'select',
                 'title'    => __( 'Menu Toggle', 'wow-theme-options' ),
                 'options'  => array(
@@ -116,9 +116,9 @@
 				'default'         => 'md'
             ),
             array(
-				'id'       => 'lift-theme-header-offcanvas',
+				'id'       => 'wow-theme-header-offcanvas',
                 'required' => array(
-                    'lift-theme-header-menu-toggle', '!=', 'keep',
+                    'wow-theme-header-menu-toggle', '!=', 'keep',
                 ),
                 'type'     => 'switch',
                 'title'    => __( 'Header Offcanvas', 'wow-theme-options' ),
@@ -127,7 +127,7 @@
                 'off'      => 'Off',
             ),
 			array(
-				'id'       => 'lift-theme-header-fixed',
+				'id'       => 'wow-theme-header-fixed',
                 'type'     => 'switch',
                 'title'    => __( 'Header Fixed', 'wow-theme-options' ),
                 'default'  => 1,
@@ -135,7 +135,7 @@
                 'off'      => 'Off',
             ),
 			array(
-                'id'       => 'lift-theme-header-logo',
+                'id'       => 'wow-theme-header-logo',
                 'type'     => 'media', 
 				// 'url'      => true,
 				// 'readonly' => false,
@@ -143,8 +143,8 @@
                 'title'    => __( 'Header Logo <i style="color:red">(*)</i>', 'wow-theme-options' ),
             ),
 			array(
-                'id'       => 'lift-theme-header-logo-size',
-				'required' => array( 'lift-theme-header-logo', '!=', '' ),
+                'id'       => 'wow-theme-header-logo-size',
+				'required' => array( 'wow-theme-header-logo', '!=', '' ),
                 'type'           => 'dimensions',
                 'width'            => true,
                 'height'            => true,
@@ -153,7 +153,7 @@
                 'title'          => __( 'Header Logo Size', 'wow-theme-options' ),
             ),
 			array(
-                'id'       => 'lift-theme-header-logo-tablet',
+                'id'       => 'wow-theme-header-logo-tablet',
                 'type'     => 'media', 
 				// 'url'      => true,
 				// 'readonly' => false,
@@ -161,8 +161,8 @@
                 'title'    => __( 'Phalet/Tablet Header Logo <i style="color:red">(*)</i>', 'wow-theme-options' ),
             ),
 			array(
-                'id'       => 'lift-theme-header-logo-tablet-size',
-				'required' => array( 'lift-theme-header-logo-tablet', '!=', '' ),
+                'id'       => 'wow-theme-header-logo-tablet-size',
+				'required' => array( 'wow-theme-header-logo-tablet', '!=', '' ),
                 'type'           => 'dimensions',
                 'width'            => true,
                 'height'            => true,
@@ -171,7 +171,7 @@
                 'title'          => __( 'Phalet/Tablet Header Logo Size', 'wow-theme-options' ),
             ),
 			array(
-                'id'       => 'lift-theme-header-logo-mobile',
+                'id'       => 'wow-theme-header-logo-mobile',
                 'type'     => 'media', 
 				// 'url'      => true,
 				// 'readonly' => false,
@@ -179,8 +179,8 @@
                 'title'    => __( 'Mobile Header Logo <i style="color:red">(*)</i>', 'wow-theme-options' ),
             ),
 			array(
-                'id'       => 'lift-theme-header-logo-mobile-size',
-				'required' => array( 'lift-theme-header-logo-mobile', '!=', '' ),
+                'id'       => 'wow-theme-header-logo-mobile-size',
+				'required' => array( 'wow-theme-header-logo-mobile', '!=', '' ),
                 'type'           => 'dimensions',
                 'width'            => true,
                 'height'            => true,
@@ -194,12 +194,12 @@
 
 	Redux::setSection( $opt_name, array(
         'title'      => __( 'Header row', 'wow-theme-options' ),
-        'id'         => 'lift-theme-header-row',
+        'id'         => 'wow-theme-header-row',
         'desc'       => __( 'For full documentation on this field, visit: ', 'wow-theme-options' ) . '<a href="//getbootstrap.com/docs/5.0/layout/gutters/" target="_blank">getbootstrap.com/docs/5.0/layout/gutters/</a>',
         'subsection' => true,
 		'fields'     => array(
 			array(
-				'id'       => 'lift-theme-header-row-option',
+				'id'       => 'wow-theme-header-row-option',
                 'type'     => 'switch',
                 'title'    => __( 'Row padding', 'wow-theme-options' ),
                 'default'  => 0,
@@ -207,8 +207,8 @@
                 'off'      => 'Off',
             ),
 			array(
-				'id'       => 'lift-theme-header-row-spacing',
-				'required' => array( 'lift-theme-header-row-option', '=', '1' ),
+				'id'       => 'wow-theme-header-row-spacing',
+				'required' => array( 'wow-theme-header-row-option', '=', '1' ),
                 'type'           => 'spacing',
                 'mode'           => 'padding',
                 'all'            => false,
@@ -227,11 +227,11 @@
 
 	Redux::setSection( $opt_name, array(
 		'title'      => __( 'Header style', 'wow-theme-options' ),
-		'id'         => 'lift-theme-header-style',
+		'id'         => 'wow-theme-header-style',
 		'subsection' => true,
 		'fields'     => array(
 			array(
-                'id'       => 'lift-theme-header-style-bg',
+                'id'       => 'wow-theme-header-style-bg',
                 'type'     => 'background',
 				'output'   => array( '#header' ),
                 'title'    => __( 'Header background', 'wow-theme-options' ),
@@ -241,12 +241,12 @@
                 ),
 				'preview_media' => true,
 				'preview' => false,
-				'class' => 'lift-theme-admin-header-style lift-theme-admin-header-style-bg',
+				'class' => 'wow-theme-admin-header-style wow-theme-admin-header-style-bg',
             ),
             array(
-                'id'       => 'lift-theme-header-style-bg-active',
+                'id'       => 'wow-theme-header-style-bg-active',
                 'type'     => 'background',
-				'required' => array( 'lift-theme-header-fixed', '=', '1' ),
+				'required' => array( 'wow-theme-header-fixed', '=', '1' ),
 				'output'   => array( '#header.active', '#header.toggle' ),
                 'title'    => __( 'Header background active', 'wow-theme-options' ),
                 'subtitle' => __( 'Pick a header background active for the theme (default: #ffffff).', 'wow-theme-options' ),
@@ -255,12 +255,12 @@
                 ),
 				'preview_media' => true,
 				'preview' => false,
-				'class' => 'lift-theme-admin-header-style lift-theme-admin-header-style-bg',
+				'class' => 'wow-theme-admin-header-style wow-theme-admin-header-style-bg',
             ),
             array(
-                'id'       => 'lift-theme-header-style-bg-canvas',
+                'id'       => 'wow-theme-header-style-bg-canvas',
                 'type'     => 'background',
-				'required' => array( 'lift-theme-header-offcanvas', '=', '1' ),
+				'required' => array( 'wow-theme-header-offcanvas', '=', '1' ),
 				'output'   => array( '#header.canvased .primary-menu-container' ),
                 'title'    => __( 'Header background canvas', 'wow-theme-options' ),
                 'subtitle' => __( 'Pick a header background canvas for the theme (default: #e8e8e8).', 'wow-theme-options' ),
@@ -269,10 +269,10 @@
                 ),
 				'preview_media' => true,
 				'preview' => false,
-				'class' => 'lift-theme-admin-header-style lift-theme-admin-header-style-bg',
+				'class' => 'wow-theme-admin-header-style wow-theme-admin-header-style-bg',
             ),
             array(
-                'id'       => 'lift-theme-header-style-bg-animation',
+                'id'       => 'wow-theme-header-style-bg-animation',
                 'title'    => __( 'Header background animation', 'wow-theme-options' ),
                 'subtitle' => __( 'Pick a header background animation milliseconds (default: 400ms = 0.4s).', 'wow-theme-options' ),
 				'type'          => 'slider',
@@ -283,7 +283,7 @@
 				'display_value' => 'text'
 			),
 			array(
-                'id'       => 'lift-theme-header-style-border-top',
+                'id'       => 'wow-theme-header-style-border-top',
                 'type'     => 'border',
                 'title'    => __( 'Header Border Top', 'wow-theme-options' ),
                 'subtitle' => __( 'Only color validation can be done on this field type', 'wow-theme-options' ),
@@ -301,7 +301,7 @@
                 ),
             ),
 			array(
-                'id'       => 'lift-theme-header-style-border-bottom',
+                'id'       => 'wow-theme-header-style-border-bottom',
                 'type'     => 'border',
                 'title'    => __( 'Header Border Bottom', 'wow-theme-options' ),
                 'subtitle' => __( 'Only color validation can be done on this field type', 'wow-theme-options' ),
@@ -319,7 +319,7 @@
                 ),
             ),
 			array(
-                'id'       => 'lift-theme-header-style-color',
+                'id'       => 'wow-theme-header-style-color',
                 'type'     => 'color_rgba',
 				'output'    => array(
 					'color'  => '#header'
@@ -331,7 +331,7 @@
 				)
             ),
 			array(
-                'id'       => 'lift-theme-header-style-link',
+                'id'       => 'wow-theme-header-style-link',
                 'type'     => 'link_color',
 				'output'    => array(
 					'color'  => '#header a'
@@ -346,7 +346,7 @@
 				)
             ),
 			array(
-				'id'       => 'lift-theme-header-shadow',
+				'id'       => 'wow-theme-header-shadow',
                 'type'     => 'select',
                 'title'    => __( 'Shadows', 'wow-theme-options' ),
                 'subtitle' => __( 'Add or remove shadows to elements with box-shadow utilities.', 'wow-theme-options' ),

@@ -9,17 +9,17 @@
     // -> START Copyright
     Redux::setSection( $opt_name, array(
         'title' => __( 'Copyright', 'wow-theme-options' ),
-        'id'    => 'lift-theme-copyright',
+        'id'    => 'wow-theme-copyright',
         'icon'  => 'bi bi-layout-three-columns'
     ) );
 
 	Redux::setSection( $opt_name, array(
         'title' => __( 'Copyright Layout', 'wow-theme-options' ),
-        'id'         => 'lift-theme-copyright-layout',
+        'id'         => 'wow-theme-copyright-layout',
         'subsection' => true,
 		'fields'     => array(
 			array(
-				'id'       => 'lift-theme-copyright-enable',
+				'id'       => 'wow-theme-copyright-enable',
                 'type'     => 'switch',
                 'title'    => __( 'Enable', 'wow-theme-options' ),
                 'default'  => 1,
@@ -27,7 +27,7 @@
                 'off'      => 'Off',
             ),
 			array(
-				'id'       => 'lift-theme-copyright-layout-style',
+				'id'       => 'wow-theme-copyright-layout-style',
                 'type'     => 'switch',
                 'title'    => __( 'Containers', 'wow-theme-options' ),
                 'subtitle' => __( 'Containers are a fundamental building block of Bootstrap that contain, pad, and align your content within a given device or viewport.', 'wow-theme-options' ),
@@ -36,18 +36,18 @@
                 'off'      => 'Boxed',
             ),
 			array(
-				'id'       => 'lift-theme-copyright-layout-size',
+				'id'       => 'wow-theme-copyright-layout-size',
                 'type'     => 'switch',
-                'required' => array( 'lift-theme-copyright-layout-style', '=', '1' ),
+                'required' => array( 'wow-theme-copyright-layout-style', '=', '1' ),
                 'title'    => __( 'Max width container', 'wow-theme-options' ),
                 'default'  => 0,
                 'on'       => 'On',
                 'off'      => 'Off',
             ),
 			array(
-				'id'       => 'lift-theme-copyright-layout-size-value',
+				'id'       => 'wow-theme-copyright-layout-size-value',
 				'type'          => 'slider',
-                'required' => array( 'lift-theme-copyright-layout-size', '=', '1' ),
+                'required' => array( 'wow-theme-copyright-layout-size', '=', '1' ),
 				'title'         => __( 'Bootstrap comes with three different containers', 'wow-theme-options' ),
 				'min'           => 960,
 				'step'          => 20,
@@ -60,11 +60,11 @@
 
 	Redux::setSection( $opt_name, array(
 		'title'      => __( 'Copyright style', 'wow-theme-options' ),
-		'id'         => 'lift-theme-copyright-style',
+		'id'         => 'wow-theme-copyright-style',
 		'subsection' => true,
 		'fields'     => array(
 			array(
-                'id'       => 'lift-theme-copyright-style-bg',
+                'id'       => 'wow-theme-copyright-style-bg',
                 'type'     => 'background',
 				'output'   => array( 'footer #copyright' ),
                 'title'    => __( 'Copyright background', 'wow-theme-options' ),
@@ -74,10 +74,10 @@
 				),
 				'preview_media' => true,
 				'preview' => false,
-				'class' => 'lift-theme-admin-copyright-style lift-theme-admin-copyright-style-bg',
+				'class' => 'wow-theme-admin-copyright-style wow-theme-admin-copyright-style-bg',
             ),
 			array(
-                'id'       => 'lift-theme-copyright-style-border',
+                'id'       => 'wow-theme-copyright-style-border',
                 'type'     => 'border',
                 'title'    => __( 'Copyright Border Option', 'wow-theme-options' ),
                 'subtitle' => __( 'Only color validation can be done on this field type', 'wow-theme-options' ),
@@ -94,7 +94,7 @@
                 ),
             ),
 			array(
-                'id'       => 'lift-theme-copyright-style-color',
+                'id'       => 'wow-theme-copyright-style-color',
                 'type'     => 'color_rgba',
 				'output'    => array(
 					'color'  => 'footer #copyright'
@@ -109,7 +109,7 @@
 				)
             ),
 			array(
-                'id'       => 'lift-theme-copyright-style-link',
+                'id'       => 'wow-theme-copyright-style-link',
                 'type'     => 'link_color',
 				'output'    => array(
 					'color'  => 'footer #copyright a'
@@ -128,12 +128,12 @@
 
     Redux::setSection( $opt_name, array(
         'title'      => __( 'Copyright row', 'wow-theme-options' ),
-        'id'         => 'lift-theme-copyright-row',
+        'id'         => 'wow-theme-copyright-row',
         'desc'       => __( 'For full documentation on this field, visit: ', 'wow-theme-options' ) . '<a href="//getbootstrap.com/docs/5.0/layout/gutters/" target="_blank">getbootstrap.com/docs/5.0/layout/gutters/</a>',
         'subsection' => true,
 		'fields'     => array(
 			array(
-				'id'       => 'lift-theme-copyright-row-option',
+				'id'       => 'wow-theme-copyright-row-option',
                 'type'     => 'switch',
                 'title'    => __( 'Row padding', 'wow-theme-options' ),
                 'default'  => 1,
@@ -141,8 +141,8 @@
                 'off'      => 'Off',
             ),
 			array(
-				'id'       => 'lift-theme-copyright-row-spacing',
-				'required' => array( 'lift-theme-copyright-row-option', '=', '1' ),
+				'id'       => 'wow-theme-copyright-row-spacing',
+				'required' => array( 'wow-theme-copyright-row-option', '=', '1' ),
                 'type'           => 'spacing',
                 'mode'           => 'padding',
                 'all'            => false,
@@ -163,13 +163,13 @@
 
     Redux::setSection( $opt_name, array(
         'title'      => __( 'Copyright columns', 'wow-theme-options' ),
-        'id'         => 'lift-theme-copyright-column',
+        'id'         => 'wow-theme-copyright-column',
         'desc'       => __( 'For full documentation on this field, visit: ', 'wow-theme-options' ) . '<a href="//getbootstrap.com/docs/5.0/layout/columns/" target="_blank">getbootstrap.com/docs/5.0/layout/columns/</a>',
         'subsection' => true,
         'fields'     => array(
 
             array(
-                'id'       => 'lift-theme-copyright-columns',
+                'id'       => 'wow-theme-copyright-columns',
                 'type'     => 'image_select',
                 'title'    => __( 'Copyright columns', 'wow-theme-options' ),
                 'subtitle' => __( 'How many columns do you need?', 'wow-theme-options' ),
@@ -225,11 +225,11 @@
                         'img' => ReduxFramework::$_url . 'assets/img/1col.png'
                     )
                 ),
-				'class' => 'lift-theme-admin-copyright-column lift-theme-admin-copyright-column-img',
+				'class' => 'wow-theme-admin-copyright-column wow-theme-admin-copyright-column-img',
 				'default'  => '2'
             ),
 			array(
-				'id'       => 'lift-theme-copyright-columns-gutters',
+				'id'       => 'wow-theme-copyright-columns-gutters',
                 'title'    => __( 'Copyright columns gutters', 'wow-theme-options' ),
 				'desc'       => __( 'Set -1 for default gutters', 'wow-theme-options' ),
 				'type'          => 'slider',
@@ -241,99 +241,99 @@
 				'default'  => '-1'
 			),
 			array(
-				'id'       => 'lift-theme-copyright-columns-1',
+				'id'       => 'wow-theme-copyright-columns-1',
 				'type'     => 'text',
 				'title'    => __( 'Column 1', 'wow-theme-options' ),
 				'subtitle' => __( 'Class name', 'wow-theme-options' ),
-				'class' => 'lift-theme-admin-copyright-column lift-theme-admin-copyright-column-1',
+				'class' => 'wow-theme-admin-copyright-column wow-theme-admin-copyright-column-1',
 				'default'  => 'col-sm-12 col-md-6 col-lg-6'
 			),
 			array(
-				'id'       => 'lift-theme-copyright-columns-2',
+				'id'       => 'wow-theme-copyright-columns-2',
 				'type'     => 'text',
-				'required' => array( 'lift-theme-copyright-columns', '>=', '2' ),
+				'required' => array( 'wow-theme-copyright-columns', '>=', '2' ),
 				'title'    => __( 'Column 2', 'wow-theme-options' ),
-				'class' => 'lift-theme-admin-copyright-column lift-theme-admin-copyright-column-2',
+				'class' => 'wow-theme-admin-copyright-column wow-theme-admin-copyright-column-2',
 				'default'  => 'col-sm-12 col-md-6 col-lg-6 text-md-end'
 			),
 			array(
-				'id'       => 'lift-theme-copyright-columns-3',
+				'id'       => 'wow-theme-copyright-columns-3',
 				'type'     => 'text',
-				'required' => array( 'lift-theme-copyright-columns', '>=', '3' ),
+				'required' => array( 'wow-theme-copyright-columns', '>=', '3' ),
 				'title'    => __( 'Column 3', 'wow-theme-options' ),
-				'class' => 'lift-theme-admin-copyright-column lift-theme-admin-copyright-column-3',
+				'class' => 'wow-theme-admin-copyright-column wow-theme-admin-copyright-column-3',
 				'default'  => 'col-sm-12 col-md-6 col-lg-6'
 			),
 			array(
-				'id'       => 'lift-theme-copyright-columns-4',
+				'id'       => 'wow-theme-copyright-columns-4',
 				'type'     => 'text',
-				'required' => array( 'lift-theme-copyright-columns', '>=', '4' ),
+				'required' => array( 'wow-theme-copyright-columns', '>=', '4' ),
 				'title'    => __( 'Column 4', 'wow-theme-options' ),
-				'class' => 'lift-theme-admin-copyright-column lift-theme-admin-copyright-column-4',
+				'class' => 'wow-theme-admin-copyright-column wow-theme-admin-copyright-column-4',
 				'default'  => 'col-sm-12 col-md-6 col-lg-6'
 			),
 			array(
-				'id'       => 'lift-theme-copyright-columns-5',
+				'id'       => 'wow-theme-copyright-columns-5',
 				'type'     => 'text',
-				'required' => array( 'lift-theme-copyright-columns', '>=', '5' ),
+				'required' => array( 'wow-theme-copyright-columns', '>=', '5' ),
 				'title'    => __( 'Column 5', 'wow-theme-options' ),
-				'class' => 'lift-theme-admin-copyright-column lift-theme-admin-copyright-column-5',
+				'class' => 'wow-theme-admin-copyright-column wow-theme-admin-copyright-column-5',
 				'default'  => 'col-sm-12 col-md-6 col-lg-6'
 			),
 			array(
-				'id'       => 'lift-theme-copyright-columns-6',
+				'id'       => 'wow-theme-copyright-columns-6',
 				'type'     => 'text',
-				'required' => array( 'lift-theme-copyright-columns', '>=', '6' ),
+				'required' => array( 'wow-theme-copyright-columns', '>=', '6' ),
 				'title'    => __( 'Column 6', 'wow-theme-options' ),
-				'class' => 'lift-theme-admin-copyright-column lift-theme-admin-copyright-column-6',
+				'class' => 'wow-theme-admin-copyright-column wow-theme-admin-copyright-column-6',
 				'default'  => 'col-sm-12 col-md-6 col-lg-6'
 			),
 			array(
-				'id'       => 'lift-theme-copyright-columns-7',
+				'id'       => 'wow-theme-copyright-columns-7',
 				'type'     => 'text',
-				'required' => array( 'lift-theme-copyright-columns', '>=', '7' ),
+				'required' => array( 'wow-theme-copyright-columns', '>=', '7' ),
 				'title'    => __( 'Column 7', 'wow-theme-options' ),
-				'class' => 'lift-theme-admin-copyright-column lift-theme-admin-copyright-column-7',
+				'class' => 'wow-theme-admin-copyright-column wow-theme-admin-copyright-column-7',
 				'default'  => 'col-sm-12 col-md-6 col-lg-6'
 			),
 			array(
-				'id'       => 'lift-theme-copyright-columns-8',
+				'id'       => 'wow-theme-copyright-columns-8',
 				'type'     => 'text',
-				'required' => array( 'lift-theme-copyright-columns', '>=', '8' ),
+				'required' => array( 'wow-theme-copyright-columns', '>=', '8' ),
 				'title'    => __( 'Column 8', 'wow-theme-options' ),
-				'class' => 'lift-theme-admin-copyright-column lift-theme-admin-copyright-column-8',
+				'class' => 'wow-theme-admin-copyright-column wow-theme-admin-copyright-column-8',
 				'default'  => 'col-sm-12 col-md-6 col-lg-6'
 			),
 			array(
-				'id'       => 'lift-theme-copyright-columns-9',
+				'id'       => 'wow-theme-copyright-columns-9',
 				'type'     => 'text',
-				'required' => array( 'lift-theme-copyright-columns', '>=', '9' ),
+				'required' => array( 'wow-theme-copyright-columns', '>=', '9' ),
 				'title'    => __( 'Column 9', 'wow-theme-options' ),
-				'class' => 'lift-theme-admin-copyright-column lift-theme-admin-copyright-column-9',
+				'class' => 'wow-theme-admin-copyright-column wow-theme-admin-copyright-column-9',
 				'default'  => 'col-sm-12 col-md-6 col-lg-6'
 			),
 			array(
-				'id'       => 'lift-theme-copyright-columns-10',
+				'id'       => 'wow-theme-copyright-columns-10',
 				'type'     => 'text',
-				'required' => array( 'lift-theme-copyright-columns', '>=', '10' ),
+				'required' => array( 'wow-theme-copyright-columns', '>=', '10' ),
 				'title'    => __( 'Column 10', 'wow-theme-options' ),
-				'class' => 'lift-theme-admin-copyright-column lift-theme-admin-copyright-column-10',
+				'class' => 'wow-theme-admin-copyright-column wow-theme-admin-copyright-column-10',
 				'default'  => 'col-sm-12 col-md-6 col-lg-6'
 			),
 			array(
-				'id'       => 'lift-theme-copyright-columns-11',
+				'id'       => 'wow-theme-copyright-columns-11',
 				'type'     => 'text',
-				'required' => array( 'lift-theme-copyright-columns', '>=', '11' ),
+				'required' => array( 'wow-theme-copyright-columns', '>=', '11' ),
 				'title'    => __( 'Column 11', 'wow-theme-options' ),
-				'class' => 'lift-theme-admin-copyright-column lift-theme-admin-copyright-column-11',
+				'class' => 'wow-theme-admin-copyright-column wow-theme-admin-copyright-column-11',
 				'default'  => 'col-sm-12 col-md-6 col-lg-6'
 			),
 			array(
-				'id'       => 'lift-theme-copyright-columns-12',
+				'id'       => 'wow-theme-copyright-columns-12',
 				'type'     => 'text',
-				'required' => array( 'lift-theme-copyright-columns', '>=', '12' ),
+				'required' => array( 'wow-theme-copyright-columns', '>=', '12' ),
 				'title'    => __( 'Column 12', 'wow-theme-options' ),
-				'class' => 'lift-theme-admin-copyright-column lift-theme-admin-copyright-column-12',
+				'class' => 'wow-theme-admin-copyright-column wow-theme-admin-copyright-column-12',
 				'default'  => 'col-sm-12 col-md-6 col-lg-6'
 			),
 
@@ -344,11 +344,11 @@
 	
 	Redux::setSection( $opt_name, array(
         'title'      => __( 'Copyright Tags', 'wow-theme-options' ),
-        'id'         => 'lift-theme-copyright-function',
+        'id'         => 'wow-theme-copyright-function',
         'subsection' => true,
 		'fields'     => array(
 			array(
-				'id'       => 'lift-theme-copyright-function-tags',
+				'id'       => 'wow-theme-copyright-function-tags',
                 'type'     => 'select',
                 'title'    => __( 'Title Tags', 'wow-theme-options' ),
                 'options'  => array(

@@ -11,7 +11,7 @@
  */
 
 global $wow_theme;
-$layout_style = $wow_theme['lift-theme-layout-style'];
+$layout_style = $wow_theme['wow-theme-layout-style'];
 ?>
 <!-- TODO: need improve  -->
 <section class="no-results not-found">

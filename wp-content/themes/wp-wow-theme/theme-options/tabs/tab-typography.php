@@ -9,17 +9,17 @@
     // -> START Footer
     Redux::setSection( $opt_name, array(
         'title' => __( 'Typography', 'wow-theme-options' ),
-        'id'    => 'lift-theme-typography',
+        'id'    => 'wow-theme-typography',
         'icon'  => 'bi bi-type'
     ) );
 
 	Redux::setSection( $opt_name, array(
         'title'      => __( 'Body <i style="color:red">(*)</i>', 'wow-theme-options' ),
-        'id'         => 'lift-theme-typography-global',
+        'id'         => 'wow-theme-typography-global',
         'subsection' => true,
 		'fields'     => array(
 			array(
-				'id'       => 'lift-theme-typography-global-body',
+				'id'       => 'wow-theme-typography-global-body',
                 'type'     => 'typography',
 				'title'    => __('Typography', 'wow-theme-options'),
 				'google'      => true, 
@@ -41,11 +41,11 @@
 	
 	Redux::setSection( $opt_name, array(
         'title'      => __( 'Header <i style="color:red">(*)</i>', 'wow-theme-options' ),
-        'id'         => 'lift-theme-typography-header',
+        'id'         => 'wow-theme-typography-header',
         'subsection' => true,
 		'fields'     => array(
 			array(
-				'id'       => 'lift-theme-typography-header-menu',
+				'id'       => 'wow-theme-typography-header-menu',
                 'type'     => 'typography',
 				'title'    => __('Typography', 'wow-theme-options'),
 				'google'      => true, 

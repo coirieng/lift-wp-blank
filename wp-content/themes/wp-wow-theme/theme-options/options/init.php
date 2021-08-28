@@ -29,8 +29,8 @@ add_filter('redux/options/' . $opt_name . '/compiler', 'lift_compiler_css', 10, 
 			$gen_css = '';
 
 			// BACKTOTOP
-			// if($options['lift-theme-global-function-backtotop-spacing']) {
-			// 	$gen_css .= '#backtotop{right:'.$options['lift-theme-global-function-backtotop-spacing']['right'].';bottom:'.$options['lift-theme-global-function-backtotop-spacing']['bottom'].'}';
+			// if($options['wow-theme-global-function-backtotop-spacing']) {
+			// 	$gen_css .= '#backtotop{right:'.$options['wow-theme-global-function-backtotop-spacing']['right'].';bottom:'.$options['wow-theme-global-function-backtotop-spacing']['bottom'].'}';
 			// }
 			
 
@@ -75,7 +75,7 @@ add_filter('redux/options/' . $opt_name . '/compiler', 'lift_compiler_css', 10, 
 */';
 
 				$scss = new Compiler();
-				$css = $scss->compileString($tmp.$wow_theme['lift-theme-cssjs-scss-code'])->getCss();
+				$css = $scss->compileString($tmp.$wow_theme['wow-theme-cssjs-scss-code'])->getCss();
 		
 				$wp_filesystem->put_contents(
 					$filename,
@@ -107,7 +107,7 @@ add_filter('redux/options/' . $opt_name . '/compiler', 'lift_compiler_css', 10, 
 */';
 		
 			if( $wp_filesystem ) {
-				$css = $tmp.$wow_theme['lift-theme-cssjs-css-code'];
+				$css = $tmp.$wow_theme['wow-theme-cssjs-css-code'];
 				$wp_filesystem->put_contents(
 					$filename,
 					$css,
@@ -138,7 +138,7 @@ add_filter('redux/options/' . $opt_name . '/compiler', 'lift_compiler_css', 10, 
 */';
 		
 			if( $wp_filesystem ) {
-				$js = $tmp.$wow_theme['lift-theme-cssjs-js-code'];
+				$js = $tmp.$wow_theme['wow-theme-cssjs-js-code'];
 				$wp_filesystem->put_contents(
 					$filename,
 					$js,

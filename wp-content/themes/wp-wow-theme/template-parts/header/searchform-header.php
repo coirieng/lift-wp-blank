@@ -17,12 +17,12 @@ $wow_theme_unique_id = wp_unique_id( 'search-form-' );
 $wow_theme_aria_label = ! empty( $args['aria_label'] ) ? 'aria-label="' . esc_attr( $args['aria_label'] ) . '"' : '';
 
 global $wow_theme;
-$header_value['search_label'] = $wow_theme['lift-theme-search-header-layout-label'];
-$header_value['search_icon'] = $wow_theme['lift-theme-search-header-layout-icon'];
-$header_value['search_text'] = $wow_theme['lift-theme-search-header-layout-text'];
-$header_value['search_placeholder'] = $wow_theme['lift-theme-search-header-layout-placeholder'];
-$header_value['search_placeholder_value'] = $wow_theme['lift-theme-search-header-layout-placeholder-value'];
-$header_value['search_text_value'] = $wow_theme['lift-theme-search-header-layout-text-value'];
+$header_value['search_label'] = $wow_theme['wow-theme-search-header-layout-label'];
+$header_value['search_icon'] = $wow_theme['wow-theme-search-header-layout-icon'];
+$header_value['search_text'] = $wow_theme['wow-theme-search-header-layout-text'];
+$header_value['search_placeholder'] = $wow_theme['wow-theme-search-header-layout-placeholder'];
+$header_value['search_placeholder_value'] = $wow_theme['wow-theme-search-header-layout-placeholder-value'];
+$header_value['search_text_value'] = $wow_theme['wow-theme-search-header-layout-text-value'];
 
 $search_value = '';
 $placeholder_value = '';

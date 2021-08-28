@@ -13,7 +13,7 @@
 <?php 
 
 global $wow_theme;
-$header_second_menu = $wow_theme['lift-theme-header-second'];
+$header_second_menu = $wow_theme['wow-theme-header-second'];
 
 
 ?>

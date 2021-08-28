@@ -11,10 +11,10 @@
  */
 
 global $wow_theme;
-$layout_style = $wow_theme['lift-theme-layout-style'];
-$post_page_breadcrumb = $wow_theme['lift-theme-page-style-breadcrumb'];
-$post_page_thumbnail = $wow_theme['lift-theme-page-style-content-thumbnail'];
-$post_page_title = $wow_theme['lift-theme-page-style-content-title'];
+$layout_style = $wow_theme['wow-theme-layout-style'];
+$post_page_breadcrumb = $wow_theme['wow-theme-page-style-breadcrumb'];
+$post_page_thumbnail = $wow_theme['wow-theme-page-style-content-thumbnail'];
+$post_page_title = $wow_theme['wow-theme-page-style-content-title'];
 // TODO: CHANGE HEADER BLOCK 
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

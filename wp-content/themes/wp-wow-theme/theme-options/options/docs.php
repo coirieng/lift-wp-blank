@@ -15,11 +15,11 @@ if ( file_exists( get_template_directory() . '/docs/info.html' ) ) {
 
 	$section = array(
 		'title'      => __( 'Addons', 'wow-theme-options' ),
-        'id'         => 'lift-theme-info',
+        'id'         => 'wow-theme-info',
 		'icon'   => 'bi bi-box-seam',
 		'fields'     => array(
             array(
-                'id'       => 'lift-theme-info-details',
+                'id'       => 'wow-theme-info-details',
 				'full_width' => true,
 				'type'     => 'raw',
                 'content'  => $liftHTML,

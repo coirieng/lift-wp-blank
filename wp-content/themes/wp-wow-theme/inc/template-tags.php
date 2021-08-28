@@ -67,15 +67,15 @@ if ( ! function_exists( 'lift_entry_meta_footer' ) ) {
 	function lift_entry_meta_footer() {
 
 		global $wow_theme;
-		$content_tag = $wow_theme['lift-theme-blog-style-content-tag'];
-		$content_category = $wow_theme['lift-theme-blog-style-content-category'];
-		$content_date = $wow_theme['lift-theme-blog-style-content-date'];
-		$content_author = $wow_theme['lift-theme-blog-style-content-author'];
+		$content_tag = $wow_theme['wow-theme-blog-style-content-tag'];
+		$content_category = $wow_theme['wow-theme-blog-style-content-category'];
+		$content_date = $wow_theme['wow-theme-blog-style-content-date'];
+		$content_author = $wow_theme['wow-theme-blog-style-content-author'];
 
-		$archive_tag = $wow_theme['lift-theme-blog-style-archive-tag'];
-		$archive_category = $wow_theme['lift-theme-blog-style-archive-category'];
-		$archive_date = $wow_theme['lift-theme-blog-style-archive-date'];
-		$archive_author = $wow_theme['lift-theme-blog-style-archive-author'];
+		$archive_tag = $wow_theme['wow-theme-blog-style-archive-tag'];
+		$archive_category = $wow_theme['wow-theme-blog-style-archive-category'];
+		$archive_date = $wow_theme['wow-theme-blog-style-archive-date'];
+		$archive_author = $wow_theme['wow-theme-blog-style-archive-author'];
 		// Early exit if not a post.
 		if ( 'post' !== get_post_type() ) {
 			return;

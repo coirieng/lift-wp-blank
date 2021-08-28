@@ -9,7 +9,7 @@
 get_header();
 
 global $wow_theme;
-$layout_style = $wow_theme['lift-theme-layout-style'];
+$layout_style = $wow_theme['wow-theme-layout-style'];
 
 // Start the loop.
 while ( have_posts() ) {

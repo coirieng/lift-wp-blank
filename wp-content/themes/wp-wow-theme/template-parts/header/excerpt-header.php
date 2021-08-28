@@ -14,7 +14,7 @@ if ( 'aside' === $post_format || 'status' === $post_format ) {
 	return;
 }
 global $wow_theme;
-$layout_style = $wow_theme['lift-theme-layout-style'];
+$layout_style = $wow_theme['wow-theme-layout-style'];
 ?>
 
 <header class="entry-header">

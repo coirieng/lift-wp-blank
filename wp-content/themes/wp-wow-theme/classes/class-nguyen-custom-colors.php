@@ -143,7 +143,7 @@ class LIFT_Theme_Custom_Colors {
 	 */
 	public function body_class( $classes ) {
 		
-		$classes[] = 'lift-theme';
+		$classes[] = 'wow-theme';
 
 		return $classes;
 	}

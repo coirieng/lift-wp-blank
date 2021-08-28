@@ -11,14 +11,14 @@
  */
 
 global $wow_theme;
-$layout_style = $wow_theme['lift-theme-layout-style'];
-$post_sidebar = $wow_theme['lift-theme-blog-style-sidebar'];
-$post_sidebar_position = $wow_theme['lift-theme-blog-style-sidebar-position'];
-$post_sidebar_content_columns = isset($wow_theme['lift-theme-blog-style-content-columns']) ? $wow_theme['lift-theme-blog-style-content-columns'] : 'col-xl-8 col-xxl-9';
-$post_sidebar_columns = isset($wow_theme['lift-theme-blog-style-sidebar-columns']) ? $wow_theme['lift-theme-blog-style-sidebar-columns'] : 'col-xl-4 col-xxl-3';
-$post_post_thumbnail = $wow_theme['lift-theme-blog-style-content-thumbnail'];
-$post_post_nextprev = $wow_theme['lift-theme-blog-style-content-nextprev'];
-$post_post_breadcrumb = $wow_theme['lift-theme-blog-style-breadcrumb'];
+$layout_style = $wow_theme['wow-theme-layout-style'];
+$post_sidebar = $wow_theme['wow-theme-blog-style-sidebar'];
+$post_sidebar_position = $wow_theme['wow-theme-blog-style-sidebar-position'];
+$post_sidebar_content_columns = isset($wow_theme['wow-theme-blog-style-content-columns']) ? $wow_theme['wow-theme-blog-style-content-columns'] : 'col-xl-8 col-xxl-9';
+$post_sidebar_columns = isset($wow_theme['wow-theme-blog-style-sidebar-columns']) ? $wow_theme['wow-theme-blog-style-sidebar-columns'] : 'col-xl-4 col-xxl-3';
+$post_post_thumbnail = $wow_theme['wow-theme-blog-style-content-thumbnail'];
+$post_post_nextprev = $wow_theme['wow-theme-blog-style-content-nextprev'];
+$post_post_breadcrumb = $wow_theme['wow-theme-blog-style-breadcrumb'];
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 

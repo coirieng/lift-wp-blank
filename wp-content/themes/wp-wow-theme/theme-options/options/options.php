@@ -15,7 +15,7 @@
 
     $args = array(
 		'dev_mode' => false,
-		'class' => 'lift-theme-admin',
+		'class' => 'wow-theme-admin',
         // TYPICAL -> Change these values as you need/desire
         'opt_name'             => $opt_name,
         // This is where your data is stored in the database and also becomes your global variable name.
@@ -129,7 +129,7 @@
 
 // ADMIN BAR LINKS -> Setup custom links in the admin bar menu as external items.
 $args['admin_bar_links'][] = array(
-	'id'    => 'lift-theme',
+	'id'    => 'wow-theme',
 	'href'  => '//github.com/baonguyenyam/wp-wow-theme/',
 	'title' => __( 'Documentation', 'wow-theme-options' ),
 );

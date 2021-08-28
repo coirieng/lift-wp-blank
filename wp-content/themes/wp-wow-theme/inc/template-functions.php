@@ -36,7 +36,7 @@ function lift_body_classes( $classes ) {
 	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 		$classes[] = 'no-widgets';
 	}
-	if (intval($wow_theme['lift-theme-global-dev-toolbar']) == 1) {
+	if (intval($wow_theme['wow-theme-global-dev-toolbar']) == 1) {
 		if(!is_admin() && current_user_can('administrator')){
 			$classes[] = 'admin-control';
 		}
@@ -136,9 +136,9 @@ function lift_get_avatar_size() {
  */
 function lift_continue_reading_text() {
 	global $wow_theme;
-	if (intval($wow_theme['lift-theme-blog-excerpt-option']) == 1) {
+	if (intval($wow_theme['wow-theme-blog-excerpt-option']) == 1) {
 		$continue_reading = sprintf(
-			esc_html__( $wow_theme['lift-theme-blog-excerpt-readmore'].' %s', 'wp-wow-theme' ),
+			esc_html__( $wow_theme['wow-theme-blog-excerpt-readmore'].' %s', 'wp-wow-theme' ),
 			the_title( '<span class="screen-reader-text">', '</span>', false )
 		);
 		return $continue_reading;
@@ -151,8 +151,8 @@ function lift_continue_reading_text() {
 function lift_continue_reading_link_excerpt() {
 	global $wow_theme;
 	global $post;
-	if ( ! is_admin() && intval($wow_theme['lift-theme-blog-excerpt-option']) == 1) {
-		return $wow_theme['lift-theme-blog-excerpt-morestring'].' <a class="more-link" href="' . esc_url( get_permalink($post) ) . '">' . lift_continue_reading_text() . '</a>';
+	if ( ! is_admin() && intval($wow_theme['wow-theme-blog-excerpt-option']) == 1) {
+		return $wow_theme['wow-theme-blog-excerpt-morestring'].' <a class="more-link" href="' . esc_url( get_permalink($post) ) . '">' . lift_continue_reading_text() . '</a>';
 	} else {
 		return '';
 	}
@@ -165,7 +165,7 @@ add_filter( 'excerpt_more', 'lift_continue_reading_link_excerpt' );
  * Create the continue reading link.
  */
 function lift_continue_reading_link() {
-	if ( ! is_admin() && intval($wow_theme['lift-theme-blog-excerpt-option']) == 1) {
+	if ( ! is_admin() && intval($wow_theme['wow-theme-blog-excerpt-option']) == 1) {
 		return '<div class="more-link-container"><a class="more-link" href="' . esc_url( get_permalink() ) . '#more-' . esc_attr( get_the_ID() ) . '">' . lift_continue_reading_text() . '</a></div>';
 	}
 }
@@ -175,8 +175,8 @@ add_filter( 'the_content_more_link', 'lift_continue_reading_link' );
 
 function lift_excerpt_length() {
 	global $wow_theme;
-	if ( ! is_admin() && intval($wow_theme['lift-theme-blog-excerpt-option']) == 1) {
-		return $wow_theme['lift-theme-blog-excerpt-value'];
+	if ( ! is_admin() && intval($wow_theme['wow-theme-blog-excerpt-option']) == 1) {
+		return $wow_theme['wow-theme-blog-excerpt-value'];
 	} else {
 		return 100000;
 	}

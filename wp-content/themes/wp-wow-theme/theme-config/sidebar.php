@@ -13,10 +13,10 @@ function lift_widgets_init() {
 
 	global $wow_theme;
 
-	$get_footer_columns = isset($wow_theme['lift-theme-footer-columns']) ? $wow_theme['lift-theme-footer-columns'] : 1;
-	$get_copyright_columns = isset($wow_theme['lift-theme-copyright-columns']) ? $wow_theme['lift-theme-copyright-columns'] : 1;
-	$tags = isset($wow_theme['lift-theme-footer-function-tags']) ? $wow_theme['lift-theme-footer-function-tags'] :  'h4';
-	$tags_copyright = isset($wow_theme['lift-theme-copyright-function-tags']) ? $wow_theme['lift-theme-copyright-function-tags'] :  'h4';
+	$get_footer_columns = isset($wow_theme['wow-theme-footer-columns']) ? $wow_theme['wow-theme-footer-columns'] : 1;
+	$get_copyright_columns = isset($wow_theme['wow-theme-copyright-columns']) ? $wow_theme['wow-theme-copyright-columns'] : 1;
+	$tags = isset($wow_theme['wow-theme-footer-function-tags']) ? $wow_theme['wow-theme-footer-function-tags'] :  'h4';
+	$tags_copyright = isset($wow_theme['wow-theme-copyright-function-tags']) ? $wow_theme['wow-theme-copyright-function-tags'] :  'h4';
 
 
 	register_sidebar(
