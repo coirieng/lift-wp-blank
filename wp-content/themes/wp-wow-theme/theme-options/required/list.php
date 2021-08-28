@@ -17,58 +17,69 @@ function lift_theme_options_register_required_plugins() {
 
 		// This is an example of how to include a plugin bundled with a theme.
 		array(
-			'name'               => 'LIFT Core', // The plugin name.
-			'slug'               => 'wp-lift-core', // The plugin slug (typically the folder name).
-			'source'             => get_template_directory() . '/plugins/wp-lift-core.zip', // The plugin source.
-			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
-			'version'            => '2.7.3', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
-			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-			'external_url'       => 'https://github.com/nguyen-wp/wp-lift-core', // If set, overrides default API URL and points to an external URL.
-			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
-		),
-		array(
-			'name'               => 'LIFT Addons for Visual Composer', // The plugin name.
-			'slug'               => 'wp-lift-vc-addon', // The plugin slug (typically the folder name).
-			'source'             => get_template_directory() . '/plugins/wp-lift-vc-addon.zip', // The plugin source.
-			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
-			'version'            => '5.2.3', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
-			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-			'external_url'       => 'https://github.com/nguyen-wp/wp-lift-vc-addon', // If set, overrides default API URL and points to an external URL.
-			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
-		),
-		array(
-			'name'               => 'LIFT Blocks', // The plugin name.
-			'slug'               => 'wp-lift-blocks', // The plugin slug (typically the folder name).
-			'source'             => get_template_directory() . '/plugins/wp-lift-blocks.zip', // The plugin source.
+			'name'               => 'Best WP Lightweight', // The plugin name.
+			'slug'               => 'wp-best-wp-lightweight', // The plugin slug (typically the folder name).
+			'source'             => get_template_directory() . '/plugins/wp-best-wp-lightweight.zip', // The plugin source.
 			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
 			'version'            => '1.0.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
 			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
 			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-			'external_url'       => 'https://github.com/nguyen-wp/wp-lift-blocks', // If set, overrides default API URL and points to an external URL.
+			'external_url'       => 'https://github.com/baonguyenyam/wp-best-wp-lightweight', // If set, overrides default API URL and points to an external URL.
 			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
 		),
 		array(
-			'name'               => 'LIFT CleanUp', // The plugin name.
-			'slug'               => 'wp-lift-cleanup', // The plugin slug (typically the folder name).
-			'source'             => get_template_directory() . '/plugins/wp-lift-cleanup.zip', // The plugin source.
+			'name'               => 'Best WP Blocks', // The plugin name.
+			'slug'               => 'wp-best-wp-blocks', // The plugin slug (typically the folder name).
+			'source'             => get_template_directory() . '/plugins/wp-best-wp-blocks.zip', // The plugin source.
 			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
-			'version'            => '2.1.3', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+			'version'            => '1.0.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
 			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
 			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-			'external_url'       => 'https://github.com/nguyen-wp/wp-lift-cleanup', // If set, overrides default API URL and points to an external URL.
+			'external_url'       => 'https://github.com/baonguyenyam/wp-best-wp-blocks', // If set, overrides default API URL and points to an external URL.
 			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
 		),
 		array(
-			'name'               => 'LIFT Chat', // The plugin name.
-			'slug'               => 'wp-lift-chat', // The plugin slug (typically the folder name).
-			'source'             => get_template_directory() . '/plugins/wp-lift-chat.zip', // The plugin source.
-			'required'           => false, // If false, the plugin is only 'recommended' instead of required.
-			'version'            => '2.2.5', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+			'name'               => 'WOW Addons for Visual Composer', // The plugin name.
+			'slug'               => 'wp-wow-wp-vc-addons', // The plugin slug (typically the folder name).
+			'source'             => get_template_directory() . '/plugins/wp-wow-wp-vc-addons.zip', // The plugin source.
+			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
+			'version'            => '1.0.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
 			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
 			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-			'external_url'       => 'https://github.com/nguyen-wp/wp-lift-chat', // If set, overrides default API URL and points to an external URL.
+			'external_url'       => 'https://github.com/baonguyenyam/wp-wow-wp-vc-addons', // If set, overrides default API URL and points to an external URL.
+			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
+		),
+		array(
+			'name'               => 'WOW Page Builder', // The plugin name.
+			'slug'               => 'wp-wow-website-builder', // The plugin slug (typically the folder name).
+			'source'             => get_template_directory() . '/plugins/wp-wow-website-builder.zip', // The plugin source.
+			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
+			'version'            => '1.0.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
+			'external_url'       => 'https://github.com/baonguyenyam/wp-wow-website-builder', // If set, overrides default API URL and points to an external URL.
+			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
+		),
+		array(
+			'name'               => 'Best CSS Compiler', // The plugin name.
+			'slug'               => 'wp-best-css-compiler', // The plugin slug (typically the folder name).
+			'source'             => get_template_directory() . '/plugins/wp-best-css-compiler.zip', // The plugin source.
+			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
+			'version'            => '1.0.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
+			'external_url'       => 'https://github.com/baonguyenyam/wp-best-css-compiler', // If set, overrides default API URL and points to an external URL.
+			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
+		),
+		array(
+			'name'               => 'Best Suggestion Boxes', // The plugin name.
+			'slug'               => 'wp-best-suggestion-boxes', // The plugin slug (typically the folder name).
+			'source'             => get_template_directory() . '/plugins/wp-best-suggestion-boxes.zip', // The plugin source.
+			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
+			'version'            => '1.0.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
+			'external_url'       => 'https://github.com/baonguyenyam/wp-best-suggestion-boxes', // If set, overrides default API URL and points to an external URL.
 			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
 		),
 		array(
