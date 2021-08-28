@@ -2,7 +2,7 @@
 /**
 * @package WOW WordPress 
 * @subpackage Theme by Nguyen Pham
-* https://baonguyenyam.github.io/cv
+* https://baonguyenyam.github.io
 * @since 2021
 */
 
@@ -76,7 +76,7 @@ if ( file_exists( get_template_directory() . '/docs/DEVELOPER.md' ) ) {
 				'title' => __('Sass Basics', 'wow-theme-options'),
 				'style' => 'success',
 				'icon' => 'bi bi-info',
-				'desc'       => __( 'Did you know that LIFT sets a global variable for you? To access any of your saved options from within your code you can use your global variable: <b>$wow_theme</b>', 'wow-theme-options' ),
+				'desc'       => __( 'Did you know that WOW WordPress sets a global variable for you? To access any of your saved options from within your code you can use your global variable: <b>$wow_theme</b>', 'wow-theme-options' ),
 			),
 			array(
 				'id'       => '19',

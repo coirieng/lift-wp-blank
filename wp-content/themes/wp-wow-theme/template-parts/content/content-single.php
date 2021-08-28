@@ -6,7 +6,7 @@
  *
  * @package WOW WordPress 
  * @subpackage Theme by Nguyen Pham
- * https://baonguyenyam.github.io/cv
+ * https://baonguyenyam.github.io
  * @since 2021
  */
 
@@ -49,10 +49,10 @@ $post_post_breadcrumb = $wow_theme['lift-theme-blog-style-breadcrumb'];
 
 						wp_link_pages(
 							array(
-								'before'   => '<nav class="page-links" aria-label="' . esc_attr__( 'Page', 'wp-lift-theme' ) . '">',
+								'before'   => '<nav class="page-links" aria-label="' . esc_attr__( 'Page', 'wp-wow-theme' ) . '">',
 								'after'    => '</nav>',
 								/* translators: %: Page number. */
-								'pagelink' => esc_html__( 'Page %', 'wp-lift-theme' ),
+								'pagelink' => esc_html__( 'Page %', 'wp-wow-theme' ),
 							)
 						);
 						?>
@@ -72,7 +72,7 @@ $post_post_breadcrumb = $wow_theme['lift-theme-blog-style-breadcrumb'];
 							the_post_navigation(
 								array(
 									/* translators: %s: Parent post link. */
-									'prev_text' => sprintf( __( '<span class="meta-nav">Published in</span><span class="post-title">%s</span>', 'wp-lift-theme' ), '%title' ),
+									'prev_text' => sprintf( __( '<span class="meta-nav">Published in</span><span class="post-title">%s</span>', 'wp-wow-theme' ), '%title' ),
 								)
 							);
 						}
@@ -87,8 +87,8 @@ $post_post_breadcrumb = $wow_theme['lift-theme-blog-style-breadcrumb'];
 							$wow_theme_next = is_rtl() ? lift_get_icon_svg( 'ui', 'arrow_left' ) : lift_get_icon_svg( 'ui', 'arrow_right' );
 							$wow_theme_prev = is_rtl() ? lift_get_icon_svg( 'ui', 'arrow_right' ) : lift_get_icon_svg( 'ui', 'arrow_left' );
 						
-							$wow_theme_next_label     = esc_html__( 'Next post', 'wp-lift-theme' );
-							$wow_theme_previous_label = esc_html__( 'Previous post', 'wp-lift-theme' );
+							$wow_theme_next_label     = esc_html__( 'Next post', 'wp-wow-theme' );
+							$wow_theme_previous_label = esc_html__( 'Previous post', 'wp-wow-theme' );
 						
 							the_post_navigation(
 								array(

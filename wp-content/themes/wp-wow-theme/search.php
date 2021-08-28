@@ -4,7 +4,7 @@
  *
  * @package WOW WordPress 
  * @subpackage Theme by Nguyen Pham
- * https://baonguyenyam.github.io/cv
+ * https://baonguyenyam.github.io
  * @since 2021
  */
 
@@ -27,7 +27,7 @@ if ( have_posts() ) {
 				<?php
 				printf(
 					/* translators: %s: Search term. */
-					esc_html__( 'Results for "%s"', 'wp-lift-theme' ),
+					esc_html__( 'Results for "%s"', 'wp-wow-theme' ),
 					'<span class="page-description search-term">' . esc_html( get_search_query() ) . '</span>'
 				);
 				?>
@@ -40,7 +40,7 @@ if ( have_posts() ) {
 							'We found %d result for your search.',
 							'We found %d results for your search.',
 							(int) $wp_query->found_posts,
-							'wp-lift-theme'
+							'wp-wow-theme'
 						)
 					),
 					(int) $wp_query->found_posts

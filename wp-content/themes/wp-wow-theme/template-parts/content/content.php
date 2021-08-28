@@ -6,7 +6,7 @@
  *
  * @package WOW WordPress 
  * @subpackage Theme by Nguyen Pham
- * https://baonguyenyam.github.io/cv
+ * https://baonguyenyam.github.io
  * @since 2021
  */
 
@@ -33,10 +33,10 @@ $layout_style = $wow_theme['lift-theme-layout-style'];
 
 		wp_link_pages(
 			array(
-				'before'   => '<nav class="page-links" aria-label="' . esc_attr__( 'Page', 'wp-lift-theme' ) . '">',
+				'before'   => '<nav class="page-links" aria-label="' . esc_attr__( 'Page', 'wp-wow-theme' ) . '">',
 				'after'    => '</nav>',
 				/* translators: %: Page number. */
-				'pagelink' => esc_html__( 'Page %', 'wp-lift-theme' ),
+				'pagelink' => esc_html__( 'Page %', 'wp-wow-theme' ),
 			)
 		);
 

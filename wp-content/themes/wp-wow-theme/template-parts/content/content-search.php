@@ -5,7 +5,7 @@
  *
  * @package WOW WordPress 
  * @subpackage Theme by Nguyen Pham
- * https://baonguyenyam.github.io/cv
+ * https://baonguyenyam.github.io
  * @since 2021
  */
 
@@ -50,9 +50,9 @@ if(isset($global_search_value['search_placeholder']) && $global_search_value['se
 			<input type="hidden" name="post_type[]" value="ebook" />
 			<input type="hidden" name="post_type[]" value="pdf" /> -->
 			<button type="submit" class="search-submit-toggle"><i class="fas fa-search"></i></button>
-			<button type="submit" class="btn btn-primary search-submit"><span><?php echo esc_attr_x( 'Search', 'submit button', 'wp-lift-theme' ); ?></span><i class="fas fa-search"></i></button>
+			<button type="submit" class="btn btn-primary search-submit"><span><?php echo esc_attr_x( 'Search', 'submit button', 'wp-wow-theme' ); ?></span><i class="fas fa-search"></i></button>
 			
-			<!-- <input type="submit" class="btn btn-primary search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button', 'wp-lift-theme' ); ?>" /> -->
+			<!-- <input type="submit" class="btn btn-primary search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button', 'wp-wow-theme' ); ?>" /> -->
 		</div>
 	</form>
 </div>

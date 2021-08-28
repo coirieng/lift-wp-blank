@@ -9,7 +9,7 @@
  *
  * @package WOW WordPress 
  * @subpackage Theme by Nguyen Pham
- * https://baonguyenyam.github.io/cv
+ * https://baonguyenyam.github.io
  * @since 2021
  */
 
@@ -40,7 +40,7 @@ function lift_add_sub_menu_toggle( $output, $item, $depth, $args ) {
 		$output .= '<button class="sub-menu-toggle menu-toggle" aria-expanded="false" onClick="___ExpandSubMenu(this)">';
 		$output .= '<span class="icon-plus">' . lift_get_icon_svg( 'ui', 'plus', 18 ) . '</span>';
 		$output .= '<span class="icon-minus">' . lift_get_icon_svg( 'ui', 'minus', 18 ) . '</span>';
-		$output .= '<span class="screen-reader-text">' . esc_html__( 'Open menu', 'wp-lift-theme' ) . '</span>';
+		$output .= '<span class="screen-reader-text">' . esc_html__( 'Open menu', 'wp-wow-theme' ) . '</span>';
 		$output .= '</button>';
 	}
 	return $output;

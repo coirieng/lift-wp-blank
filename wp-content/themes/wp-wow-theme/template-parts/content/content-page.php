@@ -6,7 +6,7 @@
  *
  * @package WOW WordPress 
  * @subpackage Theme by Nguyen Pham
- * https://baonguyenyam.github.io/cv
+ * https://baonguyenyam.github.io
  * @since 2021
  */
 
@@ -48,10 +48,10 @@ $post_page_title = $wow_theme['lift-theme-page-style-content-title'];
 		
 		wp_link_pages(
 			array(
-				'before'   => '<nav class="page-links" aria-label="' . esc_attr__( 'Page', 'wp-lift-theme' ) . '">',
+				'before'   => '<nav class="page-links" aria-label="' . esc_attr__( 'Page', 'wp-wow-theme' ) . '">',
 				'after'    => '</nav>',
 				/* translators: %: Page number. */
-				'pagelink' => esc_html__( 'Page %', 'wp-lift-theme' ),
+				'pagelink' => esc_html__( 'Page %', 'wp-wow-theme' ),
 				)
 			);
         ?>
@@ -64,7 +64,7 @@ $post_page_title = $wow_theme['lift-theme-page-style-content-title'];
 				edit_post_link(
 					sprintf(
 						/* translators: %s: Name of current post. Only visible to screen readers. */
-						esc_html__( 'Edit %s', 'wp-lift-theme' ),
+						esc_html__( 'Edit %s', 'wp-wow-theme' ),
 						'<span class="screen-reader-text">' . get_the_title() . '</span>'
 					),
 					'<div class="edit-link admintoolbar">',

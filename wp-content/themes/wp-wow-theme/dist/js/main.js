@@ -75,7 +75,7 @@ $(window).scroll(function () {
  * Coding by Nguyen Pham
  *
  * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://baonguyenyam.github.io/cv
+ * found in the LICENSE file at https://baonguyenyam.github.io
  */
 
 'use strict';
@@ -194,7 +194,7 @@ $(window).scroll(function () {
  * Coding by Nguyen Pham
  *
  * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://baonguyenyam.github.io/cv
+ * found in the LICENSE file at https://baonguyenyam.github.io
  */
 
 

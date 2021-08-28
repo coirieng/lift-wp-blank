@@ -2,7 +2,7 @@
 /**
 * @package WOW WordPress 
 * @subpackage Theme by Nguyen Pham
-* https://baonguyenyam.github.io/cv
+* https://baonguyenyam.github.io
 * @since 2021
 */
 
@@ -130,11 +130,11 @@
 // ADMIN BAR LINKS -> Setup custom links in the admin bar menu as external items.
 $args['admin_bar_links'][] = array(
 	'id'    => 'lift-theme',
-	'href'  => '//github.com/nguyen-wp/lift-theme/',
+	'href'  => '//github.com/baonguyenyam/wp-wow-theme/',
 	'title' => __( 'Documentation', 'wow-theme-options' ),
 );
 $args['share_icons'][] = array(
-	'url'   => '//github.com/nguyen-wp/lift-theme/',
+	'url'   => '//github.com/baonguyenyam/wp-wow-theme/',
 	'title' => __('Visit us on GitHub', 'wow-theme-options' ),
 	'icon'  => 'el el-github',
 );
@@ -152,7 +152,7 @@ if ( ! isset( $args['global_variable'] ) || $args['global_variable'] !== false )
 }
 
 // Add content after the form.
-$args['footer_text'] = __( '<p>by WOW WordPress - Author <a href="https://baonguyenyam.github.io/cv/" target="_blank">Nguyen Pham</a></p>', 'wow-theme-options' );
+$args['footer_text'] = __( '<p>by WOW WordPress - Author <a href="https://baonguyenyam.github.io/" target="_blank">Nguyen Pham</a></p>', 'wow-theme-options' );
 
 ////////////////////////////////////////////////////////////////////////
 // INIT APP

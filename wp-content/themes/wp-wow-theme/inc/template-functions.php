@@ -4,7 +4,7 @@
  *
  * @package WOW WordPress 
  * @subpackage Theme by Nguyen Pham
- * https://baonguyenyam.github.io/cv
+ * https://baonguyenyam.github.io
  * @since 2021
  */
 
@@ -138,7 +138,7 @@ function lift_continue_reading_text() {
 	global $wow_theme;
 	if (intval($wow_theme['lift-theme-blog-excerpt-option']) == 1) {
 		$continue_reading = sprintf(
-			esc_html__( $wow_theme['lift-theme-blog-excerpt-readmore'].' %s', 'wp-lift-theme' ),
+			esc_html__( $wow_theme['lift-theme-blog-excerpt-readmore'].' %s', 'wp-wow-theme' ),
 			the_title( '<span class="screen-reader-text">', '</span>', false )
 		);
 		return $continue_reading;
@@ -195,7 +195,7 @@ if ( ! function_exists( 'lift_post_title' ) ) {
 	 * @return string
 	 */
 	function lift_post_title( $title ) {
-		return '' === $title ? esc_html_x( 'Untitled', 'Added to posts and pages that are missing titles', 'wp-lift-theme' ) : $title;
+		return '' === $title ? esc_html_x( 'Untitled', 'Added to posts and pages that are missing titles', 'wp-wow-theme' ) : $title;
 	}
 }
 add_filter( 'the_title', 'lift_post_title' );
@@ -419,9 +419,9 @@ function lift_print_first_instance_of_block( $block_name, $content = null, $inst
 function lift_password_form( $post = 0 ) {
 	$post   = get_post( $post );
 	$label  = 'pwbox-' . ( empty( $post->ID ) ? wp_rand() : $post->ID );
-	$output = '<p class="post-password-message">' . esc_html__( 'This content is password protected. Please enter a password to view.', 'wp-lift-theme' ) . '</p>
+	$output = '<p class="post-password-message">' . esc_html__( 'This content is password protected. Please enter a password to view.', 'wp-wow-theme' ) . '</p>
 	<form action="' . esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '" class="post-password-form" method="post">
-	<label class="post-password-form__label" for="' . esc_attr( $label ) . '">' . esc_html_x( 'Password', 'Post password form', 'wp-lift-theme' ) . '</label><input class="post-password-form__input" name="post_password" id="' . esc_attr( $label ) . '" type="password" size="20" /><input type="submit" class="post-password-form__submit" name="' . esc_attr_x( 'Submit', 'Post password form', 'wp-lift-theme' ) . '" value="' . esc_attr_x( 'Enter', 'Post password form', 'wp-lift-theme' ) . '" /></form>
+	<label class="post-password-form__label" for="' . esc_attr( $label ) . '">' . esc_html_x( 'Password', 'Post password form', 'wp-wow-theme' ) . '</label><input class="post-password-form__input" name="post_password" id="' . esc_attr( $label ) . '" type="password" size="20" /><input type="submit" class="post-password-form__submit" name="' . esc_attr_x( 'Submit', 'Post password form', 'wp-wow-theme' ) . '" value="' . esc_attr_x( 'Enter', 'Post password form', 'wp-wow-theme' ) . '" /></form>
 	';
 	return $output;
 }

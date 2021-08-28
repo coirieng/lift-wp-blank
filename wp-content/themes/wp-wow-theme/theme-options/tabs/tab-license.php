@@ -2,7 +2,7 @@
 /**
 * @package WOW WordPress 
 * @subpackage Theme by Nguyen Pham
-* https://baonguyenyam.github.io/cv
+* https://baonguyenyam.github.io
 * @since 2021
 */
 
@@ -51,7 +51,7 @@
 				'id'    => 'info_contact',
 				'type'  => 'info',
 				'style' => 'success',
-				'desc'       => __( '<p style="margin-top:0;margin-bottom:0"><strong>Email:</strong> <a href="mailto:hello@wow-wp.com" target="_blank">hello@wow-wp.com</a></p><p style="margin-top:0;margin-bottom:0"><strong>Website:</strong> <a href="https://wow-wp.com/" target="_blank">wow-wp.com</a></p><p style="margin-top:0;margin-bottom:0"><strong>Call Us:</strong> <a href="tel:866-244-1150" target="_blank">866-244-1150</a></p>', 'wow-theme-options' ),
+				'desc'       => __( '<p style="margin-top:0;margin-bottom:0"><strong>Email:</strong> <a href="mailto:hello@wow-wp.com" target="_blank">hello@wow-wp.com</a></p><p style="margin-top:0;margin-bottom:0"><strong>Website:</strong> <a href="https://wow-wp.com/" target="_blank">wow-wp.com</a></p><p style="margin-top:0;margin-bottom:0"><strong>Call Us:</strong> <a href="tel:682-203-1334" target="_blank">682-203-1334</a></p>', 'wow-theme-options' ),
 			),
 			
 		),

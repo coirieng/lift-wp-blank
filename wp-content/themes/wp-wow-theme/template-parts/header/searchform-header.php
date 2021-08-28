@@ -5,7 +5,7 @@
  *
  * @package WOW WordPress 
  * @subpackage Theme by Nguyen Pham
- * https://baonguyenyam.github.io/cv
+ * https://baonguyenyam.github.io
  * @since 2021
  */
 
@@ -45,6 +45,6 @@ if(isset($header_value['search_placeholder']) && $header_value['search_placehold
 		<input type="search"<?=$placeholder_value?> id="<?php echo esc_attr( $wow_theme_unique_id ); ?>" class="form-control search-field" value="<?php echo get_search_query(); ?>" name="s" />
 		<button type="button" class="search-submit-toggle"><i class="fas fa-search"></i></button>
 		<button type="button" class="search-submit-close"><i class="btn-close text-reset"></i></button>
-		<button type="submit" class="btn btn-primary search-submit"><span><?php echo esc_attr_x( 'Search', 'submit button', 'wp-lift-theme' ); ?></span><i class="fas fa-search"></i></button>
+		<button type="submit" class="btn btn-primary search-submit"><span><?php echo esc_attr_x( 'Search', 'submit button', 'wp-wow-theme' ); ?></span><i class="fas fa-search"></i></button>
 	</div>
 </form>
