@@ -5,17 +5,17 @@
 * @since 2021
 */
 
-$maincolor: #ff00b2;
-$secondcolor: #0c6efd;
+$maincolor: #158d4c;
+$secondcolor: #4bbc82;
 $activecolor: #9632db;
-$activecolorbg: #534ee7;
+$activecolorbg: #fdde00;
 $graycolor: #dee2e6;
 $textcolor: #767d85;
 $textcolormain: #384655;
 $textdefault: #303030;
 $bgmenu: #efefef;
 $colowhite: #fff;
-$bgmenuactive: #e7f1ff;
+$bgmenuactive: #e7fff2;
 $boo: #cccccc;
 
 %bglinerwow {
@@ -188,7 +188,7 @@ $boo: #cccccc;
 								box-sizing: border-box;
 								a {
 									border-radius: 0 5rem 5rem 0;
-									background-color: $bgmenu;
+									background-color: $textdefault;
 									box-sizing: border-box;
 								}
 							}
@@ -212,7 +212,7 @@ $boo: #cccccc;
 										&.active {
 											a {
 												background-color: $activecolorbg;
-												color: $colowhite;
+												color: $textdefault;
 												text-shadow: none;
 												&:after {
 													display: none;

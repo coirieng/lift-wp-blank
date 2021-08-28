@@ -5,10 +5,10 @@
 * @since 2021
 */
 .admin-color-fresh .wow-theme-admin #redux-header, .admin-color-fresh .wow-theme-admin .redux-sidebar .redux-group-menu li.active a, .admin-color-fresh .wow-theme-admin .redux-sidebar .redux-group-menu li.activeChild.hasSubSections a {
-  background: #ff00b2;
-  background: -moz-linear-gradient(135deg, #ff00b2 0%, #0c6efd 100%);
-  background: -webkit-linear-gradient(135deg, #ff00b2 0%, #0c6efd 100%);
-  background: linear-gradient(135deg, #ff00b2 0%, #0c6efd 100%);
+  background: #158d4c;
+  background: -moz-linear-gradient(135deg, #158d4c 0%, #4bbc82 100%);
+  background: -webkit-linear-gradient(135deg, #158d4c 0%, #4bbc82 100%);
+  background: linear-gradient(135deg, #158d4c 0%, #4bbc82 100%);
   color: #fff; }
 
 #vc_logo,
@@ -92,7 +92,7 @@
           line-height: 1;
           margin-right: 10px; }
   .admin-color-fresh .wow-theme-admin #redux-intro-text {
-    background: #e7f1ff;
+    background: #e7fff2;
     border-bottom: 1px solid #d2d2d2;
     box-shadow: none;
     padding: 10px 10px; }
@@ -117,8 +117,8 @@
         .admin-color-fresh .wow-theme-admin .redux-sidebar .redux-group-menu li.active.hasSubSections a:after {
           display: none; }
         .admin-color-fresh .wow-theme-admin .redux-sidebar .redux-group-menu li.active.hasSubSections ul.subsection li a {
-          background-color: #e7f1ff;
-          color: #0c6efd;
+          background-color: #e7fff2;
+          color: #4bbc82;
           padding: 9px; }
         .admin-color-fresh .wow-theme-admin .redux-sidebar .redux-group-menu li ul.subsection {
           padding: 0 1rem 0 0; }
@@ -126,18 +126,18 @@
             box-sizing: border-box; }
             .admin-color-fresh .wow-theme-admin .redux-sidebar .redux-group-menu li ul.subsection li a {
               border-radius: 0 5rem 5rem 0;
-              background-color: #efefef;
+              background-color: #303030;
               box-sizing: border-box; }
         .admin-color-fresh .wow-theme-admin .redux-sidebar .redux-group-menu li.activeChild.hasSubSections a {
           text-shadow: none;
           border-radius: 0 5rem 5rem 0; }
         .admin-color-fresh .wow-theme-admin .redux-sidebar .redux-group-menu li.activeChild.hasSubSections ul.subsection li a {
-          background-color: #e7f1ff;
-          color: #0c6efd;
+          background-color: #e7fff2;
+          color: #4bbc82;
           padding: 9px; }
         .admin-color-fresh .wow-theme-admin .redux-sidebar .redux-group-menu li.activeChild.hasSubSections ul.subsection li.active a {
-          background-color: #534ee7;
-          color: #fff;
+          background-color: #fdde00;
+          color: #303030;
           text-shadow: none; }
           .admin-color-fresh .wow-theme-admin .redux-sidebar .redux-group-menu li.activeChild.hasSubSections ul.subsection li.active a:after {
             display: none; }
@@ -165,27 +165,27 @@
         border-width: 0;
         background: none !important; }
         .admin-color-fresh .wow-theme-admin .redux-main .ui-controlgroup label.ui-checkboxradio-checked {
-          background-color: #0c6efd !important;
+          background-color: #4bbc82 !important;
           background-image: none !important;
           box-shadow: none !important; }
         .admin-color-fresh .wow-theme-admin .redux-main .ui-controlgroup label .ui-checkboxradio-icon {
           display: none; }
     .admin-color-fresh .wow-theme-admin .redux-main .button,
     .admin-color-fresh .wow-theme-admin .redux-main .button-secondary {
-      background-color: #e7f1ff;
-      color: #0c6efd;
-      border-color: #0c6efd; }
+      background-color: #e7fff2;
+      color: #4bbc82;
+      border-color: #4bbc82; }
       .admin-color-fresh .wow-theme-admin .redux-main .button.button-primary,
       .admin-color-fresh .wow-theme-admin .redux-main .button-secondary.button-primary {
-        background-color: #0c6efd;
+        background-color: #4bbc82;
         color: #fff;
         border: 0; }
     .admin-color-fresh .wow-theme-admin .redux-main .button-primary {
-      background-color: #0c6efd;
+      background-color: #4bbc82;
       color: #fff;
       border: 0; }
     .admin-color-fresh .wow-theme-admin .redux-main .noUi-connect {
-      background-color: #0c6efd !important;
+      background-color: #4bbc82 !important;
       background-image: none !important;
       box-shadow: none !important; }
     .admin-color-fresh .wow-theme-admin .redux-main .wp-picker-container .button {
@@ -211,7 +211,7 @@
       .admin-color-fresh .wow-theme-admin .redux-main .input-prepend * {
         border-color: #cccccc; }
     .admin-color-fresh .wow-theme-admin .redux-main .redux-image-select-selected img {
-      border-color: #0c6efd; }
+      border-color: #4bbc82; }
     .admin-color-fresh .wow-theme-admin .redux-main .wp-picker-container {
       margin-top: 0; }
       .admin-color-fresh .wow-theme-admin .redux-main .wp-picker-container .wp-color-result-text {
@@ -222,9 +222,9 @@
       border-width: 2px;
       border-color: #cccccc; }
       .admin-color-fresh .wow-theme-admin .redux-main .switch-options label.cb-enable.selected {
-        background-color: #0c6efd !important;
+        background-color: #4bbc82 !important;
         background-image: none !important;
-        border-color: #0c6efd !important;
+        border-color: #4bbc82 !important;
         box-shadow: none !important; }
       .admin-color-fresh .wow-theme-admin .redux-main .switch-options label.cb-disable.selected {
         background-color: #dee2e6 !important;
@@ -295,7 +295,7 @@
         align-items: center;
         line-height: 1;
         font-weight: bold;
-        color: #0c6efd;
+        color: #4bbc82;
         z-index: 5; }
     .admin-color-fresh .wow-theme-admin .redux-main .wow-theme-admin-footer-column.wow-theme-admin-footer-column-img .redux-image-select:nth-child(2) label {
       position: relative;
@@ -309,7 +309,7 @@
         align-items: center;
         line-height: 1;
         font-weight: bold;
-        color: #0c6efd;
+        color: #4bbc82;
         z-index: 5; }
     .admin-color-fresh .wow-theme-admin .redux-main .wow-theme-admin-footer-column.wow-theme-admin-footer-column-img .redux-image-select:nth-child(3) label {
       position: relative;
@@ -323,7 +323,7 @@
         align-items: center;
         line-height: 1;
         font-weight: bold;
-        color: #0c6efd;
+        color: #4bbc82;
         z-index: 5; }
     .admin-color-fresh .wow-theme-admin .redux-main .wow-theme-admin-footer-column.wow-theme-admin-footer-column-img .redux-image-select:nth-child(4) label {
       position: relative;
@@ -337,7 +337,7 @@
         align-items: center;
         line-height: 1;
         font-weight: bold;
-        color: #0c6efd;
+        color: #4bbc82;
         z-index: 5; }
     .admin-color-fresh .wow-theme-admin .redux-main .wow-theme-admin-footer-column.wow-theme-admin-footer-column-img .redux-image-select:nth-child(5) label {
       position: relative;
@@ -351,7 +351,7 @@
         align-items: center;
         line-height: 1;
         font-weight: bold;
-        color: #0c6efd;
+        color: #4bbc82;
         z-index: 5; }
     .admin-color-fresh .wow-theme-admin .redux-main .wow-theme-admin-footer-column.wow-theme-admin-footer-column-img .redux-image-select:nth-child(6) label {
       position: relative;
@@ -365,7 +365,7 @@
         align-items: center;
         line-height: 1;
         font-weight: bold;
-        color: #0c6efd;
+        color: #4bbc82;
         z-index: 5; }
     .admin-color-fresh .wow-theme-admin .redux-main .wow-theme-admin-footer-column.wow-theme-admin-footer-column-img .redux-image-select:nth-child(7) label {
       position: relative;
@@ -379,7 +379,7 @@
         align-items: center;
         line-height: 1;
         font-weight: bold;
-        color: #0c6efd;
+        color: #4bbc82;
         z-index: 5; }
     .admin-color-fresh .wow-theme-admin .redux-main .wow-theme-admin-footer-column.wow-theme-admin-footer-column-img .redux-image-select:nth-child(8) label {
       position: relative;
@@ -393,7 +393,7 @@
         align-items: center;
         line-height: 1;
         font-weight: bold;
-        color: #0c6efd;
+        color: #4bbc82;
         z-index: 5; }
     .admin-color-fresh .wow-theme-admin .redux-main .wow-theme-admin-footer-column.wow-theme-admin-footer-column-img .redux-image-select:nth-child(9) label {
       position: relative;
@@ -407,7 +407,7 @@
         align-items: center;
         line-height: 1;
         font-weight: bold;
-        color: #0c6efd;
+        color: #4bbc82;
         z-index: 5; }
     .admin-color-fresh .wow-theme-admin .redux-main .wow-theme-admin-footer-column.wow-theme-admin-footer-column-img .redux-image-select:nth-child(10) label {
       position: relative;
@@ -421,7 +421,7 @@
         align-items: center;
         line-height: 1;
         font-weight: bold;
-        color: #0c6efd;
+        color: #4bbc82;
         z-index: 5; }
     .admin-color-fresh .wow-theme-admin .redux-main .wow-theme-admin-footer-column.wow-theme-admin-footer-column-img .redux-image-select:nth-child(11) label {
       position: relative;
@@ -435,7 +435,7 @@
         align-items: center;
         line-height: 1;
         font-weight: bold;
-        color: #0c6efd;
+        color: #4bbc82;
         z-index: 5; }
     .admin-color-fresh .wow-theme-admin .redux-main .wow-theme-admin-footer-column.wow-theme-admin-footer-column-img .redux-image-select:nth-child(12) label {
       position: relative;
@@ -449,7 +449,7 @@
         align-items: center;
         line-height: 1;
         font-weight: bold;
-        color: #0c6efd;
+        color: #4bbc82;
         z-index: 5; }
 
 .lh-1 {
