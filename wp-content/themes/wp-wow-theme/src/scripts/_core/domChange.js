@@ -34,12 +34,12 @@
 	// Naive approach for compatibility
 	function naive() {
   
-		var last = document.querySelector('#lift-chat-box');
+		var last = document.querySelector('#wow-chat-box');
 		var lastlen = last.length;
 		var timer = setTimeout(function check() {
   
 			// get current state of the document
-			var current = document.querySelector('#lift-chat-box');
+			var current = document.querySelector('#wow-chat-box');
 			var len = current.length;
   
 			// if the length is different

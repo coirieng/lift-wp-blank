@@ -23,7 +23,7 @@ class LIFT_Theme_Customize_Notice_Control extends WP_Customize_Control {
 	 *
 	 * @var string
 	 */
-	public $type = 'lift-assets-notice';
+	public $type = 'wow-assets-notice';
 
 	/**
 	 * Renders the control content.
@@ -40,7 +40,7 @@ class LIFT_Theme_Customize_Notice_Control extends WP_Customize_Control {
 		?>
 		<div class="notice notice-warning">
 			<p><?php esc_html_e( 'To access the Dark Mode settings, select a light background color.', 'wp-wow-theme' ); ?></p>
-			<p><a href="<?php echo esc_url( __( 'https://wordpress.org/support/article/lift-assets/#dark-mode-support', 'wp-wow-theme' ) ); ?>">
+			<p><a href="<?php echo esc_url( __( 'https://wordpress.org/support/article/wow-assets/#dark-mode-support', 'wp-wow-theme' ) ); ?>">
 				<?php esc_html_e( 'Learn more about Dark Mode.', 'wp-wow-theme' ); ?>
 			</a></p>
 		</div>

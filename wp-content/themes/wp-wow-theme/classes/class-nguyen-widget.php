@@ -4,7 +4,7 @@ class lift_Social_Widget extends WP_Widget {
     function __construct() {
  
         parent::__construct(
-            'lift-social-widget',  // Base ID
+            'wow-social-widget',  // Base ID
             'LIFT Social Widget'   // Name
         );
  

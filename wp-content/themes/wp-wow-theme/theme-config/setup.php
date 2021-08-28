@@ -56,7 +56,7 @@ if ( ! function_exists( 'lift_setup' ) ) {
 		 */
 		add_theme_support( 'post-thumbnails' );
 		set_post_thumbnail_size( 1568, 9999 );
-		add_image_size( 'lift-thumbnail-size', 220, 180, true );
+		add_image_size( 'wow-thumbnail-size', 220, 180, true );
 
 		register_nav_menus(
 			array(

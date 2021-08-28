@@ -13,20 +13,20 @@ function lift_scripts() {
 	
 	// Responsive embeds script.
 	wp_enqueue_script(
-		'lift-assets-core-script',
+		'wow-assets-core-script',
 		get_template_directory_uri() . '/dist/js/lift.js',
 		wp_get_theme()->get( 'Version' ),
 		true
 	);
 	wp_enqueue_script(
-		'lift-assets-main-script',
+		'wow-assets-main-script',
 		get_template_directory_uri() . '/dist/js/main.js',
 		wp_get_theme()->get( 'Version' ),
 		true,
 		true
 	);
 	wp_enqueue_script(
-		'lift-assets-theme-script',
+		'wow-assets-theme-script',
 		get_template_directory_uri() . '/dist/js/theme.js',
 		wp_get_theme()->get( 'Version' ),
 		true,
@@ -35,7 +35,7 @@ function lift_scripts() {
 
 	if (!is_admin() && current_user_can('administrator') && intval($wow_theme['wow-theme-global-dev-toogle-tag']) == 1) {
 		wp_enqueue_script(
-			'lift-assets-admin-tool',
+			'wow-assets-admin-tool',
 			get_template_directory_uri() . '/dist/js/admin-tool.js',
 			wp_get_theme()->get( 'Version' ),
 			true,
@@ -50,13 +50,13 @@ add_action( 'wp_enqueue_scripts', 'lift_scripts' );
 function lift_admin_scripts() {
 
 	wp_enqueue_script(
-		'lift-admin-main-script',
+		'wow-admin-main-script',
 		get_template_directory_uri() . '/admin/dist/js/admin.js',
 		wp_get_theme()->get( 'Version' ),
 		true
 	);
 	wp_enqueue_script(
-		'lift-admin-prism-script',
+		'wow-admin-prism-script',
 		get_template_directory_uri() . '/admin/vendor/prism.js',
 		wp_get_theme()->get( 'Version' ),
 		true

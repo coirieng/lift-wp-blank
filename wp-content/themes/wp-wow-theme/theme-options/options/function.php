@@ -16,7 +16,7 @@ function lift_register_widget_theme() {
 function get_wow_theme_options() {
 
 	$legacy_options  = get_option( 'lift_theme' );
-	$current_options = get_option( 'lift_theme_redux' );
+	$current_options = get_option( 'wow_theme_redux' );
 
 	if ( ! empty( $current_options ) ) {
 		return $current_options;
@@ -30,7 +30,7 @@ function get_wow_theme_options() {
 $lift_options = get_wow_theme_options();
 
 // Theme Skin Toggle Class Name
-function lift_theme_skin_body_class( $classes ) {
+function wow_theme_skin_body_class( $classes ) {
 
 	$lift_options = get_wow_theme_options();
 	// LAYOUT 
@@ -55,7 +55,7 @@ function lift_theme_skin_body_class( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'lift_theme_skin_body_class' );
+add_filter( 'body_class', 'wow_theme_skin_body_class' );
 
 // Remove Redux Menu 
 function remove_redux_fw_submenu() {

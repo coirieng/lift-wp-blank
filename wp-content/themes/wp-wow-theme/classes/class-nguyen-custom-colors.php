@@ -93,7 +93,7 @@ class LIFT_Theme_Custom_Colors {
 	 */
 	public function custom_color_variables() {
 		if ( 'd1e4dd' !== strtolower( get_theme_mod( 'background_color', 'D1E4DD' ) ) ) {
-			wp_add_inline_style( 'lift-assets-style', $this->generate_custom_color_variables() );
+			wp_add_inline_style( 'wow-assets-style', $this->generate_custom_color_variables() );
 		}
 	}
 

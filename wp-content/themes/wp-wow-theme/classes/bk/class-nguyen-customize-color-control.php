@@ -23,7 +23,7 @@ class LIFT_Theme_Customize_Color_Control extends WP_Customize_Color_Control {
 	 *
 	 * @var string
 	 */
-	public $type = 'lift-assets-color';
+	public $type = 'wow-assets-color';
 
 	/**
 	 * Colorpicker palette

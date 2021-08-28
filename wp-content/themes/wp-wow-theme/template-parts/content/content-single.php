@@ -92,7 +92,7 @@ $post_post_breadcrumb = $wow_theme['wow-theme-blog-style-breadcrumb'];
 						
 							the_post_navigation(
 								array(
-									'class'				 => 'lift-pagination',
+									'class'				 => 'wow-pagination',
 									'type'				 => 'list',
 									'next_text' => '<p class="meta-nav">' . $wow_theme_next_label . $wow_theme_next . '</p><p class="post-title">%title</p>',
 									'prev_text' => '<p class="meta-nav">' . $wow_theme_prev . $wow_theme_previous_label . '</p><p class="post-title">%title</p>',

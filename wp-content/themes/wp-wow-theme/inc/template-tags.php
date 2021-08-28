@@ -261,7 +261,7 @@ if ( ! function_exists( 'lift_the_posts_navigation' ) ) {
 				// 'before_page_number' => esc_html__( 'Page', 'wp-wow-theme' ) . ' ',
 				'mid_size'           => 0,
 				'type'				 => 'list',
-				'class'				 => 'lift-pagination',
+				'class'				 => 'wow-pagination',
 				'prev_text'          => sprintf(
 					'%s <span class="nav-prev-text">%s</span>',
 					is_rtl() ? lift_get_icon_svg( 'ui', 'arrow_right' ) : lift_get_icon_svg( 'ui', 'arrow_left' ),

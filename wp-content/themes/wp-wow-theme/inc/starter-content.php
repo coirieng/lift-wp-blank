@@ -120,7 +120,7 @@ function lift_get_starter_content() {
 					<!-- wp:columns -->
 					<div class="wp-block-columns"><!-- wp:column -->
 					<div class="wp-block-column"><!-- wp:paragraph -->
-					<p><a href="https://wordpress.org/support/article/lift-assets/">' . esc_html_x( 'Read the Theme Documentation', 'Theme starter content', 'wp-wow-theme' ) . '</a></p>
+					<p><a href="https://wordpress.org/support/article/wow-assets/">' . esc_html_x( 'Read the Theme Documentation', 'Theme starter content', 'wp-wow-theme' ) . '</a></p>
 					<!-- /wp:paragraph --></div>
 					<!-- /wp:column -->
 
