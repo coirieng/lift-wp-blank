@@ -5,7 +5,7 @@
  *
  * Priority 0 to make it available to lower priority callbacks.
  *
- * @since LIFT 2021
+ * @since WOW 2021
  *
  * @global int $content_width Content width.
  *

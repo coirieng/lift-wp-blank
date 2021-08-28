@@ -5,7 +5,7 @@ class wow_Social_Widget extends WP_Widget {
  
         parent::__construct(
             'wow-social-widget',  // Base ID
-            'LIFT Social Widget'   // Name
+            'WOW Social Widget'   // Name
         );
  
         add_action( 'widgets_init', function() {

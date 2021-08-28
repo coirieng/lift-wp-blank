@@ -2,7 +2,7 @@
 /**
  * Enqueue scripts.
  *
- * @since LIFT 2021
+ * @since WOW 2021
  *
  * @return void
  */

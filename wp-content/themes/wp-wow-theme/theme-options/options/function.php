@@ -92,7 +92,7 @@ add_filter( 'vc_shortcodes_css_class', 'wow_custom_css_classes_for_vc_row_and_vc
 
 
 // Check License
-function _____LIFTcheckLicense() {
+function _____WOWcheckLicense() {
 
 	$wow_options = get_wow_theme_options();
 
@@ -122,7 +122,7 @@ function _____LIFTcheckLicense() {
 	}
 
 }
-add_action( 'admin_notices', '_____LIFTcheckLicense' );
+add_action( 'admin_notices', '_____WOWcheckLicense' );
 
 
 

@@ -11,14 +11,14 @@
 /**
  * This class is in charge of color customization via the Customizer.
  */
-class LIFT_Theme_Custom_Colors {
+class WOW_Theme_Custom_Colors {
 
 	/**
 	 * Instantiate the object.
 	 *
 	 * @access public
 	 *
-	 * @since LIFT 2021
+	 * @since WOW 2021
 	 */
 	public function __construct() {
 
@@ -36,7 +36,7 @@ class LIFT_Theme_Custom_Colors {
 	 *
 	 * @param string $background_color The background color.
 	 *
-	 * @since LIFT 2021
+	 * @since WOW 2021
 	 *
 	 * @return string (hex color)
 	 */
@@ -53,7 +53,7 @@ class LIFT_Theme_Custom_Colors {
 	 *
 	 * @access public
 	 *
-	 * @since LIFT 2021
+	 * @since WOW 2021
 	 *
 	 * @param string|null $context Can be "editor" or null.
 	 *
@@ -87,7 +87,7 @@ class LIFT_Theme_Custom_Colors {
 	 *
 	 * @access public
 	 *
-	 * @since LIFT 2021
+	 * @since WOW 2021
 	 *
 	 * @return void
 	 */
@@ -104,7 +104,7 @@ class LIFT_Theme_Custom_Colors {
 	 *
 	 * @access public
 	 *
-	 * @since LIFT 2021
+	 * @since WOW 2021
 	 *
 	 * @param string $hex The HEX color.
 	 *
@@ -135,7 +135,7 @@ class LIFT_Theme_Custom_Colors {
 	 *
 	 * @access public
 	 *
-	 * @since LIFT 2021
+	 * @since WOW 2021
 	 *
 	 * @param array $classes The existing body classes.
 	 *

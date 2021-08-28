@@ -18,7 +18,7 @@ $colowhite: #fff;
 $bgmenuactive: #e7f1ff;
 $boo: #cccccc;
 
-%bglinerlift {
+%bglinerwow {
 	background: $maincolor;
 	background: -moz-linear-gradient(135deg, $maincolor 0%, $secondcolor 100%);
 	background: -webkit-linear-gradient(135deg, $maincolor 0%, $secondcolor 100%);
@@ -84,7 +84,7 @@ $boo: #cccccc;
 		margin-top: 1rem;
 		background: #fff !important;
 		#redux-header {
-			@extend %bglinerlift;
+			@extend %bglinerwow;
 			border-bottom: 0;
 			.display_header {
 				margin: 0 0.5rem;
@@ -160,7 +160,7 @@ $boo: #cccccc;
 					}
 					&.active {
 						a {
-							@extend %bglinerlift;
+							@extend %bglinerwow;
 						}
 						&.hasSubSections {
 							a {
@@ -197,7 +197,7 @@ $boo: #cccccc;
 					&.activeChild {
 						&.hasSubSections {
 							a {
-								@extend %bglinerlift;
+								@extend %bglinerwow;
 								text-shadow: none;
 								border-radius: 0 5rem 5rem 0;
 							}

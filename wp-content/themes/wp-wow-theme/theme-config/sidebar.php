@@ -3,7 +3,7 @@
 /**
  * Register widget area.
  *
- * @since LIFT 2021
+ * @since WOW 2021
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  *

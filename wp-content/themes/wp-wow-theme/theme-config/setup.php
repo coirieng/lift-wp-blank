@@ -8,7 +8,7 @@ if ( ! function_exists( 'wow_setup' ) ) {
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 *
-	 * @since LIFT 2021
+	 * @since WOW 2021
 	 *
 	 * @return void
 	 */
@@ -115,7 +115,7 @@ if ( ! function_exists( 'wow_setup' ) ) {
 		// Add support for editor styles.
 		add_theme_support( 'editor-styles' );
 		// $background_color = get_theme_mod( 'background_color', 'D1E4DD' );
-		// if ( 127 > LIFT_Theme_Custom_Colors::get_relative_luminance_from_hex( $background_color ) ) {
+		// if ( 127 > WOW_Theme_Custom_Colors::get_relative_luminance_from_hex( $background_color ) ) {
 		// 	add_theme_support( 'dark-editor-style' );
 		// }
 

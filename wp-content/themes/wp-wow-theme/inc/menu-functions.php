@@ -58,7 +58,7 @@ add_filter( 'walker_nav_menu_start_el', 'wow_add_sub_menu_toggle', 10, 4 );
  * @return string
  */
 function wow_get_social_link_svg( $uri, $size = 24 ) {
-	return LIFT_Theme_SVG_Icons::get_social_link_svg( $uri, $size );
+	return WOW_Theme_SVG_Icons::get_social_link_svg( $uri, $size );
 }
 
 /**

@@ -1,6 +1,6 @@
 <?php
 /**
- * Customize API: LIFT_Theme_Customize_Notice_Control class
+ * Customize API: WOW_Theme_Customize_Notice_Control class
  *
  * @package WOW WordPress 
  * @subpackage Theme by Nguyen Pham
@@ -11,15 +11,15 @@
 /**
  * Customize Notice Control class.
  *
- * @since LIFT 2021
+ * @since WOW 2021
  *
  * @see WP_Customize_Control
  */
-class LIFT_Theme_Customize_Notice_Control extends WP_Customize_Control {
+class WOW_Theme_Customize_Notice_Control extends WP_Customize_Control {
 	/**
 	 * The control type.
 	 *
-	 * @since LIFT 2021
+	 * @since WOW 2021
 	 *
 	 * @var string
 	 */
@@ -32,7 +32,7 @@ class LIFT_Theme_Customize_Notice_Control extends WP_Customize_Control {
 	 *
 	 * @access public
 	 *
-	 * @since LIFT 2021
+	 * @since WOW 2021
 	 *
 	 * @return void
 	 */

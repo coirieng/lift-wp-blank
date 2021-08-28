@@ -26,7 +26,7 @@
 	}
   
 	// Public interface
-	var liftDOMChange = function (fn, newdelay) {
+	var wowDOMChange = function (fn, newdelay) {
 		if (newdelay) delay = newdelay;
 		stack.push(fn);
 	};
@@ -116,5 +116,5 @@
 	el.removeChild(dummy);
   
 	// expose
-	window.liftDOMChange = liftDOMChange;
+	window.wowDOMChange = wowDOMChange;
   })(window);

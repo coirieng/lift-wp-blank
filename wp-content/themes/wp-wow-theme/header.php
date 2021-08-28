@@ -19,15 +19,15 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<!-- LIFT WRAPPER -->
+<!-- WOW WRAPPER -->
 <div id="page" class="site wow-wrapper">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wp-wow-theme' ); ?></a>
 	<?php get_template_part( 'template-parts/header/site-header' ); ?>
 
-	<!-- LIFT CONTENT -->
+	<!-- WOW CONTENT -->
 	<main id="content" class="site-content wow-content">
 		<div class="content-wrapper">
 			<div id="primary" class="content-area">
-				<!-- LIFT MAIN -->
+				<!-- WOW MAIN -->
 				<div id="main" class="site-main wow-main" role="main">
 				<div id="fb-root"></div>

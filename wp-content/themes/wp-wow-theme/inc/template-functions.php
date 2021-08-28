@@ -212,7 +212,7 @@ add_filter( 'the_title', 'wow_post_title' );
  * @return string
  */
 function wow_get_icon_svg( $group, $icon, $size = 24 ) {
-	return LIFT_Theme_SVG_Icons::get_svg( $group, $icon, $size );
+	return WOW_Theme_SVG_Icons::get_svg( $group, $icon, $size );
 }
 
 /**
