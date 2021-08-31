@@ -37,7 +37,7 @@ class WOW_Addon_Blocks{
 				'type' => 'select',
 				'title' => __('Content','wow-pagebuilder'),
 				'values' => $taxonomies ? $taxonomies : null,
-				'std' => 'Integer adipiscing erat eget risus sollicitudin pellentesque et non erat. Maecenas nibh dolor, malesuada et bibendum a, sagittis accumsan ipsum. Pellentesque ultrices ultrices sapien, nec tincidunt nunc posuere ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam scelerisque tristique dolor vitae tincidunt. Aenean quis massa uada mi elementum elementum. Nec sapien convallis vulputate rhoncus vel dui.'
+				'std' => 'demo'
 			),
 			
 		);

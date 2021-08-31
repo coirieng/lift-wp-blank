@@ -86,6 +86,19 @@ if ( ! class_exists('WOW_Options')){
 
 
 							<tr>
+								<th scope="row"><?php esc_html_e( 'Cache', 'wow-pagebuilder' ); ?></th>
+								<td>
+									<label>
+										<button type="button" id="wow_clear_cache_btn" class="button"><?php _e('Clean Cache and Sync','wow-pagebuilder'); ?></button>
+										<p class="response-text"></p>
+										<p class="description"> <?php _e('Clean WOW Page Builder cache & synchronize built-in layouts & blocks with server.', 'wow-pagebuilder'); ?></p>
+									</label>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2"><hr></td>
+							</tr>
+							<tr>
 								<th scope="row"><?php esc_html_e( 'Disable the Gutenberg Editor', 'wow-pagebuilder' ); ?></th>
 								<td>
 									<?php $value = $option_data['gutenberg_editor']; ?>
@@ -195,16 +208,7 @@ if ( ! class_exists('WOW_Options')){
 								</td>
 							</tr>
 	
-							<tr>
-								<th scope="row"><?php esc_html_e( 'Cache', 'wow-pagebuilder' ); ?></th>
-								<td>
-									<label>
-										<button type="button" id="wow_clear_cache_btn" class="button"><?php _e('Clean Cache and Sync','wow-pagebuilder'); ?></button>
-										<p class="response-text"></p>
-										<p class="description"> <?php _e('Clean WOW Page Builder cache & synchronize built-in layouts & blocks with server.', 'wow-pagebuilder'); ?></p>
-									</label>
-								</td>
-							</tr>
+							
 	
 	
 						</table>
