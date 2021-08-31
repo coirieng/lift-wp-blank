@@ -1,0 +1,178 @@
+0000.000 (0) Opened log file at time: Tue, 31 Aug 2021 13:11:52 +0000 on http://demo.local:8888
+0000.146 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.61 WP: 5.8 PHP: 7.4.1 (cgi-fcgi, Darwin LIFTs-iMac.local 19.6.0 Darwin Kernel Version 19.6.0: Tue Jun 22 19:49:55 PDT 2021; root:xnu-6153.141.35~1/RELEASE_X86_64 x86_64) MySQL: 5.7.26 (max packet size=16777216) WPLANG: en_US Server: Apache safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 30M | 6M) multisite: N openssl: OpenSSL 1.0.2o  27 Mar 2018 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.191 (0) Free space on disk containing Updraft's temporary directory: 810010.6 MB
+0000.273 (0) Deleting old temporary file: log.0f4ce095be42-browser.txt
+0000.886 (0) Deleting old log file: log.0f4ce095be42.txt
+0000.888 (0) Tasks: Backup files: 0 (schedule: unset) Backup DB: 1 (schedule: unset)
+0000.956 (0) Semaphore (d, demo_options) being initialised
+0001.140 (0) Requesting semaphore lock (d) (apparently not via scheduler)
+0001.803 (0) Set semaphore last lock (d) time to 2021-08-31 13:11:54
+0002.004 (0) Semaphore lock (d) complete
+0002.296 (0) Backup run: resumption=0, nonce=def1ed1d0bc5, file_nonce=def1ed1d0bc5 begun at=1630415512 (2s ago), job type=backup
+0002.420 (0) Scheduling a resumption (1) after 300 seconds (1630415814) in case this run gets aborted
+0002.539 (0) This backup run is not intended for files - skipping
+0002.602 (0) Beginning creation of database dump (WordPress DB)
+0002.637 (0) SQL compatibility mode is: NO_ZERO_IN_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+0004.484 (0) Table demo_options: Total expected rows (approximate): 332
+0005.070 (0) Table demo_options: Rows added in this batch (next record: 1904): 332 (uncompressed bytes in this segment=1458122) in 0.50 seconds
+0005.773 (0) Table demo_options: finishing file(s) (2, 265.1 KB)
+0005.913 (0) Table demo_users: Total expected rows (approximate): 0
+0005.980 (0) Table demo_users: Rows added in this batch (next record: 2): 2 (uncompressed bytes in this segment=1516) in 0.00 seconds
+0006.340 (0) Table demo_users: finishing file(s) (2, 0.6 KB)
+0006.470 (0) Table demo_usermeta: Total expected rows (approximate): 49
+0006.685 (0) Table demo_usermeta: Rows added in this batch (next record: 54): 54 (uncompressed bytes in this segment=4570) in 0.16 seconds
+0007.238 (0) Table demo_usermeta: finishing file(s) (2, 1.8 KB)
+0007.406 (0) Table demo_commentmeta: Total expected rows (approximate): 0
+0007.775 (0) Table demo_commentmeta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=697) in 0.31 seconds
+0008.220 (0) Table demo_commentmeta: finishing file(s) (2, 0.4 KB)
+0008.333 (0) Table demo_comments: Total expected rows (approximate): 0
+0008.497 (0) Table demo_comments: Rows added in this batch (next record: 3): 3 (uncompressed bytes in this segment=2708) in 0.08 seconds
+0008.710 (0) Table demo_comments: finishing file(s) (2, 0.9 KB)
+0008.919 (0) Table demo_links: Total expected rows (approximate): 0
+0008.972 (0) Table demo_links: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1322) in 0.00 seconds
+0009.205 (0) Table demo_links: finishing file(s) (2, 0.5 KB)
+0009.417 (0) Table demo_postmeta: Total expected rows (approximate): 162
+0009.968 (0) Table demo_postmeta: Rows added in this batch (next record: 330): 162 (uncompressed bytes in this segment=214071) in 0.36 seconds
+0010.310 (0) Table demo_postmeta: finishing file(s) (2, 15.5 KB)
+0010.419 (0) Table demo_posts: Total expected rows (approximate): 91
+0011.316 (0) Table demo_posts: Rows added in this batch (next record: 166): 112 (uncompressed bytes in this segment=260915) in 0.70 seconds
+0011.433 (0) Table demo_posts: finishing file(s) (2, 13.4 KB)
+0011.452 (0) Table demo_term_relationships: Total expected rows (approximate): 16
+0011.468 (0) Table demo_term_relationships: Rows added in this batch (next record: 100000): 16 (uncompressed bytes in this segment=911) in 0.01 seconds
+0011.572 (0) Table demo_term_relationships: finishing file(s) (2, 0.4 KB)
+0011.589 (0) Table demo_term_taxonomy: Total expected rows (approximate): 8
+0011.617 (0) Table demo_term_taxonomy: Rows added in this batch (next record: 9): 9 (uncompressed bytes in this segment=1195) in 0.02 seconds
+0011.717 (0) Table demo_term_taxonomy: finishing file(s) (2, 0.5 KB)
+0011.953 (0) Table demo_termmeta: Total expected rows (approximate): 0
+0011.988 (0) Table demo_termmeta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=670) in 0.02 seconds
+0012.134 (0) Table demo_termmeta: finishing file(s) (2, 0.4 KB)
+0012.143 (0) Table demo_terms: Total expected rows (approximate): 8
+0012.154 (0) Table demo_terms: Rows added in this batch (next record: 9): 9 (uncompressed bytes in this segment=1019) in 0.01 seconds
+0012.258 (0) Table demo_terms: finishing file(s) (2, 0.5 KB)
+0012.357 (0) Table demo_best_css_compiler_data: Total expected rows (approximate): 4
+0012.385 (0) Table demo_best_css_compiler_data: Rows added in this batch (next record: 6): 5 (uncompressed bytes in this segment=1080) in 0.01 seconds
+0012.478 (0) Table demo_best_css_compiler_data: finishing file(s) (2, 0.5 KB)
+0012.534 (0) Table demo_best_suggestion_boxes_suggest: Total expected rows (approximate): 4
+0012.556 (0) Table demo_best_suggestion_boxes_suggest: Rows added in this batch (next record: 4): 4 (uncompressed bytes in this segment=994) in 0.00 seconds
+0012.653 (0) Table demo_best_suggestion_boxes_suggest: finishing file(s) (2, 0.5 KB)
+0012.657 (0) Table demo_best_suggestion_boxes_suggest_group: Total expected rows (approximate): 2
+0012.666 (0) Table demo_best_suggestion_boxes_suggest_group: Rows added in this batch (next record: 2): 2 (uncompressed bytes in this segment=755) in 0.00 seconds
+0012.765 (0) Table demo_best_suggestion_boxes_suggest_group: finishing file(s) (2, 0.4 KB)
+0012.830 (0) Table demo_gf_draft_submissions: Total expected rows (approximate): 0
+0012.901 (0) Table demo_gf_draft_submissions: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=863) in 0.05 seconds
+0013.009 (0) Table demo_gf_draft_submissions: finishing file(s) (2, 0.4 KB)
+0013.173 (0) Table demo_gf_entry: Total expected rows (approximate): 0
+0013.189 (0) Table demo_gf_entry: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1571) in 0.00 seconds
+0013.292 (0) Table demo_gf_entry: finishing file(s) (2, 0.6 KB)
+0013.383 (0) Table demo_gf_entry_meta: Total expected rows (approximate): 0
+0013.410 (0) Table demo_gf_entry_meta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=850) in 0.01 seconds
+0013.517 (0) Table demo_gf_entry_meta: finishing file(s) (2, 0.4 KB)
+0013.574 (0) Table demo_gf_entry_notes: Total expected rows (approximate): 0
+0013.635 (0) Table demo_gf_entry_notes: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=902) in 0.05 seconds
+0013.772 (0) Table demo_gf_entry_notes: finishing file(s) (2, 0.4 KB)
+0013.921 (0) Table demo_gf_form: Total expected rows (approximate): 0
+0013.939 (0) Table demo_gf_form: Rows added in this batch (next record: 1): 1 (uncompressed bytes in this segment=751) in 0.00 seconds
+0014.200 (0) Table demo_gf_form: finishing file(s) (2, 0.4 KB)
+0014.480 (0) Table demo_gf_form_meta: Total expected rows (approximate): 0
+0014.897 (0) Table demo_gf_form_meta: Rows added in this batch (next record: 1): 1 (uncompressed bytes in this segment=11615) in 0.31 seconds
+0015.477 (0) Table demo_gf_form_meta: finishing file(s) (2, 2.1 KB)
+0015.665 (0) Table demo_gf_form_revisions: Total expected rows (approximate): 0
+0015.784 (0) Table demo_gf_form_revisions: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=675) in 0.10 seconds
+0015.993 (0) Table demo_gf_form_revisions: finishing file(s) (2, 0.4 KB)
+0016.131 (0) Table demo_gf_form_view: Total expected rows (approximate): 0
+0016.148 (0) Table demo_gf_form_view: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=703) in 0.00 seconds
+0016.639 (0) Table demo_gf_form_view: finishing file(s) (2, 0.4 KB)
+0016.813 (0) Table demo_gf_rest_api_keys: Total expected rows (approximate): 0
+0016.832 (0) Table demo_gf_rest_api_keys: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1034) in 0.01 seconds
+0016.950 (0) Table demo_gf_rest_api_keys: finishing file(s) (2, 0.4 KB)
+0017.146 (0) Table demo_lift_chat_suggest: Total expected rows (approximate): 4
+0017.164 (0) Table demo_lift_chat_suggest: Rows added in this batch (next record: 4): 4 (uncompressed bytes in this segment=910) in 0.00 seconds
+0017.299 (0) Table demo_lift_chat_suggest: finishing file(s) (2, 0.4 KB)
+0017.537 (0) Table demo_lift_chat_suggest_group: Total expected rows (approximate): 2
+0017.560 (0) Table demo_lift_chat_suggest_group: Rows added in this batch (next record: 2): 2 (uncompressed bytes in this segment=671) in 0.00 seconds
+0017.660 (0) Table demo_lift_chat_suggest_group: finishing file(s) (2, 0.4 KB)
+0017.714 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_options.table.tmpr1905.gz (1/26/fopen): adding to final database dump
+0017.728 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_options.table.gz (2/26/fopen): adding to final database dump
+0017.741 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_users.table.tmpr3.gz (3/26/fopen): adding to final database dump
+0017.749 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_users.table.gz (4/26/fopen): adding to final database dump
+0017.760 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_usermeta.table.tmpr55.gz (5/26/fopen): adding to final database dump
+0017.767 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_usermeta.table.gz (6/26/fopen): adding to final database dump
+0017.776 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_commentmeta.table.tmpr0.gz (7/26/fopen): adding to final database dump
+0017.785 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_commentmeta.table.gz (8/26/fopen): adding to final database dump
+0017.791 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_comments.table.tmpr4.gz (9/26/fopen): adding to final database dump
+0017.797 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_comments.table.gz (10/26/fopen): adding to final database dump
+0017.803 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_links.table.tmpr0.gz (11/26/fopen): adding to final database dump
+0017.809 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_links.table.gz (12/26/fopen): adding to final database dump
+0017.818 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_postmeta.table.tmpr331.gz (13/26/fopen): adding to final database dump
+0017.822 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_postmeta.table.gz (14/26/fopen): adding to final database dump
+0017.828 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_posts.table.tmpr167.gz (15/26/fopen): adding to final database dump
+0017.840 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_posts.table.gz (16/26/fopen): adding to final database dump
+0017.849 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_term_relationships.table.tmpr100001.gz (17/26/fopen): adding to final database dump
+0017.858 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_term_relationships.table.gz (18/26/fopen): adding to final database dump
+0017.859 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_term_taxonomy.table.tmpr10.gz (19/26/fopen): adding to final database dump
+0017.864 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_term_taxonomy.table.gz (20/26/fopen): adding to final database dump
+0017.866 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_termmeta.table.tmpr0.gz (21/26/fopen): adding to final database dump
+0017.867 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_termmeta.table.gz (22/26/fopen): adding to final database dump
+0017.877 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_terms.table.tmpr10.gz (23/26/fopen): adding to final database dump
+0017.880 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_terms.table.gz (24/26/fopen): adding to final database dump
+0017.889 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_best_css_compiler_data.table.tmpr7.gz (25/26/fopen): adding to final database dump
+0017.901 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_best_css_compiler_data.table.gz (26/26/fopen): adding to final database dump
+0017.914 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_best_suggestion_boxes_suggest.table.tmpr5.gz (27/26/fopen): adding to final database dump
+0017.922 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_best_suggestion_boxes_suggest.table.gz (28/26/fopen): adding to final database dump
+0017.929 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_best_suggestion_boxes_suggest_group.table.tmpr3.gz (29/26/fopen): adding to final database dump
+0017.932 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_best_suggestion_boxes_suggest_group.table.gz (30/26/fopen): adding to final database dump
+0017.939 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_gf_draft_submissions.table.tmpr1.gz (31/26/fopen): adding to final database dump
+0017.950 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_gf_draft_submissions.table.gz (32/26/fopen): adding to final database dump
+0017.956 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_gf_entry.table.tmpr0.gz (33/26/fopen): adding to final database dump
+0017.967 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_gf_entry.table.gz (34/26/fopen): adding to final database dump
+0017.970 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_gf_entry_meta.table.tmpr0.gz (35/26/fopen): adding to final database dump
+0017.976 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_gf_entry_meta.table.gz (36/26/fopen): adding to final database dump
+0017.983 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_gf_entry_notes.table.tmpr0.gz (37/26/fopen): adding to final database dump
+0017.993 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_gf_entry_notes.table.gz (38/26/fopen): adding to final database dump
+0018.003 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_gf_form.table.tmpr2.gz (39/26/fopen): adding to final database dump
+0018.015 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_gf_form.table.gz (40/26/fopen): adding to final database dump
+0018.020 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_gf_form_meta.table.tmpr2.gz (41/26/fopen): adding to final database dump
+0018.025 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_gf_form_meta.table.gz (42/26/fopen): adding to final database dump
+0018.030 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_gf_form_revisions.table.tmpr0.gz (43/26/fopen): adding to final database dump
+0018.037 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_gf_form_revisions.table.gz (44/26/fopen): adding to final database dump
+0018.039 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_gf_form_view.table.tmpr0.gz (45/26/fopen): adding to final database dump
+0018.049 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_gf_form_view.table.gz (46/26/fopen): adding to final database dump
+0018.055 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_gf_rest_api_keys.table.tmpr0.gz (47/26/fopen): adding to final database dump
+0018.061 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_gf_rest_api_keys.table.gz (48/26/fopen): adding to final database dump
+0018.067 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_lift_chat_suggest.table.tmpr5.gz (49/26/fopen): adding to final database dump
+0018.074 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_lift_chat_suggest.table.gz (50/26/fopen): adding to final database dump
+0018.083 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_lift_chat_suggest_group.table.tmpr3.gz (51/26/fopen): adding to final database dump
+0018.085 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db-table-demo_lift_chat_suggest_group.table.gz (52/26/fopen): adding to final database dump
+0018.553 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db.gz: finished writing out complete database file (308.3 KB)
+0018.633 (0) Total database tables backed up: 26 (backup_2021-08-31-1311_Demo_def1ed1d0bc5-db.gz, size: 315859, sha1: 6e23784c30c73351bbcebdbbac26be927e3079ef, sha256: 70c4dbaa9daf1b3d4bde55d19a1ac3ce51573839bbcea068464d5793d3063e10)
+0018.658 (0) backup_2021-08-31-1311_Demo_def1ed1d0bc5-db.gz: db: This file has not yet been successfully uploaded: will queue
+0018.665 (0) Saving backup history. Total backup size: 308.5 KB
+0018.674 (0) Requesting upload of the files that have not yet been successfully uploaded (1)
+0018.691 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0018.701 (0) No remote despatch: user chose no remote backup service
+0018.707 (0) Recording as successfully uploaded: backup_2021-08-31-1311_Demo_def1ed1d0bc5-db.gz
+0018.730 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0018.740 (0) Number of backup sets in history: 3; groups (db): 1
+0018.745 (0) Examining (for databases) backup set with group_id=0, nonce=def1ed1d0bc5, datestamp=1630415512 (Aug 31 2021 13:11:52)
+0018.748 (0) This backup set is the backup set just made, so will not be deleted.
+0018.748 (0) Examining (for databases) backup set with group_id=0, nonce=882c7d4dffa7, datestamp=1630281420 (Aug 29 2021 23:57:00)
+0018.748 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0018.756 (0) Examining (for databases) backup set with group_id=0, nonce=d015bc51ab57, datestamp=1630281180 (Aug 29 2021 23:53:00)
+0018.756 (0) 1630281180: db: this set includes a database (backup_2021-08-29-2353_DEMO_d015bc51ab57-db.gz); db count is now 2
+0018.756 (0) 1630281180: db: over retain limit (2); will delete this database
+0018.756 (0) Delete file: backup_2021-08-29-2353_DEMO_d015bc51ab57-db.gz, service=none
+0018.763 (0) Deleting local copy (backup_2021-08-29-2353_DEMO_d015bc51ab57-db.gz)
+0018.831 (0) This backup set is now empty; will remove from history
+0018.837 (0) Deleting log file (log.d015bc51ab57.txt)
+0018.844 (0) Number of backup sets in history: 2; groups (files): 1
+0018.851 (0) Examining (for files) backup set with nonce=def1ed1d0bc5, datestamp=1630415512 (Aug 31 2021 13:11:52)
+0018.851 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0018.862 (0) Examining (for files) backup set with nonce=882c7d4dffa7, datestamp=1630281420 (Aug 29 2021 23:57:00)
+0018.862 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0018.863 (0) Retain: saving new backup history (sets now: 2) and finishing retain operation
+0018.889 (0) Resume backup (def1ed1d0bc5, 0): finish run
+0018.905 (0) Decremented the semaphore (d) by 1
+0018.921 (0) Semaphore (d) unlocked
+0018.930 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0018.955 (0) No email will/can be sent - the user has not configured an email address.
+0018.958 (0) The backup apparently succeeded and is now complete

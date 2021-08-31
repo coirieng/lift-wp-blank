@@ -1,0 +1,60 @@
+0000.030 (R) [notice] Looking for db archive: file name: backup_2021-08-29-2357_DEMO_882c7d4dffa7-db.gz
+0000.030 (R) [notice] Archive is expected to be size: 267.9 KB: OK
+0000.072 (R) [notice] Will not delete any archives after unpacking them, because there was no cloud storage for this backup
+0000.075 (R) [notice] Unpacking backup... (backup_2021-08-29-2357_DEMO_882c7d4dffa7-db.gz, 0.3 Mb)
+0000.118 (R) [notice] Restoring the database (on a large site this can take a long time - if it times out (which can happen if your web hosting company has configured your hosting to limit resources) then you should use a different method, such as phpMyAdmin)...
+0000.586 (R) [notice] Enabling Maintenance mode&#8230;
+0000.632 (R) [notice] Backup of: http://lift.com
+0000.656 (R) [notice] Content URL: http://lift.com/wp-content
+0000.656 (R) [notice] Uploads URL: http://lift.com/wp-content/uploads
+0000.656 (R) [notice] Old table prefix: demo_
+0000.657 (R) [notice] Site information: multisite = 0
+0000.657 (R) [notice] Site information: sql_mode = 
+0000.657 (R) [notice] Skipped tables: wp_actionscheduler_actions, wp_actionscheduler_claims, wp_actionscheduler_groups, wp_actionscheduler_logs, wp_ce4wp_abandoned_checkout, wp_commentmeta, wp_comments, wp_gf_draft_submissions, wp_gf_entry, wp_gf_entry_meta, wp_gf_entry_notes, wp_gf_form, wp_gf_form_meta, wp_gf_form_revisions, wp_gf_form_view, wp_gf_rest_api_keys, wp_lift_chat_suggest, wp_lift_chat_suggest_group, wp_links, wp_mailchimp_carts, wp_mailchimp_jobs, wp_mailpoet_custom_fields, wp_mailpoet_dynamic_segment_filters, wp_mailpoet_feature_flags, wp_mailpoet_forms, wp_mailpoet_log, wp_mailpoet_mapping_to_external_entities, wp_mailpoet_newsletter_links, wp_mailpoet_newsletter_option, wp_mailpoet_newsletter_option_fields, wp_mailpoet_newsletter_posts, wp_mailpoet_newsletter_segment, wp_mailpoet_newsletter_templates, wp_mailpoet_newsletters, wp_mailpoet_scheduled_task_subscribers, wp_mailpoet_scheduled_tasks, wp_mailpoet_segments, wp_mailpoet_sending_queues, wp_mailpoet_settings, wp_mailpoet_statistics_clicks, wp_mailpoet_statistics_forms, wp_mailpoet_statistics_newsletters, wp_mailpoet_statistics_opens, wp_mailpoet_statistics_unsubscribes, wp_mailpoet_statistics_woocommerce_purchases, wp_mailpoet_stats_notifications, wp_mailpoet_subscriber_custom_field, wp_mailpoet_subscriber_ips, wp_mailpoet_subscriber_segment, wp_mailpoet_subscribers, wp_mailpoet_user_flags, wp_nguyen_app_suggest, wp_nguyen_app_suggest_group, wp_options, wp_postmeta, wp_posts, wp_term_relationships, wp_term_taxonomy, wp_termmeta, wp_terms, wp_usermeta, wp_users, wp_wc_admin_note_actions, wp_wc_admin_notes, wp_wc_category_lookup, wp_wc_customer_lookup, wp_wc_download_log, wp_wc_order_coupon_lookup, wp_wc_order_product_lookup, wp_wc_order_stats, wp_wc_order_tax_lookup, wp_wc_product_meta_lookup, wp_wc_reserved_stock, wp_wc_tax_rate_classes, wp_wc_webhooks, wp_woocommerce_api_keys, wp_woocommerce_attribute_taxonomies, wp_woocommerce_downloadable_product_permissions, wp_woocommerce_log, wp_woocommerce_order_itemmeta, wp_woocommerce_order_items, wp_woocommerce_payment_tokenmeta, wp_woocommerce_payment_tokens, wp_woocommerce_sessions, wp_woocommerce_shipping_zone_locations, wp_woocommerce_shipping_zone_methods, wp_woocommerce_shipping_zones, wp_woocommerce_tax_rate_locations, wp_woocommerce_tax_rates, wp_yoast_seo_links, wp_yoast_seo_meta
+0000.658 (R) [notice] New table prefix: wy_
+0000.661 (R) [notice] Processing table (MyISAM):  demo_options - will restore as: wy_options
+0000.829 (R) [notice] Atomic restore: dropping original table (demo_options)
+0000.832 (R) [notice] Atomic restore: renaming new table (wy_options) to final table name (demo_options)
+0001.022 (R) [notice] Processing table (MyISAM):  demo_users - will restore as: wy_users
+0001.119 (R) [notice] Atomic restore: dropping original table (demo_users)
+0001.121 (R) [notice] Atomic restore: renaming new table (wy_users) to final table name (demo_users)
+0001.122 (R) [notice] Processing table (MyISAM):  demo_usermeta - will restore as: wy_usermeta
+0001.253 (R) [notice] Atomic restore: dropping original table (demo_usermeta)
+0001.255 (R) [notice] Atomic restore: renaming new table (wy_usermeta) to final table name (demo_usermeta)
+0001.257 (R) [notice] Processing table (MyISAM):  demo_commentmeta - will restore as: wy_commentmeta
+0001.360 (R) [notice] Atomic restore: dropping original table (demo_commentmeta)
+0001.362 (R) [notice] Atomic restore: renaming new table (wy_commentmeta) to final table name (demo_commentmeta)
+0001.363 (R) [notice] Processing table (MyISAM):  demo_comments - will restore as: wy_comments
+0001.460 (R) [notice] Atomic restore: dropping original table (demo_comments)
+0001.462 (R) [notice] Atomic restore: renaming new table (wy_comments) to final table name (demo_comments)
+0001.463 (R) [notice] Processing table (MyISAM):  demo_links - will restore as: wy_links
+0001.568 (R) [notice] Atomic restore: dropping original table (demo_links)
+0001.570 (R) [notice] Atomic restore: renaming new table (wy_links) to final table name (demo_links)
+0001.571 (R) [notice] Processing table (MyISAM):  demo_postmeta - will restore as: wy_postmeta
+0001.671 (R) [notice] Atomic restore: dropping original table (demo_postmeta)
+0001.674 (R) [notice] Atomic restore: renaming new table (wy_postmeta) to final table name (demo_postmeta)
+0001.675 (R) [notice] Processing table (MyISAM):  demo_posts - will restore as: wy_posts
+0001.787 (R) [notice] Atomic restore: dropping original table (demo_posts)
+0001.789 (R) [notice] Atomic restore: renaming new table (wy_posts) to final table name (demo_posts)
+0001.790 (R) [notice] Processing table (MyISAM):  demo_term_relationships - will restore as: wy_term_relationships
+0001.923 (R) [notice] Atomic restore: dropping original table (demo_term_relationships)
+0002.052 (R) [notice] Atomic restore: renaming new table (wy_term_relationships) to final table name (demo_term_relationships)
+0002.053 (R) [notice] Processing table (MyISAM):  demo_term_taxonomy - will restore as: wy_term_taxonomy
+0002.177 (R) [notice] Atomic restore: dropping original table (demo_term_taxonomy)
+0002.179 (R) [notice] Atomic restore: renaming new table (wy_term_taxonomy) to final table name (demo_term_taxonomy)
+0002.180 (R) [notice] Processing table (MyISAM):  demo_termmeta - will restore as: wy_termmeta
+0002.304 (R) [notice] Atomic restore: dropping original table (demo_termmeta)
+0002.306 (R) [notice] Atomic restore: renaming new table (wy_termmeta) to final table name (demo_termmeta)
+0002.307 (R) [notice] Processing table (MyISAM):  demo_terms - will restore as: wy_terms
+0002.436 (R) [notice] Atomic restore: dropping original table (demo_terms)
+0002.438 (R) [notice] Atomic restore: renaming new table (wy_terms) to final table name (demo_terms)
+0002.439 (R) [notice] Processing table (MyISAM):  demo_best_suggestion_boxes_suggest - will restore as: wy_best_suggestion_boxes_suggest
+0002.560 (R) [notice] Atomic restore: dropping original table (demo_best_suggestion_boxes_suggest)
+0002.563 (R) [notice] Atomic restore: renaming new table (wy_best_suggestion_boxes_suggest) to final table name (demo_best_suggestion_boxes_suggest)
+0002.564 (R) [notice] Processing table (MyISAM):  demo_best_suggestion_boxes_suggest_group - will restore as: wy_best_suggestion_boxes_suggest_group
+0002.694 (R) [notice] Disabling Maintenance mode&#8230;
+0002.694 (R) [notice] Atomic restore: dropping original table (demo_best_suggestion_boxes_suggest_group)
+0002.696 (R) [notice] Atomic restore: renaming new table (wy_best_suggestion_boxes_suggest_group) to final table name (demo_best_suggestion_boxes_suggest_group)
+0002.697 (R) [notice] Finished: lines processed: 47 in 2.58 seconds
+0002.697 (R) [notice] Cleaning up rubbish...
+0002.725 (R) [notice] Restore successful!

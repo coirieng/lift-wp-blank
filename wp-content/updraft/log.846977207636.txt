@@ -1,0 +1,114 @@
+0000.080 () Opened log file at time: Tue, 31 Aug 2021 13:12:24 +0000 on http://demo.local:8888
+0000.081 () UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.61 WP: 5.8 PHP: 7.4.1 (cgi-fcgi, Darwin LIFTs-iMac.local 19.6.0 Darwin Kernel Version 19.6.0: Tue Jun 22 19:49:55 PDT 2021; root:xnu-6153.141.35~1/RELEASE_X86_64 x86_64) MySQL: 5.7.26 (max packet size=33554432) WPLANG: en_US Server: Apache safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 31.6M | 4M) multisite: N openssl: OpenSSL 1.0.2o  27 Mar 2018 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.081 () Free space on disk containing Updraft's temporary directory: 810013.1 MB
+0000.226 () Restore setup, now closing connection and starting restore over AJAX.
+0000.162 () Opened log file at time: Tue, 31 Aug 2021 13:12:25 +0000 on http://demo.local:8888
+0000.162 () UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.61 WP: 5.8 PHP: 7.4.1 (cgi-fcgi, Darwin LIFTs-iMac.local 19.6.0 Darwin Kernel Version 19.6.0: Tue Jun 22 19:49:55 PDT 2021; root:xnu-6153.141.35~1/RELEASE_X86_64 x86_64) MySQL: 5.7.26 (max packet size=33554432) WPLANG: en_US Server: Apache safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 29.7M | 4M) multisite: N openssl: OpenSSL 1.0.2o  27 Mar 2018 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.162 () Free space on disk containing Updraft's temporary directory: 810012.8 MB
+0000.182 () Ensuring WP_Filesystem is setup for a restore
+0000.313 () WP_Filesystem is setup and ready for a restore
+0000.403 () Restore job started. Entities to restore: db. Restore options: {"include_unspecified_tables":false,"tables_to_restore":["demo_options","demo_users","demo_usermeta","demo_commentmeta","demo_comments","demo_links","demo_postmeta","demo_posts","demo_term_relationships","demo_term_taxonomy","demo_termmeta","demo_terms","demo_best_css_compiler_data","demo_best_suggestion_boxes_suggest","demo_best_suggestion_boxes_suggest_group","demo_gf_draft_submissions","demo_gf_entry","demo_gf_entry_meta","demo_gf_entry_notes","demo_gf_form","demo_gf_form_meta","demo_gf_form_revisions","demo_gf_form_view","demo_gf_rest_api_keys","demo_lift_chat_suggest","demo_lift_chat_suggest_group"],"tables_to_skip":[],"updraft_encryptionphrase":"","updraft_restorer_wpcore_includewpconfig":false,"updraft_incremental_restore_point":-1}
+0000.449 () Will not delete any archives after unpacking them, because there was no cloud storage for this backup
+0000.495 () Entity: db
+0000.495 () restore_backup(backup_file=backup_2021-08-31-1311_Demo_def1ed1d0bc5-db.gz, type=db, info=a:0:{}, last_one=1)
+0000.495 () Unpacking backup... (backup_2021-08-31-1311_Demo_def1ed1d0bc5-db.gz, 0.3 Mb)
+0000.684 () Database successfully unpacked
+0000.684 () Restoring the database (on a large site this can take a long time - if it times out (which can happen if your web hosting company has configured your hosting to limit resources) then you should use a different method, such as phpMyAdmin)...
+0000.684 () Using direct MySQL access; value of use_mysqli is: 1
+0000.685 () SQL compatibility mode is: NO_AUTO_VALUE_ON_ZERO,NO_ZERO_IN_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+0002.325 () Max packet size: 32 MB
+0002.326 () Entering maintenance mode
+0002.326 () Enabling Maintenance mode&#8230;
+0002.666 () Backup of: http://demo.local:8888
+0002.667 () Content URL: http://demo.local:8888/wp-content
+0002.668 () Uploads URL: http://demo.local:8888/wp-content/uploads
+0002.668 () Old table prefix: demo_
+0002.668 () Site information: multisite=0
+0002.668 () Site information: sql_mode=NO_ZERO_IN_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+0002.687 () New table prefix: hg_
+0002.697 () Processing table (InnoDB): demo_options - will restore as: hg_options
+0003.244 () Atomic restore: dropping original table (demo_options)
+0003.803 () Atomic restore: renaming new table (hg_options) to final table name (demo_options)
+0003.819 () Restoring prior UD configuration (table: demo_options; keys: 4)
+0003.855 () Processing table (InnoDB): demo_users - will restore as: hg_users
+0004.142 () Atomic restore: dropping original table (demo_users)
+0004.322 () Atomic restore: renaming new table (hg_users) to final table name (demo_users)
+0004.333 () Processing table (InnoDB): demo_usermeta - will restore as: hg_usermeta
+0004.622 () Atomic restore: dropping original table (demo_usermeta)
+0004.699 () Atomic restore: renaming new table (hg_usermeta) to final table name (demo_usermeta)
+0004.713 () Processing table (InnoDB): demo_commentmeta - will restore as: hg_commentmeta
+0004.868 () Atomic restore: dropping original table (demo_commentmeta)
+0004.993 () Atomic restore: renaming new table (hg_commentmeta) to final table name (demo_commentmeta)
+0004.995 () Processing table (InnoDB): demo_comments - will restore as: hg_comments
+0005.239 () Atomic restore: dropping original table (demo_comments)
+0005.285 () Atomic restore: renaming new table (hg_comments) to final table name (demo_comments)
+0005.317 () Processing table (InnoDB): demo_links - will restore as: hg_links
+0005.487 () Atomic restore: dropping original table (demo_links)
+0005.511 () Atomic restore: renaming new table (hg_links) to final table name (demo_links)
+0005.515 () Processing table (InnoDB): demo_postmeta - will restore as: hg_postmeta
+0005.677 () Atomic restore: dropping original table (demo_postmeta)
+0005.778 () Atomic restore: renaming new table (hg_postmeta) to final table name (demo_postmeta)
+0005.781 () Processing table (InnoDB): demo_posts - will restore as: hg_posts
+0006.018 () Atomic restore: dropping original table (demo_posts)
+0006.240 () Atomic restore: renaming new table (hg_posts) to final table name (demo_posts)
+0006.255 () Processing table (InnoDB): demo_term_relationships - will restore as: hg_term_relationships
+0007.151 () Atomic restore: dropping original table (demo_term_relationships)
+0007.259 () Atomic restore: renaming new table (hg_term_relationships) to final table name (demo_term_relationships)
+0007.341 () Processing table (InnoDB): demo_term_taxonomy - will restore as: hg_term_taxonomy
+0007.577 () Atomic restore: dropping original table (demo_term_taxonomy)
+0007.673 () Atomic restore: renaming new table (hg_term_taxonomy) to final table name (demo_term_taxonomy)
+0007.694 () Processing table (InnoDB): demo_termmeta - will restore as: hg_termmeta
+0007.967 () Atomic restore: dropping original table (demo_termmeta)
+0008.115 () Atomic restore: renaming new table (hg_termmeta) to final table name (demo_termmeta)
+0008.122 () Processing table (InnoDB): demo_terms - will restore as: hg_terms
+0008.302 () Atomic restore: dropping original table (demo_terms)
+0008.432 () Atomic restore: renaming new table (hg_terms) to final table name (demo_terms)
+0008.436 () Processing table (InnoDB): demo_best_css_compiler_data - will restore as: hg_best_css_compiler_data
+0008.626 () Atomic restore: dropping original table (demo_best_css_compiler_data)
+0008.711 () Atomic restore: renaming new table (hg_best_css_compiler_data) to final table name (demo_best_css_compiler_data)
+0008.771 () Processing table (InnoDB): demo_best_suggestion_boxes_suggest - will restore as: hg_best_suggestion_boxes_suggest
+0009.055 () Atomic restore: dropping original table (demo_best_suggestion_boxes_suggest)
+0009.081 () Atomic restore: renaming new table (hg_best_suggestion_boxes_suggest) to final table name (demo_best_suggestion_boxes_suggest)
+0009.083 () Processing table (InnoDB): demo_best_suggestion_boxes_suggest_group - will restore as: hg_best_suggestion_boxes_suggest_group
+0009.312 () Database queries processed: 50 in 8.62 seconds
+0009.313 () Atomic restore: dropping original table (demo_best_suggestion_boxes_suggest_group)
+0009.315 () Atomic restore: renaming new table (hg_best_suggestion_boxes_suggest_group) to final table name (demo_best_suggestion_boxes_suggest_group)
+0009.318 () Processing table (InnoDB): demo_gf_draft_submissions - will restore as: hg_gf_draft_submissions
+0009.520 () Atomic restore: dropping original table (demo_gf_draft_submissions)
+0009.818 () Atomic restore: renaming new table (hg_gf_draft_submissions) to final table name (demo_gf_draft_submissions)
+0009.853 () Processing table (InnoDB): demo_gf_entry - will restore as: hg_gf_entry
+0010.112 () Atomic restore: dropping original table (demo_gf_entry)
+0010.220 () Atomic restore: renaming new table (hg_gf_entry) to final table name (demo_gf_entry)
+0010.241 () Processing table (InnoDB): demo_gf_entry_meta - will restore as: hg_gf_entry_meta
+0010.471 () Atomic restore: dropping original table (demo_gf_entry_meta)
+0010.579 () Atomic restore: renaming new table (hg_gf_entry_meta) to final table name (demo_gf_entry_meta)
+0010.604 () Processing table (InnoDB): demo_gf_entry_notes - will restore as: hg_gf_entry_notes
+0010.819 () Atomic restore: dropping original table (demo_gf_entry_notes)
+0010.912 () Atomic restore: renaming new table (hg_gf_entry_notes) to final table name (demo_gf_entry_notes)
+0010.928 () Processing table (InnoDB): demo_gf_form - will restore as: hg_gf_form
+0011.137 () Atomic restore: dropping original table (demo_gf_form)
+0011.215 () Atomic restore: renaming new table (hg_gf_form) to final table name (demo_gf_form)
+0011.218 () Processing table (InnoDB): demo_gf_form_meta - will restore as: hg_gf_form_meta
+0011.522 () Atomic restore: dropping original table (demo_gf_form_meta)
+0011.587 () Atomic restore: renaming new table (hg_gf_form_meta) to final table name (demo_gf_form_meta)
+0011.590 () Processing table (InnoDB): demo_gf_form_revisions - will restore as: hg_gf_form_revisions
+0011.848 () Atomic restore: dropping original table (demo_gf_form_revisions)
+0011.949 () Atomic restore: renaming new table (hg_gf_form_revisions) to final table name (demo_gf_form_revisions)
+0011.972 () Processing table (InnoDB): demo_gf_form_view - will restore as: hg_gf_form_view
+0012.337 () Atomic restore: dropping original table (demo_gf_form_view)
+0012.430 () Atomic restore: renaming new table (hg_gf_form_view) to final table name (demo_gf_form_view)
+0012.441 () Processing table (InnoDB): demo_gf_rest_api_keys - will restore as: hg_gf_rest_api_keys
+0012.605 () Atomic restore: dropping original table (demo_gf_rest_api_keys)
+0012.770 () Atomic restore: renaming new table (hg_gf_rest_api_keys) to final table name (demo_gf_rest_api_keys)
+0012.800 () Processing table (InnoDB): demo_lift_chat_suggest - will restore as: hg_lift_chat_suggest
+0013.049 () Atomic restore: dropping original table (demo_lift_chat_suggest)
+0013.132 () Atomic restore: renaming new table (hg_lift_chat_suggest) to final table name (demo_lift_chat_suggest)
+0013.139 () Processing table (InnoDB): demo_lift_chat_suggest_group - will restore as: hg_lift_chat_suggest_group
+0013.336 () Unlocking database and leaving maintenance mode
+0013.336 () Disabling Maintenance mode&#8230;
+0013.336 () Atomic restore: dropping original table (demo_lift_chat_suggest_group)
+0013.391 () Atomic restore: renaming new table (hg_lift_chat_suggest_group) to final table name (demo_lift_chat_suggest_group)
+0013.394 () Finished: lines processed: 78 in 12.71 seconds
+0013.395 () Cleaning up rubbish...
+0013.619 () Restore successful!
+0013.619 () Restore successful
