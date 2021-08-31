@@ -16,14 +16,7 @@ if ( version_compare( $GLOBALS['wp_version'], '5.3', '<' ) ) {
 }
 
 require get_template_directory() . '/nguyen-app.php';
-require get_template_directory() . '/theme-config/setup.php';
-require get_template_directory() . '/theme-config/sidebar.php';
-require get_template_directory() . '/theme-config/breadcrumb.php';
-require get_template_directory() . '/theme-config/scripts.php';
-require get_template_directory() . '/theme-config/styles.php';
-require get_template_directory() . '/theme-config/non-latin-language.php';
-require get_template_directory() . '/theme-config/content-width.php';
-require get_template_directory() . '/theme-config/customize-tab.php';
+require get_template_directory() . '/theme-config/theme-config.php';
 
 require get_template_directory() . '/classes/Mobile_Detect.php';
 

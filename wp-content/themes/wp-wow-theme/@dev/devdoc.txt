@@ -1,0 +1,1 @@
+$post_types = get_post_types();
