@@ -201,3 +201,10 @@
 0000.594 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
 0000.597 (0) No email will/can be sent - the user has not configured an email address.
 0000.598 (0) The backup apparently succeeded and is now complete
+0000.000 (1) Opened log file at time: Tue, 31 Aug 2021 13:21:29 +0000 on http://lift.com
+0000.002 (1) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.61 WP: 5.8 PHP: 7.4.1 (cgi-fcgi, Darwin LIFTs-iMac.local 19.6.0 Darwin Kernel Version 19.6.0: Tue Jun 22 19:49:55 PDT 2021; root:xnu-6153.141.35~1/RELEASE_X86_64 x86_64) MySQL: 5.7.26 (max packet size=16777216) WPLANG: en_US Server: Apache safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 34.7M | 36.5M) multisite: N openssl: OpenSSL 1.0.2o  27 Mar 2018 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.003 (1) Free space on disk containing Updraft's temporary directory: 810497.8 MB
+0000.004 (1) Requesting backup semaphore lock (882c7d4dffa7)
+0000.006 (1) [Debug] Lock option (updraft_lock_882c7d4dffa7, demo_options) was created in the database
+0000.006 (1) [Info] Lock (updraft_lock_882c7d4dffa7, demo_options) acquired after initialising the database
+0000.007 (1) This backup task (882c7d4dffa7) is either complete or began over 2 days ago: ending (1630416089.1466, ) (existing jobdata keys: )
