@@ -175,8 +175,8 @@ if ( ! class_exists('WOW_Options')){
 							<tr>
 								<th scope="row"><?php _e('Content Width', 'wow-pagebuilder'); ?></th>
 								<td>
-									<input type="text" class="wow-regular-text" id="wow_container_width" name="wow_options[wow_container_width]" value="<?php echo wow_get_option('wow_container_width'); ?>" placeholder="1140"> px
-									<p class="description"> <?php _e('Default Content Width is 1140 px. You can set any width.','wow-pagebuilder'); ?></p>
+									<input type="text" class="wow-regular-text" id="wow_container_width" name="wow_options[wow_container_width]" value="<?php echo wow_get_option('wow_container_width'); ?>" placeholder="10000"> px
+									<p class="description"> <?php _e('Default Content Width is 10000 px. You can set any width.','wow-pagebuilder'); ?></p>
 								</td>
 							</tr>
 	
