@@ -1,23 +1,23 @@
 /*
 * Menu Toggle
 */
-if($("header.site-header .navbar-toggler:not(.navbar-offcanvas)").length > 0) {
-    $("header.site-header .navbar-toggler:not(.navbar-offcanvas)").clickToggle(function () {
-        $(this).parents('header').toggleClass('toggle', 0)
+if(jQuery("header.site-header .navbar-toggler:not(.navbar-offcanvas)").length > 0) {
+    jQuery("header.site-header .navbar-toggler:not(.navbar-offcanvas)").clickToggle(function () {
+        jQuery(this).parents('header').toggleClass('toggle', 0)
     },function () {
-        $(this).parents('header').toggleClass('toggle', 0)
+        jQuery(this).parents('header').toggleClass('toggle', 0)
     });
 }
 
 /*
 * Menu Offcanvas
 */
-if($("header.site-header .navbar-toggler.navbar-offcanvas").length > 0) {
-    $("header.site-header .navbar-toggler.navbar-offcanvas").clickToggle(function () {
-        $(this).toggleClass('collapsed')
-        $(this).parents('header').find('.primary-menu-container').toggleClass('open')
+if(jQuery("header.site-header .navbar-toggler.navbar-offcanvas").length > 0) {
+    jQuery("header.site-header .navbar-toggler.navbar-offcanvas").clickToggle(function () {
+        jQuery(this).toggleClass('collapsed')
+        jQuery(this).parents('header').find('.primary-menu-container').toggleClass('open')
     },function () {
-        $(this).toggleClass('collapsed')
-        $(this).parents('header').find('.primary-menu-container').toggleClass('open')
+        jQuery(this).toggleClass('collapsed')
+        jQuery(this).parents('header').find('.primary-menu-container').toggleClass('open')
     });
 }

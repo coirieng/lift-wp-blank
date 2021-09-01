@@ -2,13 +2,13 @@
  * Back to top button
  */
 
- $(window).scroll(function () {
-	var getTop = $(window).scrollTop();
-	if($('#backtotop').length > 0) {
+ jQuery(window).scroll(function () {
+	var getTop = jQuery(window).scrollTop();
+	if(jQuery('#backtotop').length > 0) {
 		if(getTop > 200)  {
-			$('#backtotop').addClass('active')
+			jQuery('#backtotop').addClass('active')
 		} else {
-			$('#backtotop').removeClass('active')
+			jQuery('#backtotop').removeClass('active')
 		}
 	}
 });

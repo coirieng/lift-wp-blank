@@ -3,14 +3,14 @@
 /*
 This function apply for toggle click on the menu
 */
-(function ($) {
-  $.fn.clickToggle = function (func1, func2) {
+(function (jQuery) {
+  jQuery.fn.clickToggle = function (func1, func2) {
     var funcs = [func1, func2];
     this.data('toggleclicked', 0);
     this.click(function () {
-      var data = $(this).data();
+      var data = jQuery(this).data();
       var tc = data.toggleclicked;
-      $.proxy(funcs[tc], this)();
+      jQuery.proxy(funcs[tc], this)();
       data.toggleclicked = (tc + 1) % 2;
     });
     return this;
@@ -19,7 +19,7 @@ This function apply for toggle click on the menu
 /**
  * Animate the back to top button and anchor link
  */
-// $('a[href*="#"]')
+// jQuery('a[href*="#"]')
 //   // Remove links that don't actually link to anything
 //   .not('[href="#"]')
 //   .not('[href="#0"]')
@@ -31,24 +31,24 @@ This function apply for toggle click on the menu
 //       location.hostname == this.hostname
 //     ) {
 //       // Figure out element to scroll to
-//       var target = $(this.hash);
-//       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+//       var target = jQuery(this.hash);
+//       target = target.length ? target : jQuery('[name=' + this.hash.slice(1) + ']');
 //       // Does a scroll target exist?
 //       if (target.length) {
 //         // Only prevent default if animation is actually gonna happen
 //         event.preventDefault();
-//         $('html, body').animate({
+//         jQuery('html, body').animate({
 //           scrollTop: target.offset().top
 //         }, 1000, function() {
 //           // Callback after animation
 //           // Must change focus!
-//           var $target = $(target);
-//           $target.focus();
-//           if ($target.is(":focus")) { // Checking if the target was focused
+//           var jQuerytarget = jQuery(target);
+//           jQuerytarget.focus();
+//           if (jQuerytarget.is(":focus")) { // Checking if the target was focused
 //             return false;
 //           } else {
-//             $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-//             $target.focus(); // Set focus again
+//             jQuerytarget.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+//             jQuerytarget.focus(); // Set focus again
 //           };
 //         });
 //       }
@@ -60,14 +60,14 @@ This function apply for toggle click on the menu
  */
 
 
-$(window).scroll(function () {
-  var getTop = $(window).scrollTop();
+jQuery(window).scroll(function () {
+  var getTop = jQuery(window).scrollTop();
 
-  if ($('#backtotop').length > 0) {
+  if (jQuery('#backtotop').length > 0) {
     if (getTop > 200) {
-      $('#backtotop').addClass('active');
+      jQuery('#backtotop').addClass('active');
     } else {
-      $('#backtotop').removeClass('active');
+      jQuery('#backtotop').removeClass('active');
     }
   }
 });
@@ -264,11 +264,11 @@ $(window).scroll(function () {
 */
 
 
-if ($("header.site-header .search-submit-toggle").length > 0) {
-  $("header.site-header .search-submit-toggle").clickToggle(function () {
-    $(this).parents('.search-form').toggleClass('active');
+if (jQuery("header.site-header .search-submit-toggle").length > 0) {
+  jQuery("header.site-header .search-submit-toggle").clickToggle(function () {
+    jQuery(this).parents('.search-form').toggleClass('active');
   }, function () {
-    $(this).parents('.search-form').toggleClass('active');
+    jQuery(this).parents('.search-form').toggleClass('active');
   });
 }
 /*
@@ -276,18 +276,18 @@ if ($("header.site-header .search-submit-toggle").length > 0) {
 */
 
 
-if ($("header.site-header.search-sticky .search-submit-close").length > 0) {
-  $("header.site-header:not(.search-sticky) .search-submit-close").clickToggle(function () {
-    $(this).parents('.search-form').toggleClass('active');
-    $(this).parents('#header').toggleClass('search-active');
+if (jQuery("header.site-header.search-sticky .search-submit-close").length > 0) {
+  jQuery("header.site-header:not(.search-sticky) .search-submit-close").clickToggle(function () {
+    jQuery(this).parents('.search-form').toggleClass('active');
+    jQuery(this).parents('#header').toggleClass('search-active');
   }, function () {
-    $(this).parents('.search-form').toggleClass('active');
-    $(this).parents('#header').toggleClass('search-active');
+    jQuery(this).parents('.search-form').toggleClass('active');
+    jQuery(this).parents('#header').toggleClass('search-active');
   });
-  $("header.site-header.search-sticky .search-submit-close").clickToggle(function () {
-    $(this).parents('.search-form').toggleClass('active');
+  jQuery("header.site-header.search-sticky .search-submit-close").clickToggle(function () {
+    jQuery(this).parents('.search-form').toggleClass('active');
   }, function () {
-    $(this).parents('.search-form').toggleClass('active');
+    jQuery(this).parents('.search-form').toggleClass('active');
   });
 }
 /*
@@ -295,11 +295,11 @@ if ($("header.site-header.search-sticky .search-submit-close").length > 0) {
 */
 
 
-if ($("header.site-header .navbar-toggler:not(.navbar-offcanvas)").length > 0) {
-  $("header.site-header .navbar-toggler:not(.navbar-offcanvas)").clickToggle(function () {
-    $(this).parents('header').toggleClass('toggle', 0);
+if (jQuery("header.site-header .navbar-toggler:not(.navbar-offcanvas)").length > 0) {
+  jQuery("header.site-header .navbar-toggler:not(.navbar-offcanvas)").clickToggle(function () {
+    jQuery(this).parents('header').toggleClass('toggle', 0);
   }, function () {
-    $(this).parents('header').toggleClass('toggle', 0);
+    jQuery(this).parents('header').toggleClass('toggle', 0);
   });
 }
 /*
@@ -307,13 +307,13 @@ if ($("header.site-header .navbar-toggler:not(.navbar-offcanvas)").length > 0) {
 */
 
 
-if ($("header.site-header .navbar-toggler.navbar-offcanvas").length > 0) {
-  $("header.site-header .navbar-toggler.navbar-offcanvas").clickToggle(function () {
-    $(this).toggleClass('collapsed');
-    $(this).parents('header').find('.primary-menu-container').toggleClass('open');
+if (jQuery("header.site-header .navbar-toggler.navbar-offcanvas").length > 0) {
+  jQuery("header.site-header .navbar-toggler.navbar-offcanvas").clickToggle(function () {
+    jQuery(this).toggleClass('collapsed');
+    jQuery(this).parents('header').find('.primary-menu-container').toggleClass('open');
   }, function () {
-    $(this).toggleClass('collapsed');
-    $(this).parents('header').find('.primary-menu-container').toggleClass('open');
+    jQuery(this).toggleClass('collapsed');
+    jQuery(this).parents('header').find('.primary-menu-container').toggleClass('open');
   });
 }
 /**
@@ -561,14 +561,14 @@ window.onresize = WOW___ResponsiveEmbeds;
       var id = location.hash.substring(1),
           element;
 
-      if (!/^[A-z0-9_-]+$/.test(id)) {
+      if (!/^[A-z0-9_-]+jQuery/.test(id)) {
         return;
       }
 
       element = document.getElementById(id);
 
       if (element) {
-        if (!/^(?:a|select|input|button|textarea)$/i.test(element.tagName)) {
+        if (!/^(?:a|select|input|button|textarea)jQuery/i.test(element.tagName)) {
           element.tabIndex = -1;
         }
 
@@ -587,89 +587,89 @@ var WOW_APP = {
   xl: 1200,
   xxl: 1400,
   wow_admin_toolbar: function wow_admin_toolbar() {
-    if ($('body.admin-control').length) {
-      $('#page').append('<div id="admin-space"></div>');
+    if (jQuery('body.admin-control').length) {
+      jQuery('#page').append('<div id="admin-space"></div>');
     }
   },
   wow_clear_canvas_menu: function wow_clear_canvas_menu(e) {
-    $('header.site-header .menu-offcanvas-' + e).removeAttr('style');
+    jQuery('header.site-header .menu-offcanvas-' + e).removeAttr('style');
   },
   wow_gen_canvas_menu: function wow_gen_canvas_menu(e) {
     // Off canvas menu toggle
-    var getHeaderNormal = $('header#header').outerHeight(true);
+    var getHeaderNormal = jQuery('header#header').outerHeight(true);
 
-    if ($('header#header .navbar').hasClass('navbar-expand-' + e)) {
-      $('header.site-header .menu-offcanvas-' + e).css({
+    if (jQuery('header#header .navbar').hasClass('navbar-expand-' + e)) {
+      jQuery('header.site-header .menu-offcanvas-' + e).css({
         'top': getHeaderNormal + 'px'
       });
     } else {
-      $('header.site-header .menu-offcanvas-' + e).removeAttr('style');
+      jQuery('header.site-header .menu-offcanvas-' + e).removeAttr('style');
     }
   },
   wow_hover_menu: function wow_hover_menu(e) {
     // Menu hover with breakpoint
-    $('header.site-header .navbar-expand-' + e + ' #site-navigation li.menu-item-has-children').hover(function () {
-      $(this).addClass('menu-hover');
+    jQuery('header.site-header .navbar-expand-' + e + ' #site-navigation li.menu-item-has-children').hover(function () {
+      jQuery(this).addClass('menu-hover');
     }, function () {
-      $(this).removeClass('menu-hover');
+      jQuery(this).removeClass('menu-hover');
     });
   },
   wow_fixed_header: function wow_fixed_header() {
     // Fixed header will be add padding to the html element
-    var getHeader = $('header#header.fixed-top').outerHeight(true);
+    var getHeader = jQuery('header#header.fixed-top').outerHeight(true);
 
     if (getHeader) {
-      $('html').css({
+      jQuery('html').css({
         'padding-top': getHeader + 'px'
       });
     }
   },
   wow_toggle_ofcanvas: function wow_toggle_ofcanvas() {
     // When toggle menu scrolled
-    if ($('header#header:not(.fixed-top)')) {
-      $('header#header .navbar-toggler.navbar-offcanvas').addClass('collapsed');
-      $('header#header .primary-menu-container').removeClass('open');
+    if (jQuery('header#header:not(.fixed-top)')) {
+      jQuery('header#header .navbar-toggler.navbar-offcanvas').addClass('collapsed');
+      jQuery('header#header .primary-menu-container').removeClass('open');
     }
   },
   wow_active_header: function wow_active_header() {
     // When window is scrolled
-    var st = $(window).scrollTop();
+    var st = jQuery(window).scrollTop();
 
     if (st > 0) {
-      $('header#header.fixed-top').addClass('active');
+      jQuery('header#header.fixed-top').addClass('active');
       WOW_APP.wow_toggle_ofcanvas();
     } else {
-      $('header#header.fixed-top').removeClass('active');
+      jQuery('header#header.fixed-top').removeClass('active');
     }
   },
   wow_canvas_header: function wow_canvas_header() {
     WOW_APP.wow_gen_canvas_menu('all');
 
-    if ($(window).width() < WOW_APP.sm) {
+    if (jQuery(window).width() < WOW_APP.sm) {
       WOW_APP.wow_gen_canvas_menu('sm');
     } else {
       WOW_APP.wow_clear_canvas_menu('sm');
     }
 
-    if ($(window).width() <= WOW_APP.md) {
+    if (jQuery(window).width() <= WOW_APP.md) {
       WOW_APP.wow_gen_canvas_menu('md');
     } else {
       WOW_APP.wow_clear_canvas_menu('md');
     }
 
-    if ($(window).width() <= WOW_APP.lg) {
+    if (jQuery(window).width() <= WOW_APP.lg) {
       WOW_APP.wow_gen_canvas_menu('lg');
     } else {
       WOW_APP.wow_clear_canvas_menu('lg');
     }
 
-    if ($(window).width() <= WOW_APP.xl) {
+    if (jQuery(window).width() <= WOW_APP.xl) {
       WOW_APP.wow_gen_canvas_menu('xl');
     } else {
       WOW_APP.wow_clear_canvas_menu('xl');
     }
 
-    if ($(window).width() <= WOW_APP.xxl) {
+    if (jQuery(window).width() <= WOW_APP.xxl) {
       WOW_APP.wow_gen_canvas_menu('xxl');
     } else {
       WOW_APP.wow_clear_canvas_menu('xxl');
@@ -677,27 +677,27 @@ var WOW_APP = {
   },
   wow_get_header_hover: function wow_get_header_hover() {
     // TODO: read this one again 
-    if ($(window).width() > 0) {
+    if (jQuery(window).width() > 0) {
       WOW_APP.wow_hover_menu('keep');
     }
 
-    if ($(window).width() >= WOW_APP.sm) {
+    if (jQuery(window).width() >= WOW_APP.sm) {
       WOW_APP.wow_hover_menu('sm');
     }
 
-    if ($(window).width() >= WOW_APP.md) {
+    if (jQuery(window).width() >= WOW_APP.md) {
       WOW_APP.wow_hover_menu('md');
     }
 
-    if ($(window).width() >= WOW_APP.lg) {
+    if (jQuery(window).width() >= WOW_APP.lg) {
       WOW_APP.wow_hover_menu('lg');
     }
 
-    if ($(window).width() >= WOW_APP.xl) {
+    if (jQuery(window).width() >= WOW_APP.xl) {
       WOW_APP.wow_hover_menu('xl');
     }
 
-    if ($(window).width() >= WOW_APP.xxl) {
+    if (jQuery(window).width() >= WOW_APP.xxl) {
       WOW_APP.wow_hover_menu('xxl');
     }
   }
@@ -706,19 +706,19 @@ var WOW_APP = {
 ///////////////////////////////////////////////////
 
 wowDOMChange(function () {});
-$(function () {
+jQuery(function () {
   WOW_APP.wow_fixed_header();
 });
-$(document).ready(function () {
+jQuery(document).ready(function () {
   WOW_APP.wow_fixed_header();
   WOW_APP.wow_canvas_header();
   WOW_APP.wow_get_header_hover();
   WOW_APP.wow_admin_toolbar();
 });
-$(window).scroll(function () {
+jQuery(window).scroll(function () {
   WOW_APP.wow_active_header();
 });
-$(window).resize(function () {
+jQuery(window).resize(function () {
   WOW_APP.wow_fixed_header();
   WOW_APP.wow_canvas_header();
   WOW_APP.wow_get_header_hover();

@@ -1,7 +1,7 @@
 /**
  * Animate the back to top button and anchor link
  */
-// $('a[href*="#"]')
+// jQuery('a[href*="#"]')
 //   // Remove links that don't actually link to anything
 //   .not('[href="#"]')
 //   .not('[href="#0"]')
@@ -13,24 +13,24 @@
 //       location.hostname == this.hostname
 //     ) {
 //       // Figure out element to scroll to
-//       var target = $(this.hash);
-//       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+//       var target = jQuery(this.hash);
+//       target = target.length ? target : jQuery('[name=' + this.hash.slice(1) + ']');
 //       // Does a scroll target exist?
 //       if (target.length) {
 //         // Only prevent default if animation is actually gonna happen
 //         event.preventDefault();
-//         $('html, body').animate({
+//         jQuery('html, body').animate({
 //           scrollTop: target.offset().top
 //         }, 1000, function() {
 //           // Callback after animation
 //           // Must change focus!
-//           var $target = $(target);
-//           $target.focus();
-//           if ($target.is(":focus")) { // Checking if the target was focused
+//           var jQuerytarget = jQuery(target);
+//           jQuerytarget.focus();
+//           if (jQuerytarget.is(":focus")) { // Checking if the target was focused
 //             return false;
 //           } else {
-//             $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-//             $target.focus(); // Set focus again
+//             jQuerytarget.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+//             jQuerytarget.focus(); // Set focus again
 //           };
 //         });
 //       }
