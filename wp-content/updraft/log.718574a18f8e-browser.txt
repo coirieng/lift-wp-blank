@@ -1,0 +1,111 @@
+0000.034 (R) [notice] Looking for db archive: file name: backup_2021-08-31-1351_DEMO_d8311610b6bd-db.gz
+0000.034 (R) [notice] Archive is expected to be size: 277 KB: OK
+0000.076 (R) [notice] Looking for uploads archive: file name: backup_2021-08-31-1351_DEMO_0a94cfcfe6d9-uploads.zip
+0000.076 (R) [notice] Archive is expected to be size: 8961.9 KB: OK
+0000.076 (R) [notice] Looking for others archive: file name: backup_2021-08-31-1351_DEMO_0a94cfcfe6d9-others.zip
+0000.077 (R) [notice] Archive is expected to be size: 2474 KB: OK
+0000.078 (R) [notice] Will not delete any archives after unpacking them, because there was no cloud storage for this backup
+0000.080 (R) [notice] Unpacking backup... (backup_2021-08-31-1351_DEMO_d8311610b6bd-db.gz, 0.3 Mb)
+0000.123 (R) [notice] Restoring the database (on a large site this can take a long time - if it times out (which can happen if your web hosting company has configured your hosting to limit resources) then you should use a different method, such as phpMyAdmin)...
+0000.738 (R) [notice] Enabling Maintenance mode&#8230;
+0000.813 (R) [notice] Backup of: http://lift.com
+0000.814 (R) [notice] Content URL: http://lift.com/wp-content
+0000.814 (R) [notice] Uploads URL: http://lift.com/wp-content/uploads
+0000.814 (R) [notice] Old table prefix: demo_
+0000.814 (R) [notice] Site information: multisite = 0
+0000.815 (R) [notice] Site information: sql_mode = NO_ZERO_IN_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+0000.816 (R) [notice] New table prefix: hy_
+0000.819 (R) [notice] Processing table (MyISAM):  demo_options - will restore as: hy_options
+0000.991 (R) [notice] Atomic restore: dropping original table (demo_options)
+0000.994 (R) [notice] Atomic restore: renaming new table (hy_options) to final table name (demo_options)
+0001.012 (R) [notice] Processing table (MyISAM):  demo_users - will restore as: hy_users
+0001.139 (R) [notice] Atomic restore: dropping original table (demo_users)
+0001.142 (R) [notice] Atomic restore: renaming new table (hy_users) to final table name (demo_users)
+0001.143 (R) [notice] Processing table (MyISAM):  demo_usermeta - will restore as: hy_usermeta
+0001.256 (R) [notice] Atomic restore: dropping original table (demo_usermeta)
+0001.259 (R) [notice] Atomic restore: renaming new table (hy_usermeta) to final table name (demo_usermeta)
+0001.260 (R) [notice] Processing table (MyISAM):  demo_commentmeta - will restore as: hy_commentmeta
+0001.396 (R) [notice] Atomic restore: dropping original table (demo_commentmeta)
+0001.403 (R) [notice] Atomic restore: renaming new table (hy_commentmeta) to final table name (demo_commentmeta)
+0001.404 (R) [notice] Processing table (MyISAM):  demo_comments - will restore as: hy_comments
+0001.681 (R) [notice] Atomic restore: dropping original table (demo_comments)
+0001.684 (R) [notice] Atomic restore: renaming new table (hy_comments) to final table name (demo_comments)
+0001.686 (R) [notice] Processing table (MyISAM):  demo_links - will restore as: hy_links
+0001.806 (R) [notice] Atomic restore: dropping original table (demo_links)
+0001.860 (R) [notice] Atomic restore: renaming new table (hy_links) to final table name (demo_links)
+0001.861 (R) [notice] Processing table (MyISAM):  demo_postmeta - will restore as: hy_postmeta
+0001.987 (R) [notice] Atomic restore: dropping original table (demo_postmeta)
+0001.990 (R) [notice] Atomic restore: renaming new table (hy_postmeta) to final table name (demo_postmeta)
+0001.991 (R) [notice] Processing table (MyISAM):  demo_posts - will restore as: hy_posts
+0002.112 (R) [notice] Atomic restore: dropping original table (demo_posts)
+0002.115 (R) [notice] Atomic restore: renaming new table (hy_posts) to final table name (demo_posts)
+0002.116 (R) [notice] Processing table (MyISAM):  demo_term_relationships - will restore as: hy_term_relationships
+0002.232 (R) [notice] Atomic restore: dropping original table (demo_term_relationships)
+0002.235 (R) [notice] Atomic restore: renaming new table (hy_term_relationships) to final table name (demo_term_relationships)
+0002.236 (R) [notice] Processing table (MyISAM):  demo_term_taxonomy - will restore as: hy_term_taxonomy
+0002.340 (R) [notice] Atomic restore: dropping original table (demo_term_taxonomy)
+0002.342 (R) [notice] Atomic restore: renaming new table (hy_term_taxonomy) to final table name (demo_term_taxonomy)
+0002.343 (R) [notice] Processing table (MyISAM):  demo_termmeta - will restore as: hy_termmeta
+0002.449 (R) [notice] Atomic restore: dropping original table (demo_termmeta)
+0002.452 (R) [notice] Atomic restore: renaming new table (hy_termmeta) to final table name (demo_termmeta)
+0002.453 (R) [notice] Processing table (MyISAM):  demo_terms - will restore as: hy_terms
+0002.586 (R) [notice] Atomic restore: dropping original table (demo_terms)
+0002.588 (R) [notice] Atomic restore: renaming new table (hy_terms) to final table name (demo_terms)
+0002.589 (R) [notice] Processing table (InnoDB):  demo_best_css_compiler_data - will restore as: hy_best_css_compiler_data
+0002.749 (R) [notice] Atomic restore: dropping original table (demo_best_css_compiler_data)
+0002.750 (R) [notice] Atomic restore: renaming new table (hy_best_css_compiler_data) to final table name (demo_best_css_compiler_data)
+0002.753 (R) [notice] Processing table (MyISAM):  demo_best_suggestion_boxes_suggest - will restore as: hy_best_suggestion_boxes_suggest
+0002.848 (R) [notice] Atomic restore: dropping original table (demo_best_suggestion_boxes_suggest)
+0002.849 (R) [notice] Atomic restore: renaming new table (hy_best_suggestion_boxes_suggest) to final table name (demo_best_suggestion_boxes_suggest)
+0002.850 (R) [notice] Processing table (MyISAM):  demo_best_suggestion_boxes_suggest_group - will restore as: hy_best_suggestion_boxes_suggest_group
+0002.940 (R) [notice] Atomic restore: dropping original table (demo_best_suggestion_boxes_suggest_group)
+0002.941 (R) [notice] Atomic restore: renaming new table (hy_best_suggestion_boxes_suggest_group) to final table name (demo_best_suggestion_boxes_suggest_group)
+0002.941 (R) [notice] Processing table (InnoDB):  demo_gf_draft_submissions - will restore as: hy_gf_draft_submissions
+0003.034 (R) [notice] Database queries processed: 50 in 2.91 seconds
+0003.036 (R) [notice] Atomic restore: dropping original table (demo_gf_draft_submissions)
+0003.036 (R) [notice] Atomic restore: renaming new table (hy_gf_draft_submissions) to final table name (demo_gf_draft_submissions)
+0003.039 (R) [notice] Processing table (InnoDB):  demo_gf_entry - will restore as: hy_gf_entry
+0003.143 (R) [notice] Atomic restore: dropping original table (demo_gf_entry)
+0003.143 (R) [notice] Atomic restore: renaming new table (hy_gf_entry) to final table name (demo_gf_entry)
+0003.146 (R) [notice] Processing table (InnoDB):  demo_gf_entry_meta - will restore as: hy_gf_entry_meta
+0003.244 (R) [notice] Atomic restore: dropping original table (demo_gf_entry_meta)
+0003.244 (R) [notice] Atomic restore: renaming new table (hy_gf_entry_meta) to final table name (demo_gf_entry_meta)
+0003.246 (R) [notice] Processing table (InnoDB):  demo_gf_entry_notes - will restore as: hy_gf_entry_notes
+0003.370 (R) [notice] Atomic restore: dropping original table (demo_gf_entry_notes)
+0003.370 (R) [notice] Atomic restore: renaming new table (hy_gf_entry_notes) to final table name (demo_gf_entry_notes)
+0003.373 (R) [notice] Processing table (InnoDB):  demo_gf_form - will restore as: hy_gf_form
+0003.497 (R) [notice] Atomic restore: dropping original table (demo_gf_form)
+0003.497 (R) [notice] Atomic restore: renaming new table (hy_gf_form) to final table name (demo_gf_form)
+0003.505 (R) [notice] Processing table (InnoDB):  demo_gf_form_meta - will restore as: hy_gf_form_meta
+0003.637 (R) [notice] Atomic restore: dropping original table (demo_gf_form_meta)
+0003.637 (R) [notice] Atomic restore: renaming new table (hy_gf_form_meta) to final table name (demo_gf_form_meta)
+0003.639 (R) [notice] Processing table (InnoDB):  demo_gf_form_revisions - will restore as: hy_gf_form_revisions
+0003.736 (R) [notice] Atomic restore: dropping original table (demo_gf_form_revisions)
+0003.737 (R) [notice] Atomic restore: renaming new table (hy_gf_form_revisions) to final table name (demo_gf_form_revisions)
+0003.740 (R) [notice] Processing table (InnoDB):  demo_gf_form_view - will restore as: hy_gf_form_view
+0003.860 (R) [notice] Atomic restore: dropping original table (demo_gf_form_view)
+0003.861 (R) [notice] Atomic restore: renaming new table (hy_gf_form_view) to final table name (demo_gf_form_view)
+0003.863 (R) [notice] Processing table (InnoDB):  demo_gf_rest_api_keys - will restore as: hy_gf_rest_api_keys
+0003.977 (R) [notice] Atomic restore: dropping original table (demo_gf_rest_api_keys)
+0003.977 (R) [notice] Atomic restore: renaming new table (hy_gf_rest_api_keys) to final table name (demo_gf_rest_api_keys)
+0003.979 (R) [notice] Processing table (InnoDB):  demo_lift_chat_suggest - will restore as: hy_lift_chat_suggest
+0004.102 (R) [notice] Atomic restore: dropping original table (demo_lift_chat_suggest)
+0004.103 (R) [notice] Atomic restore: renaming new table (hy_lift_chat_suggest) to final table name (demo_lift_chat_suggest)
+0004.122 (R) [notice] Processing table (InnoDB):  demo_lift_chat_suggest_group - will restore as: hy_lift_chat_suggest_group
+0004.372 (R) [notice] Disabling Maintenance mode&#8230;
+0004.372 (R) [notice] Atomic restore: dropping original table (demo_lift_chat_suggest_group)
+0004.373 (R) [notice] Atomic restore: renaming new table (hy_lift_chat_suggest_group) to final table name (demo_lift_chat_suggest_group)
+0004.375 (R) [notice] Finished: lines processed: 76 in 4.25 seconds
+0004.375 (R) [notice] Cleaning up rubbish...
+0004.384 (R) [notice] Unpacking backup... (backup_2021-08-31-1351_DEMO_0a94cfcfe6d9-uploads.zip, 8.8 MB)
+0004.852 (R) [notice] Unzip progress: 199 out of 199 files (13.4 MB, uploads/salient/menu-dynamic.css)
+0004.855 (R) [notice] Moving old data out of the way...
+0004.931 (R) [notice] Moving unpacked backup into place...
+0005.026 (R) [notice] Cleaning up rubbish...
+0005.029 (R) [notice] Unpacking backup... (backup_2021-08-31-1351_DEMO_0a94cfcfe6d9-others.zip, 2.4 MB)
+0005.190 (R) [notice] Unzip progress: 28 out of 28 files (5.3 MB, complier/compiler-concat-eccbc87e4b5ce2fe28308fd9f2a7baf3.css)
+0005.385 (R) [notice] Cleaning up rubbish...
+0005.386 (R) [notice] Error: Failed to delete working directory after restoring. (/Users/nguyenpham/SourceCode/lift-wp-blank/wp-content/upgrade/58d6c541)
+0005.387 (R) [notice] Files found:
+0005.387 (R) [notice] * upgrade
+0005.409 (R) [notice] Restore successful!
