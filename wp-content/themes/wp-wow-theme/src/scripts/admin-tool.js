@@ -59,6 +59,10 @@ jQuery(document).ready(function () {
         getACount('img')
         countIMGNoAlt()
     }
+    if(jQuery('#wow-builder-container').length > 0 && jQuery('.admintoolbar').length > 0) {
+        var item = jQuery('.admintoolbar .post-edit-link').attr('href');
+        jQuery('.admintoolbar').prepend('<a href="'+item.replace('action=edit', 'action=wow_editor')+'" class="wow-editor-link">WOW Editor</a>')
+    }
 });
 
 
