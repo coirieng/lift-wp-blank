@@ -1,5 +1,21 @@
 "use strict";
 
+/*
+This function apply for toggle click on the menu
+*/
+(function ($) {
+  $.fn.clickToggle = function (func1, func2) {
+    var funcs = [func1, func2];
+    this.data('toggleclicked', 0);
+    this.click(function () {
+      var data = $(this).data();
+      var tc = data.toggleclicked;
+      $.proxy(funcs[tc], this)();
+      data.toggleclicked = (tc + 1) % 2;
+    });
+    return this;
+  };
+})(jQuery);
 /**
  * Animate the back to top button and anchor link
  */
@@ -42,13 +58,17 @@
 /**
  * Back to top button
  */
+
+
 $(window).scroll(function () {
   var getTop = $(window).scrollTop();
 
-  if (getTop > 200) {
-    $('#backtotop').addClass('active');
-  } else {
-    $('#backtotop').removeClass('active');
+  if ($('#backtotop').length > 0) {
+    if (getTop > 200) {
+      $('#backtotop').addClass('active');
+    } else {
+      $('#backtotop').removeClass('active');
+    }
   }
 });
 /**
@@ -244,47 +264,58 @@ $(window).scroll(function () {
 */
 
 
-$("header.site-header .search-submit-toggle").clickToggle(function () {
-  $(this).parents('.search-form').toggleClass('active');
-}, function () {
-  $(this).parents('.search-form').toggleClass('active');
-});
+if ($("header.site-header .search-submit-toggle").length > 0) {
+  $("header.site-header .search-submit-toggle").clickToggle(function () {
+    $(this).parents('.search-form').toggleClass('active');
+  }, function () {
+    $(this).parents('.search-form').toggleClass('active');
+  });
+}
 /*
 * Button Close active/deactive
 */
 
-$("header.site-header:not(.search-sticky) .search-submit-close").clickToggle(function () {
-  $(this).parents('.search-form').toggleClass('active');
-  $(this).parents('#header').toggleClass('search-active');
-}, function () {
-  $(this).parents('.search-form').toggleClass('active');
-  $(this).parents('#header').toggleClass('search-active');
-});
-$("header.site-header.search-sticky .search-submit-close").clickToggle(function () {
-  $(this).parents('.search-form').toggleClass('active');
-}, function () {
-  $(this).parents('.search-form').toggleClass('active');
-});
+
+if ($("header.site-header.search-sticky .search-submit-close").length > 0) {
+  $("header.site-header:not(.search-sticky) .search-submit-close").clickToggle(function () {
+    $(this).parents('.search-form').toggleClass('active');
+    $(this).parents('#header').toggleClass('search-active');
+  }, function () {
+    $(this).parents('.search-form').toggleClass('active');
+    $(this).parents('#header').toggleClass('search-active');
+  });
+  $("header.site-header.search-sticky .search-submit-close").clickToggle(function () {
+    $(this).parents('.search-form').toggleClass('active');
+  }, function () {
+    $(this).parents('.search-form').toggleClass('active');
+  });
+}
 /*
 * Menu Toggle
 */
 
-$("header.site-header .navbar-toggler:not(.navbar-offcanvas)").clickToggle(function () {
-  $(this).parents('header').toggleClass('toggle', 0);
-}, function () {
-  $(this).parents('header').toggleClass('toggle', 0);
-});
+
+if ($("header.site-header .navbar-toggler:not(.navbar-offcanvas)").length > 0) {
+  $("header.site-header .navbar-toggler:not(.navbar-offcanvas)").clickToggle(function () {
+    $(this).parents('header').toggleClass('toggle', 0);
+  }, function () {
+    $(this).parents('header').toggleClass('toggle', 0);
+  });
+}
 /*
 * Menu Offcanvas
 */
 
-$("header.site-header .navbar-toggler.navbar-offcanvas").clickToggle(function () {
-  $(this).toggleClass('collapsed');
-  $(this).parents('header').find('.primary-menu-container').toggleClass('open');
-}, function () {
-  $(this).toggleClass('collapsed');
-  $(this).parents('header').find('.primary-menu-container').toggleClass('open');
-});
+
+if ($("header.site-header .navbar-toggler.navbar-offcanvas").length > 0) {
+  $("header.site-header .navbar-toggler.navbar-offcanvas").clickToggle(function () {
+    $(this).toggleClass('collapsed');
+    $(this).parents('header').find('.primary-menu-container').toggleClass('open');
+  }, function () {
+    $(this).toggleClass('collapsed');
+    $(this).parents('header').find('.primary-menu-container').toggleClass('open');
+  });
+}
 /**
  * File primary-navigation.js.
  *
@@ -298,6 +329,7 @@ $("header.site-header .navbar-toggler.navbar-offcanvas").clickToggle(function ()
  * @param {boolean} withListeners - Whether we want to add/remove listeners or not.
  * @since Twenty Twenty-One 1.0
  */
+
 
 function WOW_____ToggleAriaExpanded(el, withListeners) {// if ( 'true' !== el.getAttribute( 'aria-expanded' ) ) {
   // 	// el.setAttribute( 'aria-expanded', 'true' );
@@ -545,24 +577,6 @@ window.onresize = WOW___ResponsiveEmbeds;
     }, false);
   }
 })();
-/*
-This function apply for toggle click on the menu
-*/
-
-
-(function ($) {
-  $.fn.clickToggle = function (func1, func2) {
-    var funcs = [func1, func2];
-    this.data('toggleclicked', 0);
-    this.click(function () {
-      var data = $(this).data();
-      var tc = data.toggleclicked;
-      $.proxy(funcs[tc], this)();
-      data.toggleclicked = (tc + 1) % 2;
-    });
-    return this;
-  };
-})(jQuery);
 
 var WOW_APP = {
   // Break points
