@@ -737,3 +737,14 @@ $boo: #cccccc;
 		-webkit-overflow-scrolling: touch;
 	}
 }
+
+#wow_admin_thumb,
+.wow_admin_thumb {
+	width: 80px;
+	img{
+		max-width: 100%;
+		height: initial !important;
+		border: 1px solid #dfdfdf;
+		padding: 2px;
+	}
+}

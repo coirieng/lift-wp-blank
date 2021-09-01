@@ -24,12 +24,14 @@ if (!class_exists('WP_Blocks_Core_Init')) {
                     'query_var' => true,
                     'has_archive' => true,
                     'exclude_from_search' => true,
+                    'menu_position' => 20,
                     'supports' => array(
                         'title',
                         'editor',
                         'custom-fields',
                         'revisions',
                         'author',
+                        'page-attributes',
                         'thumbnail'
                         ),
                         'labels' => array (

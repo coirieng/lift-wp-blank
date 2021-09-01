@@ -18,3 +18,4 @@ require_once 'config/non-latin-language.php';
 require_once 'config/content-width.php';
 require_once 'config/customize-tab.php';
 require_once 'config/admin.php';
+require_once 'config/post-thumbnail.php';

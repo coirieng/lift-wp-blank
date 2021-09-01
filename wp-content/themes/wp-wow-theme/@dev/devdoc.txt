@@ -1,1 +1,5 @@
-$post_types = get_post_types();
+CAFN LAFM THUMBNAIL vaf top menu 
+
+the_post_thumbnail( 'your-custom-size' );
+set_post_thumbnail_size( 50, 50, true ); 
+add_image_size( 'custom-size', 770, 350, true );
