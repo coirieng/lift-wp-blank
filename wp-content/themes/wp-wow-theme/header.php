@@ -25,7 +25,14 @@
 	<?php get_template_part( 'template-parts/header/site-header' ); ?>
 
 	<!-- WOW CONTENT -->
-	<main id="content" class="site-content wow-content">
+	<?php
+		if( get_post_meta( get_the_ID(), '_wow_current_post_editor', true ) ) {
+			$looking_for_wow_builder = ' wow-content-with-wow-builder';
+		} else {
+			$looking_for_wow_builder = ' wow-content-single';
+		}
+	?>
+	<main id="content" class="site-content wow-content<?php echo $looking_for_wow_builder;?>">
 		<div class="content-wrapper">
 			<div id="primary" class="content-area">
 				<!-- WOW MAIN -->

@@ -18,7 +18,7 @@ $post_page_title = $wow_theme['wow-theme-page-style-content-title'];
 // TODO: CHANGE HEADER BLOCK 
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
+    
     <?php if ( ! is_front_page() ) : ?>
     <header class="entry-header alignwide">
         <div class="content-wrapper">

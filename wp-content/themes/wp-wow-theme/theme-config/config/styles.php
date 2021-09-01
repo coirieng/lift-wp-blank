@@ -26,10 +26,11 @@ function wow_styles() {
 	$layout_scrollbar = $wow_theme['wow-theme-global-style-theme-scrollbar'];
 
 	if(isset($layout_style) && ($layout_style === '1' || $layout_style == 1)) {
-		$layout_css .= "#content.wow-content .content-wrapper .wow-main{max-width: 100%; margin: 0 auto; width: 100%}";
+		$layout_css .= "#content.site-content.wow-content.wow-content-single .wow-main{max-width: 100%; margin: 0 auto; width: 100%}";
 	}
 	if(isset($layout_style) && ($layout_style === '1' || $layout_style == 1) && $layout_size) {
-		$layout_css .= "#content.wow-content .wpb_wrapper{max-width: ".$layout_size_value."px; margin: 0 auto; width: 100%}";
+		$layout_css .= "#content.site-content.wow-content.wow-content-single .content-wrapper{max-width: ".$layout_size_value."px; margin: 0 auto; width: 100%}";
+		// $layout_css .= "#content.wow-content .wow_wrapper{max-width: ".$layout_size_value."px; margin: 0 auto; width: 100%}";
 		$layout_css .= "#content.wow-content .container-fluid{max-width: ".$layout_size_value."px; margin: 0 auto; width: 100%}";
 		// TODO: layout post detail and archive page 
 	}

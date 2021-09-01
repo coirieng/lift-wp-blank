@@ -175,16 +175,16 @@ if ( ! class_exists('WOW_Options')){
 							<tr>
 								<th scope="row"><?php _e('Content Width', 'wow-pagebuilder'); ?></th>
 								<td>
-									<input type="text" class="wow-regular-text" id="wow_container_width" name="wow_options[wow_container_width]" value="<?php echo wow_get_option('wow_container_width'); ?>" placeholder="10000"> px
-									<p class="description"> <?php _e('Default Content Width is 10000 px. You can set any width.','wow-pagebuilder'); ?></p>
+									<input type="text" class="wow-regular-text" id="wow_container_width" name="wow_options[wow_container_width]" value="<?php echo wow_get_option('wow_container_width'); ?>" placeholder="1320"> px
+									<p class="description"> <?php _e('Default Content Width is 1320px. You can set any width.','wow-pagebuilder'); ?></p>
 								</td>
 							</tr>
 	
 							<tr>
 								<th scope="row"><?php _e('Gutter', 'wow-pagebuilder'); ?></th>
 								<td>
-									<input type="text" class="wow-regular-text" id="wow_col_spacing" name="wow_options[wow_col_spacing]" value="<?php echo wow_get_option('wow_col_spacing'); ?>" placeholder="30"> px
-									<p class="description"> <?php _e('Default Spacing is 30 px. You can set any spacing.','wow-pagebuilder'); ?></p>
+									<input type="text" class="wow-regular-text" id="wow_col_spacing" name="wow_options[wow_col_spacing]" value="<?php echo wow_get_option('wow_col_spacing'); ?>" placeholder="0.75"> rem
+									<p class="description"> <?php _e('Default Spacing is 0.75rem. You can set any spacing.','wow-pagebuilder'); ?></p>
 								</td>
 							</tr>
 	

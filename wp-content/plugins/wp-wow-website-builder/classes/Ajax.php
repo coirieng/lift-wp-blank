@@ -124,12 +124,12 @@ if ( ! class_exists('WOW_Ajax')){
 			$get_content_width  = (int)wow_get_option('wow_container_width');
 			$wow_col_spacing   = (int)wow_get_option('wow_col_spacing');
 
-			if ( ! $get_content_width ){ $get_content_width = '10000'; }
+			if ( ! $get_content_width ){ $get_content_width = '1320'; }
 			if ( ! $wow_col_spacing = ( $wow_col_spacing / 2 ) ){
-				$wow_col_spacing = 15;
+				$wow_col_spacing = 0.75;
 			}
 			$css .= ".wow-builder-container#wow-builder-container .wow-row-parent > .wow-container, .wow-carousel-content-wrap .wow-container{ max-width: {$get_content_width}px }";
-			$css .= ".wow-builder-container#wow-builder-container > .wow-row-parent > .wow-container,.wow-builder-container#wow-builder-container  .wow-row-placeholder > .wow-row-parent > .wow-container,.wow-carousel-content-wrap .wow-container, .wow-builder-container .wow-column-parent-view { padding-left: {$wow_col_spacing}px; }.wow-builder-container#wow-builder-container > .wow-row-parent > .wow-container, .wow-builder-container#wow-builder-container .wow-row-placeholder > .wow-row-parent > .wow-container,.wow-carousel-content-wrap .wow-container, .wow-builder-container .wow-column-parent-view{ padding-right: {$wow_col_spacing}px; }  .wow-container > .wow-row { margin-left: -{$wow_col_spacing}px; }.wow-container > .wow-row { margin-right: -{$wow_col_spacing}px; } .wow-builder-container .wow-column-parent-editor .wow-column { margin-left: {$wow_col_spacing}px; } .wow-builder-container .wow-column-parent-editor .wow-column { margin-right: {$wow_col_spacing}px; }";
+			$css .= ".wow-builder-container#wow-builder-container > .wow-row-parent > .wow-container,.wow-builder-container#wow-builder-container  .wow-row-placeholder > .wow-row-parent > .wow-container,.wow-carousel-content-wrap .wow-container, .wow-builder-container .wow-column-parent-view { padding-left: {$wow_col_spacing}rem; }.wow-builder-container#wow-builder-container > .wow-row-parent > .wow-container, .wow-builder-container#wow-builder-container .wow-row-placeholder > .wow-row-parent > .wow-container,.wow-carousel-content-wrap .wow-container, .wow-builder-container .wow-column-parent-view{ padding-right: {$wow_col_spacing}rem; }  .wow-container > .wow-row { margin-left: -{$wow_col_spacing}rem; }.wow-container > .wow-row { margin-right: -{$wow_col_spacing}rem; } .wow-builder-container .wow-column-parent-editor .wow-column { margin-left: {$wow_col_spacing}rem; } .wow-builder-container .wow-column-parent-editor .wow-column { margin-right: {$wow_col_spacing}rem; }";
 			return $css;
 		}
 
