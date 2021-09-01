@@ -319,7 +319,7 @@ if ( ! function_exists('wow_get_option')){
 				$value = $wow_options[$option];
 			}
 		}
-
+		
 		return $value;
 	}
 }

@@ -278,6 +278,54 @@ body {
 .widget.widget_search {
   margin-bottom: 1rem; }
 
+#content.wow-content .content-wrapper .wow-main {
+  width: 100%;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto; }
+  @media (min-width: 576px) {
+    #content.wow-content .content-wrapper .wow-main {
+      max-width: 540px; } }
+  @media (min-width: 768px) {
+    #content.wow-content .content-wrapper .wow-main {
+      max-width: 720px; } }
+  @media (min-width: 992px) {
+    #content.wow-content .content-wrapper .wow-main {
+      max-width: 960px; } }
+  @media (min-width: 1200px) {
+    #content.wow-content .content-wrapper .wow-main {
+      max-width: 1140px; } }
+  @media (min-width: 1400px) {
+    #content.wow-content .content-wrapper .wow-main {
+      max-width: 1320px; } }
+  #content.wow-content .content-wrapper .wow-main #wow-builder-container .wow-row-parent .wow-container {
+    width: 100%;
+    padding-right: var(--bs-gutter-x, 0.75rem);
+    padding-left: var(--bs-gutter-x, 0.75rem);
+    margin-right: auto;
+    margin-left: auto; }
+    @media (min-width: 576px) {
+      #content.wow-content .content-wrapper .wow-main #wow-builder-container .wow-row-parent .wow-container {
+        max-width: 540px; } }
+    @media (min-width: 768px) {
+      #content.wow-content .content-wrapper .wow-main #wow-builder-container .wow-row-parent .wow-container {
+        max-width: 720px; } }
+    @media (min-width: 992px) {
+      #content.wow-content .content-wrapper .wow-main #wow-builder-container .wow-row-parent .wow-container {
+        max-width: 960px; } }
+    @media (min-width: 1200px) {
+      #content.wow-content .content-wrapper .wow-main #wow-builder-container .wow-row-parent .wow-container {
+        max-width: 1140px; } }
+    @media (min-width: 1400px) {
+      #content.wow-content .content-wrapper .wow-main #wow-builder-container .wow-row-parent .wow-container {
+        max-width: 1320px; } }
+    #content.wow-content .content-wrapper .wow-main #wow-builder-container .wow-row-parent .wow-container.wow-container-full {
+      max-width: 100%; }
+
+#wow-page-builder #content.wow-content .wow-main footer.entry-footer {
+  display: none; }
+
 .navbar-expand-keep {
   flex-wrap: nowrap;
   justify-content: flex-start; }

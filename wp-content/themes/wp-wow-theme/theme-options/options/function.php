@@ -27,15 +27,15 @@ function get_wow_theme_options() {
 	}
 }
 
-$wow_options = get_wow_theme_options();
+$wow_theme_options = get_wow_theme_options();
 
 // Theme Skin Toggle Class Name
 function wow_theme_skin_body_class( $classes ) {
 
-	$wow_options = get_wow_theme_options();
+	$wow_theme_options = get_wow_theme_options();
 	// LAYOUT 
-	$theme_style = $wow_options['wow-theme-global-style-theme'];
-	$theme_dark_mode = $wow_options['wow-theme-global-style-theme-dark'];
+	$theme_style = $wow_theme_options['wow-theme-global-style-theme'];
+	$theme_dark_mode = $wow_theme_options['wow-theme-global-style-theme-dark'];
 
 	$classes[] = '';
 
@@ -94,13 +94,13 @@ add_filter( 'vc_shortcodes_css_class', 'wow_custom_css_classes_for_vc_row_and_vc
 // Check License
 function _____WOWcheckLicense() {
 
-	$wow_options = get_wow_theme_options();
+	$wow_theme_options = get_wow_theme_options();
 
-	$wow_license['domain'] = $wow_options['wow-theme-license-code-domain'];
-	$wow_license['email'] = $wow_options['wow-theme-license-code-email'];
-	$wow_license['package'] = $wow_options['wow-theme-license-code-package'];
-	$wow_license['key'] = $wow_options['wow-theme-license-code-key'];
-	$wow_license['license'] = $wow_options['wow-theme-license-code-license'];
+	$wow_license['domain'] = $wow_theme_options['wow-theme-license-code-domain'];
+	$wow_license['email'] = $wow_theme_options['wow-theme-license-code-email'];
+	$wow_license['package'] = $wow_theme_options['wow-theme-license-code-package'];
+	$wow_license['key'] = $wow_theme_options['wow-theme-license-code-key'];
+	$wow_license['license'] = $wow_theme_options['wow-theme-license-code-license'];
 	$password = trim($wow_license['key'].$wow_license['domain'].$wow_license['email'].$wow_license['package']);
 	$LicenseVerify = true;
 	if (!password_verify($password, $wow_license['license'])) {

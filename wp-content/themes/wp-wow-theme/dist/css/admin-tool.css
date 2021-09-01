@@ -60,4 +60,7 @@
     #resultadmin .countag span {
       margin-right: 2px; }
 
+body.admin-control#wow-page-builder #content.wow-content .wow-main footer.entry-footer {
+  display: block; }
+
 /*# sourceMappingURL=admin-tool.css.map */
