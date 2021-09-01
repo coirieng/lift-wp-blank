@@ -120,10 +120,11 @@ if ( ! class_exists('WOW_Ajax')){
 		 */
 		public static function get_content_common_css(){
 			$css = '';
+
 			$get_content_width  = (int) wow_get_option('wow_container_width');
 			$wow_col_spacing   = (int) wow_get_option('wow_col_spacing');
 
-			if ( ! $get_content_width ){ $get_content_width = '1140'; }
+			if ( ! $get_content_width ){ $get_content_width = '100000'; }
 			if ( ! $wow_col_spacing = ( $wow_col_spacing / 2 ) ){
 				$wow_col_spacing = 15;
 			}
