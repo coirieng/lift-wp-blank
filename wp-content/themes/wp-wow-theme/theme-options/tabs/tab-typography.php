@@ -26,7 +26,7 @@
 				'font-backup' => true,
 				'output'      => array('html', 'body'),
 				'units'       =>'px',
-				'subtitle'    => __('Typography option with each property can be called individually.', 'redux-framework-demo'),
+				'subtitle'    => __('Typography option with each property can be called individually.', 'wow-theme-options'),
 				'default'     => array(
 					// 'color'       => '#333', 
 					// 'font-style'  => '700', 
@@ -52,7 +52,7 @@
 				'font-backup' => true,
 				'output'      => array('h2.site-description'),
 				'units'       =>'px',
-				'subtitle'    => __('Typography option with each property can be called individually.', 'redux-framework-demo'),
+				'subtitle'    => __('Typography option with each property can be called individually.', 'wow-theme-options'),
 				'default'     => array(),
 			),
 		),
