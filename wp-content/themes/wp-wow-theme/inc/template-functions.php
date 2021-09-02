@@ -178,7 +178,7 @@ function wow_excerpt_length() {
 	if ( ! is_admin() && intval($wow_theme['wow-theme-blog-excerpt-option']) == 1) {
 		return $wow_theme['wow-theme-blog-excerpt-value'];
 	} else {
-		return 100000;
+		return 100000000;
 	}
 }
 add_filter( 'excerpt_length', 'wow_excerpt_length');

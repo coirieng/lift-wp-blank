@@ -45,6 +45,17 @@ wp-wow-theme/theme-config/config/sidebar.php
 
 =======================================================================
 # ADMIN THEME
+
+## GET ARGS
+$args = Redux::get_args( 'wow_theme' );
+Redux::get_extensions( $opt_name, $key )	
+Redux::get_post_meta( $opt_name, $the_post, $key, $default )	
+Redux::get_extensions
+Redux::get_option
+Redux::get_arg
+Redux::get_field
+
+## Options 
 All in one here
 themes/wp-wow-theme/theme-options/options
 themes/wp-wow-theme/theme-options/tabs
