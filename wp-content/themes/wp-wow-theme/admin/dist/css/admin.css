@@ -5,10 +5,10 @@
 * @since 2021
 */
 .admin-color-fresh .wow-theme-admin #redux-header, .admin-color-fresh .wow-theme-admin .redux-sidebar .redux-group-menu li.active a, .admin-color-fresh .wow-theme-admin .redux-sidebar .redux-group-menu li.activeChild.hasSubSections a {
-  background: #158d4c;
-  background: -moz-linear-gradient(135deg, #158d4c 0%, #4bbc82 100%);
-  background: -webkit-linear-gradient(135deg, #158d4c 0%, #4bbc82 100%);
-  background: linear-gradient(135deg, #158d4c 0%, #4bbc82 100%);
+  background: #158d4c !important;
+  background: -moz-linear-gradient(135deg, #158d4c 0%, #4bbc82 100%) !important;
+  background: -webkit-linear-gradient(135deg, #158d4c 0%, #4bbc82 100%) !important;
+  background: linear-gradient(135deg, #158d4c 0%, #4bbc82 100%) !important;
   color: #fff; }
 
 #vc_logo,
@@ -52,6 +52,7 @@
   margin-top: 1rem;
   background: #fff !important; }
   .admin-color-fresh .wow-theme-admin #redux-header {
+    color: #fff !important;
     border-bottom: 0; }
     .admin-color-fresh .wow-theme-admin #redux-header .display_header {
       margin: 0 0.5rem 0 0;
@@ -75,7 +76,7 @@
         background: #fff;
         padding: 3px 5px;
         border-radius: 3px;
-        color: #666;
+        color: #666 !important;
         line-height: 1; }
       .admin-color-fresh .wow-theme-admin #redux-header .display_header .redux-dev-mode-notice-container {
         position: initial;
@@ -102,27 +103,35 @@
   .admin-color-fresh .wow-theme-admin .redux-sidebar {
     width: 300px; }
     .admin-color-fresh .wow-theme-admin .redux-sidebar .redux-group-menu {
-      margin: 1rem 1rem 1rem 0 !important; }
+      margin: 1rem 1rem 1rem 0 !important;
+      background: none !important; }
       .admin-color-fresh .wow-theme-admin .redux-sidebar .redux-group-menu li {
         margin: 2px 0 !important;
         box-sizing: border-box; }
         .admin-color-fresh .wow-theme-admin .redux-sidebar .redux-group-menu li a {
           border-radius: 0 5rem 5rem 0;
-          background-color: #efefef;
-          color: #303030;
-          opacity: 1;
+          background-color: #efefef !important;
+          color: #303030 !important;
+          opacity: 1 !important;
+          box-shadow: none !important;
           width: 100%;
-          box-sizing: border-box; }
+          box-sizing: border-box;
+          transition: none !important; }
+          .admin-color-fresh .wow-theme-admin .redux-sidebar .redux-group-menu li a:hover {
+            background-color: #dee2e6 !important; }
           .admin-color-fresh .wow-theme-admin .redux-sidebar .redux-group-menu li a .extraIconSubsections {
             display: none; }
+        .admin-color-fresh .wow-theme-admin .redux-sidebar .redux-group-menu li.active a {
+          color: #fff !important; }
         .admin-color-fresh .wow-theme-admin .redux-sidebar .redux-group-menu li.active.hasSubSections a:after {
           display: none; }
         .admin-color-fresh .wow-theme-admin .redux-sidebar .redux-group-menu li.active.hasSubSections ul.subsection li a {
-          background-color: #e7fff2;
-          color: #4bbc82;
+          background-color: #e7fff2 !important;
+          color: #fff !important;
           padding: 5px 9px; }
         .admin-color-fresh .wow-theme-admin .redux-sidebar .redux-group-menu li ul.subsection {
-          padding: 0 1rem 0 0; }
+          padding: 0 1rem 0 0;
+          background: none !important; }
           .admin-color-fresh .wow-theme-admin .redux-sidebar .redux-group-menu li ul.subsection li {
             box-sizing: border-box; }
             .admin-color-fresh .wow-theme-admin .redux-sidebar .redux-group-menu li ul.subsection li a {
@@ -130,15 +139,17 @@
               background-color: #303030;
               box-sizing: border-box; }
         .admin-color-fresh .wow-theme-admin .redux-sidebar .redux-group-menu li.activeChild.hasSubSections a {
+          color: #fff !important;
           text-shadow: none;
           border-radius: 0 5rem 5rem 0; }
         .admin-color-fresh .wow-theme-admin .redux-sidebar .redux-group-menu li.activeChild.hasSubSections ul.subsection li a {
-          background-color: #e7fff2;
-          color: #4bbc82;
+          background-color: #e7fff2 !important;
+          color: #fff !important;
           padding: 5px 9px; }
         .admin-color-fresh .wow-theme-admin .redux-sidebar .redux-group-menu li.activeChild.hasSubSections ul.subsection li.active a {
-          background-color: #fdde00;
-          color: #303030;
+          background-color: #fdde00 !important;
+          background-image: none !important;
+          color: #303030 !important;
           text-shadow: none; }
           .admin-color-fresh .wow-theme-admin .redux-sidebar .redux-group-menu li.activeChild.hasSubSections ul.subsection li.active a:after {
             display: none; }
@@ -146,6 +157,10 @@
     margin-left: 300px; }
     .admin-color-fresh .wow-theme-admin .redux-main .ace_content .ace_print-margin {
       display: none; }
+    .admin-color-fresh .wow-theme-admin .redux-main .redux_field_th {
+      padding-bottom: 20px !important; }
+    .admin-color-fresh .wow-theme-admin .redux-main .redux-group-tab {
+      margin-bottom: 15px !important; }
     .admin-color-fresh .wow-theme-admin .redux-main .redux-group-tab .code,
     .admin-color-fresh .wow-theme-admin .redux-main .redux-group-tab code,
     .admin-color-fresh .wow-theme-admin .redux-main .redux-group-tab kbd {
@@ -175,7 +190,8 @@
     .admin-color-fresh .wow-theme-admin .redux-main .button-secondary {
       background-color: #e7fff2;
       color: #4bbc82;
-      border-color: #4bbc82; }
+      border-color: #4bbc82;
+      margin-left: 5px; }
       .admin-color-fresh .wow-theme-admin .redux-main .button.button-primary,
       .admin-color-fresh .wow-theme-admin .redux-main .button-secondary.button-primary {
         background-color: #4bbc82;
@@ -184,7 +200,8 @@
     .admin-color-fresh .wow-theme-admin .redux-main .button-primary {
       background-color: #4bbc82;
       color: #fff;
-      border: 0; }
+      border: 0;
+      margin-left: 5px; }
     .admin-color-fresh .wow-theme-admin .redux-main .noUi-connect {
       background-color: #4bbc82 !important;
       background-image: none !important;
@@ -212,7 +229,7 @@
       .admin-color-fresh .wow-theme-admin .redux-main .input-prepend * {
         border-color: #cccccc; }
     .admin-color-fresh .wow-theme-admin .redux-main .redux-image-select-selected img {
-      border-color: #4bbc82; }
+      border-color: #4bbc82 !important; }
     .admin-color-fresh .wow-theme-admin .redux-main .wp-picker-container {
       margin-top: 0; }
       .admin-color-fresh .wow-theme-admin .redux-main .wp-picker-container .wp-color-result-text {

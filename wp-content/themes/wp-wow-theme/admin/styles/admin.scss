@@ -19,10 +19,10 @@ $bgmenuactive: #e7fff2;
 $boo: #cccccc;
 
 %bglinerwow {
-	background: $maincolor;
-	background: -moz-linear-gradient(135deg, $maincolor 0%, $secondcolor 100%);
-	background: -webkit-linear-gradient(135deg, $maincolor 0%, $secondcolor 100%);
-	background: linear-gradient(135deg, $maincolor 0%, $secondcolor 100%);
+	background: $maincolor !important;
+	background: -moz-linear-gradient(135deg, $maincolor 0%, $secondcolor 100%)!important;
+	background: -webkit-linear-gradient(135deg, $maincolor 0%, $secondcolor 100%)!important;
+	background: linear-gradient(135deg, $maincolor 0%, $secondcolor 100%)!important;
 	color: $colowhite;
 }
 
@@ -85,6 +85,7 @@ $boo: #cccccc;
 		background: #fff !important;
 		#redux-header {
 			@extend %bglinerwow;
+			color: #fff !important;
 			border-bottom: 0;
 			.display_header {
 				margin: 0 0.5rem 0 0;
@@ -112,7 +113,7 @@ $boo: #cccccc;
 					background: #fff;
 					padding: 3px 5px;
 					border-radius: 3px;
-					color: #666;
+					color: #666 !important;
 					line-height: 1;
 				}
 				.redux-dev-mode-notice-container {
@@ -147,16 +148,22 @@ $boo: #cccccc;
 			width: 300px;
 			.redux-group-menu {
 				margin: 1rem 1rem 1rem 0 !important;
+				background: none !important;
 				li {
 					margin: 2px 0 !important;
 					box-sizing: border-box;
 					a {
 						border-radius: 0 5rem 5rem 0;
-						background-color: $bgmenu;
-						color: $textdefault;
-						opacity: 1;
+						background-color: $bgmenu !important;
+						color: $textdefault !important;
+						opacity: 1 !important;
+						box-shadow: none !important;
 						width: 100%;
 						box-sizing: border-box;
+						transition: none !important;
+						&:hover {
+							background-color: $graycolor !important;
+						}
 						.extraIconSubsections {
 							display: none;
 						}
@@ -164,6 +171,7 @@ $boo: #cccccc;
 					&.active {
 						a {
 							@extend %bglinerwow;
+							color: #fff !important;
 						}
 						&.hasSubSections {
 							a {
@@ -175,8 +183,8 @@ $boo: #cccccc;
 								&.subsection {
 									li {
 										a {
-											background-color: $bgmenuactive;
-											color: $secondcolor;
+											background-color: $bgmenuactive !important;
+											color: #fff !important;
 											padding: 5px 9px;
 										}
 									}
@@ -187,6 +195,7 @@ $boo: #cccccc;
 					ul {
 						&.subsection {
 							padding: 0 1rem 0 0;
+							background: none !important;
 							li {
 								box-sizing: border-box;
 								a {
@@ -201,6 +210,7 @@ $boo: #cccccc;
 						&.hasSubSections {
 							a {
 								@extend %bglinerwow;
+								color: #fff !important;
 								text-shadow: none;
 								border-radius: 0 5rem 5rem 0;
 							}
@@ -208,14 +218,15 @@ $boo: #cccccc;
 								&.subsection {
 									li {
 										a {
-											background-color: $bgmenuactive;
-											color: $secondcolor;
+											background-color: $bgmenuactive !important;
+											color: #fff !important;
 											padding: 5px 9px;
 										}
 										&.active {
 											a {
-												background-color: $activecolorbg;
-												color: $textdefault;
+												background-color: $activecolorbg !important;
+												background-image: none !important;
+												color: $textdefault !important;
 												text-shadow: none;
 												&:after {
 													display: none;
@@ -236,6 +247,12 @@ $boo: #cccccc;
 				.ace_print-margin {
 					display: none;
 				}
+			}
+			.redux_field_th {
+				padding-bottom: 20px !important;
+			}
+			.redux-group-tab {
+				margin-bottom: 15px !important;
 			}
 			.redux-group-tab {
 				.code,
@@ -278,6 +295,7 @@ $boo: #cccccc;
 				background-color: $bgmenuactive;
 				color: $secondcolor;
 				border-color: $secondcolor;
+				margin-left: 5px;
 				&.button-primary {
 					background-color: $secondcolor;
 					color: $colowhite;
@@ -288,6 +306,7 @@ $boo: #cccccc;
 				background-color: $secondcolor;
 				color: $colowhite;
 				border: 0;
+				margin-left: 5px;
 			}
 			.noUi-connect {
 				background-color: $secondcolor !important;
@@ -326,7 +345,7 @@ $boo: #cccccc;
 				}
 			}
 			.redux-image-select-selected img {
-				border-color: $secondcolor;
+				border-color: $secondcolor !important;
 			}
 			.wp-picker-container {
 				margin-top: 0;
