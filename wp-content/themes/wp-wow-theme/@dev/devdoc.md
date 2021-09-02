@@ -1,3 +1,6 @@
+
+TODO: Banner home page 
+
 # FRONT END 
 
 ## Layout 
