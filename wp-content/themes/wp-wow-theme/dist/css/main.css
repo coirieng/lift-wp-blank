@@ -4591,10 +4591,16 @@ footer#footer {
   padding-left: 0;
   list-style: none; }
 
-#content.wow-content article.post .entry-content .blog-content,
-#content.wow-content article.post .entry-content .sidebar-content {
-  padding-bottom: 2rem;
-  padding-top: 2rem; }
+#content.wow-content article.post {
+  margin-bottom: 2rem; }
+  #content.wow-content article.post .entry-content .blog-content,
+  #content.wow-content article.post .entry-content .sidebar-content {
+    padding-bottom: 2rem;
+    padding-top: 2rem; }
+  #content.wow-content article.post .meta-bar {
+    margin: .5rem 0;
+    font-size: .9rem;
+    color: var(--wow-theme-muted); }
 
 .single header.entry-header {
   padding: 1rem 0;

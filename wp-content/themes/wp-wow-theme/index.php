@@ -17,34 +17,35 @@ $archive_sidebar_columns = isset($wow_theme['wow-theme-blog-style-archive-sideba
 
 if ( have_posts() ) {
 
-	// Load posts loop.
-	while ( have_posts() ) {
-		the_post();
-		?>
-		
-		<div class="entry-content archive-entry-content">
-			<div class="content-wrapper">
-				<div class="container<?= isset($layout_style) && $layout_style === '1' ? '-fluid': ''?>">
-					<div class="row">
-						<div class="blog-content <?=isset($archive_sidebar) && $archive_sidebar ==='1' ? 'col-12' : $archive_sidebar_content_columns ?><?= isset($archive_sidebar_position) && $archive_sidebar_position === '1' ? ' order-xl-2': ' order-xl-1'?>">
-							<?php get_template_part( 'template-parts/content/content', 'excerpt' ); ?>
-						</div>
-						<?php if(!isset($archive_sidebar) || $archive_sidebar === '0' || $archive_sidebar == 0){?>
-							<div class="sidebar-content <?=$archive_sidebar_columns?><?= isset($archive_sidebar_position) && $archive_sidebar_position === '1' ? ' order-xl-1': ' order-xl-2'?>">
-								<?php get_template_part( 'sidebar' );?>
-							</div>
-						<?php } ?>
-					</div>
-				</div>
-			</div>
-		</div><!-- .entry-content -->
-		
-		<?php
+?>
 
-	}
+<div class="entry-content archive-entry-content">
+    <div class="content-wrapper">
+        <div class="container<?= isset($layout_style) && $layout_style === '1' ? '-fluid': ''?>">
+            <div class="row">
+                <div
+                    class="blog-content <?=isset($archive_sidebar) && $archive_sidebar ==='1' ? 'col-12' : $archive_sidebar_content_columns ?><?= isset($archive_sidebar_position) && $archive_sidebar_position === '1' ? ' order-xl-2': ' order-xl-1'?>">
+                    <?php 
+						while ( have_posts() ) {
+							the_post();
+							get_template_part( 'template-parts/content/content', 'excerpt' ); 
+						}
+						// Previous/next page navigation.
+						wow_the_posts_navigation();
+					?>
+                </div>
+                <?php if(!isset($archive_sidebar) || $archive_sidebar === '0' || $archive_sidebar == 0){?>
+                <div
+                    class="sidebar-content <?=$archive_sidebar_columns?><?= isset($archive_sidebar_position) && $archive_sidebar_position === '1' ? ' order-xl-1': ' order-xl-2'?>">
+                    <?php get_template_part( 'sidebar' );?>
+                </div>
+                <?php } ?>
+            </div>
+        </div>
+    </div>
+</div><!-- .entry-content -->
 
-	// Previous/next page navigation.
-	wow_the_posts_navigation();
+<?php
 
 } else {
 

@@ -41,36 +41,39 @@ $layout_style = $wow_theme['wow-theme-layout-style'];
         <div class="content-wrapper">
             <div class="container<?= isset($layout_style) && $layout_style === '1' ? '-fluid': ''?>">
 
-                <?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
+                <div class="box py-3 py-lg-5">
+                    <?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
-                <?php
-				printf(
-					'<p>' . wp_kses(
-						/* translators: %s: Link to WP admin new post page. */
-						__( 'Ready to publish your first post? <a href="%s">Get started here</a>.', 'wp-wow-theme' ),
-						array(
-							'a' => array(
-								'href' => array(),
-							),
-						)
-					) . '</p>',
-					esc_url( admin_url( 'post-new.php' ) )
-				);
-				?>
+                    <?php
+                    printf(
+                        '<p>' . wp_kses(
+                            /* translators: %s: Link to WP admin new post page. */
+                            __( 'Ready to publish your first post? <a href="%s">Get started here</a>.', 'wp-wow-theme' ),
+                            array(
+                                'a' => array(
+                                    'href' => array(),
+                                ),
+                            )
+                        ) . '</p>',
+                        esc_url( admin_url( 'post-new.php' ) )
+                    );
+                    ?>
 
-                <?php elseif ( is_search() ) : ?>
+                    <?php elseif ( is_search() ) : ?>
 
-                <p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'wp-wow-theme' ); ?>
-                </p>
-                <?php get_template_part( 'template-parts/content/content-search' ); ?>
+                    <p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'wp-wow-theme' ); ?>
+                    </p>
+                    <?php get_template_part( 'template-parts/content/content-search' ); ?>
 
-                <?php else : ?>
+                    <?php else : ?>
 
-                <p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'wp-wow-theme' ); ?>
-                </p>
-                <?php get_template_part( 'template-parts/content/content-search' ); ?>
+                    <p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'wp-wow-theme' ); ?>
+                    </p>
+                    <?php get_template_part( 'template-parts/content/content-search' ); ?>
 
-                <?php endif; ?>
+                    <?php endif; ?>
+                </div>
+
             </div>
         </div>
     </div><!-- .page-content -->

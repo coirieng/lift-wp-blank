@@ -1,11 +1,17 @@
 #content.wow-content {
     article.post {
+        margin-bottom: 2rem;
         .entry-content {
             .blog-content, 
             .sidebar-content{
                 padding-bottom: 2rem;
                 padding-top: 2rem;
             }
+        }
+        .meta-bar {
+            margin: .5rem 0;
+            font-size: .9rem;
+            color: var(--wow-theme-muted);
         }
     }
 }
