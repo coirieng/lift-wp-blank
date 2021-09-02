@@ -46,6 +46,9 @@ All in one here
 themes/wp-wow-theme/theme-options/options
 themes/wp-wow-theme/theme-options/tabs
 
+## Google Fonts 
+Redux v4 maybe can not work with Google Fonts
+
 ## Required Plugins 
 wp-wow-theme/theme-options/required/list.php
 
