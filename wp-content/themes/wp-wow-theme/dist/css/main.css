@@ -4591,20 +4591,22 @@ footer#footer {
   padding-left: 0;
   list-style: none; }
 
-#content.wow-content article.post {
-  margin-bottom: 2rem; }
-  #content.wow-content article.post .entry-content .blog-content,
-  #content.wow-content article.post .entry-content .sidebar-content {
-    padding-bottom: 2rem;
-    padding-top: 2rem; }
-  #content.wow-content article.post .meta-bar {
-    margin: .5rem 0;
-    font-size: .9rem;
-    color: var(--wow-theme-muted); }
+#content.wow-content article.post .entry-content .blog-content,
+#content.wow-content article.post .entry-content .sidebar-content {
+  padding-bottom: 2rem;
+  padding-top: 2rem; }
+
+#content.wow-content article.post .meta-bar {
+  margin: .5rem 0;
+  font-size: .9rem;
+  color: var(--wow-theme-muted); }
 
 .single header.entry-header {
   padding: 1rem 0;
   background-color: var(--wow-theme-light); }
+  .single header.entry-header .breadcrumb {
+    margin-bottom: 0;
+    font-size: .95rem; }
 
 @media (min-width: 768px) {
   .single header.entry-header {
@@ -4630,5 +4632,22 @@ header.page-header {
 #content.wow-content article.post .archive-content .sidebar-content {
   padding-bottom: 2rem;
   padding-top: 2rem; }
+
+.search header.page-header p,
+.archive header.page-header p,
+.category header.page-header p,
+.page header.page-header p {
+  margin-bottom: 0; }
+
+.search .hentry,
+.archive .hentry,
+.category .hentry,
+.page .hentry {
+  margin-bottom: 2rem; }
+  .search .hentry .entry-header .entry-title,
+  .archive .hentry .entry-header .entry-title,
+  .category .hentry .entry-header .entry-title,
+  .page .hentry .entry-header .entry-title {
+    margin-bottom: 1rem; }
 
 /*# sourceMappingURL=main.css.map */

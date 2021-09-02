@@ -26,3 +26,25 @@ header.page-header {
         }
     }
 }
+
+.search,
+.archive,
+.category, 
+.page  {
+    header.page-header {
+        p {
+            margin-bottom: 0;
+        }
+    }
+    .hentry {
+        margin-bottom: 2rem;
+        .entry-header {
+            .entry-title {
+                margin-bottom: 1rem;
+            }
+        }
+        .entry-content {
+            
+        }
+    }
+}

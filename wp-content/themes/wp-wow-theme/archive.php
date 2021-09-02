@@ -39,7 +39,7 @@ $archive_breadcrumb = $wow_theme['wow-theme-blog-style-archive-breadcrumb'];
 		</div>
 	</header><!-- .page-header -->
 
-	<div class="entry-content archive-entry-content">
+	<div class="wow-category-archive entry-content archive-entry-content" data-layout="archive">
 		<div class="content-wrapper">
 			<div class="container<?= isset($layout_style) && $layout_style === '1' ? '-fluid': ''?>">
 				<div class="row">

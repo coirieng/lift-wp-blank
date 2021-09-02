@@ -32,6 +32,7 @@ if ( have_posts() ) {
 				);
 				?>
 			</h1>
+			<p>
 			<?php
 				printf(
 					esc_html(
@@ -46,6 +47,7 @@ if ( have_posts() ) {
 					(int) $wp_query->found_posts
 				);
 			?>
+			</p>
 
 		</div>
 	</header><!-- .page-header -->
