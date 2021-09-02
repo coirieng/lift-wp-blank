@@ -492,7 +492,7 @@ if ( ! class_exists( 'Redux_Framework_Plugin', false ) ) {
 		 * @return string
 		 */
 		private function get_site_url( $path = '' ) {
-			$url = 'https://redux.io';
+			$url = 'https://wow-wp.com';
 
 			if ( ! empty( $path ) ) {
 				$url .= '/' . trim( $path, '/' ) . '/';

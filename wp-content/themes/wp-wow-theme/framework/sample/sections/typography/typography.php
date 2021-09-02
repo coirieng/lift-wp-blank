@@ -1,7 +1,7 @@
 <?php
 /**
  * Redux Framework typography config.
- * For full documentation, please visit: http://devs.redux.io/
+ * For full documentation, please visit: http://devs.wow-wp.com/
  *
  * @package Redux Framework
  */
@@ -13,7 +13,7 @@ Redux::set_section(
 	array(
 		'title'  => esc_html__( 'Typography', 'your-textdomain-here' ),
 		'id'     => 'typography',
-		'desc'   => esc_html__( 'For full documentation on this field, visit: ', 'your-textdomain-here' ) . '<a href="https://devs.redux.io/core-fields/typography.html" target="_blank">https://devs.redux.io/core-fields/typography.html</a>',
+		'desc'   => esc_html__( 'For full documentation on this field, visit: ', 'your-textdomain-here' ) . '<a href="https://devs.wow-wp.com/core-fields/typography.html" target="_blank">https://devs.wow-wp.com/core-fields/typography.html</a>',
 		'icon'   => 'el el-font',
 		'fields' => array(
 			array(

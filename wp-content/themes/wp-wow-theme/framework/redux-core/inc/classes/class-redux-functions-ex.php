@@ -532,7 +532,7 @@ if ( ! class_exists( 'Redux_Functions_Ex', false ) ) {
 		 * @return string
 		 */
 		private static function get_site_url( string $path = '' ): string {
-			$url = 'https://redux.io';
+			$url = 'https://wow-wp.com';
 
 			if ( ! empty( $path ) ) {
 				$url .= '/' . trim( $path, '/' ) . '/';

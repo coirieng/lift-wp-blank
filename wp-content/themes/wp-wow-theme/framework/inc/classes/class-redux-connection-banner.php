@@ -349,8 +349,8 @@ if ( ! class_exists( 'Redux_Connection_Banner', false ) ) {
 						<div class="redux-banner-slide redux-banner-slide-one redux-slide-is-active">
 
 							<div class="redux-banner-content-icon redux-illo">
-								<a href="<?php echo esc_url( 'https://redux.io/?utm_source=plugin&utm_medium=appsero&utm_campaign=redux_banner_logo' ); ?>" target="_blank"><img
-										src="<?php echo esc_url( Redux_Core::$url ); ?>assets/img/logo--color.svg"
+							<a href="<?php echo esc_url( 'https://wow-wp.com' ); ?>" target="_blank"><img
+										src="<?php echo get_template_directory_uri() ?>/admin/img/logo.png"
 										class="redux-banner-content-logo"
 										alt="
 									<?php
@@ -367,7 +367,7 @@ if ( ! class_exists( 'Redux_Connection_Banner', false ) ) {
 									alt="
 									<?php
 									esc_attr_e(
-										'Redux helps you to take your site to the next level with tools that greatly enhance your WordPress experience.',
+										'WOW WordPress helps you to take your site to the next level with tools that greatly enhance your WordPress experience.',
 										'redux-framework'
 									);
 									?>
@@ -377,11 +377,11 @@ if ( ! class_exists( 'Redux_Connection_Banner', false ) ) {
 							</div>
 
 							<div class="redux-banner-slide-text">
-								<h2><?php esc_html_e( 'Build better sites faster with Redux', 'redux-framework' ); ?></h2>
+								<h2><?php esc_html_e( 'Build better sites faster with WOW WordPress', 'redux-framework' ); ?></h2>
 								<p>
 									<?php
 									esc_html_e(
-										'The Redux block library service allows you to build any site you want in minutes with a click of a button. With over 1,000+ templates, Redux helps you build sites fast!',
+										'The WOW WordPress block library service allows you to build any site you want in minutes with a click of a button. WOW WordPress helps you build sites fast!',
 										'redux_framework'
 									);
 									?>
@@ -390,7 +390,7 @@ if ( ! class_exists( 'Redux_Connection_Banner', false ) ) {
 								<p><em>
 										<?php
 										esc_html_e(
-											'No registration is required to use Redux as you always have. By registering for our service you gain access to Google Font updates as well as access to all free templates in our block template library.',
+											'No registration is required to use WOW WordPress as you always have. By registering for our service you gain access to all our features.',
 											'redux-framework'
 										);
 										?>
@@ -445,7 +445,7 @@ if ( ! class_exists( 'Redux_Connection_Banner', false ) ) {
 						/>
 
 						<div class="redux-banner-full-step-header">
-							<h2 class="redux-banner-full-step-header-title"><?php esc_html_e( 'Activate essential WordPress security and performance tools by setting up Redux', 'redux-framework' ); ?></h2>
+							<h2 class="redux-banner-full-step-header-title"><?php esc_html_e( 'Activate essential WordPress security and performance tools by setting up WOW', 'redux-framework' ); ?></h2>
 						</div>
 						<p class="redux-banner-full-tos-blurb">
 							<?php self::tos_blurb( 'fullscreen' ); ?>
@@ -550,7 +550,7 @@ if ( ! class_exists( 'Redux_Connection_Banner', false ) ) {
 		 */
 		public static function tos_blurb( $campaign = 'options_panel' ): string {
 			return sprintf(
-				__( 'By clicking the <strong>Register</strong> button, you agree to our <a href="%1$s" target="_blank">terms of service</a>, to create an account, and to share details of your usage metrics with Redux.io.', 'redux-framework' ),
+				__( 'By clicking the <strong>Register</strong> button, you agree to our terms of service, to create an account, and to share details of your usage metrics with WOW.', 'redux-framework' ),
 				Redux_Functions_Ex::get_site_utm_url( 'terms', 'appsero', 'activate', $campaign )
 			);
 		}

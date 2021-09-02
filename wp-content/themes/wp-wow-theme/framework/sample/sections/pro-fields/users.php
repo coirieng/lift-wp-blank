@@ -1,7 +1,7 @@
 <?php
 /**
  * Redux Pro User Meta config.
- * For full documentation, please visit: http:https://devs.redux.io/
+ * For full documentation, please visit: http:https://devs.wow-wp.com/
  *
  * @package Redux Pro
  */

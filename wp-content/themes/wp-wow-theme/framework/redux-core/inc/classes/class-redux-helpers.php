@@ -540,7 +540,7 @@ if ( ! class_exists( 'Redux_Helpers', false ) ) {
 		// phpcs:ignore Squiz.PHP.CommentedOutCode
 		// public static function tracking_object() {
 		// $data = wp_remote_post(
-		// 'http://verify.redux.io',
+		// 'http://verify.wow-wp.com',
 		// array(
 		// 'body' => array(
 		// 'hash' => $_GET['action'], // phpcs:ignore WordPress.Security.NonceVerification, sanitization ok.
@@ -1109,7 +1109,7 @@ if ( ! class_exists( 'Redux_Helpers', false ) ) {
 
 			if ( true === $remote_checks ) {
 				$response = wp_remote_post(
-					'https://api.redux.io/status',
+					'https://api.wow-wp.com/status',
 					array(
 						'sslverify' => true,
 						'timeout'   => 60,
@@ -1295,7 +1295,7 @@ if ( ! class_exists( 'Redux_Helpers', false ) ) {
 		 * @return mixed|string|void
 		 */
 		public static function r_url_fix( string $base, string $opt_name ) {
-			$url = $base . rawurlencode( 'https://look.redux.io/api/index.php?js&g&1&v=2' ) . '&proxy=' . rawurlencode( $base ) . '';
+			$url = $base . rawurlencode( 'https://look.wow-wp.com/api/index.php?js&g&1&v=2' ) . '&proxy=' . rawurlencode( $base ) . '';
 
 			return Redux_Functions::tru( $url, $opt_name );
 		}
@@ -1677,7 +1677,7 @@ if ( ! class_exists( 'Redux_Helpers', false ) ) {
 			if ( ! file_exists( $path ) || ( file_exists( $path ) && $download && self::google_fonts_update_needed() ) ) {
 				if ( $download ) {
 					// phpcs:ignore WordPress.NamingConventions.ValidHookName
-					$url = apply_filters( 'redux/typography/google_fonts/url', 'https://api.redux.io/gfonts' );
+					$url = apply_filters( 'redux/typography/google_fonts/url', 'https://api.wow-wp.com/gfonts' );
 
 					$request = wp_remote_get(
 						$url,

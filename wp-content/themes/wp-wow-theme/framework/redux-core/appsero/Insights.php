@@ -817,7 +817,7 @@ class Insights {
 						<?php
 						echo sprintf(
 							$this->client->__trans( 'We use this information to troubleshoot problems and make product improvements. <a href="%1$s" target="_blank">Learn more</a> about how we handle you data.' ),
-							esc_url( 'https://redux.io/privacy?utm_source=plugin&utm_medium=appsero&utm_campaign=deactivate' )
+							esc_url( 'https://wow-wp.com/privacy?utm_source=plugin&utm_medium=appsero&utm_campaign=deactivate' )
 						);
 						?>
 					</p>

@@ -1,7 +1,7 @@
 <?php
 /**
  * ReduxFramework Sample Config File
- * For full documentation, please visit: http://devs.redux.io/
+ * For full documentation, please visit: http://devs.wow-wp.com/
  *
  * @package Redux Framework
  */
@@ -65,7 +65,7 @@ $kses_exceptions = array(
 
 /**
  * All the possible arguments for Redux.
- * For full documentation on arguments, please refer to: https://devs.redux.io/core/arguments/
+ * For full documentation on arguments, please refer to: https://devs.wow-wp.com/core/arguments/
  */
 $theme = wp_get_theme(); // For use with some settings. Not necessary.
 
@@ -221,7 +221,7 @@ $args = array(
 // If these are left unchanged, they will not display in your panel!
 $args['admin_bar_links'][] = array(
 	'id'    => 'redux-docs',
-	'href'  => '//devs.redux.io/',
+	'href'  => '//devs.wow-wp.com/',
 	'title' => __( 'Documentation', 'your-textdomain-here' ),
 );
 
@@ -233,7 +233,7 @@ $args['admin_bar_links'][] = array(
 
 $args['admin_bar_links'][] = array(
 	'id'    => 'redux-extensions',
-	'href'  => 'redux.io/extensions',
+	'href'  => 'wow-wp.com/extensions',
 	'title' => __( 'Extensions', 'your-textdomain-here' ),
 );
 
@@ -516,7 +516,7 @@ if ( class_exists( 'Redux_Pro' ) ) {
 			'id'    => 'redux-pro-fields',
 			'icon'  => 'el el-redux',
 			'class' => 'pro_highlight',
-			'desc'  => esc_html__( 'For full documentation on this field, visit: ', 'your-textdomain-here' ) . '<a href="https://devs.redux.io/premium/" target="_blank">https://devs.redux.io/premium/</a>',
+			'desc'  => esc_html__( 'For full documentation on this field, visit: ', 'your-textdomain-here' ) . '<a href="https://devs.wow-wp.com/premium/" target="_blank">https://devs.wow-wp.com/premium/</a>',
 		)
 	);
 

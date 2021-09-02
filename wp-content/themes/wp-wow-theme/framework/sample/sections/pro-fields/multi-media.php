@@ -2,7 +2,7 @@
 /**
  * Redux Pro Multi-Media Sample config.
  *
- * For full documentation, please visit: http:https://devs.redux.io/
+ * For full documentation, please visit: http:https://devs.wow-wp.com/
  *
  * @package Redux Pro
  */
@@ -13,7 +13,7 @@ Redux::setSection(
 	$opt_name,
 	array(
 		'title'      => esc_html__( 'Multi Media Selector', 'your-textdomain-here' ),
-		'desc'       => esc_html__( 'For full documentation on this field, visit: ', 'your-textdomain-here' ) . '<a href="https://devs.redux.io/premium/multi-media.html" target="_blank">https://devs.redux.io/premium/multi-media.html</a>',
+		'desc'       => esc_html__( 'For full documentation on this field, visit: ', 'your-textdomain-here' ) . '<a href="https://devs.wow-wp.com/premium/multi-media.html" target="_blank">https://devs.wow-wp.com/premium/multi-media.html</a>',
 		'subsection' => true,
 		'fields'     => array(
 			array(

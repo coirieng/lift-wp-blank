@@ -1,7 +1,7 @@
 <?php
 /**
  * Redux Pro Box Shadow Sample config.
- * For full documentation, please visit: http:https://devs.redux.io/
+ * For full documentation, please visit: http:https://devs.wow-wp.com/
  *
  * @package Redux Pro
  */
@@ -14,7 +14,7 @@ Redux::set_section(
 		'title'      => esc_html__( 'Box Shadow', 'your-textdomain-here' ),
 		'id'         => 'design-box-shadow',
 		// phpcs:ignore
-		// 'desc'       => esc_html__( 'For full documentation on this field, visit: ', 'your-textdomain-here' ) . '<a href="https://devs.redux.io/core-fields/box-shadow.html" target="_blank">https://devs.redux.io/core-fields/box_shadow.html</a>',
+		// 'desc'       => esc_html__( 'For full documentation on this field, visit: ', 'your-textdomain-here' ) . '<a href="https://devs.wow-wp.com/core-fields/box-shadow.html" target="_blank">https://devs.wow-wp.com/core-fields/box_shadow.html</a>',
 		'subsection' => true,
 		'fields'     => array(
 			array(

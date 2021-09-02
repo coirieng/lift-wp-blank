@@ -341,7 +341,7 @@ if ( ! class_exists( 'Redux_Functions', false ) ) {
 			}
 
 			if ( empty( $check ) ) {
-				$url = 'https://api.redux.io/status';
+				$url = 'https://api.wow-wp.com/status';
 
 				// phpcs:ignore WordPress.PHP.NoSilencedErrors
 				$check = @wp_remote_get(
@@ -457,7 +457,7 @@ if ( ! class_exists( 'Redux_Functions', false ) ) {
 					$data['check']      = $new_hash;
 					$data['identifier'] = '';
 					$response           = wp_remote_post(
-						'https://api.redux.io/support',
+						'https://api.wow-wp.com/support',
 						array(
 							'method'      => 'POST',
 							'timeout'     => 65,

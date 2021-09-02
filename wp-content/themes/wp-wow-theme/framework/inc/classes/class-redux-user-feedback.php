@@ -8,7 +8,7 @@
  *
  * @package   Redux
  * @author    Jeffrey Carandang
- * @link      https://redux.io
+ * @link      https://wow-wp.com
  * @license   http://opensource.org/licenses/gpl-2.0.php GNU Public License
  */
 

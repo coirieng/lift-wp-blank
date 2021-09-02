@@ -1,7 +1,7 @@
 <?php
 /**
  * Redux Framework callback config.
- * For full documentation, please visit: http://devs.redux.io/
+ * For full documentation, please visit: http://devs.wow-wp.com/
  *
  * @package Redux Framework
  */
@@ -13,7 +13,7 @@ Redux::set_section(
 	array(
 		'title'      => esc_html__( 'Callback', 'your-textdomain-here' ),
 		'id'         => 'additional-callback',
-		'desc'       => esc_html__( 'For full documentation on this field, visit: ', 'your-textdomain-here' ) . '<a href="https://devs.redux.io/configuration/fields/data.html#using-a-custom-callback" target="_blank">https://devs.redux.io/configuration/fields/data.html#using-a-custom-callback</a>',
+		'desc'       => esc_html__( 'For full documentation on this field, visit: ', 'your-textdomain-here' ) . '<a href="https://devs.wow-wp.com/configuration/fields/data.html#using-a-custom-callback" target="_blank">https://devs.wow-wp.com/configuration/fields/data.html#using-a-custom-callback</a>',
 		'subsection' => true,
 		'fields'     => array(
 			array(

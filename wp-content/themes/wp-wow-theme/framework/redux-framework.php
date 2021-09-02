@@ -8,8 +8,8 @@
  * Plugin URI:      http://wordpress.org/plugins/redux-framework
  * GitHub URI:      reduxframework/redux-framework
  * Description:     Build better sites in WordPress fast
- * Author:          Redux.io
- * Author URI:      http://redux.io
+ * Author:          wow-wp.com
+ * Author URI:      http://wow-wp.com
  * Version:         4.2.14
  * Text Domain:     redux-framework
  * License:         GPLv3 or later
@@ -17,9 +17,9 @@
  * Provides:        ReduxFramework
  *
  * @package         ReduxFramework
- * @author          Redux.io by Dovy Paukstys <dovy@redux.io>
+ * @author          wow-wp.com by Dovy Paukstys <dovy@wow-wp.com>
  * @license         GNU General Public License, version 3
- * @copyright       2012-2020 Redux.io
+ * @copyright       2012-2020 wow-wp.com
  */
 
 // Exit if accessed directly.

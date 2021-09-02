@@ -1,7 +1,7 @@
 <?php
 /**
  * Redux Framework sorter config.
- * For full documentation, please visit: http://devs.redux.io/
+ * For full documentation, please visit: http://devs.wow-wp.com/
  *
  * @package Redux Framework
  */
@@ -13,7 +13,7 @@ Redux::set_section(
 	array(
 		'title'      => esc_html__( 'Sorter', 'your-textdomain-here' ),
 		'id'         => 'additional-sorter',
-		'desc'       => esc_html__( 'For full documentation on this field, visit: ', 'your-textdomain-here' ) . '<a href="https://devs.redux.io/core-fields/sorter.html" target="_blank">https://devs.redux.io/core-fields/sorter.html</a>',
+		'desc'       => esc_html__( 'For full documentation on this field, visit: ', 'your-textdomain-here' ) . '<a href="https://devs.wow-wp.com/core-fields/sorter.html" target="_blank">https://devs.wow-wp.com/core-fields/sorter.html</a>',
 		'subsection' => true,
 		'fields'     => array(
 			array(

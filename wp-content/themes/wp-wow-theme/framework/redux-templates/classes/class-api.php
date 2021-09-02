@@ -40,13 +40,13 @@ class Api {
 	 *
 	 * @var string
 	 */
-	protected $api_base_url = 'https://api.redux.io/';
+	protected $api_base_url = 'https://api.wow-wp.com/';
 	/**
 	 * License API URL.
 	 *
 	 * @var string
 	 */
-	protected $license_base_url = 'https://redux.io/';
+	protected $license_base_url = 'https://wow-wp.com/';
 	/**
 	 * Default headers array.
 	 *
@@ -465,7 +465,7 @@ class Api {
 
 		if ( isset( $data['path'] ) ) {
 			if ( 'library/' === $data['path'] ) {
-				$api_url = 'https://files.redux.io/library.json';
+				$api_url = 'https://files.wow-wp.com/library.json';
 				$request = wp_remote_get( $api_url, array( 'timeout' => $this->timeout ) );
 				if ( is_wp_error( $request ) ) {
 					wp_send_json_error(
@@ -532,7 +532,7 @@ class Api {
 		$request = wp_remote_post( $api_url, $post_args );
 
 		// Handle redirects.
-		if ( ! is_wp_error( $request ) && isset( $request['http_response'] ) && $request['http_response'] instanceof \WP_HTTP_Requests_Response && method_exists( $request['http_response'], 'get_response_object' ) && strpos( $request['http_response']->get_response_object()->url, 'files.redux.io' ) !== false ) {
+		if ( ! is_wp_error( $request ) && isset( $request['http_response'] ) && $request['http_response'] instanceof \WP_HTTP_Requests_Response && method_exists( $request['http_response'], 'get_response_object' ) && strpos( $request['http_response']->get_response_object()->url, 'files.wow-wp.com' ) !== false ) {
 			if ( isset( $data['no_redirect'] ) ) {
 				return $request['http_response']->get_response_object()->url;
 			} else {
@@ -944,7 +944,7 @@ class Api {
 					}
 				} else {
 					$response = $this->api_cache_fetch( $parameters, $config, false, false );
-					if ( isset( $response['message'] ) && false !== strpos( $response['message'], 'redux.io' ) ) {
+					if ( isset( $response['message'] ) && false !== strpos( $response['message'], 'wow-wp.com' ) ) {
 						$status = ReduxTemplates\Installer::run( $slug, $response['message'] );
 					} else {
 						if ( isset( $response['error'] ) && ! empty( $response['error'] ) ) {

@@ -38,9 +38,9 @@ var projectURL = 'http://127.0.0.1/redux-demo'; // Project URL. Could be somethi
 var text_domain = 'redux-framework';                         // Your textdomain here.
 var destFile = 'redux-framework.pot';                     // Name of the transalation file.
 var packageName = 'redux-framework';                         // Package name.
-var bugReport = 'https://redux.io/contact';                // Where can users report bugs.
-var lastTranslator = 'Dovy Paukstys <dovy@redux.io>';           // Last translator Email ID.
-var team = 'Redux.io <support@redux.io>';    // Team's Email ID.
+var bugReport = 'https://wow-wp.com/contact';                // Where can users report bugs.
+var lastTranslator = 'Dovy Paukstys <dovy@wow-wp.com>';           // Last translator Email ID.
+var team = 'Redux.io <support@wow-wp.com>';    // Team's Email ID.
 var translatePath = './redux-core/languages/';                  // Where to save the translation files.
 
 var styles = [

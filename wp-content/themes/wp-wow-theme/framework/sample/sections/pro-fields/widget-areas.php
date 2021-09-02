@@ -2,7 +2,7 @@
 /**
  * Redux Pro Widget Areas Sample config.
  *
- * For full documentation, please visit: http:https://devs.redux.io/
+ * For full documentation, please visit: http:https://devs.wow-wp.com/
  *
  * @package Redux Pro
  */
@@ -15,7 +15,7 @@ Redux::set_section(
 	array(
 		'title'      => esc_html__( 'Widget Areas', 'your-textdomain-here' ),
 		// phpcs:ignore
-		// 'desc'       => esc_html__( 'For full documentation on this field, visit: ', 'your-textdomain-here' ) . '<a href="https://devs.redux.io/extensions/widget-areas.html" target="_blank">https://devs.redux.io/extensions/widget-areas.html</a>',
+		// 'desc'       => esc_html__( 'For full documentation on this field, visit: ', 'your-textdomain-here' ) . '<a href="https://devs.wow-wp.com/extensions/widget-areas.html" target="_blank">https://devs.wow-wp.com/extensions/widget-areas.html</a>',
 		'subsection' => true,
 		'fields'     => array(
 			array(

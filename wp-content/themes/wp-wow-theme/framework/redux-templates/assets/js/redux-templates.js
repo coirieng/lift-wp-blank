@@ -7671,7 +7671,7 @@ function ReduxTemplatesPremiumActivate(props) {
     }
   }), " ", wp.element.createElement("br", null), wp.element.createElement("span", {
     dangerouslySetInnerHTML: {
-      __html: sprintf(__('Visit the <a href="%s" target="_blank">account dashboard</a> to recover your subscription key.', redux_templates.i18n), 'https://redux.io/account/?utm_source=plugin-installation&utm_campaign=import_wizard&utm_medium=appsero&utm_content=activate_pro')
+      __html: sprintf(__('Visit the <a href="%s" target="_blank">account dashboard</a> to recover your subscription key.', redux_templates.i18n), 'https://wow-wp.com/account/?utm_source=plugin-installation&utm_campaign=import_wizard&utm_medium=appsero&utm_content=activate_pro')
     }
   })))));
 }

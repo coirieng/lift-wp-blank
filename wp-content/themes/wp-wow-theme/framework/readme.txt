@@ -100,7 +100,7 @@ You can also contribute code-wise via our <a href="https://github.com/reduxframe
 
 <h4>📝 Documentation and Support</h4>
 <ul>
-<li>For more information about features, FAQs and documentation, check out our website at <a href="https://devs.redux.io/" rel="nofollow ugc">Redux</a>.</li>
+<li>For more information about features, FAQs and documentation, check out our website at <a href="https://devs.wow-wp.com/" rel="nofollow ugc">Redux</a>.</li>
 <li>If you have any more questions, visit our support on the <a href="https://wordpress.org/support/plugin/redux-framework">Plugin's Forum</a>.</li>
 </ul>
 
@@ -130,8 +130,8 @@ The Redux plugin uses a custom API to fetch our content library and our Gutenber
 
 API requests are only made when a user clicks on the Library button, launches the Redux Challenge, or opts into Google Font updates.
 
-For more details on our privacy policy: [https://redux.io/privacy](https://redux.io/privacy)
-For more details on our terms and conditions: [https://redux.io/terms](https://redux.io/terms)
+For more details on our privacy policy: [https://wow-wp.com/privacy](https://wow-wp.com/privacy)
+For more details on our terms and conditions: [https://wow-wp.com/terms](https://wow-wp.com/terms)
 
 == Installation ==
 1. Upload the entire plugin folder to the `/wp-content/plugins/` directory.
@@ -342,7 +342,7 @@ Redux is built to work wonderfully with all themes.
 
 = Can I use Redux for Gutenberg even while having another Page Builder? =
 
-The basic need or requirement for Redux for Gutenberg is the latest WordPress version. Should you need help, you can <a href="https://redux.io/contact/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme" target="_blank" rel="">get in touch with us.</a>
+The basic need or requirement for Redux for Gutenberg is the latest WordPress version. Should you need help, you can <a href="https://wow-wp.com/contact/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme" target="_blank" rel="">get in touch with us.</a>
 
 = Can I use Redux for Gutenberg on client websites? =
 

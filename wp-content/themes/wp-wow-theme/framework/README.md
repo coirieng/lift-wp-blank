@@ -21,7 +21,7 @@
 See [Changelog.md](https://github.com/reduxframework/redux-framework/blob/master/CHANGELOG.md)
 
 ## Documentation ##
-Need a little help with Redux?  Come check out our brand-new documentation site at  [devs.redux.io](http://devs.redux.io), chock-full of tutorials and examples!
+Need a little help with Redux?  Come check out our brand-new documentation site at  [devs.wow-wp.com](http://devs.wow-wp.com), chock-full of tutorials and examples!
 
 ## Help Us Translate Redux ##
 Please head over to the plugin page to learn how you can help us translate Redux quickly. Any and all are translations are welcome. We appreciate your help!

@@ -1,7 +1,7 @@
 <?php
 /**
  * Redux Framework border config.
- * For full documentation, please visit: http://devs.redux.io/
+ * For full documentation, please visit: http://devs.wow-wp.com/
  *
  * @package Redux Framework
  */
@@ -13,7 +13,7 @@ Redux::set_section(
 	array(
 		'title'      => esc_html__( 'Border', 'your-textdomain-here' ),
 		'id'         => 'design-border',
-		'desc'       => esc_html__( 'For full documentation on this field, visit: ', 'your-textdomain-here' ) . '<a href="https://devs.redux.io/core-fields/border.html" target="_blank">https://devs.redux.io/core-fields/border.html</a>',
+		'desc'       => esc_html__( 'For full documentation on this field, visit: ', 'your-textdomain-here' ) . '<a href="https://devs.wow-wp.com/core-fields/border.html" target="_blank">https://devs.wow-wp.com/core-fields/border.html</a>',
 		'subsection' => true,
 		'fields'     => array(
 			array(

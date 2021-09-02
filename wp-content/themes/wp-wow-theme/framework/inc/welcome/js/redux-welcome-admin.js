@@ -74,7 +74,7 @@ $.redux_welcome = $.redux_welcome || {};
 						},
 						success: function( response ) {
 							if ( 'success' === response.status ) {
-								$( '#support_hash' ).val( 'https://support.redux.io/?id=' + response.identifier );
+								$( '#support_hash' ).val( 'https://support.wow-wp.com/?id=' + response.identifier );
 								$button.parents( 'fieldset:first' ).find( '.next' ).prop( 'disabled', false ).trigger( 'click' );
 							} else {
 								window.console.log( response );

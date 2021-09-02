@@ -1,7 +1,7 @@
 <?php
 /**
  * Redux Framework radio box config.
- * For full documentation, please visit: http://devs.redux.io/
+ * For full documentation, please visit: http://devs.wow-wp.com/
  *
  * @package Redux Framework
  */
@@ -15,7 +15,7 @@ Redux::set_section(
 		'id'               => 'basic-radio',
 		'subsection'       => true,
 		'customizer_width' => '500px',
-		'desc'             => esc_html__( 'For full documentation on this field, visit: ', 'your-textdomain-here' ) . '<a href="https://devs.redux.io/core-fields/radio.html" target="_blank">https://devs.redux.io/core-fields/radio.html</a>',
+		'desc'             => esc_html__( 'For full documentation on this field, visit: ', 'your-textdomain-here' ) . '<a href="https://devs.wow-wp.com/core-fields/radio.html" target="_blank">https://devs.wow-wp.com/core-fields/radio.html</a>',
 		'fields'           => array(
 			array(
 				'id'       => 'opt-radio',

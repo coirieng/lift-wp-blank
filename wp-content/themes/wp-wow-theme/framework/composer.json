@@ -3,14 +3,14 @@
 	"authors": [
 		{
 			"name": "Redux.io",
-			"homepage": "http://redux.io",
-			"email": "support@redux.io",
+			"homepage": "http://wow-wp.com",
+			"email": "support@wow-wp.com",
 			"role": "Support"
 		}
 	],
 	"type": "wordpress-plugin",
 	"description": "Build better and beautiful sites in WordPress, faster.",
-	"homepage": "http://redux.io",
+	"homepage": "http://wow-wp.com",
 	"license": "GPL-3.0-or-later",
 	"keywords": [
 		"settings",
@@ -23,9 +23,9 @@
 	],
 	"support": {
 		"issues": "https://github.com/reduxframework/redux-framework/issues",
-		"docs": "https://devs.redux.io",
+		"docs": "https://devs.wow-wp.com",
 		"forum": "https://wordpress.org/support/plugin/redux-framework/",
-		"website": "https://redux.io/"
+		"website": "https://wow-wp.com/"
 	},
 	"require": {
 		"php": ">=7.1.0",

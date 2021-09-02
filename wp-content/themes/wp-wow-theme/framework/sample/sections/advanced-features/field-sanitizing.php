@@ -1,7 +1,7 @@
 <?php
 /**
  * Redux Framework field sanitizing config.
- * For full documentation, please visit: http://devs.redux.io/
+ * For full documentation, please visit: http://devs.wow-wp.com/
  *
  * @package Redux Framework
  */
@@ -14,7 +14,7 @@ Redux::set_section(
 		'title'      => esc_html__( 'Field Sanitizing', 'your-textdomain-here' ),
 		'id'         => 'sanitizing',
 		// phpcs:ignore
-		// 'desc'       => esc_html__( 'For full documentation on sanitizing, visit: ', 'your-textdomain-here' ) . '<a href="https://devs.redux.io/configuration/fields/sanitizing/" target="_blank">https://devs.redux.io/configuration/fields/sanitizing/</a>',
+		// 'desc'       => esc_html__( 'For full documentation on sanitizing, visit: ', 'your-textdomain-here' ) . '<a href="https://devs.wow-wp.com/configuration/fields/sanitizing/" target="_blank">https://devs.wow-wp.com/configuration/fields/sanitizing/</a>',
 		'subsection' => true,
 		'fields'     => array(
 			array(

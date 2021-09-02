@@ -255,7 +255,7 @@ if ( ! class_exists( 'Redux_Welcome', false ) ) {
 		public function actions() {
 			?>
 			<p class="redux-actions">
-				<a href="http://devs.redux.io/" class="docs button button-primary">Docs</a>
+				<a href="http://devs.wow-wp.com/" class="docs button button-primary">Docs</a>
 				<a
 					href="https://wordpress.org/support/view/plugin-reviews/redux-framework?filter=5#postform"
 					class="review-us button button-primary"
@@ -263,7 +263,7 @@ if ( ! class_exists( 'Redux_Welcome', false ) ) {
 				<a
 					href="https://twitter.com/share"
 					class="twitter-share-button"
-					data-url="https://redux.io"
+					data-url="https://wow-wp.com"
 					data-text="Supercharge your WordPress experience with Redux.io, the world's most powerful and widely used WordPress interface builder."
 					data-via="ReduxFramework" data-size="large" data-hashtags="Redux">Tweet</a>
 				<?php

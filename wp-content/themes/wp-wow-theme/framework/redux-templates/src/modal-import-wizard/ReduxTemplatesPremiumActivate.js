@@ -102,7 +102,7 @@ export default function ReduxTemplatesPremiumActivate(props) {
 						<span>{__('Activate & Install Pro', redux_templates.i18n)}</span>
 					</button>
 				</p>
-				<p style={{fontSize:'1.1em', paddingTop:'10px'}}><small><em dangerouslySetInnerHTML={{__html: redux_templates.tos.replace(__('Register', redux_templates.i18n), __('Activate', redux_templates.i18n))}} /> <br /><span dangerouslySetInnerHTML={{__html: sprintf( __( 'Visit the <a href="%s" target="_blank">account dashboard</a> to recover your subscription key.', redux_templates.i18n ), 'https://redux.io/account/?utm_source=plugin-installation&utm_campaign=import_wizard&utm_medium=appsero&utm_content=activate_pro' )}} /></small>
+				<p style={{fontSize:'1.1em', paddingTop:'10px'}}><small><em dangerouslySetInnerHTML={{__html: redux_templates.tos.replace(__('Register', redux_templates.i18n), __('Activate', redux_templates.i18n))}} /> <br /><span dangerouslySetInnerHTML={{__html: sprintf( __( 'Visit the <a href="%s" target="_blank">account dashboard</a> to recover your subscription key.', redux_templates.i18n ), 'https://wow-wp.com/account/?utm_source=plugin-installation&utm_campaign=import_wizard&utm_medium=appsero&utm_content=activate_pro' )}} /></small>
 				</p>
 			</div>
 		</div>

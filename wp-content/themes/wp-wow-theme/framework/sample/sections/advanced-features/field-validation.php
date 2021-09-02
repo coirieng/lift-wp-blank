@@ -1,7 +1,7 @@
 <?php
 /**
  * Redux Framework field validation config.
- * For full documentation, please visit: http://devs.redux.io/
+ * For full documentation, please visit: http://devs.wow-wp.com/
  *
  * @package Redux Framework
  */
@@ -13,7 +13,7 @@ Redux::set_section(
 	array(
 		'title'      => esc_html__( 'Field Validation', 'your-textdomain-here' ),
 		'id'         => 'validation',
-		'desc'       => esc_html__( 'For full documentation on validation, visit: ', 'your-textdomain-here' ) . '<a href="https://devs.redux.io/configuration/fields/validate.html" target="_blank">https://devs.redux.io/configuration/fields/validate.html</a>',
+		'desc'       => esc_html__( 'For full documentation on validation, visit: ', 'your-textdomain-here' ) . '<a href="https://devs.wow-wp.com/configuration/fields/validate.html" target="_blank">https://devs.wow-wp.com/configuration/fields/validate.html</a>',
 		'subsection' => true,
 		'fields'     => array(
 			array(
@@ -49,7 +49,7 @@ Redux::set_section(
 				'subtitle' => esc_html__( 'This must be a URL.', 'your-textdomain-here' ),
 				'desc'     => esc_html__( 'This is the description field, again good for additional info.', 'your-textdomain-here' ),
 				'validate' => 'url',
-				'default'  => 'https://redux.io',
+				'default'  => 'https://wow-wp.com',
 			),
 			array(
 				'id'       => 'opt-text-numeric',
