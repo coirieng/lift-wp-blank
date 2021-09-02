@@ -26,6 +26,9 @@
     line-height: 20px;
     height: 20px; }
 
+.spinner {
+  display: inline-block; }
+
 .redux-notice-field.redux-success {
   border: 0;
   background-color: #e8ffd6;
@@ -49,7 +52,6 @@
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
   border-radius: 10px !important;
   overflow: hidden;
-  margin-top: 1rem;
   background: #fff !important; }
   .admin-color-fresh .wow-theme-admin #redux-header {
     color: #fff !important;
@@ -469,6 +471,11 @@
         font-weight: bold;
         color: #4bbc82;
         z-index: 5; }
+
+#wpbody-content #poststuff .wow-theme-admin {
+  margin-top: 0; }
+  #wpbody-content #poststuff .wow-theme-admin .redux-main .redux-field-container {
+    padding: 0 !important; }
 
 .lh-1 {
   line-height: 1 !important; }

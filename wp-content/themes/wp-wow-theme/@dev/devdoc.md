@@ -54,3 +54,6 @@ wp-wow-theme/theme-options/required/list.php
 
 ## Dev 
 wp-wow-theme/inc
+
+## Post Fields 
+themes/wp-wow-theme/theme-options/posts/post-type.php

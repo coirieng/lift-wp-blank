@@ -46,6 +46,10 @@ $boo: #cccccc;
 	}
 }
 
+.spinner {
+    display: inline-block; 
+}
+
 // REDUX FRAMEWORK
 .redux-notice-field {
 	&.redux-success {
@@ -81,7 +85,7 @@ $boo: #cccccc;
 		box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 		border-radius: 10px !important;
 		overflow: hidden;
-		margin-top: 1rem;
+		// margin-top: 1rem;
 		background: #fff !important;
 		#redux-header {
 			@extend %bglinerwow;
@@ -488,6 +492,15 @@ $boo: #cccccc;
 				&.wow-theme-admin-footer-column-2 {
 				}
 			}
+		}
+	}
+}
+
+#wpbody-content #poststuff {
+	.wow-theme-admin {
+		margin-top: 0;
+		.redux-main .redux-field-container {
+			padding: 0 !important;
 		}
 	}
 }
