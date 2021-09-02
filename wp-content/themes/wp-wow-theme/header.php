@@ -7,6 +7,8 @@
  * https://baonguyenyam.github.io
  * @since 2021
  */
+global $wow_theme;
+$layout_style = $wow_theme['wow-theme-layout-style'];
 
 ?>
 <!doctype html>
@@ -32,7 +34,7 @@
 			$looking_for_wow_builder = ' wow-content-single';
 		}
 	?>
-	<main id="content" class="site-content wow-content<?php echo $looking_for_wow_builder;?>">
+	<main id="content" class="site-content wow-content<?php echo $looking_for_wow_builder;?><?= isset($layout_style) && $layout_style === '1' ? ' wow-content-fluid': ''?>">
 		<div class="content-wrapper">
 			<div id="primary" class="content-area">
 				<!-- WOW MAIN -->
