@@ -20,7 +20,7 @@ $post_post_thumbnail = $wow_theme['wow-theme-blog-style-content-thumbnail'];
 $post_post_nextprev = $wow_theme['wow-theme-blog-style-content-nextprev'];
 $post_post_breadcrumb = $wow_theme['wow-theme-blog-style-breadcrumb'];
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> data-layout="single">
 
 	<header class="entry-header alignwide">
 		<div class="content-wrapper">
@@ -56,7 +56,7 @@ $post_post_breadcrumb = $wow_theme['wow-theme-blog-style-breadcrumb'];
 							)
 						);
 						?>
-						<footer class="entry-footer default-max-width">
+						<footer class="meta-bar entry-footer default-max-width">
 							<?php wow_entry_meta_footer(); ?>
 						</footer><!-- .entry-footer -->
 

@@ -55,7 +55,7 @@ while ( have_posts() ) {
 			</div>
 		</div><!-- .entry-content -->
 
-		<footer class="entry-footer default-max-width">
+		<footer class="meta-bar image-bar entry-footer default-max-width">
 			<div class="container<?= isset($layout_style) && $layout_style === '1' ? '-fluid': ''?>">
 				<?php
 				// Check if there is a parent, then add the published in link.

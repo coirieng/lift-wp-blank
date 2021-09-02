@@ -60,3 +60,9 @@ wp-wow-theme/inc
 
 ## Post Fields 
 themes/wp-wow-theme/theme-options/posts/post-type.php
+
+## Index
+/Users/nguyenpham/SourceCode/lift-wp-blank/wp-content/themes/wp-wow-theme/index.php
+
+## Archive
+/Users/nguyenpham/SourceCode/lift-wp-blank/wp-content/themes/wp-wow-theme/index.php

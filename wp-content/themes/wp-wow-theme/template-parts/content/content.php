@@ -44,7 +44,7 @@ $layout_style = $wow_theme['wow-theme-layout-style'];
 		</div>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer default-max-width">
+	<footer class="meta-bar entry-footer default-max-width">
 		<div class="container<?= isset($layout_style) && $layout_style === '1' ? '-fluid': ''?>">
 			<?php wow_entry_meta_footer(); ?>
 		</div>

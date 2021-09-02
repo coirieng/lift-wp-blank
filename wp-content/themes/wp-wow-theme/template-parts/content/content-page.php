@@ -17,7 +17,7 @@ $post_page_thumbnail = $wow_theme['wow-theme-page-style-content-thumbnail'];
 $post_page_title = $wow_theme['wow-theme-page-style-content-title'];
 // TODO: CHANGE HEADER BLOCK 
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> data-layout="page">
     
     <?php if ( ! is_front_page() ) : ?>
     <header class="entry-header alignwide">
@@ -58,7 +58,7 @@ $post_page_title = $wow_theme['wow-theme-page-style-content-title'];
     </div><!-- .entry-content -->
 
     <?php if ( get_edit_post_link() ) : ?>
-    <footer class="entry-footer default-max-width">
+    <footer class="admin-bar entry-footer default-max-width">
         <div class="container<?= isset($layout_style) && $layout_style === '1' ? '-fluid': ''?>">
             <?php
 				edit_post_link(
