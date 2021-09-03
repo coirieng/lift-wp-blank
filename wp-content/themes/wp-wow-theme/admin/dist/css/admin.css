@@ -192,8 +192,14 @@
     .admin-color-fresh .wow-theme-admin .redux-main .button-secondary {
       background-color: #e7fff2;
       color: #4bbc82;
-      border-color: #4bbc82;
-      margin-left: 5px; }
+      border-color: #4bbc82; }
+      .admin-color-fresh .wow-theme-admin .redux-main .button + .button,
+      .admin-color-fresh .wow-theme-admin .redux-main .button + .button-secondary,
+      .admin-color-fresh .wow-theme-admin .redux-main .button + .button-primary,
+      .admin-color-fresh .wow-theme-admin .redux-main .button-secondary + .button,
+      .admin-color-fresh .wow-theme-admin .redux-main .button-secondary + .button-secondary,
+      .admin-color-fresh .wow-theme-admin .redux-main .button-secondary + .button-primary {
+        margin-left: 5px; }
       .admin-color-fresh .wow-theme-admin .redux-main .button.button-primary,
       .admin-color-fresh .wow-theme-admin .redux-main .button-secondary.button-primary {
         background-color: #4bbc82;
@@ -202,8 +208,11 @@
     .admin-color-fresh .wow-theme-admin .redux-main .button-primary {
       background-color: #4bbc82;
       color: #fff;
-      border: 0;
-      margin-left: 5px; }
+      border: 0; }
+      .admin-color-fresh .wow-theme-admin .redux-main .button-primary + .button,
+      .admin-color-fresh .wow-theme-admin .redux-main .button-primary + .button-secondary,
+      .admin-color-fresh .wow-theme-admin .redux-main .button-primary + .button-primary {
+        margin-left: 5px; }
     .admin-color-fresh .wow-theme-admin .redux-main .noUi-connect {
       background-color: #4bbc82 !important;
       background-image: none !important;
@@ -236,7 +245,7 @@
       margin-top: 0; }
       .admin-color-fresh .wow-theme-admin .redux-main .wp-picker-container .wp-color-result-text {
         display: none; }
-    .admin-color-fresh .wow-theme-admin .redux-main input {
+    .admin-color-fresh .wow-theme-admin .redux-main input, .admin-color-fresh .wow-theme-admin .redux-main textarea, .admin-color-fresh .wow-theme-admin .redux-main select {
       border-color: #cccccc; }
     .admin-color-fresh .wow-theme-admin .redux-main .switch-options label {
       border-width: 2px;
@@ -475,7 +484,13 @@
 #wpbody-content #poststuff .wow-theme-admin {
   margin-top: 0; }
   #wpbody-content #poststuff .wow-theme-admin .redux-main .redux-field-container {
-    padding: 0 !important; }
+    padding: 15px 0 !important; }
+
+#wpbody-content #poststuff #side-sortables .wow-theme-admin .redux-main .redux-field-container {
+  padding: 0 !important; }
+
+.wp-admin .select2-results .select2-results__option--highlighted {
+  background: #4bbc82 !important; }
 
 .lh-1 {
   line-height: 1 !important; }

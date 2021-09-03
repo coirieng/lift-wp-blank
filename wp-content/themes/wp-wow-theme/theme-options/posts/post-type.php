@@ -143,14 +143,14 @@ Redux_Metaboxes::set_box(
 
 			array(
 				'title'  => esc_html__( 'Documents', 'wow-theme-options' ),
-                'desc'       => __( 'In order to receive all benefits of WOW Theme, you need to activate your copy of the plugin. By activating WOW Theme license you will unlock premium options - direct plugin updates, access to template library and official support.', 'wow-theme-options' ) ,
 				'icon'   => 'bi bi-question-circle',
 				'id'     => 'wow-theme-post-devdoc',
 				'fields' => array(
 					array(
 						'id'   => 'opt-info-ddd',
-						'type' => 'info',
-						'desc' => __( 'Don\'t have direct license yet?. ', 'wow-theme-options' ). '<a href="//wow-wp.com" target="_blank">Purchase WOW Theme license.</a>',
+						'full_width' => true,
+						'type'     => 'raw',
+						'content' => __( 'In order to receive all benefits of WOW Theme, you need to activate your copy of the plugin. By activating WOW Theme license you will unlock premium options - direct plugin updates, access to template library and official support. Don\'t have direct license yet?. ', 'wow-theme-options' ). '<a href="//wow-wp.com" target="_blank">Purchase WOW Theme license.</a>',
 					),
 				),
 			),

@@ -299,7 +299,11 @@ $boo: #cccccc;
 				background-color: $bgmenuactive;
 				color: $secondcolor;
 				border-color: $secondcolor;
-				margin-left: 5px;
+				+ .button,
+				+ .button-secondary,
+				+ .button-primary {
+					margin-left: 5px;
+				}
 				&.button-primary {
 					background-color: $secondcolor;
 					color: $colowhite;
@@ -310,7 +314,11 @@ $boo: #cccccc;
 				background-color: $secondcolor;
 				color: $colowhite;
 				border: 0;
-				margin-left: 5px;
+				+ .button,
+				+ .button-secondary,
+				+ .button-primary {
+					margin-left: 5px;
+				}
 			}
 			.noUi-connect {
 				background-color: $secondcolor !important;
@@ -357,7 +365,7 @@ $boo: #cccccc;
 					display: none;
 				}
 			}
-			input {
+			input, textarea, select {
 				border-color: #cccccc;
 			}
 			.switch-options {
@@ -500,8 +508,21 @@ $boo: #cccccc;
 	.wow-theme-admin {
 		margin-top: 0;
 		.redux-main .redux-field-container {
-			padding: 0 !important;
+			padding: 15px 0 !important;
 		}
+	}
+	#side-sortables {
+		.wow-theme-admin {
+			.redux-main .redux-field-container {
+				padding: 0 !important;
+			}
+		}
+	}
+}
+
+.wp-admin {
+	.select2-results .select2-results__option--highlighted {
+		background: $secondcolor !important;
 	}
 }
 
