@@ -48,6 +48,7 @@ wp-wow-theme/theme-config/config/sidebar.php
 
 ## GET ARGS
 $args = Redux::get_args( 'wow_theme' );
+$args = Redux::get_option( 'wow_theme', 'wow-theme-footer-enable' );
 Redux::get_extensions( $opt_name, $key )	
 Redux::get_post_meta( $opt_name, $the_post, $key, $default )	
 Redux::get_extensions
@@ -59,6 +60,9 @@ Redux::get_field
 All in one here
 themes/wp-wow-theme/theme-options/options
 themes/wp-wow-theme/theme-options/tabs
+
+## Widgets 
+/Users/nguyenpham/SourceCode/lift-wp-blank/wp-content/themes/wp-wow-theme/classes/class-nguyen-widget.php
 
 ## Google Fonts 
 Redux v4 maybe can not work with Google Fonts
