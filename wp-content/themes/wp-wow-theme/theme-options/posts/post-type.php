@@ -18,7 +18,7 @@ Redux_Metaboxes::set_box(
 				'title'  => esc_html__( 'Layout', 'wow-theme-options' ),
 				'id'     => 'wow-theme-post-metaboxes-basic',
 				// 'desc'   => esc_html__( 'Redux Framework was created with the developer in mind. It allows for any theme developer to have an advanced theme panel with most of the features a developer would need. For more information check out the Github repo at:', 'wow-theme-options' ) . '  <a href="https://github.com/ReduxFramework/Redux-Framework">https://github.com/ReduxFramework/Redux-Framework</a>',
-				'icon'   => 'el-icon-cogs',
+				'icon'   => 'bi bi-columns',
 				'fields' => array(
 					array(
 						'id'       => 'wow-theme-post-metaboxes-header-layout',
@@ -42,128 +42,122 @@ Redux_Metaboxes::set_box(
 						'id'       => 'wow-theme-post-metaboxes-header',
 						'type'     => 'switch',
 						'title'    => esc_html__( 'Disable header', 'wow-theme-options' ),
-						'default'  => 1,
+						'default'  => 0,
 					),
 
 					array(
 						'id'       => 'wow-theme-post-metaboxes-sidebar',
 						'type'     => 'switch',
 						'title'    => esc_html__( 'Disable Sidebar', 'wow-theme-options' ),
-						'default'  => 1,
+						'default'  => 0,
 					),
 
 					array(
-						'id'       => 'wow-theme-post-metaboxes-header',
+						'id'       => 'wow-theme-post-metaboxes-breadcrumb',
 						'type'     => 'switch',
-						'title'    => esc_html__( 'Disable header', 'wow-theme-options' ),
-						'default'  => 1,
+						'title'    => esc_html__( 'Disable breadcrumb', 'wow-theme-options' ),
+						'default'  => 0,
+					),
+
+					array(
+						'id'       => 'wow-theme-post-metaboxes-top-thumbnail',
+						'type'     => 'switch',
+						'title'    => esc_html__( 'Disable top thumbnail', 'wow-theme-options' ),
+						'default'  => 0,
+					),
+					
+				),
+			),
+			array(
+				'title'  => esc_html__( 'META Post', 'wow-theme-options' ),
+				'id'     => 'wow-theme-post-metaboxes-meta-basic',
+				'icon'   => 'bi bi-bullseye',
+				'fields' => array(
+					array(
+						'id'       => 'wow-theme-post-metaboxes-meta',
+						'type'     => 'switch',
+						'title'    => esc_html__( 'Disable META', 'wow-theme-options' ),
+						'default'  => 0,
+					),
+					array(
+						'id'       => 'wow-theme-post-metaboxes-meta-date',
+						'required' => array( 'wow-theme-post-metaboxes-meta', '=', '0' ),
+						'type'     => 'switch',
+						'title'    => esc_html__( 'Disable date', 'wow-theme-options' ),
+						'default'  => 0,
+					),
+					array(
+						'id'       => 'wow-theme-post-metaboxes-meta-author',
+						'required' => array( 'wow-theme-post-metaboxes-meta', '=', '0' ),
+						'type'     => 'switch',
+						'title'    => esc_html__( 'Disable author', 'wow-theme-options' ),
+						'default'  => 0,
+					),
+					array(
+						'id'       => 'wow-theme-post-metaboxes-meta-category',
+						'required' => array( 'wow-theme-post-metaboxes-meta', '=', '0' ),
+						'type'     => 'switch',
+						'title'    => esc_html__( 'Disable category', 'wow-theme-options' ),
+						'default'  => 0,
+					),
+				)
+			),
+
+			array(
+				'title'  => esc_html__( 'Datas', 'wow-theme-options' ),
+				'icon'   => 'bi bi-braces',
+				'id'     => 'wow-theme-post-datas',
+				'fields' => array(
+					array(
+						'id'       => 'wow-theme-post-datas-source',
+						'type'     => 'text',
+						'title'    => __('Source', 'wow-theme-options'),
+						'default'  => "",
+					),
+					array(
+						'id'       => 'wow-theme-post-datas-author',
+						'type'     => 'text',
+						'title'    => __('Author', 'wow-theme-options'),
+						'default'  => "",
+					),
+					array(
+						'id'       => 'wow-theme-post-datas-url',
+						'type'     => 'text',
+						'title'    => __('Url', 'wow-theme-options'),
+						'default'  => "",
+					),
+					array(
+						'id'       => 'wow-theme-post-datas-link',
+						'type'     => 'text',
+						'title'    => __('Link', 'wow-theme-options'),
+						'default'  => "",
+					),
+					array(
+						'id'       => 'wow-theme-post-datas-note',
+						'type'     => 'textarea',
+						'title'    => __('Note', 'wow-theme-options'),
+						'default'  => "",
 					),
 				),
 			),
-
-			// array(
-			// 	'title'      => esc_html__( 'Text Fields', 'wow-theme-options' ),
-			// 	'desc'       => esc_html__( 'Redux Framework was created with the developer in mind. It allows for any theme developer to have an advanced theme panel with most of the features a developer would need. For more information check out the Github repo at:', 'wow-theme-options' ) . '  <a href="https://github.com/ReduxFramework/Redux-Framework">https://github.com/ReduxFramework/Redux-Framework</a>',
-			// 	'icon'       => 'el-icon-cog',
-			// 	'id'         => 'opt-text-fields',
-			// 	'subsection' => true,
-			// 	'fields'     => array(
-			// 		array(
-			// 			'title' => esc_html__( 'Text Field', 'wow-theme-options' ),
-			// 			'id'    => 'opt-text',
-			// 			'type'  => 'text',
-			// 		),
-			// 		array(
-			// 			'title' => esc_html__( 'Textarea Field', 'wow-theme-options' ),
-			// 			'id'    => 'opt-textarea',
-			// 			'type'  => 'textarea',
-			// 		),
-			// 	),
-			// ),
 
 			array(
 				'title'  => esc_html__( 'Documents', 'wow-theme-options' ),
-                'desc'       => __( 'In order to receive all benefits of WOW Theme, you need to activate your copy of the plugin. By activating WOW Theme license you will unlock premium options - direct plugin updates, access to template library and official support. Don\'t have direct license yet? ', 'wow-theme-options' ) . '<a href="//wow-wp.com" target="_blank">Purchase WOW Theme license.</a>',
-				'icon'   => 'el-icon-file',
-				'id'     => 'color-section',
+                'desc'       => __( 'In order to receive all benefits of WOW Theme, you need to activate your copy of the plugin. By activating WOW Theme license you will unlock premium options - direct plugin updates, access to template library and official support.', 'wow-theme-options' ) ,
+				'icon'   => 'bi bi-question-circle',
+				'id'     => 'wow-theme-post-devdoc',
 				'fields' => array(
 					array(
-						'id'       => 'opt-color',
-						'type'     => 'color',
-						'title'    => __( 'Color Field', 'wow-theme-options' ),
-						'default'  => '#333333',
-						'required' => array( 'opt-layout', '=', 'on' ),
+						'id'   => 'opt-info-ddd',
+						'type' => 'info',
+						'desc' => __( 'Don\'t have direct license yet?. ', 'wow-theme-options' ). '<a href="//wow-wp.com" target="_blank">Purchase WOW Theme license.</a>',
 					),
 				),
 			),
-			// array(
-			// 	'title'  => esc_html__( 'Layout', 'wow-theme-options' ),
-			// 	'desc'   => esc_html__( 'Redux Framework was created with the developer in mind. It allows for any theme developer to have an advanced theme panel with most of the features a developer would need. For more information check out the Github repo at:', 'wow-theme-options' ) . '  <a href="https://github.com/ReduxFramework/Redux-Framework">https://github.com/ReduxFramework/Redux-Framework</a>',
-			// 	'icon'   => 'el-icon-pencil',
-			// 	'id'     => 'home-layout',
-			// 	'fields' => array(
-			// 		array(
-			// 			'id'       => 'homepage_blocks',
-			// 			'type'     => 'sorter',
-			// 			'title'    => 'Homepage Layout Manager',
-			// 			'desc'     => 'Organize how you want the layout to appear on the homepage',
-			// 			'compiler' => 'true',
-			// 			'required' => array( 'layout', '=', '1' ),
-			// 			'options'  => array(
-			// 				'enabled'  => array(
-			// 					'placebo'    => 'placebo',
-			// 					'highlights' => 'Highlights',
-			// 					'slider'     => 'Slider',
-			// 					'staticpage' => 'Static Page',
-			// 					'services'   => 'Services',
-			// 				),
-			// 				'disabled' => array(
-			// 					'placebo' => 'placebo',
-			// 				),
-			// 			),
-			// 		),
-			// 		array(
-			// 			'id'       => 'slides',
-			// 			'type'     => 'slides',
-			// 			'title'    => esc_html__( 'Slides Options', 'wow-theme-options' ),
-			// 			'subtitle' => esc_html__( 'Unlimited slides with drag and drop sortings.', 'wow-theme-options' ),
-			// 			'desc'     => esc_html__( 'This field will store all slides values into a multidimensional array to use into a foreach loop.', 'wow-theme-options' ),
-			// 		),
-			// 	),
-			// ),
+			
 		),
 	)
 );
-
-
-// Redux_Metaboxes::set_box(
-// 	$opt_name,
-// 	array(
-// 		'id'         => 'opt-metaboxes-2',
-// 		'post_types' => array( 'page', 'post' ),
-// 		'position'   => 'side', // normal, advanced, side.
-// 		'priority'   => 'high', // high, core, default, low.
-// 		'sections'   => array(
-// 			array(
-// 				'icon_class' => 'icon-large',
-// 				'icon'       => 'el-icon-home',
-// 				'fields'     => array(
-// 					array(
-// 						'title'   => esc_html__( 'Cross Box Required', 'wow-theme-options' ),
-// 						'desc'    => esc_html__( 'Required arguments work across metaboxes! Click on Color Field under Metabox Options then adjust this field to see the fields within show or hide.', 'wow-theme-options' ),
-// 						'id'      => 'opt-layout',
-// 						'type'    => 'radio',
-// 						'options' => array(
-// 							'on'  => esc_html__( 'On', 'wow-theme-options' ),
-// 							'off' => esc_html__( 'Off', 'wow-theme-options' ),
-// 						),
-// 						'default' => 'on',
-// 					),
-// 				),
-// 			),
-// 		),
-// 	)
-// );
 
 Redux_Metaboxes::set_box(
 	$opt_name,
@@ -172,6 +166,7 @@ Redux_Metaboxes::set_box(
 		'post_types' => array( 'page', 'post' ),
 		'position'   => 'side', // normal, advanced, side.
 		'priority'   => 'default', // high, core, default, low.
+		'title' 	=> esc_html__( 'WOW Sidebar', 'wow-theme-options' ),
 		'sections'   => array(
 			array(
 				'icon_class' => 'icon-large',
@@ -212,6 +207,7 @@ Redux_Metaboxes::set_box(
 		'post_types' => array( 'page', 'post' ),
 		'position'   => 'side', // normal, advanced, side.
 		'priority'   => 'default', // high, core, default, low.
+		'title' 	=> esc_html__( 'WOW Secondary Sidebar', 'wow-theme-options' ),
 		'sections'   => array(
 			array(
 				'icon_class' => 'icon-large',
