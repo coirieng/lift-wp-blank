@@ -35,6 +35,7 @@ require_once 'posts/post-type.php';
 require_once 'posts/post-sidebar.php';
 require_once 'posts/post-relates.php';
 require_once 'posts/post-series.php';
+require_once 'posts/post-adv.php';
 
 // require_once 'tabs/tab-demo.php'; // This one for demo 
 // CALL ACTION 

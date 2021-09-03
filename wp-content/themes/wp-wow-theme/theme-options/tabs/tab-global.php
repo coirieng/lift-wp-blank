@@ -133,6 +133,27 @@
 		),
     ) );
 
+    Redux::setSection( $opt_name, array(
+        'title'      => __( 'Ads Code', 'wow-theme-options' ),
+        'id'         => 'wow-theme-ads',
+        'subsection' => true,
+		'desc'		=> __( 'Please enter in any custom code you wish to add to the head of your pages. Requires opening and closing script tags.', 'wow-theme-options' ),
+		'fields'     => array(
+			array(
+				'id'       => 'wow-theme-ads-code',
+                'type'     => 'ace_editor',
+				'mode'     => 'html',
+				'class' => 'wow-theme-admin-cssjs',
+				'theme'    => 'monokai',
+				'options' => array(
+					'minLines' => 40, 
+					'maxLines' => 100
+				)
+			),
+		),
+    ) );
+
+
 
     Redux::setSection( $opt_name, array(
 		'title' => __( 'Develop Tool', 'wow-theme-options' ),
