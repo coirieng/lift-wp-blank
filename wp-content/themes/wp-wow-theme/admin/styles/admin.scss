@@ -391,7 +391,7 @@ $boo: #cccccc;
 					}
 				}
 			}
-			.form-table > tbody > tr > th {
+			.form-table > tbody > tr > th{
 				width: 20%;
 			}
 			@media screen and (max-width: 1400px) {
@@ -502,6 +502,10 @@ $boo: #cccccc;
 			}
 		}
 	}
+}
+
+.redux-container .redux-main .redux-field-container {
+	padding: 0 !important;
 }
 
 #wpbody-content #poststuff {

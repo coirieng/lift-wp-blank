@@ -481,6 +481,9 @@
         color: #4bbc82;
         z-index: 5; }
 
+.redux-container .redux-main .redux-field-container {
+  padding: 0 !important; }
+
 #wpbody-content #poststuff .wow-theme-admin {
   margin-top: 0; }
   #wpbody-content #poststuff .wow-theme-admin .redux-main .redux-field-container {
