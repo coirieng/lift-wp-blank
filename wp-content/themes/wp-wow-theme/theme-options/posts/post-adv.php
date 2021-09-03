@@ -54,7 +54,7 @@ function wow_insert_adv_post_to_lists() {
                     $setnum = (int) Redux::get_option( 'wow_theme', 'wow-theme-ads-in-posts-lists-value' );
                     $perpage = (int)get_option( 'posts_per_page' )/$setnum;
                     for ($i=0; $i < $perpage; $i++) { 
-                        if(($wp_query->current_post+1) == $setnum*($i+1)) {
+                        if(($wp_query->current_post) == $setnum*($i+1)) {
                             echo $ad_code;
                         }  
                     }
@@ -62,11 +62,12 @@ function wow_insert_adv_post_to_lists() {
                     $setnum = 3;
                     $perpage = (int)get_option( 'posts_per_page' )/$setnum;
                     for ($i=0; $i < $perpage; $i++) { 
-                        if(($wp_query->current_post+1) == $setnum*($i+1)) {
+                        if(($wp_query->current_post) == $setnum*($i+1)) {
                             echo $ad_code;
                         }  
                     } 
                 }
+                var_dump(($wp_query->current_post+1) == count($wp_query->posts));
             }
         }
     }
