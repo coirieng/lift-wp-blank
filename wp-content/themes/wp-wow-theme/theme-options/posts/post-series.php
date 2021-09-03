@@ -21,6 +21,6 @@ function wow_register_taxonomy_series() {
         'query_var'         => true,
         'rewrite'           => [ 'slug' => 'series' ],
     );
-    register_taxonomy( 'series', [ 'post',  'page'  ], $args );
+    register_taxonomy( 'series', [ 'post',  'page' ], $args );
 }
 add_action( 'init', 'wow_register_taxonomy_series' );
