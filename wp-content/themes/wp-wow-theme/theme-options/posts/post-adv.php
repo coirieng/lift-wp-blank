@@ -1,28 +1,27 @@
 <?php
-  
-//Insert ads after second paragraph of single post content.
- 
-add_filter( 'the_content', 'wow_prefix_insert_post_ads' );
- 
 function wow_prefix_insert_post_ads( $content ) {
      
-    $ad_code = '<div class="wow-ads">'.Redux::get_option( 'wow_theme', 'wow-theme-ads-code' ).'</div>';
+    $ad_code = '<!--ADS--><div class="wow-ads">'.Redux::get_option( 'wow_theme', 'wow-theme-ads-code' ).'</div><!--END ADS-->';
  
-    if ( is_single() && ! is_admin() ) {
-        $content = wow_prefix_insert_after_paragraph( $ad_code, 3, $content );
-        $content = wow_prefix_insert_after_paragraph( $ad_code, 6, $content );
-        $content = wow_prefix_insert_after_paragraph( $ad_code, 9, $content );
-        $content = wow_prefix_insert_after_paragraph( $ad_code, 12, $content );
-        $content = wow_prefix_insert_after_paragraph( $ad_code, 15, $content );
-        $content = wow_prefix_insert_after_paragraph( $ad_code, 18, $content );
-        $content = wow_prefix_insert_after_paragraph( $ad_code, 21, $content );
-        $content = wow_prefix_insert_after_paragraph( $ad_code, 22, $content );
-        $content = wow_prefix_insert_after_paragraph( $ad_code, 25, $content );
-        $content = wow_prefix_insert_after_paragraph( $ad_code, 28, $content );
-        $content = wow_prefix_insert_after_paragraph( $ad_code, 31, $content );
+    if(Redux::get_option( 'wow_theme', 'wow-theme-ads-in-posts' ) != 1 && Redux::get_option( 'wow_theme', 'wow-theme-ads-in-posts' ) !== '1'){
+        if ( is_single() && ! is_admin() ) {
+            if(Redux::get_option( 'wow_theme', 'wow-theme-ads-in-posts-value' ) != 0 && Redux::get_option( 'wow_theme', 'wow-theme-ads-in-posts-value' ) !== '0'){
+                if((int)Redux::get_option( 'wow_theme', 'wow-theme-ads-in-posts-value' ) != -1){
+                    $setnum = (int) Redux::get_option( 'wow_theme', 'wow-theme-ads-in-posts-value' );
+                    for ($i=0; $i < 12; $i++) { 
+                        $content = wow_prefix_insert_after_paragraph( $ad_code, (($i+1)*$setnum), $content );
+                    }
+                } else {
+                    $setnum = 3;
+                    for ($i=0; $i < 12; $i++) { 
+                        $content = wow_prefix_insert_after_paragraph( $ad_code, (($i+1)*$setnum), $content );
+                    }
+                }
+            }
+        }
     }
-     
     return $content;
+     
 }
   
 // Parent Function that makes the magic happen
@@ -43,3 +42,36 @@ function wow_prefix_insert_after_paragraph( $insertion, $paragraph_id, $content 
      
     return implode( '', $paragraphs );
 }
+
+function wow_insert_adv_post_to_lists() {
+    global $wp_query;
+    $ad_code = '<!--ADS--><div class="wow-ads">'.Redux::get_option( 'wow_theme', 'wow-theme-ads-code' ).'</div><!--END ADS-->';
+
+    if(Redux::get_option( 'wow_theme', 'wow-theme-ads-in-post-lists' ) != 1 && Redux::get_option( 'wow_theme', 'wow-theme-ads-in-post-lists' ) !== '1'){
+        if ( ! is_admin() ) {
+            if(Redux::get_option( 'wow_theme', 'wow-theme-ads-in-posts-lists-value' ) != 0 && Redux::get_option( 'wow_theme', 'wow-theme-ads-in-posts-lists-value' ) !== '0'){
+                if((int)Redux::get_option( 'wow_theme', 'wow-theme-ads-in-posts-lists-value' ) != -1){
+                    $setnum = (int) Redux::get_option( 'wow_theme', 'wow-theme-ads-in-posts-lists-value' );
+                    $perpage = (int)get_option( 'posts_per_page' )/$setnum;
+                    for ($i=0; $i < $perpage; $i++) { 
+                        if(($wp_query->current_post+1) == $setnum*($i+1)) {
+                            echo $ad_code;
+                        }  
+                    }
+                } else {
+                    $setnum = 3;
+                    $perpage = (int)get_option( 'posts_per_page' )/$setnum;
+                    for ($i=0; $i < $perpage; $i++) { 
+                        if(($wp_query->current_post+1) == $setnum*($i+1)) {
+                            echo $ad_code;
+                        }  
+                    } 
+                }
+            }
+        }
+    }
+}
+
+add_action('the_post', 'wow_insert_adv_post_to_lists');  
+add_filter( 'the_content', 'wow_prefix_insert_post_ads' );
+
