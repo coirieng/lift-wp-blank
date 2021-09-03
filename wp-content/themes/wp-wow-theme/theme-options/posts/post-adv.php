@@ -67,7 +67,8 @@ function wow_insert_adv_post_to_lists() {
                         }  
                     } 
                 }
-                var_dump(($wp_query->current_post+1) == count($wp_query->posts));
+                // TODO: insert after the last post
+                // var_dump(($wp_query->current_post+1) == count($wp_query->posts));
             }
         }
     }
