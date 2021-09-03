@@ -30,6 +30,10 @@ class wow_Social_Widget extends WP_Widget {
         $social_linkedin = Redux::get_option( 'wow_theme', 'wow-theme-social-media-linkedin' );
         $social_instagram = Redux::get_option( 'wow_theme', 'wow-theme-social-media-instagram' );
  
+        if ( ! empty( $instance['class'] ) ) {
+            $args['before_widget'] = '<div class="widget-wrap '.$instance['class'].'">';
+        }
+
         echo $args['before_widget'];
         if ( ! empty( $instance['title'] ) ) {
             echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ) . $args['after_title'];
@@ -64,6 +68,7 @@ class wow_Social_Widget extends WP_Widget {
     public function form( $instance ) {
  
         $title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( '', 'wp-wow-theme' );
+        $class = ! empty( $instance['class'] ) ? $instance['class'] : esc_html__( '', 'wp-wow-theme' );
         $facebook = $instance['facebook'] ? 1 : 0;
         $twitter = $instance['twitter'] ? 1 : 0;
         $vimeo = $instance['vimeo'] ? 1 : 0;
@@ -74,6 +79,10 @@ class wow_Social_Widget extends WP_Widget {
         <p>
         <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php echo esc_html__( 'Title:', 'wp-wow-theme' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
+        </p>
+        <p>
+        <label for="<?php echo esc_attr( $this->get_field_id( 'class' ) ); ?>"><?php echo esc_html__( 'Classname:', 'wp-wow-theme' ); ?></label>
+            <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'class' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'class' ) ); ?>" type="text" value="<?php echo esc_attr( $class ); ?>">
         </p>
         <p>
             <label for="facebook"><?php echo esc_html__( 'Facebook:', 'wp-wow-theme' ); ?>
@@ -104,6 +113,7 @@ class wow_Social_Widget extends WP_Widget {
         $instance = array();
  
         $instance['title'] = ( !empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+        $instance['class'] = ( !empty( $new_instance['class'] ) ) ? strip_tags( $new_instance['class'] ) : '';
         $instance['facebook'] = ( !isset( $new_instance['facebook'] ) ) ? 0: 1;
         $instance['twitter'] = ( !isset( $new_instance['twitter'] ) ) ? 0: 1;
         $instance['vimeo'] = ( !isset( $new_instance['vimeo'] ) ) ? 0: 1;
