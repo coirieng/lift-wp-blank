@@ -128,16 +128,16 @@
 ////////////////////////////////////////////////////////////////////////
 
 // ADMIN BAR LINKS -> Setup custom links in the admin bar menu as external items.
-$args['admin_bar_links'][] = array(
-	'id'    => 'lift-theme',
-	'href'  => '//github.com/nguyen-wp/lift-theme/',
-	'title' => __( 'Documentation', 'lift-theme-options' ),
-);
-$args['share_icons'][] = array(
-	'url'   => '//github.com/nguyen-wp/lift-theme/',
-	'title' => __('Visit us on GitHub', 'lift-theme-options' ),
-	'icon'  => 'el el-github',
-);
+// $args['admin_bar_links'][] = array(
+// 	'id'    => 'lift-theme',
+// 	'href'  => '//github.com/nguyen-wp/lift-theme/',
+// 	'title' => __( 'Documentation', 'lift-theme-options' ),
+// );
+// $args['share_icons'][] = array(
+// 	'url'   => '//github.com/nguyen-wp/lift-theme/',
+// 	'title' => __('Visit us on GitHub', 'lift-theme-options' ),
+// 	'icon'  => 'el el-github',
+// );
 
 // Panel Intro text -> before the form
 if ( ! isset( $args['global_variable'] ) || $args['global_variable'] !== false ) {
@@ -152,7 +152,7 @@ if ( ! isset( $args['global_variable'] ) || $args['global_variable'] !== false )
 }
 
 // Add content after the form.
-$args['footer_text'] = __( '<p>by LIFT Creations - Author <a href="https://baonguyenyam.github.io/cv/" target="_blank">Nguyen Pham</a></p>', 'lift-theme-options' );
+// $args['footer_text'] = __( '<p>by LIFT Creations - Author <a href="https://baonguyenyam.github.io/cv/" target="_blank">Nguyen Pham</a></p>', 'lift-theme-options' );
 
 ////////////////////////////////////////////////////////////////////////
 // INIT APP

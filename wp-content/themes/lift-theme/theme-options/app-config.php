@@ -31,6 +31,6 @@ require_once 'tabs/tab-social.php';
 require_once 'tabs/tab-license.php';
 // require_once 'tabs/tab-demo.php'; // This one for demo 
 // CALL ACTION 
-require_once 'options/helps.php';
+// require_once 'options/helps.php';
 require_once 'options/docs.php';
 require_once 'options/init.php';

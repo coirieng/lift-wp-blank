@@ -15,10 +15,10 @@ https://getbootstrap.com/
 
 LIFT's website design and development guidelines
 
-https://docs.myseo.website/
+https://docs.liftmarketingtools.com/
 
 ## LIFT SEO Tool
 
 Improve your SEO Performance so you can Rank Higher and Faster
 
-https://myseo.website/
+https://liftmarketingtools.com/
