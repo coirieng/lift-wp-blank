@@ -1,1 +1,0 @@
-"use strict";window.WFDash||(window.WFDash={updateNotificationCount:function(n){var i;(i=jQuery)(".wf-notification-count-value").html(n),0==n?i(".wf-notification-count-container").addClass("wf-hidden"):i(".wf-notification-count-container").removeClass("wf-hidden")}});
