@@ -198,6 +198,7 @@ if ( ! class_exists('WOW_Helper')) {
 				'WOW_Addon_Blocknumber',
 				'WOW_Addon_Button',
 				'WOW_Addon_Button_Group',
+				'WOW_Addon_Blocks',
 				'WOW_Addon_Carousel',
 				'WOW_Addon_Form',
 				'WOW_Addon_Feature_Box',
