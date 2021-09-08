@@ -17,7 +17,7 @@
  * Plugin URI:        https://liftcreations.com
  * Description:       LIFT WP Configure help you configure your websites without any coding knowledge required. Lightweight and using best practices for fastest load time.
  * Version:           1.0.0
- * Author:            LIFT Creations
+ * Author:            Nguyen Pham
  * Author URI:        https://baonguyenyam.github.io
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt

@@ -17,14 +17,14 @@ function lift_theme_options_register_required_plugins() {
 
 		// This is an example of how to include a plugin bundled with a theme.
 		array(
-			'name'               => 'LIFT Core', // The plugin name.
-			'slug'               => 'wp-lift-core', // The plugin slug (typically the folder name).
-			'source'             => get_template_directory() . '/plugins/wp-lift-core.zip', // The plugin source.
+			'name'               => 'LIFT Website Builder', // The plugin name.
+			'slug'               => 'lift-websitebuilder', // The plugin slug (typically the folder name).
+			'source'             => get_template_directory() . '/plugins/lift-websitebuilder.zip', // The plugin source.
 			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
-			'version'            => '2.7.3', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+			'version'            => '1.0.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
 			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
 			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-			'external_url'       => 'https://github.com/nguyen-wp/wp-lift-core', // If set, overrides default API URL and points to an external URL.
+			// 'external_url'       => 'https://github.com/nguyen-wp/wp-lift-core', // If set, overrides default API URL and points to an external URL.
 			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
 		),
 		array(
@@ -32,7 +32,7 @@ function lift_theme_options_register_required_plugins() {
 			'slug'               => 'wp-lift-vc-addon', // The plugin slug (typically the folder name).
 			'source'             => get_template_directory() . '/plugins/wp-lift-vc-addon.zip', // The plugin source.
 			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
-			'version'            => '5.2.3', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+			'version'            => '1.0.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
 			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
 			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
 			'external_url'       => 'https://github.com/nguyen-wp/wp-lift-vc-addon', // If set, overrides default API URL and points to an external URL.
@@ -50,14 +50,14 @@ function lift_theme_options_register_required_plugins() {
 			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
 		),
 		array(
-			'name'               => 'LIFT CleanUp', // The plugin name.
-			'slug'               => 'wp-lift-cleanup', // The plugin slug (typically the folder name).
-			'source'             => get_template_directory() . '/plugins/wp-lift-cleanup.zip', // The plugin source.
+			'name'               => 'LIFT Configure', // The plugin name.
+			'slug'               => 'lift-wp-configure', // The plugin slug (typically the folder name).
+			'source'             => get_template_directory() . '/plugins/lift-wp-configure.zip', // The plugin source.
 			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
-			'version'            => '2.1.3', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+			'version'            => '1.0.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
 			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
 			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-			'external_url'       => 'https://github.com/nguyen-wp/wp-lift-cleanup', // If set, overrides default API URL and points to an external URL.
+			// 'external_url'       => 'https://github.com/nguyen-wp/wp-lift-cleanup', // If set, overrides default API URL and points to an external URL.
 			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
 		),
 		array(
@@ -65,7 +65,7 @@ function lift_theme_options_register_required_plugins() {
 			'slug'               => 'wp-lift-chat', // The plugin slug (typically the folder name).
 			'source'             => get_template_directory() . '/plugins/wp-lift-chat.zip', // The plugin source.
 			'required'           => false, // If false, the plugin is only 'recommended' instead of required.
-			'version'            => '2.2.5', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+			'version'            => '1.0.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
 			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
 			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
 			'external_url'       => 'https://github.com/nguyen-wp/wp-lift-chat', // If set, overrides default API URL and points to an external URL.

@@ -8,7 +8,7 @@
 
 // -> START layout
     Redux::setSection( $opt_name, array(
-        'title' => __( 'Pages', 'lift-theme-options' ),
+        'title' => __( 'Pages <i style="color:red">(*)</i>', 'lift-theme-options' ),
         'icon'  => 'bi bi-layout-text-sidebar',
         'id'         => 'lift-theme-page',
 	));
