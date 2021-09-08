@@ -59,9 +59,9 @@ class LIFT_WP_LightWeightCleanUp {
                 // do_action('wp_dashboard_setup_'.trim($value), trim($value));
             }
             if (is_admin() && $arr) {
-                echo '<style>';
-                echo $idhide;
-                echo '</style>';
+                esc_html_e('<style>');
+                esc_html_e($idhide);
+                esc_html_e('</style>');
             }
         };
         if($this->attrs['removeNotice']) {
